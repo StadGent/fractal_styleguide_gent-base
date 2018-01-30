@@ -1,0 +1,9 @@
+label {
+  @include themify {
+    color: $label-color;
+
+    .label-optional {
+      color: $label-optional-color;
+    }
+  }
+}

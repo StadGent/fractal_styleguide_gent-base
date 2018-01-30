@@ -1,0 +1,9 @@
+{
+  "title": "Input textarea",
+  "status": "ready",
+  "handle": "input-textarea",
+  "context": {
+    "textarea_id": "textarea_id",
+    "textarea_name": "textarea_name"
+  }
+}

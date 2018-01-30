@@ -1,0 +1,82 @@
+.chosen-container {
+  width: 100% !important; // sass-lint:disable-line no-important
+  max-width: 100% !important; // sass-lint:disable-line no-important
+
+
+  &.chosen-container-multi {
+    ul.chosen-choices {
+      height: auto;
+      margin: 0;
+      padding-right: 1rem;
+      box-shadow: none;
+    }
+
+    .chosen-choices {
+      &,
+      li.search-field input[type="text"] {
+        @extend %input-base;
+        @extend %select-base;
+      }
+    }
+  }
+
+  &.chosen-with-drop .chosen-drop {
+    border-color: $color-light-gray;
+    box-shadow: none;
+  }
+
+  .chosen-choices {
+    border-color: $color-light-gray !important; // sass-lint:disable-line no-important
+
+    background: $color-white;
+    background-image: none !important; // sass-lint:disable-line no-important
+    color: $color-dark-gray;
+  }
+
+  .chosen-results li.highlighted {
+    background-color: $color-blue;
+    background-image: none;
+  }
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+  @extend %btn;
+  @include btn-s;
+  text-align: left;
+
+  span {
+    margin-left: -5px;
+  }
+
+  .search-choice-close {
+    right: 1.2rem;
+    background: none;
+    background-image: none !important;// sass-lint:disable-line no-important
+
+
+    &::after {
+      @extend %icon-base-css;
+      @extend %icon-close;
+      color: $color-white;
+      font-size: 1.25rem;
+      line-height: 1.7rem;
+    }
+  }
+}
+
+// Specific ul specificity enables us to override chosen.css without using !important statements.
+.chosen-container-multi ul.chosen-choices li.search-choice {
+  display: inline-block;
+  width: auto;
+  min-height: 2rem;
+  margin: .18rem $gutter-width/2 0 0;
+  padding-right: 1.875rem;
+  line-height: 1.6rem;
+}
+
+select[multiple].no-chosen-select {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gU3ZnIFZlY3RvciBJY29ucyA6IGh0dHA6Ly93d3cub25saW5ld2ViZm9udHMuY29tL2ljb24gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPg0KPGc+PHBhdGggZD0iTTUwMCwxMEwyMjcuOCwzOTEuMWg1NDQuNEw1MDAsMTB6IE01MDAsOTkwbDI3Mi4yLTM4MS4xSDIyNy44TDUwMCw5OTB6Ii8+PC9nPg0KPC9zdmc+');
+  background-repeat: no-repeat;
+  background-position: center right 5px;
+  background-size: 1rem 1rem;
+}

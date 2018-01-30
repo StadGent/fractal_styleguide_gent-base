@@ -1,0 +1,40 @@
+{
+  "name": "Sections",
+  "order": 2,
+  "status": "ready",
+  "default": "default",
+  "handle": "section",
+  "preview": "@preview-without-padding",
+  "variants": [
+    {
+      "name": "default",
+      "context": {
+        "modifier": "section--default"
+      }
+    },
+    {
+      "name": "accent",
+      "context": {
+        "modifier": "section--accent"
+      }
+    },
+    {
+      "name": "highlighted",
+      "context": {
+        "modifier": "section--highlighted"
+      }
+    },
+    {
+      "name": "inverse",
+      "context": {
+        "modifier": "section--inverse"
+      }
+    },
+    {
+      "name": "wrapper",
+      "context": {
+        "modifier": "section--wrapper"
+      }
+    }
+  ]
+}

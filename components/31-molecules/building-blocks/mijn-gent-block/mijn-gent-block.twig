@@ -1,0 +1,72 @@
+<div class="mijn-gent-block">
+
+  {% if auth == 'false' %}
+
+    {% include '@link' with {
+      'modifier': 'login-link',
+      'link': 'javascript:(void);',
+      'text': 'Aanmelden<i class="icon-user"></i>'
+    } %}
+
+  {% else %}
+
+    <div class="toggle">
+      <div class="label">
+        {% include '@link' with {
+          'link': 'javascript:(void);',
+          'modifier': 'toggle',
+          'text': 'Username'
+        } %}
+      </div>
+      <div class="picture">
+        {% include '@image' with { 'src': 'https://via.placeholder.com/32x32', 'alt_text': 'Username' } %}
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="mijn-gent-component">
+        <header>
+          {% include '@h3' with { 'h3_text': 'Mijn Bibliotheek Gent' } %}
+        </header>
+
+        <section>
+          {% include '@list' with {
+            'modifier': 'no-style',
+            'items': [
+              "<a href='javascript:(void);'>Overzicht</a>",
+              "<a href='javascript:(void);'>Leestips</a>",
+              "<a href='javascript:(void);'>Mijn profiel</a>"
+            ]
+          } %}
+        </section>
+
+      </div>
+      <div class="mijn-gent-component">
+        <header>
+          {% include '@h3' with { 'h3_text': 'Mijn Gent' } %}
+        </header>
+
+        <section>
+          {% include '@list' with {
+            'modifier': 'no-style',
+            'items': [
+              "<a href='javascript:(void);'>Mijn profiel</a>",
+              "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+              "<a href='javascript:(void);'>Historiek</a>"
+            ]
+          } %}
+        </section>
+
+      </div>
+      <footer>
+        {% include '@link' with {
+          'link': 'javascript:(void);',
+          'modifier': '',
+          'text': 'Afmelden'
+        } %}
+      </footer>
+    </div>
+
+  {% endif %}
+
+</div>

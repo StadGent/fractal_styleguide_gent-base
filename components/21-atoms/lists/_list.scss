@@ -1,0 +1,27 @@
+ul,
+ol {
+  padding-left: 1rem;
+
+  &.links {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      padding-left: .93rem;
+
+      &::before {
+        @extend %icon-base-css;
+        @extend %icon-caret;
+      }
+    }
+  }
+
+  &.no-style {
+    @extend %list-no-style;
+  }
+}
+
+%list-no-style {
+  padding-left: 0;
+  list-style: none;
+}

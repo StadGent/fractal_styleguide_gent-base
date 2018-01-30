@@ -1,0 +1,48 @@
+.messages {
+  max-width: 40rem;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  border: 1px solid $color-light-blue;
+  border-radius: $radius-2;
+  background-color: $color-white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+  &::before {
+    @extend %icon-base-css;
+    @extend %icon-info-circle;
+    display: block;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+  }
+
+  &.messages--status {
+    border-left: 1rem solid darken($color-green, 10%);
+    color: darken($color-green, 10%);
+
+    &::before {
+      @extend %icon-info-circle;
+    }
+  }
+
+  &.messages--error {
+    border-left: 1rem solid darken($color-red, 10%);
+    color: darken($color-red, 10%);
+
+    &::before {
+      @extend %icon-error;
+    }
+  }
+
+  &.messages--warning {
+    border-left: 1rem solid darken($color-orange, 10%);
+    color: darken($color-orange, 20%);
+
+    &::before {
+      @extend %icon-alert;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}

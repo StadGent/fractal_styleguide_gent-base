@@ -1,0 +1,10 @@
+{
+  "title": "Input search",
+  "status": "ready",
+  "handle": "input-search",
+  "context": {
+    "placeholder": "Placeholder input search",
+    "search_name": "search_name",
+    "search_id": "search_id"
+  }
+}

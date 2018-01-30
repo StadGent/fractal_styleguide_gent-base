@@ -1,0 +1,6 @@
+input[type="radio"] + span {
+  @include themify {
+    color: $label-color;
+  }
+  font-weight: bold;
+}

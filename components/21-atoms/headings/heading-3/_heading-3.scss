@@ -1,0 +1,12 @@
+h3,
+.h3,
+%h3 {
+  @include themify {
+    color: $heading-3-color;
+  }
+
+  margin-bottom: 1rem;
+  font-family: $heading-3-font-family;
+  font-size: 1.1rem;
+  line-height: 1.3em;
+}

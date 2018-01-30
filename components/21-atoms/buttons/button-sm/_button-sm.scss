@@ -1,0 +1,9 @@
+%btn--small,
+.small.btn,
+.btn--small,
+a.btn--small,
+button.btn--small,
+input[type="button"].btn--small,
+input[type='submit'].btn--small {
+  @include btn-s;
+}

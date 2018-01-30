@@ -1,0 +1,24 @@
+{
+  "title": "Input Multiselect with Chosen",
+  "status": "ready",
+  "handle": "input-multiselect-chosen",
+  "context": {
+    "label": "Multiselect with Chosen",
+    "multiselect_name": "multiselect_name",
+    "multiselect_id": "multiselect_id",
+    "options": [
+      {
+        "label": "Option 1"
+      },
+      {
+        "label": "Option 2"
+      },
+      {
+        "label": "Option 3"
+      },
+      {
+        "label": "Option 4"
+      }
+    ]
+  }
+}

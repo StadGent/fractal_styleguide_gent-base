@@ -1,0 +1,13 @@
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: $radius-3;
+
+  &.circle {
+    border-radius: 50%;
+  }
+
+  &.no-style {
+    border-radius: 0;
+  }
+}

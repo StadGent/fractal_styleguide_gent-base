@@ -1,0 +1,11 @@
+<select name="{{ multiselect_name }}"
+        id="{{ multiselect_id }}"
+        multiple="multiple"
+        {% if modifier %}
+          class="{{ modifier }}"
+        {% endif %}
+>
+  {% for option in options %}
+    <option>{{ option.label }}</option>
+  {% endfor %}
+</select>

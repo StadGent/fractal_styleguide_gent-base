@@ -1,0 +1,49 @@
+@import 'susy';
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': $gutter-width,
+);
+
+%container,
+.container {
+  @include clearfix();
+  @include breakpoint($bp-container) {
+    width: $bp-container;
+    max-width: 100%;
+    margin: 0 auto;
+    border-right: $border-outside-container; //smaller width
+    border-left: $border-outside-container; //smaller width
+  }
+}
+
+%content-container,
+.content-container {
+  max-width: $bp-max-content;
+  margin: 0 auto;
+  padding: 0 ($gutter-width / 2);
+
+  @include tablet {
+    padding: 0 $gutter-width + ($gutter-width / 2); // gutter + padding cols
+  }
+}
+
+%row,
+.row {
+  @include make-row();
+}
+
+// Columns
+//
+// Common styles grid columns
+
+@include make-grid-columns;
+@include make-grid('mobile');
+
+@include tablet {
+  @include make-grid('tablet');
+}
+
+@include desktop {
+  @include make-grid('desktop');
+}

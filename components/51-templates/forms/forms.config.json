@@ -1,0 +1,26 @@
+{
+  "title": "Forms",
+  "status": "ready",
+  "handle": "forms",
+  "preview": "@preview",
+  "order": 6,
+  "variants": [
+    {
+      "name": "no-style",
+      "hidden": true,
+      "context": {
+        "modifier": "no-style"
+      }
+    },
+    {
+      "name": "no-optional",
+      "hidden": true,
+      "context": {
+        "modifier": "no-optional"
+      }
+    }
+  ],
+  "context": {
+    "label_optional": "Optional"
+  }
+}

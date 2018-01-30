@@ -1,0 +1,9 @@
+{
+  "title": "Input file",
+  "status": "ready",
+  "handle": "input-file",
+  "context": {
+    "file_name": "file_name",
+    "file_id": "file_id"
+  }
+}

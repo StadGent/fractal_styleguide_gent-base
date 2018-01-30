@@ -1,0 +1,28 @@
+<div class="form-item">
+  <div class="form-label">
+    {% include '@label' with {
+      "label": label,
+      "for": for,
+      "label_optional": label_optional
+    } %}
+  </div>
+  <div class="form-columns">
+    <div class="form-item-column">
+      {% include '@field-description' with {
+        "field_description": field_description
+      } %}
+    </div>
+    <div class="form-item-column">
+      {% include '@input-url' with {
+        "url_id": url_id,
+        "url_name": url_name
+      } %}
+      {% include '@description' with {
+        "description": description
+      } %}
+      {% include '@field-error' with {
+        "field_error": field_error
+      } %}
+    </div>
+  </div>
+</div>

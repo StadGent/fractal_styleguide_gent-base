@@ -1,0 +1,9 @@
+{
+  "title": "Input email",
+  "status": "ready",
+  "handle": "input-email",
+  "context": {
+    "email_name": "email_name",
+    "email_id": "email_id"
+  }
+}

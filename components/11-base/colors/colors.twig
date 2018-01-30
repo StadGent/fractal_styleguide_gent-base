@@ -1,0 +1,6 @@
+{% for text, color in colors %}
+    <div class="color" style="background: {{ color|e }}">
+        <p>$color-{{ text|e }}</p>
+        <p>{{ color|e }}</p>
+    </div>
+{% endfor %}

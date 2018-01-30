@@ -1,0 +1,22 @@
+// todo: refactor to grid layout
+ul.teasers {
+  @include make-row;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+
+  li {
+    @include make-mobile-column(12);
+    @include make-tablet-column(6);
+    @include make-desktop-column(4);
+    flex: 0 1 auto;
+    margin-bottom: $gutter-width;
+  }
+
+  &--topics {
+    li {
+      margin: $gutter-width 0;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.dg-blocks-social {
+  h3 {
+    margin: 0;
+    line-height: 1.5em;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  a {
+    color: $color-gray;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    &:visited {
+      color: $color-gray;
+    }
+
+    &:hover {
+      color: $color-medium-lighter-gray;
+    }
+
+    &::before {
+      @extend %icon-base-css;
+      padding-right: .5rem;
+    }
+  }
+
+  .facebook {
+    &::before {
+      @extend %icon-facebook;
+    }
+  }
+
+  .twitter {
+    &::before {
+      @extend %icon-twitter;
+    }
+  }
+
+  .linkedin {
+    &::before {
+      @extend %icon-linkedin;
+    }
+  }
+
+  .youtube {
+    &::before {
+      @extend %icon-youtube;
+    }
+  }
+
+  .instagram {
+    &::before {
+      @extend %icon-instagram;
+    }
+  }
+}

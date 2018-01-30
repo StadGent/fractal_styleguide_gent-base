@@ -1,0 +1,178 @@
+%input-base,
+input[type='text'],
+input[type='number'],
+input[type='search'],
+input[type='password'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='time'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+textarea,
+select {
+  display: block;
+  width: 100%;
+  height: 2.4rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $radius-1;
+  font-size: 1rem;
+  line-height: 1.5em;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.inline {
+    @include btn-inlineblock();
+  }
+
+  &.error {
+    @include themify {
+      border: 1px solid $field-error-border;
+    }
+  }
+
+  + .description {
+    margin: .3rem 0 0;
+  }
+}
+
+input[type='text'],
+input[type='number'],
+input[type='search'],
+input[type='password'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='time'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+textarea,
+.chosen-search-input {
+  padding: .4rem .7rem;
+}
+
+textarea {
+  min-height: 7.2rem;
+}
+
+// Since padding doesn't work with appearance on menu list we need to make use of height and text-indent.
+%select-base,
+select {
+  height: 2.4rem;
+  text-indent: .3rem;
+
+  &[multiple] {
+    height: auto;
+  }
+
+  option {
+    text-indent: .6rem;
+  }
+
+  optgroup {
+    font-weight: bold;
+  }
+}
+
+legend,
+label {
+  display: block;
+  margin: 0 0 .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+
+  .label-optional {
+    margin-left: .31rem;
+    font-size: .8rem;
+    font-weight: normal;
+    line-height: .8rem;
+  }
+}
+
+legend {
+  @include themify {
+    border-bottom: $fieldset-border;
+    color: $fieldset-color;
+  }
+
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid $color-lightest-gray;
+  color: $color-blue;
+  font-size: 1.1rem;
+}
+
+// Radios and checkboxes shouldn't start on a new line.
+input[type='radio'],
+input[type='checkbox'] {
+  margin: .4rem .4rem 0 0;
+  float: left;
+  outline: none;
+
+  + label {
+    display: block;
+    font-weight: normal;
+    overflow: auto;
+  }
+}
+
+.form-item {
+  margin-bottom: 1rem;
+
+  .form-label {
+    > label {
+      @at-root .no-optional .label-optional {
+        display: none;
+      }
+    }
+  }
+
+  .form-columns {
+    display: flex;
+    flex-wrap: wrap;
+
+    .form-item-column {
+      @include tablet {
+        width: calc(50% - #{$gutter-width});
+        margin-right: $gutter-width;
+      }
+
+      width: 100%;
+
+      &:first-child {
+        @include tablet {
+          order: 2;
+          width: 50%;
+          margin-right: 0;
+        }
+      }
+
+      &:last-child {
+        @include tablet {
+          order: 1;
+        }
+      }
+
+      .no-style & {
+        // Make full width form.
+        width: 100%;
+      }
+    }
+  }
+
+  .field-description {
+    margin-bottom: .8rem;
+
+    .no-style & {
+      display: none;
+    }
+  }
+}
+

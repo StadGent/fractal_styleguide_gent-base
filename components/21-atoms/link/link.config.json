@@ -1,0 +1,13 @@
+{
+  "title": "Link",
+  "name": "Link",
+  "handle": "link",
+  "order": 12,
+  "context": {
+    "link": "javascript:(void);",
+    "text": "Link text",
+    "title": "Title text",
+    "aria_label": null,
+    "aria_labelledby": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Colors",
+  "status": "ready",
+  "handle": "colors",
+  "context": {
+    "colors": {
+      "darkest-blue": "#2C3F48",
+      "dark-blue": "#00597A",
+      "blue": "#007DB3",
+      "light-blue": "#D0DDE0",
+      "lightest-blue": "#E0EDF6",
+      "darkest-gray": "#2c3f46",
+      "dark-gray": "#595f60",
+      "gray": "#9DA8AF",
+      "light-gray": "#E2E2E2",
+      "lightest-gray": "#F4F4F4",
+      "orange": "#F39200",
+      "white": "#FFFFFF",
+      "color-white-blue": "#c2e2f0",
+      "color-orange-light": "#ffa927",
+      "color-orange-lighter": "#ffbd5a",
+      "color-medium-lighter-gray": "#d5dadd"
+    }
+  }
+}

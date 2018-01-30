@@ -1,0 +1,18 @@
+{
+  "title": "Button large",
+  "name": "Button large",
+  "status": "ready",
+  "handle": "button-lg",
+  "order": 3,
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+    {
+      "name": "inline",
+      "context": {
+        "modifier": "btn--inline"
+      }
+    }
+  ]
+}

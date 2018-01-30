@@ -1,0 +1,17 @@
+<a
+   {% if rel %}
+     rel="{{ rel }}"
+   {% endif %}
+   href='{{ link }}'
+   {% if modifier %}
+     class="{{ modifier }}"
+   {% endif %}
+   {% if aria_label %}
+       aria-label="{{ aria_label }}"
+   {% endif %}
+   {% if aria_labelledby %}
+       aria-labelledby="{{ aria_labelledby }}"
+   {% endif %}
+   title="{{ title }}">
+  {{ text }}
+</a>

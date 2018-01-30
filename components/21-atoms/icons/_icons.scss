@@ -1,0 +1,540 @@
+@font-face {
+  font-family: 'gent-icons';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$styleguide-dir}/fonts/gent-icons.eot?##{$uuid}') format('embedded-opentype'),
+  url('#{$styleguide-dir}/fonts/gent-icons.woff?#{$uuid}') format('woff'),
+  url('#{$styleguide-dir}/fonts/gent-icons.ttf?#{$uuid}') format('truetype'),
+  url('#{$styleguide-dir}/fonts/gent-icons.svg?#{$uuid}#gent-icons') format('svg');
+}
+
+// IMPORTANT: KEEP 'icon-base-css' class. Can be used to extend, to set base gent-icons css.
+%icon-base-css,
+[class^='icon-'],
+[class*=' icon-'],
+.icon-base-css {
+  font-family: 'gent-icons';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+}
+
+%icon-menu,
+.icon-menu::before {
+  content: '\3d';
+}
+
+%icon-caret,
+.icon-caret::before {
+  content: '\3e';
+}
+
+%icon-alert,
+.icon-alert::before {
+  content: '\61';
+}
+
+%icon-critical,
+.icon-critical::before {
+  content: '\62';
+}
+
+%icon-clip,
+.icon-clip::before {
+  content: '\63';
+}
+
+%icon-email,
+.icon-email::before {
+  content: '\65';
+}
+
+%icon-hidden,
+.icon-hidden::before {
+  content: '\68';
+}
+
+%icon-loc,
+.icon-loc::before {
+  content: '\70';
+}
+
+%icon-search,
+.icon-search::before {
+  content: '\73';
+}
+
+%icon-arrow-up,
+.icon-arrow-up::before {
+  content: '\e600';
+}
+
+%icon-arrow-down,
+.icon-arrow-down::before {
+  content: '\e601';
+}
+
+%icon-repeat,
+.icon-repeat::before {
+  content: '\f01e';
+}
+
+%icon-form-fill,
+.icon-form-fill::before {
+  content: '\e602';
+}
+
+%icon-paper,
+.icon-paper::before {
+  content: '\e909';
+}
+
+%icon-tag,
+.icon-tag::before {
+  content: '\e603';
+}
+
+%icon-newtab,
+.icon-newtab::before {
+  content: '\e604';
+}
+
+%icon-calender,
+.icon-calender::before {
+  content: '\e605';
+}
+
+%icon-user,
+.icon-user::before {
+  content: '\e606';
+}
+
+%icon-link,
+.icon-link::before {
+  content: '\e607';
+}
+
+%icon-shoppingcart,
+.icon-shoppingcart::before {
+  content: '\e608';
+}
+
+%icon-sort,
+.icon-sort::before {
+  content: '\e609';
+}
+
+%icon-list,
+.icon-list::before {
+  content: '\e60a';
+}
+
+%icon-phone,
+.icon-phone::before {
+  content: '\e60b';
+}
+
+%icon-plus,
+.icon-plus::before {
+  content: '\e60e';
+}
+
+%icon-digipolis,
+.icon-digipolis::before {
+  content: '\e5ff';
+}
+
+%icon-facebook,
+.icon-facebook::before {
+  content: '\e910';
+}
+
+%icon-facebook-full,
+.icon-facebook-full::before {
+  content: '\e60d';
+}
+
+%icon-twitter,
+.icon-twitter::before {
+  content: '\e60f';
+}
+
+%icon-linkedin,
+.icon-linkedin::before {
+  content: '\e610';
+}
+
+%icon-googleplus,
+.icon-googleplus::before {
+  content: '\e61b';
+}
+
+%icon-instagram,
+.icon-instagram::before {
+  content: '\e61a';
+}
+
+%icon-capacity,
+.icon-capacity::before {
+  content: '\e611';
+}
+
+%icon-location,
+.icon-location::before {
+  content: '\e612';
+}
+
+%icon-price,
+.icon-price::before {
+  content: '\e613';
+}
+
+%icon-book,
+.icon-book::before {
+  content: '\e614';
+}
+
+%icon-surface,
+.icon-surface::before {
+  content: '\e615';
+}
+
+%icon-closingtime,
+.icon-closingtime::before {
+  content: '\e616';
+}
+
+%icon-save,
+.icon-save::before {
+  content: '\e617';
+}
+
+%icon-edit,
+.icon-edit::before {
+  content: '\e618';
+}
+
+%icon-throbber,
+.icon-throbber::before {
+  content: '\e619';
+}
+
+%icon-flickr,
+.icon-flickr::before {
+  content: '\e61c';
+}
+
+%icon-vimeo,
+.icon-vimeo::before {
+  content: '\e61d';
+}
+
+%icon-error,
+.icon-error::before,
+%icon-close,
+.icon-close::before {
+  content: '\e61e';
+}
+
+%icon-adventure,
+.icon-adventure::before {
+  content: '\e61f';
+}
+
+%icon-appliances,
+.icon-appliances::before {
+  content: '\e620';
+}
+
+%icon-basketball,
+.icon-basketball::before {
+  content: '\e621';
+}
+
+%icon-bbq,
+.icon-bbq::before {
+  content: '\e622';
+}
+
+%icon-fitness,
+.icon-fitness::before {
+  content: '\e623';
+}
+
+%icon-football,
+.icon-football::before {
+  content: '\e624';
+}
+
+%icon-forest,
+.icon-forest::before {
+  content: '\e625';
+}
+
+%icon-historical-value,
+.icon-historical-value::before {
+  content: '\e626';
+}
+
+%icon-nature,
+.icon-nature::before {
+  content: '\e627';
+}
+
+%icon-park,
+.icon-park::before {
+  content: '\e628';
+}
+
+%icon-petanque,
+.icon-petanque::before {
+  content: '\e629';
+}
+
+%icon-pingpong,
+.icon-pingpong::before {
+  content: '\e62a';
+}
+
+%icon-playground,
+.icon-playground::before {
+  content: '\e62b';
+}
+
+%icon-tie,
+.icon-tie::before {
+  content: '\e911';
+}
+
+%icon-rdf,
+.icon-rdf::before {
+  content: '\e62c';
+}
+
+%icon-sandpit,
+.icon-sandpit::before {
+  content: '\e62d';
+}
+
+%icon-skateboard,
+.icon-skateboard::before {
+  content: '\e62e';
+}
+
+%icon-youtube,
+.icon-youtube::before {
+  content: '\e62f';
+}
+
+%icon-maximize,
+.icon-maximize::before {
+  content: '\e630';
+}
+
+%icon-minimize,
+.icon-minimize::before {
+  content: '\e631';
+}
+
+%icon-checklist,
+.icon-checklist::before {
+  content: '\e632';
+}
+
+%icon-flag,
+.icon-flag::before {
+  content: '\e633';
+}
+
+%icon-follow,
+.icon-follow::before {
+  content: '\e635';
+}
+
+%icon-unflag,
+.icon-unflag::before {
+  content: '\e637';
+}
+
+%icon-trash,
+.icon-trash::before {
+  content: '\e638';
+}
+
+%icon-bulb,
+.icon-bulb::before {
+  content: '\e800';
+}
+
+%icon-idea,
+.icon-idea::before {
+  content: '\e90a';
+}
+
+%icon-megaphone,
+.icon-megaphone::before {
+  content: '\e801';
+}
+
+%icon-pinned,
+.icon-pinned::before {
+  content: '\e900';
+}
+
+%icon-star,
+.icon-star::before {
+  content: '\e901';
+}
+
+%icon-medal,
+.icon-medal::before {
+  content: '\e902';
+}
+
+%icon-smartphone,
+.icon-smartphone::before {
+  content: '\e90b';
+}
+
+%icon-data,
+.icon-data::before {
+  content: '\e90c';
+}
+
+%icon-data-new,
+.icon-data-new::before {
+  content: '\e912';
+}
+
+%icon-code,
+.icon-code::before {
+  content: '\e913';
+}
+
+%icon-at,
+.icon-at::before {
+  content: '\e914';
+}
+
+%icon-poll,
+.icon-poll::before {
+  content: '\e903';
+}
+
+%icon-textballoon-right,
+.icon-textballoon-right::before {
+  content: '\e90d';
+}
+
+%icon-textballoon-left,
+.icon-textballoon-left::before {
+  content: '\e904';
+}
+
+%icon-textballoon-fill-right,
+.icon-textballoon-fill-right::before {
+  content: '\e90e';
+}
+
+%icon-textballoon-fill-left,
+.icon-textballoon-fill-left::before {
+  content: '\e90f';
+}
+
+%icon-house,
+.icon-house::before {
+  content: '\e905';
+}
+
+%icon-cross,
+.icon-cross::before {
+  content: '\e906';
+}
+
+%icon-tick,
+.icon-tick::before {
+  content: '\e907';
+}
+
+%icon-check,
+.icon-check::before {
+  content: '\f00c';
+}
+
+%icon-info-circle,
+.icon-info-circle::before {
+  content: '\f05a';
+}
+
+%icon-heart,
+.icon-heart::before {
+  content: '\e908';
+}
+
+%icon-outdoor,
+.icon-outdoor::before {
+  content: '\f600';
+}
+
+%icon-changingrooms,
+.icon-changingrooms::before {
+  content: '\f601';
+}
+
+%icon-parking,
+.icon-parking::before {
+  content: '\f602';
+}
+
+%icon-weelchair,
+.icon-weelchair::before {
+  content: '\f603';
+}
+
+%icon-tribune,
+.icon-tribune::before {
+  content: '\f604';
+}
+
+%icon-toilet,
+.icon-toilet::before {
+  content: '\f605';
+}
+
+%icon-aed,
+.icon-aed::before {
+  content: '\f606';
+}
+
+%icon-shower,
+.icon-shower::before {
+  content: '\f607';
+}
+
+%icon-addtocalender,
+.icon-addtocalender::before {
+  content: '\f60a';
+}
+
+%icon-bar,
+.icon-bar::before {
+  content: '\f60b';
+}
+
+%icon-bikeroute,
+.icon-bikeroute::before {
+  content: '\f60c';
+}
+
+%icon-publictransport,
+.icon-publictransport::before {
+  content: '\f60d';
+}
+
+%icon-directions,
+.icon-directions::before {
+  content: '\f60e';
+}

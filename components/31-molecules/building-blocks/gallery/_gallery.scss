@@ -1,0 +1,43 @@
+.lg {
+  .lg-toolbar {
+    background-color: transparent;
+  }
+
+  .lg-actions {
+    .lg-next,
+    .lg-prev {
+      width: auto;
+    }
+  }
+
+  .lg-image {
+    border-radius: 0;
+  }
+}
+
+.gallery {
+  > .main {
+    @include tablet {
+      @include make-mobile-column(12, 1%);
+    }
+
+    @include make-mobile-column(12);
+
+    display: block;
+    margin-bottom: $gutter-width;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  > .thumb {
+    @include tablet {
+      @include make-mobile-column(4, 1%);
+      margin-bottom: 1%;
+    }
+    @include make-mobile-column(6);
+
+    margin-bottom: $gutter-width;
+  }
+}

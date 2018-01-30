@@ -1,0 +1,51 @@
+<header class="header section--wrapper">
+  <div class="content-container">
+    <div id="logo" class="header-component">
+      {% include '@logo' %}
+    </div>
+
+    <div id="profile" class="header-component right">
+      {% include '@mijn-gent-block' with {
+        "items": [
+          "<a href='javascript:(void);'>Mijn profiel</a>",
+          "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+          "<a href='javascript:(void);'>Historiek</a>"
+        ],
+        'auth': 'true',
+      } %}
+    </div>
+
+    <div id="header-search-mobile" class="header-search-mobile header-component right">
+      {% include '@search' with {
+        "search_id": "header-search-mobile",
+        "search_name": "header-search-mobile",
+        "placeholder": "What are you looking for?",
+        "modifier_search": "inline",
+        "text": "Search",
+        "modifier_submit": "btn--inline"
+      } %}
+      <a href="javascript:(void);" class="close">Sluiten</a>
+    </div>
+    <div id="header-search" class="header-search header-component right">
+      {% include '@search' with {
+        "search_id": "header-search",
+        "search_name": "header-search",
+        "placeholder": "What are you looking for?",
+        "modifier_search": "inline",
+        "text": "Search",
+        "modifier_submit": "btn--inline"
+      } %}
+    </div>
+  </div>
+</header>
+
+{% include '@breadcrumbs' with {
+  "section": "section--default",
+  "items": [
+    "<a href='#'>Stad.gent</a>",
+    "<a href='#'>Overview</a>",
+    "<span>Overview</span>",
+    "<span>Overview</span>",
+    "<span>Page title</span>"
+  ]
+} %}

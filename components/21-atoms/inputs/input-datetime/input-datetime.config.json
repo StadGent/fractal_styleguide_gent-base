@@ -1,0 +1,9 @@
+{
+  "title": "Input datetime",
+  "status": "ready",
+  "handle": "input-datetime",
+  "context": {
+    "datetime_name": "datetime_name",
+    "datetime_id": "datetime_id"
+  }
+}

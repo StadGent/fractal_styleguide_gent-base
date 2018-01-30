@@ -1,0 +1,95 @@
+.hamburger-menu {
+  @include themify() {
+    &__drawer {
+      background-color: $hamburger-menu-background;
+      color: $hamburger-menu-link-color;
+
+      a {
+        @include element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
+        @include element-states($hamburger-menu-link-background, $hamburger-menu-link-background-hover, $property: "background-color");
+        @include element-states(0, thin dotted, $property: "outline");
+
+        border-bottom: $hamburger-menu-link-border;
+
+        &.active {
+          border-bottom: $hamburger-menu-link-border-active;
+          background-color: $hamburger-menu-link-background-active;
+          color: $hamburger-menu-link-color-active;
+        }
+
+        &.close {
+          @include element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
+        }
+      }
+    }
+
+    &__overlay.js-opened {
+      background: $hamburger-menu-overlay-color;
+    }
+  }
+
+  &__drawer {
+    position: fixed;
+    top: 0;
+    left: -$hamburger-menu-width;
+    width: $hamburger-menu-width;
+    max-width: 100%;
+    height: 100%;
+    transition: left.5s cubic-bezier(0, 1, .5, 1);
+    overflow: auto;
+    z-index: 9999;
+
+    &.js-opened {
+      left: 0;
+      box-shadow: $hamburger-menu-shadow;
+    }
+
+    ul {
+      @extend %list-no-style;
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      padding-right: .8rem;
+      padding-left: .8rem;
+      font-weight: bold;
+      line-height: 3.48em;
+
+      &:hover,
+      &:focus {
+        text-decoration: none !important; // sass-lint:disable-line no-important
+      }
+
+      &.close {
+        border: 0;
+        text-align: right;
+
+        i {
+          padding-left: .7rem;
+        }
+      }
+    }
+  }
+
+  &__overlay.js-opened {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+  }
+
+  button.hamburger-menu__toggle {
+    @include btn-s;
+
+    &::before {
+      @extend %icon-base-css;
+      @extend %icon-menu;
+      position: relative;
+      top: .1rem;
+      margin-right: .5rem;
+    }
+  }
+}

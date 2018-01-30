@@ -1,0 +1,298 @@
+<h2 class="styleguide-title">Forms</h2>
+<div class="preview-inner-container">
+  <form class="{{ modifier }}">
+    <fieldset>
+    <legend>
+      This is a fieldset title.
+    </legend>
+
+    {% include '@textfield' with {
+      "label": "Label textfield",
+      "for": "textfield_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description textfield.",
+
+      "textfield_id": "textfield_id",
+      "textfield_name": "textfield_name"
+    }%}
+    {% include '@telephone-field'
+    with {
+      "label": "Label telephone field",
+      "for": "tel_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description telephone field.",
+
+      "tel_id": "tel_id",
+      "tel_name": "tel_name"
+    }
+    %}
+    {% include '@password' with {
+      "label": "Label password",
+      "for": "password_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description textfield.",
+
+      "password_id": "password_id",
+      "password_name": "password_name"
+    } %}
+    {% include '@number'
+    with {
+      "label": "Label number",
+      "for": "number_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description number.",
+
+      "number_id": "number_id",
+      "number_name": "number_name"
+    }
+    %}
+    {% include '@date'
+    with {
+      "label": "Label date",
+      "for": "date_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description date field.",
+
+      "date_id": "date_id",
+      "date_name": "date_name"
+    }
+    %}
+    {% include '@datetime'
+    with {
+      "label": "Label datetime",
+      "for": "datetime_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description datetime field.",
+
+      "datetime_id": "datetime_id",
+      "datetime_name": "datetime_name"
+    }
+    %}
+    {% include '@website'
+    with {
+      "label": "Label website",
+      "for": "url_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description website field.",
+
+      "url_id": "url_id",
+      "url_name": "url_name"
+    }
+    %}
+    {% include '@email'
+    with {
+      "label": "Label email",
+      "for": "email_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description email.",
+
+      "email_id": "email_id",
+      "email_name": "email_name"
+    }
+    %}
+    {% include '@file'
+    with {
+      "label": "Label file",
+      "for": "file_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description file.",
+
+      "file_id": "file_id",
+      "file_name": "file_name"
+    }
+    %}
+    {% include '@textarea'
+    with {
+      "label": "Label textarea",
+      "for": "textarea_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description textarea.",
+
+      "textarea_id": "textarea_id",
+      "textarea_name": "textarea_name"
+    }
+    %}
+    {% include '@checkbox'
+    with {
+      "label": "Label checkbox",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description checkboxes.",
+
+      "label_checkbox1": "Checkbox option 1",
+      "checkbox1_name": "checkbox-1",
+      "checkbox1_id": "checkbox-1",
+
+      "checkbox1_label": "Label checkbox 1",
+      "checkbox1_label_for": "checkbox-1",
+      "checkbox1_label_optional": "Optional",
+
+
+      "label_checkbox2": "Checkbox option 2",
+      "checkbox2_name": "checkbox-2",
+      "checkbox2_id": "checkbox-2",
+
+      "checkbox2_label": "Label checkbox 2",
+      "checkbox2_label_for": "checkbox-2",
+      "checkbox2_label_optional": "Optional"
+    }
+    %}
+    {% include '@radio'
+    with {
+      "label": "Label radiobuttons",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description radiobuttons.",
+
+      "label_radio1": "Radio option 1",
+      "radio1_name": "radiogroup",
+      "radio1_id": "radio-1",
+
+      "radio1_label": "Label radio 1",
+      "radio1_label_for": "radio-1",
+      "radio1_label_optional": "Optional",
+
+
+      "label_radio2": "Radio option 2",
+      "radio2_name": "radiogroup",
+      "radio2_id": "radio-2",
+
+      "radio2_label": "Label radio 2",
+      "radio2_label_for": "radio-2",
+      "radio2_label_optional": "Optional"
+    }
+    %}
+    {% include '@select'
+    with {
+      "label": "Label select",
+      "for": "select_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description select.",
+
+      "select_id": "select_id",
+      "select_name": "select_name",
+      "options": [
+        {
+        "label": "Option 1"
+        },
+        {
+        "label": "Option 2"
+        },
+        {
+        "optgroup": true,
+        "label": "Option group",
+          "optgroupoptions": [
+            {
+            "label": "Option 3"
+            },
+            {
+            "label": "Option 4"
+            }
+          ]
+        }
+      ]
+    }
+    %}
+    {% include '@multiselect'
+    with {
+      "label": "Label multiselect with chosen",
+      "for": "multiselect_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description multiselect with chosen.",
+
+      "multiselect_id": "multiselect_id",
+      "multiselect_name": "multiselect_name",
+      "options": [
+        {
+        "label": "Option 1"
+        },
+        {
+        "label": "Option 2"
+        },
+        {
+        "label": "Option 3"
+        },
+        {
+        "label": "Option 4"
+        }
+      ]
+    }
+    %}
+
+    {% include '@multiselect-chosen'
+    with {
+      "label": "Label multiselect with chosen",
+      "for": "multiselect_id",
+      "label_optional": "Optional",
+
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
+      "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
+      "description": "Description multiselect with chosen.",
+
+      "multiselect_id": "multiselect_id",
+      "multiselect_name": "multiselect_name",
+        "options": [
+          {
+          "label": "Option 1"
+          },
+          {
+          "label": "Option 2"
+          },
+          {
+          "label": "Option 3"
+          },
+          {
+          "label": "Option 4"
+          }
+        ]
+    }
+    %}
+
+    </fieldset>
+
+    {% include '@address--address-with-errors' %}
+
+    {% include '@form-actions--editor' %}
+
+  </form>
+</div>

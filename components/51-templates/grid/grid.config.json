@@ -1,0 +1,15 @@
+{
+  "title": "Grid",
+  "status": "ready",
+  "order": 7,
+  "preview": "@preview",
+  "context": {
+    "items": [
+      "<a href='#'>Stad.gent</a>",
+      "<a href='#'>Overview</a>",
+      "<span>Overview</span>",
+      "<span>Overview</span>",
+      "<span>Page title</span>"
+    ]
+  }
+}

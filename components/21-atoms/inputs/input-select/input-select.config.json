@@ -1,0 +1,30 @@
+{
+  "title": "Input Select",
+  "status": "ready",
+  "handle": "input-select",
+  "context": {
+    "select_name": "select_name",
+    "select_id": "select_id",
+    "label": "Input Select",
+    "options": [
+      {
+        "label": "Option 1"
+      },
+      {
+        "label": "Option 2"
+      },
+      {
+        "optgroup": true,
+        "label": "Option group",
+        "optgroupoptions": [
+          {
+            "label": "Option 3"
+          },
+          {
+            "label": "Option 4"
+          }
+        ]
+      }
+    ]
+  }
+}

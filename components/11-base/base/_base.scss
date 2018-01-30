@@ -1,0 +1,96 @@
+//
+// Base
+// ---
+// Default markup for the most common HTML elements, based on the settings file.
+//
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  background: $bg-outside-container;
+  font: $default-font-weight $default-font-size $default-font-family;
+  line-height: $default-line-height;
+  box-sizing: border-box;
+
+  @include breakpoint($bp-tablet-fonts) {
+    font-size: $default-font-size + 2;
+  }
+
+  @include breakpoint($bp-desktop-fonts) {
+    font-size: $default-font-size + 4;
+  }
+}
+
+body {
+  position: relative;
+  color: $default-text-color;
+}
+
+::selection {
+  background-color: $default-text-color;
+  color: lighten($default-text-color, 65%);
+  text-shadow: none;
+}
+
+th > * {
+  margin: 0;
+}
+
+hr {
+  margin: 0 0 $default-line-height;
+  clear: both;
+  border: 1px 0 0 solid lighten($default-text-color, 60);
+}
+
+//
+// Fix a > img problem
+//
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+// Inline items.
+.container-inline div,
+.container-inline label {
+  display: inline;
+}
+
+// Fieldset contents always need to be rendered as block.
+.container-inline .fieldset-wrapper {
+  display: block;
+}
+
+// Prevent text wrapping.
+.nowrap {
+  white-space: nowrap;
+}
+
+// Visually hidden
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+pre {
+  margin-bottom: .5em;
+  font-size: inherit;
+  line-height: inherit;
+}

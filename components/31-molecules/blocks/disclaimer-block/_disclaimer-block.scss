@@ -1,0 +1,18 @@
+.dg-block-links {
+  list-style: none;
+
+  a {
+    color: $color-orange-light;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $color-orange-lighter;
+    }
+
+    &:visited {
+      color: $color-orange-light;
+    }
+
+  }
+}

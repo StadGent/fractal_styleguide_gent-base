@@ -1,0 +1,55 @@
+.dg-default-block {
+  h3 {
+    @extend %h2;
+  }
+
+  li {
+    padding: .2rem 0;
+  }
+
+  a {
+    color: $color-white;
+  }
+
+  .phone {
+    &::before {
+      @extend %icon-base-css;
+      @extend %icon-phone;
+
+      padding-right: .5rem;
+    }
+  }
+
+  .email {
+    &::before {
+      @extend %icon-base-css;
+      @extend %icon-email;
+
+      padding-right: .5rem;
+    }
+  }
+
+  .link {
+    &::before {
+      @extend %icon-base-css;
+      @extend %icon-link;
+
+      padding-right: .5rem;
+    }
+  }
+
+  .textballoon {
+    margin-top: 1rem;
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &::before {
+      @extend %icon-base-css;
+      @extend %icon-textballoon-fill-right;
+
+      padding-right: .5rem;
+    }
+  }
+}

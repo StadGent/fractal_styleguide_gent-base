@@ -1,0 +1,50 @@
+<div class="form-progress">
+  <ul class="no-style">
+    {% if step1_title %}
+      <li class="progress progress-previous">
+        <a href="javascript:(void);" class="indicator">
+          <span class='count'><i class="icon icon-check"></i></span>
+          <span class="label">{{ step1_title|default('Step 1 title') }}</span>
+        </a>
+      </li>
+    {% endif %}
+    {% if step2_title %}
+      <li class="progress progress-active">
+        <a href="javascript:(void);" class="indicator">
+          <span class='count'>2</span>
+          <span class="label">{{ step2_title }}</span>
+        </a>
+      </li>
+    {% endif %}
+    {% if step3_title %}
+      <li class="progress">
+        <span class='count'>3</span>
+        <span class="label">{{ step3_title }}</span>
+      </li>
+    {% endif %}
+    {% if step4_title %}
+      <li class="progress">
+        <span class='count'>4</span>
+        <span class="label">{{ step4_title }}</span>
+      </li>
+    {% endif %}
+    {% if step5_title %}
+      <li class="progress">
+        <span class='count'>5</span>
+        <span class="label">{{ step5_title }}</span>
+      </li>
+    {% endif %}
+    {% if step6_title %}
+      <li class="progress">
+        <span class='count'>6</span>
+        <span class="label">{{ step6_title }}</span>
+      </li>
+    {% endif %}
+    {% if step7_title %}
+      <li class="progress">
+        <span class='count'>7</span>
+        <span class="label">{{ step7_title }}</span>
+      </li>
+    {% endif %}
+  </ul>
+</div>

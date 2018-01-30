@@ -1,0 +1,15 @@
+{
+  "title": "Lists",
+  "status": "ready",
+  "handle": "lists",
+  "preview": "@preview",
+  "order": 2,
+  "context": {
+    "items": [
+      "item 1",
+      "<i class='icon-twitter'></i> item 2",
+      "item 3",
+      "item 4"
+    ]
+  }
+}

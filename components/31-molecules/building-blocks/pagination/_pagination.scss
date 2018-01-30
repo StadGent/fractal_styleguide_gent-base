@@ -1,0 +1,49 @@
+//
+// Pagination
+//
+.pager {
+  ul {
+    @extend %list-no-style;
+    font-size: .8rem;
+    font-weight: bold;
+
+    li {
+      display: inline;
+      margin-left: .25rem;
+
+      a,
+      span {
+        display: inline-block;
+        padding: .4rem .5rem;
+        border-radius: $radius-1;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $color-lightest-blue;
+        }
+      }
+
+      &.is-active {
+        span,
+        a {
+          background-color: $color-orange;
+          color: $color-white;
+        }
+      }
+
+      &.pager-ellipsis {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+        }
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

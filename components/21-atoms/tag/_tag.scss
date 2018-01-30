@@ -1,0 +1,30 @@
+.tag {
+  @include themify {
+    background: $tag-background;
+    color: $tag-color;
+
+    @at-root a#{&} {
+      @include element-states($tag-background, $tag-background-hover, $property: "background");
+      @include element-states($tag-color, $tag-color-hover, $property: "color");
+    }
+  }
+
+  padding: .05rem .31rem;
+  border-radius: .25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @at-root a#{&} {
+    text-decoration: none;
+
+    &:active,
+    &:visited {
+      @content;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Lists",
+  "status": "ready",
+  "handle": "list",
+  "context": {
+    "items": [
+      "item 1",
+      "item 2"
+    ]
+  }
+}

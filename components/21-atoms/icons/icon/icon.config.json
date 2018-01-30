@@ -1,0 +1,9 @@
+{
+  "title": "Icon",
+  "status": "ready",
+  "context": {
+    "icons": {
+      "&#xe5ff;": "digipolis"
+    }
+  }
+}

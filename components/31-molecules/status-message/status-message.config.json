@@ -1,0 +1,33 @@
+{
+  "title": "Status message",
+  "status": "beta",
+  "handle": "status-message",
+  "order": "9",
+  "default": "status",
+  "context": {
+    "text": "Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus."
+  },
+  "variants": [
+    {
+      "name": "status",
+      "context": {
+        "modifier": "messages--status"
+      },
+      "hidden": true
+    },
+    {
+      "name": "error",
+      "context": {
+        "modifier": "messages--error"
+      },
+      "hidden": true
+    },
+    {
+      "name": "warning",
+      "context": {
+        "modifier": "messages--warning"
+      },
+      "hidden": true
+    }
+  ]
+}

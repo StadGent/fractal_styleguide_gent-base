@@ -1,0 +1,69 @@
+a.cta-link {
+  @include themify {
+    @include element-states($cta-link-background, $cta-link-background-hover, $property: "background");
+    @include element-states($cta-link-border, $cta-link-border-hover, $property: "border");
+
+    .title {
+      color: $cta-link-title-color;
+    }
+
+    .document {
+      color: $cta-link-document-color;
+    }
+
+    .icon {
+      border: $cta-link-icon-border;
+      background: $button-background;
+      color: $button-color;
+    }
+
+    &:focus,
+    &:hover {
+      .title {
+        color: $cta-link-title-color-hover;
+      }
+
+      .document {
+        color: $cta-link-document-color-hover;
+      }
+
+      .icon {
+        border: $button-border-hover;
+        background: $button-background-hover;
+        color: $button-color-hover;
+      }
+    }
+  }
+
+  display: inline-block;
+  position: relative;
+  width: calc(87% + 1px);
+  padding: .625rem 1.25rem;
+  transition: .11s ease-in-out;
+  transition-property: background, color, border;
+  border-radius: $radius-2;
+  text-decoration: none;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    right: calc(-15% - 1px);
+    bottom: 0;
+    width: 15%;
+    min-height: 4rem;
+    margin: auto;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    border-radius: $radius-2;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+}

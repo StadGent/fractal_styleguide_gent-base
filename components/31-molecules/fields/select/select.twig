@@ -1,0 +1,29 @@
+<div class="form-item{% if field_modifier %} {{ field_modifier }}{% endif %}">
+  <div class="form-label">
+    {% include '@label' with {
+      "label": label,
+      "for": for,
+      "label_optional": label_optional
+    } %}
+  </div>
+  <div class="form-columns">
+    <div class="form-item-column">
+      {% include '@field-description' with {
+        "field_description": field_description
+      } %}
+    </div>
+    <div class="form-item-column">
+      {% include '@input-select' with {
+        "select_id": select_id,
+        "select_name": select_name,
+        "options": options
+      } %}
+      {% include '@description' with {
+        "description": description
+      } %}
+      {% include '@field-error' with {
+        "field_error": field_error
+      } %}
+    </div>
+  </div>
+</div>

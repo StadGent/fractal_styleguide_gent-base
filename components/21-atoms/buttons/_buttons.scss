@@ -1,0 +1,99 @@
+//
+// Button size mixins.
+//
+@mixin btn-l {
+  padding-top: .7rem;
+  padding-bottom: .7rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@mixin btn-m {
+  padding-top: .45rem;
+  padding-bottom: .45rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@mixin btn-s {
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  font-size: .8rem;
+  line-height: 1.4rem;
+}
+
+//
+// Button display
+//
+@mixin btn-inlineblock {
+  display: inline-block;
+  width: auto;
+}
+
+//
+// General button styling.
+//
+%btn,
+.btn,
+a.btn,
+button,
+input[type='button'],
+input[type='submit'] {
+  @include themify {
+    @include element-states($button-color, $button-color-hover, $property: "color");
+    @include element-states($button-background, $button-background-hover, $property: "background");
+    @include element-states($button-border, $button-border-hover, $property: "border");
+  }
+  @include btn-m;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  transition: .11s ease-in-out;
+  transition-property: background, color, border;
+  border: 0;
+  border-radius: $radius-1;
+  outline: none;
+  font-family: $primary-font-family;
+  font-weight: $primary-font-weight + 300;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  cursor: pointer;
+  overflow: hidden;
+  appearance: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.icon::before {
+    @extend %icon-base-css;
+    margin-right: .43rem;
+  }
+
+  &.icon-only {
+    text-indent: -9999px;
+
+    &::before {
+      width: 100%;
+      margin: 0;
+      float: left;
+      text-align: center;
+      text-indent: 0;
+    }
+  }
+}
+
+//
+// Inline button styling.
+//
+%btn--inline,
+.inline.btn,
+.btn--inline,
+a.btn--inline,
+button.btn--inline,
+input[type='button'].btn--inline,
+input[type='submit'].btn--inline {
+  @include btn-inlineblock
+}

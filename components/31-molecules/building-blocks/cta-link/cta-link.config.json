@@ -1,0 +1,56 @@
+{
+  "title": "CTA link",
+  "status": "ready",
+  "handle": "cta-link",
+  "default": "website",
+  "context": {
+    "title": "Do you want more info?",
+    "link_text": "Visit our website",
+    "url": "javascript:(void);",
+    "modifier": "link"
+  },
+  "variants": [
+    {
+      "name": "website"
+    },
+    {
+      "name": "document",
+      "context": {
+        "modifier": "clip",
+        "link_text": "Download"
+      }
+    },
+    {
+      "name": "form fill",
+      "context": {
+        "modifier": "form-fill",
+        "title": "Fill in the form",
+        "link_text": "Fill in"
+      }
+    },
+    {
+      "name": "email",
+      "context": {
+        "modifier": "email",
+        "title": "Contact us by email",
+        "link_text": "Mail"
+      }
+    },
+    {
+      "name": "phone",
+      "context": {
+        "modifier": "phone",
+        "title": "Contact us by phone",
+        "link_text": "Call us"
+      }
+    },
+    {
+      "name": "location",
+      "context": {
+        "modifier": "loc",
+        "title": "Location",
+        "link_text": "Location"
+      }
+    }
+  ]
+}

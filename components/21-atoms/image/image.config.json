@@ -1,0 +1,10 @@
+{
+  "title": "Image",
+  "name": "Image",
+  "handle": "image",
+  "order": 9,
+  "context": {
+    "src": "https://via.placeholder.com/800x532",
+    "alt_text": "Image alt text"
+  }
+}

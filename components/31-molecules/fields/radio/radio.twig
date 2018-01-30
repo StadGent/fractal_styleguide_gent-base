@@ -1,0 +1,47 @@
+<div class="form-item">
+  <div class="form-label">
+    {% include '@label' with {
+      "label": label,
+      "label_optional": label_optional
+    } %}
+  </div>
+  <div class="form-columns">
+    <div class="form-item-column">
+      {% include '@field-description' with {
+        "field_description": field_description
+      } %}
+    </div>
+    <div class="form-item-column">
+
+      {% include '@input-radio' with {
+        'label': label_radio1,
+        'radio_name': radio1_name,
+        'radio_id': radio1_id
+      } %}
+      {% include '@label' with {
+        "label": radio1_label,
+        "for": radio1_label_for,
+        "label_optional": radio1_label_optional
+      } %}
+
+      {% include '@input-radio' with {
+        'label': label_radio2,
+        'radio_name': radio2_name,
+        'radio_id': radio2_id
+      } %}
+      {% include '@label' with {
+        "label": radio2_label,
+        "for": radio2_label_for,
+        "label_optional": radio2_label_optional
+      } %}
+
+      {% include '@description' with {
+        "description": description
+      } %}
+      {% include '@field-error' with {
+        "field_error": field_error
+      } %}
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+{
+  "title": "Input url",
+  "status": "ready",
+  "handle": "input-url",
+  "context": {
+    "url_id": "url_id",
+    "url_name": "url_name"
+  }
+}

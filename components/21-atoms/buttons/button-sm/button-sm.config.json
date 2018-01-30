@@ -1,0 +1,18 @@
+{
+  "title": "Button small",
+  "name": "Button small",
+  "status": "ready",
+  "handle": "button-sm",
+  "order": 1,
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+    {
+      "name": "inline",
+      "context": {
+        "modifier": "btn--inline"
+      }
+    }
+  ]
+}
