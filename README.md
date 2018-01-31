@@ -37,10 +37,6 @@ To contribute to the style guide please refer to the
   components.
 * We will probably drop jQuery in favor for native Javascript or another.
 
-### Upcoming: 2.7.x
-
-* General changes and fixes to the style guide.
-
 ## Licenses
 
 If you are building something for the City of Ghent (Stad Gent) or Digipolis,
