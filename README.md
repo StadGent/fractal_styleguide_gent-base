@@ -135,7 +135,7 @@ Example:
 @import '/sass/41-organism-overrides/**/*';
 ```
 
-Note: When using the style guide you will need to add breakpoint-sass as an
+Note: When using the style guide you will need to add a few dependencies as an
 includePath inside your gulpfile.js
 
 Example:
@@ -143,7 +143,10 @@ Example:
 ```javascript
     .pipe(sass({
       outputStyle: 'compressed',
-      includePaths: ['node_modules/breakpoint-sass/stylesheets']
+      includePaths: [
+        'node_modules/breakpoint-sass/stylesheets',
+        'node_modules/susy/sass'
+      ]
     })).on('error', sass.logError)
 ```
 
