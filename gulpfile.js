@@ -296,7 +296,8 @@ gulp.task('js:build', ['fractal:build'], (callback) => {
     .pipe(minify({
       noSource: true
     }))
-    .pipe(gulp.dest('./build/styleguide/js/'));
+    .pipe(gulp.dest('./build/styleguide/js/'))
+    .pipe(gulp.dest('../build/js/'));
   callback();
 });
 
