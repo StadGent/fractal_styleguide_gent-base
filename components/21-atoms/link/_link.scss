@@ -10,4 +10,19 @@ a {
   &:focus {
     outline: thin dotted;
   }
+
+  &.btn {
+    text-decoration: none !important; // sass-lint:disable-line no-important
+  }
+
+  &.external-link {
+    &::before {
+      @extend %icon-base-css;
+      @extend %icon-newtab;
+
+      display: inline-block;
+      margin-right: .25rem;
+      text-decoration: none;
+    }
+  }
 }

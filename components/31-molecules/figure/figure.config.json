@@ -2,6 +2,8 @@
   "title": "Figure",
   "status": "ready",
   "context": {
-    "figure_figcaption": "Figure caption comes here."
+    "figure_figcaption": "Figure caption comes here.",
+    "figure_image_src": "https://loremflickr.com/800/532/ghent",
+    "figure_image_alt_text": "Image alt text"
   }
 }

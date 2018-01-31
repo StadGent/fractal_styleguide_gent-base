@@ -1,62 +1,61 @@
-ul,
-ol {
-  &.breadcrumb {
-    display: none;
-    margin-top: .5rem;
-    list-style: none;
+.breadcrumb {
+  ul,
+  ol {
+    &.breadcrumb {
+      display: none;
+      margin: .5rem auto;
+      list-style: none;
 
-    @media (min-width: $bp-tablet) {
-      display: block;
-    }
+      @media (min-width: $bp-tablet) {
+        display: block;
+      }
 
-    li {
-      display: inline;
-      margin-left: -.7rem;
-      padding: 0 .7rem;
-      font-size: .7rem;
-
-      > * {
+      li {
+        display: inline;
+        margin-left: -.7rem;
         padding: 0 .7rem;
-      }
+        font-size: .7rem;
 
-      a {
-        border-radius: $radius-1;
-        text-decoration: none;
-
-        &:hover {
-          background-color: $bg-hover-breadcrumb;
+        > * {
+          padding: 0 .7rem;
         }
-      }
 
-      &::after {
-        @extend %icon-base-css;
-        @extend %icon-caret;
-        position: absolute;
-        margin: .4rem .1rem;
-        font-size: .8rem;
-        font-weight: 700;
-      }
+        a {
+          padding: .4rem;
+          border-radius: $radius-1;
+          text-decoration: none;
 
-      &:first-of-type a {
-        padding-left: 0;
-      }
-
-      &:last-of-type {
-        display: inline-block;
-        font-weight: bold;
+          &:hover {
+            background-color: $bg-hover-breadcrumb;
+          }
+        }
 
         &::after {
-          display: none;
+          @extend %icon-base-css;
+          @extend %icon-caret;
+          position: absolute;
+          margin: .4rem .1rem;
+          font-size: .8rem;
+          font-weight: 700;
+        }
+
+        &:last-of-type {
+          display: inline-block;
+          font-weight: bold;
+
+          &::after {
+            display: none;
+          }
         }
       }
     }
-  }
 
-  &.nav--mobile-breadcrumb {
-    display: block;
+    &.nav--mobile-breadcrumb {
+      display: block;
 
-    @media (min-width: $bp-tablet) {
-      display: none;
+      @media (min-width: $bp-tablet) {
+        display: none;
+      }
     }
   }
 }

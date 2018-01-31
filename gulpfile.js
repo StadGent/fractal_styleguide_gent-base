@@ -77,6 +77,11 @@ fractal.components.set('statuses', {
     description: 'Deprecated.',
     color: '#dd5e01'
   },
+  alpha: {
+    label: 'alpha',
+    description: 'Alpha software can be unstable and could cause crashes or data loss.',
+    color: '#551A8B'
+  },
   beta: {
     label: 'beta',
     description: 'Work in progress. Implement with caution.',

@@ -83,6 +83,12 @@ img {
   clip: rect(0 0 0 0);
 }
 
+
+%no-link-style,
+.no-link-style {
+  @include no-link-style;
+}
+
 p,
 ol,
 ul,

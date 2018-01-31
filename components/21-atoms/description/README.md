@@ -19,3 +19,4 @@ This component has 3 types. Which one is used depends on the situation.
 * div (default)
 * caption
 * figcaption
+

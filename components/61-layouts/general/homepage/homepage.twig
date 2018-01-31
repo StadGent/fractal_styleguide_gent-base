@@ -1,4 +1,4 @@
-{% include '@header--with-menu' with {
+{% include '@header--with-menu-and-banner' with {
   "section": "section--wrapper",
   "hamburger_menu_items": [
     "<a href='javascript:void(0);'>Menu item 1</a>",
@@ -37,102 +37,76 @@
     "<span>Overview</span>",
     "<span>Overview</span>",
     "<span>Page title</span>"
-  ]
+  ],
+  "page_wide_image_src": "https://loremflickr.com/1600/420/ghent",
+  "page_wide_image_alt_text": "Homepage",
+  "page_wide_image_modifier": "no-style",
+  "page_wide_image_description": '',
+  "page_wide_image_h2_text": "Homepage"
 } %}
 
-<section class="page-container section--default">
+<section class="section--inverse">
   <div class="content-container">
-    <div class="row">
-      <div class="col-desktop-7">
-        {% include '@h1' with { 'h1_text': 'Reserveer Balkonzaal - CityRoom'} %}
-      </div>
-    </div>
 
     <div class="row">
-      <div class="col-desktop-3">
-        {% include '@form-steps' with {
-          'step1_title': 'Describe your activity',
-          'step2_title': 'Plan your activity',
-          'step3_title': 'Fill in your personal information',
-          'step4_title': 'Enter your billing information',
-          'step5_title': 'Questions or remarks'
-        } %}
+      <div class="col-tablet-4">
+        <section class="island section--default">
+          <h2>Veelgevraagde info</h2>
+          {% include '@list' with {
+            "modifier": "links",
+            "items": [
+              "<a href='#'>Maatregelen bezoedeld drinkwater Oostakker</a>",
+              "<a href='#'>Maak een afspraak</a>",
+              "<a href='#'>Mobiliteitsplan: Parkeer- en Circulatieplan</a>",
+              "<a href='#'>Belangrijkste wegenwerken</a>",
+              "<a href='#'>Lage emissiezone</a>",
+              "<a href='#'>Uittreksels en attesten</a>",
+              "<a href='#'>Vacatures</a>",
+            ]
+          } %}
+        </section>
       </div>
-      <div class="col-desktop-9">
-        <fieldset class="form-item">
-          <legend>
-            1. Describe your activity
-          </legend>
-
-          <div class="fieldset-wrapper">
-            {% include '@textfield'
-              with {
-                'label': 'Activity name',
-                'description': 'Enter a name for your activity.',
-                "field_error": 'Please enter a valid name for your activity.',
-                "field_description": 'We can identify you better through the name of your activity.'
-              }
-            %}
-
-            {% include '@textarea'
-              with {
-                'label': 'Describe your activity and it\'s purpose',
-                'description': 'Describe your activity and it\'s purpose.',
-                "field_error": 'Please shortly describe your activity.',
-                "field_description": 'A short and simplified description of your activity.'
-              }
-            %}
-
-          <fieldset class="form-item">
-            <legend>
-              2. Is this a profit-oriented activity?
-            </legend>
-
-            <div class="fieldset-wrapper">
-              {% include '@field-description'
-                with {
-                  "field_description": 'For profit purposes = the applicant of the room strives to make a profit, i.e. the proceeds of the activity exceed the costs associated with it.'
-                }
-              %}
-
-              {% include '@radio' with {
-                "label": "",
-                "label_optional": "",
-
-                "field_description": "",
-                "field_error": "",
-                "description": "",
-
-                "label_radio1": "Ik reserveer deze zaal als particulier of feitelijke vereniging",
-                "radio1_name": "radiogroup",
-                "radio1_id": "radio-1",
-
-                "radio1_label": "Ik reserveer deze zaal als particulier of feitelijke vereniging",
-                "radio1_label_for": "radio-1",
-                "radio1_label_optional": "",
-
-                "label_radio2": "Ik reserveer deze zaal als particulier of feitelijke vereniging",
-                "radio2_name": "radiogroup",
-                "radio2_id": "radio-2",
-
-                "radio2_label": "Ik reserveer deze zaal als vennootschap of een vereniging met rechtspersoonlijkheid",
-                "radio2_label_for": "radio-2",
-                "radio2_label_optional": ""
-              } %}
-
-              {% include '@address' %}
-
-            </div>
-          </fieldset>
-
-          </div>
-        </fieldset>
-
-        {% include '@form-actions--default' %}
-
+      <div class="col-tablet-4">
+        <section class="island section--default">
+          {% include '@h2' with {
+            "h2_text": "Openingsuren en adressen"
+          } %}
+          {% include '@list' with {
+            "modifier": "links",
+            "items": [
+              "<a href='#'>Bibliotheken</a>",
+              "<a href='#'>Dienst Burgerzaken</a>",
+              "<a href='#'>Belastingen</a>",
+              "<a href='#'>Zwembaden</a>",
+              "<a href='#'>Administratief Centrum Zuid</a>",
+              "<a href='#'>Alle openingsuren & adressen</a>",
+            ]
+          } %}
+        </section>
+      </div>
+      <div class="col-tablet-4">
+        <section class="island section--highlighted">
+          {% include '@h2' with {
+          "h2_text": "Gentinfo"
+          } %}
+          {% include '@paragraph' with {
+            "text": "Gentinfo is hét centrale aanspreekpunt voor informatie over het stadsbestuur en de stadsdiensten. Heeft u vragen, klachten, suggesties, meldingen ... over de Stad Gent? Neem contact op met Gentinfo."
+          } %}
+          {% include '@list' with {
+            "modifier": "no-style",
+            "items": [
+              "<a href='tel:+3292101010' itemprop='telephone'><i class='icon-phone'></i>09 210 10 10 – ma-za van 8-19 u.</a>",
+              "<a href='mailto:gentinfo@stad.gent'><i class='icon-email'></i>gentinfo@stad.gent</a>"
+            ]
+          } %}
+          {% include '@button-md--default' with {
+            "text": "Contactformulier"
+          } %}
+        </section>
       </div>
     </div>
   </div>
+
 </section>
 
 {% include '@newsletter-block' with {

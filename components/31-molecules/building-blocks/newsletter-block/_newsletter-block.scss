@@ -46,7 +46,7 @@ div.newsletter-block {
         border-radius: $radius-3;
         overflow: hidden;
       }
-      
+
       display: none;
 
       img {
@@ -111,6 +111,8 @@ div.newsletter-block {
   }
 
   &__social-media {
+    @include no-link-style;
+
     @include tablet {
       width: 50%;
     }

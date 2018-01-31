@@ -44,11 +44,8 @@ header.header {
 
       // Change the look and feel of the link atom.
       a {
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-          text-decoration: underline;
+        @include themify {
+          @include element-states(none, underline, $property: 'text-decoration');
         }
       }
 
@@ -140,6 +137,10 @@ header.header {
           }
         }
       }
+    }
+
+    .site-logo {
+      margin-bottom: .5rem;
     }
   }
 }

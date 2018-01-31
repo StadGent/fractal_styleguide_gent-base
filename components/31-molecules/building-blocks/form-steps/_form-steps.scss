@@ -66,16 +66,18 @@
   }
 
   li {
+    @include no-link-style;
+
+    @include tablet {
+      display: block;
+    }
+
     display: inline-block;
     position: relative;
     flex: 1;
     margin-bottom: 1em;
     font-size: 1.125rem;
     line-height: 2rem;
-
-    @include tablet {
-      display: block;
-    }
   }
 
   .progress {
@@ -119,6 +121,7 @@
 
     &.progress-previous {
       .count i {
+        margin-right: 0;
         font-size: .8rem;
         line-height: 1.6rem;
       }

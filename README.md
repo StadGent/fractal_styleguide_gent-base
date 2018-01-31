@@ -10,6 +10,24 @@ a web application in the corporate identity for the city of Ghent..
 [![Build Status](https://travis-ci.org/StadGent/fractal_styleguide_gent-base.svg?branch=develop)](https://travis-ci.org/StadGent/fractal_styleguide_gent-base)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1aeba4d73f307d4583b9/maintainability)](https://codeclimate.com/github/StadGent/fractal_styleguide_gent-base/maintainability)
 
+## Contributing to the style guide 
+
+### Pull requests 
+
+This repository is a read only version of the style guide part of our own
+Drupal 8 base theme.
+
+If you want to develop for this style guide you need to do it in 
+[this repository](https://github.com/digipolisgent/drupal_theme_gent-base)
+
+> Please do not create any pull requests directly here. 
+> Instead use 
+> [this repo](https://github.com/digipolisgent/drupal_theme_gent-base) to 
+> create your pull requests.
+
+To contribute to the style guide please refer to the 
+[contributing document](CONTRIBUTING.md)
+
 ## Roadmap
 
 ### Style guide version 3.x

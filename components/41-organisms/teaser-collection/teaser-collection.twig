@@ -1,14 +1,14 @@
-<ul class="teasers section--accent">
+<ul class="teasers">
   {% for i in 0..6 %}
     <li>
       {% include '@teaser' with {
-        "teaser_image_src": "https://loremflickr.com/650/400/ghent?random="~i,
-        "teaser_image_alt_text": "alt text",
-        "teaser_paragraph_text": "Teaser text, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.",
-        "teaser_h3_title": "Title text " ~ i,
-        "teaser_uid": "uid" ~ i,
-        "teaser_link_text": "read more",
-        "teaser_link_link" : "javascript:void(0);"
+        "teaser_image_src": teaser_image_src ~ i,
+        "teaser_image_alt_text": teaser_image_alt_text,
+        "teaser_paragraph_text": teaser_paragraph_text,
+        "teaser_h3_title":  teaser_h3_title,
+        "teaser_uid":  teaser_uid ~ i,
+        "teaser_link_text": teaser_link_text,
+        "teaser_link_link": teaser_link_link
       } %}
     </li>
   {% endfor %}

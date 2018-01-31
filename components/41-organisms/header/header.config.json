@@ -3,6 +3,49 @@
   "status": "ready",
   "preview": "@preview-without-padding",
   "context": {
-    "section": "section--wrapper"
+    "section": "section--wrapper",
+    "hamburger_menu_items": [
+      "<a href='javascript:void(0);'>Menu item 1</a>",
+      "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
+      "<a href='javascript:void(0);'>Menu item 3</a>",
+      "<a href='javascript:void(0);'>Menu item 4</a>"
+    ],
+    "mijn_gent_block_items": [
+      "<a href='javascript:(void);'>Mijn profiel</a>",
+      "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+      "<a href='javascript:(void);'>Historiek</a>"
+    ],
+    "header_search_mobile_id": "header-search-mobile",
+    "header_search_mobile_name": "header-search-mobile",
+    "header_search_mobile_placeholder": "What are you looking for?",
+    "header_search_mobile_modifier_search": "inline",
+    "header_search_mobile_text": "Search",
+    "header_search_mobile_modifier_submit": "btn--inline",
+    "header_search_id": "header-search",
+    "header_search_name": "header-search",
+    "header_search_placeholder": "What are you looking for?",
+    "header_search_modifier_search": "inline",
+    "header_search_text": "Search",
+    "header_search_modifier_submit": "btn--inline",
+    "main_menu_modifier": "no-style",
+    "main_menu_items": [
+      "<a href='javascript:void(0);'>Menu item 1</a>",
+      "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
+      "<a href='javascript:void(0);'>Menu item 3</a>",
+      "<a href='javascript:void(0);'>Menu item 4</a>"
+    ],
+    "breadcrumbs_section": "section--default",
+    "breadcrumbs_items": [
+      "<a href='#'>Stad.gent</a>",
+      "<a href='#'>Overview</a>",
+      "<span>Overview</span>",
+      "<span>Overview</span>",
+      "<span>Page title</span>"
+    ],
+    "page_wide_image_src": "https://via.placeholder.com/1600x420",
+    "page_wide_image_alt_text": "Page wide image",
+    "page_wide_image_modifier": "no-style",
+    "page_wide_image_description": "Caption text comes here.",
+    "page_wide_image_h2_text": "Page wide title"
   }
 }

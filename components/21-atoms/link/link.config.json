@@ -9,5 +9,17 @@
     "title": "Title text",
     "aria_label": null,
     "aria_labelledby": null
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "handle": "link"
+    },
+    {
+      "name": "external-link",
+      "context": {
+        "modifier": "external-link"
+      }
+    }
+  ]
 }

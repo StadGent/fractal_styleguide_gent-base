@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "2.8.1",
+  "version": "2.9.0",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@frctl/fractal": "^1.1.7",
@@ -26,7 +26,7 @@
     "yargs": "^8.0.2"
   },
   "scripts": {
-    "postinstall": "sh ./postinstall.sh"
+    "postinstall": "sh ./scripts/postinstall.sh"
   },
   "authors": [
     "Jeroen Goossens",

@@ -85,7 +85,7 @@ echo $PACKAGE_VERSION
 
 # Add everything to git.
 echo "Adding changes to git and tagging "$PACKAGE_VERSION
-git add .
+git add *
 git commit -m "Updated to version "$PACKAGE_VERSION
 echo "Checking out master branch... and pushing develop in master..."
 git checkout master
