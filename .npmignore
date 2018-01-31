@@ -11,6 +11,7 @@ build/assets.html
 build/components.html
 build/docs.html
 build/index.html
+scripts
 
 .DS_Store
 .idea
