@@ -1,6 +1,6 @@
 {
   "title": "Status message",
-  "status": "beta",
+  "status": "ready",
   "handle": "status-message",
   "order": "9",
   "default": "status",
