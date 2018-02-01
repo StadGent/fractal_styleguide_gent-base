@@ -7,3 +7,5 @@
 - `Molecules` Contains components that are a collection of atoms.
 - `Organisms` Contains collections of molecules and atoms.
 - `Templates` Give you an overview of the styleguide through the use of pages.
+- `Layouts` Give tangible layouts as examples on how certain pages types should
+  be build.

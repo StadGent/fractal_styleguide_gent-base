@@ -23,7 +23,7 @@ to see how to integrate it in your custom project.
 1. Go to your project folder and run `npm init` or `yarn init` to create a
   package.json file.
   (if you already have a package.json file proceed to step 2).
-2. Run `npm install gent_styleguide --save-dev` or `yarn add gent_styleguide`.
+2. Run `npm install gent_styleguide` or `yarn add gent_styleguide`.
   This will add the package to your package.json file.
   You will get a directory structure like this.
 
@@ -32,15 +32,17 @@ to see how to integrate it in your custom project.
 ├── node_modules
 │   └── gent_styleguide
 │   └── breakpoint-sass
-├── package-lock.json
-└── package.json
+└── package-lock.json
 ```
 
-3. Make sure you add the following line to your sass compiler (in your
+3. Make sure you add the following lines to your sass compiler (in your
   gulpfile.js)
 
 ```javascript
-    includePaths: ['node_modules/breakpoint-sass/stylesheets']
+includePaths: [
+  'node_modules/breakpoint-sass/stylesheets',
+  'node_modules/susy/sass'
+]
 ```
 
 Example:
@@ -50,7 +52,10 @@ gulp.task('styles:build', function() {
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sass({
       outputStyle: 'compressed',
-      includePaths: ['node_modules/breakpoint-sass/stylesheets']
+      includePaths: [
+        'node_modules/breakpoint-sass/stylesheets',
+        'node_modules/susy/sass'
+      ]
     })).on('error', sass.logError)
     .pipe(gulp.dest('./build/css/'))
 });
