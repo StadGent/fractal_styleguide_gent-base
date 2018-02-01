@@ -13,13 +13,15 @@
       "dark-gray": "#595f60",
       "gray": "#9DA8AF",
       "light-gray": "#E2E2E2",
+      "medium-lighter-gray": "#D5DADD",
       "lightest-gray": "#F4F4F4",
-      "orange": "#F39200",
       "white": "#FFFFFF",
-      "color-white-blue": "#c2e2f0",
-      "color-orange-light": "#ffa927",
-      "color-orange-lighter": "#ffbd5a",
-      "color-medium-lighter-gray": "#d5dadd"
+      "green": "#4DA22E",
+      "red": "#A31B00",
+      "color-white-blue": "#C2E2F0",
+      "orange": "#F39200",
+      "color-orange-light": "#FFA927",
+      "color-orange-lighter": "#FFBD5A"
     }
   }
 }
