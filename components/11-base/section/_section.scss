@@ -1,11 +1,9 @@
 @each $theme, $colors in $themes {
   %section--#{$theme},
   .section--#{$theme} {
+    @include clearfix;
+
     background: map-get($colors, 'section-background');
     color: map-get($colors, 'section-text-color');
   }
-}
-
-*[class*="section--"] {
-  @include clearfix();
 }

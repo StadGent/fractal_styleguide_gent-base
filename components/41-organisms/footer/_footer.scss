@@ -1,6 +1,15 @@
 // General footer styling.
 footer.footer {
-  padding: 1.5rem 0;
+  @include tablet {
+    padding: 1.5rem;
+  }
+
+  &::before,
+  &::after {
+    content: none;
+  }
+
+  padding: 1.5rem .5rem;
 
   h3 {
     margin-top: 0;
@@ -10,46 +19,34 @@ footer.footer {
     color: $color-gray;
   }
 
-  .db-block-partnership {
-    @include tablet {
-      margin-top: 6rem;
-    }
-  }
-
   .footer--column .island {
     border: 0;
   }
 }
 
-// Footer 2 column layout.
-footer[data-columns="2"] {
-  .footer--column {
-    @include make-mobile-column(12);
-    @include make-tablet-column(6);
-    @include make-desktop-column(6);
-  }
-}
-
-// Footer 3 column layout.
-footer[data-columns="3"] {
-  .footer--column {
-    @include make-mobile-column(12);
-    @include make-tablet-column(6);
-    @include make-desktop-column(4);
-  }
-}
-
 // Footer 4 column layout.
 footer[data-columns="4"] {
-  .footer--column {
-    @include make-mobile-column(12);
-    @include make-tablet-column(6);
-    @include make-desktop-column(3);
+  @include tablet {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr [footer-column]);
+    grid-gap: 1rem;
+    grid-auto-rows: 275px;
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr [footer-column]);
+    grid-auto-rows: 400px;
   }
 
-  .db-block-partnership {
+  .footer--column {
+    @include tablet {
+      width: 50%;
+    }
     @include desktop {
-      margin-top: 12.5rem;
+      width: 25%;
+    }
+    @supports (display: grid) {
+      width: auto;
     }
   }
 }
