@@ -3,6 +3,7 @@
 $susy: (
   'columns': susy-repeat(12),
   'gutters': $gutter-width,
+  'spread': 'narrow'
 );
 
 %container,
@@ -21,29 +22,9 @@ $susy: (
 .content-container {
   max-width: $bp-max-content;
   margin: 0 auto;
-  padding: 0 ($gutter-width / 2);
+  padding: 0 (gutter() / 2);
 
   @include tablet {
-    padding: 0 $gutter-width + ($gutter-width / 2); // gutter + padding cols
+    padding: 0 gutter() + (gutter() / 2); // gutter + padding cols
   }
-}
-
-%row,
-.row {
-  @include make-row();
-}
-
-// Columns
-//
-// Common styles grid columns
-
-@include make-grid-columns;
-@include make-grid('mobile');
-
-@include tablet {
-  @include make-grid('tablet');
-}
-
-@include desktop {
-  @include make-grid('desktop');
 }

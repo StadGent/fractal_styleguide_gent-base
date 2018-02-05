@@ -46,67 +46,63 @@
 } %}
 
 <section class="section--inverse">
-  <div class="content-container">
-
-    <div class="row">
-      <div class="col-tablet-4">
-        <section class="island section--default">
-          <h2>Veelgevraagde info</h2>
-          {% include '@list' with {
-            "modifier": "links",
-            "items": [
-              "<a href='#'>Maatregelen bezoedeld drinkwater Oostakker</a>",
-              "<a href='#'>Maak een afspraak</a>",
-              "<a href='#'>Mobiliteitsplan: Parkeer- en Circulatieplan</a>",
-              "<a href='#'>Belangrijkste wegenwerken</a>",
-              "<a href='#'>Lage emissiezone</a>",
-              "<a href='#'>Uittreksels en attesten</a>",
-              "<a href='#'>Vacatures</a>",
-            ]
-          } %}
-        </section>
-      </div>
-      <div class="col-tablet-4">
-        <section class="island section--default">
-          {% include '@h2' with {
-            "h2_text": "Openingsuren en adressen"
-          } %}
-          {% include '@list' with {
-            "modifier": "links",
-            "items": [
-              "<a href='#'>Bibliotheken</a>",
-              "<a href='#'>Dienst Burgerzaken</a>",
-              "<a href='#'>Belastingen</a>",
-              "<a href='#'>Zwembaden</a>",
-              "<a href='#'>Administratief Centrum Zuid</a>",
-              "<a href='#'>Alle openingsuren & adressen</a>",
-            ]
-          } %}
-        </section>
-      </div>
-      <div class="col-tablet-4">
-        <section class="island section--highlighted">
-          {% include '@h2' with {
-          "h2_text": "Gentinfo"
-          } %}
-          {% include '@paragraph' with {
-            "text": "Gentinfo is hét centrale aanspreekpunt voor informatie over het stadsbestuur en de stadsdiensten. Heeft u vragen, klachten, suggesties, meldingen ... over de Stad Gent? Neem contact op met Gentinfo."
-          } %}
-          {% include '@list' with {
-            "modifier": "no-style",
-            "items": [
-              "<a href='tel:+3292101010' itemprop='telephone'><i class='icon-phone'></i>09 210 10 10 – ma-za van 8-19 u.</a>",
-              "<a href='mailto:gentinfo@stad.gent'><i class='icon-email'></i>gentinfo@stad.gent</a>"
-            ]
-          } %}
-          {% include '@button-md--default' with {
-            "text": "Contactformulier"
-          } %}
-        </section>
-      </div>
+  <div class="content-container info-container">
+    <div class="info-block">
+      <section class="island section--default">
+        <h2>Veelgevraagde info</h2>
+        {% include '@list' with {
+          "modifier": "links",
+          "items": [
+            "<a href='#'>Maatregelen bezoedeld drinkwater Oostakker</a>",
+            "<a href='#'>Maak een afspraak</a>",
+            "<a href='#'>Mobiliteitsplan: Parkeer- en Circulatieplan</a>",
+            "<a href='#'>Belangrijkste wegenwerken</a>",
+            "<a href='#'>Lage emissiezone</a>",
+            "<a href='#'>Uittreksels en attesten</a>",
+            "<a href='#'>Vacatures</a>",
+          ]
+        } %}
+      </section>
+    </div>
+    <div class="info-block">
+      <section class="island section--default">
+        {% include '@h2' with {
+          "h2_text": "Openingsuren en adressen"
+        } %}
+        {% include '@list' with {
+          "modifier": "links",
+          "items": [
+            "<a href='#'>Bibliotheken</a>",
+            "<a href='#'>Dienst Burgerzaken</a>",
+            "<a href='#'>Belastingen</a>",
+            "<a href='#'>Zwembaden</a>",
+            "<a href='#'>Administratief Centrum Zuid</a>",
+            "<a href='#'>Alle openingsuren & adressen</a>",
+          ]
+        } %}
+      </section>
+    </div>
+    <div class="info-block">
+      <section class="gent-info-block island section--highlighted">
+        {% include '@h2' with {
+        "h2_text": "Gentinfo"
+        } %}
+        {% include '@paragraph' with {
+          "text": "Gentinfo is hét centrale aanspreekpunt voor informatie over het stadsbestuur en de stadsdiensten. Heeft u vragen, klachten, suggesties, meldingen ... over de Stad Gent? Neem contact op met Gentinfo."
+        } %}
+        {% include '@list' with {
+          "modifier": "no-style",
+          "items": [
+            "<a href='tel:+3292101010' itemprop='telephone'><i class='icon-phone'></i>09 210 10 10 – ma-za van 8-19 u.</a>",
+            "<a href='mailto:gentinfo@stad.gent'><i class='icon-email'></i>gentinfo@stad.gent</a>"
+          ]
+        } %}
+        {% include '@button-md--default' with {
+          "text": "Contactformulier"
+        } %}
+      </section>
     </div>
   </div>
-
 </section>
 
 {% include '@newsletter-block' with {

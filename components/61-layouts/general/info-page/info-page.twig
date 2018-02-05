@@ -1,102 +1,97 @@
-{% include '@header--with-menu' with {
-  "section": "section--wrapper",
-  "hamburger_menu_items": [
-    "<a href='javascript:void(0);'>Menu item 1</a>",
-    "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
-    "<a href='javascript:void(0);'>Menu item 3</a>",
-    "<a href='javascript:void(0);'>Menu item 4</a>"
-  ],
-  "mijn_gent_block_items": [
-    "<a href='javascript:(void);'>Mijn profiel</a>",
-    "<a href='javascript:(void);'>Nieuwsbrieven</a>",
-    "<a href='javascript:(void);'>Historiek</a>"
-  ],
-  "header_search_mobile_id": "header-search-mobile",
-  "header_search_mobile_name": "header-search-mobile",
-  "header_search_mobile_placeholder": "What are you looking for?",
-  "header_search_mobile_modifier_search": "inline",
-  "header_search_mobile_text": "Search",
-  "header_search_mobile_modifier_submit": "btn--inline",
-  "header_search_id": "header-search",
-  "header_search_name": "header-search",
-  "header_search_placeholder": "What are you looking for?",
-  "header_search_modifier_search": "inline",
-  "header_search_text": "Search",
-  "header_search_modifier_submit": "btn--inline",
-  "main_menu_modifier": "no-style",
-  "main_menu_items": [
-    "<a href='javascript:void(0);'>Menu item 1</a>",
-    "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
-    "<a href='javascript:void(0);'>Menu item 3</a>",
-    "<a href='javascript:void(0);'>Menu item 4</a>"
-  ],
-  "breadcrumbs_section": "section--default",
-  "breadcrumbs_items": [
-    "<a href='#'>Stad.gent</a>",
-    "<a href='#'>Overview</a>",
-    "<span>Overview</span>",
-    "<span>Overview</span>",
-    "<span>Page title</span>"
-  ]
-} %}
+<div class="info-page">
+  {% include '@header--with-menu' with {
+    "section": "section--wrapper",
+    "hamburger_menu_items": [
+      "<a href='javascript:void(0);'>Menu item 1</a>",
+      "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
+      "<a href='javascript:void(0);'>Menu item 3</a>",
+      "<a href='javascript:void(0);'>Menu item 4</a>"
+    ],
+    "mijn_gent_block_items": [
+      "<a href='javascript:(void);'>Mijn profiel</a>",
+      "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+      "<a href='javascript:(void);'>Historiek</a>"
+    ],
+    "header_search_mobile_id": "header-search-mobile",
+    "header_search_mobile_name": "header-search-mobile",
+    "header_search_mobile_placeholder": "What are you looking for?",
+    "header_search_mobile_modifier_search": "inline",
+    "header_search_mobile_text": "Search",
+    "header_search_mobile_modifier_submit": "btn--inline",
+    "header_search_id": "header-search",
+    "header_search_name": "header-search",
+    "header_search_placeholder": "What are you looking for?",
+    "header_search_modifier_search": "inline",
+    "header_search_text": "Search",
+    "header_search_modifier_submit": "btn--inline",
+    "main_menu_modifier": "no-style",
+    "main_menu_items": [
+      "<a href='javascript:void(0);'>Menu item 1</a>",
+      "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
+      "<a href='javascript:void(0);'>Menu item 3</a>",
+      "<a href='javascript:void(0);'>Menu item 4</a>"
+    ],
+    "breadcrumbs_section": "section--default",
+    "breadcrumbs_items": [
+      "<a href='#'>Stad.gent</a>",
+      "<a href='#'>Overview</a>",
+      "<span>Overview</span>",
+      "<span>Overview</span>",
+      "<span>Page title</span>"
+    ]
+  } %}
 
-<div class="page-container section--default">
-  <section class="section--default">
-    <div class="content-container">
-      <div class="row">
-        <div class="col-tablet-7">
-          {% include '@h1' with {
-            "h1_text": "Detail page title"
-          } %}
-          {% include '@paragraph' with {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio. In id tellus ut ligula facilisis efficitur at vel urna. Vivamus iaculis felis non tristique malesuada. Quisque venenatis, arcu sed luctus molestie, leo mauris commodo sem, eget egestas orci libero eu justo. Curabitur sollicitudin odio non vulputate tincidunt. Etiam vel dolor in massa dapibus bibendum sit amet vel ipsum. Donec sagittis, elit et hendrerit maximus, nulla tortor laoreet quam, id tincidunt massa neque a ex. Fusce suscipit, ipsum interdum elementum sodales, tellus sapien vehicula nisi, in condimentum neque nisl sit amet elit. Donec sed augue a elit sodales commodo pulvinar vitae nisl. Sed pharetra ante non mollis consequat. Pellentesque a est neque. Nullam maximus ornare metus. Quisque porttitor turpis tristique faucibus efficitur."
-          } %}
-          {% include '@paragraph' with {
-            "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus."
-          } %}
+  <div class="page-container section--default">
+      <div class="content-container">
+          <div class="content">
+            {% include '@h1' with {
+              "h1_text": "Detail page title"
+            } %}
+            {% include '@paragraph' with {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio. In id tellus ut ligula facilisis efficitur at vel urna. Vivamus iaculis felis non tristique malesuada. Quisque venenatis, arcu sed luctus molestie, leo mauris commodo sem, eget egestas orci libero eu justo. Curabitur sollicitudin odio non vulputate tincidunt. Etiam vel dolor in massa dapibus bibendum sit amet vel ipsum. Donec sagittis, elit et hendrerit maximus, nulla tortor laoreet quam, id tincidunt massa neque a ex. Fusce suscipit, ipsum interdum elementum sodales, tellus sapien vehicula nisi, in condimentum neque nisl sit amet elit. Donec sed augue a elit sodales commodo pulvinar vitae nisl. Sed pharetra ante non mollis consequat. Pellentesque a est neque. Nullam maximus ornare metus. Quisque porttitor turpis tristique faucibus efficitur."
+            } %}
+            {% include '@paragraph' with {
+              "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus."
+            } %}
 
-          {% include '@h2' with {
-            "h2_text": "Subtitle"
-          } %}
-          {% include '@paragraph' with {
-            "text": "Quisque sollicitudin leo at erat sagittis aliquet. Nullam ipsum erat, aliquet vel scelerisque posuere, interdum vitae dolor. Morbi finibus nisi efficitur, laoreet risus id, mollis mauris. Donec eu interdum velit, at mattis leo. Suspendisse eget finibus diam. Aliquam condimentum nec elit a aliquam. Donec efficitur et enim et tempor. Vestibulum quis tempor purus. Cras id magna ante. Morbi nec purus vehicula, auctor erat eget, aliquet mi. Nam at ligula convallis, vestibulum ligula a, pretium tellus. Sed pretium vulputate iaculis."
-          } %}
+            {% include '@h2' with {
+              "h2_text": "Subtitle"
+            } %}
+            {% include '@paragraph' with {
+              "text": "Quisque sollicitudin leo at erat sagittis aliquet. Nullam ipsum erat, aliquet vel scelerisque posuere, interdum vitae dolor. Morbi finibus nisi efficitur, laoreet risus id, mollis mauris. Donec eu interdum velit, at mattis leo. Suspendisse eget finibus diam. Aliquam condimentum nec elit a aliquam. Donec efficitur et enim et tempor. Vestibulum quis tempor purus. Cras id magna ante. Morbi nec purus vehicula, auctor erat eget, aliquet mi. Nam at ligula convallis, vestibulum ligula a, pretium tellus. Sed pretium vulputate iaculis."
+            } %}
 
-          {% include '@cta-link--website' with {
-            "title": "Do you want more info?",
-            "link_text": "Visit our website",
-            "url": "javascript:(void);",
-            "modifier": "link"
-          } %}
+            {% include '@cta-link--website' with {
+              "title": "Do you want more info?",
+              "link_text": "Visit our website",
+              "url": "javascript:(void);",
+              "modifier": "link"
+            } %}
 
-          {% include '@h3' with {
-            "h3_text": "Subtitle"
-          } %}
-          {% include '@paragraph' with {
-            "text": "Nam lorem ex, posuere non lectus tempus, ornare scelerisque mauris. Integer vitae tortor orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas enim lectus, malesuada in hendrerit in, vulputate ut enim. Integer pretium elit purus, ac pulvinar augue scelerisque quis. In velit elit, luctus vitae nunc quis, hendrerit congue felis. Nulla tincidunt tincidunt cursus. Mauris pretium eu ex id aliquet. Aenean massa metus, posuere ac dui sit amet, volutpat interdum libero."
-          } %}
-        </div>
-        <div class="col-tablet-5">
-          {% include '@figure' with {
-            "figure_figcaption": "Figure caption comes here.",
-            "figure_image_src": "https://loremflickr.com/800/532/ghent",
-            "figure_image_alt_text": "Image alt text"
-          } %}
-        </div>
+            {% include '@h3' with {
+              "h3_text": "Subtitle"
+            } %}
+            {% include '@paragraph' with {
+              "text": "Nam lorem ex, posuere non lectus tempus, ornare scelerisque mauris. Integer vitae tortor orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas enim lectus, malesuada in hendrerit in, vulputate ut enim. Integer pretium elit purus, ac pulvinar augue scelerisque quis. In velit elit, luctus vitae nunc quis, hendrerit congue felis. Nulla tincidunt tincidunt cursus. Mauris pretium eu ex id aliquet. Aenean massa metus, posuere ac dui sit amet, volutpat interdum libero."
+            } %}
+          </div>
+          <div class="sidebar">
+            {% include '@figure' with {
+              "figure_figcaption": "Figure caption comes here.",
+              "figure_image_src": "https://loremflickr.com/800/532/ghent",
+              "figure_image_alt_text": "Image alt text"
+            } %}
+          </div>
       </div>
-    </div>
-  </section>
-</div>
-<section class="section--inverse">
-  <div class="content-container">
-    <div class="row">
-      <div class="col-mobile-12">
+  </div>
+  <section class="section--inverse">
+    <div class="bottom content-container">
         {% include '@h3' with {
-        "h3_text": "Bottom section title"
+          "h3_text": "Bottom section title"
         } %}
         {% include '@list' with {
-        "modifier": "links",
-        "items": [
+          "modifier": "links",
+          "items": [
             "<a href='#'>item 1 <span class='tag attachment-type'>xlsx</span></a>",
             "<a href='#'>item 2 <span class='tag attachment-type'>xlsx</span></a>",
             "<a href='#'>item 3 <span class='tag attachment-type'>xlsx</span></a>",
@@ -104,32 +99,31 @@
           ]
         } %}
       </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-{% include '@newsletter-block' with {
-  "newsletter_image_src": "https://loremflickr.com/500/250/ghent",
-  "newsletter_image_alt_text": "Newsletter image",
-  "newsletter_image_title": "Don't miss the latest news of Ghent.",
-  "newsletter_content_title": "Subscribe to the newsletter of the City of Ghent.",
-  "newsletter_content_list_items": [
-    "Receive weekly updates of the City of Ghent.",
-    "Be the first to discover new events.",
-    "Already more then 12.0000 subscribers."
-  ],
-  "newsletter_form_name": "newsletter-email",
-  "newsletter_form_id": "newsletter-email",
-  "newsletter_form_submit_value": "Subscribe",
-  "newsletter_social_title": "Volg ons op:",
-  "newsletter_social_modifier": "no-style",
-  "newsletter_social_items": [
-    "<a href='https://www.facebook.com/stadsbestuurgent' title='Facebook'><i class='icon-facebook'></i><span class='element-invisible'>Facebook</span></a>",
-    "<a href='https://twitter.com/stadgent' title='Twitter'><i class='icon-twitter'></i><span class='element-invisible'>Twitter</span></a>",
-    "<a href='https://www.linkedin.com/company/stad-gent' title='LinkedIn'><i class='icon-linkedin'></i><span class='element-invisible'>LinkedIn</span></a>",
-    "<a href='https://www.youtube.com/channel/UCmJLf8SFG0D0GTd6LSSTQLw' title='Youtube'><i class='icon-youtube'></i><span class='element-invisible'>Youtube</span></a>",
-    "<a href='https://www.instagram.com/stadgent/' title='Instagram'><i class='icon-instagram'></i><span class='element-invisible'>Instagram</span></a>"
-  ]
-} %}
+  {% include '@newsletter-block' with {
+    "newsletter_image_src": "https://loremflickr.com/500/250/ghent",
+    "newsletter_image_alt_text": "Newsletter image",
+    "newsletter_image_title": "Don't miss the latest news of Ghent.",
+    "newsletter_content_title": "Subscribe to the newsletter of the City of Ghent.",
+    "newsletter_content_list_items": [
+      "Receive weekly updates of the City of Ghent.",
+      "Be the first to discover new events.",
+      "Already more then 12.0000 subscribers."
+    ],
+    "newsletter_form_name": "newsletter-email",
+    "newsletter_form_id": "newsletter-email",
+    "newsletter_form_submit_value": "Subscribe",
+    "newsletter_social_title": "Volg ons op:",
+    "newsletter_social_modifier": "no-style",
+    "newsletter_social_items": [
+      "<a href='https://www.facebook.com/stadsbestuurgent' title='Facebook'><i class='icon-facebook'></i><span class='element-invisible'>Facebook</span></a>",
+      "<a href='https://twitter.com/stadgent' title='Twitter'><i class='icon-twitter'></i><span class='element-invisible'>Twitter</span></a>",
+      "<a href='https://www.linkedin.com/company/stad-gent' title='LinkedIn'><i class='icon-linkedin'></i><span class='element-invisible'>LinkedIn</span></a>",
+      "<a href='https://www.youtube.com/channel/UCmJLf8SFG0D0GTd6LSSTQLw' title='Youtube'><i class='icon-youtube'></i><span class='element-invisible'>Youtube</span></a>",
+      "<a href='https://www.instagram.com/stadgent/' title='Instagram'><i class='icon-instagram'></i><span class='element-invisible'>Instagram</span></a>"
+    ]
+  } %}
 
-{% include '@footer' %}
+  {% include '@footer' %}
+</div>

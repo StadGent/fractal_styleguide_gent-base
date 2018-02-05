@@ -45,12 +45,18 @@
   "page_wide_image_h2_text": "Theme page"
 } %}
 
-<div class="page-container">
-  <section class="section--inverse">
-    <div class="content-container">
-
-    </div>
-  </section>
+<div class="page-container section--default">
+  <div class="content-container">
+    {% include '@teaser-collection' with {
+      "teaser_image_src": "https://loremflickr.com/650/400/ghent?random=",
+      "teaser_image_alt_text": "alt text",
+      "teaser_paragraph_text": "Teaser text, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.",
+      "teaser_h3_title": "Title text ",
+      "teaser_uid": "uid",
+      "teaser_link_text": "read more",
+      "teaser_link_link" : "javascript:void(0);"
+    } %}
+  </div>
 </div>
 
 {% include '@newsletter-block' with {

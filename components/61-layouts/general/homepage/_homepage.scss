@@ -1,9 +1,22 @@
-.page-container {
-  margin: 0;
-  padding: 0;
+.info-container {
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $gutter-width;
+  }
 
-  *[class^="section--"] {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+  .info-block {
+    @supports (display: grid) {
+      display: grid;
+    }
+
+    > * {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .gent-info-block {
+      @include no-link-style;
+    }
   }
 }

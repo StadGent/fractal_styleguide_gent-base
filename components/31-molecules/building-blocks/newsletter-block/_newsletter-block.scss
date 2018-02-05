@@ -123,14 +123,17 @@ div.newsletter-block {
 
 
     ul {
-      display: flex;
-      flex-wrap: wrap;
+      @supports (display: grid) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: .3rem;
+      }
+
+      margin: 0;
     }
 
     li {
       display: flex;
-      margin-right: .3rem;
-      margin-bottom: .3rem;
       text-align: center;
 
       a {

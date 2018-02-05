@@ -1,0 +1,25 @@
+.info-page {
+  .page-container .content-container {
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: gutter();
+    }
+
+    @include tablet {
+      @supports (display: grid) {
+        grid-template-columns: 6fr 6fr;
+      }
+    }
+
+    @include desktop {
+      @supports (display: grid) {
+        grid-template-columns: 9fr 5fr;
+      }
+    }
+  }
+
+  .bottom {
+    padding: 1.5rem;
+  }
+}
