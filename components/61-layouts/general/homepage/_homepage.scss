@@ -1,27 +1,29 @@
-.info-container {
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: $gutter-width;
-  }
-
-  .info-block {
+.homepage-layout {
+  .info-container {
     @supports (display: grid) {
       display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: $gutter-width;
     }
 
-    > * {
-      margin-right: 0;
-      margin-left: 0;
-    }
+    .info-block {
+      @supports (display: grid) {
+        display: grid;
+      }
 
-    .gent-info-block {
-      @include no-link-style;
+      > * {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .gent-info-block {
+        @include no-link-style;
+      }
     }
   }
-}
 
-.news-container,
-.topics-container {
-  padding: gutter() * 2 0;
+  .news-container,
+  .topics-container {
+    padding: gutter() * 2 0;
+  }
 }

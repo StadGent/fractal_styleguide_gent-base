@@ -5,6 +5,10 @@
     @extend %h2;
   }
 
+  ul {
+    margin: 0;
+  }
+
   li {
     padding: .2rem 0;
   }
