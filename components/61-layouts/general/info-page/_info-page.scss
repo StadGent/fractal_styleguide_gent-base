@@ -19,7 +19,7 @@
     }
   }
 
-  .bottom {
-    padding: 1.5rem;
+  .bottom-container {
+    padding: gutter() * 2 0;
   }
 }
