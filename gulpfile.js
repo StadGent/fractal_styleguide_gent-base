@@ -465,7 +465,7 @@ gulp.task('publish:npm', (callback) => {
           if (publishError) {
             return callback(publishError);
           }
-          callback(`Publish succesfull: ${JSON.stringify(resp, null, 2)}`);
+          callback(`Publish succesfull: ${JSON.stringify(resp, undefined, 2)}`); // eslint-disable-line no-undefined
           return callback();
         });
       });
