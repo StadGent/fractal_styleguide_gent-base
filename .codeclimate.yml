@@ -1,27 +1,64 @@
+# This .codeclimate.yml file is based upon the .codeclimate file of gent_base
+# but has less options due a different code base implemented by the style guide only.
 version: "2"
-plugins:
-  git-legal:
-    enabled: true
+
+prepare:
+  fetch:
+  - url: "https://raw.githubusercontent.com/digipolisgent/ci_config-files-and-scripts/master/php/drupal8/.phpmd.xml"
+    path: ".phpmd.xml"
+  - url: "http://cgit.drupalcode.org/drupal/plain/.csslintrc"
+    path: ".csslintrc"
+  - url: "https://raw.githubusercontent.com/digipolisgent/ci_config-files-and-scripts/master/php/drupal8/.eslintrc"
+    path: ".eslintignore"
+  - url: "https://raw.githubusercontent.com/digipolisgent/ci_config-files-and-scripts/master/php/drupal8/.eslintignore"
+    path: ".eslintrc"
+
+checks:
+  argument-count:
+    enabled: false
+  complex-logic:
     config:
-      allow_affero_copyleft: true
-      allow_strong_copyleft: true
+      threshold: 4
+  file-lines:
+    config:
+      threshold: 250
+  method-complexity:
+    config:
+      threshold: 5
+  method-count:
+    config:
+      threshold: 20
+  method-lines:
+    config:
+      threshold: 50
+  nested-control-flow:
+    config:
+      threshold: 4
+  return-statements:
+    config:
+      threshold: 4
+  similar-code:
+    config:
+      threshold: # language-specific defaults. an override will affect all languages.
+  identical-code:
+    config:
+      threshold: # language-specific defaults. an override will affect all languages.
+
+plugins:
+  csslint:
+    enabled: true
+  eslint:
+    enabled: true
   duplication:
     enabled: true
     config:
       languages:
+        php:
         javascript:
-  markdownlint:
-    enabled: true
-    issue_override:
-      severity: minor
   fixme:
     enabled: true
-  eslint:
+  markdownlint:
     enabled: true
+
 exclude_patterns:
 - "**/.idea/**/*"
-- "**/.github/**/*"
-- "**/build/**/*"
-- "**/public/**/*"
-- "**/node_modules/"
-- "**/yarn.lock"
