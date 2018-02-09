@@ -10,7 +10,7 @@ All notable changes to this style guide are documented here.
 
 ### 3.0.0
 
-* DTGB-180: Added gulp task to perform accessibility checks. 
+* DTGB-180: Added gulp task to perform accessibility checks.
 
 ### 2.9.0
 
