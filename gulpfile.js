@@ -28,6 +28,8 @@ const npm = require('npm');
 const bump = require('gulp-bump');
 const inject = require('gulp-inject');
 const yargs = require('yargs');
+const axe = require('gulp-axe-webdriver');
+
 
 var _sassLint = (failOnError) => {
   var cmd = gulp.src('components/**/*.s+(a|c)ss')
@@ -498,6 +500,21 @@ gulp.task('bump', () => {
     }))
     .pipe(gulp.dest('./'));
 });
+
+/*
+ * Test the style guide components for accessibility issues.
+ *   - wcag2a
+ *   - wcag2aa
+ */
+gulp.task('axe', function(done) {
+  var options = {
+    saveOutputIn: 'allHtml.json',
+    urls: ['build/components/preview/theme-page.html'],
+    tags: ['wcag2a', 'wcag2aa']
+  };
+  return axe(options, done);
+});
+
 
 /*
  *
