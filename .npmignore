@@ -19,6 +19,7 @@ scripts
 .gitignore
 .npmignore
 .sass-lint.yml
+.codeclimate
 bower.json
 composer.json
 Gemfile
