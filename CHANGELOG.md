@@ -13,6 +13,10 @@ All notable changes to this style guide are documented here.
 * DTGB-140: Removed some files from the NPM package.
 * DTGB-140: Fixed a bug where `npm install` breaks 
   the install of the style guide.
+* DTGB-276: Fixed a bug where the breadcrumb alignment was not correct. 
+
+  > **Some markup changes have been introduced so you might need some 
+    refactoring.**
 
 ### 2.9.0
 
