@@ -1,6 +1,10 @@
 <h2 class="styleguide-title">Forms</h2>
 <div class="preview-inner-container">
   <form class="{{ modifier }}">
+    {% include '@paragraph' with {
+      'text' : 'Vul alle velden in tenzij anders vermeld',
+      'modifier': 'required-fields-indicator'
+    } %}
     <fieldset>
     <legend>
       This is a fieldset title.

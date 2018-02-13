@@ -59,74 +59,79 @@
         } %}
       </div>
       <div class="col-desktop-9">
-        <fieldset class="form-item">
-          <legend>
-            1. Describe your activity
-          </legend>
-
-          <div class="fieldset-wrapper">
-            {% include '@textfield'
-              with {
-                'label': 'Activity name',
-                'description': 'Enter a name for your activity.',
-                "field_error": 'Please enter a valid name for your activity.',
-                "field_description": 'We can identify you better through the name of your activity.'
-              }
-            %}
-
-            {% include '@textarea'
-              with {
-                'label': 'Describe your activity and it\'s purpose',
-                'description': 'Describe your activity and it\'s purpose.',
-                "field_error": 'Please shortly describe your activity.',
-                "field_description": 'A short and simplified description of your activity.'
-              }
-            %}
-
+        <form action="">
+          {% include '@paragraph' with {
+            'text' : 'Vul alle velden in tenzij anders vermeld',
+            'modifier': 'required-fields-indicator'
+          } %}
           <fieldset class="form-item">
             <legend>
-              2. Is this a profit-oriented activity?
+              1. Describe your activity
             </legend>
 
             <div class="fieldset-wrapper">
-              {% include '@field-description'
+              {% include '@textfield'
                 with {
-                  "field_description": 'For profit purposes = the applicant of the room strives to make a profit, i.e. the proceeds of the activity exceed the costs associated with it.'
+                  'label': 'Activity name',
+                  'description': 'Enter a name for your activity.',
+                  "field_error": 'Please enter a valid name for your activity.',
+                  "field_description": 'We can identify you better through the name of your activity.'
                 }
               %}
 
-              {% include '@radio' with {
-                "label": "",
-                "label_optional": "",
+              {% include '@textarea'
+                with {
+                  'label': 'Describe your activity and it\'s purpose',
+                  'description': 'Describe your activity and it\'s purpose.',
+                  "field_error": 'Please shortly describe your activity.',
+                  "field_description": 'A short and simplified description of your activity.'
+                }
+              %}
 
-                "field_description": "",
-                "field_error": "",
-                "description": "",
+            <fieldset class="form-item">
+              <legend>
+                2. Is this a profit-oriented activity?
+              </legend>
 
-                "label_radio1": "Ik reserveer deze zaal als particulier of feitelijke vereniging",
-                "radio1_name": "radiogroup",
-                "radio1_id": "radio-1",
+              <div class="fieldset-wrapper">
+                {% include '@field-description'
+                  with {
+                    "field_description": 'For profit purposes = the applicant of the room strives to make a profit, i.e. the proceeds of the activity exceed the costs associated with it.'
+                  }
+                %}
 
-                "radio1_label": "Ik reserveer deze zaal als particulier of feitelijke vereniging",
-                "radio1_label_for": "radio-1",
-                "radio1_label_optional": "",
+                {% include '@radio' with {
+                  "label": "",
+                  "label_optional": "",
 
-                "label_radio2": "Ik reserveer deze zaal als particulier of feitelijke vereniging",
-                "radio2_name": "radiogroup",
-                "radio2_id": "radio-2",
+                  "field_description": "",
+                  "field_error": "",
+                  "description": "",
 
-                "radio2_label": "Ik reserveer deze zaal als vennootschap of een vereniging met rechtspersoonlijkheid",
-                "radio2_label_for": "radio-2",
-                "radio2_label_optional": ""
-              } %}
+                  "label_radio1": "Ik reserveer deze zaal als particulier of feitelijke vereniging",
+                  "radio1_name": "radiogroup",
+                  "radio1_id": "radio-1",
 
-              {% include '@address' %}
+                  "radio1_label": "Ik reserveer deze zaal als particulier of feitelijke vereniging",
+                  "radio1_label_for": "radio-1",
+                  "radio1_label_optional": "",
+
+                  "label_radio2": "Ik reserveer deze zaal als particulier of feitelijke vereniging",
+                  "radio2_name": "radiogroup",
+                  "radio2_id": "radio-2",
+
+                  "radio2_label": "Ik reserveer deze zaal als vennootschap of een vereniging met rechtspersoonlijkheid",
+                  "radio2_label_for": "radio-2",
+                  "radio2_label_optional": ""
+                } %}
+
+                {% include '@address' %}
+
+              </div>
+            </fieldset>
 
             </div>
           </fieldset>
-
-          </div>
-        </fieldset>
 
         {% include '@form-actions--default' %}
 
