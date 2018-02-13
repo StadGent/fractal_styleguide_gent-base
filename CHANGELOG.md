@@ -8,11 +8,12 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to this style guide are documented here.
 
-### 2.10.0
+### 2.11.0
 
 * DTGB-140: Removed some files from the NPM package.
 * DTGB-140: Fixed a bug where `npm install` breaks 
   the install of the style guide.
+* DTGB-402: Added a required form fields indicator at the top of forms. 
 
 ### 2.9.0
 
