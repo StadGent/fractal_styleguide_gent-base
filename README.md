@@ -18,11 +18,11 @@ This repository is a read only version of the style guide part of our own
 Drupal 8 base theme.
 
 If you want to develop for this style guide you need to do it in 
-[this repository](https://github.com/digipolisgent/drupal_theme_gent-base)
+[this repository](https://github.com/StadGent/drupal_theme_gent-base)
 
 > Please do not create any pull requests directly here. 
 > Instead use 
-> [this repo](https://github.com/digipolisgent/drupal_theme_gent-base) to 
+> [this repo](https://github.com/StadGent/drupal_theme_gent-base) to 
 > create your pull requests.
 
 To contribute to the style guide please refer to the 

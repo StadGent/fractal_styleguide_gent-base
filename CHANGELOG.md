@@ -8,6 +8,13 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to this style guide are documented here.
 
+### 2.10.0
+
+* DTGB-140: Removed some files from the NPM package.
+* DTGB-140: Fixed a bug where `npm install` breaks 
+  the install of the style guide.
+* DTGB-401: Updated links to new public gent_base repository. 
+
 ### 2.9.0
 
 * STIJ-246: Added a mixin  and class `no-link-style` to make it possible
