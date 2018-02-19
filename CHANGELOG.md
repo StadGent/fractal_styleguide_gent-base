@@ -8,7 +8,7 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to this style guide are documented here.
 
-### 2.10.0
+### 2.11.0
 
 * DTGB-140: Removed some files from the NPM package.
 * DTGB-140: Fixed a bug where `npm install` breaks 
