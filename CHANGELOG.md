@@ -8,11 +8,16 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to this style guide are documented here.
 
+### 3.0.0
+
+* DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
+
 ### 2.11.0
 
 * DTGB-140: Removed some files from the NPM package.
 * DTGB-140: Fixed a bug where `npm install` breaks 
   the install of the style guide.
+* DTGB-401: Updated links to new public gent_base repository. 
 * DTGB-402: Added a required form fields indicator at the top of forms. 
 
 ### 2.9.0
