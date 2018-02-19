@@ -1,10 +1,8 @@
-<div class="form-item">
-  <div class="form-label">
-    {% include '@label' with {
-      "label": label,
-      "label_optional": label_optional
-    } %}
-  </div>
+<fieldset class="form-item">
+  <legend>
+    {{ label }}
+    <span class="label-optional">({{ label_optional }})</span>
+  </legend>
   <div class="form-columns">
     <div class="form-item-column">
       {% include '@field-description' with {
@@ -44,4 +42,4 @@
 
     </div>
   </div>
-</div>
+</fieldset>
