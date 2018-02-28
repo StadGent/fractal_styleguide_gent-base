@@ -529,7 +529,7 @@ gulp.task('axe', function (done) {
       components.urls = ['build/components/preview/!(input*|*page).html'];
       components.a11yCheckOptions.rules = {bypass: {enabled: false}};
 
-      axe(components, () => {resolve()});
+      axe(components, () => {resolve();});
     })
   }
   // input atoms
@@ -544,7 +544,7 @@ gulp.task('axe', function (done) {
         bypass: {enabled: false}
       };
 
-      axe(input, () => {resolve()});
+      axe(input, () => {resolve();});
     })
   }
   // pages
@@ -555,7 +555,7 @@ gulp.task('axe', function (done) {
       pages.saveOutputIn = 'pages.json';
       pages.urls = ['build/components/preview/*page.html'];
 
-      axe(pages, () => {resolve()});
+      axe(pages, () => {resolve();});
     })
   }
 
