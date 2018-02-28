@@ -333,7 +333,8 @@ gulp.task('js:watch', (callback) => {
  * Minify images.
  *
  */
-gulp.task('images:minify', [
+gulp.task('images:minify',
+  [
     'fractal:build',
     'styles:build',
     'styles:dist'
