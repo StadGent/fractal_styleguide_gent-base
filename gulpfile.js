@@ -30,8 +30,8 @@ const inject = require('gulp-inject');
 const yargs = require('yargs');
 const axe = require('gulp-axe-webdriver');
 
-var _sassLint = (failOnError) => {
-  var cmd = gulp.src('components/**/*.s+(a|c)ss')
+const _sassLint = (failOnError) => {
+  const cmd = gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
       configFile: './.sass-lint.yml'
@@ -121,7 +121,7 @@ gulp.task('styles:inject', () => {
   const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
   const injectOrganismsFiles = gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
 
-  var transformFilepath = (filepath) => `@import "${filepath}";`;
+  const transformFilepath = (filepath) => `@import "${filepath}";`;
 
   const injectSettingsOptions = {
     transform: transformFilepath,
