@@ -337,18 +337,17 @@ gulp.task('images:minify', [
     'fractal:build',
     'styles:build',
     'styles:dist'
-  ], (cb) =>
-    gulp.src([
-      'components/**/*.png',
-      'components/**/*.jpg',
-      'components/**/*.gif',
-      'components/**/*.jpeg',
-      'components/**/*.svg'
-    ])
-      .pipe(imagemin({
-        progressive: true,
-        use: [pngquant()]
-      })).pipe(gulp.dest('build/styleguide/sass'))
+  ], (cb) => gulp.src([
+    'components/**/*.png',
+    'components/**/*.jpg',
+    'components/**/*.gif',
+    'components/**/*.jpeg',
+    'components/**/*.svg'
+  ])
+    .pipe(imagemin({
+      progressive: true,
+      use: [pngquant()]
+    })).pipe(gulp.dest('build/styleguide/sass'))
 );
 
 /*
