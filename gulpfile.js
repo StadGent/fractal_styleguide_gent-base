@@ -30,7 +30,6 @@ const inject = require('gulp-inject');
 const yargs = require('yargs');
 const axe = require('gulp-axe-webdriver');
 
-
 var _sassLint = (failOnError) => {
   var cmd = gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
@@ -50,7 +49,8 @@ var _sassLint = (failOnError) => {
 * Require the Fractal module
 */
 const fractal = require('@frctl/fractal').create();
-const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
+const logger = fractal.cli.console; // keep a reference to the fractal CLI
+                                    // console utility
 
 /**
  * Require additional fractal modules
@@ -298,7 +298,7 @@ gulp.task('js:build', ['fractal:build'], (callback) => {
     .pipe(minify({
       noSource: true
     }))
-    .pipe(gulp.dest('./build/styleguide/js/'))
+    .pipe(gulp.dest('./build/styleguide/js/'));
   callback();
 });
 
@@ -334,21 +334,21 @@ gulp.task('js:watch', (callback) => {
  *
  */
 gulp.task('images:minify', [
-  'fractal:build',
-  'styles:build',
-  'styles:dist'
-], (cb) =>
-  gulp.src([
-    'components/**/*.png',
-    'components/**/*.jpg',
-    'components/**/*.gif',
-    'components/**/*.jpeg',
-    'components/**/*.svg'
-  ])
-    .pipe(imagemin({
-      progressive: true,
-      use: [pngquant()]
-    })).pipe(gulp.dest('build/styleguide/sass'))
+    'fractal:build',
+    'styles:build',
+    'styles:dist'
+  ], (cb) =>
+    gulp.src([
+      'components/**/*.png',
+      'components/**/*.jpg',
+      'components/**/*.gif',
+      'components/**/*.jpeg',
+      'components/**/*.svg'
+    ])
+      .pipe(imagemin({
+        progressive: true,
+        use: [pngquant()]
+      })).pipe(gulp.dest('build/styleguide/sass'))
 );
 
 /*
@@ -422,7 +422,6 @@ gulp.task('publish:npm', (callback) => {
     .help()
     .alias('help', 'h')
     .argv;
-
 
   const username = argv.username;
   const password = argv.password;
@@ -519,7 +518,7 @@ gulp.task('axe', function (done) {
         values: ['wcag2a', 'wcag2aa']
       }
     }
-  }
+  };
   // not input atoms and not pages
   let notInputNotPages = () => {
     return new Promise((resolve, reject) => {
@@ -530,8 +529,8 @@ gulp.task('axe', function (done) {
       components.a11yCheckOptions.rules = {bypass: {enabled: false}};
 
       axe(components, () => {resolve();});
-    })
-  }
+    });
+  };
   // input atoms
   let input = () => {
     return new Promise((resolve, reject) => {
@@ -545,8 +544,8 @@ gulp.task('axe', function (done) {
       };
 
       axe(input, () => {resolve();});
-    })
-  }
+    });
+  };
   // pages
   let pages = () => {
     return new Promise((resolve, reject) => {
@@ -556,12 +555,11 @@ gulp.task('axe', function (done) {
       pages.urls = ['build/components/preview/*page.html'];
 
       axe(pages, () => {resolve();});
-    })
-  }
+    });
+  };
 
   return Promise.all([notInputNotPages(), input(), pages()]);
-})
-
+});
 
 /*
  *
