@@ -29,17 +29,8 @@ const bump = require('gulp-bump');
 const inject = require('gulp-inject');
 const yargs = require('yargs');
 const axe = require('gulp-axe-webdriver');
-const gulpif = require('gulp-if');
-
-const _sassLint = (failOnError) => {
-  return gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(sassGlob())
-    .pipe(sassLint({
-      configFile: './.sass-lint.yml'
-    }))
-    .pipe(sassLint.format())
-    .pipe(gulpif(failOnError, sassLint.failOnError()));
-};
+const combiner = require('stream-combiner2');
+const cache = require('gulp-cached');
 
 /*
 * Require the Fractal module
@@ -105,6 +96,34 @@ fractal.web.set('static.mount', '');
 fractal.web.set('builder.dest', __dirname + '/build');
 
 /*
+* Get the sassFiles.
+*/
+const _sassFiles = () => {
+  return gulp.src('components/**/*.s+(a|c)ss')
+    .pipe(sassGlob());
+};
+
+/*
+* Return a sass Compile stream
+*/
+const _sassCompile = () => {
+  const combined = combiner.obj([
+    sass({
+      outputStyle: 'nested',
+      includePaths: [
+        'node_modules/breakpoint-sass/stylesheets',
+        'node_modules/susy/sass'
+      ]
+    }),
+    autoprefixer({
+      browsers: ['last 5 versions']
+    }),
+  ]);
+  combined.on('error', sass.logError);
+  return combined;
+};
+
+/*
  *
  * Inject SASS partial paths as imports in main_cli.scss.
  *
@@ -126,7 +145,6 @@ gulp.task('styles:inject', () => {
     addRootSlash: false,
     relative: true
   };
-
   const injectMixinsOptions = {
     transform: transformFilepath,
     starttag: '// inject:mixins',
@@ -134,7 +152,6 @@ gulp.task('styles:inject', () => {
     addRootSlash: false,
     relative: true
   };
-
   const injectBaseOptions = {
     transform: transformFilepath,
     starttag: '// inject:base',
@@ -142,7 +159,6 @@ gulp.task('styles:inject', () => {
     addRootSlash: false,
     relative: true
   };
-
   const injectAtomsOptions = {
     transform: transformFilepath,
     starttag: '// inject:atoms',
@@ -150,7 +166,6 @@ gulp.task('styles:inject', () => {
     addRootSlash: false,
     relative: true
   };
-
   const injectMoleculesOptions = {
     transform: transformFilepath,
     starttag: '// inject:molecules',
@@ -158,7 +173,6 @@ gulp.task('styles:inject', () => {
     addRootSlash: false,
     relative: true
   };
-
   const injectOrganismsOptions = {
     transform: transformFilepath,
     starttag: '// inject:organisms',
@@ -182,24 +196,14 @@ gulp.task('styles:inject', () => {
  * Development settings of your styles.
  * Includes:
  *  Sass globbing
- *  SCSS linting
  *  Nested output style
  *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
 gulp.task('styles:dist', () => {
-  return _sassLint(false)
+  return _sassFiles()
     .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'nested',
-      includePaths: [
-        'node_modules/breakpoint-sass/stylesheets',
-        'node_modules/susy/sass'
-      ]
-    })).on('error', sass.logError)
-    .pipe(autoprefixer({
-      browsers: ['last 5 versions']
-    }))
+    .pipe(_sassCompile())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'));
 });
@@ -210,23 +214,13 @@ gulp.task('styles:dist', () => {
  * Includes:
  *  Sass globbing
  *  SCSS linting
- *  Compresssed output style
+ *  CSS nano
  *  Autoprefixer
  *
  */
-gulp.task('styles:build', () => {
-  return _sassLint(true)
-    .pipe(sass({
-      outputStyle: 'compressed',
-      includePaths: [
-        'node_modules/breakpoint-sass/stylesheets',
-        'node_modules/susy/sass'
-      ]
-    }))
-    .on('error', sass.logError)
-    .pipe(autoprefixer({
-      browsers: ['last 5 versions']
-    }))
+gulp.task('styles:build', ['styles:validate'], () => {
+  return _sassFiles()
+    .pipe(_sassCompile())
     .pipe(cssnano())
     .pipe(gulp.dest('./build/css/'));
 });
@@ -237,8 +231,12 @@ gulp.task('styles:build', () => {
  *
  */
 gulp.task('styles:validate', () => {
-  _sassLint(true)
-    .then(res => {return res;});
+  return _sassFiles()
+    .pipe(cache('validate'))
+    .pipe(sassLint({
+      configFile: './.sass-lint.yml'
+    }))
+    .pipe(sassLint.format());
 });
 
 /*
@@ -247,20 +245,19 @@ gulp.task('styles:validate', () => {
  *
  */
 gulp.task('styles:watch', () => {
-  return gulp.watch('./components/**/*.scss', ['styles:dist']);
+  return gulp.watch('./components/**/*.scss', [
+    'styles:validate',
+    'styles:dist'
+  ]);
 });
 
 /*
  *
- * Extract SCSS and their assets (like fonts) from the components folder.
+ * Extract SCSS from the components folder.
  *
  */
-gulp.task('styles:extract', [
-  'fractal:build',
-  'styles:build',
-  'styles:dist'
-], () => {
-  return gulp.src('components/**/*.s+(a|c)ss')
+gulp.task('styles:extract', ['fractal:build'], () => {
+  _sassFiles()
     .pipe(gulp.dest('./build/styleguide/sass/'));
 });
 
@@ -598,6 +595,7 @@ gulp.task('compile', [
   'js:dist',
   'images:minify'
 ], callback => callback());
+
 gulp.task('compile:dev', [
   'fractal:build',
   'styles:dist',
