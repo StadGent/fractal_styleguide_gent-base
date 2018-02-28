@@ -506,7 +506,7 @@ gulp.task('bump', () => {
  *   - wcag2a
  *   - wcag2aa
  */
-gulp.task('axe', function(done) {
+gulp.task('axe', function (done) {
 
   let options = {
     saveOutputIn: 'allHtml.json',
@@ -517,50 +517,50 @@ gulp.task('axe', function(done) {
       runOnly: {
         type: 'tag',
         values: ['wcag2a', 'wcag2aa']
-      },
+      }
     }
   }
   // not input atoms and not pages
   let notInputNotPages = () => {
     return new Promise((resolve, reject) => {
 
-      let components = Object.assign({}, options)
-      components.saveOutputIn = 'components.json'
-      components.urls = ['build/components/preview/!(input*|*page).html']
-      components.a11yCheckOptions.rules = {bypass: {enabled: false}}
+      let components = Object.assign({}, options);
+      components.saveOutputIn = 'components.json';
+      components.urls = ['build/components/preview/!(input*|*page).html'];
+      components.a11yCheckOptions.rules = {bypass: {enabled: false}};
 
-      axe(components, () => {resolve()})
+      axe(components, () => {resolve()});
     })
   }
   // input atoms
   let input = () => {
     return new Promise((resolve, reject) => {
 
-      let input = Object.assign({}, options)
-      input.saveOutputIn = 'inputAtoms.json'
-      input.urls = ['build/components/preview/input*.html']
+      let input = Object.assign({}, options);
+      input.saveOutputIn = 'inputAtoms.json';
+      input.urls = ['build/components/preview/input*.html'];
       input.a11yCheckOptions.rules = {
         label: {enabled: false},
         bypass: {enabled: false}
-      }
+      };
 
-      axe(input, () => {resolve()})
+      axe(input, () => {resolve()});
     })
   }
   // pages
   let pages = () => {
     return new Promise((resolve, reject) => {
 
-      let pages = Object.assign({}, options)
-      pages.saveOutputIn = 'pages.json'
-      pages.urls = ['build/components/preview/*page.html']
+      let pages = Object.assign({}, options);
+      pages.saveOutputIn = 'pages.json';
+      pages.urls = ['build/components/preview/*page.html'];
 
-      axe(pages, () => {resolve()})
+      axe(pages, () => {resolve()});
     })
   }
 
-  return Promise.all([notInputNotPages(),input(),pages()])
-});
+  return Promise.all([notInputNotPages(), input(), pages()]);
+})
 
 
 /*
