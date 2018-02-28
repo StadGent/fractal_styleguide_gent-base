@@ -117,7 +117,7 @@ const _sassCompile = () => {
     }),
     autoprefixer({
       browsers: ['last 5 versions']
-    }),
+    })
   ]);
   combined.on('error', sass.logError);
   return combined;
