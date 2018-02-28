@@ -29,20 +29,16 @@ const bump = require('gulp-bump');
 const inject = require('gulp-inject');
 const yargs = require('yargs');
 const axe = require('gulp-axe-webdriver');
+const gulpif = require('gulp-if');
 
 const _sassLint = (failOnError) => {
-  const cmd = gulp.src('components/**/*.s+(a|c)ss')
+  return gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
       configFile: './.sass-lint.yml'
     }))
-    .pipe(sassLint.format());
-
-  if (failOnError) {
-    cmd.pipe(sassLint.failOnError());
-  }
-
-  return cmd;
+    .pipe(sassLint.format())
+    .pipe(gulpif(failOnError, sassLint.failOnError()));
 };
 
 /*
@@ -191,8 +187,8 @@ gulp.task('styles:inject', () => {
  *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
-gulp.task('styles:dist', (callback) => {
-  _sassLint(false)
+gulp.task('styles:dist', () => {
+  return _sassLint(false)
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'nested',
@@ -206,7 +202,6 @@ gulp.task('styles:dist', (callback) => {
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'));
-  callback();
 });
 
 /*
@@ -219,22 +214,21 @@ gulp.task('styles:dist', (callback) => {
  *  Autoprefixer
  *
  */
-gulp.task('styles:build', ['styles:inject', 'fractal:build'], (callback) => {
-  _sassLint(true)
+gulp.task('styles:build', () => {
+  return _sassLint(true)
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: [
         'node_modules/breakpoint-sass/stylesheets',
         'node_modules/susy/sass'
       ]
-    })).on('error', sass.logError)
+    }))
+    .on('error', sass.logError)
     .pipe(autoprefixer({
       browsers: ['last 5 versions']
     }))
-    .pipe(gulp.dest('./build/css/'))
     .pipe(cssnano())
     .pipe(gulp.dest('./build/css/'));
-  callback();
 });
 
 /*
@@ -242,9 +236,9 @@ gulp.task('styles:build', ['styles:inject', 'fractal:build'], (callback) => {
  * Validate SCSS files.
  *
  */
-gulp.task('styles:validate', (callback) => {
-  _sassLint(true);
-  callback();
+gulp.task('styles:validate', () => {
+  _sassLint(true)
+    .then(res => {return res;});
 });
 
 /*
@@ -252,9 +246,8 @@ gulp.task('styles:validate', (callback) => {
  * Watch SCSS files For Changes.
  *
  */
-gulp.task('styles:watch', (callback) => {
-  gulp.watch('./components/**/*.scss', ['styles:dist']);
-  callback();
+gulp.task('styles:watch', () => {
+  return gulp.watch('./components/**/*.scss', ['styles:dist']);
 });
 
 /*
@@ -266,10 +259,9 @@ gulp.task('styles:extract', [
   'fractal:build',
   'styles:build',
   'styles:dist'
-], (callback) => {
-  gulp.src('components/**/*.s+(a|c)ss')
+], () => {
+  return gulp.src('components/**/*.s+(a|c)ss')
     .pipe(gulp.dest('./build/styleguide/sass/'));
-  callback();
 });
 
 /*
@@ -307,15 +299,13 @@ gulp.task('js:build', ['fractal:build'], (callback) => {
  * Validate JS files.
  *
  */
-gulp.task('js:validate', (callback) => {
-  gulp.src('components/**/*.js')
+gulp.task('js:validate', () => {
+  return gulp.src('components/**/*.js')
     .pipe(eslint({
       configFile: './.eslintrc'
     }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
-
-  callback();
 });
 
 /*
