@@ -23,7 +23,7 @@
       right: 0;
       bottom: 0;
       width: 2rem;
-      border-left: 1px solid $color-light-gray;
+      border-left: 1px solid lighter('color-dark-gray', 50);
       border-top-right-radius: $radius-1;
       border-bottom-right-radius: $radius-1;
       text-indent: 110%;

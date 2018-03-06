@@ -3,9 +3,9 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
-  border: 1px solid $color-light-blue;
+  border: 1px solid lighter('color-blue', 10);
   border-radius: $radius-2;
-  background-color: $color-white;
+  background-color: color('color-white');
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 
   &::before {
@@ -17,8 +17,8 @@
   }
 
   &.messages--status {
-    border-left: 1rem solid darken($color-green, 10%);
-    color: darken($color-green, 10%);
+    border-left: 1rem solid darker('color-green', 25);
+    color: darker('color-green', 25);
 
     &::before {
       @extend %icon-info-circle;
@@ -26,8 +26,8 @@
   }
 
   &.messages--error {
-    border-left: 1rem solid darken($color-red, 10%);
-    color: darken($color-red, 10%);
+    border-left: 1rem solid darker('color-red', 25);
+    color: darker('color-red', 25);
 
     &::before {
       @extend %icon-error;
@@ -35,8 +35,8 @@
   }
 
   &.messages--warning {
-    border-left: 1rem solid darken($color-orange, 10%);
-    color: darken($color-orange, 20%);
+    border-left: 1rem solid darker('color-orange', 25);
+    color: darker('color-orange', 25);
 
     &::before {
       @extend %icon-alert;

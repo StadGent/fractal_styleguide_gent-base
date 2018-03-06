@@ -1,0 +1,197 @@
+
+//
+// Colors.
+$colors: (
+  'color-cyan': #009de0,
+  'color-cyan-wcag': #0085b3,
+  'color-dark-gray': #2c3f48,
+  'color-white': #fff,
+  'color-blue': #0340c7,
+  'color-teal': #29cfc9,
+  'color-green': #41ba36,
+  'color-lemon': #ffda00,
+  'color-yellow': #fab600,
+  'color-orange': #f95706,
+  'color-red': #f20f36,
+  'color-pink': #f09,
+  'color-purple': #5a0ec4,
+) !default;
+
+// Opacity values for color swatches.
+$lighten: (
+  2: .02,
+  6: .06,
+  10: .1,
+  25: .25,
+  50: .5,
+  75: .75,
+) !default;
+
+// Darken values for color swatches.
+$darken: (
+  10: 10%,
+  25: 25%,
+  50: 50%,
+) !default;
+
+//
+// A function to get a color from the colors map.
+//
+// @param $base-color [map]
+//   The key of the color in the $colors map.
+//
+@function color($base-color) {
+  @if not map-has-key($colors, $base-color) {
+    @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
+  }
+
+  @return (map-get($colors, $base-color));
+};
+
+//
+// A function to adjust the opacity of a base color.
+//
+// @param $base-color [map]
+//   The base color to be modified.
+//
+// @param $lighten-value [map]
+//   The value to modify the base color with.
+//
+@function lighter($base-color, $lighten-value) {
+  @if not map-has-key($colors, $base-color) {
+    @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
+  }
+
+  @if not map-has-key($lighten, $lighten-value) {
+    @warn "`#{inspect($lighten-value)}` doesn't seem to be a valid lighten value.";
+  }
+
+  @return rgba(map-get($colors, $base-color), map-get($lighten, $lighten-value));
+};
+
+//
+// A function to darken a base color.
+//
+// @param $base-color [map]
+//   The base color to be modified.
+//
+// @param $darken-value [map]
+//   The value to darken the base color with.
+//
+@function darker($base-color, $darken-value) {
+  $color-black: #000;
+
+  @if not map-has-key($colors, $base-color) {
+    @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
+  }
+
+  @if not map-has-key($darken, $darken-value) {
+    @warn "`#{inspect($darken-value)}` doesn't seem to be a valid darken modifier.";
+  }
+
+  @return mix($color-black, map-get($colors, $base-color), map-get($darken, $darken-value));
+};
+
+//
+// THEMIFY SETTINGS.
+//
+$themes: (
+  'default': (
+    'section-background': color('color-white'),
+    'section-text-color': color('color-dark-gray'),
+    'heading-1-color': color('color-cyan'),
+    'heading-2-color': color('color-cyan'),
+    'heading-3-color': color('color-cyan'),
+    'heading-4-color': color('color-cyan'),
+    'heading-5-color': color('color-cyan'),
+    'heading-6-color': color('color-cyan'),
+
+    'description-color': color('color-dark-gray'),
+    'figcaption-color': color('color-dark-gray'),
+
+    'link-color': color('color-blue'),
+    'link-color-hover': darker('color-blue', 10),
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
+
+    'cta-link-background': lighter('color-blue', 50),
+    'cta-link-background-hover': color('color-white'),
+
+    'cta-link-border': 1px solid lighter('color-dark-gray', 50),
+    'cta-link-border-hover': 1px solid lighter('color-dark-gray', 50),
+
+    'cta-link-title-color': darker('color-blue', 50),
+    'cta-link-title-color-hover': darker('color-blue', 50),
+
+    'cta-link-document-color': darker('color-blue', 50),
+    'cta-link-document-color-hover': color('color-blue'),
+
+    'cta-link-icon-border': 1px solid lighter('color-dark-gray', 50),
+
+    'field-description-background': lighter('color-dark-gray', 6),
+    'field-description-color': color('color-dark-gray'),
+
+    'field-color': color('color-dark-gray'),
+    'field-background': color('color-white'),
+    'field-border': 1px solid lighter('color-dark-gray', 50),
+    'field-placeholder': lighter('color-dark-gray', 50),
+
+    'fieldset-border': 1px solid lighter('color-dark-gray', 75),
+    'fieldset-color': color('color-blue'),
+
+    'field-error-background': lighter('color-red', 50),
+    'field-error-color': color('color-dark-gray'),
+    'field-error-border': color('color-red'),
+
+    'label-color': color('color-dark-gray'),
+    'label-optional-color': color('color-dark-gray'),
+
+    'button-color': color('color-white'),
+    'button-color-hover': color('color-white'),
+
+    'button-background': color('color-blue'),
+    'button-background-hover': darker('color-blue', 50),
+
+    'button-border': none,
+    'button-border-hover': none,
+
+    'tag-color': color('color-white'),
+    'tag-color-hover': color('color-white'),
+
+    'tag-background': color('color-dark-gray'),
+    'tag-background-hover': color('color-dark-gray'),
+
+    'form-steps-timeline-color': color('color-blue'),
+    'form-steps-prefix-color': color('color-white'),
+
+    'form-steps-inactive-step-label': color('color-dark-gray'),
+    'form-steps-inactive-prefix-background': color('color-dark-gray'),
+    'form-steps-inactive-prefix-color': color('color-white'),
+
+    'form-steps-previous-step-label': color('color-green'),
+    'form-steps-previous-step-background': color('color-green'),
+
+    'form-steps-active-step-label': color('color-blue'),
+    'form-steps-active-prefix-background': color('color-blue'),
+
+    'hamburger-menu-background': darker('color-blue', 50),
+    'hamburger-menu-overlay-color': rgba(44, 63, 72, .6),
+
+    'hamburger-menu-link-border': 1.5px solid darker('color-blue', 50),
+    'hamburger-menu-link-border-active': 1.5px solid darker('color-blue', 50),
+    'hamburger-menu-link-border-hover': 1.5px solid darker('color-blue', 50),
+
+    'hamburger-menu-link-background': transparent,
+    'hamburger-menu-link-background-active': darker('color-blue', 50),
+    'hamburger-menu-link-background-hover': darker('color-blue', 50),
+
+    'hamburger-menu-link-color': color('color-white'),
+    'hamburger-menu-link-color-active': color('color-white'),
+    'hamburger-menu-link-color-hover': color('color-white'),
+
+    'island-border': 1px solid lighter('color-blue', 50),
+  )
+) !default;
+
+// Default $overwrite-themes map to overwrite above $theme map.
+$overwrite-themes: () !default;

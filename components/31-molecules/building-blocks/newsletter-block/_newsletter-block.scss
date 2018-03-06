@@ -141,10 +141,10 @@ div.newsletter-block {
         width: 3.125rem;
         height: 3.125rem;
         border-radius: $radius-1;
-        background-color: $color-blue;
+        background-color: color('color-blue');
 
         &:hover {
-          background-color: lighten($color-blue, 5%);
+          background-color: lighter('color-blue', 50);
         }
       }
     }

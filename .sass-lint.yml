@@ -63,7 +63,7 @@ rules:
   no-transition-all: 2
   no-url-protocols: 2
   no-vendor-prefixes: 1
-  no-warn: 2
+  no-warn: 0
   property-units: 0
 
   # Nesting

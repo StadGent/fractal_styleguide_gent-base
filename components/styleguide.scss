@@ -1,4 +1,5 @@
 @import '00-settings/vars';
+@import '00-settings/colors';
 @import '61-layouts/**/*';
 @import '71-pages/**/*';
 
@@ -57,12 +58,12 @@ h2.styleguide-title {
   .section--wrapper &,
   .section--inverse &,
   .section--accent & {
-    background: $color-white;
-    color: $color-blue;
+    background: color('color-white');
+    color: color('color-blue');
   }
 
   .section--wrapper & {
-    color: $color-darkest-blue;
+    color: darker('color-blue', 50);
   }
 }
 
@@ -98,11 +99,11 @@ h2.styleguide-title {
   .section--wrapper &,
   .section--inverse &,
   .section--accent & {
-    border-bottom: 1px dotted $color-white;
+    border-bottom: 1px dotted color('color-white');
   }
 
   .section--highlighted & {
-    border-bottom: 1px dotted $color-darkest-gray;
+    border-bottom: 1px dotted color('color-dark-gray');
   }
 }
 
@@ -111,6 +112,3 @@ h2.styleguide-title {
   padding-bottom: 2.5rem;
   overflow: hidden;
 }
-
-
-
