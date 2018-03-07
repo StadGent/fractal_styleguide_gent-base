@@ -15,8 +15,8 @@ $colors: (
   'color-purple': #5a0ec4,
 ) !default;
 
-// Opacity values for color swatches.
-$lighten: (
+// Tint values for color swatches.
+$tints: (
   2: .02,
   6: .06,
   10: .1,
@@ -25,8 +25,8 @@ $lighten: (
   75: .75,
 ) !default;
 
-// Darken values for color swatches.
-$darken: (
+// Shade values for color swatches.
+$shades: (
   10: 10%,
   25: 25%,
   50: 50%,
@@ -52,19 +52,19 @@ $darken: (
 // @param $base-color [map]
 //   The base color to be modified.
 //
-// @param $lighten-value [map]
-//   The value to modify the base color with.
+// @param $tint [map]
+//   The tint value to modify the base color with.
 //
-@function tint($base-color, $lighten-value) {
+@function tint($base-color, $tint) {
   @if not map-has-key($colors, $base-color) {
     @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
   }
 
-  @if not map-has-key($lighten, $lighten-value) {
-    @warn "`#{inspect($lighten-value)}` doesn't seem to be a valid lighten value.";
+  @if not map-has-key($tints, $tint) {
+    @warn "`#{inspect($tint)}` doesn't seem to be a valid tint value.";
   }
 
-  @return rgba(map-get($colors, $base-color), map-get($lighten, $lighten-value));
+  @return rgba(map-get($colors, $base-color), map-get($tints, $tint));
 };
 
 //
@@ -73,21 +73,21 @@ $darken: (
 // @param $base-color [map]
 //   The base color to be modified.
 //
-// @param $darken-value [map]
-//   The value to darken the base color with.
+// @param $shade [map]
+//   The value to shade the base color with.
 //
-@function shade($base-color, $darken-value) {
+@function shade($base-color, $shade) {
   $color-black: #000;
 
   @if not map-has-key($colors, $base-color) {
     @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
   }
 
-  @if not map-has-key($darken, $darken-value) {
-    @warn "`#{inspect($darken-value)}` doesn't seem to be a valid darken modifier.";
+  @if not map-has-key($shades, $shade) {
+    @warn "`#{inspect($shade)}` doesn't seem to be a valid shade value.";
   }
 
-  @return mix($color-black, map-get($colors, $base-color), map-get($darken, $darken-value));
+  @return mix($color-black, map-get($colors, $base-color), map-get($shades, $shade));
 };
 
 //
@@ -97,6 +97,7 @@ $themes: (
   'default': (
     'section-background': color('color-white'),
     'section-text-color': color('color-dark-gray'),
+
     'heading-1-color': color('color-cyan'),
     'heading-2-color': color('color-cyan-wcag'),
     'heading-3-color': color('color-cyan-wcag'),
