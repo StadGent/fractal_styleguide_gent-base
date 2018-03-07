@@ -115,12 +115,12 @@
       padding: 0 .625rem;
       border-bottom-left-radius: $radius-1;
       border-bottom-right-radius: $radius-1;
-      background: tint('blue', 75);
+      background: color('blue', -1);
       text-align: right;
     }
   }
 
   .mijn-gent-component {
-    border-bottom: 1px solid tint('blue', 50);
+    border-bottom: 1px solid color('blue', -2);
   }
 }

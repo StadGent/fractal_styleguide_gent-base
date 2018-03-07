@@ -104,7 +104,7 @@ legend {
   width: 100%;
   margin-bottom: 1rem;
   padding-bottom: .4rem;
-  border-bottom: 1px solid tint('dark-gray', 75);
+  border-bottom: 1px solid color('dark-gray', -1);
   color: color('blue');
   font-size: 1.1rem;
 }

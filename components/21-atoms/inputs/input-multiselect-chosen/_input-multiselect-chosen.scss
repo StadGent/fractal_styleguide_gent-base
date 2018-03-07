@@ -21,12 +21,12 @@
   }
 
   &.chosen-with-drop .chosen-drop {
-    border-color: tint('dark-gray', 50);
+    border-color: color('dark-gray', -2);
     box-shadow: none;
   }
 
   .chosen-choices {
-    border-color: tint('dark-gray', 50) !important; // sass-lint:disable-line no-important
+    border-color: color('dark-gray', -2) !important; // sass-lint:disable-line no-important
 
     background: color('white');
     background-image: none !important; // sass-lint:disable-line no-important
