@@ -1,17 +1,23 @@
 ul,
 ol {
-  padding-left: 1rem;
+  position: relative;
+  margin-left: 1rem;
 
   &.links {
     padding-left: 0;
     list-style: none;
 
     li {
+      position: relative;
       padding-left: .93rem;
 
       &::before {
         @extend %icon-base-css;
         @extend %icon-caret;
+
+        position: absolute;
+        top: .25rem;
+        left: 0;
       }
     }
   }

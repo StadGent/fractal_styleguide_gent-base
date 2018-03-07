@@ -1,6 +1,29 @@
 // General footer styling.
-footer.footer {
-  padding: 1.5rem 0;
+footer.footer > .content-container {
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  @include tablet {
+    @supports (display: grid) {
+      grid-auto-rows: 275px;
+    }
+    padding: 1.5rem;
+  }
+
+  @include desktop {
+    @supports (display: grid) {
+      grid-auto-rows: 400px;
+    }
+  }
+
+  padding: 1.5rem .5rem;
+
+  &::before,
+  &::after {
+    content: none;
+  }
 
   h3 {
     margin-top: 0;
@@ -10,46 +33,45 @@ footer.footer {
     color: color('dark-gray');
   }
 
-  .db-block-partnership {
-    @include tablet {
-      margin-top: 6rem;
-    }
-  }
-
   .footer--column .island {
     border: 0;
   }
 }
 
-// Footer 2 column layout.
-footer[data-columns="2"] {
-  .footer--column {
-    @include make-mobile-column(12);
-    @include make-tablet-column(6);
-    @include make-desktop-column(6);
+// Footer 4 column layout.
+footer[data-columns="4"] > .content-container {
+  @include tablet {
+    @supports (display: grid) {
+      grid-template-columns: repeat(2, 1fr [footer-column]);
+    }
+  }
+  @include desktop {
+    @supports (display: grid) {
+      grid-template-columns: repeat(4, 1fr [footer-column]);
+    }
   }
 }
 
 // Footer 3 column layout.
-footer[data-columns="3"] {
-  .footer--column {
-    @include make-mobile-column(12);
-    @include make-tablet-column(6);
-    @include make-desktop-column(4);
+footer[data-columns="3"] > .content-container {
+  @include tablet {
+    @supports (display: grid) {
+      grid-template-columns: repeat(2, 1fr [footer-column]);
+    }
+  }
+
+  @include desktop {
+    @supports (display: grid) {
+      grid-template-columns: repeat(3, 1fr [footer-column]);
+    }
   }
 }
 
-// Footer 4 column layout.
-footer[data-columns="4"] {
-  .footer--column {
-    @include make-mobile-column(12);
-    @include make-tablet-column(6);
-    @include make-desktop-column(3);
-  }
-
-  .db-block-partnership {
-    @include desktop {
-      margin-top: 12.5rem;
+// Footer 2 column layout.
+footer[data-columns="2"] > .content-container {
+  @include tablet {
+    @supports (display: grid) {
+      grid-template-columns: repeat(2, 1fr [footer-column]);
     }
   }
 }

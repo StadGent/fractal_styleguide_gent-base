@@ -35,6 +35,7 @@ rules:
   no-duplicate-properties:
     - 2
     - exclude:
+      - display
       - padding-left
       - padding-right
       - padding-top

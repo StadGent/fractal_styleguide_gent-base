@@ -1,7 +1,7 @@
 .multistepform {
   .form-sidebar  {
     width: span(3);
-    margin-right: gutter();
+    margin-right: $gutter-width;
   }
 
   .form-content {
