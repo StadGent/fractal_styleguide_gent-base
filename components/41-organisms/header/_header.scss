@@ -108,7 +108,7 @@ header.header {
           width: 100%;
           margin: 0;
           padding: .35rem $gutter-width/2;
-          background-color: shade('color-blue', 50);
+          background-color: shade('blue', 50);
 
           input[type="submit"] {
             position: absolute;
@@ -150,7 +150,7 @@ header.header {
     display: block;
     width: 100%;
     padding: .25rem 0;
-    background-color: color('color-blue');
+    background-color: color('blue');
     overflow: hidden;
 
     li {

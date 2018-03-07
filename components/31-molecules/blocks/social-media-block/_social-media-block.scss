@@ -10,7 +10,7 @@
   }
 
   a {
-    color: color('color-dark-gray');
+    color: color('dark-gray');
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -18,11 +18,11 @@
     word-wrap: break-word;
 
     &:visited {
-      color: color('color-dark-gray');
+      color: color('dark-gray');
     }
 
     &:hover {
-      color: tint('color-dark-gray', 50);
+      color: tint('dark-gray', 50);
     }
 
     &::before {

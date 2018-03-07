@@ -38,12 +38,12 @@ $primary-font-size: $default-font-size !default; //px
 $primary-line-height: $default-line-height !default; //em
 $secondary-font-family: expressway, sans-serif !default;
 
-$bg-outside-container: tint('color-dark-gray', 10) !default;
-$border-outside-container: 1px solid tint('color-dark-gray', 2) !default;
-$default-text-color: color('color-dark-gray') !default;
+$bg-outside-container: tint('dark-gray', 10) !default;
+$border-outside-container: 1px solid tint('dark-gray', 2) !default;
+$default-text-color: color('dark-gray') !default;
 
 // Breadcrumb settings.
-$bg-hover-breadcrumb: color('color-blue') !default;
+$bg-hover-breadcrumb: color('blue') !default;
 
 //
 // Section dependent variables!

@@ -3,9 +3,9 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
-  border: 1px solid tint('color-blue', 10);
+  border: 1px solid tint('blue', 10);
   border-radius: $radius-2;
-  background-color: color('color-white');
+  background-color: color('white');
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 
   &::before {
@@ -17,8 +17,8 @@
   }
 
   &.messages--status {
-    border-left: 1rem solid shade('color-green', 25);
-    color: shade('color-green', 25);
+    border-left: 1rem solid shade('green', 25);
+    color: shade('green', 25);
 
     &::before {
       @extend %icon-info-circle;
@@ -26,8 +26,8 @@
   }
 
   &.messages--error {
-    border-left: 1rem solid shade('color-red', 25);
-    color: shade('color-red', 25);
+    border-left: 1rem solid shade('red', 25);
+    color: shade('red', 25);
 
     &::before {
       @extend %icon-error;
@@ -35,8 +35,8 @@
   }
 
   &.messages--warning {
-    border-left: 1rem solid shade('color-orange', 25);
-    color: shade('color-orange', 25);
+    border-left: 1rem solid shade('orange', 25);
+    color: shade('orange', 25);
 
     &::before {
       @extend %icon-alert;

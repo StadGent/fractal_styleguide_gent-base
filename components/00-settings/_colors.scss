@@ -1,18 +1,18 @@
 // Colors.
 $colors: (
-  'color-cyan': #009de0,
-  'color-cyan-wcag': #0085b3,
-  'color-dark-gray': #2c3f48,
-  'color-white': #fff,
-  'color-blue': #0340c7,
-  'color-teal': #29cfc9,
-  'color-green': #41ba36,
-  'color-lemon': #ffda00,
-  'color-yellow': #fab600,
-  'color-orange': #f95706,
-  'color-red': #f20f36,
-  'color-pink': #f09,
-  'color-purple': #5a0ec4,
+  'cyan': #009de0,
+  'cyan-wcag': #0085b3,
+  'dark-gray': #2c3f48,
+  'white': #fff,
+  'blue': #0340c7,
+  'teal': #29cfc9,
+  'green': #41ba36,
+  'lemon': #ffda00,
+  'yellow': #fab600,
+  'orange': #f95706,
+  'red': #f20f36,
+  'pink': #f09,
+  'purple': #5a0ec4,
 ) !default;
 
 // Tint values for color swatches.
@@ -95,100 +95,100 @@ $shades: (
 //
 $themes: (
   'default': (
-    'section-background': color('color-white'),
-    'section-text-color': color('color-dark-gray'),
+    'section-background': color('white'),
+    'section-text-color': color('dark-gray'),
 
-    'heading-1-color': color('color-cyan'),
-    'heading-2-color': color('color-cyan-wcag'),
-    'heading-3-color': color('color-cyan-wcag'),
-    'heading-4-color': color('color-cyan-wcag'),
-    'heading-5-color': color('color-cyan-wcag'),
-    'heading-6-color': color('color-cyan-wcag'),
+    'heading-1-color': color('cyan'),
+    'heading-2-color': color('cyan-wcag'),
+    'heading-3-color': color('cyan-wcag'),
+    'heading-4-color': color('cyan-wcag'),
+    'heading-5-color': color('cyan-wcag'),
+    'heading-6-color': color('cyan-wcag'),
 
-    'description-color': color('color-dark-gray'),
-    'figcaption-color': color('color-dark-gray'),
+    'description-color': color('dark-gray'),
+    'figcaption-color': color('dark-gray'),
 
-    'link-color': color('color-blue'),
-    'link-color-hover': shade('color-blue', 10),
+    'link-color': color('blue'),
+    'link-color-hover': shade('blue', 10),
     'link-text-decoration': underline,
     'link-text-decoration-hover': none,
 
-    'cta-link-background': tint('color-blue', 50),
-    'cta-link-background-hover': color('color-white'),
+    'cta-link-background': tint('blue', 50),
+    'cta-link-background-hover': color('white'),
 
-    'cta-link-border': 1px solid tint('color-dark-gray', 50),
-    'cta-link-border-hover': 1px solid tint('color-dark-gray', 50),
+    'cta-link-border': 1px solid tint('dark-gray', 50),
+    'cta-link-border-hover': 1px solid tint('dark-gray', 50),
 
-    'cta-link-title-color': shade('color-blue', 50),
-    'cta-link-title-color-hover': shade('color-blue', 50),
+    'cta-link-title-color': shade('blue', 50),
+    'cta-link-title-color-hover': shade('blue', 50),
 
-    'cta-link-document-color': shade('color-blue', 50),
-    'cta-link-document-color-hover': color('color-blue'),
+    'cta-link-document-color': shade('blue', 50),
+    'cta-link-document-color-hover': color('blue'),
 
-    'cta-link-icon-border': 1px solid tint('color-dark-gray', 50),
+    'cta-link-icon-border': 1px solid tint('dark-gray', 50),
 
-    'field-description-background': tint('color-dark-gray', 6),
-    'field-description-color': color('color-dark-gray'),
+    'field-description-background': tint('dark-gray', 6),
+    'field-description-color': color('dark-gray'),
 
-    'field-color': color('color-dark-gray'),
-    'field-background': color('color-white'),
-    'field-border': 1px solid tint('color-dark-gray', 50),
-    'field-placeholder': tint('color-dark-gray', 50),
+    'field-color': color('dark-gray'),
+    'field-background': color('white'),
+    'field-border': 1px solid tint('dark-gray', 50),
+    'field-placeholder': tint('dark-gray', 50),
 
-    'fieldset-border': 1px solid tint('color-dark-gray', 75),
-    'fieldset-color': color('color-blue'),
+    'fieldset-border': 1px solid tint('dark-gray', 75),
+    'fieldset-color': color('blue'),
 
-    'field-error-background': tint('color-red', 50),
-    'field-error-color': color('color-dark-gray'),
-    'field-error-border': color('color-red'),
+    'field-error-background': tint('red', 50),
+    'field-error-color': color('dark-gray'),
+    'field-error-border': color('red'),
 
-    'label-color': color('color-dark-gray'),
-    'label-optional-color': color('color-dark-gray'),
+    'label-color': color('dark-gray'),
+    'label-optional-color': color('dark-gray'),
 
-    'button-color': color('color-white'),
-    'button-color-hover': color('color-white'),
+    'button-color': color('white'),
+    'button-color-hover': color('white'),
 
-    'button-background': color('color-blue'),
-    'button-background-hover': shade('color-blue', 50),
+    'button-background': color('blue'),
+    'button-background-hover': shade('blue', 50),
 
     'button-border': none,
     'button-border-hover': none,
 
-    'tag-color': color('color-white'),
-    'tag-color-hover': color('color-white'),
+    'tag-color': color('white'),
+    'tag-color-hover': color('white'),
 
-    'tag-background': color('color-dark-gray'),
-    'tag-background-hover': color('color-dark-gray'),
+    'tag-background': color('dark-gray'),
+    'tag-background-hover': color('dark-gray'),
 
-    'form-steps-timeline-color': color('color-blue'),
-    'form-steps-prefix-color': color('color-white'),
+    'form-steps-timeline-color': color('blue'),
+    'form-steps-prefix-color': color('white'),
 
-    'form-steps-inactive-step-label': color('color-dark-gray'),
-    'form-steps-inactive-prefix-background': color('color-dark-gray'),
-    'form-steps-inactive-prefix-color': color('color-white'),
+    'form-steps-inactive-step-label': color('dark-gray'),
+    'form-steps-inactive-prefix-background': color('dark-gray'),
+    'form-steps-inactive-prefix-color': color('white'),
 
-    'form-steps-previous-step-label': color('color-green'),
-    'form-steps-previous-step-background': color('color-green'),
+    'form-steps-previous-step-label': color('green'),
+    'form-steps-previous-step-background': color('green'),
 
-    'form-steps-active-step-label': color('color-blue'),
-    'form-steps-active-prefix-background': color('color-blue'),
+    'form-steps-active-step-label': color('blue'),
+    'form-steps-active-prefix-background': color('blue'),
 
-    'hamburger-menu-background': shade('color-blue', 50),
+    'hamburger-menu-background': shade('blue', 50),
     'hamburger-menu-overlay-color': rgba(44, 63, 72, .6),
 
-    'hamburger-menu-link-border': 1.5px solid shade('color-blue', 50),
-    'hamburger-menu-link-border-active': 1.5px solid shade('color-blue', 50),
-    'hamburger-menu-link-border-hover': 1.5px solid shade('color-blue', 50),
+    'hamburger-menu-link-border': 1.5px solid shade('blue', 50),
+    'hamburger-menu-link-border-active': 1.5px solid shade('blue', 50),
+    'hamburger-menu-link-border-hover': 1.5px solid shade('blue', 50),
 
     'hamburger-menu-link-background': transparent,
-    'hamburger-menu-link-background-active': shade('color-blue', 50),
-    'hamburger-menu-link-background-hover': shade('color-blue', 50),
+    'hamburger-menu-link-background-active': shade('blue', 50),
+    'hamburger-menu-link-background-hover': shade('blue', 50),
 
-    'hamburger-menu-link-color': color('color-white'),
-    'hamburger-menu-link-color-active': color('color-white'),
-    'hamburger-menu-link-color-hover': color('color-white'),
+    'hamburger-menu-link-color': color('white'),
+    'hamburger-menu-link-color-active': color('white'),
+    'hamburger-menu-link-color-hover': color('white'),
 
-    'island-border': 1px solid tint('color-blue', 50),
+    'island-border': 1px solid tint('blue', 50),
   )
 ) !default;
 
