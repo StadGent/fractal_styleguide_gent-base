@@ -144,7 +144,7 @@ div.newsletter-block {
         background-color: color('color-blue');
 
         &:hover {
-          background-color: lighter('color-blue', 50);
+          background-color: tint('color-blue', 50);
         }
       }
     }

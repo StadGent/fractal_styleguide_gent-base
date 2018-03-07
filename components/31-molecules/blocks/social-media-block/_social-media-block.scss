@@ -22,7 +22,7 @@
     }
 
     &:hover {
-      color: lighter('color-dark-gray', 50);
+      color: tint('color-dark-gray', 50);
     }
 
     &::before {

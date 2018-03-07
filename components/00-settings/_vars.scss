@@ -45,8 +45,8 @@ $primary-font-size: $default-font-size !default; //px
 $primary-line-height: $default-line-height !default; //em
 $secondary-font-family: expressway, sans-serif !default;
 
-$bg-outside-container: lighter('color-dark-gray', 10) !default;
-$border-outside-container: 1px solid lighter('color-dark-gray', 2) !default;
+$bg-outside-container: tint('color-dark-gray', 10) !default;
+$border-outside-container: 1px solid tint('color-dark-gray', 2) !default;
 $default-text-color: color('color-dark-gray') !default;
 
 // Breadcrumb settings.

@@ -108,7 +108,7 @@ header.header {
           width: 100%;
           margin: 0;
           padding: .35rem $gutter-width/2;
-          background-color: darker('color-blue', 50);
+          background-color: shade('color-blue', 50);
 
           input[type="submit"] {
             position: absolute;

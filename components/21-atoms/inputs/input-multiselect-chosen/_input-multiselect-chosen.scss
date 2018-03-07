@@ -26,7 +26,7 @@
   }
 
   .chosen-choices {
-    border-color: lighter('color-dark-gray', 50) !important; // sass-lint:disable-line no-important
+    border-color: tint('color-dark-gray', 50) !important; // sass-lint:disable-line no-important
 
     background: color('color-white');
     background-image: none !important; // sass-lint:disable-line no-important

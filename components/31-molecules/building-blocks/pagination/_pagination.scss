@@ -21,7 +21,7 @@
         &:hover,
         &:focus,
         &:active {
-          background-color: lighter('color-blue', 75);
+          background-color: tint('color-blue', 75);
         }
       }
 

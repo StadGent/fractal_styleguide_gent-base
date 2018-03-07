@@ -1,6 +1,6 @@
 .map-island {
   position: relative;
-  border: 1px solid lighter('color-dark-gray', 25);
+  border: 1px solid tint('color-dark-gray', 25);
   border-radius: $radius-3;
   overflow: hidden;
 
@@ -14,12 +14,12 @@
       width: 2.5rem;
       height: 2.5rem;
       margin: 0;
-      border: 1px solid lighter('color-dark-gray', 25);
+      border: 1px solid tint('color-dark-gray', 25);
       border-bottom: 0;
       color: color('color-dark-gray');
 
       &:hover {
-        background: lighter('color-dark-gray', 75);
+        background: tint('color-dark-gray', 75);
       }
     }
   }
@@ -48,7 +48,7 @@
     right: .5rem;
 
     button {
-      border-bottom: 1px solid lighter('color-dark-gray', 50);
+      border-bottom: 1px solid tint('color-dark-gray', 50);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       background: color('color-white');

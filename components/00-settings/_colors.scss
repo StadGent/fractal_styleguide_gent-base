@@ -55,7 +55,7 @@ $darken: (
 // @param $lighten-value [map]
 //   The value to modify the base color with.
 //
-@function lighter($base-color, $lighten-value) {
+@function tint($base-color, $lighten-value) {
   @if not map-has-key($colors, $base-color) {
     @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
   }
@@ -76,7 +76,7 @@ $darken: (
 // @param $darken-value [map]
 //   The value to darken the base color with.
 //
-@function darker($base-color, $darken-value) {
+@function shade($base-color, $darken-value) {
   $color-black: #000;
 
   @if not map-has-key($colors, $base-color) {
@@ -108,36 +108,36 @@ $themes: (
     'figcaption-color': color('color-dark-gray'),
 
     'link-color': color('color-blue'),
-    'link-color-hover': darker('color-blue', 10),
+    'link-color-hover': shade('color-blue', 10),
     'link-text-decoration': underline,
     'link-text-decoration-hover': none,
 
-    'cta-link-background': lighter('color-blue', 50),
+    'cta-link-background': tint('color-blue', 50),
     'cta-link-background-hover': color('color-white'),
 
-    'cta-link-border': 1px solid lighter('color-dark-gray', 50),
-    'cta-link-border-hover': 1px solid lighter('color-dark-gray', 50),
+    'cta-link-border': 1px solid tint('color-dark-gray', 50),
+    'cta-link-border-hover': 1px solid tint('color-dark-gray', 50),
 
-    'cta-link-title-color': darker('color-blue', 50),
-    'cta-link-title-color-hover': darker('color-blue', 50),
+    'cta-link-title-color': shade('color-blue', 50),
+    'cta-link-title-color-hover': shade('color-blue', 50),
 
-    'cta-link-document-color': darker('color-blue', 50),
+    'cta-link-document-color': shade('color-blue', 50),
     'cta-link-document-color-hover': color('color-blue'),
 
-    'cta-link-icon-border': 1px solid lighter('color-dark-gray', 50),
+    'cta-link-icon-border': 1px solid tint('color-dark-gray', 50),
 
-    'field-description-background': lighter('color-dark-gray', 6),
+    'field-description-background': tint('color-dark-gray', 6),
     'field-description-color': color('color-dark-gray'),
 
     'field-color': color('color-dark-gray'),
     'field-background': color('color-white'),
-    'field-border': 1px solid lighter('color-dark-gray', 50),
-    'field-placeholder': lighter('color-dark-gray', 50),
+    'field-border': 1px solid tint('color-dark-gray', 50),
+    'field-placeholder': tint('color-dark-gray', 50),
 
-    'fieldset-border': 1px solid lighter('color-dark-gray', 75),
+    'fieldset-border': 1px solid tint('color-dark-gray', 75),
     'fieldset-color': color('color-blue'),
 
-    'field-error-background': lighter('color-red', 50),
+    'field-error-background': tint('color-red', 50),
     'field-error-color': color('color-dark-gray'),
     'field-error-border': color('color-red'),
 
@@ -148,7 +148,7 @@ $themes: (
     'button-color-hover': color('color-white'),
 
     'button-background': color('color-blue'),
-    'button-background-hover': darker('color-blue', 50),
+    'button-background-hover': shade('color-blue', 50),
 
     'button-border': none,
     'button-border-hover': none,
@@ -172,22 +172,22 @@ $themes: (
     'form-steps-active-step-label': color('color-blue'),
     'form-steps-active-prefix-background': color('color-blue'),
 
-    'hamburger-menu-background': darker('color-blue', 50),
+    'hamburger-menu-background': shade('color-blue', 50),
     'hamburger-menu-overlay-color': rgba(44, 63, 72, .6),
 
-    'hamburger-menu-link-border': 1.5px solid darker('color-blue', 50),
-    'hamburger-menu-link-border-active': 1.5px solid darker('color-blue', 50),
-    'hamburger-menu-link-border-hover': 1.5px solid darker('color-blue', 50),
+    'hamburger-menu-link-border': 1.5px solid shade('color-blue', 50),
+    'hamburger-menu-link-border-active': 1.5px solid shade('color-blue', 50),
+    'hamburger-menu-link-border-hover': 1.5px solid shade('color-blue', 50),
 
     'hamburger-menu-link-background': transparent,
-    'hamburger-menu-link-background-active': darker('color-blue', 50),
-    'hamburger-menu-link-background-hover': darker('color-blue', 50),
+    'hamburger-menu-link-background-active': shade('color-blue', 50),
+    'hamburger-menu-link-background-hover': shade('color-blue', 50),
 
     'hamburger-menu-link-color': color('color-white'),
     'hamburger-menu-link-color-active': color('color-white'),
     'hamburger-menu-link-color-hover': color('color-white'),
 
-    'island-border': 1px solid lighter('color-blue', 50),
+    'island-border': 1px solid tint('color-blue', 50),
   )
 ) !default;
 
