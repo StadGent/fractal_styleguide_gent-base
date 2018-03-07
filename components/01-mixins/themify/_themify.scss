@@ -9,7 +9,7 @@
   $section-background: map-get($colors, 'section-background') !global;
   $section-text-color: map-get($colors, 'section-text-color') !global;
 
-  $heading-1-color: (map-get($colors, 'heading-1-color')) !global;
+  $heading-1-color: map-get($colors, 'heading-1-color') !global;
 
   $heading-2-color: map-get($colors, 'heading-2-color') !global;
 

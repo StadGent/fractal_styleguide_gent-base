@@ -43,7 +43,7 @@ th > * {
 hr {
   margin: 0 0 $default-line-height;
   clear: both;
-  border: 1px 0 0 solid ligher('dark-gray', 50%);
+  border: 1px 0 0 solid tint('dark-gray', 50);
 }
 
 //

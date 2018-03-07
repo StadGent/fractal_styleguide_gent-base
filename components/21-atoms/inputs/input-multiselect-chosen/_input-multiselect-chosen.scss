@@ -21,7 +21,7 @@
   }
 
   &.chosen-with-drop .chosen-drop {
-    border-color: ligher('dark-gray', 50%);
+    border-color: tint('dark-gray', 50);
     box-shadow: none;
   }
 

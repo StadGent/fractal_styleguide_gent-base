@@ -115,7 +115,7 @@
       padding: 0 .625rem;
       border-bottom-left-radius: $radius-1;
       border-bottom-right-radius: $radius-1;
-      background: ligher('blue', 75);
+      background: tint('blue', 75);
       text-align: right;
     }
   }

@@ -8,19 +8,32 @@
 // This file is a customization of the styleguide application.
 // This file is only applicable on stijlgids.stad.gent
 //
-.color {
+.color-wrapper {
   display: block;
   width: 100%;
-  height: 60px;
   margin: 0 10px 10px 0;
   float: left;
   border: #e1e1e1 1px solid;
   color: rgba(0, 0, 0, .5);
   text-align: center;
 
+  .color {
+    height: 75px;
+    padding: 1rem;
+    border-bottom: #e1e1e1 1px solid;
+  }
+
+  .color-info {
+    min-height: 50px;
+    padding: .5rem;
+
+    @media all and (min-width: 480px) {
+      min-height: 125px;
+    }
+  }
+
   @media all and (min-width: 480px) {
-    width: 125px;
-    height: 125px;
+    width: 250px;
   }
 }
 
