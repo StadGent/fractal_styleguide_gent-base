@@ -3,7 +3,7 @@
     @supports (display: grid) {
       display: grid;
       grid-template-columns: 1fr;
-      grid-gap: gutter();
+      grid-gap: $gutter-width;
     }
 
     @include tablet {
@@ -20,10 +20,10 @@
   }
 
   .bottom-container {
-    padding: gutter() * 2 0;
+    padding: $gutter-width * 2 0;
   }
 
   .cta-link {
-    margin: gutter() 0;
+    margin: $gutter-width 0;
   }
 }

@@ -24,6 +24,6 @@
 
   .news-container,
   .topics-container {
-    padding: gutter() * 2 0;
+    padding: $gutter-width * 2 0;
   }
 }
