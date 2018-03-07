@@ -2,16 +2,16 @@
   list-style: none;
 
   a {
-    color: $color-orange-light;
+    color: tint('color-orange', 50);
     text-decoration: underline;
 
     &:hover,
     &:focus {
-      color: $color-orange-lighter;
+      color: tint('color-orange', 50);
     }
 
     &:visited {
-      color: $color-orange-light;
+      color: tint('color-orange', 50);
     }
 
   }

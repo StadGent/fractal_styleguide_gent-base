@@ -1,5 +1,6 @@
 {
   "title": "Homepage",
+  "hidden": "hidden",
   "status": "alpha",
   "preview": "@preview-without-padding"
 }

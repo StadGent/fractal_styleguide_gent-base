@@ -14,7 +14,7 @@
   }
 
   a {
-    color: $color-white;
+    color: color('color-white');
   }
 
   .phone {
@@ -48,7 +48,7 @@
     margin-top: 1rem;
 
     &:hover {
-      color: $color-blue;
+      color: color('color-blue');
     }
 
     &::before {

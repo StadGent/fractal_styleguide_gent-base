@@ -6,22 +6,22 @@
   "preview": "@preview",
   "context": {
     "label_optional": "Optional",
-    "colors": {
-      "darkest-blue": "#2C3F48",
-      "dark-blue": "#00597A",
-      "blue": "#007DB3",
-      "light-blue": "#D0DDE0",
-      "lightest-blue": "#ECF5F7",
-      "darkest-gray": "#404546",
-      "dark-gray": "#595f60",
-      "gray": "#9DA8AF",
-      "light-gray": "#E2E2E2",
-      "lightest-gray": "#F4F4F4",
-      "orange": "#F39200",
-      "white": "#FFFFFF",
-      "color-white-blue": "#c2e2f0",
-      "color-orange-light": "#ffa927",
-      "color-orange-lighter": "#ffbd5a"
+    "primary": {
+      "$color-cyan": "#009de0",
+      "$color-cyan-wcag": "#0085b3",
+      "$color-dark-gray": "#2c3f48",
+      "$color-white": "#fff"
+    },
+    "secondary": {
+      "$color-blue": "#0340c7",
+      "$color-teal": "#29cfc9",
+      "$color-green": "#41ba36",
+      "$color-lemon": "#ffda00",
+      "$color-yellow": "#fab600",
+      "$color-orange": "#f95706",
+      "$color-red": "#f20f36",
+      "$color-pink": "#f09",
+      "$color-purple": "#5a0ec4"
     },
     "h1_text": "heading 1",
     "h2_text": "heading 2",

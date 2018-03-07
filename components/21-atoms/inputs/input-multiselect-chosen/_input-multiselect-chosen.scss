@@ -21,20 +21,20 @@
   }
 
   &.chosen-with-drop .chosen-drop {
-    border-color: $color-light-gray;
+    border-color: ligher('color-dark-gray', 50%);
     box-shadow: none;
   }
 
   .chosen-choices {
-    border-color: $color-light-gray !important; // sass-lint:disable-line no-important
+    border-color: tint('color-dark-gray', 50) !important; // sass-lint:disable-line no-important
 
-    background: $color-white;
+    background: color('color-white');
     background-image: none !important; // sass-lint:disable-line no-important
-    color: $color-dark-gray;
+    color: color('color-dark-gray');
   }
 
   .chosen-results li.highlighted {
-    background-color: $color-blue;
+    background-color: color('color-blue');
     background-image: none;
   }
 }
@@ -57,7 +57,7 @@
     &::after {
       @extend %icon-base-css;
       @extend %icon-close;
-      color: $color-white;
+      color: color('color-white');
       font-size: 1.25rem;
       line-height: 1.7rem;
     }

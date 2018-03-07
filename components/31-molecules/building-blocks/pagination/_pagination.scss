@@ -21,15 +21,15 @@
         &:hover,
         &:focus,
         &:active {
-          background-color: $color-lightest-blue;
+          background-color: tint('color-blue', 75);
         }
       }
 
       &.is-active {
         span,
         a {
-          background-color: $color-orange;
-          color: $color-white;
+          background-color: color('color-orange');
+          color: color('color-white');
         }
       }
 

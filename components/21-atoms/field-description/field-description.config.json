@@ -1,5 +1,6 @@
 {
   "title": "Field description",
+  "hidden": "hidden",
   "status": "ready",
   "handle": "field-description",
   "context": {

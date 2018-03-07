@@ -1,7 +1,8 @@
 {
-  "title": "Nested sections overview",
+  "title": "Grid",
+  "hidden": "hidden",
   "status": "ready",
-  "order": 2,
+  "order": 7,
   "preview": "@preview",
   "context": {
     "items": [

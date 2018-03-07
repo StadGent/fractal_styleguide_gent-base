@@ -59,7 +59,7 @@ input.datepicker {
         width: 0;
         height: 0;
         border-top: .625rem solid transparent;
-        border-right: .625rem solid $color-blue;
+        border-right: .625rem solid color('color-blue');
         border-bottom: .625rem solid transparent;
         background-image: none;
       }
@@ -71,7 +71,7 @@ input.datepicker {
         height: 0;
         border-top: .625rem solid transparent;
         border-bottom: .625rem solid transparent;
-        border-left: .625rem solid $color-blue;
+        border-left: .625rem solid color('color-blue');
         background-image: none;
       }
     }
@@ -82,7 +82,7 @@ input.datepicker {
 
     th {
       padding: .7em .3em;
-      background-color: $color-lightest-blue;
+      background-color: tint('color-blue', 75);
       font-size: .72645rem;
       font-weight: normal;
       line-height: 1.694rem;
@@ -93,7 +93,7 @@ input.datepicker {
       display: table-cell;
       width: 2rem;
       height: 2rem;
-      border: 1px solid $color-lightest-gray;
+      border: 1px solid ligher('color-dark-gray', 50%);
       background-color: #f2ffd6;
       color: #595f60;
       font-size: .82645rem;
@@ -122,11 +122,11 @@ input.datepicker {
       }
 
       &.ui-datepicker-today {
-        color: $color-blue;
+        color: color('color-blue');
         opacity: 1;
 
         .ui-state-highlight {
-          color: $color-blue;
+          color: color('color-blue');
         }
       }
 
@@ -135,12 +135,12 @@ input.datepicker {
       }
 
       &.ui-state-disabled {
-        background-color: $color-white;
+        background-color: color('color-white');
       }
 
       &.ui-datepicker-current-day {
-        background-color: $color-orange;
-        color: $color-blue;
+        background-color: color('color-orange');
+        color: color('color-blue');
       }
     }
 

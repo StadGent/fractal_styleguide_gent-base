@@ -1,0 +1,17 @@
+//
+// Mixin to determine the correct color variant of one of the base colors
+// defined in the style guide _vars.scss file.
+//
+// @param $color
+//   The primary or secondary base color.
+//
+// @param $opacity
+//   The opacity value to be applied to the base color.
+//
+// Use:
+//   @include color($color-cyan , $opacity-75);
+//
+//
+@mixin color($color, $opacity: 100%) {
+  color: rgba($color, $opacity);
+}

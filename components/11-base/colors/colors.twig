@@ -1,6 +1,19 @@
-{% for text, color in colors %}
+<h2 class="styleguide-title">{{ 'Primary colors' }}</h2>
+<div class="preview-inner-container styleguide-primary-colors">
+  {% for text, color in primary %}
     <div class="color" style="background: {{ color|e }}">
-        <p>$color-{{ text|e }}</p>
-        <p>{{ color|e }}</p>
+      <p>{{ text|e }}</p>
+      <p>{{ color|e }}</p>
     </div>
-{% endfor %}
+  {% endfor %}
+</div>
+
+<h2 class="styleguide-title">{{ 'Secondary colors' }}</h2>
+<div class="preview-inner-container styleguide-secondary-colors">
+  {% for text, color in secondary %}
+  <div class="color" style="background: {{ color|e }}">
+    <p>{{ text|e }}</p>
+      <p>{{ color|e }}</p>
+    </div>
+  {% endfor %}
+</div>

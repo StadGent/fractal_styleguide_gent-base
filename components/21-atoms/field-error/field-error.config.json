@@ -1,5 +1,6 @@
 {
   "title": "Field error",
+  "hidden": "hidden",
   "status": "ready",
   "handle": "field-error",
   "context": {
