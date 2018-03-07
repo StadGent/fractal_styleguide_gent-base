@@ -52,8 +52,8 @@ h6.styleguide {
 
 h2.styleguide-title {
   padding: .25rem .5rem;
-  border-bottom: 1px dotted #d0cccc;
-  background: #efeded;
+  border-bottom: 1px dotted lighter('color-cyan', 25);
+  background: lighter('color-cyan', 6);
 
   .section--wrapper &,
   .section--inverse &,
@@ -94,7 +94,7 @@ h2.styleguide-title {
   width: 100%;
   margin-bottom: 4.375rem;
   padding-bottom: 1rem;
-  border-bottom: 1px dotted #d0cccc;
+  border-bottom: 1px dotted lighter('color-cyan', 25);
 
   .section--wrapper &,
   .section--inverse &,

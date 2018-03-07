@@ -1,5 +1,6 @@
 {
   "title": "Theme page",
+  "hidden": "hidden",
   "status": "alpha",
   "preview": "@preview-without-padding"
 }

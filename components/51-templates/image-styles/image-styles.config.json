@@ -1,5 +1,6 @@
 {
   "title": "Image styles",
+  "hidden": "hidden",
   "status": "ready",
   "handle": "image-styles",
   "preview": "@preview",

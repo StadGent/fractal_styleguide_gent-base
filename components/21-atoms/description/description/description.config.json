@@ -1,5 +1,6 @@
 {
   "title": "Description",
+  "hidden": "hidden",
   "status": "ready",
   "handle": "description",
   "order": 10,

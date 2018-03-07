@@ -1,5 +1,3 @@
-
-//
 // Colors.
 $colors: (
   'color-cyan': #009de0,
@@ -100,11 +98,11 @@ $themes: (
     'section-background': color('color-white'),
     'section-text-color': color('color-dark-gray'),
     'heading-1-color': color('color-cyan'),
-    'heading-2-color': color('color-cyan'),
-    'heading-3-color': color('color-cyan'),
-    'heading-4-color': color('color-cyan'),
-    'heading-5-color': color('color-cyan'),
-    'heading-6-color': color('color-cyan'),
+    'heading-2-color': color('color-cyan-wcag'),
+    'heading-3-color': color('color-cyan-wcag'),
+    'heading-4-color': color('color-cyan-wcag'),
+    'heading-5-color': color('color-cyan-wcag'),
+    'heading-6-color': color('color-cyan-wcag'),
 
     'description-color': color('color-dark-gray'),
     'figcaption-color': color('color-dark-gray'),

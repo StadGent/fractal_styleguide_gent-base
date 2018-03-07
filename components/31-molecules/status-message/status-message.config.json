@@ -1,5 +1,6 @@
 {
   "title": "Status message",
+  "hidden": "hidden",
   "status": "ready",
   "handle": "status-message",
   "order": "9",

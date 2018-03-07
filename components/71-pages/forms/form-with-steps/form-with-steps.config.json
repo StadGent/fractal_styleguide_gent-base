@@ -1,5 +1,6 @@
 {
   "title": "Form with form steps",
+  "hidden": "hidden",
   "status": "alpha",
   "preview": "@preview-without-padding",
   "order": 1

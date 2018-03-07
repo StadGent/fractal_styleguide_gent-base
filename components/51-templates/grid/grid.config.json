@@ -1,5 +1,6 @@
 {
   "title": "Grid",
+  "hidden": "hidden",
   "status": "ready",
   "order": 7,
   "preview": "@preview",
