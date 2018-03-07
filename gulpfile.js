@@ -28,6 +28,8 @@ const npm = require('npm');
 const bump = require('gulp-bump');
 const inject = require('gulp-inject');
 const yargs = require('yargs');
+const axe = require('gulp-axe-webdriver');
+
 
 var _sassLint = (failOnError) => {
   var cmd = gulp.src('components/**/*.s+(a|c)ss')
@@ -498,6 +500,68 @@ gulp.task('bump', () => {
     }))
     .pipe(gulp.dest('./'));
 });
+
+/*
+ * Test the style guide components for accessibility issues.
+ *   - wcag2a
+ *   - wcag2aa
+ */
+gulp.task('axe', function (done) {
+
+  let options = {
+    saveOutputIn: 'allHtml.json',
+    browser: 'phantomjs',
+    urls: ['build/components/preview/*.html'],
+    showOnlyViolations: true,
+    a11yCheckOptions: {
+      runOnly: {
+        type: 'tag',
+        values: ['wcag2a', 'wcag2aa']
+      }
+    }
+  }
+  // not input atoms and not pages
+  let notInputNotPages = () => {
+    return new Promise((resolve, reject) => {
+
+      let components = Object.assign({}, options);
+      components.saveOutputIn = 'components.json';
+      components.urls = ['build/components/preview/!(input*|*page).html'];
+      components.a11yCheckOptions.rules = {bypass: {enabled: false}};
+
+      axe(components, () => {resolve();});
+    })
+  }
+  // input atoms
+  let input = () => {
+    return new Promise((resolve, reject) => {
+
+      let input = Object.assign({}, options);
+      input.saveOutputIn = 'inputAtoms.json';
+      input.urls = ['build/components/preview/input*.html'];
+      input.a11yCheckOptions.rules = {
+        label: {enabled: false},
+        bypass: {enabled: false}
+      };
+
+      axe(input, () => {resolve();});
+    })
+  }
+  // pages
+  let pages = () => {
+    return new Promise((resolve, reject) => {
+
+      let pages = Object.assign({}, options);
+      pages.saveOutputIn = 'pages.json';
+      pages.urls = ['build/components/preview/*page.html'];
+
+      axe(pages, () => {resolve();});
+    })
+  }
+
+  return Promise.all([notInputNotPages(), input(), pages()]);
+})
+
 
 /*
  *

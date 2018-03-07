@@ -12,6 +12,7 @@ build/components.html
 build/docs.html
 build/index.html
 scripts
+aXeReports
 
 .DS_Store
 .idea
@@ -19,6 +20,7 @@ scripts
 .gitignore
 .npmignore
 .sass-lint.yml
+.codeclimate
 bower.json
 composer.json
 Gemfile

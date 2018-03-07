@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "2.9.0",
+  "version": "3.0.0",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@frctl/fractal": "^1.1.7",
@@ -34,6 +34,7 @@
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "chosen-js": "^1.8.2",
+    "gulp-axe-webdriver": "^1.4.0",
     "lightgallery": "^1.6.3",
     "masonry-layout": "^4.2.0",
     "susy": "^3.0.1"

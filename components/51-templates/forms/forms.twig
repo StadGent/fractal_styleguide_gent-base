@@ -1,6 +1,10 @@
 <h2 class="styleguide-title">Forms</h2>
 <div class="preview-inner-container">
   <form class="{{ modifier }}">
+    {% include '@paragraph' with {
+      'text' : 'Fill in all fields unless otherwise stated',
+      'modifier': 'required-fields-indicator'
+    } %}
     <fieldset>
     <legend>
       This is a fieldset title.
