@@ -49,6 +49,16 @@
     .color-variants-title {
       margin-bottom: 1rem;
     }
+
+    code {
+      display: block;
+      margin-bottom: .5rem;
+      border: 1px dotted color('dark-gray', -4);
+      background-color: color('dark-gray', -6);
+      font-size: .8rem;
+      font-style: italic;
+      overflow-x: scroll;
+    }
   }
 
   @media all and (min-width: 480px) {
