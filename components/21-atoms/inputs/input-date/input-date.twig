@@ -3,4 +3,7 @@
        id="{{ date_id }}"
        class="{% if modifier %}{{ modifier }}{% endif %}"
        placeholder="dd/mm/yyyy"
+      {% if disabled %}
+        disabled="disabled"
+      {% endif %}
 />

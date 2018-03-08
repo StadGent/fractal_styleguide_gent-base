@@ -24,6 +24,13 @@
       "context": {
         "modifier": "error"
       }
+    },
+    {
+      "name": "disabled",
+      "hidden": "hidden",
+      "context": {
+        "disabled": 1
+      }
     }
   ]
 }
