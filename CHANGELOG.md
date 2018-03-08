@@ -18,6 +18,11 @@ All notable changes to this style guide are documented here.
 
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
 * DTGB-180: Added gulp task to perform accessibility checks.
+* DTGB-209: Added new styling for baic input field atoms.
+
+> **Removed jQuery UI Datepicker support and integration!**
+> Did some refactoring to the SASS partials. Most of the input field styling
+> can now be found in the `_forms.scss` partial.
 
 ### 2.11.0
 
