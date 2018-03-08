@@ -3,7 +3,6 @@ $styleguide-dir: '../styleguide' !default;
 $uuid: unique-id();
 
 // Border radius.
-// @TODO: Change to rems.
 $radius-0: 0 !default;
 $radius-1: 8px !default;
 $radius-2: 10px !default;
@@ -11,30 +10,24 @@ $radius-3: 18px !default;
 $radius-4: 30px !default;
 
 // Breakpoints for fonts.
-// @TODO: Change to new breakpoints.
 $bp-tablet-fonts: 640px !default;
 $bp-desktop-fonts: 1360px !default;
 
 // Visual breakpoints.
-// @TODO: Change to new breakpoints.
 $bp-tablet: 640px !default;
 $bp-desktop: 960px !default;
 
 // Max content width.
-// @TODO: Change to new breakpoints.
 $bp-max-content: 1440px !default;
 
 // Max viewport.
-// @TODO: Change to new breakpoints.
 $bp-container: 1600px !default;
 
 // Grid settings
-// @TODO: Change to new grid system settings.
 $grid-columns: 12 !default;
 $gutter-width: 1rem !default;
 
 // Font settings.
-// @TODO: Change to new font settings.
 $default-font-family: 'Source Sans Pro', arial, sans-serif !default;
 $default-font-weight: 400 !default;
 $default-font-size: 16px !default; //px
@@ -45,12 +38,12 @@ $primary-font-size: $default-font-size !default; //px
 $primary-line-height: $default-line-height !default; //em
 $secondary-font-family: expressway, sans-serif !default;
 
-$bg-outside-container: tint('color-dark-gray', 10) !default;
-$border-outside-container: 1px solid tint('color-dark-gray', 2) !default;
-$default-text-color: color('color-dark-gray') !default;
+$bg-outside-container: color('dark-gray', 1) !default;
+$border-outside-container: 1px solid color('dark-gray', 2) !default;
+$default-text-color: color('dark-gray') !default;
 
 // Breadcrumb settings.
-$bg-hover-breadcrumb: color('color-blue') !default;
+$bg-hover-breadcrumb: color('blue') !default;
 
 //
 // Section dependent variables!

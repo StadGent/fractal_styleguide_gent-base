@@ -10,6 +10,12 @@ All notable changes to this style guide are documented here.
 
 ### 3.0.0
 
+* DTGB-147: Redefined the color palletes and color schemes.
+
+> Sections have been changed into color schemes with the `cs--` prefix.
+> Colors are now defined in a `$colors` SASS map and accessed through the
+> `color()` function. See the documentation of colors for more information.
+
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
 * DTGB-180: Added gulp task to perform accessibility checks.
 

@@ -144,10 +144,10 @@ div.newsletter-block {
         width: 3.125rem;
         height: 3.125rem;
         border-radius: $radius-1;
-        background-color: color('color-blue');
+        background-color: color('blue');
 
         &:hover {
-          background-color: tint('color-blue', 50);
+          background-color: color('blue', -2);
         }
       }
     }

@@ -32,7 +32,7 @@ body {
 
 ::selection {
   background-color: $default-text-color;
-  color: color('color-dark-gray');
+  color: color('dark-gray');
   text-shadow: none;
 }
 
@@ -43,7 +43,7 @@ th > * {
 hr {
   margin: 0 0 $default-line-height;
   clear: both;
-  border: 1px 0 0 solid ligher('color-dark-gray', 50%);
+  border: 1px 0 0 solid color('dark-gray', -2);
 }
 
 //

@@ -5,43 +5,100 @@
 @import '71-pages/**/*';
 
 //
+//
 // This file is a customization of the styleguide application.
 // This file is only applicable on stijlgids.stad.gent
 //
-.color {
+//
+
+//
+// Color classes to show the color swatches in the style guide.
+//
+.color-wrapper {
   display: block;
   width: 100%;
-  height: 60px;
   margin: 0 10px 10px 0;
   float: left;
   border: #e1e1e1 1px solid;
   color: rgba(0, 0, 0, .5);
   text-align: center;
 
+  .color {
+    height: 75px;
+    padding: 1rem;
+    border-bottom: #e1e1e1 1px solid;
+  }
+
+  .color-info {
+    min-height: 50px;
+    padding: .5rem;
+    border-bottom: 1px solid color('dark-gray', -3);
+
+    @media all and (min-width: 480px) {
+      min-height: 125px;
+    }
+  }
+
+  code {
+    display: block;
+    margin-bottom: .5rem;
+    border: 1px dotted color('dark-gray', -4);
+    background-color: color('dark-gray', -6);
+    font-size: .8rem;
+    font-style: italic;
+    overflow-x: scroll;
+  }
+
+  .color-variants {
+    padding: .5rem;
+
+    .color-variant {
+      margin-bottom: 2rem;
+    }
+
+    .color-variants-title {
+      margin-bottom: 1rem;
+    }
+  }
+
   @media all and (min-width: 480px) {
-    width: 125px;
-    height: 125px;
+    width: 250px;
   }
 }
 
 //
-// Grid examples
+// Generate style guide specific classes to show the color swatch variants.
 //
-// Highlight the grid columns within the docs so folks can see their padding,
-// alignment, sizing, etc.
-//
-
-.show-grid {
-  margin-bottom: 15px;
+.color-swatch-variant {
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid color('dark-gray', -3);
 }
 
-.show-grid [class^="col-"] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid rgba(0, 125, 179, .2);
-  background-color: rgba(0, 125, 179, .15);
+@each $color-key, $color in $colors {
+  @each $tint-key, $tint in $tints {
+    .color-swatch-#{$color-key}-#{$tint-key} {
+      background-color: color($color-key, $tint-key);
+
+      &::after {
+        position: absolute;
+        top: -1.5rem;
+        right: 0;
+        left: 0;
+        margin: auto;
+        font-size: .8rem;
+
+        content: '#{color($color-key, $tint-key)}';
+      }
+    }
+  }
 }
 
+//
+// Title styling for the style guide specific parts.
+//
 h1.styleguide,
 h2.styleguide,
 h3.styleguide,
@@ -53,21 +110,24 @@ h6.styleguide {
 
 h2.styleguide-title {
   padding: .25rem .5rem;
-  border-bottom: 1px dotted tint('color-cyan', 25);
-  background: tint('color-cyan', 6);
+  border-bottom: 1px dotted color('cyan-wcag', -1);
+  background: color('cyan-wcag', -6);
 
-  .section--wrapper &,
-  .section--inverse &,
-  .section--accent & {
-    background: color('color-white');
-    color: color('color-blue');
+  .cs--wrapper &,
+  .cs--inverse &,
+  .cs--accent & {
+    background: color('white');
+    color: color('cyan-wcag');
   }
 
-  .section--wrapper & {
-    color: shade('color-blue', 50);
+  .cs--wrapper & {
+    color: color('blue', -2);
   }
 }
 
+//
+// Preview containers
+//
 .preview-container {
   min-height: 100vh;
   padding: 4% 0;
@@ -95,16 +155,16 @@ h2.styleguide-title {
   width: 100%;
   margin-bottom: 4.375rem;
   padding-bottom: 1rem;
-  border-bottom: 1px dotted tint('color-cyan', 25);
+  border-bottom: 1px dotted color('cyan', 1);
 
-  .section--wrapper &,
-  .section--inverse &,
-  .section--accent & {
-    border-bottom: 1px dotted color('color-white');
+  .cs--wrapper &,
+  .cs--inverse &,
+  .cs--accent & {
+    border-bottom: 1px dotted color('white');
   }
 
-  .section--highlighted & {
-    border-bottom: 1px dotted color('color-dark-gray');
+  .cs--highlighted & {
+    border-bottom: 1px dotted color('dark-gray');
   }
 }
 

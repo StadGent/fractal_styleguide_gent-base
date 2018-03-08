@@ -7,21 +7,21 @@
   "context": {
     "label_optional": "Optional",
     "primary": {
-      "$color-cyan": "#009de0",
-      "$color-cyan-wcag": "#0085b3",
-      "$color-dark-gray": "#2c3f48",
-      "$color-white": "#fff"
+      "$cyan": "#009de0",
+      "$cyan-wcag": "#0085b3",
+      "$dark-gray": "#2c3f48",
+      "$white": "#fff"
     },
     "secondary": {
-      "$color-blue": "#0340c7",
-      "$color-teal": "#29cfc9",
-      "$color-green": "#41ba36",
-      "$color-lemon": "#ffda00",
-      "$color-yellow": "#fab600",
-      "$color-orange": "#f95706",
-      "$color-red": "#f20f36",
-      "$color-pink": "#f09",
-      "$color-purple": "#5a0ec4"
+      "$blue": "#0340c7",
+      "$teal": "#29cfc9",
+      "$green": "#41ba36",
+      "$lemon": "#ffda00",
+      "$yellow": "#fab600",
+      "$orange": "#f95706",
+      "$red": "#f20f36",
+      "$pink": "#f09",
+      "$purple": "#5a0ec4"
     },
     "h1_text": "heading 1",
     "h2_text": "heading 2",
