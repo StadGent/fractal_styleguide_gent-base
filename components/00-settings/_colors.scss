@@ -113,11 +113,11 @@ $themes: (
     'selection-color': color('white'),
 
     'heading-1-color': color('cyan'),
-    'heading-2-color': color('cyan-wcag'),
-    'heading-3-color': color('cyan-wcag'),
-    'heading-4-color': color('cyan-wcag'),
-    'heading-5-color': color('cyan-wcag'),
-    'heading-6-color': color('cyan-wcag'),
+    'heading-2-color': color('dark-gray'),
+    'heading-3-color': color('dark-gray'),
+    'heading-4-color': color('dark-gray'),
+    'heading-5-color': color('dark-gray'),
+    'heading-6-color': color('dark-gray'),
 
     'description-color': color('dark-gray'),
     'figcaption-color': color('dark-gray'),
@@ -167,8 +167,8 @@ $themes: (
     'field-error-color': color('dark-gray'),
     'field-error-border': color('red'),
 
-    'label-color': color('dark-gray'),
-    'label-optional-color': color('dark-gray'),
+    'label-color': color('dark-gray', -1),
+    // 'label-optional-color': color('dark-gray'),
 
     'button-color': color('white'),
     'button-color-hover': color('white'),

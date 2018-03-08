@@ -71,114 +71,15 @@
   appearance: none;
 }
 
-// %input-base,
-// input[type='text'],
-// input[type='number'],
-// input[type='search'],
-// input[type='password'],
-// input[type='date'],
-// input[type='datetime'],
-// input[type='datetime-local'],
-// input[type='time'],
-// input[type='email'],
-// input[type='url'],
-// input[type='tel'],
-// textarea,
-// select {
-//   border-width: 1px;
-//   border-style: solid;
-//   border-radius: $radius-1;
-//   font-size: 1rem;
-//   line-height: 1.5em;
-//   box-sizing: border-box;
+label {
+  display: block;
+  margin: 0 0 .5rem;
+  font-size: .8rem;
 
-//   &:focus {
-//     outline: none;
-//   }
-
-//   &.inline {
-//     @include btn-inlineblock();
-//   }
-
-//   &.error {
-//     @include themify {
-//       border: 1px solid $field-error-border;
-//     }
-//   }
-
-//   + .description {
-//     margin: .3rem 0 0;
-//   }
-// }
-
-// input[type='text'],
-// input[type='number'],
-// input[type='search'],
-// input[type='password'],
-// input[type='date'],
-// input[type='datetime'],
-// input[type='datetime-local'],
-// input[type='time'],
-// input[type='email'],
-// input[type='url'],
-// input[type='tel'],
-// textarea,
-// .chosen-search-input {
-//   padding: .4rem .7rem;
-// }
-
-// textarea {
-//   min-height: 7.2rem;
-// }
-
-// Since padding doesn't work with appearance on menu list we need to make use of height and text-indent.
-// %select-base,
-// select {
-//   height: 2.4rem;
-//   text-indent: .3rem;
-
-//   &[multiple] {
-//     height: auto;
-//   }
-
-//   option {
-//     text-indent: .6rem;
-//   }
-
-//   optgroup {
-//     font-weight: bold;
-//   }
-// }
-
-// legend,
-// label {
-//   display: block;
-//   margin: 0 0 .5rem;
-//   font-size: 1rem;
-//   font-weight: bold;
-
-//   .label-optional {
-//     margin-left: .31rem;
-//     font-size: .8rem;
-//     font-weight: normal;
-//     line-height: .8rem;
-//   }
-// }
-
-// legend {
-//   @include themify {
-//     border-bottom: $fieldset-border;
-//     color: $fieldset-color;
-//   }
-
-//   width: 100%;
-//   margin-bottom: 1rem;
-//   padding-bottom: .4rem;
-//   border-bottom: 1px solid color('dark-gray', -1);
-//   color: color('blue');
-//   font-size: 1.1rem;
-// }
-
-// .required-fields-indicator {
-//   margin-bottom: 1.5rem;
-// }
+  // .label-optional {
+  //   margin-left: .31rem;
+  //   font-size: .8rem;
+  //   font-weight: normal;
+  //   line-height: .8rem;
+  // }
+}

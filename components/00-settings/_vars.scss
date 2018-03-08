@@ -28,7 +28,7 @@ $grid-columns: 12 !default;
 $gutter-width: 1rem !default;
 
 // Font settings.
-$default-font-family: 'Source Sans Pro', arial, sans-serif !default;
+$default-font-family: 'Fira Sans', sans-serif !default;
 $default-font-weight: 400 !default;
 $default-font-size: 16px !default; //px
 $default-line-height: 1.4em !default; //em
@@ -36,7 +36,6 @@ $primary-font-family: $default-font-family !default;
 $primary-font-weight: $default-font-weight !default;
 $primary-font-size: $default-font-size !default; //px
 $primary-line-height: $default-line-height !default; //em
-$secondary-font-family: expressway, sans-serif !default;
 
 $bg-outside-container: color('dark-gray', 1) !default;
 $border-outside-container: 1px solid color('dark-gray', 2) !default;
@@ -51,28 +50,6 @@ $bg-hover-breadcrumb: color('blue') !default;
 // These variables can and must be set, but might get overridden when used by a
 // component that is within a section!
 //
-
-//
-// ATOM SETTINGS.
-//
-
-// Heading 1 settings.
-$heading-1-font-family: $secondary-font-family !default;
-
-// Heading 2 settings.
-$heading-2-font-family: $secondary-font-family !default;
-
-// Heading 3 settings.
-$heading-3-font-family: $secondary-font-family !default;
-
-// Heading 4 settings.
-$heading-4-font-family: $secondary-font-family !default;
-
-// Heading 5 settings.
-$heading-5-font-family: $secondary-font-family !default;
-
-// Heading 6 settings.
-$heading-6-font-family: $secondary-font-family !default;
 
 // Mobile menu
 $hamburger-menu-width: 320px;
