@@ -109,6 +109,9 @@ $themes: (
     'section-background': color('white'),
     'section-text-color': color('dark-gray'),
 
+    'selection-background': color('cyan-wcag'),
+    'selection-color': color('white'),
+
     'heading-1-color': color('cyan'),
     'heading-2-color': color('cyan-wcag'),
     'heading-3-color': color('cyan-wcag'),
@@ -141,10 +144,21 @@ $themes: (
     'field-description-background': color('dark-gray', -6),
     'field-description-color': color('dark-gray'),
 
-    'field-color': color('dark-gray'),
-    'field-background': color('white'),
-    'field-border': 1px solid color('dark-gray', 3),
-    'field-placeholder': color('dark-gray', 3),
+    'field-color': color('dark-gray', 1),
+    'field-color--success': color('dark-gray', 1),
+    'field-color--error': color('red'),
+    'field-background': color('cyan', -6),
+    'field-background--focus': color('cyan', -5),
+    'field-background--disabled': color('dark-gray', -6),
+    'field-background--success': color('green', -6),
+    'field-background--error': color('red', -6),
+    'field-border': 1px solid color('dark-gray', -1),
+    'field-border--focus': 1px solid color('cyan'),
+    'field-border--disabled': 1px solid color('dark-gray', -3),
+    'field-border--success': 1px solid color('green'),
+    'field-border--error': 1px solid color('red'),
+    'field-placeholder': color('dark-gray', -1),
+
 
     'fieldset-border': 1px solid color('dark-gray', -1),
     'fieldset-color': color('blue'),

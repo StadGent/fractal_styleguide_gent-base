@@ -9,6 +9,9 @@
   $section-background: map-get($colors, 'section-background') !global;
   $section-text-color: map-get($colors, 'section-text-color') !global;
 
+  $selection-background: map-get($colors, 'selection-background') !global;
+  $selection-color: map-get($colors, 'selection-color') !global;
+
   $heading-1-color: map-get($colors, 'heading-1-color') !global;
 
   $heading-2-color: map-get($colors, 'heading-2-color') !global;
@@ -47,8 +50,18 @@
   $field-description-color: map-get($colors, 'field-description-color') !global;
 
   $field-color: map-get($colors, 'field-color') !global;
+  $field-color--success: map-get($colors, 'field-color-success') !global;
+  $field-color--error: map-get($colors, 'field-color--error') !global;
   $field-background: map-get($colors, 'field-background') !global;
+  $field-background--focus: map-get($colors, 'field-background--focus') !global;
+  $field-background--disabled: map-get($colors, 'field-background--disabled') !global;
+  $field-background--success: map-get($colors, 'field-background--success') !global;
+  $field-background--error: map-get($colors, 'field-background--error') !global;
   $field-border: map-get($colors, 'field-border') !global;
+  $field-border--focus: map-get($colors, 'field-border--focus') !global;
+  $field-border--disabled: map-get($colors, 'field-border--disabled') !global;
+  $field-border--success: map-get($colors, 'field-border--success') !global;
+  $field-border--error: map-get($colors, 'field-border--error') !global;
   $field-placeholder: map-get($colors, 'field-placeholder') !global;
 
   $fieldset-border: map-get($colors, 'fieldset-border') !global;

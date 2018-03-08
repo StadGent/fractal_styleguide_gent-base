@@ -1,3 +1,5 @@
 textarea {
-  @extend %field-colors;
+  @extend %field-base;
+
+  height: auto;
 }
