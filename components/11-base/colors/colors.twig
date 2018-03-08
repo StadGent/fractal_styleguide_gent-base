@@ -1,3 +1,4 @@
+
 <h2 class="styleguide-title">{{ 'Primary colors' }}</h2>
 <div class="preview-inner-container styleguide-primary-colors">
   {% for text, color in primary %}
@@ -6,6 +7,19 @@
       <div class="color-info">
         <p>{{ color|e }}</p>
         <p>{{ text|e }}</p>
+      </div>
+      <div class="color-variants">
+        <div class="color-variants-title"><strong>{{ 'Tints' }}</strong></div>
+        {% for key, tint in tints %}
+          <div class="color-variant">
+            {% if key < 0 %}
+              <strong>{{ text|e }}</strong>: lighter {{ tint|e }}
+            {% else %}
+              <strong>{{ text|e }}</strong>: darker {{ tint|e }}
+            {% endif %}
+            <div class="color-swatch-variant color-swatch-{{ text|e }}-{{ key }}"></div>
+          </div>
+        {% endfor %}
       </div>
     </div>
   {% endfor %}
@@ -19,6 +33,19 @@
     <div class="color-info">
       <p>{{ color|e }}</p>
       <p>{{ text|e }}</p>
+    </div>
+    <div class="color-variants">
+      <div class="color-variants-title"><strong>{{ 'Shades & tints' }}</strong></div>
+      {% for key, tint in tints %}
+        <div class="color-variant">
+          {% if key < 0 %}
+            <strong>{{ text|e }}</strong>: lighter {{ tint|e }}
+          {% else %}
+            <strong>{{ text|e }}</strong>: darker {{ tint|e }}
+          {% endif %}
+          <div class="color-swatch-variant color-swatch-{{ text|e }}-{{ key }}"></div>
+        </div>
+      {% endfor %}
     </div>
   </div>
   {% endfor %}

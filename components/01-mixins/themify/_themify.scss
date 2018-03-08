@@ -124,9 +124,9 @@
       @content;
     }
 
-    .section--#{$theme} &,
-    *[class*="section--"] .section--#{$theme} &,
-    *[class*="section--"] %section--#{$theme} & {
+    .cs--#{$theme} &,
+    *[class*="cs--"] .cs--#{$theme} &,
+    *[class*="cs--"] %cs--#{$theme} & {
       @content;
     }
   }
