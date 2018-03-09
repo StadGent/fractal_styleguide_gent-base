@@ -1,7 +1,7 @@
 .hamburger-menu {
   &__drawer {
     @include theme('background-color', 'color-secondary', 'hamburger-menu-background');
-    @include theme('color', 'color-light', 'hamburger-menu-link-color');
+    @include theme('color', 'color-light-primary', 'hamburger-menu-link-color');
 
     position: fixed;
     top: 0;
@@ -32,7 +32,7 @@
 
       &.active {
         @include theme('border-bottom', 'color-secondary', 'hamburger-menu-link-border-bottom-active');
-        @include theme('background-color', 'color-light', 'hamburger-menu-link-background-active');
+        @include theme('background-color', 'color-light-primary', 'hamburger-menu-link-background-active');
         @include theme('color', 'color-secondary', 'hamburger-menu-link-color-active');
       }
 

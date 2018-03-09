@@ -109,8 +109,16 @@ $themes: (
     // Required colors!
     'color-primary': color('cyan'),
     'color-secondary': color('dark-gray'),
-    'color-light': color('white'),
-    'color-dark': color('cyan', 3),
+    'color-accent': color('dark-gray'),
+
+    'color-light-primary': color('cyan', -6),
+    'color-light-secondary': color('cyan', -4),
+    'color-light-accent': color('cyan', 1),
+
+    'color-dark-primary': color('cyan', 3),
+    'color-dark-secondary': color('cyan', -2),
+    'color-dark-accent': color('white'),
+
     'border-primary': 1px solid color('cyan'),
 
     // Optional colors come here. Exceptions to the required colors.
@@ -119,9 +127,17 @@ $themes: (
   'purple': (
     // Required colors!
     'color-primary': color('purple'),
-    'color-secondary': color('purple', 3),
-    'color-light': color('white'),
-    'color-dark': color('purple', 3),
+    'color-secondary': color('dark-gray'),
+    'color-accent': color('dark-gray'),
+
+    'color-light-primary': color('purple', -6),
+    'color-light-secondary': color('purple', -4),
+    'color-light-accent': color('purple', 1),
+
+    'color-dark-primary': color('purple', 3),
+    'color-dark-secondary': color('purple', -2),
+    'color-dark-accent': color('white'),
+
     'border-primary': 1px solid color('purple'),
   )
 ) !default;

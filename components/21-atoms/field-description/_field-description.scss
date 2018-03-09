@@ -1,6 +1,6 @@
 .field-description {
 
-  @include theme('background-color', 'color-light', 'field-description-background');
+  @include theme('background-color', 'color-light-primary', 'field-description-background');
   @include theme('color', 'color-primary', 'field-description-color');
 
   position: relative;

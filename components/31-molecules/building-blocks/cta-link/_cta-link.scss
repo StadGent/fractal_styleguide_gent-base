@@ -19,7 +19,7 @@ a.cta-link {
     .icon {
       @include theme('border', 'border-primary', 'cta-link-icon-border');
       @include theme('background', 'color-primary', 'cta-link-icon-background-hover');
-      @include theme('color', 'color-light', 'cta-link-icon-color-hover');
+      @include theme('color', 'color-light-primary', 'cta-link-icon-color-hover');
     }
   }
 
@@ -38,7 +38,7 @@ a.cta-link {
 
   .icon {
     @include theme('border', 'border-primary', 'cta-link-icon-border');
-    @include theme('background', 'color-light', 'cta-link-background');
+    @include theme('background', 'color-light-primary', 'cta-link-background');
     @include theme('color', 'color-primary', 'cta-link-color');
 
     position: absolute;

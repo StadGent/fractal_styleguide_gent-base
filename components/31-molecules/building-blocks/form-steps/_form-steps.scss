@@ -64,7 +64,7 @@
 
     &::before {
       @include theme('border', 'border-primary', 'form-steps-prefix-border');
-      @include theme('background', 'color-light', 'form-steps-prefix-background');
+      @include theme('background', 'color-light-primary', 'form-steps-prefix-background');
       @include theme('color', 'color-secondary', 'form-steps-prefix-color');
 
       display: block;
