@@ -1,34 +1,8 @@
 .hamburger-menu {
-  @include themify() {
-    &__drawer {
-      background-color: $hamburger-menu-background;
-      color: $hamburger-menu-link-color;
-
-      a {
-        @include element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
-        @include element-states($hamburger-menu-link-background, $hamburger-menu-link-background-hover, $property: "background-color");
-        @include element-states(0, thin dotted, $property: "outline");
-
-        border-bottom: $hamburger-menu-link-border;
-
-        &.active {
-          border-bottom: $hamburger-menu-link-border-active;
-          background-color: $hamburger-menu-link-background-active;
-          color: $hamburger-menu-link-color-active;
-        }
-
-        &.close {
-          @include element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
-        }
-      }
-    }
-
-    &__overlay.js-opened {
-      background: $hamburger-menu-overlay-color;
-    }
-  }
-
   &__drawer {
+    @include theme('background-color', 'color-secondary', 'hamburger-menu-background');
+    @include theme('color', 'color-light-primary', 'hamburger-menu-link-color');
+
     position: fixed;
     top: 0;
     left: -$hamburger-menu-width;
@@ -50,6 +24,22 @@
     }
 
     a {
+      // @include element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
+      // @include element-states($hamburger-menu-link-background, $hamburger-menu-link-background-hover, $property: "background-color");
+      // @include element-states(0, thin dotted, $property: "outline");
+
+      @include theme('border-bottom', 'border-primary', 'hamburger-menu-link-border');
+
+      &.active {
+        @include theme('border-bottom', 'color-secondary', 'hamburger-menu-link-border-bottom-active');
+        @include theme('background-color', 'color-light-primary', 'hamburger-menu-link-background-active');
+        @include theme('color', 'color-secondary', 'hamburger-menu-link-color-active');
+      }
+
+      // &.close {
+      // @include element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
+      // }
+
       display: block;
       padding-right: .8rem;
       padding-left: .8rem;
@@ -73,6 +63,8 @@
   }
 
   &__overlay.js-opened {
+    @include theme('background', 'color-secondary', 'hamburger-menu-overlay-color');
+
     position: fixed;
     top: 0;
     left: 0;

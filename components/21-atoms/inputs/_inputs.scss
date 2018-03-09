@@ -1,16 +1,14 @@
 %field-colors {
-  @include themify {
-    border: $field-border;
-    background: $field-background;
-    color: $field-color;
+  @include theme('border', 'color-secondary', 'field-border');
+  @include theme('background', 'color-light-primary', 'field-background');
+  @include theme('color', 'color-secondary', 'field-color');
 
-    &::-webkit-input-placeholder, // sass-lint:disable-line no-vendor-prefixes
-    &:-moz-placeholder, // sass-lint:disable-line no-vendor-prefixes
-    &::-moz-placeholder, // sass-lint:disable-line no-vendor-prefixes
-    &:-ms-input-placeholder, // sass-lint:disable-line no-vendor-prefixes
-    &::placeholder {
-      color: $field-placeholder;
-    }
+  &::-webkit-input-placeholder, // sass-lint:disable-line no-vendor-prefixes
+  &:-moz-placeholder, // sass-lint:disable-line no-vendor-prefixes
+  &::-moz-placeholder, // sass-lint:disable-line no-vendor-prefixes
+  &:-ms-input-placeholder, // sass-lint:disable-line no-vendor-prefixes
+  &::placeholder {
+    @include theme('color', 'color-secondary', 'field-placeholder');
   }
 
   appearance: none;

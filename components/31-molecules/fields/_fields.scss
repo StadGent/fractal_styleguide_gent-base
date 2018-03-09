@@ -31,9 +31,7 @@ select {
   }
 
   &.error {
-    @include themify {
-      border: 1px solid $field-error-border;
-    }
+    border: 1px solid color('red');
   }
 
   + .description {
@@ -96,10 +94,8 @@ label {
 }
 
 legend {
-  @include themify {
-    border-bottom: $fieldset-border;
-    color: $fieldset-color;
-  }
+  @include theme('border-bottom', 'color-primary', 'fieldset-border-bottom');
+  @include theme('color', 'color-primary', 'fieldset-color');
 
   width: 100%;
   margin-bottom: 1rem;

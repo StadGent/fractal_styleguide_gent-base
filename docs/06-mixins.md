@@ -228,32 +228,44 @@ Forked from <https://github.com/juanbrujo/triangle-mixin.less>
 
 # Themify mixins
 
-## themify($themes: $themes)
+## theme($property: null, $default: null, $exception: null)
 
 ### Description
 
 This mixin is used throughout components in the style guide to "themify" them.
-This means that when we use the themify mixin on a color, this color can be
+This means that when we use the theme mixin on a color, this color can be
 different based on the section the component is in.
 
-It uses a SASS map `$themes` to loop over the different sections defined in `_vars.scss`.
+It uses a SASS map `$themes` to loop over the different sections defined
+in `_vars.scss`. It uses a default state based on a few required colors and
+provides you with a way to override these values based on specific themes.
+
+This mixin makes use of a privately defined SASS function
+`set-themified-property` to determine if an exception to the default value
+has been given.
 
 ### Implementation
 
 ```scss
-@mixin themify($themes: $themes) {
-  @each $theme, $colors in $themes {
-    @include themify-map($colors);
+@function set-themified-property($colors, $default, $exception) {
+  @if map-has-key($colors, $exception) {
+    @return map-get($colors, $exception);
+  }
+  @else {
+    @return map-get($colors, $default);
+  }
+}
 
+@mixin theme($property: null, $default: null, $exception: null) {
+  @each $theme, $colors in $themes {
     // Apply the default section as default color scheme if there is no section
     // defined in the DOM.
     @if $theme == "default" {
-      @content;
+      #{$property}: set-themified-property($colors, $default, $exception);
     }
 
-    .section--#{$theme} &,
-    *[class*="section--"] .section--#{$theme} & {
-      @content;
+    .cs--#{$theme} & {
+      #{$property}: set-themified-property($colors, $default, $exception);
     }
   }
 }
@@ -262,7 +274,5 @@ It uses a SASS map `$themes` to loop over the different sections defined in `_va
 ### Usage
 
 ```scss
-@include themify(
-  color: $color-blue;
-);
+@include theme('color', 'color-primary', 'heading-1-color');
 ```

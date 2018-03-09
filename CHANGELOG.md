@@ -12,9 +12,26 @@ All notable changes to this style guide are documented here.
 
 * DTGB-147: Redefined the color palletes and color schemes.
 
+> Refactored the way themify works. This removed the use of variables
+> to determine the themified variant of a component.
+
+> **Sections have changed into color schemes**
 > Sections have been changed into color schemes with the `cs--` prefix.
 > Colors are now defined in a `$colors` SASS map and accessed through the
 > `color()` function. See the documentation of colors for more information.
+
+> **Themify changes**
+> Refactored the way themify works. This removed the use of variables
+> to determine the themified variant of a component.
+
+> **Color scheme nesting removed**
+> Color scheme nesting has also been removed because they won't be used
+> anymore in the new style guide.
+
+> **Color panals introduced**
+> Color panels have been added to allow easier default styling of new
+> components and to allow easier overriding of the properties of these
+> components.
 
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
 * DTGB-180: Added gulp task to perform accessibility checks.

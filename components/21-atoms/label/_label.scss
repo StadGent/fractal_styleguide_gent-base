@@ -1,9 +1,7 @@
 label {
-  @include themify {
-    color: $label-color;
+  @include theme('color', 'color-secondary', 'label-color');
 
-    .label-optional {
-      color: $label-optional-color;
-    }
+  .label-optional {
+    @include theme('color', 'color-secondary', 'label-color-optional');
   }
 }
