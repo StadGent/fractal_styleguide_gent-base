@@ -19,46 +19,67 @@
       border: $field-border--success;
       background: $field-background--success;
       color: $field-color--success;
-      font-weight: 700;
     }
 
     &.error {
       border: $field-border--error;
       background: $field-background--error;
       color: $field-color--error;
-      font-style: italic;
-      font-weight: normal;
     }
 
     &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
       color: $field-placeholder;
-      font-style: italic;
-      font-weight: normal;
     }
 
     &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
       color: $field-placeholder;
-      font-style: italic;
-      font-weight: normal;
     }
 
     &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
       color: $field-placeholder;
-      font-style: italic;
-      font-weight: normal;
     }
 
     &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
       color: $field-placeholder;
-      font-style: italic;
-      font-weight: normal;
     }
 
     &::placeholder {
       color: $field-placeholder;
-      font-style: italic;
-      font-weight: normal;
     }
+  }
+
+  &.success {
+    font-weight: 700;
+  }
+
+  &.error {
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &::placeholder {
+    font-style: italic;
+    font-weight: normal;
   }
 
   display: block;
@@ -69,17 +90,4 @@
   font-size: .75rem;
   font-weight: 700;
   appearance: none;
-}
-
-label {
-  display: block;
-  margin: 0 0 .5rem;
-  font-size: .8rem;
-
-  // .label-optional {
-  //   margin-left: .31rem;
-  //   font-size: .8rem;
-  //   font-weight: normal;
-  //   line-height: .8rem;
-  // }
 }
