@@ -12,6 +12,9 @@ All notable changes to this style guide are documented here.
 
 * DTGB-147: Redefined the color palletes and color schemes.
 
+> Refactored the way themify works. This removed the use of variables
+> to determine the themified variant of a component.
+
 > Sections have been changed into color schemes with the `cs--` prefix.
 > Colors are now defined in a `$colors` SASS map and accessed through the
 > `color()` function. See the documentation of colors for more information.
