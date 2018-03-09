@@ -2,6 +2,7 @@
   "title": "Styleguide",
   "status": "ready",
   "handle": "styleguide",
+  "default": "styleguide-default-cyan",
   "order": 1,
   "preview": "@preview",
   "context": {
@@ -125,5 +126,17 @@
       "&#xf60d;": "publictransport",
       "&#xf60e;": "directions"
     }
-  }
+  },
+  "variants": [
+    {
+      "name": "styleguide-default-cyan",
+      "handle": "styleguide"
+    },
+    {
+      "name": "styleguide-purple",
+      "context": {
+        "modifier": "cs--purple"
+      }
+    }
+  ]
 }

@@ -43,11 +43,9 @@ header.header {
       }
 
       // Change the look and feel of the link atom.
-      a {
-        @include themify {
-          @include element-states(none, underline, $property: 'text-decoration');
-        }
-      }
+      // a {
+      //     @include element-states(none, underline, $property: 'text-decoration');
+      // }
 
       //
       // Change the look and feel of the search molecule.

@@ -14,9 +14,7 @@
 
   h1,
   h2 {
-    @include themify {
-      color: $heading-2-color;
-    }
+    @include theme('color', 'color-primary', 'page-wide-image-heading-color');
 
     @include tablet {
       position: absolute;

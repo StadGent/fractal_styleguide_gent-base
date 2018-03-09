@@ -1,37 +1,25 @@
 a.cta-link {
-  @include themify {
-    @include element-states($cta-link-background, $cta-link-background-hover, $property: "background");
-    @include element-states($cta-link-border, $cta-link-border-hover, $property: "border");
+  // @include element-states($cta-link-background, $cta-link-background-hover, $property: "background");
+  // @include element-states($cta-link-border, $cta-link-border-hover, $property: "border");
 
+  .document {
+    @include theme('color', 'color-primary', 'cta-link-document-color');
+  }
+
+  &:focus,
+  &:hover {
     .title {
-      color: $cta-link-title-color;
+      @include theme('color', 'color-secondary', 'cta-link-title-color-hover');
     }
 
     .document {
-      color: $cta-link-document-color;
+      @include theme('color', 'color-secondary', 'cta-link-document-color-hover');
     }
 
     .icon {
-      border: $cta-link-icon-border;
-      background: $button-background;
-      color: $button-color;
-    }
-
-    &:focus,
-    &:hover {
-      .title {
-        color: $cta-link-title-color-hover;
-      }
-
-      .document {
-        color: $cta-link-document-color-hover;
-      }
-
-      .icon {
-        border: $button-border-hover;
-        background: $button-background-hover;
-        color: $button-color-hover;
-      }
+      @include theme('border', 'border-primary', 'cta-link-icon-border');
+      @include theme('background', 'color-primary', 'cta-link-icon-background-hover');
+      @include theme('color', 'color-light', 'cta-link-icon-color-hover');
     }
   }
 
@@ -49,6 +37,10 @@ a.cta-link {
   }
 
   .icon {
+    @include theme('border', 'border-primary', 'cta-link-icon-border');
+    @include theme('background', 'color-light', 'cta-link-background');
+    @include theme('color', 'color-primary', 'cta-link-color');
+
     position: absolute;
     top: 0;
     right: calc(-15% - 1px);
@@ -64,6 +56,8 @@ a.cta-link {
   }
 
   .title {
+    @include theme('color', 'color-primary', 'cta-link-title-color');
+
     margin-bottom: 0;
   }
 }

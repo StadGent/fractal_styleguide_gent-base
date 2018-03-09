@@ -1,8 +1,6 @@
 %island,
 .island {
-  @include themify {
-    border: $island-border;
-  }
+  @include theme('border', 'border-primary', 'island-border');
 
   margin: 1rem auto;
   padding: $gutter-width;

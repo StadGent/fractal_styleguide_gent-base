@@ -1,9 +1,7 @@
 .field-description {
 
-  @include themify {
-    background-color: $field-description-background;
-    color: $field-description-color;
-  }
+  @include theme('background-color', 'color-light', 'field-description-background');
+  @include theme('color', 'color-primary', 'field-description-color');
 
   position: relative;
   padding: .5rem .5rem .5rem 2.5rem;
@@ -20,4 +18,5 @@
     left: .75rem;
     font-size: 1.25rem;
   }
+  @include theme('color', 'color-primary', 'figcaption-color');
 }

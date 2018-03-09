@@ -37,11 +37,10 @@ a.btn,
 button,
 input[type='button'],
 input[type='submit'] {
-  @include themify {
-    @include element-states($button-color, $button-color-hover, $property: "color");
-    @include element-states($button-background, $button-background-hover, $property: "background");
-    @include element-states($button-border, $button-border-hover, $property: "border");
-  }
+  // @include element-states("color");
+  // @include element-states($button-background, $button-background-hover, $property: "background");
+  // @include element-states($button-border, $button-border-hover, $property: "border");
+
   @include btn-m;
   display: block;
   position: relative;
