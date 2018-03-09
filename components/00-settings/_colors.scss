@@ -119,12 +119,10 @@ $themes: (
   'purple': (
     // Required colors!
     'color-primary': color('purple'),
-    'color-secondary': color('dark-gray'),
+    'color-secondary': color('purple', 3),
     'color-light': color('white'),
     'color-dark': color('purple', 3),
     'border-primary': 1px solid color('purple'),
-
-    'heading-3-color': color('orange'),
   )
 ) !default;
 
