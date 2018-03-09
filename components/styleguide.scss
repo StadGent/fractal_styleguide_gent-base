@@ -17,16 +17,15 @@
 .color-wrapper {
   display: block;
   width: 100%;
-  margin: 0 10px 10px 0;
+  margin: 0 .625rem .625rem 0;
   float: left;
-  border: #e1e1e1 1px solid;
-  color: rgba(0, 0, 0, .5);
+  border: 1px solid color('dark-gray', -3);
   text-align: center;
 
   .color {
     height: 75px;
     padding: 1rem;
-    border-bottom: #e1e1e1 1px solid;
+    border-bottom: 1px solid color('dark-gray', -3);
   }
 
   .color-info {
