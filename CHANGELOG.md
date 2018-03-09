@@ -25,12 +25,12 @@ All notable changes to this style guide are documented here.
 > to determine the themified variant of a component.
 
 > **Color scheme nesting removed**
-> Color scheme nesting has also been removed because they won't be used 
+> Color scheme nesting has also been removed because they won't be used
 > anymore in the new style guide.
 
 > **Color panals introduced**
-> Color panels have been added to allow easier default styling of new 
-> components and to allow easier overriding of the properties of these 
+> Color panels have been added to allow easier default styling of new
+> components and to allow easier overriding of the properties of these
 > components.
 
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.

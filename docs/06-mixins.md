@@ -236,11 +236,11 @@ This mixin is used throughout components in the style guide to "themify" them.
 This means that when we use the theme mixin on a color, this color can be
 different based on the section the component is in.
 
-It uses a SASS map `$themes` to loop over the different sections defined 
-in `_vars.scss`. It uses a default state based on a few required colors and 
+It uses a SASS map `$themes` to loop over the different sections defined
+in `_vars.scss`. It uses a default state based on a few required colors and
 provides you with a way to override these values based on specific themes.
 
-This mixin makes use of a privately defined SASS function 
+This mixin makes use of a privately defined SASS function
 `set-themified-property` to determine if an exception to the default value
 has been given.
 
