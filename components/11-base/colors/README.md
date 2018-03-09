@@ -34,3 +34,22 @@ cyan and makes it 1 tint darker.
 This example calculates the color for `.my-selector` based on the base color
 red and makes it 3 tints lighter.
 
+## Defining colors based on themes
+
+We provide a themify system that allows you to "themify" your components. This
+means they will change colors based on predefined sub themes.
+
+To make a property themable use the mixin `theme()` in your component.
+
+### Example
+
+```scss
+.my-selector {
+  @include theme('color', 'color-primary', 'my-component-color');
+}
+```
+
+This example makes use of one of the predefined colors in the default `$themes`
+map. If you provide the key `my-component-color` which you defined yourself
+in your component SASS partial in one of the sub themes in the `$themes` map
+inside `_colors.scss` you can override it for that specific theme.
