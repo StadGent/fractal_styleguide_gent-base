@@ -107,19 +107,27 @@ $tints: (
 $themes: (
   'default': (
     // Required colors!
-    'color-primary': color('cyan'),
+    'color-primary': color('cyan-wcag'),
     'color-secondary': color('dark-gray'),
-    'color-accent': color('dark-gray'),
+    'color-accent': color('white'),
 
     'color-light-primary': color('cyan', -6),
     'color-light-secondary': color('cyan', -4),
+    'color-light-tertiary': color('cyan', -3),
     'color-light-accent': color('cyan', 1),
 
     'color-dark-primary': color('cyan', 3),
     'color-dark-secondary': color('cyan', -2),
+    'color-dark-tertiary': color('cyan-wcag', 2),
     'color-dark-accent': color('white'),
 
-    'border-primary': 1px solid color('cyan'),
+    'border-primary': color('cyan-wcag'),
+    'border-secondary': color('cyan-wcag', 2),
+    'border-tertiary': color('cyan-wcag', 3),
+
+    'box-shadow-primary': 0 2px 8px 0 color('cyan-wcag', -3),
+    'box-shadow-secondary': 0 2px 8px 0 color('cyan-wcag', -2),
+    'box-shadow-tertiary': none,
 
     // Optional colors come here. Exceptions to the required colors.
     // Check the component SASS partials for more information.

@@ -1,0 +1,31 @@
+{
+  "title": "Button primary",
+  "name": "Button primary",
+  "status": "ready",
+  "handle": "button-primary",
+  "default": "button-small",
+  "order": 1,
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+    {
+      "name": "button-small",
+      "context": {
+        "modifier": "button-small"
+      }
+    },
+    {
+      "name": "button-medium",
+      "context": {
+        "modifier": "button-medium"
+      }
+    },
+    {
+      "name": "button-large",
+      "context": {
+        "modifier": "button-large"
+      }
+    }
+  ]
+}

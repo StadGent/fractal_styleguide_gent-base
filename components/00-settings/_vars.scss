@@ -4,7 +4,7 @@ $uuid: unique-id();
 
 // Border radius.
 $radius-0: 0 !default;
-$radius-1: 8px !default;
+$radius-1: 4px !default;
 $radius-2: 10px !default;
 $radius-3: 18px !default;
 $radius-4: 30px !default;
@@ -28,7 +28,7 @@ $grid-columns: 12 !default;
 $gutter-width: 1rem !default;
 
 // Font settings.
-$default-font-family: 'Source Sans Pro', arial, sans-serif !default;
+$default-font-family: 'Fira Sans', sans-serif !default;
 $default-font-weight: 400 !default;
 $default-font-size: 16px !default; //px
 $default-line-height: 1.4em !default; //em

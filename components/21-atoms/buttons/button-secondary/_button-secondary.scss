@@ -1,0 +1,21 @@
+.button-secondary {
+  @include theme('background-color', 'color-accent', 'button-secondary-background');
+  @include theme('color', 'color-primary', 'button-secondary-color');
+  @include theme('box-shadow', 'box-shadow-tertiary', 'button-secondary-shadow');
+  @include theme('border-color', 'border-primary', 'button-secondary-border-color');
+
+  &:hover {
+    @include theme('background-color', 'color-light-secondary', 'button-secondary-hover-background');
+    @include theme('color', 'color-primary', 'button-secondary-hover-color');
+    @include theme('box-shadow', 'box-shadow-tertiary', 'button-secondary-hover-shadow');
+    @include theme('border-color', 'border-primary', 'button-secondary-border-color');
+  }
+
+  &:active,
+  &:focus {
+    @include theme('background-color', 'color-light-tertiary', 'button-secondary-hover-background');
+    @include theme('color', 'color-primary', 'button-secondary-hover-color');
+    @include theme('box-shadow', 'box-shadow-tertiary', 'button-secondary-hover-shadow');
+    @include theme('border-color', 'border-primary', 'button-secondary-border-color');
+  }
+}
