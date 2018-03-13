@@ -28,7 +28,7 @@ const npm = require('npm');
 const bump = require('gulp-bump');
 const inject = require('gulp-inject');
 const yargs = require('yargs');
-const axe = require('gulp-axe-webdriver');
+// const axe = require('gulp-axe-webdriver');
 
 
 var _sassLint = (failOnError) => {
