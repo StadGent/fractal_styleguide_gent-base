@@ -3,9 +3,7 @@ h1,
 %h1 {
   @include theme('color', 'color-primary', 'heading-1-color');
 
-  margin-bottom: 1.5rem;
-  font-family: $heading-1-font-family;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.1em;
+  margin-bottom: 3rem;
+  font-size: 2.625rem;
+  line-height: 3.5rem;
 }

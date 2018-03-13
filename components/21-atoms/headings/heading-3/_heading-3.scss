@@ -3,8 +3,7 @@ h3,
 %h3 {
   @include theme('color', 'color-secondary', 'heading-3-color');
 
-  margin-bottom: 1rem;
-  font-family: $heading-3-font-family;
-  font-size: 1.1rem;
-  line-height: 1.3em;
+  margin-bottom: 3rem;
+  font-size: 1.875rem;
+  line-height: 2.875rem;
 }
