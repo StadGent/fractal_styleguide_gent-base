@@ -1,0 +1,21 @@
+.button-dark {
+  @include theme('background-color', 'color-primary', 'button-dark-background');
+  @include theme('color', 'color-accent', 'button-dark-color');
+  @include theme('box-shadow', 'box-shadow-primary', 'button-dark-shadow');
+  @include theme('border-color', 'border-primary', 'button-dark-border-color');
+
+  &:hover {
+    @include theme('background-color', 'color-dark-tertiary', 'button-dark-hover-background');
+    @include theme('color', 'color-accent', 'button-dark-hover-color');
+    @include theme('box-shadow', 'box-shadow-secondary', 'button-dark-hover-shadow');
+    @include theme('border-color', 'border-secondary', 'button-dark-border-color');
+  }
+
+  &:active,
+  &:focus {
+    @include theme('background-color', 'color-dark-primary', 'button-dark-hover-background');
+    @include theme('color', 'color-accent', 'button-dark-hover-color');
+    @include theme('box-shadow', 'box-shadow-tertiary', 'button-dark-hover-shadow');
+    @include theme('border-color', 'border-tertiary', 'button-dark-border-color');
+  }
+}

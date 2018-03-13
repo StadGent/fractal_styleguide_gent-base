@@ -26,6 +26,12 @@
       "context": {
         "modifier": "button-large"
       }
+    },
+    {
+      "name": "button-disabled",
+      "context": {
+        "disabled": "button-disabled"
+      }
     }
   ]
 }

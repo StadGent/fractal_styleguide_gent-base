@@ -26,6 +26,23 @@
 }
 
 //
+// Button - disabled variant.
+//
+@mixin button-disabled {
+  border: 0;
+  background-color: color('white', 2);
+  color: color('white');
+  box-shadow: none;
+
+  &:hover {
+    background-color: color('white', 2);
+    color: color('white');
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+//
 // General button styling.
 //
 @mixin button() {
@@ -67,6 +84,10 @@ input[type="submit"] {
 
   &.button-large {
     @include button-large;
+  }
+
+  &:disabled {
+    @include button-disabled;
   }
 }
 

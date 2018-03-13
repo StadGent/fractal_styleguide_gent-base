@@ -1,0 +1,21 @@
+.button-alert {
+  border-color: color('red');
+  background-color: color('red');
+  color: color('white');
+  box-shadow: 0 2px 8px 0 color('red', -3);
+
+  &:hover {
+    border-color: color('red', 2);
+    background-color: color('red', 2);
+    color: color('white');
+    box-shadow: 0 2px 8px 0 color('red');
+  }
+
+  &:active,
+  &:focus {
+    border-color: color('red', 3);
+    background-color: color('red', 3);
+    color: color('white');
+    box-shadow: none;
+  }
+}

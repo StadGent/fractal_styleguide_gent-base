@@ -1,8 +1,8 @@
 {
-  "title": "Button primary",
-  "name": "Button primary",
+  "title": "Button success",
+  "name": "Button success",
   "status": "ready",
-  "handle": "button-primary",
+  "handle": "button-success",
   "default": "button-small",
   "order": 1,
   "context": {

@@ -1,0 +1,21 @@
+.button-success {
+  border-color: color('green');
+  background-color: color('green');
+  color: color('white');
+  box-shadow: 0 2px 8px 0 color('green', -3);
+
+  &:hover {
+    border-color: color('green', 2);
+    background-color: color('green', 2);
+    color: color('white');
+    box-shadow: 0 2px 8px 0 color('green');
+  }
+
+  &:active,
+  &:focus {
+    border-color: color('green', 3);
+    background-color: color('green', 3);
+    color: color('white');
+    box-shadow: none;
+  }
+}

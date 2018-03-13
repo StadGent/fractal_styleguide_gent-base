@@ -1,8 +1,8 @@
 {
-  "title": "Button primary",
-  "name": "Button primary",
+  "title": "Button alert",
+  "name": "Button alert",
   "status": "ready",
-  "handle": "button-primary",
+  "handle": "button-alert",
   "default": "button-small",
   "order": 1,
   "context": {
