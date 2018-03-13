@@ -1,17 +1,27 @@
 @import "breakpoint";
 
 //
+// Mobile breakpoint (see $bp-mobile defined in _vars.scss).
+// This asumes a min-width as defined by the variable.
+//
+@mixin mobile {
+  @include breakpoint($bp-mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @include breakpoint($bp-mobile $bp-tablet) {
+    @content;
+  }
+}
+
+//
 // Tablet breakpoint (see $bp-tablet defined in _vars.scss).
 // This asumes a min-width as defined by the variable.
 //
 @mixin tablet {
   @include breakpoint($bp-tablet) {
-    @content;
-  }
-}
-
-@mixin tablet-only {
-  @include breakpoint($bp-tablet $bp-desktop) {
     @content;
   }
 }
@@ -32,6 +42,26 @@
 //
 @mixin desktop {
   @include breakpoint($bp-desktop) {
+    @content;
+  }
+}
+
+//
+// Desktop-only breakpoint (see $bp-desktop defined in _vars.scss).
+// This asumes a min-width as defined by the $bp-desktop variable and a max-width as defined by the $bp-desktop-xl variable.
+//
+@mixin desktop-only {
+  @include breakpoint($bp-desktop $bp-desktop-xl) {
+    @content;
+  }
+}
+
+//
+// Desktop XL breakpoint (see $bp-desktop-xl defined in _vars.scss).
+// This asumes a min-width as defined by the variable.
+//
+@mixin desktop-xl {
+  @include breakpoint($bp-desktop-xl) {
     @content;
   }
 }
