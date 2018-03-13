@@ -13,6 +13,7 @@
   &:disabled {
     border: 1px solid color('dark-gray', -3);
     background: color('dark-gray', -6);
+    cursor: not-allowed;
   }
 
   &.success {
