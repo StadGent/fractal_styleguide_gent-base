@@ -1,8 +1,6 @@
 a {
-  @include themify {
-    @include element-states($link-color, $link-color-hover);
-    @include element-states(underline, none, $property: 'text-decoration');
-  }
+  // @include element-states($link-color, $link-color-hover);
+  // @include element-states(underline, none, $property: 'text-decoration');
 
   transition: color .11s ease-in-out;
   cursor: pointer;

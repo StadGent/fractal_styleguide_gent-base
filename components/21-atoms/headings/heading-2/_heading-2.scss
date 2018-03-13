@@ -1,9 +1,7 @@
 h2,
 .h2,
 %h2 {
-  @include themify {
-    color: $heading-2-color;
-  }
+  @include theme('color', 'color-secondary', 'heading-2-color');
 
   margin-bottom: 1rem;
   font-size: 1.2rem;

@@ -1,9 +1,7 @@
 h4,
 .h4,
 %h4 {
-  @include themify {
-    color: $heading-4-color;
-  }
+  @include theme('color', 'color-secondary', 'heading-4-color');
 
   margin-bottom: .75rem;
 }

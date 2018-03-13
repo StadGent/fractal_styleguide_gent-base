@@ -106,114 +106,39 @@ $tints: (
 //
 $themes: (
   'default': (
-    'section-background': color('white'),
-    'section-text-color': color('dark-gray'),
+    // Required colors!
+    'color-primary': color('cyan'),
+    'color-secondary': color('dark-gray'),
+    'color-accent': color('dark-gray'),
 
-    'selection-background': color('cyan-wcag'),
-    'selection-color': color('white'),
+    'color-light-primary': color('cyan', -6),
+    'color-light-secondary': color('cyan', -4),
+    'color-light-accent': color('cyan', 1),
 
-    'heading-1-color': color('cyan'),
-    'heading-2-color': color('dark-gray'),
-    'heading-3-color': color('dark-gray'),
-    'heading-4-color': color('dark-gray'),
-    'heading-5-color': color('dark-gray'),
-    'heading-6-color': color('dark-gray'),
+    'color-dark-primary': color('cyan', 3),
+    'color-dark-secondary': color('cyan', -2),
+    'color-dark-accent': color('white'),
 
-    'description-color': color('dark-gray'),
-    'figcaption-color': color('dark-gray'),
+    'border-primary': 1px solid color('cyan'),
 
-    'link-color': color('blue'),
-    'link-color-hover': color('blue', -4),
-    'link-text-decoration': underline,
-    'link-text-decoration-hover': none,
+    // Optional colors come here. Exceptions to the required colors.
+    // Check the component SASS partials for more information.
+  ),
+  'purple': (
+    // Required colors!
+    'color-primary': color('purple'),
+    'color-secondary': color('dark-gray'),
+    'color-accent': color('dark-gray'),
 
-    'cta-link-background': color('blue', 3),
-    'cta-link-background-hover': color('white'),
+    'color-light-primary': color('purple', -6),
+    'color-light-secondary': color('purple', -4),
+    'color-light-accent': color('purple', 1),
 
-    'cta-link-border': 1px solid color('dark-gray', 3),
-    'cta-link-border-hover': 1px solid color('dark-gray', 3),
+    'color-dark-primary': color('purple', 3),
+    'color-dark-secondary': color('purple', -2),
+    'color-dark-accent': color('white'),
 
-    'cta-link-title-color': color('blue', 3),
-    'cta-link-title-color-hover': color('blue', 3),
-
-    'cta-link-document-color': color('blue', 3),
-    'cta-link-document-color-hover': color('blue'),
-
-    'cta-link-icon-border': 1px solid color('dark-gray', 3),
-
-    'field-description-background': color('dark-gray', -6),
-    'field-description-color': color('dark-gray'),
-
-    'field-color': color('dark-gray', 1),
-    'field-color--success': color('dark-gray', 1),
-    'field-color--error': color('red'),
-    'field-background': color('cyan', -6),
-    'field-background--focus': color('cyan', -5),
-    'field-background--disabled': color('dark-gray', -6),
-    'field-background--success': color('green', -6),
-    'field-background--error': color('red', -6),
-    'field-border': 1px solid color('dark-gray', -1),
-    'field-border--focus': 1px solid color('cyan'),
-    'field-border--disabled': 1px solid color('dark-gray', -3),
-    'field-border--success': 1px solid color('green'),
-    'field-border--error': 1px solid color('red'),
-    'field-placeholder': color('dark-gray', -1),
-
-
-    'fieldset-border': 1px solid color('dark-gray', -1),
-    'fieldset-color': color('blue'),
-
-    'field-error-background': color('red', -2),
-    'field-error-color': color('dark-gray'),
-    'field-error-border': color('red'),
-
-    'label-color': color('dark-gray', -1),
-    // 'label-optional-color': color('dark-gray'),
-
-    'button-color': color('white'),
-    'button-color-hover': color('white'),
-
-    'button-background': color('blue'),
-    'button-background-hover': color('blue', -2),
-
-    'button-border': none,
-    'button-border-hover': none,
-
-    'tag-color': color('white'),
-    'tag-color-hover': color('white'),
-
-    'tag-background': color('dark-gray'),
-    'tag-background-hover': color('dark-gray'),
-
-    'form-steps-timeline-color': color('blue'),
-    'form-steps-prefix-color': color('white'),
-
-    'form-steps-inactive-step-label': color('dark-gray'),
-    'form-steps-inactive-prefix-background': color('dark-gray'),
-    'form-steps-inactive-prefix-color': color('white'),
-
-    'form-steps-previous-step-label': color('green'),
-    'form-steps-previous-step-background': color('green'),
-
-    'form-steps-active-step-label': color('blue'),
-    'form-steps-active-prefix-background': color('blue'),
-
-    'hamburger-menu-background': color('blue', -2),
-    'hamburger-menu-overlay-color': rgba(44, 63, 72, .6),
-
-    'hamburger-menu-link-border': 1.5px solid color('blue', -2),
-    'hamburger-menu-link-border-active': 1.5px solid color('blue', -2),
-    'hamburger-menu-link-border-hover': 1.5px solid color('blue', -2),
-
-    'hamburger-menu-link-background': transparent,
-    'hamburger-menu-link-background-active': color('blue', -2),
-    'hamburger-menu-link-background-hover': color('blue', -2),
-
-    'hamburger-menu-link-color': color('white'),
-    'hamburger-menu-link-color-active': color('white'),
-    'hamburger-menu-link-color-hover': color('white'),
-
-    'island-border': 1px solid color('blue', -2),
+    'border-primary': 1px solid color('purple'),
   )
 ) !default;
 

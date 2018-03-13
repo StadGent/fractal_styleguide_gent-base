@@ -1,83 +1,61 @@
 %field-base {
-  @include themify {
-    border: $field-border;
-    background: $field-background;
-    color: $field-color;
+  @include theme('border', 'color-accent', 'fields-border-color');
+  @include theme('background', 'color-light-primary', 'fields-background');
+  @include theme('color', 'color-light-accent', 'fields-color');
 
-    &:focus {
-      border: $field-border--focus;
-      outline: 0;
-      background: $field-background--focus;
-    }
+  &:focus {
+    @include theme('border', 'color-primary', 'fields-border-focus-color');
+    @include theme('background', 'color-light-primary', 'fields-focus-background');
+    border: 1px solid;
+    outline: 0;
+  }
 
-    &:disabled {
-      border: $field-border--disabled;
-      background: $field-background--disabled;
-    }
-
-    &.success {
-      border: $field-border--success;
-      background: $field-background--success;
-      color: $field-color--success;
-    }
-
-    &.error {
-      border: $field-border--error;
-      background: $field-background--error;
-      color: $field-color--error;
-    }
-
-    &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
-      color: $field-placeholder;
-    }
-
-    &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
-      color: $field-placeholder;
-    }
-
-    &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
-      color: $field-placeholder;
-    }
-
-    &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
-      color: $field-placeholder;
-    }
-
-    &::placeholder {
-      color: $field-placeholder;
-    }
+  &:disabled {
+    border: 1px solid color('dark-gray', -3);
+    background: color('dark-gray', -6);
   }
 
   &.success {
+    border: 1px solid color('green');
+    background: color('green', -6);
+    color: color('dark-gray', 1);
     font-weight: 700;
   }
 
   &.error {
+    border: 1px solid color('red');
+    background: color('red', -6);
+    color: color('red');
     font-style: italic;
     font-weight: normal;
   }
 
   &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
 
   &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
 
   &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
 
   &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
 
   &::placeholder {
+    @include theme('color', 'color-secondary', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
@@ -86,6 +64,7 @@
   width: 100%;
   height: 48px; // @TODO: Change to rems based on the base font-size.
   padding: 1rem;
+  border: 1px solid;
   border-radius: $radius-1;
   font-size: .75rem;
   font-weight: 700;

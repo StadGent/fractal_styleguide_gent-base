@@ -1,8 +1,6 @@
 .site-logo {
-  @include themify {
-    .site-name div p::after {
-      background: $section-background;
-    }
+  .site-name div p::after {
+    @include theme('background', 'color-secondary', 'section-background');
   }
 
   height: 2rem;

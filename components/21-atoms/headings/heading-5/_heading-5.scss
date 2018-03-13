@@ -1,9 +1,7 @@
 h5,
 .h5,
 %h5 {
-  @include themify {
-    color: $heading-5-color;
-  }
+  @include theme('color', 'color-secondary', 'heading-5-color');
 
   margin-bottom: .5rem;
 }

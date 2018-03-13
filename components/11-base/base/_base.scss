@@ -31,10 +31,8 @@ body {
 }
 
 ::selection {
-  @include themify {
-    background-color: $selection-background;
-    color: $selection-color;
-  }
+  @include theme('background-color', 'color-dark-primary', 'text-selection-background');
+  @include theme('color', 'color-dark-accent', 'text-selection-color');
 }
 
 th > * {

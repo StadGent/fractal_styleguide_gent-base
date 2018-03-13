@@ -1,9 +1,7 @@
 h3,
 .h3,
 %h3 {
-  @include themify {
-    color: $heading-3-color;
-  }
+  @include theme('color', 'color-secondary', 'heading-3-color');
 
   margin-bottom: 1rem;
   font-size: 1.1rem;
