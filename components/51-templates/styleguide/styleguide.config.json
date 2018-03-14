@@ -137,6 +137,12 @@
       "context": {
         "modifier": "cs--purple"
       }
+    },
+    {
+      "name": "styleguide-orange",
+      "context": {
+        "modifier": "cs--orange"
+      }
     }
   ]
 }
