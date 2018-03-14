@@ -75,7 +75,6 @@ $tints: (
     @warn "`#{inspect($tint)}` doesn't seem to be a valid tint value.";
   }
 
-  // @return mix(map-get($colors, $base-color), $color-white, map-get($tints, $tint));
   @return rgba(map-get($colors, $base-color), map-get($tints, $tint));
 };
 
