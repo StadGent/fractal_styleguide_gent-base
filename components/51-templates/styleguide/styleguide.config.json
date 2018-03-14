@@ -130,7 +130,10 @@
   "variants": [
     {
       "name": "styleguide-default-cyan",
-      "handle": "styleguide"
+      "handle": "styleguide",
+      "context": {
+        "modifier": "cs--default"
+      }
     },
     {
       "name": "styleguide-purple",

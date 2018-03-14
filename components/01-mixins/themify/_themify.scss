@@ -111,52 +111,51 @@ $themes: map-merge($themes, $overwrite-themes);
   @if map-has-key($colors, $exception) {
     @return map-get($colors, $exception);
   }
-  @else {
-    // Split the string based on two dashes --
-    $color-variant: str-split($default);
 
-    // Get the length of the color variant list.
-    $length: length($color-variant);
+  // Split the string based on two dashes --
+  $color-variant: str-split($default);
 
-    // Make sure the list exists of 2 parts.
-    @if $length > 1 {
-      // If a tint has been specified we should apply the correct effect.
-      @if nth($color-variant, 2) != '' {
-        // Get the tint variant list containing the tint type
-        // and the tint strength.
-        $tint-variant: str-split(nth($color-variant, 2), '-');
+  // Get the length of the color variant list.
+  $length: length($color-variant);
 
-        // Check if the tint variant is a valid list.
-        @if length($tint-variant) > 1 {
-          // Get the base-color from the color variant list.
-          $base-color: nth($color-variant, 1);
+  // Make sure the list exists of 2 parts.
+  @if $length > 1 {
+    // If a tint has been specified we should apply the correct effect.
+    @if nth($color-variant, 2) != '' {
+      // Get the tint variant list containing the tint type
+      // and the tint strength.
+      $tint-variant: str-split(nth($color-variant, 2), '-');
 
-          // If it's a light variant.
-          @if nth($tint-variant, 1) == 'lighten' {
-            // Get the negative tint strength.
-            $tint: number(-#{nth($tint-variant, 2)});
+      // Check if the tint variant is a valid list.
+      @if length($tint-variant) > 1 {
+        // Get the base-color from the color variant list.
+        $base-color: nth($color-variant, 1);
 
-            @return color($base-color, $tint, $colors);
-          }
+        // If it's a light variant.
+        @if nth($tint-variant, 1) == 'lighten' {
+          // Get the negative tint strength.
+          $tint: number(-#{nth($tint-variant, 2)});
 
-          // If it's a dark variant.
-          @if nth($tint-variant, 2) == 'darken' {
-            // Get the positive tint strength.
-            $tint: number(nth($tint-variant, 2));
+          @return color($base-color, $tint, $colors);
+        }
 
-            @return color($base-color, $tint, $colors);
-          }
+        // If it's a dark variant.
+        @if nth($tint-variant, 2) == 'darken' {
+          // Get the positive tint strength.
+          $tint: number(nth($tint-variant, 2));
+
+          @return color($base-color, $tint, $colors);
         }
       }
     }
-    @else {
-      // Check if the first item of the variant is not empty.
-      @if nth($color-variant, 1) != '' {
-        // Set the $base-color.
-        $base-color: nth($color-variant, 1);
+  }
+  @else {
+    // Check if the first item of the variant is not empty.
+    @if nth($color-variant, 1) != '' {
+      // Set the $base-color.
+      $base-color: nth($color-variant, 1);
 
-        @return color($base-color, 0, $colors);
-      }
+      @return color($base-color, 0, $colors);
     }
   }
 

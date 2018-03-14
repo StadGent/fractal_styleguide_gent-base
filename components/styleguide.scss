@@ -112,8 +112,8 @@ h2.styleguide-title {
   @include theme('color', 'color-primary', 'styleguide-title-color');
   @include theme('border-color', 'color-primary--lighten-3', 'styleguide-title-border-bottom');
 
-  border-bottom: 1px solid;
   padding: .25rem .5rem;
+  border-bottom: 1px solid;
 }
 
 //

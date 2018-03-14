@@ -28,7 +28,7 @@
       // @include element-states($hamburger-menu-link-background, $hamburger-menu-link-background-hover, $property: "background-color");
       // @include element-states(0, thin dotted, $property: "outline");
 
-      @include theme('border-bottom', 'border-primary', 'hamburger-menu-link-border');
+      @include theme('border-bottom', 'color-primary', 'hamburger-menu-link-border');
 
       &.active {
         @include theme('border-bottom', 'color-secondary', 'hamburger-menu-link-border-bottom-active');
