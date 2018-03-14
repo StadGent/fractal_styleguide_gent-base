@@ -258,27 +258,24 @@ gulp.task('js:watch', () => {
   return gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
 });
 
+// Todo where do we store images, what is their destination?
+// this does not seem correct
 /*
  *
  * Minify images.
  *
  */
-gulp.task('images:minify',
-  [
-    'fractal:build',
-    'styles:build',
-    'styles:dist'
-  ], (cb) => gulp.src([
-    'components/**/*.png',
-    'components/**/*.jpg',
-    'components/**/*.gif',
-    'components/**/*.jpeg',
-    'components/**/*.svg'
-  ])
-    .pipe(imagemin({
-      progressive: true,
-      use: [pngquant()]
-    })).pipe(gulp.dest('build/styleguide/sass'))
+gulp.task('images:minify', () => {
+    return gulp.src([
+      'components/**/*.png',
+      'components/**/*.jpg',
+      'components/**/*.gif',
+      'components/**/*.jpeg',
+      'components/**/*.svg'
+    ])
+      .pipe(imagemin([pngquant()], {verbose: true}))
+      .pipe(gulp.dest('build/styleguide/sass'));
+  }
 );
 
 /*
