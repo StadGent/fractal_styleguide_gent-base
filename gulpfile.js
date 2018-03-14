@@ -254,7 +254,7 @@ gulp.task('js:validate', () => {
  * Watch JS files For Changes.
  *
  */
-gulp.task('js:watch', (callback) => {
+gulp.task('js:watch', () => {
   return gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
 });
 
