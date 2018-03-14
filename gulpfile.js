@@ -200,7 +200,7 @@ gulp.task('styles:watch', () => {
  *
  */
 gulp.task('styles:extract', () => {
-  _sassFiles()
+  return _sassFiles()
     .pipe(gulp.dest('./build/styleguide/sass/'));
 });
 
