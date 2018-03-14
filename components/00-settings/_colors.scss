@@ -28,6 +28,8 @@ $tints: (
   -6: .02,
 ) !default;
 
+// Themify adds the color for box shadows, this just defines the box shadow
+// without a specific color so it can be reused.
 $box-shadow-primary: 0 2px 8px 0;
 
 //
@@ -48,7 +50,7 @@ $box-shadow-primary: 0 2px 8px 0;
       @return tint($base-color, $tint, $colors);
     }
   }
-  @else {
+  @if $tint == 0 {
     @if not map-has-key($colors, $base-color) {
       @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
     }
@@ -113,6 +115,9 @@ $themes: (
     'color-secondary': color('white'),
     'color-tertiary': color('dark-gray'),
     'color-box-shadow': $box-shadow-primary color('cyan-wcag', -4),
+
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
   ),
   'purple': (
     // Required colors!
@@ -120,6 +125,9 @@ $themes: (
     'color-secondary': color('white'),
     'color-tertiary': color('dark-gray'),
     'color-box-shadow': $box-shadow-primary color('purple', -4),
+
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
   ),
   'orange': (
     // Required colors!
@@ -127,6 +135,9 @@ $themes: (
     'color-secondary': color('white'),
     'color-tertiary': color('dark-gray'),
     'color-box-shadow': $box-shadow-primary color('orange', -4),
+
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
   )
 ) !default;
 
