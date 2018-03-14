@@ -31,8 +31,8 @@ body {
 }
 
 ::selection {
-  @include theme('background-color', 'color-dark-primary', 'text-selection-background');
-  @include theme('color', 'color-dark-accent', 'text-selection-color');
+  @include theme('background-color', 'color-primary--darken-1', 'text-selection-background');
+  @include theme('color', 'color-secondary', 'text-selection-color');
 }
 
 th > * {
