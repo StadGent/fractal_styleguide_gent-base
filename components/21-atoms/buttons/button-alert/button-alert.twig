@@ -1,12 +1,10 @@
 <button
   type="button"
-  class="button button-alert {{ modifier }} {% if icon %} button-icon {% endif %}"
+  class="button button-alert {{ modifier }} button-icon"
   {% if disabled %}
     disabled
   {% endif %}
 >
   {{ text }}
-  {% if icon %}
-    <i class="{{ icon }}"></i>
-  {% endif %}
+  <i class="{{ icon }}"></i>
 </button>
