@@ -29,8 +29,6 @@ const combiner = require('stream-combiner2');
 const cache = require('gulp-cached');
 // require our configurated fractal module
 const fractal = require('./fractal');
-// keep a reference to the fractal CLI console utility
-const logger = fractal.cli.console;
 
 /*
 * Get the sassFiles.
@@ -291,6 +289,7 @@ gulp.task('fractal:start', () => {
   const server = fractal.web.server({
     sync: true
   });
+  const logger = fractal.cli.console;
   server.on('error', err => logger.error(err.message));
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
@@ -308,14 +307,15 @@ gulp.task('fractal:start', () => {
  */
 gulp.task('fractal:build', () => {
   const builder = fractal.web.builder();
-  // builder.on('progress', (completed, total) => logger.update(`Exported
-  // ${completed} of ${total} items`, 'info'));
+  const logger = fractal.cli.console;
+  builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
   builder.on('error', err => logger.error(err.message));
   return builder.build().then(() => {
     logger.success('Fractal build completed!');
   }).catch(() => logger.error('Fractal server failed to start'));
 });
 
+// Todo move to imported file
 /*
  * Publish to the NPM public registry.
  */
@@ -420,7 +420,7 @@ gulp.task('bump', () => {
     .argv;
 
   // Change version number of package.json file.
-  gulp.src('./package.json')
+  return gulp.src('./package.json')
     .pipe(bump({
       type: argv.type
     }))
@@ -436,12 +436,13 @@ gulp.task('axe', function (done) {
   try {
     // gulp-axe-webdriver is an optional dependency
     // we need to catch a require failure
-    const axe = require('gulp-axe-webdriveer');
+    const axe = require('gulp-axe-webdriver');
     const options = {
       saveOutputIn: 'allHtml.json',
       browser: 'phantomjs',
       urls: ['build/components/preview/*.html'],
       showOnlyViolations: true,
+      verbose: true,
       a11yCheckOptions: {
         runOnly: {
           type: 'tag',
