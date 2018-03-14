@@ -17,9 +17,9 @@ a.cta-link {
     }
 
     .icon {
-      @include theme('border', 'border-primary', 'cta-link-icon-border');
+      @include theme('border', 'color-primary', 'cta-link-icon-border');
       @include theme('background', 'color-primary', 'cta-link-icon-background-hover');
-      @include theme('color', 'color-light-primary', 'cta-link-icon-color-hover');
+      @include theme('color', 'color-primary--lighten-1', 'cta-link-icon-color-hover');
     }
   }
 
@@ -37,8 +37,8 @@ a.cta-link {
   }
 
   .icon {
-    @include theme('border', 'border-primary', 'cta-link-icon-border');
-    @include theme('background', 'color-light-primary', 'cta-link-background');
+    @include theme('border', 'color-primary', 'cta-link-icon-border');
+    @include theme('background', 'color-primary--lighten-1', 'cta-link-background');
     @include theme('color', 'color-primary', 'cta-link-color');
 
     position: absolute;

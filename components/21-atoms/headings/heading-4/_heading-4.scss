@@ -1,7 +1,9 @@
 h4,
 .h4,
 %h4 {
-  @include theme('color', 'color-secondary', 'heading-4-color');
+  @include theme('color', 'color-tertiary', 'heading-4-color');
 
-  margin-bottom: .75rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  line-height: 2.375rem;
 }

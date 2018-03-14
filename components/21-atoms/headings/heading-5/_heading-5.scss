@@ -1,7 +1,9 @@
 h5,
 .h5,
 %h5 {
-  @include theme('color', 'color-secondary', 'heading-5-color');
+  @include theme('color', 'color-tertiary', 'heading-5-color');
 
-  margin-bottom: .5rem;
+  margin-bottom: 3rem;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
 }

@@ -141,12 +141,21 @@
   "variants": [
     {
       "name": "styleguide-default-cyan",
-      "handle": "styleguide"
+      "handle": "styleguide",
+      "context": {
+        "modifier": "cs--default"
+      }
     },
     {
       "name": "styleguide-purple",
       "context": {
         "modifier": "cs--purple"
+      }
+    },
+    {
+      "name": "styleguide-orange",
+      "context": {
+        "modifier": "cs--orange"
       }
     }
   ]
