@@ -63,8 +63,8 @@
     }
 
     &::before {
-      @include theme('border', 'border-primary', 'form-steps-prefix-border');
-      @include theme('background', 'color-light-primary', 'form-steps-prefix-background');
+      @include theme('border', 'color-primary', 'form-steps-prefix-border');
+      @include theme('background', 'color-primary--lighten-1', 'form-steps-prefix-background');
       @include theme('color', 'color-secondary', 'form-steps-prefix-color');
 
       display: block;
@@ -76,6 +76,7 @@
       width: 1.875rem;
       height: 1.875rem;
       margin: auto;
+      border: 1px solid;
       border-radius: 1.875rem;
       content: '';
 

@@ -20,13 +20,17 @@ $tints: (
   1: 10%,
   2: 25%,
   3: 50%,
-  -1: 75%,
-  -2: 50%,
-  -3: 25%,
-  -4: 10%,
-  -5: 6%,
-  -6: 2%,
+  -1: .75,
+  -2: .5,
+  -3: .25,
+  -4: .1,
+  -5: .06,
+  -6: .02,
 ) !default;
+
+// Themify adds the color for box shadows, this just defines the box shadow
+// without a specific color so it can be reused.
+$box-shadow-primary: 0 2px 8px 0;
 
 //
 // A function to get a color from the colors map.
@@ -37,16 +41,16 @@ $tints: (
 // @param $tint [map]
 //   The tint to be applied to the base color.
 //
-@function color($base-color, $tint: 0) {
+@function color($base-color, $tint: 0, $colors: $colors) {
   @if $tint != 0 {
     @if $tint > 0 {
-      @return shade($base-color, $tint);
+      @return shade($base-color, $tint, $colors);
     }
     @if $tint < 0 {
-      @return tint($base-color, $tint);
+      @return tint($base-color, $tint, $colors);
     }
   }
-  @else {
+  @if $tint == 0 {
     @if not map-has-key($colors, $base-color) {
       @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
     }
@@ -64,7 +68,7 @@ $tints: (
 // @param $tint [map]
 //   The tint value to modify the base color with.
 //
-@function tint($base-color, $tint) {
+@function tint($base-color, $tint, $colors: $colors) {
   $color-white: #fff;
 
   @if not map-has-key($colors, $base-color) {
@@ -75,7 +79,7 @@ $tints: (
     @warn "`#{inspect($tint)}` doesn't seem to be a valid tint value.";
   }
 
-  @return mix(map-get($colors, $base-color), $color-white, map-get($tints, $tint));
+  @return rgba(map-get($colors, $base-color), map-get($tints, $tint));
 };
 
 //
@@ -87,7 +91,7 @@ $tints: (
 // @param $tint [map]
 //   The value to shade the base color with.
 //
-@function shade($base-color, $tint) {
+@function shade($base-color, $tint, $colors: $colors) {
   $color-black: #000;
 
   @if not map-has-key($colors, $base-color) {
@@ -107,38 +111,33 @@ $tints: (
 $themes: (
   'default': (
     // Required colors!
-    'color-primary': color('cyan'),
-    'color-secondary': color('dark-gray'),
-    'color-accent': color('dark-gray'),
+    'color-primary': color('cyan-wcag'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
+    'color-box-shadow': $box-shadow-primary color('cyan-wcag', -4),
 
-    'color-light-primary': color('cyan', -6),
-    'color-light-secondary': color('cyan', -4),
-    'color-light-accent': color('cyan', 1),
-
-    'color-dark-primary': color('cyan', 3),
-    'color-dark-secondary': color('cyan', -2),
-    'color-dark-accent': color('white'),
-
-    'border-primary': 1px solid color('cyan'),
-
-    // Optional colors come here. Exceptions to the required colors.
-    // Check the component SASS partials for more information.
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
   ),
   'purple': (
     // Required colors!
     'color-primary': color('purple'),
-    'color-secondary': color('dark-gray'),
-    'color-accent': color('dark-gray'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
+    'color-box-shadow': $box-shadow-primary color('purple', -4),
 
-    'color-light-primary': color('purple', -6),
-    'color-light-secondary': color('purple', -4),
-    'color-light-accent': color('purple', 1),
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
+  ),
+  'orange': (
+    // Required colors!
+    'color-primary': color('orange'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
+    'color-box-shadow': $box-shadow-primary color('orange', -4),
 
-    'color-dark-primary': color('purple', 3),
-    'color-dark-secondary': color('purple', -2),
-    'color-dark-accent': color('white'),
-
-    'border-primary': 1px solid color('purple'),
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
   )
 ) !default;
 

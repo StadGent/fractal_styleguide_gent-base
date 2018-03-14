@@ -1,8 +1,9 @@
 %island,
 .island {
-  @include theme('border', 'border-primary', 'island-border');
+  @include theme('border', 'color-primary', 'island-border');
 
   margin: 1rem auto;
   padding: $gutter-width;
+  border: 1px solid;
   border-radius: $radius-3;
 }

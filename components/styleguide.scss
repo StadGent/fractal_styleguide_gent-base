@@ -108,9 +108,9 @@ h6.styleguide {
 }
 
 h2.styleguide-title {
-  @include theme('background', 'color-light-primary', 'styleguide-title-background');
-  @include theme('color', 'color-light-accent', 'styleguide-title-color');
-  @include theme('border-color', 'color-light-secondary', 'styleguide-title-border-bottom');
+  @include theme('background', 'color-primary--lighten-4', 'styleguide-title-background');
+  @include theme('color', 'color-primary', 'styleguide-title-color');
+  @include theme('border-color', 'color-primary--lighten-3', 'styleguide-title-border-bottom');
 
   padding: .25rem .5rem;
   border-bottom: 1px solid;

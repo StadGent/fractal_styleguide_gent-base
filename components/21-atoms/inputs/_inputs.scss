@@ -1,6 +1,6 @@
 %field-colors {
   @include theme('border', 'color-secondary', 'field-border');
-  @include theme('background', 'color-light-primary', 'field-background');
+  @include theme('background', 'color-primary--lighten-4', 'field-background');
   @include theme('color', 'color-secondary', 'field-color');
 
   &::-webkit-input-placeholder, // sass-lint:disable-line no-vendor-prefixes
