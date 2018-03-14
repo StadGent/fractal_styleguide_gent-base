@@ -1,4 +1,5 @@
 'use strict';
+
 /*
 * Node core modules.
 */
@@ -486,7 +487,7 @@ gulp.task('axe', function (done) {
     return Promise.all([input(), notInputNotPages(), pages()]);
   }
   catch (err) {
-    console.log('Error catched', err);
+    console.log('Error catched', err); // eslint-disable-line no-console
     done();
   }
 });
