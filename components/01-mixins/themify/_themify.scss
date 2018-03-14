@@ -58,34 +58,3 @@ $themes: map-merge($themes, $overwrite-themes);
   }
 }
 
-//
-// Theme mixin to generate all themes for components.
-// This generates the necessary theme CSS for all defined themes based on the
-// $themes map defined in _colors.scss
-//
-// @access public
-//
-// @param $property string
-//   The property to themify.
-//
-// @param $default string
-//   The default value for the themified property.
-//
-// @param $exception string
-//   The exception value for the themified property.
-//   This is the exception optionally used in subthemes.
-//
-@mixin theme($property: null, $default: null, $exception: null) {
-  @each $theme, $colors in $themes {
-    // Apply the default section as default color scheme if there is no section
-    // defined in the DOM.
-    @if $theme == "default" {
-      #{$property}: set-themified-property($colors, $default, $exception);
-    }
-
-    .cs--#{$theme} & {
-      #{$property}: set-themified-property($colors, $default, $exception);
-    }
-  }
-}
-
