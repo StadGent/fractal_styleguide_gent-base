@@ -153,11 +153,9 @@ gulp.task('styles:dist', () => {
  *  Sass
  *  Autoprefixer
  *  CSS nano
- * Dependent on:
- *  Styles:validate
  *
  */
-gulp.task('styles:build', ['styles:validate'], () => {
+gulp.task('styles:build', () => {
   return _sassFiles()
     .pipe(_sassCompile())
     .pipe(cssnano())
@@ -199,11 +197,9 @@ gulp.task('styles:watch', () => {
 /*
  *
  * Extract SCSS from the components folder.
- * Dependent on:
- *  Fractal:build
  *
  */
-gulp.task('styles:extract', ['fractal:build'], () => {
+gulp.task('styles:extract', () => {
   _sassFiles()
     .pipe(gulp.dest('./build/styleguide/sass/'));
 });
@@ -541,6 +537,8 @@ gulp.task('validate', [
  *  Used to compile production ready SCSS and JS code.
  *
  */
+// todo make sure fractal:build is executed first
+// or it overrides the build dir
 gulp.task('compile', [
   'fractal:build',
   'styles:build',
