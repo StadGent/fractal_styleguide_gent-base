@@ -2,13 +2,13 @@
   border-color: color('red');
   background-color: color('red');
   color: color('white');
-  box-shadow: 0 2px 8px 0 color('red', -3);
+  box-shadow: $box-shadow-primary color('red', -3);
 
   &:hover {
     border-color: color('red', 2);
     background-color: color('red', 2);
     color: color('white');
-    box-shadow: 0 2px 8px 0 color('red');
+    box-shadow:  $box-shadow-primary color('red', -3);
   }
 
   &:active,

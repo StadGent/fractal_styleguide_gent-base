@@ -36,7 +36,8 @@
     {
       "name": "button-disabled",
       "context": {
-        "disabled": "button-disabled"
+        "disabled": "button-disabled",
+        "icon":"icon-digipolis"
       }
     }
   ]
