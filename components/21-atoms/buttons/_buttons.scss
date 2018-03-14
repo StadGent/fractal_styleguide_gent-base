@@ -12,7 +12,7 @@
 //
 @mixin button-medium {
   height: 2.5rem;
-  padding: .8rem 2.25rem;
+  padding: .6rem 2.25rem .4rem;
   font-size: .875rem;
 }
 
@@ -52,14 +52,24 @@
   border-radius: $radius-1;
   outline: 0;
   font-family: $default-font-family;
+  font-weight: 600;
+  text-align: center;
 }
 
 //
-// Makes a button block instead of inline.
+// Makes a button display block instead of inline.
 //
 @mixin button-block {
   display: block;
   width: 100%;
+}
+
+//
+// Make a button display inline instead of block.
+//
+@mixin button-inlineblock {
+  display: inline-block;
+  width: auto;
 }
 
 .button,
@@ -89,9 +99,14 @@ input[type="submit"] {
   &:disabled {
     @include button-disabled;
   }
+
+  &.button-icon {
+    padding-left: .625rem;
+    padding-right: .625rem;
+    i {
+      margin-left: 2rem;
+    }
+  }
+
 }
 
-@mixin button-inlineblock {
-  display: inline-block;
-  width: auto;
-}

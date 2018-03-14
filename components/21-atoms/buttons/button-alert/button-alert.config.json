@@ -28,6 +28,12 @@
       }
     },
     {
+      "name": "button-with-icon",
+      "context": {
+        "icon":"icon-digipolis"
+      }
+    },
+    {
       "name": "button-disabled",
       "context": {
         "disabled": "button-disabled"
