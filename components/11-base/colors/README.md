@@ -41,15 +41,26 @@ means they will change colors based on predefined sub themes.
 
 To make a property themable use the mixin `theme()` in your component.
 
-### Example
+The `$themes` map exists out of multiple keys that define the themes for the
+style guide. Based on these maps you have to require some basic colors such 
+as `color-primary` and `color-secondary`. See the `$themes` map inside
+`_colors.scss` for more information.
+These form the basic of the theming system. Through a syntax convention you 
+can theme the colors of your components:
 
 ```scss
-.my-selector {
-  @include theme('color', 'color-primary', 'my-component-color');
-}
+  @include theme('background', 'color-primary--lighten-4', 'field-background');
 ```
 
-This example makes use of one of the predefined colors in the default `$themes`
-map. If you provide the key `my-component-color` which you defined yourself
-in your component SASS partial in one of the sub themes in the `$themes` map
-inside `_colors.scss` you can override it for that specific theme.
+gets transformed by the system to:
+
+```scss
+  background: #some-hex-value;
+```
+
+It does this by searching for the key `color-primary` in the `$themes` map.
+Everything just before the double dashes gets used as the key value.
+
+It then checks the part after the double dashes `--` and strips out `lighten` 
+or `darken` (everything before the dash `-`). Based on that result it applies
+the `color()` mixin with the correct parameters.
