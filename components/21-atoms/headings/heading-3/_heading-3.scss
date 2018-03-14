@@ -1,7 +1,7 @@
 h3,
 .h3,
 %h3 {
-  @include theme('color', 'color-primary--darken-2', 'heading-3-color');
+  @include theme('color', 'color-tertiary', 'heading-3-color');
 
   margin-bottom: 1rem;
   font-family: $heading-3-font-family;

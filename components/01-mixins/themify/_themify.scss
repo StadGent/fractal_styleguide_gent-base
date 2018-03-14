@@ -140,7 +140,7 @@ $themes: map-merge($themes, $overwrite-themes);
         }
 
         // If it's a dark variant.
-        @if nth($tint-variant, 2) == 'darken' {
+        @if nth($tint-variant, 1) == 'darken' {
           // Get the positive tint strength.
           $tint: number(nth($tint-variant, 2));
 
