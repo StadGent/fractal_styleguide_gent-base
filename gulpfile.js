@@ -209,29 +209,30 @@ gulp.task('styles:extract', () => {
  * Copy JS files during development.
  *
  */
-gulp.task('js:dist', ['styles:dist'], (callback) => {
-  gulp.src('components/**/*.js')
+gulp.task('js:dist', () => {
+  return gulp.src('components/**/*.js')
     .pipe(rename({
       dirname: '',
-      suffix: '-min'
     }))
     .pipe(gulp.dest('./public/styleguide/js/'));
-  callback();
 });
 
 /*
  *
  * Copy JS files during Fractal build.
+ * Inlcudes:
+ *  minify
  *
  */
-gulp.task('js:build', ['fractal:build'], (callback) => {
-  gulp.src('components/**/*.js')
-    .pipe(rename({dirname: ''}))
+gulp.task('js:build', () => {
+  return gulp.src('components/**/*.js')
+    .pipe(rename({
+      dirname: '',
+    }))
     .pipe(minify({
       noSource: true
     }))
     .pipe(gulp.dest('./build/styleguide/js/'));
-  callback();
 });
 
 /*
@@ -254,8 +255,7 @@ gulp.task('js:validate', () => {
  *
  */
 gulp.task('js:watch', (callback) => {
-  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
-  callback();
+  return gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
 });
 
 /*
