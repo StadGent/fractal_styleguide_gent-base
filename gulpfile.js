@@ -28,7 +28,7 @@ const npm = require('npm');
 const bump = require('gulp-bump');
 const inject = require('gulp-inject');
 const yargs = require('yargs');
-//const axe = require('gulp-axe-webdriver');
+const axe = require('gulp-axe-webdriver');
 
 
 var _sassLint = (failOnError) => {
@@ -559,7 +559,7 @@ gulp.task('axe', function (done) {
     })
   }
 
-  return Promise.all([notInputNotPages(), input(), pages()]);
+  return Promise.all([notInputNotPages(), input(), pages()]).catch(err=>resolve());
 })
 
 
