@@ -37,13 +37,13 @@ $tints: (
 // @param $tint [map]
 //   The tint to be applied to the base color.
 //
-@function color($base-color, $tint: 0) {
+@function color($base-color, $tint: 0, $colors: $colors) {
   @if $tint != 0 {
     @if $tint > 0 {
-      @return shade($base-color, $tint);
+      @return shade($base-color, $tint, $colors);
     }
     @if $tint < 0 {
-      @return tint($base-color, $tint);
+      @return tint($base-color, $tint, $colors);
     }
   }
   @else {
@@ -64,7 +64,7 @@ $tints: (
 // @param $tint [map]
 //   The tint value to modify the base color with.
 //
-@function tint($base-color, $tint) {
+@function tint($base-color, $tint, $colors: $colors) {
   $color-white: #fff;
 
   @if not map-has-key($colors, $base-color) {
@@ -87,7 +87,7 @@ $tints: (
 // @param $tint [map]
 //   The value to shade the base color with.
 //
-@function shade($base-color, $tint) {
+@function shade($base-color, $tint, $colors: $colors) {
   $color-black: #000;
 
   @if not map-has-key($colors, $base-color) {
@@ -107,38 +107,33 @@ $tints: (
 $themes: (
   'default': (
     // Required colors!
-    'color-primary': color('cyan'),
-    'color-secondary': color('dark-gray'),
-    'color-accent': color('dark-gray'),
+    'color-primary': color('cyan-wcag'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
 
-    'color-light-primary': color('cyan', -6),
-    'color-light-secondary': color('cyan', -4),
-    'color-light-accent': color('cyan', 1),
-
-    'color-dark-primary': color('cyan', 3),
-    'color-dark-secondary': color('cyan', -2),
-    'color-dark-accent': color('white'),
-
-    'border-primary': 1px solid color('cyan'),
-
-    // Optional colors come here. Exceptions to the required colors.
-    // Check the component SASS partials for more information.
+    'box-shadow-primary': 0 2px 8px 0 color('cyan-wcag', -3),
+    'box-shadow-secondary': 0 2px 8px 0 color('cyan-wcag', -2),
+    'box-shadow-tertiary': none,
   ),
   'purple': (
     // Required colors!
     'color-primary': color('purple'),
-    'color-secondary': color('dark-gray'),
-    'color-accent': color('dark-gray'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
 
-    'color-light-primary': color('purple', -6),
-    'color-light-secondary': color('purple', -4),
-    'color-light-accent': color('purple', 1),
+    'box-shadow-primary': 0 2px 8px 0 color('purple', -3),
+    'box-shadow-secondary': 0 2px 8px 0 color('purple', -2),
+    'box-shadow-tertiary': none,
+  ),
+  'orange': (
+    // Required colors!
+    'color-primary': color('orange'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
 
-    'color-dark-primary': color('purple', 3),
-    'color-dark-secondary': color('purple', -2),
-    'color-dark-accent': color('white'),
-
-    'border-primary': 1px solid color('purple'),
+    'box-shadow-primary': 0 2px 8px 0 color('purple', -3),
+    'box-shadow-secondary': 0 2px 8px 0 color('purple', -2),
+    'box-shadow-tertiary': none,
   )
 ) !default;
 

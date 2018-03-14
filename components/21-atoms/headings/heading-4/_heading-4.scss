@@ -1,7 +1,7 @@
 h4,
 .h4,
 %h4 {
-  @include theme('color', 'color-secondary', 'heading-4-color');
+  @include theme('color', 'color-primary--darken-2', 'heading-4-color');
 
   margin-bottom: .75rem;
   font-family: $heading-4-font-family;

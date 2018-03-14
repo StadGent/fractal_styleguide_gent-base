@@ -1,7 +1,7 @@
 h5,
 .h5,
 %h5 {
-  @include theme('color', 'color-secondary', 'heading-5-color');
+  @include theme('color', 'color-primary--darken-2', 'heading-5-color');
 
   margin-bottom: .5rem;
   font-family: $heading-5-font-family;
