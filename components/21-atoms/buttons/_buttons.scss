@@ -65,7 +65,7 @@
 }
 
 //
-// Make a button display inline-block instead of block.
+// Make a button display: inline-block.
 //
 @mixin button-inlineblock {
   display: inline-block;
