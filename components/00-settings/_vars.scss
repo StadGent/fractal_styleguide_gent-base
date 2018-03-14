@@ -14,8 +14,10 @@ $bp-tablet-fonts: 640px !default;
 $bp-desktop-fonts: 1360px !default;
 
 // Visual breakpoints.
-$bp-tablet: 640px !default;
+$bp-mobile: 320px !default;
+$bp-tablet: 768px !default;
 $bp-desktop: 960px !default;
+$bp-desktop-xl: 1680px !default;
 
 // Max content width.
 $bp-max-content: 1440px !default;
