@@ -102,12 +102,12 @@ h1.styleguide,
 h2.styleguide,
 h3.styleguide,
 h4.styleguide,
-h5.styleguide,
-h6.styleguide {
+h5.styleguide {
   margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-h2.styleguide-title {
+h4.styleguide-title {
   @include theme('background', 'color-primary--lighten-4', 'styleguide-title-background');
   @include theme('color', 'color-primary', 'styleguide-title-color');
   @include theme('border-color', 'color-primary--lighten-3', 'styleguide-title-border-bottom');
@@ -134,8 +134,7 @@ h2.styleguide-title {
     > h2,
     > h3,
     > h4,
-    > h5,
-    > h6 {
+    > h5 {
       margin-top: 0;
     }
   }
