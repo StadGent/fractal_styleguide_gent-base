@@ -150,9 +150,11 @@ gulp.task('styles:dist', () => {
  * Build settings for your styles.
  * Includes:
  *  Sass globbing
- *  SCSS linting
- *  CSS nano
+ *  Sass
  *  Autoprefixer
+ *  CSS nano
+ * Dependent on:
+ *  Styles:validate
  *
  */
 gulp.task('styles:build', ['styles:validate'], () => {
@@ -165,6 +167,9 @@ gulp.task('styles:build', ['styles:validate'], () => {
 /*
  *
  * Validate SCSS files.
+ * Includes:
+ *  Sass globbing
+ *  SassLint
  *
  */
 gulp.task('styles:validate', () => {
@@ -179,6 +184,9 @@ gulp.task('styles:validate', () => {
 /*
  *
  * Watch SCSS files For Changes.
+ * Includes:
+ *  Styles:validate
+ *  Styles:dist
  *
  */
 gulp.task('styles:watch', () => {
@@ -191,6 +199,8 @@ gulp.task('styles:watch', () => {
 /*
  *
  * Extract SCSS from the components folder.
+ * Dependent on:
+ *  Fractal:build
  *
  */
 gulp.task('styles:extract', ['fractal:build'], () => {
