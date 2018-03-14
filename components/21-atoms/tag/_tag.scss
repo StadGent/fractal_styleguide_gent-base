@@ -1,6 +1,6 @@
 .tag {
   @include theme('background', 'color-secondary', 'tag-background');
-  @include theme('color', 'color-light-primary', 'tag-color');
+  @include theme('color', 'color-primary--lighten-1', 'tag-color');
 
   // @at-root a#{&} {
   // @include element-states($tag-background, $tag-background-hover, $property: "background");
