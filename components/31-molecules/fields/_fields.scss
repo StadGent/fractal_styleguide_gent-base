@@ -26,9 +26,9 @@ select {
     outline: none;
   }
 
-  &.inline {
-    @include btn-inlineblock();
-  }
+  // &.inline {
+  //   @include btn-inlineblock();
+  // }
 
   &.error {
     border: 1px solid color('red');
