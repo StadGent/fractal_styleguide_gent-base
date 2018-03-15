@@ -183,13 +183,8 @@ $themes: map-merge($themes, $overwrite-themes);
   @each $theme, $colors in $themes {
     // Apply the default section as default color scheme if there is no section
     // defined in the DOM.
-    @if $theme == "default" {
+    .cs--#{$theme} & {
       #{$property}: set-themified-property($colors, $default, $exception);
-    }
-    @else {
-      .cs--#{$theme} & {
-        #{$property}: set-themified-property($colors, $default, $exception);
-      }
     }
   }
 }
