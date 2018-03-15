@@ -31,8 +31,8 @@ const yargs = require('yargs');
 const iconfont = require('gulp-iconfont');
 const iconfontCss =  require('gulp-iconfont-css');
 
-var fontName = 'gent-icons';
-var runTimestamp = Math.round(Date.now()/1000);
+const fontName = 'gent-icons';
+const runTimestamp = Math.round(Date.now()/1000);
 
 var _sassLint = (failOnError) => {
   var cmd = gulp.src('components/**/*.s+(a|c)ss')
@@ -635,7 +635,7 @@ gulp.task('compile:dev', [
  *  gulp iconfont
  *
  */
-gulp.task('iconfont', function(){
+gulp.task('iconfont', () => {
   return gulp.src(['./public/styleguide/img/iconfont/*.svg'])
     .pipe(iconfontCss({
       fontName: fontName,

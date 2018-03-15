@@ -27,7 +27,7 @@
 
 @function icon-char($filename) {
 	$char: "";
-	
+
 		@if $filename == arrow-down {
 			$char: "\E001";
 	}
