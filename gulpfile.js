@@ -583,7 +583,7 @@ gulp.task('axe', function (done) {
  * Used for local development to compile and validate after every change.
  *
  */
-gulp.task('default', ['fractal:start', 'styles:watch', 'js:watch']);
+gulp.task('default', ['iconfont', 'fractal:start', 'styles:watch', 'js:watch']);
 gulp.task('watch', ['default']);
 
 /*
@@ -612,6 +612,7 @@ gulp.task('validate', [
  *
  */
 gulp.task('compile', [
+  'iconfont',
   'fractal:build',
   'styles:build',
   'styles:dist',
@@ -621,6 +622,7 @@ gulp.task('compile', [
   'images:minify'
 ], callback => callback());
 gulp.task('compile:dev', [
+  'iconfont',
   'fractal:build',
   'styles:dist',
   'js:dist',
