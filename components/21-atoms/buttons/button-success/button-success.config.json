@@ -30,7 +30,7 @@
     {
       "name": "button-with-icon",
       "context": {
-        "icon":"icon-digipolis"
+        "icon":"icon-checkmark"
       }
     },
     {
