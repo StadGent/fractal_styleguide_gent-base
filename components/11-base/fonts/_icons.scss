@@ -1,0 +1,141 @@
+@font-face {
+	font-family: "gent-icons";
+	src: url('../styleguide/fonts/gent-icons.eot');
+	src: url('../styleguide/fonts/gent-icons.eot?#iefix') format('eot'),
+	url('../styleguide/fonts/gent-icons.woff2') format('woff2'),
+	url('../styleguide/fonts/gent-icons.woff') format('woff'),
+	url('../styleguide/fonts/gent-icons.ttf') format('truetype'),
+	url('../styleguide/fonts/gent-icons.svg#gent-icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "gent-icons";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+.icon,
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+	
+		@if $filename == arrow-down {
+			$char: "\E001";
+	}
+		@if $filename == arrow-left {
+			$char: "\E002";
+	}
+		@if $filename == arrow-right {
+			$char: "\E003";
+	}
+		@if $filename == arrow-up {
+			$char: "\E004";
+	}
+		@if $filename == calendar {
+			$char: "\E005";
+	}
+		@if $filename == caret-down {
+			$char: "\E006";
+	}
+		@if $filename == caret-left {
+			$char: "\E007";
+	}
+		@if $filename == caret-right {
+			$char: "\E008";
+	}
+		@if $filename == caret-up {
+			$char: "\E009";
+	}
+		@if $filename == checkmark {
+			$char: "\E00A";
+	}
+		@if $filename == cross {
+			$char: "\E00B";
+	}
+		@if $filename == exclamation {
+			$char: "\E00C";
+	}
+		@if $filename == favicon {
+			$char: "\E00D";
+	}
+		@if $filename == lock-closed {
+			$char: "\E00E";
+	}
+		@if $filename == logo {
+			$char: "\E00F";
+	}
+		@if $filename == marker {
+			$char: "\E010";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-arrow-down {
+		@include icon(arrow-down);
+	}
+.icon-arrow-left {
+		@include icon(arrow-left);
+	}
+.icon-arrow-right {
+		@include icon(arrow-right);
+	}
+.icon-arrow-up {
+		@include icon(arrow-up);
+	}
+.icon-calendar {
+		@include icon(calendar);
+	}
+.icon-caret-down {
+		@include icon(caret-down);
+	}
+.icon-caret-left {
+		@include icon(caret-left);
+	}
+.icon-caret-right {
+		@include icon(caret-right);
+	}
+.icon-caret-up {
+		@include icon(caret-up);
+	}
+.icon-checkmark {
+		@include icon(checkmark);
+	}
+.icon-cross {
+		@include icon(cross);
+	}
+.icon-exclamation {
+		@include icon(exclamation);
+	}
+.icon-favicon {
+		@include icon(favicon);
+	}
+.icon-lock-closed {
+		@include icon(lock-closed);
+	}
+.icon-logo {
+		@include icon(logo);
+	}
+.icon-marker {
+		@include icon(marker);
+	}

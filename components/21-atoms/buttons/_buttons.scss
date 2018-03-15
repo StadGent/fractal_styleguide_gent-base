@@ -67,7 +67,6 @@ input[type='submit'] {
   }
 
   &.icon::before {
-    @extend %icon-base-css;
     margin-right: .43rem;
   }
 

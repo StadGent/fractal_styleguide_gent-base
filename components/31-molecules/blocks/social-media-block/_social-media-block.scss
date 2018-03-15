@@ -27,38 +27,37 @@
     }
 
     &::before {
-      @extend %icon-base-css;
       padding-right: .5rem;
     }
   }
 
-  .facebook {
-    &::before {
-      @extend %icon-facebook;
-    }
-  }
+  // .facebook {
+  //   &::before {
+  //     @extend %icon-facebook;
+  //   }
+  // }
 
-  .twitter {
-    &::before {
-      @extend %icon-twitter;
-    }
-  }
+  // .twitter {
+  //   &::before {
+  //     @extend %icon-twitter;
+  //   }
+  // }
 
-  .linkedin {
-    &::before {
-      @extend %icon-linkedin;
-    }
-  }
+  // .linkedin {
+  //   &::before {
+  //     @extend %icon-linkedin;
+  //   }
+  // }
 
-  .youtube {
-    &::before {
-      @extend %icon-youtube;
-    }
-  }
+  // .youtube {
+  //   &::before {
+  //     @extend %icon-youtube;
+  //   }
+  // }
 
-  .instagram {
-    &::before {
-      @extend %icon-instagram;
-    }
-  }
+  // .instagram {
+  //   &::before {
+  //     @extend %icon-instagram;
+  //   }
+  // }
 }

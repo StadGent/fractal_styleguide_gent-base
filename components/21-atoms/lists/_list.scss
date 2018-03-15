@@ -12,9 +12,6 @@ ol {
       padding-left: .93rem;
 
       &::before {
-        @extend %icon-base-css;
-        @extend %icon-caret;
-
         position: absolute;
         top: .25rem;
         left: 0;

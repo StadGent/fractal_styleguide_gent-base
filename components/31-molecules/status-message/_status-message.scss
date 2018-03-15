@@ -9,8 +9,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 
   &::before {
-    @extend %icon-base-css;
-    @extend %icon-info-circle;
     display: block;
     margin-right: .5rem;
     margin-bottom: .5rem;
@@ -20,27 +18,27 @@
     border-left: 1rem solid color('green', -3);
     color: color('green', -3);
 
-    &::before {
-      @extend %icon-info-circle;
-    }
+    // &::before {
+    //   @extend %icon-info-circle;
+    // }
   }
 
   &.messages--error {
     border-left: 1rem solid color('red', -3);
     color: color('red', -3);
 
-    &::before {
-      @extend %icon-error;
-    }
+    // &::before {
+    //   @extend %icon-error;
+    // }
   }
 
   &.messages--warning {
     border-left: 1rem solid color('orange', -3);
     color: color('orange', -3);
 
-    &::before {
-      @extend %icon-alert;
-    }
+    // &::before {
+    //   @extend %icon-alert;
+    // }
   }
 
   a {

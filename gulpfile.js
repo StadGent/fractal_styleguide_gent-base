@@ -28,6 +28,11 @@ const npm = require('npm');
 const bump = require('gulp-bump');
 const inject = require('gulp-inject');
 const yargs = require('yargs');
+const iconfont = require('gulp-iconfont');
+const iconfontCss =  require('gulp-iconfont-css');
+
+var fontName = 'gent-icons';
+var runTimestamp = Math.round(Date.now()/1000);
 
 var _sassLint = (failOnError) => {
   var cmd = gulp.src('components/**/*.s+(a|c)ss')
@@ -622,6 +627,37 @@ gulp.task('compile:dev', [
   'images:minify'
 ]);
 
+/**
+ *
+ * Create an iconfont based on SVG files.
+ *
+ * Usage:
+ *  gulp iconfont
+ *
+ */
+gulp.task('iconfont', function(){
+  return gulp.src(['./public/styleguide/img/iconfont/*.svg'])
+    .pipe(iconfontCss({
+      fontName: fontName,
+			path: './components/11-base/fonts/_icons_template.template',
+			targetPath: '../../../components/11-base/fonts/_icons.scss',
+			fontPath: '../styleguide/fonts/'
+		}))
+		.pipe(iconfont({
+			fontName: fontName, // required
+			prependUnicode: true, // recommended option
+			normalize: true,
+			fontHeight: 1001,
+			formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'], // default, 'woff2' and 'svg' are available
+			timestamp: runTimestamp, // recommended to get consistent builds when watching files
+		}))
+		.on('glyphs', function(glyphs, options) {
+			// CSS templating, e.g.
+			console.log(glyphs, options);
+		})
+		.pipe(gulp.dest('./public/styleguide/fonts/'));
+});
+
 /*
  *
  * Build task:
@@ -632,8 +668,8 @@ gulp.task('compile:dev', [
  *
  */
 gulp.task('build', ['validate', 'compile'], () => {
-  return gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(gulp.dest('./build/styleguide/sass/'));
+	return gulp.src('components/**/*.s+(a|c)ss')
+		.pipe(gulp.dest('./build/styleguide/sass/'));
 });
 
 /*

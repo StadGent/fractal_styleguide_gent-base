@@ -10,9 +10,6 @@
   line-height: 1.1rem;
 
   &::before {
-    @extend %icon-base-css;
-    @extend %icon-info-circle;
-
     position: absolute;
     top: .5rem;
     left: .75rem;

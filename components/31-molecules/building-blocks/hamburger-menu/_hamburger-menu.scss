@@ -77,8 +77,6 @@
     @include btn-s;
 
     &::before {
-      @extend %icon-base-css;
-      @extend %icon-menu;
       position: relative;
       top: .1rem;
       margin-right: .5rem;

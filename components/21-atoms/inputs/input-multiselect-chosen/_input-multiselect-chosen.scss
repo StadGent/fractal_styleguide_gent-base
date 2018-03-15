@@ -55,8 +55,6 @@
 
 
     &::after {
-      @extend %icon-base-css;
-      @extend %icon-close;
       color: color('white');
       font-size: 1.25rem;
       line-height: 1.7rem;
