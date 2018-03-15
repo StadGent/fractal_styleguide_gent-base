@@ -4,14 +4,14 @@ const packageInfo = require('./package.json');
 const packageVersion = packageInfo.version;
 
 /*
-* Node core modules.
-*/
+ * Node core modules.
+ */
 const fs = require('fs');
 const path = require('path');
 
 /*
-* NPM based modules
-*/
+ * NPM based modules
+ */
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
@@ -29,10 +29,10 @@ const bump = require('gulp-bump');
 const inject = require('gulp-inject');
 const yargs = require('yargs');
 const iconfont = require('gulp-iconfont');
-const iconfontCss =  require('gulp-iconfont-css');
+const iconfontCss = require('gulp-iconfont-css');
 
 const fontName = 'gent-icons';
-const runTimestamp = Math.round(Date.now()/1000);
+const runTimestamp = Math.round(Date.now() / 1000);
 
 var _sassLint = (failOnError) => {
   var cmd = gulp.src('components/**/*.s+(a|c)ss')
@@ -50,11 +50,11 @@ var _sassLint = (failOnError) => {
 };
 
 /*
-* Require the Fractal module
-*/
+ * Require the Fractal module
+ */
 const fractal = require('@frctl/fractal').create();
 const logger = fractal.cli.console; // keep a reference to the fractal CLI
-                                    // console utility
+// console utility
 
 /**
  * Require additional fractal modules
@@ -62,21 +62,21 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI
 const twigAdapter = require('@frctl/twig');
 
 /*
-* Give your project a title.
-*/
+ * Give your project a title.
+ */
 fractal.set('project.title', 'City of Ghent Style Guide - Version ' + packageVersion);
 
 /*
-* Tell Fractal where to look for components.
-*/
+ * Tell Fractal where to look for components.
+ */
 fractal.components.set('path', path.join(__dirname, 'components'));
 fractal.components.set('default.preview', '@preview');
 fractal.components.engine(twigAdapter);
 fractal.components.set('ext', '.twig');
 
 /*
-* Set custom statuses.
-*/
+ * Set custom statuses.
+ */
 fractal.components.set('statuses', {
   deprecated: {
     label: 'deprecated',
@@ -101,13 +101,13 @@ fractal.components.set('statuses', {
 });
 
 /*
-* Tell Fractal where to look for documentation pages.
-*/
+ * Tell Fractal where to look for documentation pages.
+ */
 fractal.docs.set('path', path.join(__dirname, 'docs'));
 
 /*
-* Tell the Fractal web preview plugin where to look for static assets.
-*/
+ * Tell the Fractal web preview plugin where to look for static assets.
+ */
 fractal.web.set('static.path', path.join(__dirname, 'public'));
 fractal.web.set('static.mount', '');
 fractal.web.set('builder.dest', __dirname + '/build');
@@ -338,21 +338,21 @@ gulp.task('js:watch', (callback) => {
  *
  */
 gulp.task('images:minify', [
-    'fractal:build',
-    'styles:build',
-    'styles:dist'
-  ], (cb) =>
-    gulp.src([
-      'components/**/*.png',
-      'components/**/*.jpg',
-      'components/**/*.gif',
-      'components/**/*.jpeg',
-      'components/**/*.svg'
-    ])
-      .pipe(imagemin({
-        progressive: true,
-        use: [pngquant()]
-      })).pipe(gulp.dest('build/styleguide/sass'))
+  'fractal:build',
+  'styles:build',
+  'styles:dist'
+], (cb) =>
+  gulp.src([
+    'components/**/*.png',
+    'components/**/*.jpg',
+    'components/**/*.gif',
+    'components/**/*.jpeg',
+    'components/**/*.svg'
+  ])
+    .pipe(imagemin({
+      progressive: true,
+      use: [pngquant()]
+    })).pipe(gulp.dest('build/styleguide/sass'))
 );
 
 /*
@@ -639,23 +639,23 @@ gulp.task('iconfont', () => {
   return gulp.src(['./public/styleguide/img/iconfont/*.svg'])
     .pipe(iconfontCss({
       fontName: fontName,
-			path: './components/11-base/fonts/_icons_template.template',
-			targetPath: '../../../components/11-base/fonts/_icons.scss',
-			fontPath: '../styleguide/fonts/'
-		}))
-		.pipe(iconfont({
-			fontName: fontName, // required
-			prependUnicode: true, // recommended option
-			normalize: true,
-			fontHeight: 1001,
-			formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'], // default, 'woff2' and 'svg' are available
-			timestamp: runTimestamp, // recommended to get consistent builds when watching files
-		}))
-		.on('glyphs', function(glyphs, options) {
-			// CSS templating, e.g.
-			console.log(glyphs, options);
-		})
-		.pipe(gulp.dest('./public/styleguide/fonts/'));
+      path: './components/11-base/fonts/_icons_template.template',
+      targetPath: '../../../components/11-base/fonts/_icons.scss',
+      fontPath: '../styleguide/fonts/'
+    }))
+    .pipe(iconfont({
+      fontName: fontName, // required
+      prependUnicode: true, // recommended option
+      normalize: true,
+      fontHeight: 1001,
+      formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'], // default, 'woff2' and 'svg' are available
+      timestamp: runTimestamp // recommended to get consistent builds when watching files
+    }))
+    .on('glyphs', function (glyphs, options) {
+      // CSS templating, e.g.
+      console.log(glyphs, options);
+    })
+    .pipe(gulp.dest('./public/styleguide/fonts/'));
 });
 
 /*
@@ -668,8 +668,8 @@ gulp.task('iconfont', () => {
  *
  */
 gulp.task('build', ['validate', 'compile'], () => {
-	return gulp.src('components/**/*.s+(a|c)ss')
-		.pipe(gulp.dest('./build/styleguide/sass/'));
+  return gulp.src('components/**/*.s+(a|c)ss')
+    .pipe(gulp.dest('./build/styleguide/sass/'));
 });
 
 /*
