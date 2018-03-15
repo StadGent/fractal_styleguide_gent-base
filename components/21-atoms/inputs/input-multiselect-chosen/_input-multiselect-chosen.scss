@@ -39,10 +39,17 @@
 //   }
 // }
 
+<<<<<<< HEAD
 // .chosen-container-multi .chosen-choices li.search-choice {
 //   @extend %btn;
 //   @include btn-s;
 //   text-align: left;
+=======
+.chosen-container-multi .chosen-choices li.search-choice {
+  // @extend %btn;
+  // @include btn-s;
+  text-align: left;
+>>>>>>> 8.x-3.x-dev
 
 //   span {
 //     margin-left: -5px;
