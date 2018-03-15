@@ -1,11 +1,10 @@
 //
 // Button - small variant.
 //
-@mixin btn-l {
-  padding-top: .7rem;
-  padding-bottom: .7rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
+@mixin button-small {
+  height: 2.3rem;
+  padding: .6rem 1.625rem .4rem;
+  font-size: .75rem;
 }
 
 //
