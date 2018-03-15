@@ -4,10 +4,10 @@ $uuid: unique-id();
 
 // Border radius.
 $radius-0: 0 !default;
-$radius-1: 8px !default;
-$radius-2: 10px !default;
-$radius-3: 18px !default;
-$radius-4: 30px !default;
+$radius-1: .5rem !default;
+$radius-2: .625rem !default;
+$radius-3: 1.125rem !default;
+$radius-4: 1.875rem !default;
 
 // Breakpoints for fonts.
 $bp-tablet-fonts: 640px !default;
@@ -39,7 +39,7 @@ $primary-font-weight: $default-font-weight !default;
 $primary-font-size: $default-font-size !default; //px
 $primary-line-height: $default-line-height !default; //em
 
-$bg-outside-container: color('dark-gray', 1) !default;
+$bg-outside-container: color('white') !default;
 $border-outside-container: 1px solid color('dark-gray', 2) !default;
 $default-text-color: color('dark-gray') !default;
 

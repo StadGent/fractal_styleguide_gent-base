@@ -1,0 +1,12 @@
+<button
+  type="button"
+  class="button button-success {{ modifier }} {% if icon %} button-icon {% endif %}"
+  {% if disabled %}
+    disabled
+  {% endif %}
+>
+  {{ text }}
+  {% if icon %}
+    <i class="{{ icon }}"></i>
+  {% endif %}
+</button>

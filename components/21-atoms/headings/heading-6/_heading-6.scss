@@ -1,0 +1,8 @@
+h6,
+.h6,
+%h6 {
+  @include theme('color', 'color-secondary', 'heading-6-color');
+
+  margin-bottom: .5rem;
+  font-weight: 600;
+}

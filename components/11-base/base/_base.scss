@@ -31,9 +31,8 @@ body {
 }
 
 ::selection {
-  background-color: $default-text-color;
-  color: color('dark-gray');
-  text-shadow: none;
+  @include theme('background-color', 'color-primary--darken-1', 'text-selection-background');
+  @include theme('color', 'color-secondary', 'text-selection-color');
 }
 
 th > * {

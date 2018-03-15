@@ -20,5 +20,32 @@
         "label": "Option 4"
       }
     ]
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "handle": "input-multiselect"
+    },
+    {
+      "name": "success",
+      "hidden": "hidden",
+      "context": {
+        "modifier": "success"
+      }
+    },
+    {
+      "name": "error",
+      "hidden": "hidden",
+      "context": {
+        "modifier": "error"
+      }
+    },
+    {
+      "name": "disabled",
+      "hidden": "hidden",
+      "context": {
+        "disabled": 1
+      }
+    }
+  ]
 }

@@ -1,0 +1,21 @@
+.button-alert {
+  border-color: color('red');
+  background-color: color('red');
+  color: color('white');
+  box-shadow: $box-shadow-primary color('red', -3);
+
+  &:hover {
+    border-color: color('red', 2);
+    background-color: color('red', 2);
+    color: color('white');
+    box-shadow:  $box-shadow-primary color('red', -3);
+  }
+
+  &:active,
+  &:focus {
+    border-color: color('red', 3);
+    background-color: color('red', 3);
+    color: color('white');
+    box-shadow: none;
+  }
+}
