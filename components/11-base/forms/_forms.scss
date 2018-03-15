@@ -1,3 +1,82 @@
-.required-fields-indicator {
-  margin-bottom: 1.5rem;
+%field-base {
+  @include theme('border-color', 'color-tertiary--lighten-2', 'fields-border-color');
+  @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
+  @include theme('color', 'color-tertiary--darken-1', 'fields-color');
+
+  &:focus {
+    @include theme('border-color', 'color-primary', 'fields-border-focus-color');
+    @include theme('background', 'color-primary--lighten-5', 'fields-focus-background');
+
+    border: 1px solid color('red');
+    outline: 0;
+  }
+
+  &:disabled {
+    border: 1px solid color('dark-gray', -3);
+    background: color('dark-gray', -6);
+    cursor: not-allowed;
+  }
+
+  &.success {
+    border: 1px solid color('green');
+    background: color('green', -6);
+    color: color('dark-gray', 1);
+
+    &:focus {
+      border-color: color('green');
+      background: color('green', -6);
+    }
+  }
+
+  &.error {
+    border: 1px solid color('red');
+    background: color('red', -6);
+    color: color('red');
+    font-style: italic;
+
+    &:focus {
+      border-color: color('red');
+      background: color('red', -6);
+    }
+  }
+
+  &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &::placeholder {
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  display: block;
+  width: 100%;
+  height: 48px; // @TODO: Change to rems based on the base font-size.
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: $radius-1;
+  font-size: .75rem;
+  font-weight: normal;
+  appearance: none;
 }

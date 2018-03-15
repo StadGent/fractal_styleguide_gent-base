@@ -4,6 +4,10 @@
 options:
   formatter: stylish
   merge-default-rules: false
+files:
+  ignore:
+    - 'components/11-base/fonts/_icons_template.scss'
+    - 'components/11-base/fonts/_icons.scss'
 rules:
   # Extends
   extends-before-mixins: 2

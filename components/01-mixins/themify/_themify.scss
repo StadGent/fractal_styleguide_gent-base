@@ -186,9 +186,10 @@ $themes: map-merge($themes, $overwrite-themes);
     @if $theme == "default" {
       #{$property}: set-themified-property($colors, $default, $exception);
     }
-
-    .cs--#{$theme} & {
-      #{$property}: set-themified-property($colors, $default, $exception);
+    @else {
+      .cs--#{$theme} & {
+        #{$property}: set-themified-property($colors, $default, $exception);
+      }
     }
   }
 }

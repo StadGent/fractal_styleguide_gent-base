@@ -4,4 +4,8 @@ label {
   .label-optional {
     @include theme('color', 'color-secondary', 'label-color-optional');
   }
+
+  display: block;
+  margin: 0 0 .5rem;
+  font-size: .8rem;
 }

@@ -74,11 +74,9 @@
   }
 
   button.hamburger-menu__toggle {
-    @include btn-s;
+    // @include btn-s;
 
     &::before {
-      @extend %icon-base-css;
-      @extend %icon-menu;
       position: relative;
       top: .1rem;
       margin-right: .5rem;

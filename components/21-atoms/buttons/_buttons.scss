@@ -1,98 +1,101 @@
 //
-// Button size mixins.
+// Button - small variant.
 //
-@mixin btn-l {
-  padding-top: .7rem;
-  padding-bottom: .7rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-@mixin btn-m {
-  padding-top: .45rem;
-  padding-bottom: .45rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-@mixin btn-s {
-  padding-top: .2rem;
-  padding-bottom: .2rem;
-  font-size: .8rem;
-  line-height: 1.4rem;
+@mixin button-small {
+  height: 2.3rem;
+  padding: .6rem 1.625rem .4rem;
+  font-size: .75rem;
 }
 
 //
-// Button display
+// Button - medium variant.
 //
-@mixin btn-inlineblock {
-  display: inline-block;
-  width: auto;
+@mixin button-medium {
+  height: 2.5rem;
+  padding: .6rem 2.25rem .4rem;
+  font-size: .875rem;
+}
+
+//
+// Button - large variant.
+//
+@mixin button-large {
+  height: 3.125rem;
+  padding: .93rem 2.8rem;
+  font-size: 1rem;
+}
+
+//
+// Button - disabled variant.
+//
+@mixin button-disabled {
+  border: 0;
+  background-color: color('white', 2);
+  color: color('white');
+  box-shadow: none;
+
+  &:hover {
+    background-color: color('white', 2);
+    color: color('white');
+    box-shadow: none;
+    cursor: not-allowed;
+  }
 }
 
 //
 // General button styling.
 //
-%btn,
-.btn,
-a.btn,
-button,
-input[type='button'],
-input[type='submit'] {
-  // @include element-states("color");
-  // @include element-states($button-background, $button-background-hover, $property: "background");
-  // @include element-states($button-border, $button-border-hover, $property: "border");
+@mixin button() {
+  @include button-medium; // Default.
 
-  @include btn-m;
-  display: block;
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  transition: .11s ease-in-out;
-  transition-property: background, color, border;
   border: 0;
   border-radius: $radius-1;
-  outline: none;
-  font-family: $primary-font-family;
-  font-weight: $primary-font-weight + 300;
+  outline: 0;
+  font-family: $default-font-family;
+  font-weight: 600;
   text-align: center;
-  text-decoration: none;
-  white-space: normal;
+}
+
+//
+// Makes a button display block instead of inline.
+//
+@mixin button-block {
+  display: block;
+  width: 100%;
+}
+
+//
+// Make a button display: inline-block.
+//
+@mixin button-inlineblock {
+  display: inline-block;
+  width: auto;
+}
+
+.button,
+input[type="button"],
+input[type="submit"] {
+  @include button;
+
+  border: 2px solid;
   cursor: pointer;
-  overflow: hidden;
-  appearance: none;
 
-  &:hover {
-    text-decoration: none;
+  &.button-block {
+    @include button-block;
   }
 
-  &.icon::before {
-    @extend %icon-base-css;
-    margin-right: .43rem;
+  &.button-small {
+    @include button-small;
   }
 
-  &.icon-only {
-    text-indent: -9999px;
+  &.button-icon {
+    padding-right: .625rem;
+    padding-left: .625rem;
 
-    &::before {
-      width: 100%;
-      margin: 0;
-      float: left;
-      text-align: center;
-      text-indent: 0;
+    i {
+      margin-left: 2rem;
     }
   }
+
 }
 
-//
-// Inline button styling.
-//
-%btn--inline,
-.inline.btn,
-.btn--inline,
-a.btn--inline,
-button.btn--inline,
-input[type='button'].btn--inline,
-input[type='submit'].btn--inline {
-  @include btn-inlineblock
-}

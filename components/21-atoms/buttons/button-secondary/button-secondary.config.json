@@ -1,0 +1,43 @@
+{
+  "title": "Button secondary",
+  "name": "Button secondary",
+  "status": "ready",
+  "handle": "button-secondary",
+  "default": "button-small",
+  "order": 1,
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+    {
+      "name": "button-small",
+      "context": {
+        "modifier": "button-small"
+      }
+    },
+    {
+      "name": "button-medium",
+      "context": {
+        "modifier": "button-medium"
+      }
+    },
+    {
+      "name": "button-large",
+      "context": {
+        "modifier": "button-large"
+      }
+    },
+    {
+      "name": "button-with-icon",
+      "context": {
+        "icon":"icon-marker"
+      }
+    },
+    {
+      "name": "button-disabled",
+      "context": {
+        "disabled": "button-disabled"
+      }
+    }
+  ]
+}

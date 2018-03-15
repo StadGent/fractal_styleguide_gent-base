@@ -28,8 +28,6 @@
       }
 
       &::after {
-        @extend %icon-base-css;
-        @extend %icon-caret;
         position: absolute;
         margin: .4rem .1rem;
         font-size: .8rem;

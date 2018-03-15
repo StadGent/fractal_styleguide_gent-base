@@ -1,6 +1,9 @@
-<input type="text"
+<input type="date"
        name="{{ date_name }}"
        id="{{ date_id }}"
-       class="datepicker {% if modifier %}{{ modifier }}{% endif %}"
+       class="{% if modifier %}{{ modifier }}{% endif %}"
        placeholder="dd/mm/yyyy"
+      {% if disabled %}
+        disabled="disabled"
+      {% endif %}
 />

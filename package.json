@@ -12,6 +12,8 @@
     "gulp-contrib-copy": "^0.1.3",
     "gulp-cssnano": "^2.1.2",
     "gulp-eslint": "^4.0.0",
+    "gulp-iconfont": "^9.1.0",
+    "gulp-iconfont-css": "^2.1.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-inject": "^4.3.0",
     "gulp-minify": "^1.0.0",

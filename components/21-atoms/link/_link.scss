@@ -29,6 +29,11 @@ a {
   &.read-more-link {
     text-decoration: none;
 
-    // @TODO: Add arrow.
+  &.external-link {
+    &::before {
+      display: inline-block;
+      margin-right: .25rem;
+      text-decoration: none;
+    }
   }
 }
