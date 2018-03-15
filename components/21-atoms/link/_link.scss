@@ -6,13 +6,14 @@ a {
   text-decoration: underline;
   cursor: pointer;
 
-  //
-  // @TODO: Add hover state (waiting for design specifications.)
-  //
-
   &:focus {
     outline: thin dotted;
   }
+
+  //
+  // @TODO: Add hover state (waiting for design specifications.)
+  //
+  // &:hover {}
 
   // @TODO: Add external-link variant (waiting for design specifications.)
   // &.external-link {
@@ -27,13 +28,15 @@ a {
   // }
 
   &.read-more-link {
+    @include icon('arrow-right', 'after');
+
+    line-height: 1rem;
     text-decoration: none;
 
-  &.external-link {
-    &::before {
-      display: inline-block;
-      margin-right: .25rem;
-      text-decoration: none;
+    &::after {
+      position: relative;
+      top: .15rem;
+      margin-left: .5rem;
     }
   }
 }
