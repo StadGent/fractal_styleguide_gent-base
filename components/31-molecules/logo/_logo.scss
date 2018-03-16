@@ -1,47 +1,12 @@
 .site-logo {
-  .site-name div p::after {
-    @include theme('background', 'color-secondary', 'section-background');
-  }
+  @include icon('logo');
 
-  height: 2rem;
-  overflow: hidden;
+  font-size: 5rem;
+  line-height: 5rem;
+  text-decoration: none;
 
-  > a {
-    float: left;
-  }
-
-  img {
-    width: 5rem;
-    height: 2rem;
-    border-radius: 0;
-  }
-
-  .site-name {
-    display: table;
-    height: 100%;
-
-    div {
-      display: table-cell;
-      vertical-align: middle;
-
-      p {
-        position: relative;
-        margin: 0 0 0 .5rem;
-        font-size: .8rem;
-        font-weight: bold;
-        line-height: 1rem;
-
-        &::after {
-          position: absolute;
-          top: 1rem;
-          right: 0;
-          width: 33%;
-          height: calc(100% - 2rem);
-          padding-left: .3rem;
-          content: '...';
-          overflow: hidden;
-        }
-      }
-    }
+  &::before {
+    @include theme('background-color', 'color-primary', 'logo-background');
+    @include theme('color', 'color-secondary', 'logo-color');
   }
 }
