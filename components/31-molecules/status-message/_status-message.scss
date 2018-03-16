@@ -1,44 +1,50 @@
 .messages {
+  @include theme('color', 'color-tertiary--lighten-1', 'status-messages-color');
+
+  $status-message-icon-size: 2.625rem;
+  $status-message-icon-margin: 1.625rem;
+
   max-width: 40rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
-  border: 1px solid color('blue', 1);
-  border-radius: $radius-2;
-  background-color: color('white');
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  padding: .68rem 1.43rem;
+  font-size: .875rem;
+  overflow: hidden;
+
+  p {
+    width: calc(100% - #{$status-message-icon-size + $status-message-icon-margin});
+    float: left;
+  }
 
   &::before {
     display: block;
-    margin-right: .5rem;
-    margin-bottom: .5rem;
+    margin-right: 2.18remrem;
   }
 
   &.messages--status {
-    border-left: 1rem solid color('green', -3);
-    color: color('green', -3);
+    @include icon('checkmark');
 
-    // &::before {
-    //   @extend %icon-info-circle;
-    // }
+    background-color: color('green', -3);
+
+    &::before {
+      width: $status-message-icon-size;
+      height: $status-message-icon-size;
+      margin-right: $status-message-icon-margin;
+      float: left;
+      border-radius: 100%;
+      background-color: color('white');
+      color: color('green');
+      line-height: $status-message-icon-size;
+      text-align: center;
+    }
   }
 
   &.messages--error {
-    border-left: 1rem solid color('red', -3);
-    color: color('red', -3);
-
-    // &::before {
-    //   @extend %icon-error;
-    // }
+    background-color: color('red', -3);
   }
 
   &.messages--warning {
-    border-left: 1rem solid color('orange', -3);
-    color: color('orange', -3);
-
-    // &::before {
-    //   @extend %icon-alert;
-    // }
+    background-color: color('orange', -3);
   }
 
   a {
