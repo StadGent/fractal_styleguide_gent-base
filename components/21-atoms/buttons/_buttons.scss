@@ -80,12 +80,24 @@ input[type="submit"] {
   border: 2px solid;
   cursor: pointer;
 
+  &:disabled {
+    @include button-disabled;
+  }
+
   &.button-block {
     @include button-block;
   }
 
   &.button-small {
     @include button-small;
+  }
+
+  &.button-medium {
+    @include button-medium;
+  }
+
+  &.button-large {
+    @include button-large;
   }
 
   &.button-icon {
