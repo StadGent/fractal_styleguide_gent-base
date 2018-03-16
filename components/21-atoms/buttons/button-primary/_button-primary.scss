@@ -1,3 +1,4 @@
+%button-primary,
 .button-primary {
   @include theme('background-color', 'color-primary', 'button-primary-background');
   @include theme('color', 'color-secondary', 'button-primary-color');

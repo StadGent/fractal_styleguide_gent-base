@@ -3,7 +3,7 @@ $field-icon-padding: 2.5rem;
 
 %field-base {
   @include theme('border-color', 'color-tertiary--lighten-2', 'fields-border-color');
-  // @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
+  @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
   @include theme('color', 'color-tertiary--darken-1', 'fields-color');
 
   &:focus {
