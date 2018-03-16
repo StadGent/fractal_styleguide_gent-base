@@ -16,17 +16,17 @@ $field-icon-padding: 2.5rem;
 
   &:disabled {
     $fill-color: color('dark-gray');
-    $svg-lock: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"> <defs> <path fill="#{$fill-color}" id="a" d="M9 8h6V6a3 3 0 0 0-6 0v2zm8 0a4 4 0 0 1 4 4v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-7a4 4 0 0 1 4-4V6a5 5 0 1 1 10 0v2zM7 10a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H7zm5 3a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0v-3a1 1 0 0 1 1-1z"/> </defs> <g fill="none" fill-rule="evenodd"> <mask id="b" fill="#fff"> <use xlink:href="#a"/> </mask> <g fill="#23333A" fill-opacity="1" mask="url(#b)"> <path fill="#{$fill-color}" d="M0 0h24v24H0z"/> </g> </g> </svg>';
+    $svg-lock-closed: svg-icon('lock-closed', $fill-color);
 
     padding-right: $field-icon-padding;
     border: 0;
-    background: color('dark-gray', -5) svg-url($svg-lock) $field-icon-position;
+    background: color('dark-gray', -5) svg-url($svg-lock-closed) $field-icon-position;
     cursor: not-allowed;
   }
 
   &.success {
     $fill-color: color('green');
-    $svg-success: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"> <defs> <path fill="#{$fill-color}" id="a" d="M19.462 6.157c.5-.535 1.309-.535 1.808 0 .5.536.5 1.404 0 1.94l-9.698 11.465-6.33-6.787c-.5-.535-.5-1.404 0-1.939.499-.535 1.309-.535 1.808 0l4.522 4.848 7.89-9.527z"/> </defs> <g fill="none" fill-rule="evenodd"> <mask id="b" fill="#fff"> <use xlink:href="#a"/> </mask> <use fill="#0340C7" fill-rule="nonzero" xlink:href="#a"/> <g fill="#23333A" mask="url(#b)"> <path fill="#{$fill-color}" d="M0 0h24v24H0z"/> </g> </g> </svg>';
+    $svg-success: svg-icon('checkmark', $fill-color);
 
     padding-right: $field-icon-padding;
     border: 1px solid color('green');
@@ -41,7 +41,7 @@ $field-icon-padding: 2.5rem;
 
   &.error {
     $fill-color: color('red');
-    $svg-error: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"> <defs> <path fill="#{$fill-color}" id="a" d="M10 4a1 1 0 0 1 1 1v5a1 1 0 0 1-2 0V5a1 1 0 0 1 1-1zm0 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/> </defs> <g fill="none" fill-rule="evenodd" transform="translate(2 2)"> <mask id="b" fill="#fff"> <use xlink:href="#a"/> </mask> <use fill="#2C3F48" xlink:href="#a"/> <g fill="#23333A" mask="url(#b)"> <path fill="#{$fill-color}" d="M-2-2h24v24H-2z"/> </g> </g> </svg>';
+    $svg-error: svg-icon('cross', $fill-color);
 
     padding-right: $field-icon-padding;
     border: 1px solid color('red');
