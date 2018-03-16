@@ -33,6 +33,7 @@ All notable changes to this style guide are documented here.
 > components and to allow easier overriding of the properties of these
 > components.
 
+* DTGB-174: Changed styling of status messages.
 * DTGB-214: Added new styling to buttons.
 * DTGB-258: Added gulp task to generate iconfont.
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
