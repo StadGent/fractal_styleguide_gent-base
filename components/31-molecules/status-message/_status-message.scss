@@ -60,7 +60,7 @@
   &.messages--warning {
     @include icon('exclamation');
 
-    background-color: color('orange', -3);
+    background-color: color('blue', -3);
 
     &::before {
       color: color('cyan');
