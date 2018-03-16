@@ -1,42 +1,57 @@
+$field-icon-position: no-repeat right .75rem center;
+$field-icon-padding: 2.5rem;
+
 %field-base {
   @include theme('border-color', 'color-tertiary--lighten-2', 'fields-border-color');
   @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
   @include theme('color', 'color-tertiary--darken-1', 'fields-color');
 
   &:focus {
-    @include theme('border-color', 'color-primary', 'fields-border-focus-color');
+    @include theme('border-color', 'color-primary--lighten-1', 'fields-border-focus-color');
     @include theme('background', 'color-primary--lighten-5', 'fields-focus-background');
 
-    border: 1px solid color('red');
+    border: 1px solid;
     outline: 0;
   }
 
   &:disabled {
-    border: 1px solid color('dark-gray', -3);
-    background: color('dark-gray', -6);
+    $fill-color: color('dark-gray');
+    $svg-lock-closed: svg-icon('lock-closed', $fill-color);
+
+    padding-right: $field-icon-padding;
+    border: 0;
+    background: color('dark-gray', -5) svg-url($svg-lock-closed) $field-icon-position;
     cursor: not-allowed;
   }
 
   &.success {
+    $fill-color: color('green');
+    $svg-success: svg-icon('checkmark', $fill-color);
+
+    padding-right: $field-icon-padding;
     border: 1px solid color('green');
-    background: color('green', -6);
+    background: color('green', -6) svg-url($svg-success) $field-icon-position;
     color: color('dark-gray', 1);
 
     &:focus {
       border-color: color('green');
-      background: color('green', -6);
+      background: color('green', -6) svg-url($svg-success) $field-icon-position;
     }
   }
 
   &.error {
+    $fill-color: color('red');
+    $svg-error: svg-icon('cross', $fill-color);
+
+    padding-right: $field-icon-padding;
     border: 1px solid color('red');
-    background: color('red', -6);
+    background: color('red', -6) svg-url($svg-error) $field-icon-position;
     color: color('red');
     font-style: italic;
 
     &:focus {
       border-color: color('red');
-      background: color('red', -6);
+      background: color('red', -6) svg-url($svg-error) $field-icon-position;
     }
   }
 

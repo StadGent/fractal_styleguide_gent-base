@@ -1,0 +1,24 @@
+//
+// Return a colored svg icon.
+//
+// @access public
+//
+// @param $icon string
+//   The icon to return.
+//
+// @param $fill-color color
+//   The color in which to return the svg icon.
+//
+@function svg-icon($icon, $fill-color) {
+  @if $icon == 'lock-closed' {
+    @return '<?xml version="1.0" encoding="UTF-8"?> <svg width="18px" height="22px" viewBox="0 0 18 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch --> <title>lock-closed</title> <desc>Created with Sketch.</desc> <defs> <path fill="#{$fill-color}" d="M6,7 L12,7 L12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 L6,7 Z M14,7 C16.209139,7 18,8.790861 18,11 L18,18 C18,20.209139 16.209139,22 14,22 L4,22 C1.790861,22 4.4408921e-16,20.209139 0,18 L0,11 C-4.4408921e-16,8.790861 1.790861,7 4,7 L4,5 C4,2.23857625 6.23857625,4.4408921e-16 9,0 C11.7614237,-4.4408921e-16 14,2.23857625 14,5 L14,7 Z M4,9 C2.8954305,9 2,9.8954305 2,11 L2,18 C2,19.1045695 2.8954305,20 4,20 L14,20 C15.1045695,20 16,19.1045695 16,18 L16,11 C16,9.8954305 15.1045695,9 14,9 L4,9 Z M9,12 C9.55228475,12 10,12.4477153 10,13 L10,16 C10,16.5522847 9.55228475,17 9,17 C8.44771525,17 8,16.5522847 8,16 L8,13 C8,12.4477153 8.44771525,12 9,12 Z" id="path-1"></path> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="lock-closed"> <mask id="mask-2" fill="white"> <use xlink:href="#path-1"></use> </mask> <g id="a"></g> <g id="Group" mask="url(#mask-2)" fill="#000000" fill-rule="nonzero"> <g transform="translate(-3.000000, -1.000000)" id="Shape"> <polygon points="0 0 24 0 24 24 0 24"></polygon> </g> </g> </g> </g> </svg>';
+  }
+
+  @if $icon == 'checkmark' {
+    @return '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"> <defs> <path fill="#{$fill-color}" id="a" d="M19.462 6.157c.5-.535 1.309-.535 1.808 0 .5.536.5 1.404 0 1.94l-9.698 11.465-6.33-6.787c-.5-.535-.5-1.404 0-1.939.499-.535 1.309-.535 1.808 0l4.522 4.848 7.89-9.527z"/> </defs> <g fill="none" fill-rule="evenodd"> <mask id="b" fill="#fff"> <use xlink:href="#a"/> </mask> <use fill="#0340C7" fill-rule="nonzero" xlink:href="#a"/> <g fill="#23333A" mask="url(#b)"> <path fill="#{$fill-color}" d="M0 0h24v24H0z"/> </g> </g> </svg>';
+  }
+
+  @if $icon == 'cross' {
+    @return '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"> <defs> <path fill="#{$fill-color}" id="a" d="M10 4a1 1 0 0 1 1 1v5a1 1 0 0 1-2 0V5a1 1 0 0 1 1-1zm0 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/> </defs> <g fill="none" fill-rule="evenodd" transform="translate(2 2)"> <mask id="b" fill="#fff"> <use xlink:href="#a"/> </mask> <use fill="#2C3F48" xlink:href="#a"/> <g fill="#23333A" mask="url(#b)"> <path fill="#{$fill-color}" d="M-2-2h24v24H-2z"/> </g> </g> </svg>';
+  }
+}

@@ -48,12 +48,30 @@
 @mixin button() {
   @include button-medium; // Default.
 
-  border: 0;
+  border: 2px solid;
   border-radius: $radius-1;
   outline: 0;
   font-family: $default-font-family;
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
+
+  &.button-block {
+    @include button-block;
+  }
+
+  &.button-small {
+    @include button-small;
+  }
+
+  &.button-icon {
+    padding-right: .625rem;
+    padding-left: .625rem;
+
+    i {
+      margin-left: 2rem;
+    }
+  }
 }
 
 //
@@ -76,38 +94,5 @@
 input[type="button"],
 input[type="submit"] {
   @include button;
-
-  border: 2px solid;
-  cursor: pointer;
-
-  &:disabled {
-    @include button-disabled;
-  }
-
-  &.button-block {
-    @include button-block;
-  }
-
-  &.button-small {
-    @include button-small;
-  }
-
-  &.button-medium {
-    @include button-medium;
-  }
-
-  &.button-large {
-    @include button-large;
-  }
-
-  &.button-icon {
-    padding-right: .625rem;
-    padding-left: .625rem;
-
-    i {
-      margin-left: 2rem;
-    }
-  }
-
 }
 

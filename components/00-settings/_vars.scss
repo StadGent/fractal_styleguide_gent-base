@@ -41,7 +41,6 @@ $primary-line-height: $default-line-height !default; //em
 
 $bg-outside-container: color('white') !default;
 $border-outside-container: 1px solid color('dark-gray', 2) !default;
-$default-text-color: color('dark-gray') !default;
 
 // Breadcrumb settings.
 $bg-hover-breadcrumb: color('blue') !default;
@@ -59,4 +58,3 @@ $hamburger-menu-shadow: 0 1px 16.5px 0 rgba(0, 0, 0, .5);
 
 // Map settings.
 $map-border-radius: $radius-1 !default;
-
