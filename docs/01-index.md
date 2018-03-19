@@ -11,7 +11,7 @@ under "Roadmap".
 
 ## SASS documentation (for contributors) 
 
-You can find the SASS docs <a href="{{path '/sassdocs'}}">here</a>
+You can find the SASS docs <a href="{{path '/sassdocs'}}" target="_blank">here</a>
 
 
 ## Implementing this style guide in your own project
