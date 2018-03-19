@@ -618,6 +618,7 @@ gulp.task('compile', [
   'styles:build',
   'styles:dist',
   'styles:extract',
+  'sassdoc',
   'js:build',
   'js:dist',
   'images:minify'
@@ -626,6 +627,7 @@ gulp.task('compile:dev', [
   'iconfont',
   'fractal:build',
   'styles:dist',
+  'sassdoc',
   'js:dist',
   'images:minify'
 ]);
