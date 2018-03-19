@@ -1,3 +1,10 @@
+///
+/// Primary button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+///
 %button-primary,
 .button-primary {
   @include theme('background-color', 'color-primary', 'button-primary-background');

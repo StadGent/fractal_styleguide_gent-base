@@ -4,6 +4,7 @@ node_modules
 build
 scss
 public/css
+public/sassdocs
 public/styleguide/js
 public/styleguide/vendor
 public/styleguide/fonts

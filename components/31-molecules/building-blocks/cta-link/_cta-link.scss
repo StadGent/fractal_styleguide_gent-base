@@ -29,7 +29,7 @@ a.cta-link {
   padding: .625rem 1.25rem;
   transition: .11s ease-in-out;
   transition-property: background, color, border;
-  border-radius: $radius-2;
+  border-radius: border-radius('radius-2');
   text-decoration: none;
 
   h3 {
@@ -50,7 +50,7 @@ a.cta-link {
     margin: auto;
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
-    border-radius: $radius-2;
+    border-radius: border-radius('radius-2');
     font-size: 1.3rem;
     text-align: center;
   }

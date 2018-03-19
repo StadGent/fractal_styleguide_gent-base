@@ -1,22 +1,95 @@
-// Styleguide general settings.
+////
+///
+/// This file defines all general style guide settings.
+///
+/// @group settings
+/// @author Gert-Jan Meire
+///
+////
+
+///
+/// Defines the style guide directory. This is used for things such as
+/// images for backgrounds in SASS.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
 $styleguide-dir: '../styleguide' !default;
+
+///
+/// Generates a unique ID..
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
 $uuid: unique-id();
 
-// Border radius.
-$radius-0: 0 !default;
-$radius-1: .5rem !default;
-$radius-2: .625rem !default;
-$radius-3: 1.125rem !default;
-$radius-4: 1.875rem !default;
+///
+/// Defines the border radius values components can use.
+/// These values have been chosen by the design team.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
+$border-radius: (
+  'radius-0': 0,
+  'radius-1': .5rem,
+  'radius-2': .625rem,
+  'radius-3': 1.125rem,
+  'radius-4': 1.875rem
+) !default;
 
 // Breakpoints for fonts.
 $bp-tablet-fonts: 640px !default;
 $bp-desktop-fonts: 1360px !default;
 
-// Visual breakpoints.
+///
+/// Defines the min-width breakpoint for mobile screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access private
+/// @author Gert-Jan Meire
+///
 $bp-mobile: 320px !default;
+
+///
+/// Defines the min-width breakpoint for tablet screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access private
+/// @author Gert-Jan Meire
+///
 $bp-tablet: 768px !default;
+
+///
+/// Defines the min-width breakpoint for desktop screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access private
+/// @author Gert-Jan Meire
+///
 $bp-desktop: 960px !default;
+
+///
+/// Defines the min-width breakpoint for extra large desktop screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access private
+/// @author Gert-Jan Meire
+///
 $bp-desktop-xl: 1680px !default;
 
 // Max content width.
@@ -57,4 +130,4 @@ $hamburger-menu-width: 320px;
 $hamburger-menu-shadow: 0 1px 16.5px 0 rgba(0, 0, 0, .5);
 
 // Map settings.
-$map-border-radius: $radius-1 !default;
+$map-border-radius: border-radius('radius-1') !default;

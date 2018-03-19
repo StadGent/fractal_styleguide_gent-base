@@ -1,11 +1,36 @@
+////
+///
+/// This file defines all grid related settings.
+///
+/// @group grid
+/// @author Gert-Jan Meire
+///
+////
 @import 'susy';
 
+///
+/// This map describes the susy grid system settings.
+///
+/// @since 3.0.0
+/// @group grid
+/// @access private
+/// @type map
+/// @author Gert-Jan Meire
+///
 $susy: (
   'columns': susy-repeat(12),
   'gutters': $gutter-width,
   'spread': 'narrow'
 );
 
+///
+/// The container to put a grid in.
+///
+/// @since 3.0.0
+/// @group grid
+/// @access public
+/// @author Gert-Jan Meire
+///
 %container,
 .container {
   @include clearfix();
@@ -18,6 +43,15 @@ $susy: (
   }
 }
 
+///
+/// The inner container to put a grid in. This also provides the necessary
+/// padding for mobile display.
+///
+/// @since 3.0.0
+/// @group grid
+/// @access  public
+/// @author Gert-Jan Meire
+///
 %content-container,
 .content-container {
   max-width: $bp-max-content;

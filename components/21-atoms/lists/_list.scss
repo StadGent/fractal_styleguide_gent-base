@@ -28,6 +28,14 @@ ol {
   }
 }
 
+
+///
+/// Remove default styling from a list.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+///
 %list-no-style {
   padding-left: 0;
   list-style: none;

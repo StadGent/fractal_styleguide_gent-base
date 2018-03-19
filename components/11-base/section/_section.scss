@@ -1,3 +1,4 @@
+// Generate the section specific theming for components.
 @each $theme, $colors in $themes {
   %cs--#{$theme},
   .cs--#{$theme} {

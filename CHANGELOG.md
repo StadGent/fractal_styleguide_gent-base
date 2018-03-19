@@ -10,6 +10,7 @@ All notable changes to this style guide are documented here.
 
 ### 3.0.0
 
+* DTGB-144: Added SassDoc generation for external developers.
 * DTGB-147: Redefined the color palletes and color schemes.
 
 > Refactored the way themify works. This removed the use of variables
@@ -35,6 +36,7 @@ All notable changes to this style guide are documented here.
 
 * DTGB-174: Changed styling of status messages.
 * DTGB-214: Added new styling to buttons.
+* DTGB-218: Added new logo.
 * DTGB-258: Added gulp task to generate iconfont.
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
 * DTGB-180: Added gulp task to perform accessibility checks.

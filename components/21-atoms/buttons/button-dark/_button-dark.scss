@@ -1,3 +1,11 @@
+///
+/// Dark button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+///
+%button-dark,
 .button-dark {
   @include theme('background-color', 'color-tertiary', 'button-dark-background');
   @include theme('color', 'color-secondary', 'button-dark-color');

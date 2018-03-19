@@ -17,6 +17,7 @@ const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const sourcemaps = require('gulp-sourcemaps');
 const sassLint = require('gulp-sass-lint');
+const sassdoc = require('sassdoc');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
@@ -617,6 +618,7 @@ gulp.task('compile', [
   'styles:build',
   'styles:dist',
   'styles:extract',
+  'sassdoc',
   'js:build',
   'js:dist',
   'images:minify'
@@ -625,6 +627,7 @@ gulp.task('compile:dev', [
   'iconfont',
   'fractal:build',
   'styles:dist',
+  'sassdoc',
   'js:dist',
   'images:minify'
 ]);
@@ -658,6 +661,18 @@ gulp.task('iconfont', () => {
       console.log(glyphs, options);
     })
     .pipe(gulp.dest('./public/styleguide/fonts/'));
+});
+
+/**
+ * Generate SassDoc.
+ */
+gulp.task('sassdoc', () => {
+  return gulp.src('./components/**/*.scss')
+  .pipe(sassdoc({
+    dest: 'public/sassdocs',
+    verbose: true,
+    theme: 'flippant'
+  }));
 });
 
 /*

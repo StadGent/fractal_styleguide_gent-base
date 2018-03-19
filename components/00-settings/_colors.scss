@@ -1,4 +1,22 @@
-// Colors.
+////
+///
+/// This file defines all color settings, mixins and fucntions necessary
+/// to provide the themify engine the style guide is based on.
+///
+/// @group colors
+/// @author Gert-Jan Meire
+///
+////
+
+///
+/// The colors map defines all basic and secondary colors.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
 $colors: (
   'cyan': #009de0,
   'cyan-wcag': #0085b3,
@@ -15,7 +33,17 @@ $colors: (
   'purple': #5a0ec4,
 ) !default;
 
-// color values for color swatches.
+
+///
+/// This map describes different tints. These are used to calculate all
+/// color swatches based on the base colors in $colors.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
 $tints: (
   1: 10%,
   2: 25%,
@@ -28,19 +56,36 @@ $tints: (
   -6: .02,
 ) !default;
 
-// Themify adds the color for box shadows, this just defines the box shadow
-// without a specific color so it can be reused.
+///
+/// Themify adds the color for box shadows, this just defines the box shadow
+/// without a specific color so it can be reused.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @type string
+/// @author Gert-Jan Meire
+///
 $box-shadow-primary: 0 2px 8px 0;
 
-//
-// A function to get a color from the colors map.
-//
-// @param $base-color [map]
-//   The key of the color in the $colors map.
-//
-// @param $tint [map]
-//   The tint to be applied to the base color.
-//
+///
+/// A function to get a color from the $colors map.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $colors
+///
+/// @param {color} $base-color
+///   The key of the color in the $colors map.
+///
+/// @param {int} $tint [0]
+///   The tint to be applied to the base color.
+///
+/// @param {map} colors$ [$colors]
+///   The colors array to use to calculate the correct color tint.
+///
 @function color($base-color, $tint: 0, $colors: $colors) {
   @if $tint != 0 {
     @if $tint > 0 {
@@ -59,15 +104,25 @@ $box-shadow-primary: 0 2px 8px 0;
   }
 };
 
-//
-// A function to adjust the opacity of a base color.
-//
-// @param $base-color [map]
-//   The base color to be modified.
-//
-// @param $tint [map]
-//   The tint value to modify the base color with.
-//
+///
+/// A function to adjust the opacity of a base color.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $tints
+/// @require $colors
+///
+/// @param {color} $base-color
+///   The base color to be modified.
+///
+/// @param {int} $tint
+///   The tint value to modify the base color with.
+///
+/// @param {map} colors$ [$colors]
+///   The colors array to use to calculate the correct color tint.
+///
 @function tint($base-color, $tint, $colors: $colors) {
   $color-white: #fff;
 
@@ -82,15 +137,26 @@ $box-shadow-primary: 0 2px 8px 0;
   @return rgba(map-get($colors, $base-color), map-get($tints, $tint));
 };
 
-//
-// A function to darken a base color.
-//
-// @param $base-color [map]
-//   The base color to be modified.
-//
-// @param $tint [map]
-//   The value to shade the base color with.
-//
+
+///
+/// A function to darken a base color.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $tints
+/// @require $colors
+///
+/// @param {color} $base-color
+///   The base color to be modified.
+///
+/// @param {int} $tint
+///   The value to shade the base color with.
+///
+/// @param {map} colors$ [$colors]
+///   The colors array to use to calculate the correct color tint.
+///
 @function shade($base-color, $tint, $colors: $colors) {
   $color-black: #000;
 
@@ -105,9 +171,15 @@ $box-shadow-primary: 0 2px 8px 0;
   @return mix($color-black, map-get($colors, $base-color), map-get($tints, $tint));
 };
 
-//
-// THEMIFY SETTINGS.
-//
+///
+/// Themify settings. This determines the colors for all main and subthemes.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
 $themes: (
   'default': (
     // Required colors!
@@ -118,6 +190,7 @@ $themes: (
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
+    'logo-background': color('cyan'),
   ),
   'purple': (
     // Required colors!
@@ -140,6 +213,3 @@ $themes: (
     // These should be as limited as possible though!
   )
 ) !default;
-
-// Default $overwrite-themes map to overwrite above $theme map.
-$overwrite-themes: () !default;

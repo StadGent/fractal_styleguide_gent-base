@@ -1,9 +1,8 @@
 .field-error {
-
   margin-top: .5rem;
   padding: .5rem 1rem;
   border: 1px solid color('red');
-  border-radius: $radius-2;
+  border-radius: border-radius('radius-1');
   background: color('red', -3);
   color: color('red');
 }

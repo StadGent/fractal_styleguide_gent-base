@@ -1,3 +1,12 @@
+///
+/// Success button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+/// @require color
+///
+%button-success,
 .button-success {
   border-color: color('green');
   background-color: color('white');
