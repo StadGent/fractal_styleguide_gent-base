@@ -1,9 +1,8 @@
-//
-// Base
-// ---
-// Default markup for the most common HTML elements, based on the settings file.
-//
-
+////
+/// Base
+/// ---
+/// Default markup for the most common HTML elements, based on the settings file.
+////
 *,
 *::before,
 *::after {
@@ -48,7 +47,6 @@ hr {
 //
 // Fix a > img problem
 //
-
 img {
   border: 0;
   vertical-align: top;
@@ -65,12 +63,16 @@ img {
   display: block;
 }
 
-// Prevent text wrapping.
+///
+/// Prevent text wrapping.
+///
 .nowrap {
   white-space: nowrap;
 }
 
-// Visually hidden
+///
+/// Visually hidden
+///
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -82,7 +84,9 @@ img {
   clip: rect(0 0 0 0);
 }
 
-
+///
+/// Force a link to have no link styling.
+///
 %no-link-style,
 .no-link-style {
   @include no-link-style;

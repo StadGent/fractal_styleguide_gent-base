@@ -27,6 +27,17 @@ $id: random(1000);
   @include <%= cssClass%>-styles;
 }
 
+///
+/// A function to return the correct character string.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access private
+/// @author Gert-Jan Meire
+///
+/// @param {string} $filename
+///   The name of the icon.
+///
 @function <%= cssClass%>-char($filename) {
   $char: "";
   <% _.each(glyphs, function(glyph) { %>
@@ -37,6 +48,26 @@ $id: random(1000);
     @return $char;
 }
 
+///
+/// A function to render an icon before or after an element.
+/// It can also be used as a placeholder instead of a mixin.
+/// NOTE: This is a automatically generated function!
+///
+/// @since 3.0.0
+/// @group tools
+/// @access public
+/// @author Gert-Jan Meire
+/// @require icon-char
+///
+/// @param {string} $filename
+///   The name of the icon.
+///
+/// @param {string} $insert [before]
+///   Wether the icon should be printed before or after the element.
+///
+/// @param {boolean} colors$ [$true]
+///   Should the item be a placeholder @extends or not.
+///
 @mixin <%= cssClass%>($filename, $insert: before, $extend: true) {
   &:#{$insert} {
     @if $extend {

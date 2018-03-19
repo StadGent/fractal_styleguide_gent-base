@@ -38,6 +38,7 @@
     "chosen-js": "^1.8.2",
     "lightgallery": "^1.6.3",
     "masonry-layout": "^4.2.0",
+    "sassdoc": "^2.5.0",
     "susy": "^3.0.1"
   },
   "optionalDependencies": {

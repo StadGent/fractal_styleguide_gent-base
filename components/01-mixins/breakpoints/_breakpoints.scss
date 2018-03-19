@@ -1,39 +1,71 @@
+////
+///
+/// This file defines breakpoint related mixins / functions.
+///
+/// @group breakpoints
+/// @author Gert-Jan Meire
+///
+////
 @import "breakpoint";
 
-//
-// Mobile breakpoint (see $bp-mobile defined in _vars.scss).
-// This asumes a min-width as defined by the variable.
-//
+///
+/// Mobile breakpoint (see $bp-mobile defined in _vars.scss).
+/// This asumes a min-width as defined by the variable.
+///
+/// @since 3.0.0
+/// @group breakpoints
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $bp-mobile
+///
 @mixin mobile {
   @include breakpoint($bp-mobile) {
     @content;
   }
 }
 
-//
-// Tablet breakpoint (see $bp-tablet defined in _vars.scss).
-// This asumes a min-width as defined by the variable.
-//
+///
+/// Tablet breakpoint (see $bp-tablet defined in _vars.scss).
+/// This asumes a min-width as defined by the variable.
+///
+/// @since 3.0.0
+/// @group breakpoints
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $bp-tablet
+///
 @mixin tablet {
   @include breakpoint($bp-tablet) {
     @content;
   }
 }
 
-//
-// Desktop breakpoint (see $bp-tablet defined in _vars.scss).
-// This asumes a min-width as defined by the variable.
-//
+///
+/// Desktop breakpoint (see $bp-tablet defined in _vars.scss).
+/// This asumes a min-width as defined by the variable.
+///
+/// @since 3.0.0
+/// @group breakpoints
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $bp-desktop
+///
 @mixin desktop {
   @include breakpoint($bp-desktop) {
     @content;
   }
 }
 
-//
-// Desktop XL breakpoint (see $bp-desktop-xl defined in _vars.scss).
-// This asumes a min-width as defined by the variable.
-//
+///
+/// Desktop XL breakpoint (see $bp-desktop-xl defined in _vars.scss).
+/// This asumes a min-width as defined by the variable.
+///
+/// @since 3.0.0
+/// @group breakpoints
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $bp-desktop-xl
+///
 @mixin desktop-xl {
   @include breakpoint($bp-desktop-xl) {
     @content;

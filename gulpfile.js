@@ -17,6 +17,7 @@ const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const sourcemaps = require('gulp-sourcemaps');
 const sassLint = require('gulp-sass-lint');
+const sassdoc= require('sassdoc');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
@@ -198,6 +199,10 @@ gulp.task('styles:inject', () => {
 gulp.task('styles:dist', (callback) => {
   _sassLint(false)
     .pipe(sourcemaps.init())
+    .pipe(sassdoc({
+      dest: 'public/sassdocs',
+      verbose: true
+    }))
     .pipe(sass({
       outputStyle: 'nested',
       includePaths: [
@@ -658,6 +663,10 @@ gulp.task('iconfont', () => {
       console.log(glyphs, options);
     })
     .pipe(gulp.dest('./public/styleguide/fonts/'));
+});
+
+gulp.task('sassdoc', () => {
+  return gulp.src('./components/**/*.scss')
 });
 
 /*

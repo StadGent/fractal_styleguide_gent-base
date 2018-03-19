@@ -23,7 +23,7 @@
         @include element-states(transparent, $bg-hover-breadcrumb, 'background-color');
 
         padding: .4rem;
-        border-radius: $radius-1;
+        border-radius: border-radius('radius-1');
         text-decoration: none;
       }
 

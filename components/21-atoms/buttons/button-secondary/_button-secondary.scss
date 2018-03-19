@@ -1,3 +1,12 @@
+///
+/// Secondary button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+/// @require theme
+///
+%button-secondary,
 .button-secondary {
   @include theme('background-color', 'color-secondary', 'button-secondary-background');
   @include theme('color', 'color-primary', 'button-secondary-color');

@@ -58,7 +58,7 @@
 
     img {
       width: 100%;
-      border-radius: $radius-1;
+      border-radius: border-radius('radius-1');
     }
   }
 
@@ -69,7 +69,7 @@
     right: 0;
     min-width: 200px;
     margin-top: 10px;
-    border-radius: $radius-1;
+    border-radius: border-radius('radius-1');
     background: color('white');
     box-shadow: 2px 2px 2px 0 rgba(44, 63, 72, .2), -2px 2px 2px 0 rgba(44, 63, 72, .2);
     z-index: 9999;
@@ -113,8 +113,8 @@
 
     footer {
       padding: 0 .625rem;
-      border-bottom-left-radius: $radius-1;
-      border-bottom-right-radius: $radius-1;
+      border-bottom-left-radius: border-radius('radius-1');
+      border-bottom-right-radius: border-radius('radius-1');
       background: color('blue', -1);
       text-align: right;
     }

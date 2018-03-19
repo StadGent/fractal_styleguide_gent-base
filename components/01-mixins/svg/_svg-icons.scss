@@ -1,14 +1,17 @@
-//
-// Return a colored svg icon.
-//
-// @access public
-//
-// @param $icon string
-//   The icon to return.
-//
-// @param $fill-color color
-//   The color in which to return the svg icon.
-//
+///
+/// Return a colored svg icon.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access public
+/// @author Gert-Jan Meire
+///
+/// @param {string} $icon
+///   The icon to return.
+///
+/// @param {color} $fill-color
+///   The color in which to return the svg icon.
+///
 @function svg-icon($icon, $fill-color) {
   @if $icon == 'lock-closed' {
     @return '<?xml version="1.0" encoding="UTF-8"?> <svg width="18px" height="22px" viewBox="0 0 18 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch --> <title>lock-closed</title> <desc>Created with Sketch.</desc> <defs> <path fill="#{$fill-color}" d="M6,7 L12,7 L12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 L6,7 Z M14,7 C16.209139,7 18,8.790861 18,11 L18,18 C18,20.209139 16.209139,22 14,22 L4,22 C1.790861,22 4.4408921e-16,20.209139 0,18 L0,11 C-4.4408921e-16,8.790861 1.790861,7 4,7 L4,5 C4,2.23857625 6.23857625,4.4408921e-16 9,0 C11.7614237,-4.4408921e-16 14,2.23857625 14,5 L14,7 Z M4,9 C2.8954305,9 2,9.8954305 2,11 L2,18 C2,19.1045695 2.8954305,20 4,20 L14,20 C15.1045695,20 16,19.1045695 16,18 L16,11 C16,9.8954305 15.1045695,9 14,9 L4,9 Z M9,12 C9.55228475,12 10,12.4477153 10,13 L10,16 C10,16.5522847 9.55228475,17 9,17 C8.44771525,17 8,16.5522847 8,16 L8,13 C8,12.4477153 8.44771525,12 9,12 Z" id="path-1"></path> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="lock-closed"> <mask id="mask-2" fill="white"> <use xlink:href="#path-1"></use> </mask> <g id="a"></g> <g id="Group" mask="url(#mask-2)" fill="#000000" fill-rule="nonzero"> <g transform="translate(-3.000000, -1.000000)" id="Shape"> <polygon points="0 0 24 0 24 24 0 24"></polygon> </g> </g> </g> </g> </svg>';

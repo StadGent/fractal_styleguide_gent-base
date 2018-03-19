@@ -1,6 +1,19 @@
 $field-icon-position: no-repeat right .75rem center;
 $field-icon-padding: 2.5rem;
 
+///
+/// The general field atom styling.
+///
+/// @since 3.0.0
+/// @group theming
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $border-radius
+/// @require color
+/// @require svg-icon
+/// @require svg-url
+/// @require border-radius
+///
 %field-base {
   @include theme('border-color', 'color-tertiary--lighten-2', 'fields-border-color');
   @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
@@ -90,7 +103,7 @@ $field-icon-padding: 2.5rem;
   height: 48px; // @TODO: Change to rems based on the base font-size.
   padding: 1rem;
   border: 1px solid;
-  border-radius: $radius-1;
+  border-radius: border-radius('radius-1');
   font-size: .75rem;
   font-weight: normal;
   appearance: none;

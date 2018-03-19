@@ -1,3 +1,13 @@
+///
+/// Alert button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $box-shadow-primary
+/// @require color
+///
+%button-alert,
 .button-alert {
   border-color: color('red');
   background-color: color('red');

@@ -5,5 +5,5 @@
   margin: 1rem auto;
   padding: $gutter-width;
   border: 1px solid;
-  border-radius: $radius-3;
+  border-radius: border-radius('radius-3');
 }
