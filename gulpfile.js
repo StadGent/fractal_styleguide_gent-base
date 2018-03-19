@@ -201,7 +201,8 @@ gulp.task('styles:dist', (callback) => {
     .pipe(sourcemaps.init())
     .pipe(sassdoc({
       dest: 'public/sassdocs',
-      verbose: true
+      verbose: true,
+      theme: 'flippant'
     }))
     .pipe(sass({
       outputStyle: 'nested',
