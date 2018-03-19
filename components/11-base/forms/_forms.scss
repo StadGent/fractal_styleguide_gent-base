@@ -13,6 +13,8 @@ $field-icon-padding: 2.5rem;
 /// @require svg-icon
 /// @require svg-url
 /// @require border-radius
+/// @require field-base
+/// @require theme
 ///
 %field-base {
   @include theme('border-color', 'color-tertiary--lighten-2', 'fields-border-color');

@@ -1,25 +1,31 @@
-//
-// Do check if the default value exists in map colors.
-//
-//   We check if the given $exception exists in the theme map.
-//   If it does we return the color applied there.
-//   If it does NOT we split the $default string based on two dasshes --
-//   We then get the color palette value based on that key from the $themes map.
-//   and we apply the correct tint through the color() mixin.
-//
-// @access private
-//
-// @param $colors map
-//   The map of colors to check.
-//
-// @param $default string
-//   The default value for the themified property.
-//
-// @param $exception string
-//   The exception value for the themified property.
-//   This is the exception optionally used in subthemes.
-//
-//
+///
+/// Do check if the default value exists in map colors.
+///
+///   We check if the given $exception exists in the theme map.
+///   If it does we return the color applied there.
+///   If it does NOT we split the $default string based on two dasshes --
+///   We then get the color palette value based on that key from the $themes map.
+///   and we apply the correct tint through the color() mixin.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access private
+/// @author Gert-Jan Meire
+/// @require $colors
+/// @require str-split
+/// @require color
+/// @require number
+///
+/// @param {map} $colors
+///   The map of colors to check.
+///
+/// @param {string} $default
+///   The default value for the themified property.
+///
+/// @param {string} $exception
+///   The exception value for the themified property.
+///   This is the exception optionally used in subthemes.
+///
 @function set-themified-property($colors, $default, $exception) {
   @if map-has-key($colors, $exception) {
     @return map-get($colors, $exception);
@@ -75,23 +81,26 @@
   @return '';
 }
 
-//
-// Theme mixin to generate all themes for components.
-// This generates the necessary theme CSS for all defined themes based on the
-// $themes map defined in _colors.scss
-//
-// @access public
-//
-// @param $property string
-//   The property to themify.
-//
-// @param $default string
-//   The default value for the themified property.
-//
-// @param $exception string
-//   The exception value for the themified property.
-//   This is the exception optionally used in subthemes.
-//
+///
+/// Theme mixin to generate all themes for components.
+/// This generates the necessary theme CSS for all defined themes based on the
+/// $themes map defined in _colors.scss
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @author Gert-Jan Meire
+///
+/// @param {string} $property [null]
+///   The property to themify.
+///
+/// @param {string} $default [null]
+///   The default value for the themified property.
+///
+/// @param {string} $exception [null]
+///   The exception value for the themified property.
+///   This is the exception optionally used in subthemes.
+///
 @mixin theme($property: null, $default: null, $exception: null) {
   @each $theme, $colors in $themes {
     // Apply the default section as default color scheme if there is no section
