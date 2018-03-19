@@ -199,11 +199,6 @@ gulp.task('styles:inject', () => {
 gulp.task('styles:dist', (callback) => {
   _sassLint(false)
     .pipe(sourcemaps.init())
-    .pipe(sassdoc({
-      dest: 'public/sassdocs',
-      verbose: true,
-      theme: 'flippant'
-    }))
     .pipe(sass({
       outputStyle: 'nested',
       includePaths: [
@@ -666,8 +661,16 @@ gulp.task('iconfont', () => {
     .pipe(gulp.dest('./public/styleguide/fonts/'));
 });
 
+/**
+ * Generate SassDoc.
+ */
 gulp.task('sassdoc', () => {
   return gulp.src('./components/**/*.scss')
+  .pipe(sassdoc({
+    dest: 'public/sassdocs',
+    verbose: true,
+    theme: 'flippant'
+  }));
 });
 
 /*
