@@ -58,12 +58,12 @@
   }
 
   &.messages--warning {
-    @include icon('exclamation');
+    @include icon('exclamation-regular');
 
-    background-color: color('blue', -3);
+    background-color: color('yellow', -3);
 
     &::before {
-      color: color('cyan');
+      color: color('red');
     }
   }
 
