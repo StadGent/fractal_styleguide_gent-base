@@ -59,16 +59,18 @@
 /// @require color
 ///
 @mixin button-disabled {
-  border: 0;
-  background-color: color('white', 2);
-  color: color('white');
-  box-shadow: none;
-
-  &:hover {
+  [class*='cs--'] & {
+    border: 0;
     background-color: color('white', 2);
     color: color('white');
     box-shadow: none;
-    cursor: not-allowed;
+
+    &:hover {
+      background-color: color('white', 2);
+      color: color('white');
+      box-shadow: none;
+      cursor: not-allowed;
+    }
   }
 }
 
@@ -90,6 +92,10 @@
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+
+  &:disabled {
+    @include button-disabled;
+  }
 
   &.button-block {
     @include button-block;

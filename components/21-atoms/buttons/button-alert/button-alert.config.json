@@ -12,32 +12,29 @@
     {
       "name": "button-small",
       "context": {
-        "modifier": "button-small"
+        "modifier": "button-small",
+        "icon": "icon-lightning"
       }
     },
     {
       "name": "button-medium",
       "context": {
-        "modifier": "button-medium"
+        "modifier": "button-medium",
+        "icon": "icon-lightning"
       }
     },
     {
       "name": "button-large",
       "context": {
-        "modifier": "button-large"
-      }
-    },
-    {
-      "name": "button-with-icon",
-      "context": {
-        "icon":"icon-exclamation"
+        "modifier": "button-large",
+        "icon": "icon-lightning"
       }
     },
     {
       "name": "button-disabled",
       "context": {
         "disabled": "button-disabled",
-        "icon":"icon-digipolis"
+        "icon": "icon-lightning"
       }
     }
   ]
