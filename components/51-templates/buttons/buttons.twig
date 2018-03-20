@@ -87,28 +87,47 @@
 <div class="preview-inner-inner-container">
   <h5 class="styleguide">Alert buttons</h5>
   <p>
-    {% include '@button-alert' %}
+    {% include '@button-alert' with {
+      'icon': 'icon-lightning'
+    } %}
   </p>
   <p>
-    {% include '@button-alert' with { 'modifier': 'button-block' } %}
+    {% include '@button-alert' with {
+      'modifier': 'button-block',
+      'icon': 'icon-lightning'
+    } %}
   </p>
 </div>
 <div class="preview-inner-inner-container">
   <p>
     Small:
-    {% include '@button-alert' with { 'modifier': 'button-small' } %}
+    {% include '@button-alert' with {
+      'modifier': 'button-small',
+      'icon': 'icon-lightning'
+    } %}
     Medium:
-    {% include '@button-alert' with { 'modifier': 'button-medium' } %}
+    {% include '@button-alert' with {
+      'modifier': 'button-medium',
+      'icon': 'icon-lightning'
+    } %}
     Large:
-    {% include '@button-alert' with { 'modifier': 'button-large' } %}
+    {% include '@button-alert' with {
+      'modifier': 'button-large',
+      'icon': 'icon-lightning'
+    } %}
   </p>
 </div>
 <div class="preview-inner-inner-container">
   <p>
     With icon:
-    {% include '@button-alert' with { 'icon': 'icon-marker' } %}
+    {% include '@button-alert' with {
+      'icon': 'icon-lightning'
+    } %}
     Disabled:
-    {% include '@button-alert' with { 'disabled': 'button-disabled' } %}
+    {% include '@button-alert' with {
+      'disabled': 'button-disabled',
+      'icon': 'icon-lightning'
+    } %}
   </p>
 </div>
 

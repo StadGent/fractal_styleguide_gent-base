@@ -105,6 +105,10 @@
     @include button-small;
   }
 
+  &.button-large {
+    @include button-large;
+  }
+
   &.button-icon {
     padding-right: .625rem;
     padding-left: .625rem;
