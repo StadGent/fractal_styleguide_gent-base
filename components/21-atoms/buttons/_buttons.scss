@@ -91,6 +91,10 @@
   text-align: center;
   cursor: pointer;
 
+  &:disabled {
+    @include button-disabled;
+  }
+
   &.button-block {
     @include button-block;
   }
