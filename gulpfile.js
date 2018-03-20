@@ -614,20 +614,20 @@ gulp.task('validate', [
  */
 gulp.task('compile', [
   'iconfont',
+  'sassdoc',
   'fractal:build',
   'styles:build',
   'styles:dist',
   'styles:extract',
-  'sassdoc',
   'js:build',
   'js:dist',
   'images:minify'
 ], callback => callback());
 gulp.task('compile:dev', [
   'iconfont',
+  'sassdoc',
   'fractal:build',
   'styles:dist',
-  'sassdoc',
   'js:dist',
   'images:minify'
 ]);
