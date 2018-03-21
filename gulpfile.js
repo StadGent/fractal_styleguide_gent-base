@@ -267,17 +267,16 @@ gulp.task('js:watch', () => {
  *
  */
 gulp.task('images:minify', () => {
-    return gulp.src([
-      'components/**/*.png',
-      'components/**/*.jpg',
-      'components/**/*.gif',
-      'components/**/*.jpeg',
-      'components/**/*.svg'
-    ])
-      .pipe(imagemin([pngquant()], {verbose: true}))
-      .pipe(gulp.dest('build/styleguide/sass'));
-  }
-);
+  return gulp.src([
+    'components/**/*.png',
+    'components/**/*.jpg',
+    'components/**/*.gif',
+    'components/**/*.jpeg',
+    'components/**/*.svg'
+  ])
+    .pipe(imagemin([pngquant()], {verbose: true}))
+    .pipe(gulp.dest('build/styleguide/sass'));
+});
 
 /*
  * Start the Fractal server
@@ -521,8 +520,10 @@ gulp.task('iconfont', () => {
       prependUnicode: true, // recommended option
       normalize: true,
       fontHeight: 1001,
-      formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'], // default, 'woff2' and 'svg' are available
-      timestamp: runTimestamp // recommended to get consistent builds when watching files
+      formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'], // default, 'woff2' and
+                                                       // 'svg' are available
+      timestamp: runTimestamp // recommended to get consistent builds when
+                              // watching files
     }))
     .on('glyphs', function (glyphs, options) {
       // CSS templating, e.g.
