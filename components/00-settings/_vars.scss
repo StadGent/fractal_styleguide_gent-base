@@ -48,8 +48,26 @@ $border-radius: (
   'radius-4': 1.875rem
 ) !default;
 
-// Breakpoints for fonts.
+///
+/// Defines the breakpoint for fonts on tablets.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type string
+/// @author Gert-Jan Meire
+///
 $bp-tablet-fonts: 640px !default;
+
+///
+/// Defines the breakpoint for fonts on desktop.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type string
+/// @author Gert-Jan Meire
+///
 $bp-desktop-fonts: 1360px !default;
 
 ///
@@ -57,7 +75,7 @@ $bp-desktop-fonts: 1360px !default;
 ///
 /// @since 3.0.0
 /// @group settings
-/// @access private
+/// @access public
 /// @author Gert-Jan Meire
 ///
 $bp-mobile: 320px !default;
@@ -67,7 +85,7 @@ $bp-mobile: 320px !default;
 ///
 /// @since 3.0.0
 /// @group settings
-/// @access private
+/// @access public
 /// @author Gert-Jan Meire
 ///
 $bp-tablet: 768px !default;
@@ -77,7 +95,7 @@ $bp-tablet: 768px !default;
 ///
 /// @since 3.0.0
 /// @group settings
-/// @access private
+/// @access public
 /// @author Gert-Jan Meire
 ///
 $bp-desktop: 960px !default;
@@ -87,32 +105,109 @@ $bp-desktop: 960px !default;
 ///
 /// @since 3.0.0
 /// @group settings
-/// @access private
+/// @access public
 /// @author Gert-Jan Meire
 ///
 $bp-desktop-xl: 1680px !default;
 
-// Max content width.
+///
+/// Defines the max width of content in a content container.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $bp-max-content: 1440px !default;
 
-// Max viewport.
+///
+/// Defines the max width of a grid container.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $bp-container: 1600px !default;
 
-// Grid settings
+///
+/// Defines the number of grid columns for a given grid container.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $grid-columns: 12 !default;
+
+///
+/// Defines the width of grid gutters.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $gutter-width: 1rem !default;
 
-// Font settings.
+///
+/// Defines the default font family Fira Sans.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $default-font-family: 'Fira Sans', sans-serif !default;
-$default-font-weight: 400 !default;
-$default-font-size: 16px !default; //px
-$default-line-height: 1.4em !default; //em
-$primary-font-family: $default-font-family !default;
-$primary-font-weight: $default-font-weight !default;
-$primary-font-size: $default-font-size !default; //px
-$primary-line-height: $default-line-height !default; //em
 
+///
+/// Defines the default font weight.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$default-font-weight: 400 !default;
+
+///
+/// Defines the default font size.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$default-font-size: 16px !default; //px
+
+///
+/// Defines the default line height.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$default-line-height: 1.4em !default; //em
+
+///
+/// Defines the background color of the outside container of the site.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $bg-outside-container: color('white') !default;
+
+///
+/// Defines the border of the outside container of the site.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $border-outside-container: 1px solid color('dark-gray', 2) !default;
 
 // Breadcrumb settings.

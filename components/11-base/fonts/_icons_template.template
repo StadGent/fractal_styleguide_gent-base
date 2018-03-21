@@ -1,3 +1,12 @@
+////
+/// This is an generated file! Do not change this file. Use the template file
+/// _icons_template.template instead to apply changes.
+///
+/// @group tools
+/// @author Gert-Jan Meire
+///
+////
+
 $id: random(1000);
 
 @font-face {
