@@ -42,6 +42,9 @@ All notable changes to this style guide are documented here.
 * DTGB-180: Added gulp task to perform accessibility checks.
 * DTGB-209: Added new styling for baic input field atoms.
 
+> We added styling for radio buttons and checkboxes. These were not styled in
+> previous versions of the style guide.
+
 > **Removed jQuery UI Datepicker support and integration!**
 > Did some refactoring to the SASS partials. Most of the input field styling
 > can now be found in the `_forms.scss` partial.
