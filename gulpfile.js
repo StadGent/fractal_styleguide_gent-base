@@ -14,6 +14,7 @@ const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const sourcemaps = require('gulp-sourcemaps');
 const sassLint = require('gulp-sass-lint');
+const sassdoc = require('sassdoc');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
@@ -27,6 +28,8 @@ const inject = require('gulp-inject');
 const yargs = require('yargs');
 const combiner = require('stream-combiner2');
 const cache = require('gulp-cached');
+const iconfont = require('gulp-iconfont');
+const iconfontCss = require('gulp-iconfont-css');
 // require our configurated fractal module
 const fractal = require('./fractal');
 
@@ -188,7 +191,8 @@ gulp.task('styles:validate', () => {
 gulp.task('styles:watch', () => {
   return gulp.watch('./components/**/*.scss', gulp.parallel(
     'styles:validate',
-    'styles:dist'
+    'styles:dist',
+    'sassdoc'
   ));
 });
 
@@ -493,6 +497,52 @@ gulp.task('axe', function (done) {
   }
 });
 
+/**
+ *
+ * Create an iconfont based on SVG files.
+ *
+ * Usage:
+ *  gulp iconfont
+ *
+ */
+gulp.task('iconfont', () => {
+  const fontName = 'gent-icons';
+  const runTimestamp = Math.round(Date.now() / 1000);
+
+  return gulp.src(['./public/styleguide/img/iconfont/*.svg'])
+    .pipe(iconfontCss({
+      fontName: fontName,
+      path: './components/11-base/fonts/_icons_template.template',
+      targetPath: '../../../components/11-base/fonts/_icons.scss',
+      fontPath: '../styleguide/fonts/'
+    }))
+    .pipe(iconfont({
+      fontName: fontName, // required
+      prependUnicode: true, // recommended option
+      normalize: true,
+      fontHeight: 1001,
+      formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'], // default, 'woff2' and 'svg' are available
+      timestamp: runTimestamp // recommended to get consistent builds when watching files
+    }))
+    .on('glyphs', function (glyphs, options) {
+      // CSS templating, e.g.
+      console.log(glyphs, options);
+    })
+    .pipe(gulp.dest('./public/styleguide/fonts/'));
+});
+
+/**
+ * Generate SassDoc.
+ */
+gulp.task('sassdoc', () => {
+  return gulp.src('./components/**/*.scss')
+    .pipe(sassdoc({
+      dest: 'public/sassdocs',
+      verbose: true,
+      theme: 'flippant'
+    }));
+});
+
 /*
  *
  * Default tasks:
@@ -530,19 +580,10 @@ gulp.task('validate', gulp.parallel('styles:validate', 'js:validate', 'axe'), ca
  */
 // todo make sure fractal:build is executed first
 // or it overrides the build dir
-gulp.task('compile', gulp.series('fractal:build', gulp.parallel(
-  'styles:build',
-  'styles:dist',
-  'styles:extract',
-  'js:build',
-  'js:dist',
-  'images:minify'
+gulp.task('compile', gulp.series('fractal:build', gulp.parallel('styles:build', 'styles:dist', 'styles:extract', 'sassdoc', 'iconfont', 'js:build', 'js:dist', 'images:minify'
 )), callback => callback());
 
-gulp.task('compile:dev', gulp.series('fractal:build', gulp.parallel(
-  'styles:dist',
-  'js:dist',
-  'images:minify'
+gulp.task('compile:dev', gulp.series('fractal:build', gulp.parallel('styles:dist', 'sassdoc', 'iconfont', 'js:dist', 'images:minify'
 )));
 
 /*
