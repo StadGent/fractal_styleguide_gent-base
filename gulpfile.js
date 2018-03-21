@@ -20,7 +20,7 @@ const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
-const minify = require('gulp-minify');
+const uglify = require('gulp-uglify');
 const npm = require('npm');
 const bump = require('gulp-bump');
 const inject = require('gulp-inject');
@@ -170,7 +170,7 @@ gulp.task('styles:build', () => {
  */
 gulp.task('styles:validate', () => {
   return _sassFiles()
-    .pipe(cache('validate'))
+    .pipe(cache('styles:validate'))
     .pipe(sassLint({
       configFile: './.sass-lint.yml'
     }))
@@ -186,10 +186,10 @@ gulp.task('styles:validate', () => {
  *
  */
 gulp.task('styles:watch', () => {
-  return gulp.watch('./components/**/*.scss', [
+  return gulp.watch('./components/**/*.scss', gulp.parallel(
     'styles:validate',
     'styles:dist'
-  ]);
+  ));
 });
 
 /*
@@ -227,9 +227,7 @@ gulp.task('js:build', () => {
     .pipe(rename({
       dirname: '',
     }))
-    .pipe(minify({
-      noSource: true
-    }))
+    .pipe(uglify())
     .pipe(gulp.dest('./build/styleguide/js/'));
 });
 
@@ -240,6 +238,7 @@ gulp.task('js:build', () => {
  */
 gulp.task('js:validate', () => {
   return gulp.src('components/**/*.js')
+    .pipe(cache('js:validate'))
     .pipe(eslint({
       configFile: './.eslintrc'
     }))
@@ -253,7 +252,7 @@ gulp.task('js:validate', () => {
  *
  */
 gulp.task('js:watch', () => {
-  return gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
+  return gulp.watch('./components/**/*.js', gulp.parallel('js:validate', 'js:dist'));
 });
 
 // Todo where do we store images, what is their destination?
@@ -315,12 +314,11 @@ gulp.task('fractal:build', () => {
   }).catch(() => logger.error('Fractal server failed to start'));
 });
 
-// Todo move to imported file
 /*
  * Publish to the NPM public registry.
  */
 gulp.task('publish:npm', (callback) => {
-
+  let metadata = require('./package.json');
   const argv = yargs
     .options({
       username: {
@@ -374,7 +372,6 @@ gulp.task('publish:npm', (callback) => {
       if (addUserError) {
         return callback(addUserError);
       }
-      let metadata = require('./package.json');
       metadata = JSON.parse(JSON.stringify(metadata));
       npm.commands.pack([], (packError) => { // eslint-disable-line max-nested-callbacks
         if (packError) {
@@ -393,8 +390,7 @@ gulp.task('publish:npm', (callback) => {
           if (publishError) {
             return callback(publishError);
           }
-          callback(`Publish succesfull: ${JSON.stringify(resp, undefined, 2)}`); // eslint-disable-line no-undefined
-          return callback();
+          return callback(`Publish succesfull: ${JSON.stringify(resp, undefined, 2)}`); // eslint-disable-line no-undefined
         });
       });
     });
@@ -507,8 +503,8 @@ gulp.task('axe', function (done) {
  * Used for local development to compile and validate after every change.
  *
  */
-gulp.task('default', ['fractal:start', 'styles:watch', 'js:watch']);
-gulp.task('watch', ['default']);
+gulp.task('default', gulp.series('fractal:start', gulp.parallel('styles:watch', 'js:watch')));
+gulp.task('watch', gulp.parallel('default'));
 
 /*
  *
@@ -519,10 +515,7 @@ gulp.task('watch', ['default']);
  *  Used to only validate the SCSS and JS code.
  *
  */
-gulp.task('validate', [
-  'styles:validate',
-  'js:validate'
-], callback => callback());
+gulp.task('validate', gulp.parallel('styles:validate', 'js:validate', 'axe'), callback => callback());
 
 /*
  *
@@ -537,22 +530,20 @@ gulp.task('validate', [
  */
 // todo make sure fractal:build is executed first
 // or it overrides the build dir
-gulp.task('compile', [
-  'fractal:build',
+gulp.task('compile', gulp.series('fractal:build' ,gulp.parallel(
   'styles:build',
   'styles:dist',
   'styles:extract',
   'js:build',
   'js:dist',
   'images:minify'
-], callback => callback());
+)), callback => callback());
 
-gulp.task('compile:dev', [
-  'fractal:build',
+gulp.task('compile:dev', gulp.series('fractal:build',gulp.parallel(
   'styles:dist',
   'js:dist',
   'images:minify'
-]);
+)));
 
 /*
  *
@@ -563,10 +554,7 @@ gulp.task('compile:dev', [
  *  Used to validate and build production ready code.
  *
  */
-gulp.task('build', ['validate', 'compile'], () => {
-  return gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(gulp.dest('./build/styleguide/sass/'));
-});
+gulp.task('build', gulp.parallel('validate', 'compile'));
 
 /*
  *
@@ -577,4 +565,4 @@ gulp.task('build', ['validate', 'compile'], () => {
  *  Used to publish to the public NPM registry.
  *
  */
-gulp.task('publish', ['publish:npm']);
+gulp.task('publish', gulp.parallel('publish:npm'));
