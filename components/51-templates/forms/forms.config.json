@@ -1,5 +1,6 @@
 {
   "title": "Forms",
+  "hidden": "hidden",
   "status": "ready",
   "handle": "forms",
   "preview": "@preview",

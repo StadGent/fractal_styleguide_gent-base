@@ -1,5 +1,6 @@
 {
   "name": "Sections",
+  "hidden": "hidden",
   "order": 2,
   "status": "ready",
   "default": "default",

@@ -15,21 +15,21 @@
       span {
         display: inline-block;
         padding: .4rem .5rem;
-        border-radius: $radius-1;
+        border-radius: border-radius('radius-1');
         text-decoration: none;
 
         &:hover,
         &:focus,
         &:active {
-          background-color: $color-lightest-blue;
+          background-color: color('blue', -1);
         }
       }
 
       &.is-active {
         span,
         a {
-          background-color: $color-orange;
-          color: $color-white;
+          background-color: color('orange');
+          color: color('white');
         }
       }
 

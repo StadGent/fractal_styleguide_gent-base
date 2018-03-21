@@ -1,3 +1,121 @@
-.required-fields-indicator {
-  margin-bottom: 1.5rem;
+////
+/// This file defines general form input fields styling.
+///
+/// @group forms
+/// @author Gert-Jan Meire
+///
+////
+
+$field-icon-position: no-repeat right .75rem center;
+$field-icon-padding: 2.5rem;
+
+///
+/// The general field atom styling.
+///
+/// @since 3.0.0
+/// @group theming
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $border-radius
+/// @require color
+/// @require svg-icon
+/// @require svg-url
+/// @require border-radius
+/// @require field-base
+/// @require theme
+///
+%field-base {
+  @include theme('border-color', 'color-tertiary--lighten-2', 'fields-border-color');
+  @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
+  @include theme('color', 'color-tertiary--darken-1', 'fields-color');
+
+  &:focus {
+    @include theme('border-color', 'color-primary--lighten-1', 'fields-border-focus-color');
+    @include theme('background', 'color-primary--lighten-5', 'fields-focus-background');
+
+    border: 1px solid;
+    outline: 0;
+  }
+
+  &:disabled {
+    $fill-color: color('dark-gray');
+    $svg-lock-closed: svg-icon('lock-closed', $fill-color);
+
+    padding-right: $field-icon-padding;
+    border: 0;
+    background: color('dark-gray', -5) svg-url($svg-lock-closed) $field-icon-position;
+    cursor: not-allowed;
+  }
+
+  &.success {
+    $fill-color: color('green');
+    $svg-success: svg-icon('checkmark', $fill-color);
+
+    padding-right: $field-icon-padding;
+    border: 1px solid color('green');
+    background: color('green', -6) svg-url($svg-success) $field-icon-position;
+    color: color('dark-gray', 1);
+
+    &:focus {
+      border-color: color('green');
+      background: color('green', -6) svg-url($svg-success) $field-icon-position;
+    }
+  }
+
+  &.error {
+    $fill-color: color('red');
+    $svg-error: svg-icon('cross', $fill-color);
+
+    padding-right: $field-icon-padding;
+    border: 1px solid color('red');
+    background: color('red', -6) svg-url($svg-error) $field-icon-position;
+    color: color('red');
+    font-style: italic;
+
+    &:focus {
+      border-color: color('red');
+      background: color('red', -6) svg-url($svg-error) $field-icon-position;
+    }
+  }
+
+  &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  &::placeholder {
+    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  display: block;
+  width: 100%;
+  height: 48px; // @TODO: Change to rems based on the base font-size.
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: border-radius('radius-1');
+  font-family: $default-font-family;
+  font-size: .7rem;
+  font-weight: normal;
+  appearance: none;
 }

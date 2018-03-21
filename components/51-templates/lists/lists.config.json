@@ -1,6 +1,7 @@
 {
   "title": "Lists",
   "status": "ready",
+  "hidden": "hidden",
   "handle": "lists",
   "preview": "@preview",
   "order": 2,

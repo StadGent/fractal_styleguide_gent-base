@@ -1,0 +1,41 @@
+{
+  "title": "Button alert",
+  "name": "Button alert",
+  "status": "ready",
+  "handle": "button-alert",
+  "default": "button-small",
+  "order": 1,
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+    {
+      "name": "button-small",
+      "context": {
+        "modifier": "button-small",
+        "icon": "icon-lightning"
+      }
+    },
+    {
+      "name": "button-medium",
+      "context": {
+        "modifier": "button-medium",
+        "icon": "icon-lightning"
+      }
+    },
+    {
+      "name": "button-large",
+      "context": {
+        "modifier": "button-large",
+        "icon": "icon-lightning"
+      }
+    },
+    {
+      "name": "button-disabled",
+      "context": {
+        "disabled": "button-disabled",
+        "icon": "icon-lightning"
+      }
+    }
+  ]
+}

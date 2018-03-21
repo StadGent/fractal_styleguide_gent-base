@@ -1,5 +1,6 @@
 {
   "title": "Link",
+  "hidden": "hidden",
   "name": "Link",
   "handle": "link",
   "order": 12,

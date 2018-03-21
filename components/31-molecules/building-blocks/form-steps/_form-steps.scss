@@ -1,46 +1,4 @@
 .form-progress {
-  @include themify {
-    ul {
-      &::before {
-        background: $form-steps-timeline-color;
-      }
-    }
-
-    .progress {
-      color: $form-steps-inactive-step-label;
-
-      &::before {
-        border: 1.5px solid $form-steps-inactive-prefix-background;
-        background: $form-steps-inactive-prefix-background;
-        color: $form-steps-inactive-prefix-color;
-      }
-
-      &.progress-previous {
-        .count {
-          background-color: $form-steps-previous-step-background;
-        }
-
-        a.indicator {
-          color: $form-steps-previous-step-label;
-        }
-
-        &.progress-active .count {
-          border-color: $form-steps-active-prefix-background;
-          background: $form-steps-active-prefix-background;
-        }
-
-        &.progress-active a.indicator {
-          color: $form-steps-active-step-label;
-        }
-      }
-    }
-
-    .count {
-      color: $form-steps-prefix-color;
-    }
-  }
-
-
   ul {
     display: flex;
     position: relative;
@@ -50,6 +8,8 @@
     }
 
     &::before {
+      @include theme('background', 'color-secondary', 'form-steps-timeline-background');
+
       display: block;
       position: absolute;
       top: .75rem;
@@ -81,6 +41,8 @@
   }
 
   .progress {
+    @include theme('color', 'color-secondary', '$form-steps-inactive-step-label');
+
     width: 1.8rem;
     height: 1.8rem;
     padding-left: 0;
@@ -101,6 +63,10 @@
     }
 
     &::before {
+      @include theme('border', 'color-primary', 'form-steps-prefix-border');
+      @include theme('background', 'color-primary--lighten-1', 'form-steps-prefix-background');
+      @include theme('color', 'color-secondary', 'form-steps-prefix-color');
+
       display: block;
       position: absolute;
       top: 0;
@@ -110,6 +76,7 @@
       width: 1.875rem;
       height: 1.875rem;
       margin: auto;
+      border: 1px solid;
       border-radius: 1.875rem;
       content: '';
 
@@ -120,19 +87,32 @@
     }
 
     &.progress-previous {
-      .count i {
-        margin-right: 0;
-        font-size: .8rem;
-        line-height: 1.6rem;
+      &.progress-active .count {
+        @include theme('border-color', 'color-secondary', 'form-steps-active-prefix-border-color');
+        @include theme('background', 'color-secondary', 'form-steps-active-prefix-background');
+      }
+
+      &.progress-active a.indicator {
+        @include theme('color', 'color-secondary', 'form-steps-active-step-label');
       }
 
       .count {
+        @include theme('background-color', 'color-secondary', 'form-steps-previous-step-background');
+
         border-radius: 100%;
         text-align: center;
         text-indent: 0;
+
+        i {
+          margin-right: 0;
+          font-size: .8rem;
+          line-height: 1.6rem;
+        }
       }
 
       a.indicator {
+        @include theme('color', 'color-secondary', 'form-steps-previous-step-label');
+
         display: block;
       }
     }
@@ -171,6 +151,8 @@
   }
 
   .count {
+    @include theme('color', 'color-secondary', 'form-steps-prefix-color');
+
     display: inline-block;
     position: absolute;
     top: 0;

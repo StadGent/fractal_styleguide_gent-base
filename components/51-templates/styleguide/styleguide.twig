@@ -1,37 +1,33 @@
-  <h1>Styleguide</h1>
+<div class="{{ modifier }}">
+    <h1>Styleguide</h1>
 
-  <h2 class="styleguide-title">Colors</h2>
-  <div class="preview-inner-container">
     {% include '@colors' %}
-  </div>
 
-  <h2 class="styleguide-title">Fonts & text styles</h2>
-  <div class="preview-inner-container">
+    {% include '@logos' %}
+
     {% include '@fonts' %}
+
+    {% include '@headings' %}
+
+    {% include '@paragraph-types' with {
+      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. <u>Vestibulum</u> in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.'
+    } %}
+
+    <!-- {% include '@lists' %} -->
+
+    {% include '@buttons' with { 'text': 'Button' }%}
+
+    <!-- {% include '@image-styles' %} -->
+
+    {% include '@messages-overview' %}
+
+    {% include '@icons-overview' %}
+
+    <!-- {% include '@forms' %} -->
+
+    <!-- {% include '@collections-overview' %} -->
+
+    <!-- {% include '@building-blocks-overview' %} -->
+
+    <!-- {% include '@blocks-overview' %} -->
   </div>
-
-  {% include '@headings' %}
-
-  {% include '@paragraph-types' with {
-    'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. <u>Vestibulum</u> in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.'
-  } %}
-
-  {% include '@lists' %}
-
-  {% include '@buttons' with { 'text': 'Button' }%}
-
-  {% include '@image-styles' %}
-
-  {% include '@messages-overview' %}
-
-  {% include '@icons-overview' %}
-
-  {% include '@forms' %}
-
-  {% include '@grid' %}
-
-  {% include '@collections-overview' %}
-
-  {% include '@building-blocks-overview' %}
-
-  {% include '@blocks-overview' %}

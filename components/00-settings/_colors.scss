@@ -1,0 +1,216 @@
+////
+///
+/// This file defines all color settings, mixins and fucntions necessary
+/// to provide the themify engine the style guide is based on.
+///
+/// @group colors
+/// @author Gert-Jan Meire
+///
+////
+
+///
+/// The colors map defines all basic and secondary colors.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
+$colors: (
+  'cyan': #009de0,
+  'cyan-wcag': #0085b3,
+  'dark-gray': #2c3f48,
+  'white': #fff,
+  'blue': #0340c7,
+  'teal': #29cfc9,
+  'green': #41ba36,
+  'lemon': #ffda00,
+  'yellow': #fab600,
+  'orange': #f95706,
+  'red': #f20f36,
+  'pink': #f09,
+  'purple': #5a0ec4,
+) !default;
+
+
+///
+/// This map describes different tints. These are used to calculate all
+/// color swatches based on the base colors in $colors.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
+$tints: (
+  1: 10%,
+  2: 25%,
+  3: 50%,
+  -1: .75,
+  -2: .5,
+  -3: .25,
+  -4: .1,
+  -5: .06,
+  -6: .02,
+) !default;
+
+///
+/// Themify adds the color for box shadows, this just defines the box shadow
+/// without a specific color so it can be reused.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @type string
+/// @author Gert-Jan Meire
+///
+$box-shadow-primary: 0 2px 8px 0;
+
+///
+/// A function to get a color from the $colors map.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $colors
+///
+/// @param {color} $base-color
+///   The key of the color in the $colors map.
+///
+/// @param {int} $tint [0]
+///   The tint to be applied to the base color.
+///
+/// @param {map} colors$ [$colors]
+///   The colors array to use to calculate the correct color tint.
+///
+@function color($base-color, $tint: 0, $colors: $colors) {
+  @if $tint != 0 {
+    @if $tint > 0 {
+      @return shade($base-color, $tint, $colors);
+    }
+    @if $tint < 0 {
+      @return tint($base-color, $tint, $colors);
+    }
+  }
+  @if $tint == 0 {
+    @if not map-has-key($colors, $base-color) {
+      @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
+    }
+
+    @return map-get($colors, $base-color);
+  }
+};
+
+///
+/// A function to adjust the opacity of a base color.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $tints
+/// @require $colors
+///
+/// @param {color} $base-color
+///   The base color to be modified.
+///
+/// @param {int} $tint
+///   The tint value to modify the base color with.
+///
+/// @param {map} colors$ [$colors]
+///   The colors array to use to calculate the correct color tint.
+///
+@function tint($base-color, $tint, $colors: $colors) {
+  $color-white: #fff;
+
+  @if not map-has-key($colors, $base-color) {
+    @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
+  }
+
+  @if not map-has-key($tints, $tint) {
+    @warn "`#{inspect($tint)}` doesn't seem to be a valid tint value.";
+  }
+
+  @return rgba(map-get($colors, $base-color), map-get($tints, $tint));
+};
+
+
+///
+/// A function to darken a base color.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $tints
+/// @require $colors
+///
+/// @param {color} $base-color
+///   The base color to be modified.
+///
+/// @param {int} $tint
+///   The value to shade the base color with.
+///
+/// @param {map} colors$ [$colors]
+///   The colors array to use to calculate the correct color tint.
+///
+@function shade($base-color, $tint, $colors: $colors) {
+  $color-black: #000;
+
+  @if not map-has-key($colors, $base-color) {
+    @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
+  }
+
+  @if not map-has-key($tints, $tint) {
+    @warn "`#{inspect($tint)}` doesn't seem to be a valid tint value.";
+  }
+
+  @return mix($color-black, map-get($colors, $base-color), map-get($tints, $tint));
+};
+
+///
+/// Themify settings. This determines the colors for all main and subthemes.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
+$themes: (
+  'default': (
+    // Required colors!
+    'color-primary': color('cyan-wcag'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
+    'color-box-shadow': $box-shadow-primary color('cyan-wcag', -4),
+
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
+    'logo-background': color('cyan'),
+    'heading-1-color': color('cyan'),
+  ),
+  'purple': (
+    // Required colors!
+    'color-primary': color('purple'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
+    'color-box-shadow': $box-shadow-primary color('purple', -4),
+
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
+  ),
+  'orange': (
+    // Required colors!
+    'color-primary': color('orange'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
+    'color-box-shadow': $box-shadow-primary color('orange', -4),
+
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
+  )
+) !default;

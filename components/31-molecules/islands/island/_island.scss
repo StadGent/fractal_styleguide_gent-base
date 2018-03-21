@@ -1,10 +1,9 @@
 %island,
 .island {
-  @include themify {
-    border: $island-border;
-  }
+  @include theme('border', 'color-primary', 'island-border');
 
   margin: 1rem auto;
   padding: $gutter-width;
-  border-radius: $radius-3;
+  border: 1px solid;
+  border-radius: border-radius('radius-3');
 }

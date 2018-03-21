@@ -1,45 +1,69 @@
 .messages {
+  @include theme('color', 'color-tertiary--lighten-1', 'status-messages-color');
+
+  $status-message-icon-size: 2.625rem;
+  $status-message-icon-margin: 1.625rem;
+
+  display: grid;
+  position: relative;
+  align-items: center;
   max-width: 40rem;
+  min-height: 4rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
-  border: 1px solid $color-light-blue;
-  border-radius: $radius-2;
-  background-color: $color-white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  padding: .75rem 1.43rem .75rem 6rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+
+  p {
+    width: calc(100% - #{$status-message-icon-size + $status-message-icon-margin});
+    margin: 0;
+  }
 
   &::before {
-    @extend %icon-base-css;
-    @extend %icon-info-circle;
     display: block;
-    margin-right: .5rem;
-    margin-bottom: .5rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.43rem;
+    width: $status-message-icon-size;
+    height: $status-message-icon-size;
+    margin: auto;
+    margin-right: $status-message-icon-margin;
+    border-radius: 100%;
+    background-color: color('white');
+    font-size: 1.5rem;
+    line-height: $status-message-icon-size;
+    text-align: center;
   }
 
   &.messages--status {
-    border-left: 1rem solid darken($color-green, 10%);
-    color: darken($color-green, 10%);
+    @include icon('checkmark');
+
+    background-color: color('green', -3);
 
     &::before {
-      @extend %icon-info-circle;
+      color: color('green');
     }
   }
 
   &.messages--error {
-    border-left: 1rem solid darken($color-red, 10%);
-    color: darken($color-red, 10%);
+    @include icon('cross');
+
+    background-color: color('red', -3);
 
     &::before {
-      @extend %icon-error;
+      color: color('red');
     }
   }
 
   &.messages--warning {
-    border-left: 1rem solid darken($color-orange, 10%);
-    color: darken($color-orange, 20%);
+    @include icon('exclamation-regular');
+
+    background-color: color('yellow', -3);
 
     &::before {
-      @extend %icon-alert;
+      color: color('red');
     }
   }
 

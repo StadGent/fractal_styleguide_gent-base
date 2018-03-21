@@ -1,13 +1,9 @@
 h1,
 .h1,
 %h1 {
-  @include themify {
-    color: $heading-1-color;
-  }
+  @include theme('color', 'color-primary', 'heading-1-color');
 
-  margin-bottom: 1.5rem;
-  font-family: $heading-1-font-family;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.1em;
+  margin-bottom: 2.4rem;
+  font-size: 2.1rem;
+  line-height: 1.33;
 }

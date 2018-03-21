@@ -1,7 +1,7 @@
 img {
   max-width: 100%;
   height: auto;
-  border-radius: $radius-3;
+  border-radius: border-radius('radius-3');
 
   &.circle {
     border-radius: 50%;

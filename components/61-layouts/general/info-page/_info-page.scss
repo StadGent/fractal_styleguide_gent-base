@@ -1,0 +1,29 @@
+.info-page-layout {
+  .page-container .content-container {
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: $gutter-width;
+    }
+
+    @include tablet {
+      @supports (display: grid) {
+        grid-template-columns: 6fr 6fr;
+      }
+    }
+
+    @include desktop {
+      @supports (display: grid) {
+        grid-template-columns: 9fr 5fr;
+      }
+    }
+  }
+
+  .bottom-container {
+    padding: $gutter-width * 2 0;
+  }
+
+  .cta-link {
+    margin: $gutter-width 0;
+  }
+}

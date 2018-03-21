@@ -11,7 +11,7 @@
 
       @include tablet {
         width: span(6);
-        margin-right: gutter();
+        margin-right: $gutter-width;
       }
 
       &.address-street {

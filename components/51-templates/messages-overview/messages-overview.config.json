@@ -1,5 +1,6 @@
 {
   "title": "Messages",
+  "hidden": "hidden",
   "status": "ready",
   "handle": "messages-overview",
   "order": 4

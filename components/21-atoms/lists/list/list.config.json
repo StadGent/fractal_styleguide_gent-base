@@ -1,5 +1,6 @@
 {
   "title": "Lists",
+  "hidden": "hidden",
   "status": "ready",
   "handle": "list",
   "context": {

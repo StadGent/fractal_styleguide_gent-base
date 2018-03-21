@@ -1,69 +1,217 @@
-// Styleguide general settings.
+////
+///
+/// This file defines all general style guide settings.
+///
+/// @group settings
+/// @author Gert-Jan Meire
+///
+////
+
+///
+/// Defines the style guide directory. This is used for things such as
+/// images for backgrounds in SASS.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
 $styleguide-dir: '../styleguide' !default;
+
+///
+/// Generates a unique ID..
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
 $uuid: unique-id();
 
-// Styleguide colors.
-$color-darkest-blue: #2c3f48 !default;
-$color-dark-blue: #00597a !default;
-$color-blue: #007db3 !default;
-$color-light-blue: #d0dde0 !default;
-$color-lightest-blue: #e0edf6 !default;
-$color-darkest-gray: #2c3f46 !default;
-$color-dark-gray: #595f60 !default;
-$color-gray: #9da8af !default;
-$color-light-gray: #e2e2e2 !default;
-$color-medium-lighter-gray: #d5dadd !default;
-$color-lightest-gray: #f4f4f4 !default;
-$color-white: #fff !default;
-$color-green: #4da22e !default;
-$color-red: #a31b00 !default;
-$color-white-blue: #c2e2f0 !default;
-$color-orange: #f39200 !default;
-$color-orange-light: #ffa927 !default;
-$color-orange-lighter: #ffbd5a !default;
+///
+/// Defines the border radius values components can use.
+/// These values have been chosen by the design team.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type map
+/// @author Gert-Jan Meire
+///
+$border-radius: (
+  'radius-0': 0,
+  'radius-1': .5rem,
+  'radius-2': .625rem,
+  'radius-3': 1.125rem,
+  'radius-4': 1.875rem
+) !default;
 
-// Breakpoints for fonts.
+///
+/// Defines the breakpoint for fonts on tablets.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type string
+/// @author Gert-Jan Meire
+///
 $bp-tablet-fonts: 640px !default;
+
+///
+/// Defines the breakpoint for fonts on desktop.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @type string
+/// @author Gert-Jan Meire
+///
 $bp-desktop-fonts: 1360px !default;
 
-// Visual breakpoints.
-$bp-tablet: 640px !default;
+///
+/// Defines the min-width breakpoint for mobile screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$bp-mobile: 320px !default;
+
+///
+/// Defines the min-width breakpoint for tablet screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$bp-tablet: 768px !default;
+
+///
+/// Defines the min-width breakpoint for desktop screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $bp-desktop: 960px !default;
 
-// Font settings.
-$default-font-family: 'Source Sans Pro', arial, sans-serif !default;
-$default-font-weight: 400 !default;
-$default-font-size: 16px !default; //px
-$default-line-height: 1.4em !default; //em
-$primary-font-family: $default-font-family !default;
-$primary-font-weight: $default-font-weight !default;
-$primary-font-size: $default-font-size !default; //px
-$primary-line-height: $default-line-height !default; //em
-$secondary-font-family: expressway, sans-serif !default;
+///
+/// Defines the min-width breakpoint for extra large desktop screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$bp-desktop-xl: 1680px !default;
 
-$bg-outside-container: $color-lightest-gray !default;
-$border-outside-container: 1px solid $color-light-gray !default;
-$default-text-color: $color-dark-gray !default;
-
-// Grid settings
-$grid-columns: 12 !default;
-$gutter-width: 1rem !default;
-
-// Max content width.
+///
+/// Defines the max width of content in a content container.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $bp-max-content: 1440px !default;
 
-// Max viewport.
+///
+/// Defines the max width of a grid container.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
 $bp-container: 1600px !default;
 
-// Border radius.
-$radius-0: 0 !default;
-$radius-1: 8px !default;
-$radius-2: 10px !default;
-$radius-3: 18px !default;
-$radius-4: 30px !default;
+///
+/// Defines the number of grid columns for a given grid container.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$grid-columns: 12 !default;
+
+///
+/// Defines the width of grid gutters.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$gutter-width: 1rem !default;
+
+///
+/// Defines the default font family Fira Sans.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$default-font-family: 'Fira Sans', sans-serif !default;
+
+///
+/// Defines the default font weight.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$default-font-weight: 400 !default;
+
+///
+/// Defines the default font size.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$default-font-size: 16px !default; //px
+
+///
+/// Defines the default line height.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$default-line-height: 1.4em !default; //em
+
+///
+/// Defines the background color of the outside container of the site.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$bg-outside-container: color('white') !default;
+
+///
+/// Defines the border of the outside container of the site.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Gert-Jan Meire
+///
+$border-outside-container: 1px solid color('dark-gray', 2) !default;
 
 // Breadcrumb settings.
-$bg-hover-breadcrumb: $color-lightest-blue !default;
+$bg-hover-breadcrumb: color('blue') !default;
 
 //
 // Section dependent variables!
@@ -72,406 +220,9 @@ $bg-hover-breadcrumb: $color-lightest-blue !default;
 // component that is within a section!
 //
 
-//
-// ATOM SETTINGS.
-//
-
-// Heading 1 settings.
-$heading-1-font-family: $secondary-font-family !default;
-
-// Heading 2 settings.
-$heading-2-font-family: $secondary-font-family !default;
-
-// Heading 3 settings.
-$heading-3-font-family: $secondary-font-family !default;
-
-// Heading 4 settings.
-$heading-4-font-family: $secondary-font-family !default;
-
-// Heading 5 settings.
-$heading-5-font-family: $secondary-font-family !default;
-
-// Heading 6 settings.
-$heading-6-font-family: $secondary-font-family !default;
-
 // Mobile menu
 $hamburger-menu-width: 320px;
 $hamburger-menu-shadow: 0 1px 16.5px 0 rgba(0, 0, 0, .5);
 
 // Map settings.
-$map-border-radius: $radius-1 !default;
-
-//
-// THEMIFY SETTINGS.
-//
-$themes: (
-  'default': (
-    'section-background': $color-white,
-    'section-text-color': $color-dark-gray,
-
-    'heading-1-color': $color-darkest-gray,
-    'heading-2-color': $color-darkest-gray,
-    'heading-3-color': $color-darkest-gray,
-    'heading-4-color': $color-darkest-gray,
-    'heading-5-color': $color-darkest-gray,
-    'heading-6-color': $color-darkest-gray,
-
-    'description-color': $color-gray,
-    'figcaption-color': $color-gray,
-
-    'link-color': $color-blue,
-    'link-color-hover': $color-dark-blue,
-    'link-text-decoration': underline,
-    'link-text-decoration-hover': none,
-
-    'cta-link-background': $color-lightest-blue,
-    'cta-link-background-hover': $color-white,
-
-    'cta-link-border': 1px solid $color-light-gray,
-    'cta-link-border-hover': 1px solid $color-light-gray,
-
-    'cta-link-title-color': $color-darkest-blue,
-    'cta-link-title-color-hover': $color-blue,
-
-    'cta-link-document-color': $color-darkest-blue,
-    'cta-link-document-color-hover': $color-blue,
-
-    'cta-link-icon-border': 1px solid $color-light-gray,
-
-    'field-description-background': $color-lightest-gray,
-    'field-description-color': $color-dark-gray,
-
-    'field-color': $color-dark-gray,
-    'field-background': $color-white,
-    'field-border': 1px solid $color-light-gray,
-    'field-placeholder': $color-light-gray,
-
-    'fieldset-border': 1px solid $color-lightest-gray,
-    'fieldset-color': $color-blue,
-
-    'field-error-background': lighten($color-red, 40%),
-    'field-error-color': $color-darkest-gray,
-    'field-error-border': $color-red,
-
-    'label-color': $color-dark-gray,
-    'label-optional-color': $color-gray,
-
-    'button-color': $color-white,
-    'button-color-hover': $color-white,
-
-    'button-background': $color-blue,
-    'button-background-hover': $color-dark-blue,
-
-    'button-border': none,
-    'button-border-hover': none,
-
-    'tag-color': $color-white,
-    'tag-color-hover': $color-white,
-
-    'tag-background': $color-dark-gray,
-    'tag-background-hover': $color-dark-gray,
-
-    'form-steps-timeline-color': $color-blue,
-    'form-steps-prefix-color': $color-white,
-
-    'form-steps-inactive-step-label': $color-gray,
-    'form-steps-inactive-prefix-background': $color-gray,
-    'form-steps-inactive-prefix-color': $color-white,
-
-    'form-steps-previous-step-label': $color-green,
-    'form-steps-previous-step-background': $color-green,
-
-    'form-steps-active-step-label': $color-blue,
-    'form-steps-active-prefix-background': $color-blue,
-
-    'hamburger-menu-background': $color-darkest-blue,
-    'hamburger-menu-overlay-color': rgba(44, 63, 72, .6),
-
-    'hamburger-menu-link-border': 1.5px solid darken($color-darkest-blue, 2),
-    'hamburger-menu-link-border-active': 1.5px solid $color-dark-blue,
-    'hamburger-menu-link-border-hover': 1.5px solid darken($color-darkest-blue, 2),
-
-    'hamburger-menu-link-background': transparent,
-    'hamburger-menu-link-background-active': $color-dark-blue,
-    'hamburger-menu-link-background-hover': darken($color-darkest-blue, 2),
-
-    'hamburger-menu-link-color': $color-white,
-    'hamburger-menu-link-color-active': $color-white,
-    'hamburger-menu-link-color-hover': $color-white,
-
-    'island-border': 1px solid $color-light-blue,
-  ),
-  'accent': (
-    'section-background': $color-blue,
-    'section-text-color': $color-white,
-
-    'heading-1-color': $color-white,
-    'heading-2-color': $color-white,
-    'heading-3-color': $color-white,
-    'heading-4-color': $color-white,
-    'heading-5-color': $color-white,
-    'heading-6-color': $color-white,
-
-    'description-color': $color-white-blue,
-    'figcaption-color': $color-gray,
-
-    'link-color': $color-white,
-    'link-color-hover': $color-white,
-    'link-text-decoration': underline,
-    'link-text-decoration-hover': none,
-
-    'cta-link-background': $color-light-blue,
-    'cta-link-background-hover': $color-white,
-
-    'cta-link-border': 1px solid $color-light-blue,
-    'cta-link-border-hover': 1px solid $color-white,
-
-    'cta-link-title-color': $color-blue,
-    'cta-link-title-color-hover': $color-blue,
-
-    'cta-link-document-color': $color-blue,
-    'cta-link-document-color-hover': $color-blue,
-
-    'cta-link-icon-border': 1px solid $color-white,
-
-    'field-description-background': $color-lightest-gray,
-    'field-description-color': $color-dark-gray,
-
-    'field-color': $color-dark-gray,
-    'field-background': $color-white,
-    'field-border': 1px solid $color-light-gray,
-    'field-placeholder': $color-light-gray,
-
-    'fieldset-border': 1px solid $color-white,
-    'fieldset-color': $color-white,
-
-    'field-error-background': lighten($color-red, 40%),
-    'field-error-color': $color-darkest-gray,
-    'field-error-border': $color-red,
-
-    'label-color': $color-white,
-    'label-optional-color': $color-white-blue,
-
-    'button-color': $color-white,
-    'button-color-hover': $color-blue,
-
-    'button-background': $color-blue,
-    'button-background-hover': $color-white,
-
-    'button-border': 2px solid $color-white,
-    'button-border-hover': 2px solid $color-white,
-
-    'tag-color': $color-white,
-    'tag-color-hover': $color-white,
-
-    'tag-background': $color-dark-gray,
-    'tag-background-hover': $color-dark-gray,
-
-    'island-border': 1px solid $color-light-blue,
-  ),
-  'wrapper': (
-    'section-background': $color-darkest-gray,
-    'section-text-color': $color-white,
-
-    'heading-1-color': $color-white,
-    'heading-2-color': $color-white,
-    'heading-3-color': $color-white,
-    'heading-4-color': $color-white,
-    'heading-5-color': $color-white,
-    'heading-6-color': $color-white,
-
-    'description-color': $color-gray,
-    'figcaption-color': $color-gray,
-
-    'link-color': $color-white,
-    'link-color-hover': $color-white,
-    'link-text-decoration': underline,
-    'link-text-decoration-hover': none,
-
-    'cta-link-background': $color-darkest-gray,
-    'cta-link-background-hover': $color-white,
-
-    'cta-link-border': 1px solid $color-white,
-    'cta-link-border-hover': 1px solid $color-darkest-gray,
-
-    'cta-link-title-color': $color-white,
-    'cta-link-title-color-hover': $color-darkest-gray,
-
-    'cta-link-document-color': $color-white,
-    'cta-link-document-color-hover': $color-darkest-gray,
-
-    'cta-link-icon-border': 1px solid $color-white,
-
-    'field-description-background': $color-lightest-gray,
-    'field-description-color': $color-dark-gray,
-
-    'field-color': $color-white,
-    'field-background': rgba(255, 255, 255, .2),
-    'field-border': transparent,
-    'field-placeholder': $color-light-gray,
-
-    'fieldset-border': 1px solid $color-white,
-    'fieldset-color': $color-white,
-
-    'field-error-background': lighten($color-red, 40%),
-    'field-error-color': $color-darkest-gray,
-    'field-error-border': $color-red,
-
-    'label-color': $color-white,
-    'label-optional-color': $color-gray,
-
-    'button-color': $color-white,
-    'button-color-hover': $color-darkest-gray,
-
-    'button-background': transparent,
-    'button-background-hover': $color-white,
-
-    'button-border': 2px solid $color-white,
-    'button-border-hover': 2px solid $color-white,
-
-    'tag-color': $color-white,
-    'tag-color-hover': $color-white,
-
-    'tag-background': $color-blue,
-    'tag-background-hover': $color-light-blue,
-
-    'island-border': 1px solid $color-light-blue,
-  ),
-  'highlighted': (
-    'section-background': $color-orange,
-    'section-text-color': $color-darkest-gray,
-
-    'heading-1-color': $color-darkest-gray,
-    'heading-2-color': $color-darkest-gray,
-    'heading-3-color': $color-darkest-gray,
-    'heading-4-color': $color-darkest-gray,
-    'heading-5-color': $color-darkest-gray,
-    'heading-6-color': $color-darkest-gray,
-
-    'description-color': $color-darkest-gray,
-    'figcaption-color': $color-gray,
-
-    'link-color': $color-darkest-gray,
-    'link-color-hover': $color-darkest-gray,
-    'link-text-decoration': underline,
-    'link-text-decoration-hover': none,
-
-    'cta-link-background': $color-orange-light,
-    'cta-link-background-hover': $color-orange-lighter,
-
-    'cta-link-border': 1px solid $color-darkest-gray,
-    'cta-link-border-hover': 1px solid $color-darkest-gray,
-
-    'cta-link-title-color': $color-darkest-gray,
-    'cta-link-title-color-hover': $color-darkest-gray,
-
-    'cta-link-document-color': $color-darkest-gray,
-    'cta-link-document-color-hover': $color-darkest-gray,
-
-    'cta-link-icon-border': 1px solid $color-darkest-gray,
-
-    'field-description-background': $color-lightest-gray,
-    'field-description-color': $color-dark-gray,
-
-    'field-color': $color-dark-gray,
-    'field-background': $color-white,
-    'field-border': 1px solid $color-light-gray,
-    'field-placeholder': $color-light-gray,
-
-    'fieldset-border': 1px solid $color-darkest-gray,
-    'fieldset-color': $color-darkest-gray,
-
-    'field-error-background': lighten($color-red, 40%),
-    'field-error-color': $color-darkest-gray,
-    'field-error-border': $color-red,
-
-    'label-color': $color-darkest-gray,
-    'label-optional-color': $color-darkest-gray,
-
-    'button-color': $color-darkest-gray,
-    'button-color-hover': $color-orange,
-
-    'button-background': $color-orange,
-    'button-background-hover': $color-darkest-gray,
-
-    'button-border': 2px solid $color-darkest-gray,
-    'button-border-hover': 2px solid $color-darkest-gray,
-
-    'tag-color': $color-white,
-    'tag-color-hover': $color-white,
-
-    'tag-background': $color-dark-gray,
-    'tag-background-hover': $color-dark-gray,
-
-    'island-border': 1px solid $color-light-blue,
-  ),
-  'inverse': (
-    'section-background': $color-lightest-blue,
-    'section-text-color': $color-dark-gray,
-
-    'heading-1-color': $color-darkest-gray,
-    'heading-2-color': $color-darkest-gray,
-    'heading-3-color': $color-darkest-gray,
-    'heading-4-color': $color-darkest-gray,
-    'heading-5-color': $color-darkest-gray,
-    'heading-6-color': $color-darkest-gray,
-
-    'description-color': $color-gray,
-    'figcaption-color': $color-gray,
-
-    'link-color': $color-darkest-gray,
-    'link-color-hover': $color-darkest-gray,
-    'link-text-decoration': underline,
-    'link-text-decoration-hover': none,
-
-    'cta-link-background': $color-white,
-    'cta-link-background-hover': $color-lightest-gray,
-
-    'cta-link-border': 1px solid $color-light-gray,
-    'cta-link-border-hover': 1px solid $color-light-gray,
-
-    'cta-link-title-color': $color-darkest-blue,
-    'cta-link-title-color-hover': $color-darkest-blue,
-
-    'cta-link-document-color': $color-blue,
-    'cta-link-document-color-hover': $color-blue,
-
-    'field-description-background': $color-lightest-gray,
-    'field-description-color': $color-dark-gray,
-
-    'field-color': $color-dark-gray,
-    'field-background': $color-white,
-    'field-border': 1px solid $color-light-gray,
-    'field-placeholder': $color-light-gray,
-
-    'fieldset-border': 1px solid $color-blue,
-    'fieldset-color': $color-blue,
-
-    'field-error-background': lighten($color-red, 40%),
-    'field-error-color': $color-darkest-gray,
-    'field-error-border': $color-red,
-
-    'label-color': $color-dark-gray,
-    'label-optional-color': $color-gray,
-
-    'button-color': $color-white,
-    'button-color-hover': $color-white,
-
-    'button-background': $color-blue,
-    'button-background-hover': $color-dark-blue,
-
-    'button-border': none,
-    'button-border-hover': none,
-
-    'tag-color': $color-white,
-    'tag-color-hover': $color-white,
-
-    'tag-background': $color-dark-gray,
-    'tag-background-hover': $color-dark-gray,
-
-    'island-border': 1px solid $color-light-blue,
-  )
-) !default;
-
-// Default $overwrite-themes map to overwrite above $theme map.
-$overwrite-themes: () !default;
+$map-border-radius: border-radius('radius-1') !default;

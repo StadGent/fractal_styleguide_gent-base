@@ -1,10 +1,9 @@
 h4,
 .h4,
 %h4 {
-  @include themify {
-    color: $heading-4-color;
-  }
+  @include theme('color', 'color-tertiary', 'heading-4-color');
 
-  margin-bottom: .75rem;
-  font-family: $heading-4-font-family;
+  margin-bottom: 2.4rem;
+  font-size: 1.2rem;
+  line-height: 1.33;
 }

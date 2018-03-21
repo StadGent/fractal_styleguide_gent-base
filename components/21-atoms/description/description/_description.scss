@@ -1,6 +1,4 @@
 .caption,
 .description {
-  @include themify {
-    color: $description-color;
-  }
+  @include theme('color', 'color-primary', 'description-color');
 }

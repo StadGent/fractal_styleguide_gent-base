@@ -1,9 +1,0 @@
-{
-  "title": "Button drop",
-  "status": "deprecated",
-  "handle": "button-drop",
-  "context": {
-    "text": "Submit",
-    "modifier": "icon icon-search"
-  }
-}

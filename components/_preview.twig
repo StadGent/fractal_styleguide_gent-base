@@ -5,7 +5,6 @@
       <meta charset="utf-8">
       <title>{% block title %}Preview Layout{% endblock %}</title>
 
-      <link media="all" rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <link media="all" rel="stylesheet" href="{{ '/styleguide/vendor/chosen-js/chosen.min.css'| path }}">
       <link media="all" rel="stylesheet" href="{{ '/styleguide/vendor/lightgallery/dist/css/lightgallery.min.css'| path }}">
       <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
@@ -25,9 +24,6 @@
       <!-- Load jQuery -->
       <script type="text/javascript" src="{{ '/styleguide/vendor/jquery/dist/jquery.min.js'|path }}"></script>
 
-      <!-- Load jQuery UI -->
-      <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-
       <script type="text/javascript" src="{{ '/styleguide/vendor/lightgallery/dist/js/lightgallery.min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/vendor/chosen-js/chosen.jquery.min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/vendor/masonry-layout/dist/masonry.pkgd.min.js'|path }}"></script>
@@ -44,14 +40,12 @@
       <script type="text/javascript" src="{{ '/styleguide/js/gallery.binding-min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/js/input-multiselect-chosen.binding-min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/js/input-multiselect-chosen.functions-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/input-date.binding-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/input-date.functions-min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/js/teaser-collection.binding-min.js'|path }}"></script>
 
       <meta name="MobileOptimized" content="320">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
+  <body class="cs--default">
     <div class="container">
       {% block content %}
         <div class="preview-container">

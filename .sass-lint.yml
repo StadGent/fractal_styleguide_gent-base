@@ -4,6 +4,10 @@
 options:
   formatter: stylish
   merge-default-rules: false
+files:
+  ignore:
+    - 'components/11-base/fonts/_icons_template.scss'
+    - 'components/11-base/fonts/_icons.scss'
 rules:
   # Extends
   extends-before-mixins: 2
@@ -35,6 +39,7 @@ rules:
   no-duplicate-properties:
     - 2
     - exclude:
+      - display
       - padding-left
       - padding-right
       - padding-top
@@ -63,7 +68,7 @@ rules:
   no-transition-all: 2
   no-url-protocols: 2
   no-vendor-prefixes: 1
-  no-warn: 2
+  no-warn: 0
   property-units: 0
 
   # Nesting

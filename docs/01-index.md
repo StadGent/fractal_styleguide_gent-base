@@ -9,6 +9,10 @@
 Refer to upcoming changes in our [README](https://github.com/StadGent/fractal_styleguide_gent-base/blob/develop/README.md)
 under "Roadmap".
 
+## SASS documentation (for contributors)
+
+You can find the SASS docs <a href="{{ path '/sassdocs/index.html' }}" target="_blank">here</a>
+
 ## Implementing this style guide in your own project
 
 This style guide aims to be technology independent. This means you should be

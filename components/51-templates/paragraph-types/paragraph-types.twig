@@ -1,26 +1,38 @@
-<h2 class="styleguide-title">Paragraph types</h2>
+<h4 class="styleguide-title">Paragraph types</h4>
 <div class="preview-inner-container">
-  <h3 class="styleguide">Normal paragraph</h3>
+  <h3 class="styleguide">{{ 'Normal paragraph' }}</h3>
   {% include '@paragraph' %}
-  <h3 class="styleguide">Small text paragraph</h3>
+</div>
+
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Small text paragraph' }}</h3>
   {% include '@paragraph--small-text'
     with {
       'modifier': 'small'
     }
   %}
-  <h3 class="styleguide">Caption text paragraph</h3>
+</div>
+
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Caption text paragraph' }}</h3>
   {% include '@paragraph--caption-text'
     with {
     'modifier': 'caption'
     }
   %}
-  <h3 class="styleguide">Left aligned paragraph</h3>
+</div>
+
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Left aligned paragraph' }}</h3>
   {% include '@paragraph--left-text'
     with {
     'modifier': 'text-left'
     }
   %}
-  <h3 class="styleguide">Right aligned paragraph</h3>
+</div>
+
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Right aligned paragraph' }}</h3>
   {% include '@paragraph--right-text'
     with {
     'modifier': 'text-right'

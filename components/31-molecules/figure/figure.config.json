@@ -1,5 +1,6 @@
 {
   "title": "Figure",
+  "hidden": "hidden",
   "status": "ready",
   "context": {
     "figure_figcaption": "Figure caption comes here.",

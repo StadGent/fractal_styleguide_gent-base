@@ -1,11 +1,8 @@
 .field-error {
-  @include themify {
-    border: 1px solid $field-error-border;
-    background: $field-error-background;
-    color: $field-error-color;
-  }
-
   margin-top: .5rem;
   padding: .5rem 1rem;
-  border-radius: $radius-2;
+  border: 1px solid color('red');
+  border-radius: border-radius('radius-1');
+  background: color('red', -3);
+  color: color('red');
 }

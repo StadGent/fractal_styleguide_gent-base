@@ -16,28 +16,14 @@
 }
 
 .gallery {
-  > .main {
-    @include tablet {
-      @include make-mobile-column(12, 1%);
-    }
-
-    @include make-mobile-column(12);
-
-    display: block;
-    margin-bottom: $gutter-width;
-
-    img {
-      width: 100%;
-    }
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .25rem;
   }
 
-  > .thumb {
-    @include tablet {
-      @include make-mobile-column(4, 1%);
-      margin-bottom: 1%;
-    }
-    @include make-mobile-column(6);
-
-    margin-bottom: $gutter-width;
+  > .main {
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
 }

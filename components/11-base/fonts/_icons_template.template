@@ -1,0 +1,94 @@
+////
+/// This is an generated file! Do not change this file. Use the template file
+/// _icons_template.template instead to apply changes.
+///
+/// @group tools
+/// @author Gert-Jan Meire
+///
+////
+
+$id: random(1000);
+
+@font-face {
+  font-family: "<%= fontName %>";
+  src: url('<%= fontPath %><%= fontName %>.eot?v='#{$id});
+  src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+  url('<%= fontPath %><%= fontName %>.woff2') format('woff2'),
+  url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+  url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
+  url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
+}
+
+@mixin <%= cssClass%>-styles {
+  font-family: "<%= fontName %>";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+[class*='<%= cssClass%>'],
+%<%= cssClass%> {
+  @include <%= cssClass%>-styles;
+}
+
+///
+/// A function to return the correct character string.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access private
+/// @author Gert-Jan Meire
+///
+/// @param {string} $filename
+///   The name of the icon.
+///
+@function <%= cssClass%>-char($filename) {
+  $char: "";
+  <% _.each(glyphs, function(glyph) { %>
+    @if $filename == <%= glyph.fileName %> {
+      $char: "\<%= glyph.codePoint %>";
+    }<% }); %>
+
+    @return $char;
+}
+
+///
+/// A function to render an icon before or after an element.
+/// It can also be used as a placeholder instead of a mixin.
+/// NOTE: This is a automatically generated function!
+///
+/// @since 3.0.0
+/// @group tools
+/// @access public
+/// @author Gert-Jan Meire
+/// @require icon-char
+///
+/// @param {string} $filename
+///   The name of the icon.
+///
+/// @param {string} $insert [before]
+///   Wether the icon should be printed before or after the element.
+///
+/// @param {boolean} colors$ [$true]
+///   Should the item be a placeholder @extends or not.
+///
+@mixin <%= cssClass%>($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    @if $extend {
+      @extend %<%= cssClass%>;
+    } @else {
+    @include <%= cssClass%>-styles;
+    }
+    content: <%= cssClass%>-char($filename);
+  }
+}
+
+<% _.each(glyphs, function(glyph) { %>.<%= cssClass%>-<%= glyph.fileName %> {
+  @include <%= cssClass%>(<%= glyph.fileName %>);
+}
+<% }); %>

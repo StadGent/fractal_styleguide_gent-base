@@ -1,9 +1,13 @@
 .db-block-partnership {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
   padding-top: 6.25rem;
   background-image: url('#{$styleguide-dir}/img/svg/stad-gent.svg') ;
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: bottom 2.5rem right;
   background-size: 8.75rem;
-  color: $color-gray;
+  color: color('dark-gray');
   text-align: right;
 }

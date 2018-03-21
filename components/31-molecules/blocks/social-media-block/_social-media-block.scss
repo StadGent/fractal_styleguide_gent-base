@@ -5,12 +5,13 @@
   }
 
   ul {
+    margin: 0;
     padding-left: 0;
     list-style: none;
   }
 
   a {
-    color: $color-gray;
+    color: color('dark-gray');
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -18,46 +19,45 @@
     word-wrap: break-word;
 
     &:visited {
-      color: $color-gray;
+      color: color('dark-gray');
     }
 
     &:hover {
-      color: $color-medium-lighter-gray;
+      color: tint('dark-gray', -2);
     }
 
     &::before {
-      @extend %icon-base-css;
       padding-right: .5rem;
     }
   }
 
-  .facebook {
-    &::before {
-      @extend %icon-facebook;
-    }
-  }
+  // .facebook {
+  //   &::before {
+  //     @extend %icon-facebook;
+  //   }
+  // }
 
-  .twitter {
-    &::before {
-      @extend %icon-twitter;
-    }
-  }
+  // .twitter {
+  //   &::before {
+  //     @extend %icon-twitter;
+  //   }
+  // }
 
-  .linkedin {
-    &::before {
-      @extend %icon-linkedin;
-    }
-  }
+  // .linkedin {
+  //   &::before {
+  //     @extend %icon-linkedin;
+  //   }
+  // }
 
-  .youtube {
-    &::before {
-      @extend %icon-youtube;
-    }
-  }
+  // .youtube {
+  //   &::before {
+  //     @extend %icon-youtube;
+  //   }
+  // }
 
-  .instagram {
-    &::before {
-      @extend %icon-instagram;
-    }
-  }
+  // .instagram {
+  //   &::before {
+  //     @extend %icon-instagram;
+  //   }
+  // }
 }
