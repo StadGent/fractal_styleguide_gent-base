@@ -34,7 +34,6 @@
   }
 
   p {
-    width: calc(100% - #{$status-message-icon-size + $status-message-icon-margin});
     margin: 0;
   }
 
@@ -45,7 +44,7 @@
   &.messages--status {
     @include icon('checkmark');
 
-    background-color: color('green', -3);
+    background-color: color('green', -4);
 
     &::before {
       color: color('green');
@@ -55,7 +54,7 @@
   &.messages--error {
     @include icon('cross');
 
-    background-color: color('red', -3);
+    background-color: color('red', -4);
 
     &::before {
       color: color('red');
