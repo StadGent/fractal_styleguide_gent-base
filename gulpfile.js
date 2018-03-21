@@ -210,7 +210,7 @@ gulp.task('styles:extract', () => {
 gulp.task('js:dist', () => {
   return gulp.src('components/**/*.js')
     .pipe(rename({
-      dirname: '',
+      dirname: ''
     }))
     .pipe(gulp.dest('./public/styleguide/js/'));
 });
@@ -225,7 +225,7 @@ gulp.task('js:dist', () => {
 gulp.task('js:build', () => {
   return gulp.src('components/**/*.js')
     .pipe(rename({
-      dirname: '',
+      dirname: ''
     }))
     .pipe(uglify())
     .pipe(gulp.dest('./build/styleguide/js/'));
@@ -530,7 +530,7 @@ gulp.task('validate', gulp.parallel('styles:validate', 'js:validate', 'axe'), ca
  */
 // todo make sure fractal:build is executed first
 // or it overrides the build dir
-gulp.task('compile', gulp.series('fractal:build' ,gulp.parallel(
+gulp.task('compile', gulp.series('fractal:build', gulp.parallel(
   'styles:build',
   'styles:dist',
   'styles:extract',
@@ -539,7 +539,7 @@ gulp.task('compile', gulp.series('fractal:build' ,gulp.parallel(
   'images:minify'
 )), callback => callback());
 
-gulp.task('compile:dev', gulp.series('fractal:build',gulp.parallel(
+gulp.task('compile:dev', gulp.series('fractal:build', gulp.parallel(
   'styles:dist',
   'js:dist',
   'images:minify'
