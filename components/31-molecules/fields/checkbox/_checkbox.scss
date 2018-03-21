@@ -6,7 +6,7 @@
     // Unchecked and hovered.
     label::before {
       @include theme('background-color', 'color-tertiary--lighten-4', 'checkbox-background-color-hover');
-      @include theme('border-color', 'color-tertiary', 'checkbox-border-color-hover');
+      @include theme('border-color', 'color-tertiary--lighten-1', 'checkbox-border-color-hover');
     }
 
     // Checked and hovered.
@@ -96,5 +96,4 @@
       height: 1rem;
     }
   }
-
 }
