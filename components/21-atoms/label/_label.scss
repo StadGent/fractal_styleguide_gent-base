@@ -1,5 +1,5 @@
 label {
-  @include theme('color', 'color-secondary', 'label-color');
+  @include theme('color', 'color-tertiary', 'label-color');
 
   .label-optional {
     @include theme('color', 'color-secondary', 'label-color-optional');
@@ -7,5 +7,5 @@ label {
 
   display: block;
   margin: 0 0 .5rem;
-  font-size: .8rem;
+  font-size: .7rem;
 }

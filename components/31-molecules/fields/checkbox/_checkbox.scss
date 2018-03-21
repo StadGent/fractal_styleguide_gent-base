@@ -1,0 +1,100 @@
+.checkbox {
+  position: relative;
+
+  // Setup hover states.
+  &:hover {
+    // Unchecked and hovered.
+    label::before {
+      @include theme('background-color', 'color-tertiary--lighten-4', 'checkbox-background-color-hover');
+      @include theme('border-color', 'color-tertiary', 'checkbox-border-color-hover');
+    }
+
+    // Checked and hovered.
+    input[type="checkbox"]:checked + label::before {
+      @include theme('background-color', 'color-primary--lighten-3', 'checkbox-background-color-hover-and-checked');
+      @include theme('border-color', 'color-primary--darken-2', 'checkbox-border-color-hover-and-checked');
+      @include theme('color', 'color-primary--darken-3', 'checkbox-color-hover-and-checked');
+    }
+  }
+
+  input[type="checkbox"] {
+    opacity: 0;
+
+    // Hide checkmark by default.
+    + label::after {
+      content: none;
+    }
+
+    // Checked state.
+    &:checked {
+      // Show checkmark on checked.
+      + label {
+        @include icon('checkmark', 'after');
+
+        font-weight: 700;
+      }
+
+      + label::before {
+        @include theme('background-color', 'color-primary--lighten-5', 'checkbox-background-color-checked');
+        @include theme('border-color', 'color-primary', 'checkbox-border-color-checked');
+      }
+
+      + label::after {
+        @include theme('color', 'color-primary', 'checkbox-checkmark-color');
+      }
+    }
+
+    // Disabled state.
+    &:disabled {
+      + label {
+        font-weight: normal !important; // sass-lint:disable-line no-important
+        cursor: not-allowed;
+
+        &::before {
+          border-color: color('dark-gray', -4) !important; // sass-lint:disable-line no-important
+          background: color('dark-gray', -4) !important; // sass-lint:disable-line no-important
+        }
+
+        &::after {
+          color: color('dark-gray') !important; // sass-lint:disable-line no-important
+        }
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 1.5rem;
+    line-height: 1.1rem;
+    overflow: unset;
+
+    &::before,
+    &::after {
+      position: absolute;
+    }
+
+    &::before {
+      @include theme('background-color', 'color-tertiary--lighten-6', 'checkbox-background-color');
+      @include theme('border-color', 'color-tertiary--lighten-2', 'checkbox-border-color');
+
+      display: inline-block;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid;
+      border-radius: border-radius('radius-1');
+      content: '';
+    }
+
+    &::after {
+      display: inline-block;
+      top: 0;
+      left: .1rem;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+}
