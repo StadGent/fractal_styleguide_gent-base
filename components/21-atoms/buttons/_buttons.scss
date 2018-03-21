@@ -82,7 +82,7 @@
 /// @access public
 /// @author Gert-Jan Meire
 ///
-@mixin button() {
+@mixin button {
   @include button-medium; // Default.
 
   border: 2px solid;

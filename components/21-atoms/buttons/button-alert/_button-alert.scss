@@ -14,6 +14,10 @@
   color: color('white');
   box-shadow: $box-shadow-primary color('red', -3);
 
+  &.button-block {
+    text-align:  center;
+  }
+
   &:hover {
     border-color: color('red', 2);
     background-color: color('red', 2);
