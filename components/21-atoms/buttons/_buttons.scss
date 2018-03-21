@@ -16,9 +16,9 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-small {
-  height: 2.3rem;
-  padding: .6rem 1.625rem .4rem;
-  font-size: .75rem;
+  height: 1.9rem;
+  padding: .6rem 1.3rem;
+  font-size: .6rem;
 }
 
 ///
@@ -30,9 +30,9 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-medium {
-  height: 2.5rem;
-  padding: .6rem 2.25rem .4rem;
-  font-size: .875rem;
+  height: 2.2rem;
+  padding: .6rem 1.8rem;
+  font-size: .7rem;
 }
 
 ///
@@ -44,9 +44,9 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-large {
-  height: 3.125rem;
-  padding: .93rem 2.8rem;
-  font-size: 1rem;
+  height: 2.5rem;
+  padding: .7rem 2.2rem;
+  font-size: .8rem;
 }
 
 ///
@@ -90,6 +90,7 @@
   outline: 0;
   font-family: $default-font-family;
   font-weight: 600;
+  line-height: normal;
   text-align: center;
   cursor: pointer;
 
@@ -103,6 +104,14 @@
 
   &.button-small {
     @include button-small;
+  }
+
+  &.button-medium {
+    @include button-medium;
+  }
+
+  &.button-large {
+    @include button-large;
   }
 
   &.button-icon {
