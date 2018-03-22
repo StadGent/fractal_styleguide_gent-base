@@ -79,31 +79,31 @@ $field-icon-padding: 2.5rem;
   }
 
   &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
 
   &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
 
   &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
 
   &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
 
   &::placeholder {
-    @include theme('color', 'color-secondary--lighten-1', 'fields-placeholder-color');
+    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }
