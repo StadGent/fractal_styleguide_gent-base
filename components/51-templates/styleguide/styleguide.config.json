@@ -58,6 +58,9 @@
       "cross": "cross",
       "lightning": "lightning",
       "marker": "marker",
+      "clock": "clock",
+      "location": "location",
+      "smiley": "smiley",
       "favicon": "favicon",
       "logo": "logo"
     }
