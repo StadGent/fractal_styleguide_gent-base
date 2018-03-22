@@ -17,11 +17,9 @@
         "tel_name": tel_name,
         "tel_id": tel_id
       } %}
-      {% include '@description' with {
-        "description": description
-      } %}
       {% include '@field-message' with {
-        "field_error": field_error
+        "field_error": field_error,
+        "modifier": "error"
       } %}
     </div>
   </div>

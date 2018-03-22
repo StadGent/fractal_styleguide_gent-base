@@ -17,11 +17,9 @@
         "url_id": url_id,
         "url_name": url_name
       } %}
-      {% include '@description' with {
-        "description": description
-      } %}
       {% include '@field-message' with {
-        "field_error": field_error
+        "field_error": field_error,
+        "modifier": "error"
       } %}
     </div>
   </div>
