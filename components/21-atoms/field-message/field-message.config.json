@@ -1,5 +1,6 @@
 {
   "title": "Field message",
+  "name": "field-message",
   "status": "ready",
   "handle": "field-message",
   "context": {
@@ -7,7 +8,7 @@
   },
   "variants": [
     {
-      "default": "field-message-error",
+      "name": "field-message-error",
       "context": {
         "modifier": "error"
       }
