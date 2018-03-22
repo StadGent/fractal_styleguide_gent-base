@@ -1,0 +1,59 @@
+.field-message {
+  @include theme('color', 'color-tertiary--lighten-1', 'field-messages-color');
+
+  $field-message-icon-size: 2.625rem;
+  $field-message-icon-margin: 1.625rem;
+
+  display: grid;
+  position: relative;
+  align-items: center;
+  max-width: 40rem;
+  min-height: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: .75rem 1.43rem .75rem 6rem;
+  font-size: .7rem;
+  line-height: 1.43;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.43rem;
+    width: $field-message-icon-size;
+    height: $field-message-icon-size;
+    margin: auto;
+    margin-right: $field-message-icon-margin;
+    border-radius: 100%;
+    background-color: color('white');
+    font-size: 1.5rem;
+    line-height: $field-message-icon-size;
+    text-align: center;
+  }
+
+  &.success {
+    @include icon('checkmark');
+
+    background-color: color('green', -3);
+
+    &::before {
+      color: color('green');
+    }
+  }
+
+  &.error {
+    @include icon('cross');
+
+    background-color: color('red', -3);
+
+    &::before {
+      color: color('red');
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+
+}
