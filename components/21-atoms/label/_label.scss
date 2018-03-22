@@ -1,11 +1,11 @@
 label {
-  @include theme('color', 'color-tertiary', 'label-color');
+  @include theme('color', 'color-tertiary--lighten-1', 'label-color');
 
   .label-optional {
-    @include theme('color', 'color-secondary', 'label-color-optional');
+    @include theme('color', 'color-tertiary--lighten-1', 'label-color-optional');
   }
 
   display: block;
-  margin: 0 0 .5rem;
+  margin: 0 0 .4rem;
   font-size: .7rem;
 }
