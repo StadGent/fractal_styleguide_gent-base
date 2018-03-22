@@ -8,7 +8,7 @@
   },
   "variants": [
     {
-      "name": "field-message-error",
+      "name": "default",
       "context": {
         "modifier": "error"
       }
