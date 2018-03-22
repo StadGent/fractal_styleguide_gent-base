@@ -16,22 +16,13 @@
         'checkbox_name': checkbox1_name,
         'checkbox_id': checkbox1_id
       } %}
-      {% include '@label' with {
-        "label": checkbox1_label,
-        "for": checkbox1_label_for,
-        "label_optional": checkbox1_label_optional
-      } %}
 
       {% include '@input-checkbox' with {
         'label': label_checkbox2,
         'checkbox_name': checkbox2_name,
         'checkbox_id': checkbox2_id
       } %}
-      {% include '@label' with {
-        "label": checkbox2_label,
-        "for": checkbox2_label_for,
-        "label_optional": checkbox2_label_optional
-      } %}
+
       {% if modifier == 'error' %}
         {% include '@field-message' with {
           "modifier": "error"
