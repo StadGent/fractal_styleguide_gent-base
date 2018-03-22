@@ -1,4 +1,4 @@
-# Input type: search 
+# Input type: search
 
 ## General
 

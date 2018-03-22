@@ -1,4 +1,4 @@
-# Input type: password 
+# Input type: password
 
 ## General
 

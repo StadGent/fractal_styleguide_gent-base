@@ -1,4 +1,4 @@
-# Input type: textarea 
+# Input type: textarea
 
 ## General
 

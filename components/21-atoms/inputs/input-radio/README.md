@@ -1,4 +1,4 @@
-# Input type: radio 
+# Input type: radio
 
 ## General
 
