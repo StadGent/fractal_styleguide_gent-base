@@ -33,4 +33,8 @@
   @if $icon == 'cross' {
     @return '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"> <defs> <path fill="#{$fill-color}" id="a" d="M10 4a1 1 0 0 1 1 1v5a1 1 0 0 1-2 0V5a1 1 0 0 1 1-1zm0 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/> </defs> <g fill="none" fill-rule="evenodd" transform="translate(2 2)"> <mask id="b" fill="#fff"> <use xlink:href="#a"/> </mask> <use fill="#2C3F48" xlink:href="#a"/> <g fill="#23333A" mask="url(#b)"> <path fill="#{$fill-color}" d="M-2-2h24v24H-2z"/> </g> </g> </svg>';
   }
+
+  @if $icon == 'caret-down' {
+    @return '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"> <defs> <path fill="#{$fill-color}" id="a" d="M16.883 9.396a1.168 1.168 0 0 1 1.754 0 1.44 1.44 0 0 1 0 1.912L12.5 18l-6.137-6.692a1.44 1.44 0 0 1 0-1.912 1.168 1.168 0 0 1 1.754 0l4.383 4.78 4.383-4.78z"/> </defs> <g fill="none" fill-rule="evenodd"> <mask id="b" fill="#fff"> <use xlink:href="#a"/> </mask> <use fill="#0340C7" fill-rule="nonzero" xlink:href="#a"/> <g fill="#23333A" mask="url(#b)"> <path fill="#{$fill-color}" d="M0 0h24v24H0z"/> </g> </g> </svg>';
+  }
 }
