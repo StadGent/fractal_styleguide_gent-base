@@ -1,0 +1,5 @@
+input[type="radio"] + span {
+  @include theme('color', 'color-secondary', 'label-color');
+
+  font-weight: bold;
+}
