@@ -27,5 +27,23 @@
         "label": "Option 4"
       }
     ]
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "handle": "multiselect-chosen"
+    },
+    {
+      "name": "with-error",
+      "context": {
+        "modifier": "error"
+      }
+    },
+    {
+      "name": "with-success",
+      "context": {
+        "modifier": "success"
+      }
+    }
+  ]
 }

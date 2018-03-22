@@ -32,12 +32,16 @@
         "for": checkbox2_label_for,
         "label_optional": checkbox2_label_optional
       } %}
-
-      {% include '@field-message' with {
-        "field_error": field_error,
-        "modifier": "error"
-      } %}
-
+      {% if modifier == 'error' %}
+        {% include '@field-message' with {
+          "modifier": "error"
+        } %}
+      {% endif %}
+      {% if modifier == 'success' %}
+        {% include '@field-message' with {
+          "modifier": "success"
+        } %}
+      {% endif %}
     </div>
   </div>
 </fieldset>

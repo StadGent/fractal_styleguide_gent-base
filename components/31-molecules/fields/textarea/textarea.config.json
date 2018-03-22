@@ -14,5 +14,23 @@
 
     "textarea_id": "textarea_id",
     "textarea_name": "textarea_name"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "handle": "textarea"
+    },
+    {
+      "name": "with-error",
+      "context": {
+        "modifier": "error"
+      }
+    },
+    {
+      "name": "with-success",
+      "context": {
+        "modifier": "success"
+      }
+    }
+  ]
 }

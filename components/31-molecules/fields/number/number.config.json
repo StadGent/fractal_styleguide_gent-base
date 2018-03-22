@@ -15,5 +15,23 @@
 
     "number_id": "number_id",
     "number_name": "number_name"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "handle": "number"
+    },
+    {
+      "name": "with-error",
+      "context": {
+        "modifier": "error"
+      }
+    },
+    {
+      "name": "with-success",
+      "context": {
+        "modifier": "success"
+      }
+    }
+  ]
 }

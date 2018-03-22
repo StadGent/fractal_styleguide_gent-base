@@ -13,5 +13,23 @@
 
     "file_id": "file_id",
     "file_name": "file_name"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "handle": "file"
+    },
+    {
+      "name": "with-error",
+      "context": {
+        "modifier": "error"
+      }
+    },
+    {
+      "name": "with-success",
+      "context": {
+        "modifier": "success"
+      }
+    }
+  ]
 }
