@@ -13,5 +13,23 @@
 
     "email_id": "email_id",
     "email_name": "email_name"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "handle": "email"
+    },
+    {
+      "name": "with-error",
+      "context": {
+        "modifier": "error"
+      }
+    },
+    {
+      "name": "with-success",
+      "context": {
+        "modifier": "success"
+      }
+    }
+  ]
 }

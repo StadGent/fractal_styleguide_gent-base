@@ -14,5 +14,23 @@
 
     "tel_id": "tel_id",
     "tel_name": "tel_name"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "handle": "telephone-field"
+    },
+    {
+      "name": "with-error",
+      "context": {
+        "modifier": "error"
+      }
+    },
+    {
+      "name": "with-success",
+      "context": {
+        "modifier": "success"
+      }
+    }
+  ]
 }
