@@ -1,9 +1,0 @@
-{
-  "title": "Input checkbox",
-  "status": "ready",
-  "handle": "input-checkbox",
-  "context": {
-    "checkbox_id": "checkbox_id",
-    "checkbox_name": "checkbox_name"
-  }
-}
