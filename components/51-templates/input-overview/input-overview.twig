@@ -1,0 +1,120 @@
+<h4 class="styleguide-title">Input types</h4>
+<div class="preview-inner-container">
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: date</h5>
+    {% include '@input-date' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: checkbox</h5>
+    {% include '@input-checkbox' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: radio</h5>
+    {% include '@input-radio' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: email</h5>
+    {% include '@input-email' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: file</h5>
+    {% include '@input-file' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: select</h5>
+    {% include '@input-select' with {
+      "options": [
+      {
+        "label": "Option 1"
+      },
+      {
+        "label": "Option 2"
+      },
+      {
+        "optgroup": true,
+        "label": "Option group",
+        "optgroupoptions": [
+          {
+            "label": "Option 3"
+          },
+          {
+            "label": "Option 4"
+          }
+        ]
+      }
+    ]
+  } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: multiselect</h5>
+    {% include '@input-multiselect' with {
+      "options": [
+      {
+        "label": "Option 1"
+      },
+      {
+        "label": "Option 2"
+      },
+      {
+        "label": "Option 3"
+      },
+      {
+        "label": "Option 4"
+      }
+    ]
+    } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: multiselect-chosen</h5>
+    {% include '@input-multiselect-chosen' with {
+      "options": [
+        {
+          "label": "Option 1"
+        },
+        {
+          "label": "Option 2"
+        },
+        {
+          "label": "Option 3"
+        },
+        {
+          "label": "Option 4"
+        }
+      ]
+    } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: number</h5>
+    {% include '@input-number' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: password</h5>
+    {% include '@input-password' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: search</h5>
+    {% include '@input-search' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: tel</h5>
+    {% include '@input-tel' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: text</h5>
+    {% include '@input-text' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: url</h5>
+    {% include '@input-url' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: textarea</h5>
+    {% include '@input-textarea' with { } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h5 class="styleguide-title">Input type: submit</h5>
+    {% include '@input-submit' with {
+      "value": "Submit"
+    } %}
+  </div>
+</div>
