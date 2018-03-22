@@ -1,6 +1,5 @@
-# Input type: date 
+# Input type: checkbox
 
 ## General
 
 For information about input fields see the general docs about Forms.
-
