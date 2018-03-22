@@ -1,4 +1,4 @@
-# Input type: date 
+# Input type: number 
 
 ## General
 
