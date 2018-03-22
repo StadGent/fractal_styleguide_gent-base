@@ -17,11 +17,9 @@
         "textarea_id": textarea_id,
         "textarea_name": textarea_name
       } %}
-      {% include '@description' with {
-        "description": description,
-      } %}
       {% include '@field-message' with {
-        "field_error": field_error
+        "field_error": field_error,
+        "modifier": "error"
       } %}
     </div>
   </div>

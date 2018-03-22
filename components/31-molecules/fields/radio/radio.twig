@@ -33,11 +33,9 @@
         "label_optional": radio2_label_optional
       } %}
 
-      {% include '@description' with {
-        "description": description
-      } %}
       {% include '@field-message' with {
-        "field_error": field_error
+        "field_error": field_error,
+        "modifier": "error"
       } %}
 
     </div>

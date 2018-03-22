@@ -1,5 +1,6 @@
 .field-message {
   @include theme('color', 'color-tertiary--lighten-1', 'field-messages-color');
+  @include icon('accolade-full', 'after');
 
   $field-message-icon-size: 2.625rem;
   $field-message-icon-margin: 1.625rem;
@@ -9,7 +10,7 @@
   align-items: center;
   max-width: 40rem;
   min-height: 4rem;
-  margin-top: 1rem;
+  margin-top: 1.7rem;
   margin-bottom: 1rem;
   padding: .75rem 1.43rem .75rem 6rem;
   font-size: .7rem;
@@ -30,6 +31,15 @@
     font-size: 1.5rem;
     line-height: $field-message-icon-size;
     text-align: center;
+  }
+
+  &::after {
+    position: absolute;
+    top: -1.5rem;
+    left: 1.6rem;
+    background: transparent;
+    color: color('red');
+    font-size: 1.2rem;
   }
 
   &.success {
@@ -55,5 +65,4 @@
   a {
     color: inherit;
   }
-
 }

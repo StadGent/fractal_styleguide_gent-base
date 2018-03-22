@@ -19,11 +19,9 @@
           "number_id": number_id
         }
       %}
-      {% include '@description' with {
-      "description": description,
-      }%}
       {% include '@field-message' with {
-        "field_error": field_error
+        "field_error": field_error,
+        "modifier": "error"
       } %}
     </div>
   </div>

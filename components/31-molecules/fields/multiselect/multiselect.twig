@@ -18,11 +18,9 @@
         "multiselect_name": multiselect_name,
         "options": options
       } %}
-      {% include '@description' with {
-        "description": description
-      } %}
       {% include '@field-message' with {
-        "field_error": field_error
+        "field_error": field_error,
+        "modifier": "error"
       } %}
     </div>
   </div>
