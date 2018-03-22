@@ -33,14 +33,6 @@
     text-align: center;
   }
 
-  p {
-    margin: 0;
-  }
-
-  a {
-    color: inherit;
-  }
-
   &.messages--status {
     @include icon('checkmark');
 
@@ -69,5 +61,13 @@
     &::before {
       color: color('red');
     }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
   }
 }
