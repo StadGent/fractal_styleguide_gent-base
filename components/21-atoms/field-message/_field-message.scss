@@ -13,6 +13,7 @@
   margin-top: 1.7rem;
   margin-bottom: 1rem;
   padding: .75rem 1.43rem .75rem 6rem;
+  border-radius: border-radius('radius-1');
   font-size: .7rem;
   line-height: 1.43;
 
@@ -35,7 +36,7 @@
 
   &::after {
     position: absolute;
-    top: -1.5rem;
+    top: -1.4rem;
     left: 1.6rem;
     font-size: 1.2rem;
   }
