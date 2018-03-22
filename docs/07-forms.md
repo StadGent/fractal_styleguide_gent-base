@@ -1,6 +1,6 @@
-## Input fields
+# Input fields
 
-### UX / Accessibility
+## UX / Accessibility
 
 * Adjust the width of your form fields so it matches the length of the
   expected input, e.g. make a zip code field shorter.
