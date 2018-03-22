@@ -1,9 +1,0 @@
-{
-  "title": "Field error",
-  "hidden": "hidden",
-  "status": "ready",
-  "handle": "field-error",
-  "context": {
-    "field_error": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam."
-  }
-}
