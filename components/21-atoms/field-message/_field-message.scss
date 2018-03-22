@@ -44,28 +44,28 @@
   &.success {
     @include icon('checkmark');
 
-    background-color: color('green', -3);
+    background-color: color('green', -4);
 
     &::before {
       color: color('green');
     }
 
     &::after {
-      color: color('green', -3);
+      color: color('green', -4);
     }
   }
 
   &.error {
     @include icon('cross');
 
-    background-color: color('red', -3);
+    background-color: color('red', -4);
 
     &::before {
       color: color('red');
     }
 
     &::after {
-      color: color('red', -3);
+      color: color('red', -4);
     }
   }
 
