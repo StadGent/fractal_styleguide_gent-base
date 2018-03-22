@@ -1,4 +1,4 @@
-# Input type: url 
+# Input type: url
 
 ## General
 

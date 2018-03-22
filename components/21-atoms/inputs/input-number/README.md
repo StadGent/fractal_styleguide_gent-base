@@ -1,4 +1,4 @@
-# Input type: number 
+# Input type: number
 
 ## General
 

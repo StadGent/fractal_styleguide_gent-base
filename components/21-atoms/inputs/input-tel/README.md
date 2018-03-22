@@ -1,4 +1,4 @@
-# Input type: tel 
+# Input type: tel
 
 ## General
 

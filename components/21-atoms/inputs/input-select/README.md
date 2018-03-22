@@ -1,4 +1,4 @@
-# Input type: select 
+# Input type: select
 
 ## General
 

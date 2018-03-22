@@ -1,4 +1,4 @@
-# Input type: email 
+# Input type: email
 
 ## General
 

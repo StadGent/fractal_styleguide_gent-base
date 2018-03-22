@@ -1,4 +1,4 @@
-# Input type: file 
+# Input type: file
 
 ## General
 

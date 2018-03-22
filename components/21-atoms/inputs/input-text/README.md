@@ -1,4 +1,4 @@
-# Input type: text 
+# Input type: text
 
 ## General
 
