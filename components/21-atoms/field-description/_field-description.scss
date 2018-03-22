@@ -1,19 +1,10 @@
 .field-description {
-
-  @include theme('background-color', 'color-primary--lighten-1', 'field-description-background');
-  @include theme('color', 'color-primary', 'field-description-color');
+  @include theme('background-color', 'color-primary--lighten-4', 'field-description-background');
+  @include theme('color', 'color-tertiary--lighten-1', 'field-description-color');
 
   position: relative;
   padding: .5rem .5rem .5rem 2.5rem;
   border-radius: border-radius('radius-1');
-  font-size: .9rem;
-  line-height: 1.1rem;
-
-  &::before {
-    position: absolute;
-    top: .5rem;
-    left: .75rem;
-    font-size: 1.25rem;
-  }
-  @include theme('color', 'color-primary', 'figcaption-color');
+  font-size: .7rem;
+  line-height: 1.4;
 }
