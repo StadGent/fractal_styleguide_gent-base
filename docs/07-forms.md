@@ -11,4 +11,4 @@
   sign the user up to a newsletter.
 * If you validate an input field, delay the validation so that you don’t show
   error messages while the user is still filling in the field.
-* On mobile :use the right keyboard to match the input data you need.
+* On mobile use the right keyboard to match the input data you need.
