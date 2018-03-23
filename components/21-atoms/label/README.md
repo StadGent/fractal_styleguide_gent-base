@@ -1,5 +1,7 @@
 # Label
 
+## UX & accessibility
+
 A label tells the user what the corresponding input field means.
 
 * Use short and descriptive labels so users can quickly scan your form.
