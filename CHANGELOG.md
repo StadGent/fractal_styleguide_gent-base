@@ -47,6 +47,7 @@ All notable changes to this style guide are documented here.
 > Did some refactoring to the SASS partials. Most of the input field styling
 > can now be found in the `_forms.scss` partial.
 
+* DTGB-407: Changed the default font size breakpoints.
 
 ### 2.11.0
 
