@@ -1,14 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-    <defs>
-        <path id="a" d="M11.488 15.845V6.022c0-.565.47-1.022 1.05-1.022.579 0 1.048.457 1.048 1.022v9.745l2.623-2.739a1.018 1.018 0 0 1 1.484 0 1.13 1.13 0 0 1 0 1.55L12.5 20l-5.193-5.422a1.13 1.13 0 0 1 0-1.55 1.018 1.018 0 0 1 1.484 0l2.697 2.817z"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd">
-        <mask id="b" fill="#fff">
-            <use xlink:href="#a"/>
-        </mask>
-        <use fill="#0340C7" fill-rule="nonzero" xlink:href="#a"/>
-        <g fill="#23333A" mask="url(#b)">
-            <path d="M0 0h24v24H0z"/>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <path fill="#000" fill-rule="evenodd" d="M15.438 26.56l-5.999-6A1.495 1.495 0 0 1 9 19.5a1.5 1.5 0 0 1 2.56-1.06L15 21.879V7.499a1.5 1.5 0 1 1 3 0v14.38l3.44-3.44a1.5 1.5 0 1 1 2.12 2.122l-5.999 5.999c-.14.14-.307.25-.49.327l-.025.007c-.17.067-.353.106-.546.106-.194 0-.377-.04-.547-.106l-.024-.007a1.524 1.524 0 0 1-.49-.327z"/>
 </svg>
