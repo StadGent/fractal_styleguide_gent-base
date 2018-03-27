@@ -38,6 +38,7 @@ All notable changes to this style guide are documented here.
 * DTGB-214: Added new styling to buttons.
 * DTGB-218: Added new logo.
 * DTGB-258: Added gulp task to generate iconfont.
+* DTGB-283: Updated the license file to GPLv2.
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
 * DTGB-180: Added gulp task to perform accessibility checks.
 * DTGB-209: Added new styling for baic input field atoms.
