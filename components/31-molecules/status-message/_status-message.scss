@@ -34,8 +34,6 @@
   }
 
   &.messages--status {
-    @include icon('checkmark');
-
     background-color: color('green', -4);
 
     i {
@@ -44,8 +42,6 @@
   }
 
   &.messages--error {
-    @include icon('cross');
-
     background-color: color('red', -4);
 
     i {
@@ -54,8 +50,6 @@
   }
 
   &.messages--warning {
-    @include icon('exclamation-regular');
-
     background-color: color('yellow', -3);
 
     i {
