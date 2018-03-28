@@ -1,12 +1,29 @@
 {
   "title": "Lists",
-  "hidden": "hidden",
   "status": "ready",
   "handle": "list",
+  "default": "unordered-list",
   "context": {
+    "type": "unordered",
     "items": [
       "item 1",
       "item 2"
     ]
-  }
+  },
+  "variants": [
+    {
+      "name": "Ordered list",
+      "handle": "ordered-list",
+      "context": {
+        "type": "ordered"
+      }
+    },
+    {
+      "name": "List with links",
+      "handle": "links-list",
+      "context": {
+        "type": "links"
+      }
+    }
+  ]
 }

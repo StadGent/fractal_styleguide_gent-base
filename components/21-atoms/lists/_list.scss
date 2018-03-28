@@ -4,27 +4,12 @@ ol {
   margin-left: 1rem;
 
   &.links {
-    padding-left: 0;
-    list-style: none;
-
-    li {
-      position: relative;
-      padding-left: .93rem;
-
-      &::before {
-        position: absolute;
-        top: .25rem;
-        left: 0;
-      }
-    }
+    @extend %list-no-style;
   }
 
-  &.no-style {
-    @extend %list-no-style;
-
-    li a i {
-      margin-right: .5rem;
-    }
+  a {
+    font-size: 1rem;
+    font-weight: normal;
   }
 }
 

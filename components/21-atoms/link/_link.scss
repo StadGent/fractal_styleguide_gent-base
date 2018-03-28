@@ -1,23 +1,42 @@
 a {
-  // @include element-states($link-color, $link-color-hover);
-  // @include element-states(underline, none, $property: 'text-decoration');
+  @include theme('color', 'color-primary', 'link-color');
 
   transition: color .11s ease-in-out;
+  font-weight: 600;
+  text-decoration: underline;
   cursor: pointer;
 
   &:focus {
     outline: thin dotted;
   }
 
-  &.btn {
-    text-decoration: none !important; // sass-lint:disable-line no-important
-  }
+  //
+  // @TODO: Add hover state (waiting for design specifications.)
+  //
+  // &:hover {}
 
-  &.external-link {
-    &::before {
-      display: inline-block;
-      margin-right: .25rem;
-      text-decoration: none;
+  // @TODO: Add external-link variant (waiting for design specifications.)
+  // &.external-link {
+  //   &::before {
+  //     @extend %icon-base-css;
+  //     @extend %icon-newtab;
+
+  //     display: inline-block;
+  //     margin-right: .25rem;
+  //     text-decoration: none;
+  //   }
+  // }
+
+  &.read-more-link {
+    @include icon('arrow-right', 'after');
+
+    line-height: 1rem;
+    text-decoration: none;
+
+    &::after {
+      position: relative;
+      top: .15rem;
+      margin-left: .5rem;
     }
   }
 }

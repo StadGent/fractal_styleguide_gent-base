@@ -10,6 +10,7 @@ All notable changes to this style guide are documented here.
 
 ### 3.0.0
 
+* DTGB-203: Refactored gulpfile to gulp ^4.0.0
 * DTGB-144: Added SassDoc generation for external developers.
 * DTGB-147: Redefined the color palletes and color schemes.
 
@@ -47,6 +48,7 @@ All notable changes to this style guide are documented here.
 > Did some refactoring to the SASS partials. Most of the input field styling
 > can now be found in the `_forms.scss` partial.
 
+* DTGB-407: Changed the default font size breakpoints.
 
 ### 2.11.0
 
