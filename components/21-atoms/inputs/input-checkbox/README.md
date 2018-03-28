@@ -12,4 +12,4 @@ Use checkboxes
 * to select terms and conditions or options for another input field.
 * to opt-in/out.
 * when the user has 7 or less options to choose from. For higher numbers, use
-  a dropdown.
+  a multiselect field.
