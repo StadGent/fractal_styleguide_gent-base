@@ -1,22 +1,21 @@
 .messages {
   @include theme('color', 'color-tertiary--lighten-1', 'status-messages-color');
 
-  $status-message-icon-size: 2.6rem;
-  $status-message-icon-margin: 2.6rem;
+  $status-message-icon-size: 2.1rem;
+  $status-message-icon-margin: 2.1rem;
 
   display: grid;
   position: relative;
   align-items: center;
   max-width: 40rem;
-  min-height: 4rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: .6rem 1.2rem .6rem 5rem;
+  padding: 1.1rem 1.2rem 1.1rem 5rem;
   border-radius: border-radius('radius-1');
   font-size: .7rem;
   line-height: 1.43;
 
-  &::before {
+  i {
     display: block;
     position: absolute;
     top: 0;
@@ -38,7 +37,7 @@
 
     background-color: color('green', -4);
 
-    &::before {
+    i {
       color: color('green');
     }
   }
@@ -48,7 +47,7 @@
 
     background-color: color('red', -4);
 
-    &::before {
+    i {
       color: color('red');
     }
   }
@@ -58,7 +57,7 @@
 
     background-color: color('yellow', -3);
 
-    &::before {
+    i {
       color: color('red');
     }
   }
