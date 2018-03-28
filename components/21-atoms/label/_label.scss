@@ -3,6 +3,8 @@ label {
 
   .label-optional {
     @include theme('color', 'color-tertiary--lighten-1', 'label-color-optional');
+
+    font-size: .7rem;
   }
 
   display: block;
