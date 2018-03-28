@@ -1,6 +1,5 @@
 {
   "title": "Link",
-  "hidden": "hidden",
   "name": "Link",
   "handle": "link",
   "order": 12,
@@ -20,6 +19,12 @@
       "name": "external-link",
       "context": {
         "modifier": "external-link"
+      }
+    },
+    {
+      "name": "read-more-link",
+      "context": {
+        "modifier": "read-more-link"
       }
     }
   ]

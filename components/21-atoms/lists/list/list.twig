@@ -1,5 +1,23 @@
-<ul class="{{ modifier }}">
-    {% for item in items %}
-        <li>{{ item }}</li>
-    {% endfor %}
-</ul>
+{% if type == 'ordered' %}
+  <ol class="{{ modifier }}">
+      {% for item in items %}
+          <li>{{ item }}</li>
+      {% endfor %}
+  </ol>
+{% endif %}
+
+{% if type == 'unordered' %}
+  <ul class="{{ modifier }}">
+      {% for item in items %}
+          <li>{{ item }}</li>
+      {% endfor %}
+  </ul>
+{% endif %}
+
+{% if type == 'links' %}
+  <ul class="links {{ modifier }}">
+      {% for item in items %}
+          <li><a href="#">{{ item }}</a></li>
+      {% endfor %}
+  </ul>
+{% endif %}
