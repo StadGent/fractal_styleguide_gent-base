@@ -7,6 +7,6 @@ For more information on the use of the Gent icon font see the notes in the
 
 ## Web accessibility
 
-* Icons are not used as the only means to convey the information. They can only
-  be used when their context also defines their meaning.
+* Icons are not used as the only means to convey the information, i.e.
+  icons are decorative.
 * The icon must have the aria-hidden=true attribute.

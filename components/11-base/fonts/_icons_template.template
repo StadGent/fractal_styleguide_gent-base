@@ -78,7 +78,7 @@ $id: random(1000);
 ///   Should the item be a placeholder @extends or not.
 ///
 @mixin <%= cssClass%>($filename, $insert: before, $extend: true) {
-  &:#{$insert} {
+  &[aria-hidden=true]:#{$insert} {
     @if $extend {
       @extend %<%= cssClass%>;
     } @else {
@@ -88,7 +88,7 @@ $id: random(1000);
   }
 }
 
-<% _.each(glyphs, function(glyph) { %>.<%= cssClass%>-<%= glyph.fileName %> {
+<% _.each(glyphs, function(glyph) { %>.<%= cssClass%>-<%= glyph.fileName %>[aria-hidden="true"] {
   @include <%= cssClass%>(<%= glyph.fileName %>);
 }
 <% }); %>
