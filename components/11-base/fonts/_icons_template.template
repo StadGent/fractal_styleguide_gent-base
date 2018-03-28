@@ -78,7 +78,7 @@ $id: random(1000);
 ///   Should the item be a placeholder @extends or not.
 ///
 @mixin <%= cssClass%>($filename, $insert: before, $extend: true) {
-  &[aria-hidden=true]:#{$insert} {
+  &:#{$insert} {
     @if $extend {
       @extend %<%= cssClass%>;
     } @else {
