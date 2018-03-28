@@ -32,6 +32,10 @@
         @include icon('checkmark', 'after');
 
         font-weight: 700;
+
+        &::after {
+          font-size: 1.2rem;
+        }
       }
 
       + label::before {
@@ -91,7 +95,7 @@
     &::after {
       display: inline-block;
       top: 0;
-      left: .1rem;
+      left: -.1rem;
       width: 1rem;
       height: 1rem;
     }
