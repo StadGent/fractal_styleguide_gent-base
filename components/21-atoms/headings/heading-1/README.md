@@ -1,5 +1,7 @@
 # Headings
 
+## General
+
 Headers create structure.
 They provide a quick way to scan the main sections of a website.
 
@@ -14,3 +16,6 @@ They provide a quick way to scan the main sections of a website.
 * Don’t skip headings: e.g. do not jump from H1 to H3.
 * Currently, only Headings 1 to 3 are used.
 
+## Web accessibility
+
+* Headings are visually and syntactically connected to their content.
