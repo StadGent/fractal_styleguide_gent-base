@@ -118,12 +118,18 @@
   }
 
   &.button-icon {
-    padding-right: .4rem;
+    position: relative;
+    padding-right: 1.6rem;
     padding-left: .4rem;
     text-align: left;
 
     i {
-      margin-left: 1.2rem;
+      position: absolute;
+      top: 0;
+      right: .2rem;
+      bottom: 0;
+      margin: auto;
+      height: .8rem;
     }
   }
 }

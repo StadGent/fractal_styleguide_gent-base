@@ -44,7 +44,6 @@ $field-icon-padding: 2.5rem;
     padding-right: $field-icon-padding;
     border: 0;
     background: color('dark-gray', -5) svg-url($svg-lock-closed) $field-icon-position;
-    background-size: 2%;
     cursor: not-allowed;
   }
 
@@ -70,7 +69,6 @@ $field-icon-padding: 2.5rem;
     padding-right: $field-icon-padding;
     border: 1px solid color('red');
     background: color('red', -6) svg-url($svg-error) $field-icon-position;
-    background-size: 2%;
     color: color('red');
     font-style: italic;
 
