@@ -1,12 +1,11 @@
 .site-logo {
-  @include icon('logo');
+  @include icon('logo-nl');
 
-  font-size: 5rem;
+  font-size: 8rem;
   line-height: 5rem;
   text-decoration: none;
 
   &::before {
-    @include theme('background-color', 'color-primary', 'logo-background');
-    @include theme('color', 'color-secondary', 'logo-color');
+    @include theme('color', 'color-primary', 'logo-color');
   }
 }

@@ -37,7 +37,10 @@
       "star-full": "star-full",
       "star-half": "star-half",
       "favicon": "favicon",
-      "logo": "logo"
+      "logo-nl": "logo-nl",
+      "logo-en": "logo-en",
+      "logo-fr": "logo-fr",
+      "logo-sp": "logo-sp"
     }
   }
 }
