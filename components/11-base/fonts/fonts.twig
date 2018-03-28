@@ -2,6 +2,12 @@
 <div class="preview-inner-container styleguide-secondary-colors">
   <p>{{ 'Base font-size (mobile, until 1920px): 16px'}}</p>
   <p>{{ 'Base font-size (large desktop, starting from 1920px): 20px'}}</p>
-
   <p>{{ 'Elements that deviate from these values are to be scaled with rems.'}}</p>
+  <p>
+    For better readable SASS code we opted for a default font size of 20px.
+    Therefor the body element and all elements inside it get a font-size of
+    .8rem (which is a computed value of 16px).
+    This allows us to calculate REM values by dividing by 20 instead of 16,
+    which in turn gives us more readable REM values.
+  </p>
 </div>
