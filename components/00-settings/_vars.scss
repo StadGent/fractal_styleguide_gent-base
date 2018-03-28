@@ -49,17 +49,6 @@ $border-radius: (
 ) !default;
 
 ///
-/// Defines the breakpoint for fonts on tablets.
-///
-/// @since 3.0.0
-/// @group settings
-/// @access public
-/// @type string
-/// @author Gert-Jan Meire
-///
-$bp-tablet-fonts: 640px !default;
-
-///
 /// Defines the breakpoint for fonts on desktop.
 ///
 /// @since 3.0.0
@@ -68,7 +57,7 @@ $bp-tablet-fonts: 640px !default;
 /// @type string
 /// @author Gert-Jan Meire
 ///
-$bp-desktop-fonts: 1360px !default;
+$bp-desktop-xl-fonts: 1920px !default;
 
 ///
 /// Defines the min-width breakpoint for mobile screens.

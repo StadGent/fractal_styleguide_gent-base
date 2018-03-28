@@ -14,11 +14,7 @@ html {
   line-height: $default-line-height;
   box-sizing: border-box;
 
-  @include breakpoint($bp-tablet-fonts) {
-    font-size: $default-font-size + 2;
-  }
-
-  @include breakpoint($bp-desktop-fonts) {
+  @include breakpoint($bp-desktop-xl-fonts) {
     font-size: $default-font-size + 4;
   }
 }
