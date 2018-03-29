@@ -1,4 +1,10 @@
-<label for="search" class="Tree-title">Filter</label>
-<div style="padding-left:1rem; margin-bottom: .5rem">
+<label for="search" class="Tree-title" style="display:inline-block">Filter</label>
+<div style="padding-left:1rem; margin-bottom: .5rem; display:flex">
 <input id="search" type="text" autocomplete="off" />
+<button id="search-btn" style="font-size:.875rem; padding: 0 .2rem; border:1px solid rgba(0,0,0,.2); border-radius: 2px">filter</button>
+</div>
+<div style="padding-left:1rem; margin-bottom: 1.5rem;">
+<input id="auto-search" type="checkbox" style="vertical-align:middle">
+<label for="auto-search" style="font-size:.875rem">auto filter</label>
+<span aria-live="polite" id="search-result"></span>
 </div>
