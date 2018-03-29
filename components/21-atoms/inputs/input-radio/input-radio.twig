@@ -3,6 +3,9 @@
         id="{{ radio_id }}"
         name="{{ radio_name }}"
         class="radio {% if modifier %}{{ modifier }}{% endif %}"
+        {% if disabled %}
+          disabled="disabled"
+        {% endif %}
   />
   <label for="{{ radio_id }}">Radio label</label>
 </div>

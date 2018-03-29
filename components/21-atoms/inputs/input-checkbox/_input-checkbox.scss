@@ -1,8 +1,15 @@
 input[type="checkbox"] {
-  &.success {
-    color: color('green');
+  [class*="cs--"] & {
+    &.success + label {
+      color: color('green');
+    }
+
+    &.error + label {
+      color: color('red');
+    }
   }
-  + span {
-    @include theme('color', 'color-secondary', 'label-color');
+
+  + label {
+    @include theme('color', 'color-tertiary', 'label-color');
   }
 }
