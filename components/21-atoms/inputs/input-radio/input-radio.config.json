@@ -4,7 +4,8 @@
   "handle": "input-radio",
   "context": {
     "radio_id": "radio_id",
-    "radio_name": "radio_name"
+    "radio_name": "radio_name",
+    "radio_label": "radio label"
   },
   "variants": [
     {
