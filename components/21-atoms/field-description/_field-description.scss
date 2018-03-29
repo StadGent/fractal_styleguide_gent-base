@@ -9,7 +9,7 @@
   line-height: 1.4;
 
   &::after {
-    @include theme('background-image', 'color-primary-accolade', 'field-description-accolade-color');
+    @include theme('background-image', 'color-primary-accolade', 'field-description-accolade');
 
     display: block;
     position: absolute;
