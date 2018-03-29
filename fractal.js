@@ -62,10 +62,10 @@ fractal.web.set('static.mount', '');
 fractal.web.set('builder.dest', __dirname + 'build');
 
 const ghentTheme = mandelbrot({
-  nav: ["search", "components", "docs"],
+  nav: ['search', 'components', 'docs'],
   scripts: [
-    "default",
-    "/js/search.js"
+    'default',
+    '/js/search.js'
   ]
 });
 

@@ -1,10 +1,10 @@
+'use strict';
 (function () {
-  'use strict';
-  var components = document.querySelector('#tree-components'),
-    inputField = document.querySelector('#search'),
-    button = document.querySelector('#search-btn'),
-    autoSearch = document.querySelector('#auto-search'),
-    result = document.querySelector('#search-result');
+  var components = document.querySelector('#tree-components');
+  var inputField = document.querySelector('#search');
+  var button = document.querySelector('#search-btn');
+  var autoSearch = document.querySelector('#auto-search');
+  var result = document.querySelector('#search-result');
 
   var hide = function (elem, next) {
     if (!(elem.tagName === 'LI' || elem.tagName === 'UL')) {
@@ -51,8 +51,8 @@
   };
 
   var filter = function (e) {
-    var spans = components.querySelectorAll('span'),
-      value = inputField.value;
+    var spans = components.querySelectorAll('span');
+    var value = inputField.value;
 
     var number = spans.length;
 
