@@ -1,7 +1,6 @@
 .field-description {
   @include theme('background-color', 'color-primary--lighten-4', 'field-description-background');
   @include theme('color', 'color-tertiary--lighten-1', 'field-description-color');
-  @include icon('accolade-full', 'after');
 
   position: relative;
   padding: .7rem 1.1rem;

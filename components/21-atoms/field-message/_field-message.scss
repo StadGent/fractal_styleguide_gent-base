@@ -1,6 +1,5 @@
 .field-message {
   @include theme('color', 'color-tertiary--lighten-1', 'field-messages-color');
-  @include icon('accolade-full', 'after');
 
   $field-message-icon-size: 1.5rem;
   $field-message-icon-margin: 1.5rem;
