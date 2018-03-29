@@ -52,11 +52,11 @@
     var number = spans.length;
 
     var next = function () {
-        number--;
-        if(number === 0){
-          console.warn('recursive shit done!')
-        }
-      };
+      number--;
+      if (number === 0) {
+        console.warn(components.querySelectorAll('li:not([hidden])>a').length + ' components found');
+      }
+    };
 
     for (var i = spans.length; i--;) {
       if (spans[i].innerHTML.toUpperCase()
@@ -65,7 +65,7 @@
           hide(spans[i].parentNode.parentNode, next);
         }
         else {
-          next()
+          next();
         }
       }
       else {
