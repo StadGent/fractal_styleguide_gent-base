@@ -10,6 +10,7 @@ All notable changes to this style guide are documented here.
 
 ### 3.0.0
 
+* DTGB-410: Added fractal search functionality.
 * DTGB-203: Refactored gulpfile to gulp ^4.0.0
 * DTGB-144: Added SassDoc generation for external developers.
 * DTGB-147: Redefined the color palletes and color schemes.
