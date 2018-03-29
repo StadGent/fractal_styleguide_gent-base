@@ -1,0 +1,15 @@
+    <label for="search" class="Tree-title" style="display:inline-block">Filter</label>
+    <div style="padding:0 1rem; margin-bottom: .5rem;">
+        <input id="search" type="text" autocomplete="off" style="width:100%"/>
+    </div>
+    <div style="padding:0 1rem; margin-bottom: .5rem; font-size:.875rem">
+        <input id="auto-search" type="checkbox" checked="true" style="vertical-align:middle">
+        <label for="auto-search">auto filter</label>
+    </div>
+    <div style="padding:0 1rem; margin-bottom: 1.5rem; font-size:.875rem">
+        <button id="search-btn"
+                style="padding: .2rem; width:100%; border:1px solid rgba(0,0,0,.2); border-radius: 2px; font-variant: all-petite-caps;">
+            filter
+        </button>
+        <p aria-live="polite" id="search-result" style="white-space: nowrap; padding: .5rem 0"></p>
+    </div>
