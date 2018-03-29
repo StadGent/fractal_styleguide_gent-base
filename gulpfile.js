@@ -214,7 +214,8 @@ gulp.task('styles:extract', () => {
 gulp.task('js:dist', () => {
   return gulp.src('components/**/*.js')
     .pipe(rename({
-      dirname: ''
+      dirname: '',
+      suffix: '-min'
     }))
     .pipe(gulp.dest('./public/styleguide/js/'));
 });
@@ -229,7 +230,8 @@ gulp.task('js:dist', () => {
 gulp.task('js:build', () => {
   return gulp.src('components/**/*.js')
     .pipe(rename({
-      dirname: ''
+      dirname: '',
+      suffix: '-min'
     }))
     .pipe(uglify())
     .pipe(gulp.dest('./build/styleguide/js/'));
