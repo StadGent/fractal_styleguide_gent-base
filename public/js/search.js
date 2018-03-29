@@ -1,10 +1,10 @@
 'use strict';
 (function () {
   var components = document.querySelector('#tree-components');
-  var inputField = document.querySelector('#search');
-  var button = document.querySelector('#search-btn');
+  var searchField = document.querySelector('#search');
+  var searchButton = document.querySelector('#search-btn');
   var autoSearch = document.querySelector('#auto-search');
-  var result = document.querySelector('#search-result');
+  var resultMessage = document.querySelector('#search-result');
 
   var hide = function (elem, next) {
     if (!(elem.tagName === 'LI' || elem.tagName === 'UL')) {
@@ -47,18 +47,18 @@
   };
 
   var displayResult = function () {
-    result.innerText = components.querySelectorAll('li:not([hidden])>a').length + ' components found';
+    resultMessage.innerText = components.querySelectorAll('li:not([hidden])>a').length + ' components found';
   };
 
-  var filter = function (e) {
+  var filter = function () {
     var spans = components.querySelectorAll('span');
-    var value = inputField.value;
+    var value = searchField.value;
+    var elementCount = spans.length;
 
-    var number = spans.length;
-
-    var next = function () {
-      number--;
-      if (number <= 0) {
+    // Callback for recursive loop function.
+    var updateElementCount = function () {
+      elementCount--;
+      if (elementCount <= 0) {
         displayResult();
       }
     };
@@ -67,20 +67,24 @@
       if (spans[i].innerHTML.toUpperCase()
           .indexOf(value.toUpperCase()) === -1) {
         if (spans[i].parentNode.tagName === 'A') {
-          hide(spans[i].parentNode.parentNode, next);
+          // Hide the wrapping LI tag.
+          hide(spans[i].parentNode.parentNode, updateElementCount);
         }
         else {
-          next();
+          updateElementCount();
         }
       }
       else {
         if (spans[i].parentNode.classList.contains('Tree-collectionLabel')) {
+          // Unhide all nodes in the collection.
           var collection = spans[i].parentNode.parentNode.querySelectorAll('ul > li');
-          number += collection.length - 1;
-          show(collection, next);
+          // Update elementCount.
+          elementCount += collection.length - 1;
+          show(collection, updateElementCount);
         }
         else {
-          show(spans[i].parentNode.parentNode, next);
+          // Unhide the wrapping LI tag.
+          show(spans[i].parentNode.parentNode, updateElementCount);
         }
       }
     }
@@ -90,15 +94,16 @@
     if (!components) {
       return;
     }
-    if (inputField && autoSearch) {
-      inputField.addEventListener('input', function (e) {
+    if (searchField && autoSearch) {
+      searchField.addEventListener('input', function () {
+        // Only filter on input if autosearch is enabled.
         if (autoSearch.checked) {
-          filter(e);
+          filter();
         }
       });
     }
-    if (button) {
-      button.addEventListener('click', filter);
+    if (searchButton) {
+      searchButton.addEventListener('click', filter);
     }
   };
 
