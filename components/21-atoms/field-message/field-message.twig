@@ -1,12 +1,5 @@
 {% if field_message %}
   <div class="field-message {{ modifier }}">
-    {% if modifier == 'error' %}
-      <h3 class="visually-hidden">{{ 'Error message' }}</h3>
-    {% endif %}
-    {% if modifier == 'success' %}
-      <h3 class="visually-hidden">{{ 'Success message' }}</h3>
-    {% endif %}
-
     {{ field_message }}
   </div>
 {% endif %}
