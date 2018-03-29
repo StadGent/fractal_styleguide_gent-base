@@ -1,4 +1,13 @@
-<div class="messages {{ modifier }}">
+<div class="messages {{ modifier }}" aria-role="alert" aria-atomic="true">
+  {% if modifier == 'messages--status' %}
+    <h2 class="visually-hidden">{{ 'Status' }}</h2>
+  {% endif %}
+  {% if modifier == 'messages--error' %}
+    <h2 class="visually-hidden">{{ 'Error' }}</h2>
+  {% endif %}
+  {% if modifier == 'messages--warning' %}
+    <h2 class="visually-hidden">{{ 'Warning' }}</h2>
+  {% endif %}
   <i class="{{ icon }}" aria-hidden="true"></i>
   <p>{{ text }}</p>
 </div>
