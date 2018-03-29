@@ -3,6 +3,7 @@
 const fractal = require('@frctl/fractal').create();
 const path = require('path');
 const packageInfo = require('./package.json');
+const mandelbrot = require('@frctl/mandelbrot');
 
 /**
  * Require additional fractal modules
@@ -58,6 +59,18 @@ fractal.docs.set('path', path.join(__dirname, 'docs'));
 */
 fractal.web.set('static.path', path.join(__dirname, 'public'));
 fractal.web.set('static.mount', '');
-fractal.web.set('builder.dest', __dirname + '/build');
+fractal.web.set('builder.dest', __dirname + 'build');
+
+const ghentTheme = mandelbrot({
+  nav: ['search', 'components', 'docs'],
+  scripts: [
+    'default',
+    '/js/search.js'
+  ]
+});
+
+ghentTheme.addLoadPath(__dirname + '/fractal/theme-overrides');
+
+fractal.web.theme(ghentTheme);
 
 module.exports = fractal;
