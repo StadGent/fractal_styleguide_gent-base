@@ -59,7 +59,7 @@ fractal.docs.set('path', path.join(__dirname, 'docs'));
 */
 fractal.web.set('static.path', path.join(__dirname, 'public'));
 fractal.web.set('static.mount', '');
-fractal.web.set('builder.dest', __dirname + 'build');
+fractal.web.set('builder.dest', __dirname + '/build');
 
 const ghentTheme = mandelbrot({
   nav: ['search', 'components', 'docs'],
