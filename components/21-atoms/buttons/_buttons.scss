@@ -37,6 +37,10 @@
   padding-bottom: .2rem;
   font-size: .7rem;
   letter-spacing: .025em;
+
+  &.button-icon i {
+    font-size: 1rem;
+  }
 }
 
 ///
@@ -53,6 +57,11 @@
   padding-bottom: .6rem;
   font-size: .8rem;
   letter-spacing: .03em;
+
+  &.button-icon i {
+    height: .8rem;
+    font-size: 1.2rem;
+  }
 }
 
 ///
@@ -124,7 +133,7 @@
 
   &.button-icon {
     position: relative;
-    padding-right: 1.6rem;
+    padding-right: 2rem;
     padding-left: .4rem;
     text-align: left;
 
@@ -133,8 +142,8 @@
       top: 0;
       right: .2rem;
       bottom: 0;
-      margin: auto;
       height: .8rem;
+      margin: auto;
     }
   }
 }
@@ -166,6 +175,7 @@
 }
 
 .button,
+a.button,
 input[type="button"],
 input[type="submit"] {
   @include button;
