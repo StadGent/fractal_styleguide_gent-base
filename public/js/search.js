@@ -12,12 +12,7 @@
     }
     else {
       elem.setAttribute('hidden', 'true');
-      if (elem.parentNode.querySelectorAll('li:not([hidden=true])').length === 0) {
-        hide(elem.parentNode, next);
-      }
-      else {
-        next();
-      }
+      elem.parentNode.querySelectorAll('li:not([hidden=true])').length === 0 ? hide(elem.parentNode, next) : next();
     }
   };
 
@@ -36,13 +31,7 @@
     }
     else {
       elem.removeAttribute('hidden');
-
-      if (elem.parentNode.querySelectorAll('li:not([hidden=true])').length > 0) {
-        show(elem.parentNode, next);
-      }
-      else {
-        next();
-      }
+      elem.parentNode.querySelectorAll('li:not([hidden=true])').length > 0 ? show(elem.parentNode, next) : next();
     }
   };
 
