@@ -7,4 +7,4 @@ It's used as a tooltip and should always be used in combination with a field.
 
 ## Web accessibility
 
-* A field description should always have a visually hidden title.
+A field must reference the field description by use of aria-describedby, unless a field message has priority.
