@@ -1,3 +1,8 @@
-input[type="checkbox"] + span {
-  @include theme('color', 'color-secondary', 'label-color');
+input[type="checkbox"] {
+  &.success {
+    color: color('green');
+  }
+  + span {
+    @include theme('color', 'color-secondary', 'label-color');
+  }
 }
