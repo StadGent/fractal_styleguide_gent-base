@@ -68,7 +68,7 @@ const _sassCompile = () => {
  */
 gulp.task('styles:inject', () => {
   const injectSettingsFiles = gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
-  const injectMixinsFiles = gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
+  const injectMixinsFiles = gulp.src('components/00-mixins/**/*.s+(a|c)ss', {read: false});
   const injectBaseFiles = gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
   const injectAtomsFiles = gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
   const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
