@@ -6,20 +6,4 @@
   padding: .3rem .8rem;
   border-radius: border-radius('radius-1');
   font-size: .7rem;
-
-  @at-root a#{&} {
-    text-decoration: none;
-
-    &:active,
-    &:visited {
-      @content;
-    }
-
-    &:hover,
-    &:focus {
-      @include theme('background', 'color-primary--lighten-3', 'tag-background');
-
-      cursor: pointer;
-    }
-  }
 }

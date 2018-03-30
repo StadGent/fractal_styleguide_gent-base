@@ -4,6 +4,6 @@
   "handle": "tag",
   "order": 11,
   "context": {
-    "text": "Tag"
+    "tag_text": "Tag"
   }
 }
