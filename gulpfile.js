@@ -581,9 +581,7 @@ gulp.task('validate', gulp.parallel('styles:validate', 'js:validate', 'axe'), ca
  *  Used to compile production ready SCSS and JS code.
  *
  */
-// todo make sure fractal:build is executed first
-// or it overrides the build dir
-gulp.task('compile', gulp.series('fractal:build', gulp.parallel('styles:build', 'styles:dist', 'styles:extract', 'sassdoc', 'iconfont', 'js:build', 'js:dist', 'images:minify'
+gulp.task('compile', gulp.series('fractal:build', gulp.parallel('styles:build', 'styles:dist', 'styles:inject', 'styles:extract', 'sassdoc', 'iconfont', 'js:build', 'js:dist', 'images:minify'
 )), callback => callback());
 
 gulp.task('compile:dev', gulp.series('fractal:build', gulp.parallel('styles:dist', 'sassdoc', 'iconfont', 'js:dist', 'images:minify'

@@ -25,6 +25,10 @@
       content: none;
     }
 
+    &:focus + label {
+      outline: 1px dotted;
+    }
+
     // Checked state.
     &:checked {
       // Show checkmark on checked.

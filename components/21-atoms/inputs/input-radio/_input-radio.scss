@@ -1,5 +1,15 @@
-input[type="radio"] + span {
-  @include theme('color', 'color-secondary', 'label-color');
+input[type="radio"] {
+  [class*="cs--"] & {
+    &.success + label {
+      color: color('green');
+    }
 
-  font-weight: bold;
+    &.error + label {
+      color: color('red');
+    }
+  }
+
+  + label {
+    @include theme('color', 'color-tertiary', 'label-color');
+  }
 }
