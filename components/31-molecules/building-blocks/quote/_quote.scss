@@ -1,0 +1,62 @@
+.quote {
+  @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+  'a a a b b b b b b b b b'
+  'c c c d d d d d d d d d';
+  padding-top: 1.6rem;
+  border-top: 2px solid;
+
+  &-image {
+    align-self: center;
+    grid-area: a;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    grid-area: b;
+
+    &-body {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.58;
+    }
+
+    &-author {
+      @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
+
+      position: relative;
+      align-self: end;
+      margin-top: 1.6rem;
+      padding-top: 1.6rem;
+      border-top: 2px solid;
+      font-size: .9rem;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.44;
+      text-align: center;
+      grid-area: d;
+
+      &::before {
+        @include theme('background-image', 'color-primary-accolade-stroke', 'quote-accolade-stroke');
+
+        display: block;
+        position: absolute;
+        top: -.15rem;
+        right: 0;
+        left: 0;
+        width: 2rem;
+        height: 1rem;
+        margin: auto;
+        transform: rotate(180deg);
+        background-color: color('white');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        content: '';
+      }
+    }
+  }
+}

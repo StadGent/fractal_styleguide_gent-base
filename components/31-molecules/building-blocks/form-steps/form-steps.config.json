@@ -1,6 +1,7 @@
 {
   "title": "Form steps",
   "status": "ready",
+  "hidden": "hidden",
   "handle": "form-steps",
   "context": {
     "step1_title": "Step 1 title",

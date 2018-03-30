@@ -1,6 +1,7 @@
 {
   "title": "Newsletter block",
   "preview": "@preview-without-padding",
+  "hidden": "hidden",
   "handle": "newsletter-block",
   "context": {
     "newsletter_image_src": "https://via.placeholder.com/500x250",

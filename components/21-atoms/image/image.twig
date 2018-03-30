@@ -1,1 +1,10 @@
-<img src="{{ src }}" alt="{{ alt_text }}" {% if modifier %}class="{{ modifier }}"{% endif %} />
+<img
+  src="{{ src }}"
+  alt="{{ alt_text }}"
+  {% if modifier %}
+    class="{{ modifier }}"
+  {% endif %}
+  {% if aria_hidden == true %}
+    aria-hidden="true"
+  {% endif %}
+/>
