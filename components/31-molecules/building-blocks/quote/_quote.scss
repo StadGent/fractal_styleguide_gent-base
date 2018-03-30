@@ -2,43 +2,77 @@
   @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
 
   display: grid;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 2px solid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
-  'a a a b b b b b b b b b'
-  'c c c d d d d d d d d d';
-  padding-top: 1.6rem;
-  border-top: 2px solid;
+  'a a a a a a a a a a a a'
+  'b b b b b b b b b b b b'
+  'd d d d d d d d d d d d';
+
+  @include tablet {
+    padding-top: 1.6rem;
+    grid-template-areas:
+    'a a a b b b b b b b b b'
+    'c c c d d d d d d d d d';
+  }
 
   &-image {
-    align-self: center;
+    width: 5rem;
+    margin-top: -5rem;
     grid-area: a;
+    justify-self: center;
+
+    @include tablet {
+      align-self: center;
+      width: auto;
+      margin-top: 0;
+      justify-self: start;
+    }
   }
 
   &-content {
-    display: flex;
-    align-items: center;
+    margin-top: 1rem;
     grid-area: b;
 
+    @include tablet {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+    }
+
     &-body {
-      font-size: 1.2rem;
+      font-size: .8rem;
       font-weight: 600;
-      line-height: 1.58;
+      line-height: 1.88;
+      text-align: center;
+
+      @include tablet {
+        font-size: 1.2rem;
+        line-height: 1.58;
+        text-align: left;
+      }
     }
 
     &-author {
       @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
 
       position: relative;
-      align-self: end;
       margin-top: 1.6rem;
       padding-top: 1.6rem;
       border-top: 2px solid;
-      font-size: .9rem;
+      font-size: .8rem;
       font-style: italic;
       font-weight: 500;
-      line-height: 1.44;
+      line-height: 1.63;
       text-align: center;
       grid-area: d;
+
+      @include tablet {
+        font-size: .9rem;
+        line-height: 1.44;
+      }
 
       &::before {
         @include theme('background-image', 'color-primary-accolade-stroke', 'quote-accolade-stroke');
