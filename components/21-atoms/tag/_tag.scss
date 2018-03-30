@@ -1,16 +1,11 @@
 .tag {
-  @include theme('background', 'color-secondary', 'tag-background');
-  @include theme('color', 'color-primary--lighten-1', 'tag-color');
+  @include theme('background', 'color-primary--lighten-4', 'tag-background');
+  @include theme('color', 'color-tertiary', 'tag-color');
 
-  // @at-root a#{&} {
-  // @include element-states($tag-background, $tag-background-hover, $property: "background");
-  // @include element-states($tag-color, $tag-color-hover, $property: "color");
-  // }
-
-  padding: .05rem .31rem;
-  border-radius: .25rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  height: 1.5rem;
+  padding: .3rem .8rem;
+  border-radius: border-radius('radius-1');
+  font-size: .7rem;
 
   @at-root a#{&} {
     text-decoration: none;
@@ -22,6 +17,8 @@
 
     &:hover,
     &:focus {
+      @include theme('background', 'color-primary--lighten-3', 'tag-background');
+
       cursor: pointer;
     }
   }
