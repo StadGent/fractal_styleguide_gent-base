@@ -12,25 +12,15 @@
     <div class="form-item-column">
 
       {% include '@input-radio' with {
-        'label': label_radio1,
+        'radio_label': label_radio1,
         'radio_name': radio1_name,
         'radio_id': radio1_id
       } %}
-      {% include '@label' with {
-        "label": radio1_label,
-        "for": radio1_label_for,
-        "label_optional": radio1_label_optional
-      } %}
 
       {% include '@input-radio' with {
-        'label': label_radio2,
+        'radio_label': label_radio2,
         'radio_name': radio2_name,
         'radio_id': radio2_id
-      } %}
-      {% include '@label' with {
-        "label": radio2_label,
-        "for": radio2_label_for,
-        "label_optional": radio2_label_optional
       } %}
 
       {% if modifier == 'error' %}
