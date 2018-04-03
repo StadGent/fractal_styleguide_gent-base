@@ -1,18 +1,22 @@
-<footer class="footer section--wrapper" role="contentinfo" data-columns="4">
-  <h2 class="visually-hidden">Footer</h2>
-  <div class="content-container">
+<footer class="footer" role="contentinfo">
+  <h2 class="visually-hidden">{{ 'Footer' }}</h2>
+  <div class="footer-top content-container">
     <div class="footer--column">
       {% include '@gentinfo-island' %}
     </div>
     <div class="footer--column">
       {% include '@post-address-block' %}
+    </div>
+    <div class="footer--column">
       {% include '@disclaimer-block' %}
+    </div>
+  </div>
+  <div class="footer-bottom content-container">
+    <div class="footer--column">
+      {% include '@partnership-block' %}
     </div>
     <div class="footer--column">
       {% include '@social-media-block' %}
-    </div>
-    <div class="footer--column">
-      {% include '@partnership-block' %}
     </div>
   </div>
 </footer>

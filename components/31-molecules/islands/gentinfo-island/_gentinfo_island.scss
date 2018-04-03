@@ -1,49 +1,38 @@
-.dg-default-block {
-  @include no-link-style;
+.gentinfo-block {
+  @include theme('background-color', 'color-primary--lighten-4', 'gentinfo-block-background');
 
-  h3 {
-    @extend %h2;
+  display: grid;
+  padding: 2rem 2.5rem;
+  font-size: .8rem;
+  line-height: 1.75;
+  grid-template-columns: 2fr 4fr;
+
+  .gentinfo-icon {
+    display: block;
+    align-self: center;
+    width: 7.8rem;
+    height: 7.8rem;
+    background-image: url('#{$styleguide-dir}/img/svg/gentinfo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  ul {
-    margin: 0;
-  }
+  .gentinfo-block-content {
+    max-width: 15rem;
 
-  li {
-    padding: .2rem 0;
-  }
-
-  a {
-    color: color('white');
-  }
-
-  .phone {
-    &::before {
-      padding-right: .5rem;
-    }
-  }
-
-  .email {
-    &::before {
-      padding-right: .5rem;
-    }
-  }
-
-  .link {
-    &::before {
-      padding-right: .5rem;
-    }
-  }
-
-  .textballoon {
-    margin-top: 1rem;
-
-    &:hover {
-      color: color('blue');
+    h2 {
+      font-weight: 800;
     }
 
-    &::before {
-      padding-right: .5rem;
+    ul {
+      margin: 0;
+      list-style: none;
+
+      a {
+        font-size: .8rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
     }
   }
 }

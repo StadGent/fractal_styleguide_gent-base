@@ -1,13 +1,24 @@
-<div class="section--accent island dg-default-block">
-  {% include '@h3'with { 'h3_text': 'Gentinfo' } %}
-  {% include '@list'with {
-    'h3_text': 'Gentinfo',
-    'modifier': 'no-style',
-    'items': [
-      '<a class="phone" href="tel:+3288888888">08 888 88 88 - mo - sat from 8-19u</a>',
-      '<a class="email" href="mailto:gentinfo@stad.gent">gentinfo@stad.gent</a>',
-      '<a class="link" href="">Contact form</a>',
-      '<a class="btn textballoon">Online Chat</a>'
-    ]
-  } %}
+<div class="gentinfo-block">
+  <div aria-hidden="true" class="gentinfo-icon"></div>
+  <div class="gentinfo-block-content">
+    {% include '@h2'
+      with {
+        'h2_text': 'Gentinfo'
+      }
+    %}
+    {% include '@paragraph'
+      with {
+        'text': 'Gentinfo is bereikbaar van maandag t.e.m. zaterdag van 08:00 tot 19:00'
+      }
+    %}
+    {% include '@list'
+      with {
+        'type': 'unordered',
+        'items': [
+          '09 210 10 10',
+          '<a href="mailto:gentinfo@stad.gent" alt="Gentinfo mail link">Gentinfo@stad.gent</a>'
+        ]
+      }
+    %}
+  </div>
 </div>

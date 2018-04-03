@@ -1,77 +1,29 @@
 // General footer styling.
-footer.footer > .content-container {
-  @supports (display: grid) {
+footer.footer {
+  .footer-top {
+    @include theme('border-color', 'color-primary--lighten-4', 'footer-border-color');
+
     display: grid;
-    grid-gap: 1rem;
+
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+    grid-template-columns: 7fr 2fr 3fr;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    grid-gap: 3.5rem;
   }
 
-  @include tablet {
-    @supports (display: grid) {
-      grid-auto-rows: 275px;
-    }
-    padding: 1.5rem;
-  }
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
 
-  @include desktop {
-    @supports (display: grid) {
-      grid-auto-rows: 400px;
-    }
-  }
-
-  padding: 1.5rem .5rem;
-
-  &::before,
-  &::after {
-    content: none;
-  }
-
-  h3 {
-    margin-top: 0;
-  }
-
-  p {
-    color: color('dark-gray');
-  }
-
-  .footer--column .island {
-    border: 0;
-  }
-}
-
-// Footer 4 column layout.
-footer[data-columns="4"] > .content-container {
-  @include tablet {
-    @supports (display: grid) {
-      grid-template-columns: repeat(2, 1fr [footer-column]);
-    }
-  }
-  @include desktop {
-    @supports (display: grid) {
-      grid-template-columns: repeat(4, 1fr [footer-column]);
-    }
-  }
-}
-
-// Footer 3 column layout.
-footer[data-columns="3"] > .content-container {
-  @include tablet {
-    @supports (display: grid) {
-      grid-template-columns: repeat(2, 1fr [footer-column]);
+    > .footer--column:nth-of-type(2n) {
+      text-align: right;
     }
   }
 
-  @include desktop {
-    @supports (display: grid) {
-      grid-template-columns: repeat(3, 1fr [footer-column]);
-    }
-  }
-}
-
-// Footer 2 column layout.
-footer[data-columns="2"] > .content-container {
-  @include tablet {
-    @supports (display: grid) {
-      grid-template-columns: repeat(2, 1fr [footer-column]);
-    }
+  .dg-block-post-address,
+  .dg-block-disclaimer {
+    margin-top: 2.5rem;
   }
 }
