@@ -3,21 +3,35 @@ footer.footer {
   .footer-top {
     @include theme('border-color', 'color-primary--lighten-4', 'footer-border-color');
 
-    display: grid;
-
+    display: flex;
     margin-bottom: 1rem;
     padding: 2rem 0;
-    grid-template-columns: 7fr 2fr 3fr;
     border-top: 2px solid;
     border-bottom: 2px solid;
-    grid-column-gap: 6rem;
+  }
+
+  .footer--column {
+    flex: 1 0 auto;
+    width: span(3 of 12);
+
+    &:first-of-type {
+      width: span(6 of 12);
+    }
+
+    &:nth-of-type(2) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .footer-bottom {
-    display: grid;
-    grid-template-columns: 6fr 6fr;
+    display: flex;
 
-    > .footer--column:nth-of-type(2n) {
+    .footer--column {
+      width: span(6 of 12);
+    }
+
+    .footer--column:nth-of-type(2n) {
       text-align: right;
     }
   }
