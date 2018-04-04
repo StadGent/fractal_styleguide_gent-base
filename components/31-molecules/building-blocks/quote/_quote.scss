@@ -1,64 +1,45 @@
 .quote {
   @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
 
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas:
-    'a a a a a a a a a a a a'
-    'b b b b b b b b b b b b'
-    'd d d d d d d d d d d d';
-  }
-
+  display: flex;
+  flex-direction: column;
   margin-top: 2.5rem;
   padding-top: 2.5rem;
   border-top: 2px solid;
 
   @include desktop {
-    @supports (display: grid) {
-      grid-template-areas:
-      'a a a b b b b b b b b b'
-      'c c c d d d d d d d d d';
-    }
-
+    flex-direction: row;
     padding-top: 1.6rem;
   }
 
   &-image {
-    @supports (display: grid) {
-      grid-area: a;
-    }
-
     display: block;
-    width: 5rem;
+    flex: 1;
+    align-self: start;
+    max-width: 7rem;
     margin: -5rem auto 0;
+    margin-top: -7rem;
+    border: 1rem solid color('white');
+    background: color('white');
+    box-sizing: content-box;
 
     @include desktop {
-      @supports (display: grid) {
-        align-self: center;
-        justify-self: center;
-      }
-
-      width: auto;
       margin: 0 2rem 0 0;
-      float: left;
     }
   }
 
   &-content {
-    @supports (display: grid) {
-      grid-area: b;
-    }
+    flex: 1;
 
-    margin-top: 1rem;
-
-    @include tablet {
-      display: flex;
+    @include desktop {
       align-items: center;
-      margin-top: 0;
     }
 
     &-body {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      min-height: 7rem;
       font-size: .8rem;
       font-weight: 600;
       line-height: 1.88;
@@ -73,10 +54,6 @@
 
     &-author {
       @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
-
-      @supports (display: grid) {
-        grid-area: d;
-      }
 
       position: relative;
       margin-top: 1.6rem;
