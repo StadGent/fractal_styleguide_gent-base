@@ -64,7 +64,7 @@
       line-height: 1.88;
       text-align: center;
 
-      @include tablet {
+      @include desktop {
         font-size: 1.2rem;
         line-height: 1.58;
         text-align: left;
@@ -88,7 +88,7 @@
       line-height: 1.63;
       text-align: center;
 
-      @include tablet {
+      @include desktop {
         font-size: .9rem;
         line-height: 1.44;
       }
