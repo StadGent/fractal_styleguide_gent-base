@@ -16,6 +16,8 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-small {
+  @include small-text;
+
   min-height: 1.9rem;
   padding-top: .2rem;
   padding-bottom: .1rem;
@@ -32,6 +34,8 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-medium {
+  @include medium-text;
+
   min-height: 2.2rem;
   padding-top: .4rem;
   padding-bottom: .2rem;
@@ -52,10 +56,11 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-large {
+  @include large-text;
+
   min-height: 2.5rem;
   padding-top: .9rem;
   padding-bottom: .6rem;
-  font-size: .8rem;
   letter-spacing: .03em;
 
   &.button-icon i {

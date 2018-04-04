@@ -54,7 +54,7 @@
       "name": "button-link",
       "context": {
         "icon": "icon-arrow-right",
-        "modifier": "button-link button-link-primary button-icon"
+        "modifier": "button button-primary button-icon"
       }
     }
   ]

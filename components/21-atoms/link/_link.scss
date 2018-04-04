@@ -4,7 +4,6 @@ a {
   transition: color .11s ease-in-out;
   font-weight: 600;
   text-decoration: underline;
-  cursor: pointer;
 
   &:hover {
     @include theme('background-color', 'color-primary--lighten-4', 'link-background-hover');
@@ -16,26 +15,14 @@ a {
   }
 
   // Different button link types. These are links styled as a button.
-  &.button-link {
+  &.button {
     @include button;
 
     display: inline-block;
     line-height: inherit;
 
     i {
-      line-height: .7rem;
-    }
-
-    &-primary {
-      @extend %button-primary;
-    }
-
-    &-secondary {
-      @extend %button-secondary;
-    }
-
-    &-dark {
-      @extend %button-dark;
+      line-height: .7;
     }
   }
 
@@ -44,24 +31,24 @@ a {
     text-decoration: none;
 
     i {
-      line-height: normal;
+      line-height: inherit;
     }
   }
 
   // Link sizes.
   &.extra-large-link {
-    font-size: .9rem;
+    @include extra-large-text;
   }
 
   &.large-link {
-    font-size: .8rem;
+    @include large-text;
   }
 
   &.medium-link {
-    font-size: .7rem;
+    @include medium-text;
   }
 
   &.small-link {
-    font-size: .6rem;
+    @include small-text;
   }
 }
