@@ -2,8 +2,9 @@
   @include theme('background', 'color-primary--lighten-4', 'tag-background');
   @include theme('color', 'color-tertiary', 'tag-color');
 
-  height: 1.5rem;
-  padding: .3rem .8rem;
+  display: inline-block;
+  min-height: 1.5rem;
+  padding: .2rem .5rem;
   border-radius: border-radius('radius-1');
   font-size: .7rem;
 }
