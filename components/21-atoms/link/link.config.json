@@ -16,45 +16,17 @@
       "handle": "link"
     },
     {
-      "name": "extra-large-link",
-      "handle": "extra-large-link",
-      "context": {
-        "modifier": "extra-large-link"
-      }
-    },
-    {
-      "name": "large-link",
-      "handle": "large-link",
-      "context": {
-        "modifier": "large-link"
-      }
-    },
-    {
-      "name": "medium-link",
-      "handle": "medium-link",
-      "context": {
-        "modifier": "medium-link"
-      }
-    },
-    {
-      "name": "small-link",
-      "handle": "small-link",
-      "context": {
-        "modifier": "small-link"
-      }
-    },
-    {
-      "name": "stand-alone-link",
+      "name": "stand-alone",
       "context": {
         "icon": "icon-arrow-right",
-        "modifier": "stand-alone-link"
+        "modifier": "stand-alone"
       }
     },
     {
-      "name": "button-link",
+      "name": "button",
       "context": {
         "icon": "icon-arrow-right",
-        "modifier": "button button-primary button-icon"
+        "modifier": "button button-primary"
       }
     }
   ]

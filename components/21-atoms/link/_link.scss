@@ -1,6 +1,7 @@
 a {
   @include theme('color', 'color-primary', 'link-color');
 
+  padding: .3em;
   transition: color .11s ease-in-out;
   font-weight: 600;
   text-decoration: underline;
@@ -17,38 +18,17 @@ a {
   // Different button link types. These are links styled as a button.
   &.button {
     @include button;
+    @include button-icon;
 
-    display: inline-block;
-    line-height: inherit;
-
-    i {
-      line-height: .7;
-    }
+    text-decoration: none;
   }
 
   // Standalone links (could be used for external links.)
-  &.stand-alone-link {
+  &.stand-alone {
     text-decoration: none;
 
     i {
       line-height: inherit;
     }
-  }
-
-  // Link sizes.
-  &.extra-large-link {
-    @include extra-large-text;
-  }
-
-  &.large-link {
-    @include large-text;
-  }
-
-  &.medium-link {
-    @include medium-text;
-  }
-
-  &.small-link {
-    @include small-text;
   }
 }

@@ -19,9 +19,6 @@
   @include small-text;
 
   min-height: 1.9rem;
-  padding-top: .2rem;
-  padding-bottom: .1rem;
-  font-size: .6rem;
   letter-spacing: .02em;
 }
 
@@ -37,14 +34,7 @@
   @include medium-text;
 
   min-height: 2.2rem;
-  padding-top: .4rem;
-  padding-bottom: .2rem;
-  font-size: .7rem;
   letter-spacing: .025em;
-
-  &.button-icon i {
-    font-size: 1rem;
-  }
 }
 
 ///
@@ -59,12 +49,9 @@
   @include large-text;
 
   min-height: 2.5rem;
-  padding-top: .9rem;
-  padding-bottom: .6rem;
   letter-spacing: .03em;
 
   &.button-icon i {
-    height: .8rem;
     font-size: 1.2rem;
   }
 }
@@ -105,14 +92,14 @@
 @mixin button {
   @include button-medium; // Default.
 
-  padding-right: 1.2rem;
-  padding-left: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  padding: .4em 2em 0;
   border: 2px solid;
   border-radius: border-radius('radius-1');
   outline: 0;
   font-family: $default-font-family;
   font-weight: 600;
-  line-height: normal;
   text-align: center;
   cursor: pointer;
 
@@ -137,19 +124,7 @@
   }
 
   &.button-icon {
-    position: relative;
-    padding-right: 2rem;
-    padding-left: .4rem;
-    text-align: left;
-
-    i {
-      position: absolute;
-      top: 0;
-      right: .2rem;
-      bottom: 0;
-      height: .8rem;
-      margin: auto;
-    }
+    @include button-icon;
   }
 }
 
@@ -177,6 +152,17 @@
 @mixin button-inlineblock {
   display: inline-block;
   width: auto;
+}
+
+@mixin button-icon {
+  position: relative;
+  padding: .4em .6em 0;
+  text-align: left;
+
+  i {
+    margin-left: .5rem;
+    font-size: 1rem;
+  }
 }
 
 .button,
