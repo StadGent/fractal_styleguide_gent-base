@@ -14,7 +14,7 @@
   padding-top: 2.5rem;
   border-top: 2px solid;
 
-  @include tablet {
+  @include desktop {
     @supports (display: grid) {
       grid-template-areas:
       'a a a b b b b b b b b b'
@@ -33,10 +33,10 @@
     width: 5rem;
     margin: -5rem auto 0;
 
-    @include tablet {
+    @include desktop {
       @supports (display: grid) {
         align-self: center;
-        justify-self: start;
+        justify-self: center;
       }
 
       width: auto;
