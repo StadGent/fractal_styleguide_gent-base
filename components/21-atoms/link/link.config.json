@@ -16,15 +16,45 @@
       "handle": "link"
     },
     {
-      "name": "external-link",
+      "name": "extra-large-link",
+      "handle": "extra-large-link",
       "context": {
-        "modifier": "external-link"
+        "modifier": "extra-large-link"
       }
     },
     {
-      "name": "read-more-link",
+      "name": "large-link",
+      "handle": "large-link",
       "context": {
-        "modifier": "read-more-link"
+        "modifier": "large-link"
+      }
+    },
+    {
+      "name": "medium-link",
+      "handle": "medium-link",
+      "context": {
+        "modifier": "medium-link"
+      }
+    },
+    {
+      "name": "small-link",
+      "handle": "small-link",
+      "context": {
+        "modifier": "small-link"
+      }
+    },
+    {
+      "name": "stand-alone-link",
+      "context": {
+        "icon": "icon-arrow-right",
+        "modifier": "stand-alone-link"
+      }
+    },
+    {
+      "name": "button-link",
+      "context": {
+        "icon": "icon-arrow-right",
+        "modifier": "button-link button-link-primary button-icon"
       }
     }
   ]

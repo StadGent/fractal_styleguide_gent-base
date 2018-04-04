@@ -6,37 +6,62 @@ a {
   text-decoration: underline;
   cursor: pointer;
 
+  &:hover {
+    @include theme('background-color', 'color-primary--lighten-4', 'link-background-hover');
+    @include theme('color', 'color-primary--darken-2', 'link-color-hover');
+  }
+
   &:focus {
     outline: thin dotted;
   }
 
-  //
-  // @TODO: Add hover state (waiting for design specifications.)
-  //
-  // &:hover {}
+  // Different button link types. These are links styled as a button.
+  &.button-link {
+    @include button;
 
-  // @TODO: Add external-link variant (waiting for design specifications.)
-  // &.external-link {
-  //   &::before {
-  //     @extend %icon-base-css;
-  //     @extend %icon-newtab;
+    display: inline-block;
+    line-height: inherit;
 
-  //     display: inline-block;
-  //     margin-right: .25rem;
-  //     text-decoration: none;
-  //   }
-  // }
+    i {
+      line-height: .7rem;
+    }
 
-  &.read-more-link {
-    @include icon('arrow-right', 'after');
+    &-primary {
+      @extend %button-primary;
+    }
 
-    line-height: 1rem;
+    &-secondary {
+      @extend %button-secondary;
+    }
+
+    &-dark {
+      @extend %button-dark;
+    }
+  }
+
+  // Standalone links (could be used for external links.)
+  &.stand-alone-link {
     text-decoration: none;
 
-    &::after {
-      position: relative;
-      top: .15rem;
-      margin-left: .5rem;
+    i {
+      line-height: normal;
     }
+  }
+
+  // Link sizes.
+  &.extra-large-link {
+    font-size: .9rem;
+  }
+
+  &.large-link {
+    font-size: .8rem;
+  }
+
+  &.medium-link {
+    font-size: .7rem;
+  }
+
+  &.small-link {
+    font-size: .6rem;
   }
 }
