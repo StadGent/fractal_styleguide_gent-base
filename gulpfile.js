@@ -54,7 +54,8 @@ const _sassCompile = () => {
       ]
     }),
     autoprefixer({
-      browsers: ['last 5 versions']
+      browsers: ['last 5 versions'],
+      grid: true
     })
   ]);
   combined.on('error', sass.logError);
