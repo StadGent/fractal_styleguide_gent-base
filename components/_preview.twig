@@ -44,14 +44,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="cs--default">
-    <div class="container">
+    <main class="container">
       {% block content %}
         <div class="preview-container">
           <div class="content-container">
+          <h1 class="visually-hidden">{{ 'Component preview' }}</h1>
             {{ yield | raw }}
           </div>
         </div>
       {% endblock %}
-    </div>
+    </main>
   </body>
 </html>
