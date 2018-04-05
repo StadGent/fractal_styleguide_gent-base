@@ -30,8 +30,11 @@ const combiner = require('stream-combiner2');
 const cache = require('gulp-cached');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
+const gulpif = require('gulp-if');
 // require our configurated fractal module
 const fractal = require('./fractal');
+
+let build = false;
 
 /*
 * Get the sassFiles.
@@ -177,6 +180,7 @@ gulp.task('styles:validate', () => {
     .pipe(sassLint({
       configFile: './.sass-lint.yml'
     }))
+    .pipe(gulpif(build, sassLint.failOnError()))
     .pipe(sassLint.format());
 });
 
@@ -599,7 +603,14 @@ gulp.task('compile:dev', gulp.series('fractal:build', gulp.parallel('styles:dist
  *  Used to validate and build production ready code.
  *
  */
-gulp.task('build', gulp.parallel('validate', 'compile'));
+gulp.task('build', gulp.series((cb) => {
+  // set env variable to be used in gulp-if
+  build = true;
+  cb();
+}, gulp.parallel('validate', 'compile'), (cb) => {
+  build = false;
+  cb();
+}));
 
 /*
  *
