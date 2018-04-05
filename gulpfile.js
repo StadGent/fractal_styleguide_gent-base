@@ -443,7 +443,7 @@ gulp.task('axe', function (done) {
       browser: 'phantomjs',
       urls: ['build/components/preview/*.html'],
       showOnlyViolations: true,
-      verbose: true,
+      verbose: false,
       a11yCheckOptions: {
         runOnly: {
           type: 'tag',
@@ -458,6 +458,7 @@ gulp.task('axe', function (done) {
         let components = Object.assign({}, options);
         components.saveOutputIn = 'components.json';
         components.urls = ['build/components/preview/!(input*|*page).html'];
+        components.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
         components.a11yCheckOptions.rules = {bypass: {enabled: false}};
 
         axe(components, () => {resolve();});
@@ -470,6 +471,7 @@ gulp.task('axe', function (done) {
         let input = Object.assign({}, options);
         input.saveOutputIn = 'inputAtoms.json';
         input.urls = ['build/components/preview/input*.html'];
+        input.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
         input.a11yCheckOptions.rules = {
           label: {enabled: false},
           bypass: {enabled: false}
@@ -485,12 +487,13 @@ gulp.task('axe', function (done) {
         let pages = Object.assign({}, options);
         pages.saveOutputIn = 'pages.json';
         pages.urls = ['build/components/preview/*page.html'];
+        pages.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
 
         axe(pages, () => {resolve();});
       });
     };
 
-    return Promise.all([input(), notInputNotPages(), pages()]);
+    return Promise.all([input(), pages(), notInputNotPages()]);
   }
   catch (err) {
     console.log('Error catched', err); // eslint-disable-line no-console
