@@ -20,7 +20,7 @@
     margin: -5rem auto 0;
     margin-top: -7rem;
     border: 1rem solid color('white');
-    background: color('white');
+    background-color: color('white');
     box-sizing: content-box;
 
     @include desktop {
@@ -42,12 +42,12 @@
       min-height: 7rem;
       font-size: .8rem;
       font-weight: 600;
-      line-height: 1.88;
+      line-height: 1.9;
       text-align: center;
 
       @include desktop {
         font-size: 1.2rem;
-        line-height: 1.58;
+        line-height: 1.6;
         text-align: left;
       }
     }
@@ -62,12 +62,12 @@
       font-size: .8rem;
       font-style: italic;
       font-weight: 500;
-      line-height: 1.63;
+      line-height: 1.6;
       text-align: center;
 
       @include desktop {
         font-size: .9rem;
-        line-height: 1.44;
+        line-height: 1.4;
       }
 
       &::before {
@@ -75,7 +75,7 @@
 
         display: block;
         position: absolute;
-        top: -.15rem;
+        top: -.1rem;
         right: 0;
         left: 0;
         width: 2rem;
