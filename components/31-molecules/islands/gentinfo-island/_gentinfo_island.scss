@@ -1,23 +1,19 @@
 .gentinfo-block {
   @include theme('background-color', 'color-primary--lighten-4', 'gentinfo-block-background');
 
-  display: grid;
+  display: flex;
   padding: 2rem 2.5rem;
   font-size: .8rem;
   line-height: 1.75;
-  grid-template-columns: 5fr 7fr;
 
   .gentinfo-icon {
     display: block;
-    align-self: center;
-    width: 7.8rem;
-    height: 7.8rem;
-    background-image: url('#{$styleguide-dir}/img/svg/gentinfo.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    margin-right: 2.4rem;
+    align-self: start;
   }
 
   .gentinfo-block-content {
+    width: span(4 of 6);
     max-width: 15rem;
 
     h2 {

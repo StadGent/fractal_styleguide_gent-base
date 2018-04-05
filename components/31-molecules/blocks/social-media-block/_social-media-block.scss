@@ -1,15 +1,18 @@
 .dg-blocks-social {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
 
   span {
-    text-align: right;
+    flex: 1;
     line-height: 2rem;
+    text-align: right;
   }
 
   ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: span(6 of 12);
     list-style: none;
 
     a {

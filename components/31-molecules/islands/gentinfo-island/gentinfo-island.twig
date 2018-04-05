@@ -1,5 +1,9 @@
 <div class="gentinfo-block">
-  <div aria-hidden="true" class="gentinfo-icon"></div>
+  {% include '@image' with {
+    'src': '/styleguide/img/svg/gentinfo.svg',
+    'alt_text': 'Gentinfo icon',
+    'modifier': 'gentinfo-icon'
+  } %}
   <div class="gentinfo-block-content">
     {% include '@h2'
       with {

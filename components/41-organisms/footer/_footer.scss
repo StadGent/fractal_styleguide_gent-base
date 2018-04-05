@@ -8,19 +8,19 @@ footer.footer {
     padding: 2rem 0;
     border-top: 2px solid;
     border-bottom: 2px solid;
-  }
 
-  .footer--column {
-    flex: 1 0 auto;
-    width: span(3 of 12);
+    .footer--column {
+      flex: 1 0 auto;
+      width: span(3 of 12);
 
-    &:first-of-type {
-      width: span(6 of 12);
-    }
+      &:first-of-type {
+        width: span(6 of 12);
+      }
 
-    &:nth-of-type(2) {
-      display: flex;
-      justify-content: center;
+      &:nth-of-type(2) {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 
@@ -29,10 +29,6 @@ footer.footer {
 
     .footer--column {
       width: span(6 of 12);
-    }
-
-    .footer--column:nth-of-type(2n) {
-      text-align: right;
     }
   }
 
