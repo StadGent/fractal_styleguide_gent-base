@@ -5,7 +5,6 @@
   "order": 9,
   "context": {
     "src": "https://via.placeholder.com/800x532",
-    "alt_text": "Image alt text",
-    "aria_hidden": false
+    "alt_text": "Image alt text"
   }
 }
