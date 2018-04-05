@@ -275,3 +275,19 @@
 
   @return if($minus, -$result, $result);
 }
+
+@mixin small-text {
+  font-size: .6rem;
+}
+
+@mixin medium-text {
+  font-size: .7rem;
+}
+
+@mixin large-text {
+  font-size: .8rem;
+}
+
+@mixin extra-large-text {
+  font-size: .9rem;
+}

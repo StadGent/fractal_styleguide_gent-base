@@ -36,6 +36,7 @@ All notable changes to this style guide are documented here.
 > components and to allow easier overriding of the properties of these
 > components.
 
+* STIJ-159: Added tag atom styling.
 * DTGB-174: Changed styling of status messages.
 * DTGB-214: Added new styling to buttons.
 * DTGB-218: Added new logo.

@@ -11,12 +11,12 @@ $id: random(1000);
 
 @font-face {
   font-family: "<%= fontName %>";
-  src: url('<%= fontPath %><%= fontName %>.eot?v='#{$id});
-  src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
-  url('<%= fontPath %><%= fontName %>.woff2') format('woff2'),
-  url('<%= fontPath %><%= fontName %>.woff') format('woff'),
-  url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
-  url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
+  src: url('#{$styleguide-dir}/fonts/<%= fontName %>.eot?v='#{$id});
+  src: url('#{$styleguide-dir}/fonts/<%= fontName %>.eot?#iefix?v='#{$id}') format('eot'),
+  url('#{$styleguide-dir}/fonts/<%= fontName %>.woff2?v='#{$id}') format('woff2'),
+  url('#{$styleguide-dir}/fonts/<%= fontName %>.woff?v='#{$id}') format('woff'),
+  url('#{$styleguide-dir}/fonts/<%= fontName %>.ttf?v='#{$id}') format('truetype'),
+  url('#{$styleguide-dir}/fonts/<%= fontName %>.svg#<%= fontName %>?v='#{$id}') format('svg');
 }
 
 @mixin <%= cssClass%>-styles {

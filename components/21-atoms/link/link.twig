@@ -12,4 +12,8 @@
    {% if aria_labelledby %}
        aria-labelledby="{{ aria_labelledby }}"
    {% endif %}
-   title="{{ title }}">{{ text }}</a>
+   title="{{ title }}">{{ text }}
+  {% if icon %}
+    <i aria-hidden="true" class="{{ icon }}"></i>
+  {% endif %}
+</a>
