@@ -1,6 +1,7 @@
 {
   "title": "CTA link",
   "status": "ready",
+  "hidden": "hidden",
   "handle": "cta-link",
   "default": "website",
   "context": {
