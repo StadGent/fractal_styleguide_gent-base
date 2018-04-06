@@ -45,10 +45,10 @@
   </head>
   <body class="cs--default">
     <main class="container">
+      <h1 class="visually-hidden">{{ 'Component preview' }}</h1>
       {% block content %}
         <div class="preview-container">
           <div class="content-container">
-          <h1 class="visually-hidden">{{ 'Component preview' }}</h1>
             {{ yield | raw }}
           </div>
         </div>

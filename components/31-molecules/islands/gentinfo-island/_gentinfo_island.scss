@@ -1,5 +1,5 @@
 .gentinfo-block {
-  @include theme('background-color', 'color-primary--lighten-4', 'gentinfo-block-background');
+  @include theme('background-color', 'color-primary--lighten-6', 'gentinfo-block-background');
 
   display: flex;
   padding: 2rem 2.5rem;
@@ -10,6 +10,7 @@
     display: block;
     margin-right: 2.4rem;
     align-self: start;
+    margin-right: 2.4rem;
   }
 
   .gentinfo-block-content {
