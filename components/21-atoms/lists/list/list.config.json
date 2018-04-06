@@ -8,6 +8,10 @@
     "items": [
       "item 1",
       "item 2"
+    ],
+    "definitions": [
+      "description 1",
+      "description 2"
     ]
   },
   "variants": [
@@ -23,6 +27,27 @@
       "handle": "links-list",
       "context": {
         "type": "links"
+      }
+    },
+    {
+      "name": "List with icons",
+      "handle": "list-with-icon",
+      "context": {
+        "type": "iconlist"
+      }
+    },
+    {
+      "name": "List with small icons",
+      "handle": "list-with-small-icons",
+      "context": {
+        "type": "iconlist-small"
+      }
+    },
+    {
+      "name": "Definition list",
+      "handle": "definition-list",
+      "context": {
+        "type": "definition"
       }
     }
   ]
