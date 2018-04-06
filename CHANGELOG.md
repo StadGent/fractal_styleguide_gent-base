@@ -36,11 +36,13 @@ All notable changes to this style guide are documented here.
 > components and to allow easier overriding of the properties of these
 > components.
 
+* STIJ-159: Added tag atom styling.
 * DTGB-174: Changed styling of status messages.
 * DTGB-214: Added new styling to buttons.
 * DTGB-218: Added new logo.
 * DTGB-258: Added gulp task to generate iconfont.
 * DTGB-283: Updated the license file to GPLv2.
+* DTGB-288: Added the quote molecule.
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
 * DTGB-180: Added gulp task to perform accessibility checks.
 * DTGB-209: Added new styling for basic input field atoms.

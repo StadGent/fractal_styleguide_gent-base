@@ -1,0 +1,128 @@
+.quote {
+  @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 2px solid;
+
+  @include desktop {
+    flex-direction: row;
+    padding-top: 1.6rem;
+  }
+
+  blockquote {
+    position: relative;
+    flex: 1;
+
+    @include desktop {
+      padding-left: 9rem;
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: -7rem;
+      right: 0;
+      left: 0;
+      width: 7rem;
+      height: 7rem;
+      margin: auto;
+      border: 1rem solid color('white');
+      background-color: color('white');
+      background-image: url('#{$styleguide-dir}/img/svg/quote.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+      content: '';
+      box-sizing: content-box;
+
+      @include desktop {
+        top: 0;
+        left: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+    }
+
+    @include desktop {
+      align-items: center;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: 6rem;
+      margin-top: 2rem;
+
+      @include desktop {
+        margin-top: 1rem;
+      }
+    }
+
+    p {
+      font-size: .8rem;
+      font-weight: 600;
+      line-height: 1.9;
+      text-align: center;
+
+      &:first-of-type::before {
+        content: '\201C';
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+
+        &::after {
+          content: '\201D';
+        }
+      }
+
+      @include desktop {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-align: left;
+      }
+    }
+
+    footer {
+      @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
+
+      position: relative;
+      margin-top: 1.6rem;
+      padding-top: 1.6rem;
+      border-top: 2px solid;
+      font-size: .8rem;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.6;
+      text-align: center;
+
+      @include desktop {
+        font-size: .9rem;
+        line-height: 1.4;
+      }
+
+      &::before {
+        @include theme('background-image', 'color-primary-accolade-stroke', 'quote-accolade-stroke');
+
+        display: block;
+        position: absolute;
+        top: -.1rem;
+        right: 0;
+        left: 0;
+        width: 2rem;
+        height: 1rem;
+        margin: auto;
+        transform: rotate(180deg);
+        background-color: color('white');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        content: '';
+      }
+    }
+  }
+}

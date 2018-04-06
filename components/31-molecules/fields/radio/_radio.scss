@@ -25,6 +25,11 @@
       content: none;
     }
 
+    // @TODO: Update when a focus style has been designed.
+    &:focus + label {
+      outline: 1px dotted;
+    }
+
     // Checked state.
     &:checked {
       // Show checkmark on checked.

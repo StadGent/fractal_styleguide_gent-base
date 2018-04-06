@@ -1,3 +1,15 @@
-input[type="checkbox"] + span {
-  @include theme('color', 'color-secondary', 'label-color');
+input[type="checkbox"] {
+  [class*="cs--"] & {
+    &.success + label {
+      color: color('green');
+    }
+
+    &.error + label {
+      color: color('red');
+    }
+  }
+
+  + label {
+    @include theme('color', 'color-tertiary', 'label-color');
+  }
 }

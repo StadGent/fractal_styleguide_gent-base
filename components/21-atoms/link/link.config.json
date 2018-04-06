@@ -16,15 +16,17 @@
       "handle": "link"
     },
     {
-      "name": "external-link",
+      "name": "stand-alone",
       "context": {
-        "modifier": "external-link"
+        "icon": "icon-arrow-right",
+        "modifier": "stand-alone"
       }
     },
     {
-      "name": "read-more-link",
+      "name": "button",
       "context": {
-        "modifier": "read-more-link"
+        "icon": "icon-arrow-right",
+        "modifier": "button button-primary"
       }
     }
   ]

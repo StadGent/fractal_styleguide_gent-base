@@ -54,7 +54,8 @@ const _sassCompile = () => {
       ]
     }),
     autoprefixer({
-      browsers: ['last 5 versions']
+      browsers: ['last 5 versions'],
+      grid: true
     })
   ]);
   combined.on('error', sass.logError);
@@ -68,7 +69,7 @@ const _sassCompile = () => {
  */
 gulp.task('styles:inject', () => {
   const injectSettingsFiles = gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
-  const injectMixinsFiles = gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
+  const injectMixinsFiles = gulp.src('components/00-mixins/**/*.s+(a|c)ss', {read: false});
   const injectBaseFiles = gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
   const injectAtomsFiles = gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
   const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
@@ -581,9 +582,7 @@ gulp.task('validate', gulp.parallel('styles:validate', 'js:validate', 'axe'), ca
  *  Used to compile production ready SCSS and JS code.
  *
  */
-// todo make sure fractal:build is executed first
-// or it overrides the build dir
-gulp.task('compile', gulp.series('fractal:build', gulp.parallel('styles:build', 'styles:dist', 'styles:extract', 'sassdoc', 'iconfont', 'js:build', 'js:dist', 'images:minify'
+gulp.task('compile', gulp.series('fractal:build', gulp.parallel('styles:build', 'styles:dist', 'styles:inject', 'styles:extract', 'sassdoc', 'iconfont', 'js:build', 'js:dist', 'images:minify'
 )), callback => callback());
 
 gulp.task('compile:dev', gulp.series('fractal:build', gulp.parallel('styles:dist', 'sassdoc', 'iconfont', 'js:dist', 'images:minify'

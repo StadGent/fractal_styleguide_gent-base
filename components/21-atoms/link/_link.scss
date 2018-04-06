@@ -1,42 +1,34 @@
 a {
   @include theme('color', 'color-primary', 'link-color');
 
+  padding: .3em;
   transition: color .11s ease-in-out;
   font-weight: 600;
   text-decoration: underline;
-  cursor: pointer;
+
+  &:hover {
+    @include theme('background-color', 'color-primary--lighten-4', 'link-background-hover');
+    @include theme('color', 'color-primary--darken-2', 'link-color-hover');
+  }
 
   &:focus {
     outline: thin dotted;
   }
 
-  //
-  // @TODO: Add hover state (waiting for design specifications.)
-  //
-  // &:hover {}
+  // Different button link types. These are links styled as a button.
+  &.button {
+    @include button;
+    @include button-icon;
 
-  // @TODO: Add external-link variant (waiting for design specifications.)
-  // &.external-link {
-  //   &::before {
-  //     @extend %icon-base-css;
-  //     @extend %icon-newtab;
+    text-decoration: none;
+  }
 
-  //     display: inline-block;
-  //     margin-right: .25rem;
-  //     text-decoration: none;
-  //   }
-  // }
-
-  &.read-more-link {
-    @include icon('arrow-right', 'after');
-
-    line-height: 1rem;
+  // Standalone links (could be used for external links.)
+  &.stand-alone {
     text-decoration: none;
 
-    &::after {
-      position: relative;
-      top: .15rem;
-      margin-left: .5rem;
+    i {
+      line-height: inherit;
     }
   }
 }

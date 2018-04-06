@@ -1,6 +1,7 @@
 {
   "title": "Search",
   "status": "ready",
+  "hidden": "hidden",
   "handle": "search",
   "context": {
     "label": "What are you looking for?",

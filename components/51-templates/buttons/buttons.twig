@@ -1,4 +1,4 @@
-<h4 class="styleguide-title">Buttons</h4>
+<h2 class="styleguide-title">Buttons</h2>
 
 <div class="preview-inner-inner-container">
   <h5 class="styleguide">Primary buttons</h5>
@@ -21,10 +21,21 @@
     With icon / disabled:
   </p>
   <p>
-    {% include '@button-primary' with { 'icon': 'icon-marker' } %}
+    {% include '@button-primary' with { 'icon': 'icon-lightning' } %}
   </p>
   <p>
     {% include '@button-primary' with { 'disabled': 'button-disabled' } %}
+  </p>
+</div>
+<div class="preview-inner-inner-container">
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'modifier': 'button button-primary',
+      'icon': 'icon-lightning'
+    } %}
   </p>
 </div>
 
@@ -49,7 +60,7 @@
     With icon / disabled:
   </p>
   <p>
-    {% include '@button-secondary' with { 'icon': 'icon-marker' } %}
+    {% include '@button-secondary' with { 'icon': 'icon-lightning' } %}
   </p>
   <p>
     {% include '@button-secondary' with { 'disabled': 'button-disabled' } %}
@@ -77,7 +88,7 @@
     With icon / disabled:
   </p>
   <p>
-    {% include '@button-dark' with { 'icon': 'icon-marker' } %}
+    {% include '@button-dark' with { 'icon': 'icon-lightning' } %}
   </p>
   <p>
     {% include '@button-dark' with { 'disabled': 'button-disabled' } %}
@@ -150,7 +161,7 @@
     With icon / disabled:
   </p>
   <p>
-    {% include '@button-success' with { 'icon': 'icon-marker' } %}
+    {% include '@button-success' with { 'icon': 'icon-checkmark' } %}
   </p>
   <p>
     {% include '@button-success' with { 'disabled': 'button-disabled' } %}
