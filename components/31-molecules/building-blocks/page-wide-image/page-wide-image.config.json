@@ -1,6 +1,7 @@
 {
   "title": "Page wide image",
   "status": "ready",
+  "hidden": "hidden",
   "context": {
     "src": "https://via.placeholder.com/1600x420",
     "alt_text": "Page wide image",
