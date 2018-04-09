@@ -1,39 +1,17 @@
 header.header {
   position: relative;
-  min-height: 2.7rem;
-  padding: .35rem 0 0;
-  font-size: .7rem;
-
-  input,
-  button {
-    height: 2rem;
-  }
 
   .content-container {
-    height: 100%;
+    @include theme('border-color', 'color-primary--lighten-4', 'header-border-color');
+
+    display: flex;
+    justify-content: space-between;
+    min-height: 3.6rem;
+    padding: 0;
+    border-bottom: 2px solid;
+    align-items: center;
 
     > * {
-      min-height: 100%;
-      max-height: 2.36rem;
-      margin: 0 1rem 0 0;
-      float: left;
-      line-height: 2rem;
-
-      &.right {
-        margin: 0 0 0 1rem;
-        float: right;
-      }
-
-      .site-logo {
-        min-width: 4.5rem;
-      }
-
-      i {
-        display: inline-block;
-        font-size: 1rem;
-        line-height: 2.4rem;
-      }
-
       .login-link i {
         display: none;
 

@@ -1,5 +1,5 @@
 .mijn-gent-block {
-  display: inline-block;
+  display: flex;
   position: relative;
 
   &:hover .content {
@@ -28,40 +28,46 @@
   }
 
   .toggle {
-    display: inline-block;
+    display: flex;
     position: relative;
-    height: 2rem;
-    overflow: hidden;
-  }
+    align-items: center;
 
-  .label,
-  .picture {
-    height: 2rem;
-    float: left;
-  }
+    .picture {
+      width: 2.3rem;
+      height: 2.3rem;
+      margin-right: .9rem;
 
-  .label {
-    display: none;
+      img {
+        width: 100%;
+        border-radius: 100%;
+      }
+    }
 
-    @include tablet {
-      display: inline;
-      margin-right: .5rem;
+    .label {
+      display: none;
+
+      a {
+        @include theme('color', 'color-tertiary', 'mijn-gent-username-color');
+
+        background: none;
+        text-decoration: none;
+      }
+
+      i {
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+
+      @include tablet {
+        display: flex;
+        align-items: center;
+        margin-right: .5rem;
+      }
     }
   }
 
-  .picture {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 2rem;
-    margin: auto;
 
-    img {
-      width: 100%;
-      border-radius: border-radius('radius-1');
-    }
-  }
-
+  // Dropdown.
   .content {
     display: none;
     position: absolute;

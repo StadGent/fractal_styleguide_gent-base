@@ -1,18 +1,11 @@
-<header class="header section--wrapper">
+<header class="header">
   <div class="content-container">
 
     <div id="logo" class="header-component">
       {% include '@logo' %}
     </div>
 
-    <div id="profile" class="header-component right">
-      {% include '@mijn-gent-block' with {
-      "items": mijn_gent_block_items,
-      'auth': 'true',
-      } %}
-    </div>
-
-    <div id="header-search-mobile" class="header-search-mobile header-component right">
+    <div id="header-search-mobile" class="header-search-mobile header-component">
       {% include '@search' with {
       "search_id": header_search_mobile_id,
       "search_name": header_search_mobile_name,
@@ -23,7 +16,8 @@
       } %}
       <a href="javascript:(void);" class="close">Sluiten</a>
     </div>
-    <div id="header-search" class="header-search header-component right">
+
+    <div id="header-search" class="header-search header-component">
       {% include '@search' with {
       "search_id": header_search_id,
       "search_name": header_search_name,
@@ -33,13 +27,13 @@
       "modifier_submit": header_search_modifier_submit
       } %}
     </div>
+
+    <div id="profile" class="header-component right">
+      {% include '@mijn-gent-block' with {
+      "items": mijn_gent_block_items,
+      'auth': 'true',
+      } %}
+    </div>
+
   </div>
-
 </header>
-
-
-{% include '@breadcrumbs' with {
-"section": breadcrumbs_section,
-"items": breadcrumbs_items
-} %}
-
