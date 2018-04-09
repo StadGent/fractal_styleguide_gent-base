@@ -26,7 +26,11 @@
       "name": "List with links",
       "handle": "links-list",
       "context": {
-        "type": "links"
+        "type": "links",
+        "items": [
+          "<a href='#'>item 1</a>",
+          "<a href='#'>item 2</a>"
+        ]
       }
     },
     {

@@ -13,6 +13,13 @@ ol {
     @extend %list-no-style;
   }
 
+  a {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+}
+
+ul {
   &.iconlist,
   &.iconlist-small {
     @extend %list-no-style;
@@ -36,11 +43,6 @@ ol {
   &.iconlist-small li::before {
     font-size: 1.2rem;
     line-height: 1.7em;
-  }
-
-  a {
-    font-size: 1rem;
-    font-weight: normal;
   }
 }
 
