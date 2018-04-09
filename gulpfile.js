@@ -123,7 +123,7 @@ gulp.task('styles:inject', () => {
     relative: true
   };
 
-  return gulp.src('components/main_cli.scss')
+  return gulp.src('components/main_cli.scss', { allowEmpty: true })
     .pipe(inject(injectSettingsFiles, injectSettingsOptions))
     .pipe(inject(injectMixinsFiles, injectMixinsOptions))
     .pipe(inject(injectBaseFiles, injectBaseOptions))
