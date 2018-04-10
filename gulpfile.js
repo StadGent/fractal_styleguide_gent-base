@@ -30,8 +30,11 @@ const combiner = require('stream-combiner2');
 const cache = require('gulp-cached');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
+const gulpif = require('gulp-if');
 // require our configurated fractal module
 const fractal = require('./fractal');
+
+let build = false;
 
 /*
 * Get the sassFiles.
@@ -120,7 +123,7 @@ gulp.task('styles:inject', () => {
     relative: true
   };
 
-  return gulp.src('components/main_cli.scss')
+  return gulp.src('components/main_cli.scss', {allowEmpty: true})
     .pipe(inject(injectSettingsFiles, injectSettingsOptions))
     .pipe(inject(injectMixinsFiles, injectMixinsOptions))
     .pipe(inject(injectBaseFiles, injectBaseOptions))
@@ -178,6 +181,7 @@ gulp.task('styles:validate', () => {
     .pipe(sassLint({
       configFile: './.sass-lint.yml'
     }))
+    .pipe(gulpif(build, sassLint.failOnError()))
     .pipe(sassLint.format());
 });
 
@@ -444,7 +448,7 @@ gulp.task('axe', function (done) {
       browser: 'phantomjs',
       urls: ['build/components/preview/*.html'],
       showOnlyViolations: true,
-      verbose: true,
+      verbose: false,
       a11yCheckOptions: {
         runOnly: {
           type: 'tag',
@@ -459,6 +463,7 @@ gulp.task('axe', function (done) {
         let components = Object.assign({}, options);
         components.saveOutputIn = 'components.json';
         components.urls = ['build/components/preview/!(input*|*page).html'];
+        components.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
         components.a11yCheckOptions.rules = {bypass: {enabled: false}};
 
         axe(components, () => {resolve();});
@@ -471,6 +476,7 @@ gulp.task('axe', function (done) {
         let input = Object.assign({}, options);
         input.saveOutputIn = 'inputAtoms.json';
         input.urls = ['build/components/preview/input*.html'];
+        input.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
         input.a11yCheckOptions.rules = {
           label: {enabled: false},
           bypass: {enabled: false}
@@ -486,12 +492,13 @@ gulp.task('axe', function (done) {
         let pages = Object.assign({}, options);
         pages.saveOutputIn = 'pages.json';
         pages.urls = ['build/components/preview/*page.html'];
+        pages.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
 
         axe(pages, () => {resolve();});
       });
     };
 
-    return Promise.all([input(), notInputNotPages(), pages()]);
+    return Promise.all([input(), pages(), notInputNotPages()]);
   }
   catch (err) {
     console.log('Error catched', err); // eslint-disable-line no-console
@@ -597,7 +604,14 @@ gulp.task('compile:dev', gulp.series('fractal:build', gulp.parallel('styles:dist
  *  Used to validate and build production ready code.
  *
  */
-gulp.task('build', gulp.parallel('validate', 'compile'));
+gulp.task('build', gulp.series((cb) => {
+  // set env variable to be used in gulp-if
+  build = true;
+  cb();
+}, gulp.parallel('validate', 'compile'), (cb) => {
+  build = false;
+  cb();
+}));
 
 /*
  *
