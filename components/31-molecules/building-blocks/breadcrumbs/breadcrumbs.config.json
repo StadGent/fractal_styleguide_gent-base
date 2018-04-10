@@ -1,7 +1,6 @@
 {
   "title": "Breadcrumbs",
   "status": "ready",
-  "hidden": "hidden",
   "handle": "breadcrumbs",
   "preview": "@preview-without-padding",
   "context": {
