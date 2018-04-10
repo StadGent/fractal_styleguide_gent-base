@@ -2,23 +2,41 @@
   @include theme('background-color', 'color-primary--lighten-6', 'gentinfo-block-background');
 
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
   padding: 2rem 2.5rem;
   font-size: .8rem;
   line-height: 1.75;
+  text-align: center;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    margin: 0;
+    text-align: left;
+  }
 
   .gentinfo-icon {
     display: block;
-    margin-right: 2.4rem;
-    align-self: start;
-    margin-right: 2.4rem;
+    width: 100%;
+    max-width: 6rem;
+    margin: -6rem auto 0;
+
+    @include tablet {
+      align-self: start;
+      margin: 0 2.4rem 0 0;
+    }
   }
 
   .gentinfo-block-content {
-    width: span(4 of 6);
-    max-width: 15rem;
+    width: 100%;
+
+    @include tablet {
+      width: span(4 of 6);
+      max-width: 15rem;
+    }
 
     h2 {
-      font-weight: 800;
+      font-weight: 600;
     }
 
     ul {

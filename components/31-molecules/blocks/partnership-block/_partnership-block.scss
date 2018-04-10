@@ -1,14 +1,15 @@
 .db-block-partnership {
+  display: flex;
+  align-items: center;
+
   p,
   i.icon-digipolis {
     margin: 0;
-    float: left;
-    line-height: 2rem;
+    line-height: 1rem;
   }
 
   i.icon-digipolis {
     margin-left: .5rem;
     font-size: 1.3rem;
   }
-
 }

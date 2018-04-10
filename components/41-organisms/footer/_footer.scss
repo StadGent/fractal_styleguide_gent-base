@@ -1,39 +1,99 @@
 // General footer styling.
 footer.footer {
+  .footer-top,
+  .footer-bottom {
+    padding: 0 $gutter-width;
+
+    @include tablet {
+      padding: 0 $gutter-width/2;
+    }
+  }
+
   .footer-top {
     @include theme('border-color', 'color-primary--lighten-4', 'footer-border-color');
 
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
-    padding: 2rem 0;
+    padding-bottom: 1.5rem;
     border-top: 2px solid;
     border-bottom: 2px solid;
 
+    @include tablet {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
     .footer--column {
-      flex: 1 0 auto;
-      width: span(3 of 12);
+      width: 100%;
+
+      @include tablet {
+        flex: 1 0 auto;
+        width: span(3 of 12);
+      }
 
       &:first-of-type {
-        width: span(6 of 12);
+        width: 100%;
+
+        @include tablet  {
+          width: span(6 of 12);
+        }
       }
 
       &:nth-of-type(2) {
         display: flex;
-        justify-content: center;
+
+        @include tablet {
+          justify-content: center;
+        }
       }
     }
   }
 
   .footer-bottom {
     display: flex;
+    flex-wrap: wrap;
 
     .footer--column {
-      width: span(6 of 12);
+      width: 100%;
+      line-height: 1rem;
+
+      // Left column.
+      &:first-child {
+        order: 2;
+
+        @include tablet {
+          order: 1;
+          width: span(9 of 24);
+        }
+      }
+
+      // Right column.
+      &:last-child {
+        order: 1;
+        margin-bottom: 1.8rem;
+
+        @include tablet {
+          order: 2;
+          width: span(15 of 24);
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
   .dg-block-post-address,
   .dg-block-disclaimer {
     margin-top: 2.5rem;
+  }
+
+  .db-block-partnership {
+    justify-content: center;
+    width: 100%;
+    min-height: 2rem;
+
+    @include tablet {
+      justify-content: start;
+    }
   }
 }
