@@ -10,6 +10,10 @@ header.header {
     border-bottom: 2px solid;
     align-items: center;
 
+    @include desktop {
+      padding: 0 .5rem;
+    }
+
     > * {
       .login-link i {
         display: none;
