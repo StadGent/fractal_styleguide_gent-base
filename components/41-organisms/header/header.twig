@@ -37,3 +37,13 @@
 
   </div>
 </header>
+
+{% include '@breadcrumbs' with {
+  "items": [
+    "<a href='#'>Stad.gent</a>",
+    "<a href='#'>Overview</a>",
+    "<span>Overview</span>",
+    "<span>Overview</span>",
+    "<span>Page title</span>"
+  ]
+}%}
