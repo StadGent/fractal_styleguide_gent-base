@@ -3,6 +3,12 @@ ol {
   position: relative;
   margin-left: 1rem;
 
+  li {
+    font-family: $default-font-family;
+    font-size: .9rem;
+    line-height: 2.1;
+  }
+
   &.links {
     @extend %list-no-style;
   }
@@ -10,6 +16,51 @@ ol {
   a {
     font-size: 1rem;
     font-weight: normal;
+  }
+}
+
+ul {
+  &.iconlist,
+  &.iconlist-small {
+    @extend %list-no-style;
+
+    li {
+      @include icon('checkmark');
+
+      position: relative;
+      padding-left: 2rem;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.6rem;
+        line-height: 1.1em;
+      }
+    }
+  }
+
+  &.iconlist-small li::before {
+    font-size: 1.2rem;
+    line-height: 1.7em;
+  }
+}
+
+dl {
+  dt,
+  dd {
+    font-family: $default-font-family;
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  dt {
+    font-weight: 600;
+  }
+
+  dd {
+    margin-bottom: .4rem;
+    padding-left: 1rem;
   }
 }
 
