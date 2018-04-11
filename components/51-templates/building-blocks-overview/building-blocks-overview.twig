@@ -5,6 +5,19 @@
   {% include '@quote' %}
 </div>
 
+<div class="preview-inner-inner-container">
+  <h3 class="styleguide">Breadcrumbs</h3>
+  {% include '@breadcrumbs' with {
+    "items": [
+      "<a href='#'>Stad.gent</a>",
+      "<a href='#'>Overview</a>",
+      "<span>Overview</span>",
+      "<span>Overview</span>",
+      "<span>Page title</span>"
+    ]
+  }%}
+</div>
+
 {#
 <div class="preview-inner-inner-container">
   <h3 class="styleguide">Header</h3>
@@ -19,19 +32,6 @@
 <div class="preview-inner-inner-container">
   <h3 class="styleguide">Footer</h3>
   {% include '@footer' %}
-</div>
-
-<div class="preview-inner-inner-container">
-  <h3 class="styleguide">Breadcrumbs</h3>
-  {% include '@breadcrumbs' with {
-    "items": [
-      "<a href='#'>Stad.gent</a>",
-      "<a href='#'>Overview</a>",
-      "<span>Overview</span>",
-      "<span>Overview</span>",
-      "<span>Page title</span>"
-    ]
-  }%}
 </div>
 
 <div class="preview-inner-inner-container">
