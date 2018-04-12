@@ -1,7 +1,11 @@
-.teaser {
-  position: relative;
+.teaser-topic {
+  @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
 
-  &__overlay-link {
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid;
+
+  a.teaser-topic-overlay-link {
     position: absolute;
     top: 0;
     right: 0;
@@ -11,23 +15,31 @@
     white-space: nowrap;
     overflow: hidden;
     z-index: 1;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 
-  &__content {
+  &-content {
     margin: 0;
 
     h3 {
-      margin-top: 0;
+      @extend %h4;
+    }
+
+    p {
+      line-height: 1.7;
     }
 
     a,
     button {
       position: relative;
+      line-height: 1em;
       z-index: 2;
     }
 
     &--section {
-      @extend %island;
       @extend %cs--default;
     }
   }

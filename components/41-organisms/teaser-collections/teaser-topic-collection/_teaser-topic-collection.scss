@@ -1,0 +1,23 @@
+.teaser-topic-collection {
+  ul {
+    @extend %list-no-style;
+    @supports (display: grid) {
+      @include tablet {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include desktop {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      display: grid;
+      grid-gap: $gutter-width;
+    }
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .teaser-topic {
+    min-height: 10rem;
+  }
+}

@@ -1,7 +1,7 @@
-<div class="teaser">
-  <a href="{{ teaser_link_link }}" class="teaser__overlay-link" tabindex="-1"
+<div class="teaser-topic">
+  <a href="{{ teaser_link_link }}" class="teaser-topic-overlay-link" tabindex="-1"
      aria-hidden="true">{{ teaser_h3_title }}</a>
-  <div class="teaser__content teaser__content--topic">
+  <div class="teaser-topic-content">
     <h3 id="{{ teaser_uid }}">{{ teaser_h3_title }}</h3>
 
     {% include '@paragraph' with {
@@ -11,7 +11,9 @@
     {% include '@link' with {
       'text': teaser_link_text,
       'aria_labelledby': teaser_uid,
-      'link': teaser_link_link
+      'link': teaser_link_link,
+      'modifier': 'stand-alone',
+      'icon': 'icon-arrow-right',
     } %}
   </div>
 </div>
