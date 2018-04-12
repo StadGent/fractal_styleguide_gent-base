@@ -184,7 +184,6 @@ $themes: (
   'default': (
     // Required colors!
     'color-primary': color('cyan'),
-    'color-primary_wcag': color('cyan-wcag'),
     'color-secondary': color('white'),
     'color-tertiary': color('dark-gray'),
     'color-box-shadow': $box-shadow-primary color('cyan-wcag', -4),
@@ -193,11 +192,13 @@ $themes: (
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
+    'link-color': color('cyan-wcag'),
+    'link-hover-background': color('cyan-wcag', -4),
+    'link-hover-color': color('cyan-wcag', 2),
   ),
   'purple': (
     // Required colors!
     'color-primary': color('purple'),
-    'color-primary_wcag': color('purple'),
     'color-secondary': color('white'),
     'color-tertiary': color('dark-gray'),
     'color-box-shadow': $box-shadow-primary color('purple', -4),
@@ -210,7 +211,6 @@ $themes: (
   'orange': (
     // Required colors!
     'color-primary': color('orange'),
-    'color-primary_wcag': color('orange'),
     'color-secondary': color('white'),
     'color-tertiary': color('dark-gray'),
     'color-box-shadow': $box-shadow-primary color('orange', -4),

@@ -15,7 +15,7 @@
       margin-right: .8rem;
 
       &::after {
-        @include theme('color', 'color-primary_wcag', 'breadcrumb-arrows-color');
+        @include theme('color', 'color-primary', 'breadcrumb-arrows-color');
 
         margin-left: .8rem;
         vertical-align: -15%;
