@@ -3,12 +3,13 @@
 
   display: flex;
   flex-direction: column;
-  margin-top: 2.5rem;
+  margin: 5rem 0 2.5rem;
   padding-top: 2.5rem;
   border-top: 2px solid;
 
   @include desktop {
     flex-direction: row;
+    margin: 2.5rem 0;
     padding-top: 1.6rem;
   }
 
@@ -29,8 +30,12 @@
       position: relative;
       flex-wrap: wrap;
       align-items: center;
-      min-height: 6rem;
+      min-height: 3rem;
       margin-top: 1rem;
+
+      @include desktop {
+        min-height: 6rem;
+      }
 
       &::before {
         display: block;
@@ -93,7 +98,7 @@
       @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
 
       position: relative;
-      margin-top: 1.6rem;
+      margin-top: 1rem;
       padding-top: 1.6rem;
       border-top: 2px solid;
       font-size: .8rem;
@@ -103,6 +108,7 @@
       text-align: center;
 
       @include desktop {
+        margin-top: 1.6rem;
         font-size: .9rem;
         line-height: 1.4;
       }
