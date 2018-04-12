@@ -56,6 +56,7 @@ All notable changes to this style guide are documented here.
 > can now be found in the `_forms.scss` partial.
 
 * DTGB-407: Changed the default font size breakpoints.
+* DTGB-423: Added new styling for topic teasers and their collection organism.
 
 ### 2.11.0
 
