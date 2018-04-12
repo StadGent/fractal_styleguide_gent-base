@@ -1,13 +1,15 @@
 .db-block-partnership {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  height: 100%;
-  padding-top: 6.25rem;
-  background-image: url('#{$styleguide-dir}/img/svg/stad-gent.svg') ;
-  background-repeat: no-repeat;
-  background-position: bottom 2.5rem right;
-  background-size: 8.75rem;
-  color: color('dark-gray');
-  text-align: right;
+  align-items: center;
+
+  p,
+  i.icon-digipolis {
+    margin: 0;
+    line-height: 1rem;
+  }
+
+  i.icon-digipolis {
+    margin-left: .5rem;
+    font-size: 1.3rem;
+  }
 }
