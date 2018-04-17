@@ -1,7 +1,10 @@
 .breadcrumb {
+  margin: .8rem 0;
+
   ul,
   ol {
     display: none;
+    margin: 0;
     list-style: none;
 
     @media (min-width: $bp-tablet) {
@@ -12,12 +15,12 @@
       @include icon('chevron-right', 'after');
 
       display: inline-block;
-      margin-right: .8rem;
+      margin-right: .4rem;
 
       &::after {
         @include theme('color', 'color-primary', 'breadcrumb-arrows-color');
 
-        margin-left: .8rem;
+        margin-left: .4rem;
         vertical-align: -15%;
       }
 
