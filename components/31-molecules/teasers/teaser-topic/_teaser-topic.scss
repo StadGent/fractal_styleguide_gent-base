@@ -32,9 +32,9 @@
       line-height: 1.7;
     }
 
-    a,
-    button {
+    a.read-more {
       position: relative;
+      margin-left: -.3rem;
       line-height: 1em;
       z-index: 2;
     }
