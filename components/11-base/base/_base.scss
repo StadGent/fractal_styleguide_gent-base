@@ -20,9 +20,9 @@ html {
 }
 
 body {
-  position: relative;
+  @include theme('color', 'color-tertiary', 'default-text-color');
 
-  color: color('dark-gray');
+  position: relative;
 }
 
 body,
