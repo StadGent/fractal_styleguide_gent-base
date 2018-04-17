@@ -1,18 +1,18 @@
-.dg-block-links {
-  list-style: none;
+.dg-block-disclaimer {
+  font-size: .8rem;
+  line-height: 2.13;
 
-  a {
-    color: color('orange', -2);
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      color: color('orange', -2);
-    }
-
-    &:visited {
-      color: color('orange', -2);
-    }
-
+  h3 {
+    @extend %h5;
   }
+
+  ul {
+    margin: 0;
+    list-style: none;
+
+    a {
+      font-size: .8rem;
+    }
+  }
+
 }

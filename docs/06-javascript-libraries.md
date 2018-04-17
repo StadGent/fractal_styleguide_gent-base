@@ -133,22 +133,6 @@ Implements chosen jQuery plugin in this Style guide.
 Style guide implementation of the
 <a href="{{path '/components/detail/breadcrumbs'}}">breadcrumbs molecule</a>.
 
-### Breadcrumbs.functions.js
-
-Implements the default Breadcrumb behavior of the Style guide. A new global
-namespace: gentStyleGuideBreadcrum has been created to give access to the
-public functionality of this script. As such the following public functions are
-available
-
-* gentStyleGuideBreadcrumb.updateMobileBreadcrumb(): Replace the default
-  Breadcrumb with a mobile optimized one.
-
-### Breadcrumbs.binding.js
-
-Integration of the breadcrumb functionality with this Style guide. Calls the
-gentStyleGuideBreadcrumb.updateMobileBreadcrumb() method on the window.load
-event.
-
 ## Hamburger-menu
 
 Style guide implementation of the

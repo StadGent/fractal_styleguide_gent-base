@@ -7,8 +7,8 @@ a {
   text-decoration: underline;
 
   &:hover {
-    @include theme('background-color', 'color-primary--lighten-4', 'link-background-hover');
-    @include theme('color', 'color-primary--darken-2', 'link-color-hover');
+    @include theme('background-color', 'color-primary--lighten-4', 'link-hover-background');
+    @include theme('color', 'color-primary--darken-2', 'link-hover-color');
   }
 
   &:focus {
