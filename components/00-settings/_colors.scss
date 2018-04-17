@@ -194,6 +194,8 @@ $themes: (
     // Exceptions to colors go here...
     // These should be as limited as possible though!
     'link-color': color('cyan-wcag'),
+    'link-hover-background': color('cyan-wcag', -4),
+    'link-hover-color': color('cyan-wcag', 2),
   ),
   'purple': (
     // Required colors!

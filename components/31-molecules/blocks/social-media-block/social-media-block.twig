@@ -1,14 +1,14 @@
-<div class="dg-blocks-social island">
-  {% include '@h3'with { 'h3_text': 'Volg Stad Gent op' } %}
+<div class="dg-blocks-social">
+  <span>{{ 'Volg Stad Gent op sociale media'  }}</span>
   {% include "@list" with
     {
-      "modifier": "no-style",
+      "type": "unordered",
       "items": [
-        '<a href="https://www.facebook.com/stadsbestuurgent" class="facebook">stadsbestuurgent</a>',
-        '<a href="https://twitter.com/stadgent" class="twitter">@Stadgent</a>',
-        '<a href="https://www.linkedin.com/company/stad-gent" class="linkedin">Stad Gent</a>',
-        '<a href="https://www.youtube.com/channel/UCmJLf8SFG0D0GTd6LSSTQLw" class="youtube">YouTube Stad Gent</a>',
-        '<a href="https://www.instagram.com/stadgent/" class="instagram">@stadgent</a>'
+        '<a href="https://www.facebook.com/stadsbestuurgent"><i aria-hidden="true" class="icon-facebook"></i><span class="visually-hidden">Facebook</span></a>',
+        '<a href="https://www.twitter.com/stadgent"><i aria-hidden="true" class="icon-twitter"></i><span class="visually-hidden">Twitter</span></a>',
+        '<a href="https://www.linkedin.com/company/stad-gent"><i aria-hidden="true" class="icon-linkedin"></i><span class="visually-hidden">LinkedIn</span></a>',
+        '<a href="https://www.youtube.com/channel/UCmJLf8SFG0D0GTd6LSSTQLw"><i aria-hidden="true" class="icon-youtube"></i><span class="visually-hidden">Youtube</span></a>',
+        '<a href="https://www.instagram.com/stadgent/"><i aria-hidden="true" class="icon-instagram"></i><span class="visually-hidden">Instagram</span></a>'
       ]
     }
   %}
