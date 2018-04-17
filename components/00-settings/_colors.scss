@@ -195,6 +195,20 @@ $themes: (
     'link-color': color('cyan-wcag'),
     'link-hover-background': color('cyan-wcag', -4),
     'link-hover-color': color('cyan-wcag', 2),
+
+    'button-primary-background': color('cyan-wcag'),
+    'button-primary-border-color': color('cyan-wcag'),
+    'button-primary-hover-background': color('cyan-wcag', 1),
+    'button-primary-hover-border-color': color('cyan-wcag', 1),
+    'button-primary-focus-background': color('cyan-wcag', 3),
+    'button-primary-focus-border-color': color('cyan-wcag', 3),
+
+    'button-secondary-border-color': color('cyan-wcag', -2),
+    'button-secondary-color': color('cyan-wcag'),
+    'button-secondary-hover-color': color('cyan-wcag', 1),
+    'button-secondary-focus-color': color('cyan-wcag', 3),
+    'button-secondary-focus-background': color('cyan-wcag', -4),
+    'button-secondary-focus-border-color': color('cyan-wcag', -1),
   ),
   'purple': (
     // Required colors!
