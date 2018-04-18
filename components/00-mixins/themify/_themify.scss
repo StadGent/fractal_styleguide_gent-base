@@ -117,6 +117,10 @@
     .cs--#{$theme} & {
       #{$property}: set-themified-property($colors, $default, $exception);
     }
+
+    @if $theme == 'default' {
+      #{$property}: set-themified-property($colors, $default, $exception);
+    }
   }
 }
 
