@@ -1,5 +1,8 @@
 {
   "title": "Feedback form",
   "status": "ready",
-  "name": "Feedback form"
+  "name": "Feedback form",
+  "context": {
+    "modifier": ""
+  }
 }

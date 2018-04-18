@@ -1,4 +1,4 @@
-<div class="feedback-form">
+<div class="feedback-form {{ modifier }}">
   <h3><button>{{ 'Can we improve something about this page?' }}<i class="icon-chevron-down" aria-hidden="true"></i></button></h3>
   <div class="content" aria-hidden="true">
     <div class="info-box">
@@ -13,16 +13,11 @@
         } %}
 
         {% include '@paragraph' with {
-          'text': 'You can contact Gentinfo from Monday to Saturday from 08:00 till 19:00'
+          'text': 'You can contact Gentinfo from Monday to Saturday from 08:00 till 19:00<br />
+            09 210 10 10<br />
+            <a href="mailto:Gentinfo@stad.gent">Gentinfo@stad.gent</a>'
         } %}
 
-        {% include '@paragraph' with {
-          'text': '09 210 10 10'
-        } %}
-
-        {% include '@paragraph' with {
-          'text': '<a href="mailto:Gentinfo@stad.gent">Gentinfo@stad.gent</a>'
-        } %}
       </div>
     </div>
     <form action="#" class="no-style">
