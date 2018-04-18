@@ -1,0 +1,44 @@
+<div class="feedback-form">
+  <h3><button>{{ 'Can we improve something about this page?' }}<i class="icon-chevron-down" aria-hidden="true"></i></button></h3>
+  <div class="content" aria-hidden="true">
+    <div class="info-box">
+      {% include '@image' with {
+        'src': '/styleguide/img/svg/gentinfo.svg',
+        'alt_text': 'Gentinfo icon',
+        'modifier': 'info-box-icon'
+      } %}
+      <div class="info-box-text">
+        {% include '@h4' with {
+          'h4_text': 'You can contact Gentinfo for personal questions or complaints.'
+        } %}
+
+        {% include '@paragraph' with {
+          'text': 'You can contact Gentinfo from Monday to Saturday from 08:00 till 19:00'
+        } %}
+
+        {% include '@paragraph' with {
+          'text': '09 210 10 10'
+        } %}
+
+        {% include '@paragraph' with {
+          'text': '<a href="mailto:Gentinfo@stad.gent">Gentinfo@stad.gent</a>'
+        } %}
+      </div>
+    </div>
+    <form action="#" class="no-style">
+      <fieldset>
+        <legend>
+          {% include 'h5' with {
+            'h5_text': 'Do you have suggestions or comments concerning this page?'
+          } %}
+        </legend>
+        {% include '@textarea' with {
+          'label':  'Let us know'
+        } %}
+        {% include '@button-primary' with {
+          'text': 'Send suggestion'
+        } %}
+      </fieldset>
+    </form>
+  </div>
+</div>

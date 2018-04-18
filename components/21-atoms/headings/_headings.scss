@@ -17,6 +17,21 @@ h5,
   font-style: normal;
   font-weight: 600;
 
+  button {
+    display: flex;
+    border: 0;
+    background: none;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    cursor: pointer;
+
+    i {
+      font-size: inherit;
+    }
+  }
+
   // Bypass the FOUT of typekit while loading asynchronously.
   .wf-loading & {
     visibility: hidden;
