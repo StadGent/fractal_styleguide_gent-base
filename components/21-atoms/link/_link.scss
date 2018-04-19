@@ -21,6 +21,14 @@ a {
     @include button-icon;
 
     text-decoration: none;
+
+    &.button-alert {
+      @extend %button-alert;
+    }
+
+    &.button-success {
+      @extend %button-success;
+    }
   }
 
   // Standalone links (could be used for external links.)
