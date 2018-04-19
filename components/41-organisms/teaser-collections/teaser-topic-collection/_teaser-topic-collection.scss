@@ -4,6 +4,7 @@
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -14,23 +15,10 @@
 
       @include tablet {
         width: span(6 of 12);
-        padding-right: $gutter-width;
-
-        &:nth-child(2n) {
-          padding-right: 0;
-        }
       }
 
       @include desktop {
         width: span(4 of 12);
-
-        &:nth-child(2n) {
-          padding-right: $gutter-width;
-        }
-
-        &:nth-child(3n) {
-          padding-right: 0;
-        }
       }
     }
   }
