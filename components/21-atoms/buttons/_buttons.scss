@@ -107,10 +107,6 @@
     @include button-disabled;
   }
 
-  &.button-block {
-    @include button-block;
-  }
-
   &.button-small {
     @include button-small;
   }
@@ -125,6 +121,15 @@
 
   &.button-icon {
     @include button-icon;
+  }
+
+  &.button-block {
+    @include button-block;
+  }
+
+  &.button-icon.button-block {
+    display: flex;
+    justify-content: center;
   }
 }
 
