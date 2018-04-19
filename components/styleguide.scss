@@ -108,7 +108,6 @@ h5.styleguide {
 }
 
 h2.styleguide-title {
-  @include theme('background', 'color-primary--lighten-4', 'styleguide-title-background');
   @include theme('color', 'color-primary', 'styleguide-title-color');
   @include theme('border-color', 'color-primary--lighten-3', 'styleguide-title-border-bottom');
 
