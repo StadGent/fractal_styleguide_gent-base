@@ -1,5 +1,7 @@
 .feedback-form {
-  h3 {
+  h2 {
+    @extend %h3;
+
     margin-left: span(1 of 12);
 
     i {
