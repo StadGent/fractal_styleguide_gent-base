@@ -1,3 +1,12 @@
+///
+///  Placeholder to give a collection of data a certain context / styling.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access public
+/// @author Gert-Jan Meire
+///
+%collection,
 .collection {
   h2 {
     @include theme('border-color', 'color-primary--lighten-4', 'collection-heading-2-border-color');
@@ -9,7 +18,7 @@
     border-bottom: 2px solid;
 
     &::before {
-      @include theme('background-image', 'color-primary-accolade-stroke2', 'collection-heading-2-accolade');
+      @include theme('background-image', 'accolade-stroke-dark', 'collection-heading-2-accolade');
 
       @include mobile {
         right: auto;
