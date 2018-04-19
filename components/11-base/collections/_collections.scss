@@ -11,11 +11,16 @@
     &::before {
       @include theme('background-image', 'color-primary-accolade-stroke2', 'collection-heading-2-accolade');
 
+      @include mobile {
+        right: auto;
+        left: 4rem;
+      }
+
       display: block;
       position: absolute;
+      right: 0;
       bottom: -1rem;
       left: 0;
-      right: 0;
       width: 2rem;
       height: 1rem;
       margin: auto;
@@ -26,14 +31,15 @@
       content: '';
       z-index: 2;
 
-      @include mobile {
-        left: 4rem;
-        right: auto;
-      }
     }
 
     &::after {
       @include theme('border-color', 'color-primary--darken-1', 'collection-heading-2-accolade-border-color');
+
+      @include mobile {
+        width: 10rem;
+      }
+
       display: block;
       position: absolute;
       bottom: -3px;
@@ -44,9 +50,6 @@
       content: '';
       z-index: 0;
 
-      @include mobile {
-        width: 10rem;
-      }
     }
   }
 }

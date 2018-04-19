@@ -1,19 +1,37 @@
 .teaser-topic-collection {
   ul {
     @extend %list-no-style;
-    @supports (display: grid) {
-      @include tablet {
-        grid-template-columns: 1fr 1fr;
-      }
-      @include desktop {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-      display: grid;
-      grid-gap: $gutter-width;
-    }
 
+    display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
+
+    li {
+      width: 100%;
+
+      @include tablet {
+        width: span(6 of 12);
+        margin-bottom: $gutter-width;
+        padding-right: $gutter-width;
+
+        &:nth-child(2n) {
+          padding-right: 0;
+        }
+      }
+
+      @include desktop {
+        width: span(4 of 12);
+
+        &:nth-child(2n) {
+          padding-right: $gutter-width;
+        }
+
+        &:nth-child(3n) {
+          padding-right: 0;
+        }
+      }
+    }
   }
 }
