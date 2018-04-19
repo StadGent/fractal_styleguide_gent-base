@@ -10,10 +10,10 @@
 
     li {
       width: 100%;
+      margin-bottom: $gutter-width;
 
       @include tablet {
         width: span(6 of 12);
-        margin-bottom: $gutter-width;
         padding-right: $gutter-width;
 
         &:nth-child(2n) {
