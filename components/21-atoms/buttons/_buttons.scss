@@ -161,11 +161,12 @@
 
 @mixin button-icon {
   position: relative;
-  padding: 0 .6em 0;
+  padding: 0 1.2em;
   text-align: left;
 
   i {
-    margin-left: 1.7em;
+    margin-left: 1.2em;
+    margin-right: -.4em;
     font-size: 1rem;
   }
 }
