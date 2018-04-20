@@ -1,7 +1,7 @@
 .dg-blocks-social {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
 
   @include tablet {
@@ -15,7 +15,7 @@
     text-align: center;
 
     @include tablet {
-      margin: 0;
+      margin: 0 1.4rem 0 0;
       text-align: right;
     }
   }
@@ -25,7 +25,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    margin: 0 0 0 1.4rem;
+    margin: 0;
     list-style: none;
 
     @include tablet {
