@@ -44,10 +44,12 @@
       list-style: none;
 
       a {
+        @include theme('color', 'color-primary--darken-2', 'gentinfo-block-link-color');
+
+        margin-left: -.3rem;
         font-size: .8rem;
         font-weight: 600;
         text-decoration: none;
-        margin-left: -.3rem;
       }
     }
   }

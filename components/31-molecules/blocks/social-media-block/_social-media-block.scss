@@ -30,11 +30,6 @@
       width: span(6 of 12);
     }
 
-    li {
-      flex: 1 1 auto;
-      width: span(2 of 10);
-    }
-
     a {
       @include theme('background-color', 'color-primary--lighten-5', 'social-media-icon-background');
 
