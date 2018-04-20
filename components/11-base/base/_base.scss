@@ -63,3 +63,16 @@ pre {
   font-size: inherit;
   line-height: inherit;
 }
+
+p,
+span,
+input,
+label,
+textarea,
+button,
+select,
+dd,
+q {
+  max-width: 40rem;
+
+}
