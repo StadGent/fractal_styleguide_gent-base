@@ -94,7 +94,7 @@
 
   display: inline-flex;
   align-items: center;
-  padding: .2em 2em 0;
+  padding: 0 2.6em;
   border: 2px solid;
   border-radius: border-radius('radius-1');
   outline: 0;
@@ -105,10 +105,6 @@
 
   &:disabled {
     @include button-disabled;
-  }
-
-  &.button-block {
-    @include button-block;
   }
 
   &.button-small {
@@ -125,6 +121,15 @@
 
   &.button-icon {
     @include button-icon;
+  }
+
+  &.button-block {
+    @include button-block;
+  }
+
+  &.button-icon.button-block {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -156,11 +161,12 @@
 
 @mixin button-icon {
   position: relative;
-  padding: .4em .6em 0;
+  padding: 0 1.2em;
   text-align: left;
 
   i {
-    margin-left: .5rem;
+    margin-left: 1.2em;
+    margin-right: -.4em;
     font-size: 1rem;
   }
 }
