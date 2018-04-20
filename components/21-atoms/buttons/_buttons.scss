@@ -94,7 +94,7 @@
 
   display: inline-flex;
   align-items: center;
-  padding: .2em 2em 0;
+  padding: 0 2.6em;
   border: 2px solid;
   border-radius: border-radius('radius-1');
   outline: 0;
@@ -161,7 +161,7 @@
 
 @mixin button-icon {
   position: relative;
-  padding: .4em .6em 0;
+  padding: 0 .6em 0;
   text-align: left;
 
   i {
