@@ -1,49 +1,53 @@
-.dg-default-block {
-  @include no-link-style;
+.gentinfo-block {
+  @include theme('background-color', 'color-primary--lighten-6', 'gentinfo-block-background');
 
-  h3 {
-    @extend %h2;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding: 2rem 2.5rem;
+  font-size: .8rem;
+  line-height: 1.75;
+  text-align: center;
 
-  ul {
+  @include tablet {
+    flex-wrap: nowrap;
     margin: 0;
+    text-align: left;
   }
 
-  li {
-    padding: .2rem 0;
-  }
+  .gentinfo-icon {
+    display: block;
+    width: 100%;
+    max-width: 6rem;
+    margin: -6rem auto 0;
 
-  a {
-    color: color('white');
-  }
-
-  .phone {
-    &::before {
-      padding-right: .5rem;
+    @include tablet {
+      align-self: start;
+      margin: 0 2.4rem 0 0;
     }
   }
 
-  .email {
-    &::before {
-      padding-right: .5rem;
-    }
-  }
+  .gentinfo-block-content {
+    width: 100%;
 
-  .link {
-    &::before {
-      padding-right: .5rem;
-    }
-  }
-
-  .textballoon {
-    margin-top: 1rem;
-
-    &:hover {
-      color: color('blue');
+    @include tablet {
+      width: span(4 of 6);
+      max-width: 15rem;
     }
 
-    &::before {
-      padding-right: .5rem;
+    h2 {
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 0;
+      list-style: none;
+
+      a {
+        font-size: .8rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
     }
   }
 }

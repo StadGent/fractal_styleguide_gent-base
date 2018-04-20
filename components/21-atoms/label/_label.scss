@@ -1,8 +1,8 @@
 label {
-  @include theme('color', 'color-tertiary--lighten-1', 'label-color');
+  @include theme('color', 'color-tertiary', 'label-color');
 
   .label-optional {
-    @include theme('color', 'color-tertiary--lighten-1', 'label-color-optional');
+    @include theme('color', 'color-tertiary', 'label-color-optional');
 
     font-size: .7rem;
   }

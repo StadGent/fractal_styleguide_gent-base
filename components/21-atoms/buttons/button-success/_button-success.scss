@@ -15,14 +15,14 @@
 
   &:hover {
     border-color: color('green');
-    background-color: color('green', -4);
+    background-color: color('green', -5);
     color: color('green', 2);
   }
 
   &:active,
   &:focus {
     border-color: color('green');
-    background-color: color('green', -3);
-    color: color('green', 3);
+    background-color: color('green', -4);
+    color: color('green', 2);
   }
 }

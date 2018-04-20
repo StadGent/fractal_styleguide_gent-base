@@ -1,169 +1,197 @@
 <h2 class="styleguide-title">Buttons</h2>
 
 <div class="preview-inner-inner-container">
-  <h5 class="styleguide">Primary buttons</h5>
+  <h3 class="styleguide">Primary buttons</h3>
   <p>
     {% include '@button-primary' %}
   </p>
   <p>
     {% include '@button-primary' with { 'modifier': 'button-block' } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
   <p>
     {% include '@button-primary' with { 'text': 'Small', 'modifier': 'button-small' } %}
     {% include '@button-primary' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
     {% include '@button-primary' with { 'text': 'Large', 'modifier': 'button-large' } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
   <p>
-    With icon / disabled:
+    With icon:
   </p>
   <p>
-    {% include '@button-primary' with { 'icon': 'icon-lightning' } %}
+    {% include '@button-primary' with { 'icon': 'icon-digipolis', 'modifier': 'button-small' } %}
+    {% include '@button-primary' with { 'icon': 'icon-digipolis', 'modifier': 'button-medium' } %}
+    {% include '@button-primary' with { 'icon': 'icon-digipolis', 'modifier': 'button-large' } %}
   </p>
   <p>
-    {% include '@button-primary' with { 'disabled': 'button-disabled' } %}
+    Disabled state:
   </p>
-</div>
-<div class="preview-inner-inner-container">
+  <p>
+    {% include '@button-primary' with { 'disabled': 'button-disabled', 'text': 'Small', 'modifier': 'button-small' } %}
+    {% include '@button-primary' with { 'disabled': 'button-disabled', 'text': 'Medium', 'modifier': 'button-medium' } %}
+    {% include '@button-primary' with { 'disabled': 'button-disabled', 'text': 'Large', 'modifier': 'button-large' } %}
+  </p>
   <p>
     Link styled as a button:
   </p>
   <p>
     {% include '@link--button' with {
       'modifier': 'button button-primary',
-      'icon': 'icon-lightning'
+      'icon': 'icon-arrow-right'
     } %}
   </p>
 </div>
 
 <div class="preview-inner-inner-container">
-  <h5 class="styleguide">Secondary buttons</h5>
+  <h3 class="styleguide">Secondary buttons</h3>
   <p>
     {% include '@button-secondary' %}
   </p>
   <p>
     {% include '@button-secondary' with { 'modifier': 'button-block' } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
   <p>
     {% include '@button-secondary' with { 'text': 'Small', 'modifier': 'button-small' } %}
     {% include '@button-secondary' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
     {% include '@button-secondary' with { 'text': 'Large', 'modifier': 'button-large' } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
   <p>
-    With icon / disabled:
+  <p>
+    With icon:
   </p>
   <p>
-    {% include '@button-secondary' with { 'icon': 'icon-lightning' } %}
+    {% include '@button-secondary' with { 'text': 'Small', 'modifier': 'button-small', 'icon': 'icon-digipolis' } %}
+    {% include '@button-secondary' with { 'text': 'Medium', 'modifier': 'button-medium', 'icon': 'icon-digipolis' } %}
+    {% include '@button-secondary' with { 'text': 'Large', 'modifier': 'button-large', 'icon': 'icon-digipolis' } %}
   </p>
   <p>
-    {% include '@button-secondary' with { 'disabled': 'button-disabled' } %}
+    Disabled state:
+  </p>
+  <p>
+    {% include '@button-secondary' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled' } %}
+    {% include '@button-secondary' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled' } %}
+    {% include '@button-secondary' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled' } %}
+  </p>
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'modifier': 'button button-secondary',
+      'icon': 'icon-arrow-right'
+    } %}
   </p>
 </div>
 
 <div class="preview-inner-inner-container">
-  <h5 class="styleguide">Dark buttons</h5>
+  <h3 class="styleguide">Secondary buttons</h3>
   <p>
     {% include '@button-dark' %}
   </p>
   <p>
     {% include '@button-dark' with { 'modifier': 'button-block' } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
   <p>
     {% include '@button-dark' with { 'text': 'Small', 'modifier': 'button-small' } %}
     {% include '@button-dark' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
     {% include '@button-dark' with { 'text': 'Large', 'modifier': 'button-large' } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
   <p>
-    With icon / disabled:
+  <p>
+    With icon:
   </p>
   <p>
-    {% include '@button-dark' with { 'icon': 'icon-lightning' } %}
+    {% include '@button-dark' with { 'text': 'Small', 'modifier': 'button-small', 'icon': 'icon-digipolis' } %}
+    {% include '@button-dark' with { 'text': 'Medium', 'modifier': 'button-medium', 'icon': 'icon-digipolis' } %}
+    {% include '@button-dark' with { 'text': 'Large', 'modifier': 'button-large', 'icon': 'icon-digipolis' } %}
   </p>
   <p>
-    {% include '@button-dark' with { 'disabled': 'button-disabled' } %}
+    Disabled state:
+  </p>
+  <p>
+    {% include '@button-dark' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled' } %}
+    {% include '@button-dark' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled' } %}
+    {% include '@button-dark' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled' } %}
+  </p>
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'modifier': 'button button-dark',
+      'icon': 'icon-arrow-right'
+    } %}
   </p>
 </div>
 
 <div class="preview-inner-inner-container">
-  <h5 class="styleguide">Alert buttons</h5>
+  <h3 class="styleguide">Secondary buttons</h3>
   <p>
-    {% include '@button-alert' with {
-      'icon': 'icon-lightning'
-    } %}
+    {% include '@button-alert' with { 'icon': 'icon-lightning' } %}
   </p>
   <p>
-    {% include '@button-alert' with {
-      'modifier': 'button-block',
-      'icon': 'icon-lightning'
-    } %}
+    {% include '@button-alert' with { 'modifier': 'button-block', 'icon': 'icon-lightning' } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
   <p>
-    {% include '@button-alert' with {
-      'text': 'small',
-      'modifier': 'button-small',
-      'icon': 'icon-lightning'
-    } %}
-    {% include '@button-alert' with {
-      'text': 'medium',
-      'modifier': 'button-medium',
-      'icon': 'icon-lightning'
-    } %}
-    {% include '@button-alert' with {
-      'text': 'large',
-      'modifier': 'button-large',
-      'icon': 'icon-lightning'
+  {% include '@button-alert' with { 'text': 'Small', 'modifier': 'button-small', 'icon': 'icon-lightning' } %}
+  {% include '@button-alert' with { 'text': 'Medium', 'modifier': 'button-medium', 'icon': 'icon-lightning' } %}
+  {% include '@button-alert' with { 'text': 'Large', 'modifier': 'button-large', 'icon': 'icon-lightning' } %}
+  </p>
+  <p>
+  <p>
+    Disabled state:
+  </p>
+  <p>
+    {% include '@button-alert' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled', 'icon': 'icon-lightning' } %}
+    {% include '@button-alert' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled', 'icon': 'icon-lightning' } %}
+    {% include '@button-alert' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled', 'icon': 'icon-lightning' } %}
+  </p>
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'modifier': 'button button-alert',
+      'icon': 'icon-arrow-right'
     } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
-<p>
-  With icon / disabled:
-</p>
-<p>
-  {% include '@button-alert' with { 'icon': 'icon-lightning' } %}
-</p>
-<p>
-  {% include '@button-alert' with { 'icon': 'icon-lightning', 'disabled': 'button-disabled' } %}
-</p>
 </div>
 
 <div class="preview-inner-inner-container">
-  <h5 class="styleguide">Success buttons</h5>
+  <h3 class="styleguide">Secondary buttons</h3>
   <p>
     {% include '@button-success' %}
   </p>
   <p>
     {% include '@button-success' with { 'modifier': 'button-block' } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
   <p>
     {% include '@button-success' with { 'text': 'Small', 'modifier': 'button-small' } %}
     {% include '@button-success' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
     {% include '@button-success' with { 'text': 'Large', 'modifier': 'button-large' } %}
   </p>
-</div>
-<div class="preview-inner-inner-container">
   <p>
-    With icon / disabled:
+  <p>
+    With icon:
   </p>
   <p>
-    {% include '@button-success' with { 'icon': 'icon-checkmark' } %}
+    {% include '@button-success' with { 'text': 'Small', 'modifier': 'button-small', 'icon': 'icon-digipolis' } %}
+    {% include '@button-success' with { 'text': 'Medium', 'modifier': 'button-medium', 'icon': 'icon-digipolis' } %}
+    {% include '@button-success' with { 'text': 'Large', 'modifier': 'button-large', 'icon': 'icon-digipolis' } %}
   </p>
   <p>
-    {% include '@button-success' with { 'disabled': 'button-disabled' } %}
+    Disabled state:
+  </p>
+  <p>
+    {% include '@button-success' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled' } %}
+    {% include '@button-success' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled' } %}
+    {% include '@button-success' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled' } %}
+  </p>
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'modifier': 'button button-success',
+      'icon': 'icon-arrow-right'
+    } %}
   </p>
 </div>

@@ -64,6 +64,10 @@ pre {
   line-height: inherit;
 }
 
+p {
+  margin-bottom: 1.6rem;
+}
+
 p,
 span,
 input,
@@ -74,5 +78,4 @@ select,
 dd,
 q {
   max-width: 40rem;
-
 }

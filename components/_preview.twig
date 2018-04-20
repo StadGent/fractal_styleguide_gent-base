@@ -30,8 +30,6 @@
       <script type="text/javascript" src="{{ '/styleguide/js/base-min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/js/hamburger-menu.functions-min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/js/hamburger-menu.binding-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/breadcrumbs.functions-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/breadcrumbs.binding-min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/js/header.functions-min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/js/header.binding-min.js'|path }}"></script>
       <script type="text/javascript" src="{{ '/styleguide/js/gallery.functions-min.js'|path }}"></script>
@@ -44,7 +42,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="cs--default">
-    <div class="container">
+    <main class="container">
+      <h1 class="visually-hidden">{{ 'Component preview' }}</h1>
       {% block content %}
         <div class="preview-container">
           <div class="content-container">
@@ -52,6 +51,6 @@
           </div>
         </div>
       {% endblock %}
-    </div>
+    </main>
   </body>
 </html>

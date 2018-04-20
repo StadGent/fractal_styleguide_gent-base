@@ -1,6 +1,7 @@
 {
   "title": "Hamburger menu",
   "status": "beta",
+  "hidden": "hidden",
   "handle": "hamburger-menu",
   "preview": "@preview-hamburger-menu",
   "context": {

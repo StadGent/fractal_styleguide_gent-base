@@ -1,5 +1,6 @@
 {
   "title": "Pagination",
   "status": "ready",
+  "hidden": "hidden",
   "name": "pagination"
 }

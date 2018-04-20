@@ -7,8 +7,8 @@ a {
   text-decoration: underline;
 
   &:hover {
-    @include theme('background-color', 'color-primary--lighten-4', 'link-background-hover');
-    @include theme('color', 'color-primary--darken-2', 'link-color-hover');
+    @include theme('background-color', 'color-primary--lighten-4', 'link-hover-background');
+    @include theme('color', 'color-primary--darken-2', 'link-hover-color');
   }
 
   &:focus {
@@ -21,6 +21,14 @@ a {
     @include button-icon;
 
     text-decoration: none;
+
+    &.button-alert {
+      @extend %button-alert;
+    }
+
+    &.button-success {
+      @extend %button-success;
+    }
   }
 
   // Standalone links (could be used for external links.)

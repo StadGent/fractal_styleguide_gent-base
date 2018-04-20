@@ -1,63 +1,54 @@
 .dg-blocks-social {
-  h3 {
-    margin: 0;
-    line-height: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    width: 100%;
+    margin-bottom: 1.2rem;
+    line-height: 1rem;
+    text-align: center;
+
+    @include tablet {
+      width: span(6 of 12);
+      margin: 0;
+      text-align: right;
+    }
   }
 
   ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
     margin: 0;
-    padding-left: 0;
     list-style: none;
+
+    @include tablet {
+      justify-content: space-between;
+      width: span(6 of 12);
+    }
+
+    li {
+      flex: 1 1 auto;
+      width: span(2 of 10);
+    }
+
+    a {
+      @include theme('background-color', 'color-primary--lighten-5', 'social-media-icon-background');
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 2rem;
+      text-decoration: none;
+    }
+
+    i {
+      font-size: 1.6rem;
+    }
   }
-
-  a {
-    color: color('dark-gray');
-    text-decoration: none;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    word-wrap: break-word;
-
-    &:visited {
-      color: color('dark-gray');
-    }
-
-    &:hover {
-      color: tint('dark-gray', -2);
-    }
-
-    &::before {
-      padding-right: .5rem;
-    }
-  }
-
-  // .facebook {
-  //   &::before {
-  //     @extend %icon-facebook;
-  //   }
-  // }
-
-  // .twitter {
-  //   &::before {
-  //     @extend %icon-twitter;
-  //   }
-  // }
-
-  // .linkedin {
-  //   &::before {
-  //     @extend %icon-linkedin;
-  //   }
-  // }
-
-  // .youtube {
-  //   &::before {
-  //     @extend %icon-youtube;
-  //   }
-  // }
-
-  // .instagram {
-  //   &::before {
-  //     @extend %icon-instagram;
-  //   }
-  // }
 }

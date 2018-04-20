@@ -11,6 +11,7 @@ All notable changes to this style guide are documented here.
 ### 3.0.0
 
 * DTGB-208: Added max-width fallback for text elements.
+* DTGB-416: Updated gulp build to fail on error.
 * DTGB-410: Added fractal search functionality.
 * DTGB-203: Refactored gulpfile to gulp ^4.0.0
 * DTGB-144: Added SassDoc generation for external developers.
@@ -43,6 +44,7 @@ All notable changes to this style guide are documented here.
 * DTGB-218: Added new logo.
 * DTGB-258: Added gulp task to generate iconfont.
 * DTGB-283: Updated the license file to GPLv2.
+* DTGB-288: Added the quote molecule.
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
 * DTGB-180: Added gulp task to perform accessibility checks.
 * DTGB-209: Added new styling for basic input field atoms.
@@ -54,6 +56,7 @@ All notable changes to this style guide are documented here.
 > Did some refactoring to the SASS partials. Most of the input field styling
 > can now be found in the `_forms.scss` partial.
 
+* DTGB-406: Added styling for the footer organism.
 * DTGB-407: Changed the default font size breakpoints.
 
 ### 2.11.0

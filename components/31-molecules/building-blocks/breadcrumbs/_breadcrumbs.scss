@@ -1,8 +1,10 @@
 .breadcrumb {
+  clear: both;
+
   ul,
   ol {
     display: none;
-    margin: .5rem auto .5rem -.35rem;
+    margin: 0;
     list-style: none;
 
     @media (min-width: $bp-tablet) {
@@ -10,37 +12,33 @@
     }
 
     li {
-      display: inline;
-      margin-left: 0;
-      padding-right: .7rem;
-      font-size: .7rem;
+      @include icon('chevron-right', 'after');
 
-      > * {
-        padding: 0 .7rem;
-      }
-
-      a {
-        @include element-states(transparent, $bg-hover-breadcrumb, 'background-color');
-
-        padding: .4rem;
-        border-radius: border-radius('radius-1');
-        text-decoration: none;
-      }
+      display: inline-block;
+      margin-right: .4rem;
 
       &::after {
-        position: absolute;
-        margin: .4rem .1rem;
-        font-size: .8rem;
-        font-weight: 700;
+        @include theme('color', 'color-primary', 'breadcrumb-arrows-color');
+
+        margin-left: .4rem;
+        vertical-align: -15%;
       }
 
       &:last-of-type {
-        display: inline-block;
-        font-weight: bold;
+        margin-right: 0;
 
         &::after {
           display: none;
+          content: '';
         }
+      }
+
+      > * {
+        font-size: .6rem;
+      }
+
+      a {
+        font-weight: 600;
       }
     }
 

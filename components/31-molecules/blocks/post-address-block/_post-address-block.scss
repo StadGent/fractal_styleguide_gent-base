@@ -1,11 +1,5 @@
 .dg-block-post-address {
   h3 {
-    margin: 0;
-    line-height: 1.5rem;
-  }
-
-  p,
-  span {
-    color: color('dark-gray');
+    @extend %h5;
   }
 }

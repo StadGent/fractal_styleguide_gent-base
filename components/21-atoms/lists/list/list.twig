@@ -17,7 +17,32 @@
 {% if type == 'links' %}
   <ul class="links {{ modifier }}">
       {% for item in items %}
-          <li><a href="#">{{ item }}</a></li>
+          <li>{{ item }}</li>
+      {% endfor %}
+  </ul>
+{% endif %}
+
+{% if type == 'iconlist' %}
+  <ul class="iconlist {{ modifier }}">
+      {% for item in items %}
+          <li>{{ item }}</li>
+      {% endfor %}
+  </ul>
+{% endif %}
+
+{% if type == 'iconlist-small' %}
+  <ul class="iconlist-small {{ modifier }}">
+      {% for item in items %}
+          <li>{{ item }}</li>
+      {% endfor %}
+  </ul>
+{% endif %}
+
+{% if type == 'definition' %}
+  <dl class="iconlist {{ modifier }}">
+      {% for key, item in items %}
+          <dt>{{ item  }}</dt>
+          <dd>{{ definitions[key] }}</dd>
       {% endfor %}
   </ul>
 {% endif %}
