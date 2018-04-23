@@ -24,8 +24,7 @@
     left: 1.4rem;
     width: $field-message-icon-size;
     height: $field-message-icon-size;
-    margin: auto;
-    margin-right: $field-message-icon-margin;
+    margin: auto $field-message-icon-margin auto auto;
     border-radius: 100%;
     background-color: color('white');
     font-size: 1.1rem;
@@ -40,9 +39,7 @@
     left: 1.2rem;
     width: 2rem;
     height: 1.4rem;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: contain;
+    background: no-repeat center bottom / contain;
     font-size: 1.2rem;
     content: '';
   }

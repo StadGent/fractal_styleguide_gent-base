@@ -21,7 +21,6 @@ html {
 
 body {
   @include theme('color', 'color-tertiary', 'default-text-color');
-
   position: relative;
 }
 
@@ -67,4 +66,16 @@ pre {
 
 p {
   margin-bottom: 1.6rem;
+}
+
+p,
+span,
+input,
+label,
+textarea,
+button,
+select,
+dd,
+q {
+  max-width: 40rem;
 }

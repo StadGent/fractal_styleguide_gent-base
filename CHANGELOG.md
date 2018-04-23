@@ -10,6 +10,7 @@ All notable changes to this style guide are documented here.
 
 ### 3.0.0
 
+* DTGB-208: Added max-width fallback for text elements.
 * DTGB-416: Updated gulp build to fail on error.
 * DTGB-410: Added fractal search functionality.
 * DTGB-203: Refactored gulpfile to gulp ^4.0.0
