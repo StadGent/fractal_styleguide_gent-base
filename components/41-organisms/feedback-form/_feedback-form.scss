@@ -1,0 +1,45 @@
+.feedback-form {
+  h2 {
+    @extend %h3;
+
+    margin-left: span(1 of 12);
+
+    i {
+      margin-left: 1rem;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .content {
+    @include theme('border-color', 'color-tertiary--lighten-4', 'feedback-form-border-color');
+
+    border: 2px dashed;
+    border-radius: border-radius('radius-1');
+  }
+
+  .info-box {
+    @include theme('background-color', 'color-primary--lighten-5', 'feedback-form-info-background');
+
+    display: flex;
+    padding: 2rem 3.7rem;
+
+    &-icon {
+      width: span(3 of 9);
+      max-width: 7.8rem;
+      margin-right: 3.6rem;
+    }
+
+    &-text {
+      width: span(6 of 9);
+    }
+  }
+
+  form {
+    padding: 2rem 3.7rem;
+
+    textarea {
+      min-height: 4rem;
+    }
+  }
+}
