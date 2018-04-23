@@ -1,0 +1,40 @@
+.collection {
+  h2 {
+    @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
+
+    display: block;
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid;
+
+    &::before {
+      @include theme('background-image', 'color-primary-accolade-stroke', 'quote-accolade-stroke');
+
+      display: block;
+      position: absolute;
+      bottom: -1rem;
+      left: 4rem;
+      width: 2rem;
+      height: 1rem;
+      margin: auto;
+      transform: rotate(180deg);
+      background-color: color('white');
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      content: '';
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: -1rem;
+      left: 4rem;
+      width: 2rem;
+      height: 1rem;
+      margin: auto;
+      border-bottom: 2px solid;
+      content: '';
+    }
+  }
+}

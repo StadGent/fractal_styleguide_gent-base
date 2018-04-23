@@ -1,5 +1,9 @@
 .dg-block-post-address {
-  h3 {
+  h2 {
     @extend %h5;
+  }
+
+  address {
+    font-style: normal;
   }
 }

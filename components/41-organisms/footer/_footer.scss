@@ -55,6 +55,11 @@ footer.footer {
   .footer-bottom {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-wrap: nowrap;
+    }
 
     .footer--column {
       width: 100%;
@@ -66,7 +71,7 @@ footer.footer {
 
         @include tablet {
           order: 1;
-          width: span(9 of 24);
+          width: span(8 of 24);
         }
       }
 
@@ -77,7 +82,7 @@ footer.footer {
 
         @include tablet {
           order: 2;
-          width: span(15 of 24);
+          width: span(16 of 24);
           margin-bottom: 0;
         }
       }
@@ -86,7 +91,7 @@ footer.footer {
 
   .dg-block-post-address,
   .dg-block-disclaimer {
-    margin-top: 2.5rem;
+    margin-top: 2.2rem;
   }
 
   .db-block-partnership {

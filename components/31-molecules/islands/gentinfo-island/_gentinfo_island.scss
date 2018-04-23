@@ -1,5 +1,5 @@
 .gentinfo-block {
-  @include theme('background-color', 'color-primary--lighten-6', 'gentinfo-block-background');
+  @include theme('background-color', 'color-primary--lighten-5', 'gentinfo-block-background');
 
   display: flex;
   flex-wrap: wrap;
@@ -17,8 +17,7 @@
 
   .gentinfo-icon {
     display: block;
-    width: 100%;
-    max-width: 6rem;
+    width: 7.8rem;
     margin: -6rem auto 0;
 
     @include tablet {
@@ -44,6 +43,9 @@
       list-style: none;
 
       a {
+        @include theme('color', 'color-primary--darken-2', 'gentinfo-block-link-color');
+
+        margin-left: -.3rem;
         font-size: .8rem;
         font-weight: 600;
         text-decoration: none;

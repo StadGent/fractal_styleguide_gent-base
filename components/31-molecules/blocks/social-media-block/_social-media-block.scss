@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: space-between;
 
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+
   span {
     width: 100%;
     margin-bottom: 1.2rem;
@@ -11,8 +15,7 @@
     text-align: center;
 
     @include tablet {
-      width: span(6 of 12);
-      margin: 0;
+      margin: 0 1.4rem 0 0;
       text-align: right;
     }
   }
@@ -27,12 +30,6 @@
 
     @include tablet {
       justify-content: space-between;
-      width: span(6 of 12);
-    }
-
-    li {
-      flex: 1 1 auto;
-      width: span(2 of 10);
     }
 
     a {
