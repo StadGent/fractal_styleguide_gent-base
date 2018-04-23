@@ -70,7 +70,7 @@
 
 "@frctl/twig@git+https://github.com/tnottu/fractal-twig-adapter.git":
   version "0.2.0"
-  resolved "git+https://github.com/tnottu/fractal-twig-adapter.git#c51697e2f9a7e72cc7fedc4e3595713777ee7feb"
+  resolved "git+https://github.com/tnottu/fractal-twig-adapter.git#94d265572792dc01116387a332a01a69d8061907"
   dependencies:
     "@frctl/fractal" "^1.0.0-rc.1"
     lodash "^4.0.0"
