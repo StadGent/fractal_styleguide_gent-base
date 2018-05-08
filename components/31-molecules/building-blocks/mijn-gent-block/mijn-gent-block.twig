@@ -11,6 +11,9 @@
   {% else %}
 
     <div class="toggle">
+      <div class="picture">
+        {% include '@image' with { 'src': 'https://via.placeholder.com/64x64', 'alt_text': 'Username' } %}
+      </div>
       <div class="label">
         {% include '@link' with {
           'link': 'javascript:(void);',
@@ -18,20 +21,30 @@
           'text': 'Username'
         } %}
       </div>
-      <div class="picture">
-        {% include '@image' with { 'src': 'https://via.placeholder.com/32x32', 'alt_text': 'Username' } %}
-      </div>
     </div>
 
     <div class="content">
-      <div class="mijn-gent-component">
-        <header>
-          {% include '@h3' with { 'h3_text': 'Mijn Bibliotheek Gent' } %}
-        </header>
+      {% include '@h2' with { 'h2_text': 'Mijn Gent' } %}
 
+      <div class="profile">
+        <div class="profile-picture">
+          {% include '@image' with { 'src': 'https://via.placeholder.com/64x64', 'alt_text': 'Username' } %}
+        </div>
+        <div class="profile-info">
+          <span>{{ 'John Doe' }}</span>
+          {% include 'link' with {
+            'link': 'https://stad.gent',
+            'text': 'Show profile',
+            'modifier': 'button button-primary button-small'
+          }%}
+        </div>
+      </div>
+
+      <div class="mijn-gent-component">
         <section>
           {% include '@list' with {
-            'modifier': 'no-style',
+            'type': 'unordered',
+            'modifier': 'links',
             'items': [
               "<a href='javascript:(void);'>Overzicht</a>",
               "<a href='javascript:(void);'>Leestips</a>",
@@ -39,8 +52,8 @@
             ]
           } %}
         </section>
-
       </div>
+
       <div class="mijn-gent-component">
         <header>
           {% include '@h3' with { 'h3_text': 'Mijn Gent' } %}
@@ -48,7 +61,8 @@
 
         <section>
           {% include '@list' with {
-            'modifier': 'no-style',
+            'type': 'unordered',
+            'modifier': 'links',
             'items': [
               "<a href='javascript:(void);'>Mijn profiel</a>",
               "<a href='javascript:(void);'>Nieuwsbrieven</a>",
@@ -56,12 +70,12 @@
             ]
           } %}
         </section>
-
       </div>
       <footer>
         {% include '@link' with {
           'link': 'javascript:(void);',
-          'modifier': '',
+          'modifier': 'button button-small button-secondary',
+          'type': 'unordered',
           'text': 'Afmelden'
         } %}
       </footer>

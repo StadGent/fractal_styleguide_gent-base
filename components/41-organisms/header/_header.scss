@@ -1,162 +1,118 @@
 header.header {
+  @include theme('border-color', 'color-primary--lighten-4', 'header-border-bottom');
+
   position: relative;
-  min-height: 2.7rem;
+  min-height: 3.6rem;
+  margin-bottom: .3rem;
   padding: .35rem 0 0;
+  border-bottom: 2px solid;
   font-size: .7rem;
 
-  input,
-  button {
-    height: 2rem;
-  }
+  > .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  .content-container {
-    height: 100%;
+    .login-link i {
+      display: none;
 
-    > * {
-      min-height: 100%;
-      max-height: 2.36rem;
-      margin: 0 1rem 0 0;
-      float: left;
-      line-height: 2rem;
+      @include tablet {
+        display: inline;
+      }
+    }
 
-      &.right {
-        margin: 0 0 0 1rem;
-        float: right;
+    //
+    // Change the look and feel of the search molecule.
+    //
+    .header-search,
+    .header-search-mobile {
+      display: none;
+
+      .form-search {
+        position: relative;
       }
 
-      .site-logo {
-        min-width: 4.5rem;
-      }
-
-      i {
-        display: inline-block;
-        font-size: 1rem;
-        line-height: 2.4rem;
-      }
-
-      .login-link i {
+      .form-label {
         display: none;
-
-        @include tablet {
-          display: inline;
-        }
       }
 
-      // Change the look and feel of the link atom.
-      // a {
-      //     @include element-states(none, underline, $property: 'text-decoration');
-      // }
+      input[type="search"] {
+        @include theme('background-color', 'color-primary--lighten-5', 'header-search-background');
 
-      //
-      // Change the look and feel of the search molecule.
-      //
-      &.header-search,
-      &.header-search-mobile {
-        .form-label {
-          display: none;
-        }
+        width: 10rem;
+        margin: 0;
+        padding-left: 3rem;
+        border: none;
+      }
 
-        input[type="search"] {
-          width: 10rem;
-          margin: 0;
-          font-size: .7rem;
-        }
+      input[type="submit"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        border: 0;
+        background-color: transparent;
+        background-image: svg-as-background('checkmark', color('dark-gray'));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65%;
+        font-size: .5rem;
+        text-indent: -9999px;
+        box-shadow: none;
+      }
+    }
+
+    .header-search {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
+    .header-search-mobile {
+      width: 2rem;
+
+      @include tablet {
+        display: none;
+      }
+
+      &.js-form-search-opened {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: .35rem $gutter-width/2;
+        background-color: color('blue', -2);
 
         input[type="submit"] {
-          width: 2rem;
-          height: 2rem;
-          padding-right: .5rem;
-          padding-left: .5rem;
-          border: 0;
-          background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZmZmZiIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHRpdGxlPjwvdGl0bGU+PGcgaWQ9Imljb21vb24taWdub3JlIj48L2c+PHBhdGggZD0iTTEwMjAuNTg3IDkxNC43NzNsLTMyMC44NTMtMzIwLjg1M2M0MC45Ni02MS40NCA2NC44NTMtMTM2LjUzMyA2NC44NTMtMjExLjYyNyAwLTEwMi40LTQwLjk2LTE5Ny45NzMtMTEyLjY0LTI2OS42NTNzLTE2Ny4yNTMtMTEyLjY0LTI2OS42NTMtMTEyLjY0LTE5Ny45NzMgNDAuOTYtMjY5LjY1MyAxMTIuNjRjLTcxLjY4IDcxLjY4LTExMi42NCAxNjcuMjUzLTExMi42NCAyNjkuNjUzczQwLjk2IDE5Ny45NzMgMTEyLjY0IDI2OS42NTMgMTY3LjI1MyAxMTIuNjQgMjY5LjY1MyAxMTIuNjRjNzguNTA3IDAgMTUwLjE4Ny0yMy44OTMgMjE1LjA0MC02NC44NTNsMzIwLjg1MyAzMjAuODUzYzEwLjI0IDEwLjI0IDMwLjcyIDYuODI3IDQ0LjM3My02LjgyN2w1NC42MTMtNTQuNjEzYzEwLjI0LTEzLjY1MyAxMy42NTMtMzQuMTMzIDMuNDEzLTQ0LjM3M3pNMzgyLjI5MyA2NTguNzczYy0xNTMuNiAwLTI3Ni40OC0xMjYuMjkzLTI3Ni40OC0yNzYuNDhzMTIyLjg4LTI3OS44OTMgMjc2LjQ4LTI3OS44OTMgMjc2LjQ4IDEyNi4yOTMgMjc2LjQ4IDI3Ni40OC0xMjIuODggMjc5Ljg5My0yNzYuNDggMjc5Ljg5M3oiPjwvcGF0aD48L3N2Zz4=') no-repeat center center;
-          background-size: 65%;
-          font-size: 1rem;
-          line-height: 1.8rem;
-          text-indent: -9999px;
-        }
-      }
-
-      &.header-search {
-        display: none;
-
-        @include tablet {
-          display: block;
-
-          input[type="search"] {
-            float: left;
-          }
-
-          input[type="submit"] {
-            float: left;
-          }
-        }
-      }
-
-      &.header-search-mobile {
-        width: 2rem;
-
-        @include tablet {
-          display: none;
-        }
-
-        &.js-form-search-opened {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          margin: 0;
-          padding: .35rem $gutter-width/2;
-          background-color: color('blue', -2);
-
-          input[type="submit"] {
-            position: absolute;
-            top: .35rem;
-            left: calc(75% - 2.35rem);
-          }
-        }
-
-        input[type="search"] {
-          display: none;
-
-          &.js-form-search-opened {
-            display: block;
-            width: calc(75% - 2rem);
-          }
-        }
-
-        .close {
-          display: none;
           position: absolute;
           top: .35rem;
-          right: $gutter-width/2;
+          left: calc(75% - 2.35rem);
+        }
+      }
 
-          &.js-form-search-opened {
-            display: block;
-          }
+      input[type="search"] {
+        display: none;
+
+        &.js-form-search-opened {
+          display: block;
+          width: calc(75% - 2rem);
+        }
+      }
+
+      .close {
+        display: none;
+        position: absolute;
+        top: .35rem;
+        right: $gutter-width/2;
+
+        &.js-form-search-opened {
+          display: block;
         }
       }
     }
-
-    .site-logo {
-      margin-bottom: .5rem;
-    }
   }
 }
-
-.header--main-menu {
-  @include tablet {
-    display: block;
-    width: 100%;
-    padding: .25rem 0;
-    background-color: color('blue');
-    overflow: hidden;
-
-    li {
-      margin-right: 1rem;
-      float: left;
-    }
-  }
-
-  display: none;
-}
-

@@ -1,7 +1,6 @@
 {
   "title": "Mijn Gent block",
   "status": "beta",
-  "hidden": "hidden",
   "handle": "mijn-gent-block",
   "preview": "@preview-mijn-gent",
   "default": "logged-in",
@@ -13,15 +12,13 @@
       "name": "logged-in",
       "context": {
         "auth": "true"
-      },
-      "hidden": true
+      }
     },
     {
       "name": "logged-out",
       "context": {
         "auth": "false"
-      },
-      "hidden": true
+      }
     }
   ]
 }
