@@ -59,6 +59,7 @@ All notable changes to this style guide are documented here.
 * DTGB-406: Added styling for the footer organism.
 * DTGB-407: Changed the default font size breakpoints.
 * DTGB-421: Added a feedback form component.
+* DTGB-423: Added new styling for topic teasers and their collection organism.
 
 ### 2.11.0
 

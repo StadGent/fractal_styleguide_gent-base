@@ -1,8 +1,7 @@
 {
-  "title": "Teaser collection",
-  "hidden": "hidden",
+  "title": "Topic teaser collection",
   "status": "ready",
-  "name": "Teaser collection",
+  "name": "Teaser topic collection",
   "context": {
     "teaser_image_src": "https://loremflickr.com/650/400/ghent?random=",
     "teaser_image_alt_text": "alt text",

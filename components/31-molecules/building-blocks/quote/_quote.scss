@@ -114,7 +114,7 @@
       }
 
       &::before {
-        @include theme('background-image', 'color-primary-accolade-stroke', 'quote-accolade-stroke');
+        @include theme('background-image', 'accolade-stroke-light', 'quote-accolade-stroke');
 
         display: block;
         position: absolute;

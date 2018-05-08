@@ -1,6 +1,15 @@
+///
+///  Placeholder to give a collection of data a certain context / styling.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access public
+/// @author Gert-Jan Meire
+///
+%collection,
 .collection {
   h2 {
-    @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
+    @include theme('border-color', 'color-primary--lighten-4', 'collection-heading-2-border-color');
 
     display: block;
     position: relative;
@@ -9,12 +18,17 @@
     border-bottom: 2px solid;
 
     &::before {
-      @include theme('background-image', 'color-primary-accolade-stroke', 'quote-accolade-stroke');
+      @include theme('background-image', 'accolade-stroke-dark', 'collection-heading-2-accolade');
+
+      @include mobile {
+        right: auto;
+        left: 4rem;
+      }
 
       display: block;
       position: absolute;
       bottom: -1rem;
-      left: 4rem;
+      left: 0;
       width: 2rem;
       height: 1rem;
       margin: auto;
@@ -23,6 +37,8 @@
       background-repeat: no-repeat;
       background-position: center bottom;
       content: '';
+      z-index: 2;
+
     }
 
     &::after {
@@ -35,6 +51,8 @@
       margin: auto;
       border-bottom: 2px solid;
       content: '';
+      z-index: 0;
+
     }
   }
 }

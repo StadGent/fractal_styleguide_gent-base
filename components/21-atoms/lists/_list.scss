@@ -83,4 +83,13 @@ dl {
 %list-no-style {
   padding-left: 0;
   list-style: none;
+
+  p {
+    font-size: .8rem;
+  }
+
+  a {
+    font-size: .8rem;
+    font-weight: 600;
+  }
 }
