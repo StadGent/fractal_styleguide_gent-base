@@ -7,10 +7,6 @@
     margin: 0;
     list-style: none;
 
-    @include desktop {
-      padding: 0 .5rem;
-    }
-
     @media (min-width: $bp-tablet) {
       display: block;
     }

@@ -1,5 +1,5 @@
 .mijn-gent-block {
-  display: flex;
+  display: inline-block;
   position: relative;
 
   .login-link {
@@ -46,6 +46,7 @@
       display: inline;
       align-self: center;
     }
+  }
 
   .picture {
     width: 2.3rem;
@@ -57,8 +58,6 @@
     }
   }
 
-
-  // Dropdown.
   .content {
     display: none;
   }
