@@ -1,16 +1,9 @@
 {
   "title": "Header",
-  "hidden": "hidden",
   "status": "ready",
   "preview": "@preview-without-padding",
   "context": {
     "section": "section--wrapper",
-    "hamburger_menu_items": [
-      "<a href='javascript:void(0);'>Menu item 1</a>",
-      "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
-      "<a href='javascript:void(0);'>Menu item 3</a>",
-      "<a href='javascript:void(0);'>Menu item 4</a>"
-    ],
     "mijn_gent_block_items": [
       "<a href='javascript:(void);'>Mijn profiel</a>",
       "<a href='javascript:(void);'>Nieuwsbrieven</a>",
@@ -28,13 +21,6 @@
     "header_search_modifier_search": "inline",
     "header_search_text": "Search",
     "header_search_modifier_submit": "btn--inline",
-    "main_menu_modifier": "no-style",
-    "main_menu_items": [
-      "<a href='javascript:void(0);'>Menu item 1</a>",
-      "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
-      "<a href='javascript:void(0);'>Menu item 3</a>",
-      "<a href='javascript:void(0);'>Menu item 4</a>"
-    ],
     "breadcrumbs_section": "section--default",
     "breadcrumbs_items": [
       "<a href='#'>Stad.gent</a>",
