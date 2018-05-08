@@ -4,13 +4,15 @@
 
   .login-link {
     @include theme('color', 'color-tertiary', 'mijn-gent-toggle-link-color');
+    @include icon(chevron-right, after);
 
     display: flex;
     align-items: center;
     text-decoration: none;
 
-    i {
-      display: none;
+    &::after {
+      margin-left: .4rem;
+      font-size: 1.1rem;
     }
   }
 
@@ -34,7 +36,7 @@
 
       &::after {
         margin-left: .4rem;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
 
       &:hover {
