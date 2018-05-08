@@ -1,7 +1,7 @@
 a {
   @include theme('color', 'color-primary', 'link-color');
 
-  padding: .3em;
+  padding: .3em 0;
   transition: color .11s ease-in-out;
   font-weight: 600;
   text-decoration: underline;
