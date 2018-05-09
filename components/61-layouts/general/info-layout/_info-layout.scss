@@ -1,5 +1,6 @@
 .info-page-layout {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   font-size: .9rem;
   line-height: 1.8;
@@ -14,4 +15,23 @@
       margin-left: -16.66%;
     }
   }
+  .more-info-block {
+    @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+    display: flex;
+    justify-self: center;
+    width: span(10 of 12);
+    margin-top: 2.4rem;
+    padding-top: 4rem;
+    border-top: 2px solid;
+
+    &-image {
+      width: span(3 of 10);
+    }
+
+    &-content {
+      width: span(7 of 10);
+    }
+  }
 }
+

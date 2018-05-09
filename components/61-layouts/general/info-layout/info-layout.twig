@@ -1,4 +1,4 @@
-<div class="info-page-layout container">
+<section class="info-page-layout">
   <div class="content">
     {% include '@h1' with {
       "h1_text": "Detail page title"
@@ -34,5 +34,31 @@
     {% include '@feedback-form' with {
       'modifier': 'wider'
     }%}
+
   </div>
-</div>
+  <div class="more-info-block">
+    {% include '@image' with {
+      'src': '/styleguide/img/svg/gentinfo.svg',
+      'alt_text': 'Gentinfo icon',
+      'modifier': 'more-info-block-image'
+    } %}
+    <div class="more-info-block-content">
+      {% include '@h3' with {
+        'h3_text': 'Also interesting'
+      } %}
+
+      {% include '@list'
+        with {
+          'type': 'unordered',
+          "items": [
+            '<a href="https://stad.gent">Council meeting dates</a>',
+            '<a href="https://stad.gent">Neighborhood</a>',
+            '<a href="https://stad.gent">Service policy participation</a>',
+            '<a href="https://stad.gent">Re-listen the city council and the decision ...<Paste></a>'
+          ]
+        }
+      %}
+    </div>
+  </div>
+</section>
+
