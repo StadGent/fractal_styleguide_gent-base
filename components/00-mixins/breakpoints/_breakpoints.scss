@@ -25,6 +25,22 @@
 }
 
 ///
+/// Phablet breakpoint (see $bp-phablet defined in _vars.scss).
+/// This asumes a min-width as defined by the variable.
+///
+/// @since 3.0.0
+/// @group breakpoints
+/// @access public
+/// @author Bart Delrue
+/// @require $bp-phablet
+///
+@mixin phablet {
+  @include breakpoint($bp-phablet) {
+    @content;
+  }
+}
+
+///
 /// Tablet breakpoint (see $bp-tablet defined in _vars.scss).
 /// This asumes a min-width as defined by the variable.
 ///
