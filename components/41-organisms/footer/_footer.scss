@@ -75,6 +75,10 @@ footer.footer {
 
         @include tablet {
           order: 1;
+          width: span(4 of 12);
+        }
+
+        @include desktop {
           width: span(8 of 24);
         }
       }
@@ -86,6 +90,10 @@ footer.footer {
 
         @include tablet {
           order: 2;
+          width: span(8 of 12);
+        }
+
+        @include desktop {
           width: span(10 of 24);
           margin-bottom: 0;
         }
