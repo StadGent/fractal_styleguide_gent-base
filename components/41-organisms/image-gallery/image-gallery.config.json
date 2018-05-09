@@ -1,0 +1,164 @@
+{
+  "title": "Image gallery",
+  "status": "beta",
+  "name": "Image gallery",
+  "variants": [
+    {
+      "name": "default",
+      "label": "Double",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triple",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label"
+          }
+        ]
+      }
+    },
+    {
+      "name": "quadruple",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label"
+          }
+        ]
+      }
+    },
+    {
+      "name": "quintuple",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label"
+          }
+        ]
+      }
+    },
+    {
+      "name": "quintuple et plus",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "label": "placeholder image label"
+          }
+        ]
+      }
+    }
+  ]
+}
