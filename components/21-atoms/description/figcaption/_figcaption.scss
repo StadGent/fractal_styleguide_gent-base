@@ -1,6 +1,5 @@
 figcaption {
-  @include theme('color', 'color-primary', 'figcaption-color');
+  @include theme('color', 'color-tertiary--lighten-1', 'figcaption-color');
 
-  font-size: .8rem;
-  line-height: 1.5;
+  font-size: .6rem;
 }
