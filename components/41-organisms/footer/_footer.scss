@@ -32,16 +32,16 @@ footer.footer {
 
       @include tablet {
         flex: 1 0 auto;
-        width: span(2 of 12);
         order: 1;
+        width: span(2 of 12);
       }
 
       &:nth-of-type(2) {
         display: flex;
 
         @include tablet {
-          width: span(3 of 12);
           justify-content: center;
+          width: span(3 of 12);
         }
       }
 
@@ -49,8 +49,8 @@ footer.footer {
         width: 100%;
 
         @include tablet  {
-          width: span(7 of 12);
           order: 3;
+          width: span(7 of 12);
         }
       }
     }
