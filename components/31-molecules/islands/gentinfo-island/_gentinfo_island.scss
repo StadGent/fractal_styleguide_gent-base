@@ -1,13 +1,15 @@
 .gentinfo-block {
-  @include theme('background-color', 'color-primary--lighten-5', 'gentinfo-block-background');
+  @include theme('background-color', 'color-secondary', 'gentinfo-block-background');
 
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   margin-top: 3rem;
-  padding: 2rem 2.5rem;
+  padding: 2.5rem;
   font-size: .8rem;
   line-height: 1.75;
   text-align: center;
+  box-shadow: 0 8px 12px 0 rgba(0, 125, 179, .06);
 
   @include tablet {
     flex-wrap: nowrap;
@@ -21,7 +23,7 @@
     margin: -6rem auto 0;
 
     @include tablet {
-      align-self: start;
+      align-self: center;
       margin: 0 2.4rem 0 0;
     }
   }
@@ -30,12 +32,12 @@
     width: 100%;
 
     @include tablet {
-      width: span(4 of 6);
+      width: span(5 of 7);
       max-width: 15rem;
     }
 
     h2 {
-      font-weight: 600;
+      font-weight: 800;
     }
 
     ul {
@@ -51,5 +53,11 @@
         text-decoration: none;
       }
     }
+  }
+
+  .gentinfo-chat-button {
+    position: absolute;
+    right: 1.5rem;
+    bottom: -1rem;
   }
 }
