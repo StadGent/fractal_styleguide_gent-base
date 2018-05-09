@@ -36,12 +36,15 @@ footer.footer {
         width: span(2 of 12);
       }
 
-      &:nth-of-type(2) {
+      &:nth-of-type(3) {
         display: flex;
 
         @include tablet {
           justify-content: center;
-          width: span(3 of 12);
+        }
+
+        @include desktop {
+          width: span(2 of 12);
         }
       }
 
@@ -50,6 +53,10 @@ footer.footer {
 
         @include tablet  {
           order: 3;
+          width: span(6 of 12);
+        }
+
+        @include desktop {
           width: span(7 of 12);
         }
       }
