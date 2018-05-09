@@ -5,7 +5,7 @@
   position: relative;
   flex-wrap: wrap;
   margin-top: 3rem;
-  padding: 2.5rem;
+  padding: 6rem 2.5rem 2.5rem;
   font-size: .8rem;
   line-height: 1.75;
   text-align: center;
@@ -14,6 +14,7 @@
   @include tablet {
     flex-wrap: nowrap;
     margin: 0;
+    padding: 2.5rem;
     text-align: left;
   }
 
@@ -21,8 +22,14 @@
     display: block;
     width: 7.8rem;
     margin: -6rem auto 0;
+    padding: 1rem 0;
 
-    @include tablet {
+		@include tablet {
+			display: none;
+		}
+
+    @include desktop {
+      display: block;
       align-self: center;
       margin: 0 2.4rem 0 0;
     }
