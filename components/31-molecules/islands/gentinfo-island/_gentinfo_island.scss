@@ -24,9 +24,9 @@
     margin: -6rem auto 0;
     padding: 1rem 0;
 
-		@include tablet {
-			display: none;
-		}
+    @include tablet {
+      display: none;
+    }
 
     @include desktop {
       display: block;
