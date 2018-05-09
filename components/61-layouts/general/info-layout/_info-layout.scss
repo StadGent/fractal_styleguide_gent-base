@@ -16,22 +16,46 @@
       margin-left: -16.66%;
     }
   }
-  .more-info-block {
+
+  .extra-info-box {
     @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
 
     display: flex;
-    justify-self: center;
+    flex-wrap: wrap;
     width: span(10 of 12);
     margin-top: 2.4rem;
     padding-top: 4rem;
+    padding-bottom: 4rem;
     border-top: 2px solid;
+    justify-self: center;
 
     &-image {
-      width: span(3 of 10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: span(4 of 12);
+
+      img {
+        width: 13rem;
+      }
     }
 
     &-content {
-      width: span(7 of 10);
+      display: flex;
+      flex-wrap: wrap;
+      width: span(8 of 12);
+
+      > h3 {
+        width: 100%;
+      }
+
+      &-column {
+        width: span(6 of 12);
+
+        > h4 {
+          @extend %h5;
+        }
+      }
     }
   }
 }
