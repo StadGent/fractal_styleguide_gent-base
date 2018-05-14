@@ -13,7 +13,8 @@
   {% endfor %}
   <li class="image-gallery__show-more" aria-hidden="true">
     <div class="show-more__content">
-      <span>Show all photos</span>
+      <span class="show-more__total">{{ items.length }}</span>
+      <span>Show all photos <i class="icon-arrow-right" aria-hidden="true"></i></span>
     </div>
   </li>
 </ul>
