@@ -23,6 +23,17 @@
     .video {
       margin-bottom: 1.6rem;
     }
+
+    .video {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      a {
+        margin-top: .4rem;
+        margin-bottom: .4rem;
+      }
+    }
   }
 
   .extra-info-box {
@@ -66,7 +77,7 @@
       }
 
       > h3 {
-        width: 100%;
+        flex-basis: 100%;
       }
 
       &-column {
