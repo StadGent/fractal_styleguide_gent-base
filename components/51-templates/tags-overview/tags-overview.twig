@@ -1,7 +1,12 @@
-<h2 class="styleguide-title">{{ 'Tags' }}</h2>
+<h2 class="styleguide-title">{{ 'Tags (inline)' }}</h2>
 <div class="preview-inner-container">
-  <h3 class="styleguide">{{ 'Tag without link' }}</h3>
-    {% include '@tag' with {
-      'tag_text': 'Tag text'
-    } %}
+  {% include '@tag' with {
+    'tag_text': 'Inner city'
+  } %}
+  {% include '@tag' with {
+    'tag_text': 'Another tag'
+  } %}
+  {% include '@tag' with {
+    'tag_text': 'A very long tag with lots of text in it'
+  } %}
 </div>

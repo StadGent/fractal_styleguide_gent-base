@@ -1,10 +1,19 @@
 .tag {
-  @include theme('background', 'color-primary--lighten-4', 'tag-background');
-  @include theme('color', 'color-tertiary', 'tag-color');
+  @include theme('border-color', 'color-primary--lighten-3', 'tag-border-color');
 
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   min-height: 1.5rem;
-  padding: .2rem .5rem;
+  padding: 0 .5em;
+  border: 1px solid;
   border-radius: border-radius('radius-1');
   font-size: .7rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  text-decoration: none;
+
+  i {
+    margin-left: .5rem;
+    font-size: 1rem;
+  }
 }

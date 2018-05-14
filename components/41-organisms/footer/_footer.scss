@@ -1,7 +1,5 @@
 // General footer styling.
 footer.footer {
-  margin-top: 4rem;
-
   .footer-top > .content-container,
   .footer-bottom {
     padding: 0 $gutter-width;
@@ -67,6 +65,8 @@ footer.footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: .8rem;
 
     @include tablet {
       flex-wrap: nowrap;

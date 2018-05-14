@@ -1,4 +1,4 @@
-<section class="info-page-layout">
+<main class="info-page-layout">
   <div class="content">
     {% include '@h1' with {
       "h1_text": "Detail page title"
@@ -69,13 +69,22 @@
         {% include '@h4' with {
           'h4_text': 'More info about'
         } %}
+        {% include '@tag' with {
+          'tag_text': 'Inner city'
+        } %}
+        {% include '@tag' with {
+          'tag_text': 'Another tag'
+        } %}
 
         {% include '@h4' with {
           'h4_text': 'Related Linked Open Data'
         } %}
 
+        {% include '@link' with {
+          'link': 'javascript:(void);',
+          'text': 'Lorem ipsum dolor set'
+        } %}
       </div>
     </div>
   </div>
-</section>
-
+</main>
