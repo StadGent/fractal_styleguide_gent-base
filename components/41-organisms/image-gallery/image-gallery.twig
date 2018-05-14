@@ -3,11 +3,15 @@
     <li>
       <a href="{{ item.src }}"
         {% if item.caption %}
-          data-caption="{{ item.caption }}"
           aria-label="{{ item.caption }}"
         {% endif %}
          aria-describedby="image-gallery__open-gallery">
-        {% include '@image' with { 'src': item.src, 'alt_text' : item.alt } %}
+        <figure>
+          {% include '@image' with { 'src': item.src, 'alt_text' : item.alt } %}
+          {% if item.caption %}
+            <figcaption>{{ item.caption }}</figcaption>
+          {% endif %}
+        </figure>
       </a>
     </li>
   {% endfor %}
