@@ -4,6 +4,11 @@
       "h1_text": "Detail page title"
     } %}
 
+  {% include '@paragraph' with {
+    "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus.",
+    "modifier": "summary-text"
+  } %}
+
     {% include '@paragraph' with {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio. In id tellus ut ligula facilisis efficitur at vel urna. Vivamus iaculis felis non tristique malesuada. Quisque venenatis, arcu sed luctus molestie, leo mauris commodo sem, eget egestas orci libero eu justo. Curabitur sollicitudin odio non vulputate tincidunt. Etiam vel dolor in massa dapibus bibendum sit amet vel ipsum. Donec sagittis, elit et hendrerit maximus, nulla tortor laoreet quam, id tincidunt massa neque a ex. Fusce suscipit, ipsum interdum elementum sodales, tellus sapien vehicula nisi, in condimentum neque nisl sit amet elit. Donec sed augue a elit sodales commodo pulvinar vitae nisl. Sed pharetra ante non mollis consequat. Pellentesque a est neque. Nullam maximus ornare metus. Quisque porttitor turpis tristique faucibus efficitur."
     } %}
@@ -12,7 +17,7 @@
       "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus."
     } %}
 
-    <div class="image wider">
+    <div class="image-gallery wider">
       {% include '@image' with {
         'src': 'https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         'alt_text': 'Gent info image',
@@ -30,6 +35,10 @@
     {% include '@paragraph' with {
       "text": "Nam lorem ex, posuere non lectus tempus, ornare scelerisque mauris. Integer vitae tortor orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas enim lectus, malesuada in hendrerit in, vulputate ut enim. Integer pretium elit purus, ac pulvinar augue scelerisque quis. In velit elit, luctus vitae nunc quis, hendrerit congue felis. Nulla tincidunt tincidunt cursus. Mauris pretium eu ex id aliquet. Aenean massa metus, posuere ac dui sit amet, volutpat interdum libero."
     } %}
+
+    <div class="video wider">
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/S0vLmTWUmok" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
 
     {% include '@feedback-form' with {
       'modifier': 'wider'
@@ -60,7 +69,7 @@
               '<a href="https://stad.gent">Council meeting dates</a>',
               '<a href="https://stad.gent">Neighborhood</a>',
               '<a href="https://stad.gent">Service policy participation</a>',
-              '<a href="https://stad.gent">Re-listen the city council and the decision ...<Paste></a>'
+              '<a href="https://stad.gent">Re-listen the city council and the dec...<Paste></a>'
             ]
           }
         %}

@@ -17,6 +17,12 @@
       margin-right: -16.66%;
       margin-left: -16.66%;
     }
+
+    // Stub.
+    .image-gallery,
+    .video {
+      margin-bottom: 1.6rem;
+    }
   }
 
   .extra-info-box {
@@ -82,8 +88,16 @@
             margin-top: 0;
           }
         }
+
+        .tag {
+          margin-right: .8rem;
+        }
       }
     }
+  }
+
+  .summary-text {
+    font-weight: 600;
   }
 }
 
