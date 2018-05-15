@@ -10,8 +10,8 @@ header.header {
 
   > .content-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     .login-link i {
       display: none;
@@ -42,7 +42,7 @@ header.header {
         width: 10rem;
         margin: 0;
         padding-left: 3rem;
-        border: none;
+        border: 0;
       }
 
       input[type="submit"] {
