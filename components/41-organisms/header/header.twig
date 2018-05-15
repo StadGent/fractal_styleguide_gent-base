@@ -3,18 +3,18 @@
 
     {% include '@logo' %}
 
-    <div class="header-component header-search-mobile right">
-      {% include '@search' with {
-      "label": header_search_label,
-      "search_id": header_search_mobile_id,
-      "search_name": header_search_mobile_name,
-      "placeholder": header_search_mobile_placeholder,
-      "modifier_search": header_search_mobile_modifier_search,
-      "text": header_search_mobile_text,
-      "modifier_submit": header_search_mobile_modifier_submit
-      } %}
-      <a href="javascript:(void);" class="close">Sluiten</a>
-    </div>
+    {#<div class="header-component header-search-mobile right">#}
+      {#{% include '@search' with {#}
+      {#"label": header_search_label,#}
+      {#"search_id": header_search_mobile_id,#}
+      {#"search_name": header_search_mobile_name,#}
+      {#"placeholder": header_search_mobile_placeholder,#}
+      {#"modifier_search": header_search_mobile_modifier_search,#}
+      {#"text": header_search_mobile_text,#}
+      {#"modifier_submit": header_search_mobile_modifier_submit#}
+      {#} %}#}
+      {#<a href="javascript:(void);" class="close">Sluiten</a>#}
+    {#</div>#}
 
     <div class="header-component header-search right">
       {% include '@search' with {
