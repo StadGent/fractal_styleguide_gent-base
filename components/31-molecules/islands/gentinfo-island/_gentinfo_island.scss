@@ -5,7 +5,7 @@
   position: relative;
   flex-wrap: wrap;
   margin-top: 3rem;
-  padding: 6rem 2.5rem 2.5rem;
+  padding: 6rem 1.2rem 2.5rem;
   font-size: .8rem;
   line-height: 1.75;
   text-align: center;
@@ -37,10 +37,20 @@
 
   .gentinfo-block-content {
     width: 100%;
+    text-align: left;
 
     @include tablet {
       width: span(5 of 7);
       max-width: 15rem;
+    }
+
+    h2,
+    p {
+      text-align: center;
+
+      @include tablet {
+        text-align: left;
+      }
     }
 
     h2 {
@@ -64,7 +74,21 @@
 
   .gentinfo-chat-button {
     position: absolute;
-    right: 1.5rem;
+    right: 1.2rem;
     bottom: -1rem;
+    left: 1.2rem;
+    width: calc(100% - 2.2rem);
+    margin: auto;
+
+    @include tablet {
+      right: 1.5rem;
+      left: auto;
+      width: auto;
+    }
+
+    i {
+      margin-top: .2rem;
+      font-size: 1.2rem;
+    }
   }
 }
