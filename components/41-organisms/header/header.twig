@@ -1,12 +1,11 @@
 <header class="header section--wrapper">
   <div class="content-container">
 
-    <div id="logo" class="header-component">
-      {% include '@logo' %}
-    </div>
+    {% include '@logo' %}
 
-    <div id="header-search-mobile" class="header-component header-search-mobile right">
+    <div class="header-component header-search-mobile right">
       {% include '@search' with {
+      "label": header_search_label,
       "search_id": header_search_mobile_id,
       "search_name": header_search_mobile_name,
       "placeholder": header_search_mobile_placeholder,
@@ -17,8 +16,9 @@
       <a href="javascript:(void);" class="close">Sluiten</a>
     </div>
 
-    <div id="header-search" class="header-component header-search right">
+    <div class="header-component header-search right">
       {% include '@search' with {
+      "label": header_search_label,
       "search_id": header_search_id,
       "search_name": header_search_name,
       "placeholder": header_search_placeholder,
@@ -28,12 +28,10 @@
       } %}
     </div>
 
-    <div id="profile" class="header-component right">
       {% include '@mijn-gent-block' with {
       "items": mijn_gent_block_items,
       'auth': 'true',
       } %}
-    </div>
 
   </div>
 </header>

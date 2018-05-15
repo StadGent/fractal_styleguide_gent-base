@@ -17,6 +17,7 @@
     "header_search_mobile_modifier_submit": "btn--inline",
     "header_search_id": "header-search",
     "header_search_name": "header-search",
+    "header_search_label": "Search",
     "header_search_placeholder": "Search",
     "header_search_modifier_search": "inline",
     "header_search_text": "Search",

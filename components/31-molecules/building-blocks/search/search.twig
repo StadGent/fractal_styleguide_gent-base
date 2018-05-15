@@ -1,19 +1,17 @@
 <form class="form form-search">
-  <div class="form-label">
-    {% include '@label' with {
-    "label": label,
-    "for": for,
-    "label_optional": label_optional
-    } %}
-  </div>
+  {% include '@label' with {
+  "label": label,
+  "for": search_id,
+  "label_optional": label_optional
+  } %}
   {% include '@input-search' with {
-    'placeholder': placeholder,
-    'modifier': modifier_search,
-    'search_id': search_id,
-    'search_name': search_id
+  'placeholder': placeholder,
+  'modifier': modifier_search,
+  'search_id': search_id,
+  'search_name': search_id
   } %}
   {% include '@input-submit' with {
-    'value': text,
-    'modifier': modifier_submit
+  'value': text,
+  'modifier': modifier_submit
   } %}
 </form>
