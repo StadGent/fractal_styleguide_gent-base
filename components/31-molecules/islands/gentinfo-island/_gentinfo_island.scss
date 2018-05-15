@@ -68,6 +68,24 @@
         font-size: .8rem;
         font-weight: 600;
         text-decoration: none;
+
+        &.button {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+
+          @include tablet {
+            display: inline;
+            margin: 0;
+            padding: .3em 0;
+            border: 0;
+            box-shadow: none;
+
+            i {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

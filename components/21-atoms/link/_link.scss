@@ -1,3 +1,4 @@
+%a,
 a {
   @include theme('color', 'color-primary', 'link-color');
 
@@ -38,8 +39,8 @@ a {
     text-decoration: none;
 
     i {
-      font-size: .8rem;
       margin-left: .3rem;
+      font-size: .8rem;
       line-height: inherit;
     }
   }
