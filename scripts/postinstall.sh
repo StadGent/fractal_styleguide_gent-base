@@ -37,10 +37,11 @@ if [ -d "../public" ]; then
 
   mkdir ../public/styleguide/vendor;
 
-  cp -R ../node_modules/lightgallery ../public/styleguide/vendor/lightgallery;
   cp -R ../node_modules/jquery ../public/styleguide/vendor/jquery;
   cp -R ../node_modules/chosen-js ../public/styleguide/vendor/chosen-js;
   cp -R ../node_modules/masonry-layout ../public/styleguide/vendor/masonry-layout;
+  cp -R ../node_modules/masonry-layout ../public/styleguide/vendor/masonry-layout;
+  cp -R ../node_modules/baguettebox.js ../public/styleguide/vendor/baguettebox;
 fi
 
 #

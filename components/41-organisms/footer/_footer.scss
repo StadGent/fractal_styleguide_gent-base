@@ -84,10 +84,6 @@ footer.footer {
           order: 1;
           width: span(4 of 12);
         }
-
-        @include desktop {
-          width: span(8 of 24);
-        }
       }
 
       // Right column.
@@ -99,11 +95,6 @@ footer.footer {
           order: 2;
           width: span(8 of 12);
         }
-
-        @include desktop {
-          width: span(10 of 24);
-          margin-bottom: 0;
-        }
       }
     }
   }
@@ -111,10 +102,11 @@ footer.footer {
   .dg-block-post-address,
   .dg-block-disclaimer {
     margin-top: 2.2rem;
-  }
+    margin-left: 1.2rem;
 
-  .dg-block-disclaimer a {
-    @include theme('color', 'color-tertiary', 'footer-disclaimer-link-color');
+    @include tablet {
+      margin-left: 0;
+    }
   }
 
   .db-block-partnership {
@@ -125,5 +117,10 @@ footer.footer {
     @include tablet {
       justify-content: start;
     }
+  }
+
+  .gentinfo-chat-button i {
+    font-size: 1.2rem;
+    margin-top: .2rem;
   }
 }
