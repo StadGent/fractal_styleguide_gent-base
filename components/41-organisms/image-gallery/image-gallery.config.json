@@ -1,0 +1,143 @@
+{
+  "title": "Image gallery",
+  "status": "beta",
+  "name": "Image gallery",
+  "variants": [
+    {
+      "name": "default",
+      "label": "Double",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+          }
+        ]
+      }
+    },
+    {
+      "name": "triple",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+          }
+        ]
+      }
+    },
+    {
+      "name": "quadruple",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+          }
+        ]
+      }
+    },
+    {
+      "name": "quintuple",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+          }
+        ]
+      }
+    },
+    {
+      "name": "quintuple et plus",
+      "context": {
+        "items": [
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          },
+          {
+            "src": "https://via.placeholder.com/700x432",
+            "alt": "placeholder image alternative text",
+          }
+        ]
+      }
+    }
+  ]
+}
