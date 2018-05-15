@@ -102,6 +102,11 @@ footer.footer {
   .dg-block-post-address,
   .dg-block-disclaimer {
     margin-top: 2.2rem;
+    margin-left: 1.2rem;
+
+    @include tablet {
+      margin-left: 0;
+    }
   }
 
   .db-block-partnership {
