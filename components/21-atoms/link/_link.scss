@@ -32,10 +32,14 @@ a {
   }
 
   // Standalone links (could be used for external links.)
-  &.stand-alone {
+  &.external-link {
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
 
     i {
+      font-size: .8rem;
+      margin-left: .3rem;
       line-height: inherit;
     }
   }

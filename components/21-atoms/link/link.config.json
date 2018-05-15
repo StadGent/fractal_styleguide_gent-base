@@ -16,10 +16,10 @@
       "handle": "link"
     },
     {
-      "name": "stand-alone",
+      "name": "external-link",
       "context": {
         "icon": "icon-arrow-right",
-        "modifier": "stand-alone"
+        "modifier": "external-link"
       }
     },
     {

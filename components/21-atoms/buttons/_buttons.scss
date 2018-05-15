@@ -159,6 +159,14 @@
   width: auto;
 }
 
+///
+/// Define a button with an icon.
+///
+/// @since 3.0.0
+/// @group buttons
+/// @access public
+/// @author Gert-Jan Meire
+///
 @mixin button-icon {
   display: flex;
   position: relative;
