@@ -106,9 +106,10 @@
     // triple
     // first row: three
     // |__||__||__|
+    // subtract .33px to deal with incorrect IE rounding
     li:first-of-type:nth-last-of-type(4),
     li:first-of-type:nth-last-of-type(4) ~ li {
-      width: calc((100% / 3) - #{$gutter-width});
+      width: calc((100% / 3) - #{$gutter-width} - .33px);
     }
   }
 
@@ -118,8 +119,9 @@
     // second row: three
     // |____||____|
     // |__||__||__|
+    // subtract .33px to deal with incorrect IE rounding
     li:first-of-type:nth-last-of-type(n + 6) ~ li:nth-of-type(n + 3) {
-      width: calc((100% / 3) - #{$gutter-width});
+      width: calc((100% / 3) - #{$gutter-width} - .33px);
     }
 
     // only show first five images
@@ -132,9 +134,10 @@
       display: none;
     }
 
+    // subtract .33px to deal with incorrect IE rounding
     li:first-of-type:nth-last-of-type(n + 6) ~ .image-gallery__show-more {
-      width: calc((100% / 3) - #{$gutter-width});
-      padding-bottom: calc(((100% / 3) - #{$gutter-width}) / 1.618);
+      width: calc((100% / 3) - #{$gutter-width} -  .33px);
+      padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.618);
     }
   }
 }
