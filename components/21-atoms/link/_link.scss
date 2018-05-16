@@ -73,13 +73,23 @@ a {
     text-decoration: none;
   }
 
+  &[download],
+  &[href^="http://"],
+  &[href^="https://"] {
+    display: inline-block;
+    padding: 0 $link-padding;
+
+    &::after {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+
   ///
   /// Download links.
   ///
   &[download] {
     @include icon(download, after);
-
-    text-decoration: none;
   }
 
   ///
@@ -88,13 +98,5 @@ a {
   &[href^="http://"],
   &[href^="https://"] {
     @include icon(external-link, after);
-
-    display: inline-block;
-    padding: 0 $link-padding;
-
-    &::after {
-      display: inline-block;
-      text-decoration: none;
-    }
   }
 }
