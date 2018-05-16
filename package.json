@@ -46,5 +46,8 @@
   },
   "optionalDependencies": {
     "gulp-axe-webdriver": "^1.4.0"
+  },
+  "scripts" : {
+    "postinstall": "cd scripts; ./postinstall.sh"
   }
 }
