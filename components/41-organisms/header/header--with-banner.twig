@@ -1,46 +1,4 @@
-<header class="header section--wrapper">
-  <div class="content-container">
-
-    <div id="logo" class="header-component">
-      {% include '@logo' %}
-    </div>
-
-    <div id="profile" class="header-component right">
-      {% include '@mijn-gent-block' with {
-      "items": mijn_gent_block_items,
-      'auth': 'true',
-      } %}
-    </div>
-
-    <div id="header-search-mobile" class="header-search-mobile header-component right">
-      {% include '@search' with {
-      "search_id": header_search_mobile_id,
-      "search_name": header_search_mobile_name,
-      "placeholder": header_search_mobile_placeholder,
-      "modifier_search": header_search_mobile_modifier_search,
-      "text": header_search_mobile_text,
-      "modifier_submit": header_search_mobile_modifier_submit
-      } %}
-      <a href="javascript:(void);" class="close">Sluiten</a>
-    </div>
-    <div id="header-search" class="header-search header-component right">
-      {% include '@search' with {
-      "search_id": header_search_id,
-      "search_name": header_search_name,
-      "placeholder": header_search_placeholder,
-      "modifier_search": header_search_modifier_search,
-      "text": header_search_text,
-      "modifier_submit": header_search_modifier_submit
-      } %}
-    </div>
-  </div>
-
-</header>
-
-{% include '@breadcrumbs' with {
-"section": breadcrumbs_section,
-"items": breadcrumbs_items
-} %}
+{% include '@header' %}
 
 {% include '@page-wide-image' with {
 "src": page_wide_image_src,
