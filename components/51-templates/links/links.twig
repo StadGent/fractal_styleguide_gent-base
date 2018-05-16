@@ -1,0 +1,65 @@
+<h2 class="styleguide-title">{{ 'Links' }}</h2>
+<div class="preview-inner-container">
+  <p>
+    {% include '@h3' with { 'h3_text': 'Normal link' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Normal link'
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Standalone link' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Standalone link',
+      'modifier': 'standalone-link'
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'External link' } %}
+    {% include '@link' with {
+      'link': 'https://google.com',
+      'text': 'External link',
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Download link' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Download link',
+        'modifier': 'download-link',
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Link as a primary button' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Link as a button',
+      'modifier': 'button button-primary',
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Link as a secondary button' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Link as a button',
+      'modifier': 'button button-secondary',
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Link as an alert button' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Link as a button',
+      'modifier': 'button button-alert',
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Link as a success button' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Link as a button',
+      'modifier': 'button button-success',
+    } %}
+  </p>
+</div>

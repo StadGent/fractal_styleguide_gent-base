@@ -43,6 +43,11 @@
       height: 2rem;
       border-radius: 2rem;
       text-decoration: none;
+
+      &::after {
+        content: '';
+        display: none;
+      }
     }
 
     i {
