@@ -5,7 +5,6 @@ a {
   @include theme('color', 'color-primary', 'link-color');
 
   padding: $link-padding;
-  transition: color .11s ease-in-out;
   font-weight: 600;
   text-decoration: underline;
 
