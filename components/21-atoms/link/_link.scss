@@ -1,7 +1,10 @@
+$link-padding: .3em;
+
+%a,
 a {
   @include theme('color', 'color-primary', 'link-color');
 
-  padding: .3em;
+  padding: $link-padding;
   transition: color .11s ease-in-out;
   font-weight: 600;
   text-decoration: underline;
@@ -20,26 +23,79 @@ a {
   &.button {
     @include button;
     @include button-icon;
+    @include icon(arrow-right, after);
 
+    display: inline-flex;
+    justify-content: space-between;
     text-decoration: none;
+
+    &.button-success {
+      @extend %button-success;
+    }
 
     &.button-alert {
       @extend %button-alert;
     }
 
-    &.button-success {
-      @extend %button-success;
+    &.button-dark {
+      @extend %button-dark;
+    }
+
+    &::after {
+      font-size: 1.2rem;
     }
   }
 
-  // Standalone links (could be used for external links.)
-  &.stand-alone {
-    display: inline-flex;
+  &::after {
+    padding-left: .5rem;
     text-decoration: none;
+  }
 
-    i {
-      margin-left: .3rem;
-      line-height: inherit;
+  ///
+  /// Styling of:
+  ///   - standalone links
+  ///   - links with an icon class on them
+  ///   - links that go to an external source
+  ///
+  &.standalone-link,
+  &.download-link,
+  &[class^="icon-"] {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 $link-padding;
+  }
+
+  ///
+  /// Stand alone links.
+  ///
+  &.standalone-link {
+    @include icon(arrow-right, after);
+
+    text-decoration: none;
+  }
+
+  ///
+  /// Download links.
+  ///
+  &.download-link {
+    @include icon(download, after);
+
+    text-decoration: none;
+  }
+
+  ///
+  /// External links get an indicator.
+  ///
+  &[href^="http://"],
+  &[href^="https://"] {
+    @include icon(external-link, after);
+
+    display: inline-block;
+    padding: 0 $link-padding;
+
+    &::after {
+      display: inline-block;
+      text-decoration: none;
     }
   }
 }

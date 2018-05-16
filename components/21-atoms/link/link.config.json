@@ -18,8 +18,21 @@
     {
       "name": "stand-alone",
       "context": {
-        "icon": "icon-arrow-right",
-        "modifier": "stand-alone"
+        "link": "https://stad.gent"
+      }
+    },
+    {
+      "name": "external-link",
+      "context": {
+        "link": "javascript:(void);",
+        "modifier": "standalone-link"
+      }
+    },
+    {
+      "name": "download-link",
+      "context": {
+        "link": "javascript:(void);",
+        "modifier": "download-link"
       }
     },
     {
