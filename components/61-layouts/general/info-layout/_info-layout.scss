@@ -1,6 +1,10 @@
 .info-page-layout {
+  @extend %content-container;
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-top: 1.2rem;
   font-size: .9rem;
   line-height: 1.8;
 
@@ -9,9 +13,106 @@
     max-width: 36rem;
     padding-right: span(1 of 12);
 
-    > .wider {
-      margin-right: -16.66%;
-      margin-left: -16.66%;
+    .image-gallery,
+    .video,
+    .quote,
+    .feedback-form {
+      @extend %wider;
+    }
+
+    // Stub.
+    .image-gallery,
+    .video {
+      margin-bottom: 1.6rem;
+    }
+
+    .video {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      a {
+        margin-top: .4rem;
+        margin-bottom: .4rem;
+      }
     }
   }
+
+  .extra-info-box {
+    @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+    display: flex;
+    flex-wrap: wrap;
+    width: span(12 of 12);
+    margin-top: 2.4rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    border-top: 2px solid;
+    justify-self: center;
+
+    ul a {
+      @include theme('color', 'color-tertiary', 'extra-info-box-link-color');
+    }
+
+    &-image {
+      display: none;
+
+      @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: span(4 of 12);
+      }
+
+      img {
+        width: 13rem;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-wrap: wrap;
+      width: span(12 of 12);
+
+      @include desktop {
+        width: span(8 of 12);
+      }
+
+      > h2 {
+        @extend %h3;
+
+        flex-basis: 100%;
+      }
+
+      &-column {
+        width: span(12 of 12);
+        margin-bottom: 1.6rem;
+        padding-right: 2rem;
+
+        @include tablet {
+          width: span(6 of 12);
+        }
+
+        > h3 {
+          @extend %h5;
+
+          margin-top: 1.6rem;
+          margin-bottom: .8rem;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+        }
+
+        .tag {
+          margin-right: .8rem;
+        }
+      }
+    }
+  }
+
+  .summary-text {
+    font-weight: 600;
+  }
 }
+

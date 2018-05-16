@@ -18,6 +18,7 @@ rules:
   mixins-before-declarations:
     - 2
     - exclude:
+      - desktop-xl
       - desktop
       - tablet
       - tablet-only
