@@ -32,7 +32,7 @@
         @include theme('border-color', 'color-primary', 'collection-accolade-color');
         display: block;
         position: absolute;
-        bottom: -2px;
+        bottom: 0;
         height: 1rem;
         border-width: 2px;
         content: '';
