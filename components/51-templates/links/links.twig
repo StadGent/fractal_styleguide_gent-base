@@ -19,7 +19,7 @@
     {% include '@h3' with { 'h3_text': 'External link' } %}
     {% include '@link' with {
       'link': 'https://google.com',
-      'text': 'External link',
+      'text': 'External link'
     } %}
   </p>
   <p>
@@ -27,7 +27,7 @@
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Download link',
-        'modifier': 'download-link',
+        'download': true
     } %}
   </p>
   <p>
@@ -35,7 +35,7 @@
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Link as a button',
-      'modifier': 'button button-primary',
+      'modifier': 'button button-primary'
     } %}
   </p>
   <p>
@@ -43,7 +43,7 @@
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Link as a button',
-      'modifier': 'button button-secondary',
+      'modifier': 'button button-secondary'
     } %}
   </p>
   <p>
@@ -51,7 +51,7 @@
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Link as a button',
-      'modifier': 'button button-alert',
+      'modifier': 'button button-alert'
     } %}
   </p>
   <p>
@@ -59,7 +59,7 @@
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Link as a button',
-      'modifier': 'button button-success',
+      'modifier': 'button button-success'
     } %}
   </p>
 </div>

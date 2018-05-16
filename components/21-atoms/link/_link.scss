@@ -58,7 +58,7 @@ a {
   ///   - links that go to an external source
   ///
   &.standalone-link,
-  &.download-link,
+  &[download],
   &[class^="icon-"] {
     display: inline-flex;
     align-items: center;
@@ -77,7 +77,7 @@ a {
   ///
   /// Download links.
   ///
-  &.download-link {
+  &[download] {
     @include icon(download, after);
 
     text-decoration: none;

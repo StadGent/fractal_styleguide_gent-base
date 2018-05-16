@@ -32,7 +32,7 @@
       "name": "download-link",
       "context": {
         "link": "javascript:(void);",
-        "modifier": "download-link"
+        "download": true
       }
     },
     {
