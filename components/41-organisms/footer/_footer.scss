@@ -95,6 +95,10 @@ footer.footer {
           order: 2;
           width: span(8 of 12);
         }
+
+        @include desktop {
+          width: span(6 of 12);
+        }
       }
     }
   }
