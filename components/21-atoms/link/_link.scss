@@ -24,8 +24,6 @@ a {
     @include button-icon;
     @include icon(arrow-right, after);
 
-    display: inline-flex;
-    justify-content: space-between;
     text-decoration: none;
 
     &.button-success {
