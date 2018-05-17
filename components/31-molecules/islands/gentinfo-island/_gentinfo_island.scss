@@ -69,10 +69,14 @@
         font-weight: 600;
         text-decoration: none;
 
-        &.button {
+        &.button-call {
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
+
+          &::after {
+            display: none;
+          }
 
           @include tablet {
             display: inline;
@@ -81,7 +85,7 @@
             border: 0;
             box-shadow: none;
 
-            i {
+            &::before {
               display: none;
             }
           }
