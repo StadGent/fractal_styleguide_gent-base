@@ -1,3 +1,5 @@
+$social-media-link-width: 1.6rem;
+
 .dg-blocks-social {
   display: flex;
   flex-wrap: wrap;
@@ -39,9 +41,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 2rem;
+      width: $social-media-link-width;
+      height: $social-media-link-width;
+      border-radius: $social-media-link-width;
       text-decoration: none;
 
       &::after {
@@ -51,7 +53,7 @@
     }
 
     i {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
 }
