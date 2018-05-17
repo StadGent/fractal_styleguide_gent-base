@@ -173,8 +173,8 @@
 @mixin button-icon {
   display: inline-flex;
   position: relative;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0 1.2em;
   text-align: left;
 }
