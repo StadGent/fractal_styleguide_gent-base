@@ -30,7 +30,7 @@
     {
       "name": "button-with-icon",
       "context": {
-        "icon":"icon-checkmark"
+        "modifier":"icon-checkmark"
       }
     },
     {

@@ -9,6 +9,9 @@
     {% include '@button-primary' with { 'modifier': 'button-block' } %}
   </p>
   <p>
+    {% include '@button-primary' with { 'modifier': 'button-block icon-digipolis' } %}
+  </p>
+  <p>
     {% include '@button-primary' with { 'text': 'Small', 'modifier': 'button-small' } %}
     {% include '@button-primary' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
     {% include '@button-primary' with { 'text': 'Large', 'modifier': 'button-large' } %}
@@ -17,9 +20,9 @@
     With icon:
   </p>
   <p>
-    {% include '@button-primary' with { 'icon': 'icon-digipolis', 'modifier': 'button-small' } %}
-    {% include '@button-primary' with { 'icon': 'icon-digipolis', 'modifier': 'button-medium' } %}
-    {% include '@button-primary' with { 'icon': 'icon-digipolis', 'modifier': 'button-large' } %}
+    {% include '@button-primary' with { 'modifier': 'button-small icon-digipolis' } %}
+    {% include '@button-primary' with { 'modifier': 'button-medium icon-digipolis' } %}
+    {% include '@button-primary' with { 'modifier': 'button-large icon-digipolis' } %}
   </p>
   <p>
     Disabled state:
@@ -34,8 +37,7 @@
   </p>
   <p>
     {% include '@link--button' with {
-      'modifier': 'button button-primary',
-      'icon': 'icon-arrow-right'
+      'modifier': 'button button-primary'
     } %}
   </p>
 </div>
@@ -49,6 +51,9 @@
     {% include '@button-secondary' with { 'modifier': 'button-block' } %}
   </p>
   <p>
+    {% include '@button-secondary' with { 'modifier': 'button-block icon-digipolis' } %}
+  </p>
+  <p>
     {% include '@button-secondary' with { 'text': 'Small', 'modifier': 'button-small' } %}
     {% include '@button-secondary' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
     {% include '@button-secondary' with { 'text': 'Large', 'modifier': 'button-large' } %}
@@ -58,9 +63,9 @@
     With icon:
   </p>
   <p>
-    {% include '@button-secondary' with { 'text': 'Small', 'modifier': 'button-small', 'icon': 'icon-digipolis' } %}
-    {% include '@button-secondary' with { 'text': 'Medium', 'modifier': 'button-medium', 'icon': 'icon-digipolis' } %}
-    {% include '@button-secondary' with { 'text': 'Large', 'modifier': 'button-large', 'icon': 'icon-digipolis' } %}
+    {% include '@button-secondary' with { 'text': 'Small', 'modifier': 'button-small icon-digipolis' } %}
+    {% include '@button-secondary' with { 'text': 'Medium', 'modifier': 'button-medium icon-digipolis' } %}
+    {% include '@button-secondary' with { 'text': 'Large', 'modifier': 'button-large icon-digipolis' } %}
   </p>
   <p>
     Disabled state:
@@ -75,19 +80,21 @@
   </p>
   <p>
     {% include '@link--button' with {
-      'modifier': 'button button-secondary',
-      'icon': 'icon-arrow-right'
+      'modifier': 'button button-secondary'
     } %}
   </p>
 </div>
 
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Secondary buttons</h3>
+  <h3 class="styleguide">Dark buttons</h3>
   <p>
     {% include '@button-dark' %}
   </p>
   <p>
     {% include '@button-dark' with { 'modifier': 'button-block' } %}
+  </p>
+  <p>
+    {% include '@button-dark' with { 'modifier': 'button-block icon-digipolis' } %}
   </p>
   <p>
     {% include '@button-dark' with { 'text': 'Small', 'modifier': 'button-small' } %}
@@ -99,9 +106,9 @@
     With icon:
   </p>
   <p>
-    {% include '@button-dark' with { 'text': 'Small', 'modifier': 'button-small', 'icon': 'icon-digipolis' } %}
-    {% include '@button-dark' with { 'text': 'Medium', 'modifier': 'button-medium', 'icon': 'icon-digipolis' } %}
-    {% include '@button-dark' with { 'text': 'Large', 'modifier': 'button-large', 'icon': 'icon-digipolis' } %}
+    {% include '@button-dark' with { 'text': 'Small', 'modifier': 'button-small icon-digipolis' } %}
+    {% include '@button-dark' with { 'text': 'Medium', 'modifier': 'button-medium icon-digipolis' } %}
+    {% include '@button-dark' with { 'text': 'Large', 'modifier': 'button-large icon-digipolis' } %}
   </p>
   <p>
     Disabled state:
@@ -116,52 +123,53 @@
   </p>
   <p>
     {% include '@link--button' with {
-      'modifier': 'button button-dark',
-      'icon': 'icon-arrow-right'
+      'modifier': 'button button-dark'
     } %}
   </p>
 </div>
 
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Secondary buttons</h3>
+  <h3 class="styleguide">Alert buttons</h3>
   <p>
-    {% include '@button-alert' with { 'icon': 'icon-lightning' } %}
+    {% include '@button-alert' with { 'modifier': 'icon-lightning' } %}
   </p>
   <p>
-    {% include '@button-alert' with { 'modifier': 'button-block', 'icon': 'icon-lightning' } %}
+    {% include '@button-alert' with { 'modifier': 'button-block icon-lightning' } %}
   </p>
   <p>
-  {% include '@button-alert' with { 'text': 'Small', 'modifier': 'button-small', 'icon': 'icon-lightning' } %}
-  {% include '@button-alert' with { 'text': 'Medium', 'modifier': 'button-medium', 'icon': 'icon-lightning' } %}
-  {% include '@button-alert' with { 'text': 'Large', 'modifier': 'button-large', 'icon': 'icon-lightning' } %}
+  {% include '@button-alert' with { 'text': 'Small', 'modifier': 'button-small icon-lightning' } %}
+  {% include '@button-alert' with { 'text': 'Medium', 'modifier': 'button-medium icon-lightning' } %}
+  {% include '@button-alert' with { 'text': 'Large', 'modifier': 'button-large icon-lightning' } %}
   </p>
   <p>
   <p>
     Disabled state:
   </p>
   <p>
-    {% include '@button-alert' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled', 'icon': 'icon-lightning' } %}
-    {% include '@button-alert' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled', 'icon': 'icon-lightning' } %}
-    {% include '@button-alert' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled', 'icon': 'icon-lightning' } %}
+    {% include '@button-alert' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled icon-digipolis' } %}
+    {% include '@button-alert' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled icon-digipolis' } %}
+    {% include '@button-alert' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled icon-digipolis' } %}
   </p>
   <p>
     Link styled as a button:
   </p>
   <p>
     {% include '@link--button' with {
-      'modifier': 'button button-alert',
-      'icon': 'icon-arrow-right'
+      'modifier': 'button button-alert'
     } %}
   </p>
 </div>
 
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Secondary buttons</h3>
+  <h3 class="styleguide">Success buttons</h3>
   <p>
     {% include '@button-success' %}
   </p>
   <p>
     {% include '@button-success' with { 'modifier': 'button-block' } %}
+  </p>
+  <p>
+    {% include '@button-success' with { 'modifier': 'button-block icon-checkmark' } %}
   </p>
   <p>
     {% include '@button-success' with { 'text': 'Small', 'modifier': 'button-small' } %}
@@ -173,9 +181,9 @@
     With icon:
   </p>
   <p>
-    {% include '@button-success' with { 'text': 'Small', 'modifier': 'button-small', 'icon': 'icon-digipolis' } %}
-    {% include '@button-success' with { 'text': 'Medium', 'modifier': 'button-medium', 'icon': 'icon-digipolis' } %}
-    {% include '@button-success' with { 'text': 'Large', 'modifier': 'button-large', 'icon': 'icon-digipolis' } %}
+    {% include '@button-success' with { 'text': 'Small', 'modifier': 'button-small icon-checkmark' } %}
+    {% include '@button-success' with { 'text': 'Medium', 'modifier': 'button-medium icon-checkmark' } %}
+    {% include '@button-success' with { 'text': 'Large', 'modifier': 'button-large icon-checkmark' } %}
   </p>
   <p>
     Disabled state:
@@ -190,8 +198,7 @@
   </p>
   <p>
     {% include '@link--button' with {
-      'modifier': 'button button-success',
-      'icon': 'icon-arrow-right'
+      'modifier': 'button button-success'
     } %}
   </p>
 </div>
