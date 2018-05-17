@@ -39,7 +39,7 @@
     bottom: 0;
     width: calc((100% / 1) - #{$gutter-width});
     margin: calc(#{$gutter-width} / 2);
-    padding-bottom: calc(((100% / 1) - #{$gutter-width}) / 1.618);
+    padding-bottom: calc(((100% / 1) - #{$gutter-width}) / 1.6);
     pointer-events: none;
 
     &::before {
@@ -88,7 +88,7 @@
 
     .image-gallery__show-more {
       width: calc((100% / 2) - #{$gutter-width});
-      padding-bottom: calc(((100% / 2) - #{$gutter-width}) / 1.618);
+      padding-bottom: calc(((100% / 2) - #{$gutter-width}) / 1.6);
     }
   }
 
@@ -137,7 +137,7 @@
     // subtract .33px to deal with incorrect IE rounding
     li:first-of-type:nth-last-of-type(n + 6) ~ .image-gallery__show-more {
       width: calc((100% / 3) - #{$gutter-width} -  .33px);
-      padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.618);
+      padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.6);
     }
   }
 }
