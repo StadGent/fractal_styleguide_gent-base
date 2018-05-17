@@ -1,0 +1,25 @@
+<ul class="image-gallery">
+  {% for item in items %}
+    <li>
+      <a href="{{ item.src }}"
+        {% if item.caption %}
+          aria-label="{{ item.caption }}"
+        {% endif %}
+         aria-describedby="image-gallery__open-gallery">
+        <figure>
+          {% include '@image' with { 'src': item.src, 'alt_text' : item.alt } %}
+          {% if item.caption %}
+            <figcaption>{{ item.caption }}</figcaption>
+          {% endif %}
+        </figure>
+      </a>
+    </li>
+  {% endfor %}
+  <li class="image-gallery__show-more">
+    <div class="show-more__content">
+      <span class="show-more__total">{{ items.length }}</span>
+      <span>Show all photos <i class="icon-arrow-right" aria-hidden="true"></i></span>
+    </div>
+  </li>
+</ul>
+<span hidden id="image-gallery__open-gallery">open gallery</span>

@@ -50,10 +50,6 @@
 
   min-height: 2.5rem;
   letter-spacing: .03em;
-
-  &.button-icon i {
-    font-size: 1.2rem;
-  }
 }
 
 ///
@@ -94,6 +90,7 @@
 
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 2.6em;
   border: 2px solid;
   border-radius: border-radius('radius-1');
@@ -119,10 +116,6 @@
     @include button-large;
   }
 
-  &.button-icon {
-    @include button-icon;
-  }
-
   &.button-block {
     @include button-block;
   }
@@ -130,6 +123,16 @@
   &.button-icon.button-block {
     display: flex;
     justify-content: center;
+  }
+
+  &[class*="icon-"] {
+    @include button-icon;
+
+    &::before {
+      order: 2;
+      padding: 0 0 0 .5rem;
+      font-size: 1.4em;
+    }
   }
 }
 
@@ -168,18 +171,12 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-icon {
-  display: flex;
+  display: inline-flex;
   position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 0 1.2em;
   text-align: left;
-
-  i {
-    margin-right: -.4em;
-    margin-left: 1.2em;
-    font-size: 1rem;
-  }
 }
 
 .button,

@@ -1,8 +1,10 @@
 .tag {
   @include theme('border-color', 'color-primary--lighten-3', 'tag-border-color');
+  @include icon(arrow-right, after);
 
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
   min-height: 1.5rem;
   padding: 0 .5em;
   border: 1px solid;
@@ -12,8 +14,8 @@
   line-height: 1;
   text-decoration: none;
 
-  i {
-    margin-left: .5rem;
+  &::after {
+    padding-left: .5rem;
     font-size: 1rem;
   }
 }

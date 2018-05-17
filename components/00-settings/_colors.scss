@@ -188,7 +188,8 @@ $themes: (
     'color-tertiary': color('dark-gray'),
     'color-box-shadow': $box-shadow-primary color('cyan-wcag', -4),
     'color-primary-accolade': svg-as-background('accolade', color('cyan-wcag', -4)),
-    'color-primary-accolade-stroke': svg-as-background('accolade-stroke', color('cyan-wcag', -4)),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan-wcag', -4)),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1)),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
@@ -210,6 +211,8 @@ $themes: (
     'button-secondary-focus-color': color('cyan-wcag', 3),
     'button-secondary-focus-background': color('cyan-wcag', -4),
     'button-secondary-focus-border-color': color('cyan-wcag', -1),
+
+    'image-gallery-show-more-background-color': color('cyan-wcag', 3),
   ),
   'purple': (
     // Required colors!
@@ -218,7 +221,8 @@ $themes: (
     'color-tertiary': color('dark-gray'),
     'color-box-shadow': $box-shadow-primary color('purple', -4),
     'color-primary-accolade': svg-as-background('accolade', color('purple', -4)),
-    'color-primary-accolade-stroke': svg-as-background('accolade-stroke', color('cyan-wcag', -4)),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('purple', -4)),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('purple', 1)),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
@@ -230,7 +234,8 @@ $themes: (
     'color-tertiary': color('dark-gray'),
     'color-box-shadow': $box-shadow-primary color('orange', -4),
     'color-primary-accolade': svg-as-background('accolade', color('orange', -4)),
-    'color-primary-accolade-stroke': svg-as-background('accolade-stroke', color('cyan-wcag', -4)),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('orange', -4)),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('orange', 1)),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!

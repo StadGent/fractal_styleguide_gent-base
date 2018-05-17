@@ -1,13 +1,14 @@
-<ul class="teasers teasers--topics">
-  {% for i in 0..6 %}
-    <li>
-      {% include '@teaser--topic' with {
+<div class="collection teaser-topic-collection">
+  <h2><span>{{ 'Topics' }}</span></h2>
+  <ul>
+    {% for i in 0..6 %}
+      {% include '@teaser-topic' with {
         "teaser_paragraph_text": teaser_paragraph_text,
         "teaser_h3_title": teaser_h3_title,
         "teaser_uid":  teaser_uid ~ i,
         "teaser_link_text": teaser_link_text,
         "teaser_link_link": teaser_link_link
       } %}
-    </li>
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ul>
+</div>

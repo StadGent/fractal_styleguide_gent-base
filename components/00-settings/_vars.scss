@@ -70,6 +70,16 @@ $bp-desktop-xl-fonts: 1920px !default;
 $bp-mobile: 320px !default;
 
 ///
+/// Defines the min-width breakpoint for phablet screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Bart Delrue
+///
+$bp-phablet: 576px !default;
+
+///
 /// Defines the min-width breakpoint for tablet screens.
 ///
 /// @since 3.0.0

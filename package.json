@@ -36,9 +36,9 @@
   ],
   "license": "GPL-2.0",
   "dependencies": {
+    "baguettebox.js": "^1.10.0",
     "breakpoint-sass": "^2.7.1",
     "chosen-js": "^1.8.2",
-    "lightgallery": "^1.6.3",
     "masonry-layout": "^4.2.0",
     "sassdoc": "^2.5.0",
     "sassdoc-theme-flippant": "^0.1.0",
@@ -46,5 +46,8 @@
   },
   "optionalDependencies": {
     "gulp-axe-webdriver": "^1.4.0"
+  },
+  "scripts" : {
+    "postinstall": "cd scripts; ./postinstall.sh"
   }
 }

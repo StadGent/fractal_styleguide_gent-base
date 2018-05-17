@@ -17,37 +17,69 @@
       "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus."
     } %}
 
-    <div class="image-gallery wider">
-      {% include '@image' with {
-        'src': 'https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-        'alt_text': 'Gent info image',
-      } %}
-    </div>
+  {% include '@image-gallery' with {
+    "items": [
+      {
+        "src": "https://via.placeholder.com/700x432",
+        "alt": "placeholder image alternative text",
+        "caption": "image caption"
+      },
+      {
+        "src": "https://via.placeholder.com/700x432",
+        "alt": "placeholder image alternative text",
+        "caption": "image caption"
+      },
+      {
+        "src": "https://via.placeholder.com/700x432",
+        "alt": "placeholder image alternative text",
+        "caption": "image caption"
+      },
+      {
+        "src": "https://via.placeholder.com/700x432",
+        "alt": "placeholder image alternative text",
+        "caption": "image caption"
+      },
+      {
+        "src": "https://via.placeholder.com/700x432",
+        "alt": "placeholder image alternative text",
+        "caption": "image caption"
+      },
+      {
+        "src": "https://via.placeholder.com/700x432",
+        "alt": "placeholder image alternative text",
+        "caption": "image caption"
+      },
+      {
+        "src": "https://via.placeholder.com/700x432",
+        "alt": "placeholder image alternative text"
+      }
+    ]
+  } %}
 
     {% include '@paragraph' with {
       "text": "Quisque sollicitudin leo at erat sagittis aliquet. Nullam ipsum erat, aliquet vel scelerisque posuere, interdum vitae dolor. Morbi finibus nisi efficitur, laoreet risus id, mollis mauris. Donec eu interdum velit, at mattis leo. Suspendisse eget finibus diam. Aliquam condimentum nec elit a aliquam. Donec efficitur et enim et tempor. Vestibulum quis tempor purus. Cras id magna ante. Morbi nec purus vehicula, auctor erat eget, aliquet mi. Nam at ligula convallis, vestibulum ligula a, pretium tellus. Sed pretium vulputate iaculis."
     } %}
 
-    {% include '@quote' with {
-      'modifier': 'wider'
-    }%}
+    {% include '@quote' %}
 
     {% include '@paragraph' with {
       "text": "Nam lorem ex, posuere non lectus tempus, ornare scelerisque mauris. Integer vitae tortor orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas enim lectus, malesuada in hendrerit in, vulputate ut enim. Integer pretium elit purus, ac pulvinar augue scelerisque quis. In velit elit, luctus vitae nunc quis, hendrerit congue felis. Nulla tincidunt tincidunt cursus. Mauris pretium eu ex id aliquet. Aenean massa metus, posuere ac dui sit amet, volutpat interdum libero."
     } %}
 
-    <div class="video wider">
-      <iframe width="100%" height="500" src="https://www.youtube.com/embed/S0vLmTWUmok" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="video">
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/S0vLmTWUmok" frameborder="0" title="Promo video Stad Gent" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       {% include '@link' with {
-        'link': 'javascript:(void);',
+        'link': 'https://www.youtube.com',
         'text': 'Watch this video with audio description',
         'modifier': 'external-link'
       } %}
     </div>
 
+{#
     {% include '@feedback-form' with {
       'modifier': 'wider'
     }%}
+#}
 
   </div>
   <aside class="extra-info-box">
@@ -58,30 +90,30 @@
       } %}
     </div>
     <div class="extra-info-box-content">
-      {% include '@h3' with {
-        'h3_text': 'Also interesting'
+      {% include '@h2' with {
+        'h2_text': 'Also interesting'
       } %}
 
       <div class="extra-info-box-content-column">
-        {% include '@h4' with {
-          'h4_text': 'Similar articles'
+        {% include '@h3' with {
+          'h3_text': 'Similar articles'
         } %}
 
         {% include '@list'
           with {
             'type': 'unordered',
             "items": [
-              '<a href="https://stad.gent">Council meeting dates</a>',
-              '<a href="https://stad.gent">Neighborhood</a>',
-              '<a href="https://stad.gent">Service policy participation</a>',
-              '<a href="https://stad.gent">Re-listen the city council and the dec...<Paste></a>'
+              '<a href="javascript:(void);">Council meeting dates</a>',
+              '<a href="javascript:(void);">Neighborhood</a>',
+              '<a href="javascript:(void);">Service policy participation</a>',
+              '<a href="javascript:(void);">Re-listen the city council and the dec...<Paste></a>'
             ]
           }
         %}
       </div>
       <div class="extra-info-box-content-column">
-        {% include '@h4' with {
-          'h4_text': 'More info about'
+        {% include '@h3' with {
+          'h3_text': 'More info about'
         } %}
         {% include '@tag' with {
           'tag_text': 'Inner city'
@@ -90,8 +122,8 @@
           'tag_text': 'Another tag'
         } %}
 
-        {% include '@h4' with {
-          'h4_text': 'Related Linked Open Data'
+        {% include '@h3' with {
+          'h3_text': 'Related Linked Open Data'
         } %}
 
         {% include '@link' with {

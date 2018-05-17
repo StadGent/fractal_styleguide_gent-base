@@ -18,8 +18,15 @@
     {
       "name": "external-link",
       "context": {
-        "icon": "icon-arrow-right",
-        "modifier": "external-link"
+        "link": "javascript:(void);",
+        "modifier": "standalone-link"
+      }
+    },
+    {
+      "name": "download-link",
+      "context": {
+        "link": "javascript:(void);",
+        "download": true
       }
     },
     {

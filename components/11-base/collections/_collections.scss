@@ -1,6 +1,15 @@
+///
+///  Placeholder to give a collection of data a certain context / styling.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access public
+/// @author Bart Delrue
+///
+%collection,
 .collection {
   h2 {
-    @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
+    @include theme('border-color', 'color-primary--lighten-4', 'collection-heading-2-border-color');
 
     display: block;
     position: relative;
@@ -8,33 +17,42 @@
     padding-bottom: 1.2rem;
     border-bottom: 2px solid;
 
-    &::before {
-      @include theme('background-image', 'color-primary-accolade-stroke', 'quote-accolade-stroke');
-
-      display: block;
-      position: absolute;
-      bottom: -1rem;
-      left: 4rem;
-      width: 2rem;
-      height: 1rem;
-      margin: auto;
-      transform: rotate(180deg);
+    span {
+      display: inline-block;
+      position: relative;
+      min-width: 5rem;
+      margin-bottom: -2.2rem;
+      padding: inherit;
+      padding-bottom: 2.2rem;
       background-color: color('white');
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      content: '';
-    }
+      font-size: inherit;
 
-    &::after {
-      display: block;
-      position: absolute;
-      bottom: -1rem;
-      left: 4rem;
-      width: 2rem;
-      height: 1rem;
-      margin: auto;
-      border-bottom: 2px solid;
-      content: '';
+      &::before,
+      &::after {
+        @include theme('border-color', 'color-primary', 'collection-accolade-color');
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 1rem;
+        border-width: 2px;
+        content: '';
+      }
+
+      &::before {
+        left: 0;
+        width: 2.5rem;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-top-right-radius: border-radius(radius-3);
+      }
+
+      &::after {
+        right: 0;
+        width: calc(100% - 2.5rem + 2px);
+        border-top-style: solid;
+        border-left-style: solid;
+        border-top-left-radius: border-radius(radius-3);
+      }
     }
   }
 }

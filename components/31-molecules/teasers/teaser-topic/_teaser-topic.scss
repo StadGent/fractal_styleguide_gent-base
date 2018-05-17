@@ -1,0 +1,51 @@
+.teaser-topic {
+  @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
+
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid;
+  list-style: none;
+
+  a.teaser-topic-overlay-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &-content {
+    margin: 0;
+
+    h3 {
+      @extend %h4;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    a.read-more {
+      position: relative;
+      margin-left: -.3rem;
+      line-height: 1em;
+      z-index: 2;
+    }
+
+    &--section {
+      @extend %cs--default;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
