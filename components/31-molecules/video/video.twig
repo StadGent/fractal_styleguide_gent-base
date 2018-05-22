@@ -1,0 +1,13 @@
+<div class="video">
+  <iframe width="100%" height="500"
+          src="{{ src }}" frameborder="0"
+        {% if title %}
+          title="{{ title }}"
+        {% endif %}
+          allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
+  {% include '@link' with {
+  'link': audio_description_src,
+  'text': 'Watch this video with audio description'
+  } %}
+</div>

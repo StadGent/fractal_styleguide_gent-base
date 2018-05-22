@@ -1,0 +1,10 @@
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  a {
+    margin-top: .4rem;
+    margin-bottom: .4rem;
+  }
+}
