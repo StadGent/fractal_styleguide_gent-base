@@ -12,29 +12,26 @@
     {
       "name": "button-small",
       "context": {
-        "modifier": "button-small",
-        "icon": "icon-lightning"
+        "modifier": "button-small icon-lightning"
       }
     },
     {
       "name": "button-medium",
       "context": {
-        "modifier": "button-medium",
-        "icon": "icon-lightning"
+        "modifier": "button-medium icon-lightning"
       }
     },
     {
       "name": "button-large",
       "context": {
-        "modifier": "button-large",
-        "icon": "icon-lightning"
+        "modifier": "button-large icon-lightning"
       }
     },
     {
       "name": "button-disabled",
       "context": {
         "disabled": "button-disabled",
-        "icon": "icon-lightning"
+        "modifier": "icon-lightning"
       }
     }
   ]
