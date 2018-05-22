@@ -16,12 +16,6 @@
       "handle": "link"
     },
     {
-      "name": "stand-alone",
-      "context": {
-        "link": "https://stad.gent"
-      }
-    },
-    {
       "name": "external-link",
       "context": {
         "link": "javascript:(void);",

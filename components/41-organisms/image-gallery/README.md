@@ -1,6 +1,6 @@
 # Image gallery
 ## Functionality
-* The images must have aspect ratio 1.618:1.
+* The images must have aspect ratio 8:5.
 * The number of preview images shown depends on the screen size.
 * Up to five images can be shown as preview.
 * If there are hidden images: an overlay is placed on the last visible image indicating the total number of images.

@@ -95,6 +95,10 @@ footer.footer {
           order: 2;
           width: span(8 of 12);
         }
+
+        @include desktop {
+          width: span(6 of 12);
+        }
       }
     }
   }
@@ -117,10 +121,5 @@ footer.footer {
     @include tablet {
       justify-content: start;
     }
-  }
-
-  .gentinfo-chat-button i {
-    margin-top: .2rem;
-    font-size: 1.2rem;
   }
 }
