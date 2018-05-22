@@ -22,7 +22,7 @@ a {
   &.button {
     @include button;
     @include button-icon;
-    @include icon(arrow-right, after);
+    @include icon(arrow-right);
 
     text-decoration: none;
 
@@ -36,10 +36,6 @@ a {
 
     &.button-dark {
       @extend %button-dark;
-    }
-
-    &::after {
-      font-size: 1.4em;
     }
   }
 

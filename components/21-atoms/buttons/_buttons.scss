@@ -127,12 +127,6 @@
 
   &[class*="icon-"] {
     @include button-icon;
-
-    &::before {
-      order: 2;
-      padding: 0 0 0 .5rem;
-      font-size: 1.4em;
-    }
   }
 }
 
@@ -177,10 +171,15 @@
   justify-content: space-between;
   padding: 0 1.2em;
   text-align: left;
+
+  &::before {
+    order: 2;
+    padding: 0 0 0 .5rem;
+    font-size: 1.4em;
+  }
 }
 
 .button,
-a.button,
 input[type="button"],
 input[type="submit"] {
   @include button;
