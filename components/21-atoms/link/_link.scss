@@ -39,6 +39,12 @@ a {
     }
   }
 
+  &:not(.button)::after,
+  &:not(.button) i::after {
+    margin-left: .2rem;
+    vertical-align: middle;
+  }
+
   ///
   /// Styling of:
   ///   - standalone links

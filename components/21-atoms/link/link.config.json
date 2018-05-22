@@ -16,10 +16,17 @@
       "handle": "link"
     },
     {
-      "name": "external-link",
+      "name": "standalone",
+      "handle": "link",
       "context": {
         "link": "javascript:(void);",
         "modifier": "standalone-link"
+      }
+    },
+    {
+      "name": "external-link",
+      "context": {
+        "link": "https://stad.gent"
       }
     },
     {
