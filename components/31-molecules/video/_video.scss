@@ -1,6 +1,7 @@
 .video {
   @include clearfix;
 
+  %responsive-video,
   .responsive-video {
     position: relative;
     padding-bottom: calc(100% / (16/9));
