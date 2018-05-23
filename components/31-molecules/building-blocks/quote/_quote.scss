@@ -16,13 +16,11 @@
   blockquote {
     position: relative;
     flex: 1;
-
-    @include desktop {
-      padding-left: 9rem;
-    }
+    max-width: 40rem;
 
     @include desktop {
       align-items: center;
+      padding-left: 9rem;
     }
 
     .content {
