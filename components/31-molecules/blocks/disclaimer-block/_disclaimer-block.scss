@@ -10,4 +10,8 @@
     margin: 0;
     list-style: none;
   }
+
+  a {
+    @include theme('color', 'color-primary--darken-1', 'disclaimer-block-link-color');
+  }
 }
