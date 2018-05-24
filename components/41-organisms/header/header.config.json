@@ -1,7 +1,7 @@
 {
   "title": "Header",
   "hidden": "hidden",
-  "status": "ready",
+  "status": "alpha",
   "preview": "@preview-without-padding",
   "context": {
     "section": "section--wrapper",

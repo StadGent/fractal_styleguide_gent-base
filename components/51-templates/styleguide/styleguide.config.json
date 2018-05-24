@@ -1,6 +1,6 @@
 {
   "title": "Styleguide",
-  "status": "ready",
+  "status": "beta",
   "handle": "styleguide",
   "default": "styleguide-default-cyan",
   "order": 1,

@@ -1,6 +1,6 @@
 {
   "title": "Radio",
-  "status": "ready",
+  "status": "beta",
   "handle": "radio",
   "context": {
     "label": "Label radiobuttons",

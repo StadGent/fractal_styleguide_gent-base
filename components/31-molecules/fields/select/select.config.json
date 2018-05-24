@@ -1,6 +1,6 @@
 {
   "title": "Select",
-  "status": "ready",
+  "status": "beta",
   "handle": "select",
   "context": {
     "label": "Label select",

@@ -1,6 +1,6 @@
 {
   "title": "Number",
-  "status": "ready",
+  "status": "beta",
   "handle": "number",
   "order": 1,
   "context": {

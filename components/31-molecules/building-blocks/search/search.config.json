@@ -1,6 +1,6 @@
 {
   "title": "Search",
-  "status": "ready",
+  "status": "alpha",
   "hidden": "hidden",
   "handle": "search",
   "context": {

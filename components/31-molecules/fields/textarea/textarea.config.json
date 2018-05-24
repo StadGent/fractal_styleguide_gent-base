@@ -1,6 +1,6 @@
 {
   "title": "Textarea",
-  "status": "ready",
+  "status": "beta",
   "handle": "textarea",
   "order": 3,
   "context": {

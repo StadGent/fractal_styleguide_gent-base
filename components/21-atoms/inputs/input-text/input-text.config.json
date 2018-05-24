@@ -1,6 +1,6 @@
 {
   "title": "Input text",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-text",
   "context": {
     "textfield_id": "textfield_id",

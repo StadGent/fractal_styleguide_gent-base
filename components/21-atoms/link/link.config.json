@@ -2,6 +2,7 @@
   "title": "Link",
   "name": "Link",
   "handle": "link",
+  "status": "ready",
   "order": 12,
   "context": {
     "link": "javascript:(void);",

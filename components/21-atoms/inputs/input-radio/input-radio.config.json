@@ -1,6 +1,6 @@
 {
   "title": "Input radio",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-radio",
   "context": {
     "radio_id": "radio_id",

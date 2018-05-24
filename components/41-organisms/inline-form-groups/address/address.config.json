@@ -1,5 +1,6 @@
 {
   "title": "Address",
   "name": "Address",
+  "status": "beta",
   "default": "address"
 }

@@ -1,7 +1,7 @@
 {
   "title": "Description",
   "hidden": "hidden",
-  "status": "ready",
+  "status": "wip",
   "handle": "description",
   "order": 10,
   "context": {

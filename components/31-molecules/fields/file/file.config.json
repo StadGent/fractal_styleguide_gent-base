@@ -1,6 +1,6 @@
 {
   "title": "File",
-  "status": "ready",
+  "status": "beta",
   "handle": "file",
   "context": {
     "label": "Label file",

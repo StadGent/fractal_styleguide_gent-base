@@ -1,6 +1,6 @@
 {
   "title": "Email",
-  "status": "ready",
+  "status": "beta",
   "handle": "email",
   "context": {
     "label": "Label email",
