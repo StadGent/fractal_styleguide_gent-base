@@ -1,3 +1,4 @@
+{# --- HEADINGS --- #}
 <h3 id="styleguide-headings" class="styleguide-title">Headings</h3>
 <div class="preview-inner-container">
   {% include '@h1' with { 'h1_text': 'Heading 1' } %}
@@ -7,16 +8,17 @@
   {% include '@h5' with { 'h5_text': 'Heading 5' } %}
 </div>
 
+
+{# --- PARAGRAPH TYPES --- #}
 <h3 id="styleguide-paragraphs" class="styleguide-title">Paragraph types</h3>
 <div class="preview-inner-container">
-  <h3 class="styleguide">{{ 'Normal paragraph' }}</h3>
+  <h4 class="styleguide-title">{{ 'Normal paragraph' }}</h4>
   {% include '@paragraph' with {
     'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.'
   }%}
 </div>
-
 <div class="preview-inner-container">
-  <h3 class="styleguide">{{ 'Small text paragraph' }}</h3>
+  <h4 class="styleguide-title">{{ 'Small text paragraph' }}</h4>
   {% include '@paragraph--small-text'
     with {
       'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.',
@@ -24,9 +26,8 @@
     }
   %}
 </div>
-
 <div class="preview-inner-container">
-  <h3 class="styleguide">{{ 'Caption text paragraph' }}</h3>
+  <h4 class="styleguide-title">{{ 'Caption text paragraph' }}</h4>
   {% include '@paragraph--caption-text'
     with {
       'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.',
@@ -34,9 +35,8 @@
     }
   %}
 </div>
-
 <div class="preview-inner-container">
-  <h3 class="styleguide">{{ 'Left aligned paragraph' }}</h3>
+  <h4 class="styleguide-title">{{ 'Left aligned paragraph' }}</h4>
   {% include '@paragraph--left-text'
     with {
       'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.',
@@ -44,9 +44,8 @@
     }
   %}
 </div>
-
 <div class="preview-inner-container">
-  <h3 class="styleguide">{{ 'Right aligned paragraph' }}</h3>
+  <h4 class="styleguide-title">{{ 'Right aligned paragraph' }}</h4>
   {% include '@paragraph--right-text'
     with {
       'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.',
@@ -55,54 +54,53 @@
   %}
 </div>
 
+
+{# --- LISTS --- #}
 <h3 id="styleguide-lists" class="styleguide-title">Lists</h3>
-<div class="preview-inner-container">
-  <h3 class="styleguide">{{ 'Ordered list' }}</h3>
-  {% include '@list'
-    with {
-      'type': 'ordered',
-      "items": [
-        "item 1",
-        "item 2",
-        "item 3",
-        "item 4"
-      ]
-    }
-  %}
-  </div>
-
   <div class="preview-inner-container">
-  <h3 class="styleguide">{{ 'Unordered list' }}</h3>
-  {% include '@list'
-    with {
-      'type': 'unordered',
-      "items": [
-        "item 1",
-        "item 2",
-        "item 3",
-        "item 4"
-      ]
-    }
-  %}
+    <h4 class="styleguide-title">{{ 'Ordered list' }}</h4>
+    {% include '@list'
+      with {
+        'type': 'ordered',
+        "items": [
+          "item 1",
+          "item 2",
+          "item 3",
+          "item 4"
+        ]
+      }
+    %}
   </div>
-
   <div class="preview-inner-container">
-  <h3 class="styleguide">{{ 'List with links' }}</h3>
-  {% include '@list'
-    with {
-      'type': 'links',
-      "items": [
-        "<a href='#'>item 1</a>",
-        "<a href='#'>item 2</a>",
-        "<a href='#'>item 3</a>",
-        "<a href='#'>item 4</a>"
-      ]
-    }
-  %}
+    <h4 class="styleguide-title">{{ 'Unordered list' }}</h4>
+    {% include '@list'
+      with {
+        'type': 'unordered',
+        "items": [
+          "item 1",
+          "item 2",
+          "item 3",
+          "item 4"
+        ]
+      }
+    %}
   </div>
-
   <div class="preview-inner-container">
-    <h3 class="styleguide">{{ 'List with icons' }}</h3>
+    <h4 class="styleguide-title">{{ 'List with links' }}</h4>
+    {% include '@list'
+      with {
+        'type': 'links',
+        "items": [
+          "<a href='#'>item 1</a>",
+          "<a href='#'>item 2</a>",
+          "<a href='#'>item 3</a>",
+          "<a href='#'>item 4</a>"
+        ]
+      }
+    %}
+  </div>
+  <div class="preview-inner-container">
+    <h4 class="styleguide-title">{{ 'List with icons' }}</h4>
     {% include '@list'
       with {
         'type': 'iconlist',
@@ -115,9 +113,8 @@
       }
     %}
   </div>
-
   <div class="preview-inner-container">
-    <h3 class="styleguide">{{ 'List with small icons' }}</h3>
+    <h4 class="styleguide-title">{{ 'List with small icons' }}</h4>
     {% include '@list'
       with {
         'type': 'iconlist-small',
@@ -130,9 +127,8 @@
       }
     %}
   </div>
-
   <div class="preview-inner-container">
-    <h3 class="styleguide">{{ 'Definition list' }}</h3>
+    <h4 class="styleguide-title">{{ 'Definition list' }}</h4>
     {% include '@list'
       with {
         'type': 'definition',
@@ -152,86 +148,66 @@
       %}
       </div>
 
+
+{# --- INPUT TYPES --- #}
 <h3 id="styleguide-inputs" class="styleguide-title">Input types</h3>
-<div class="preview-inner-container">
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: date</h3>
-    {% include '@label' with { 'for': 'input-date-id', 'label': 'Date label' } %}
-    {% include '@input-date' with { 'date_id': 'input-date-id' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: checkbox</h3>
-    {% include '@input-checkbox' with { 'checkbox_id': 'checkbox-id', 'checkbox_label': 'Checkbox option' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: radio</h3>
-    {% include '@input-radio' with { 'radio_id': 'radio-id', 'radio_label': 'Radio option' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: email</h3>
-    {% include '@label' with { 'for': 'email-id', 'label': 'Email label' } %}
-    {% include '@input-email' with { 'email_id': 'email-id' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: file</h3>
-    {% include '@label' with { 'for': 'file-id', 'label': 'File label' } %}
-    {% include '@input-file' with { 'file_id': 'file-id'} %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: select</h3>
-    {% include '@label' with { 'for': 'select-id', 'label': 'Select label' } %}
-    {% include '@input-select' with {
-      'select_id': 'select-id',
-      "options": [
-      {
-        "label": "Option 1"
-      },
-      {
-        "label": "Option 2"
-      },
-      {
-        "optgroup": true,
-        "label": "Option group",
-        "optgroupoptions": [
-          {
-            "label": "Option 3"
-          },
-          {
-            "label": "Option 4"
-          }
-        ]
-      }
-    ]
-  } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: multiselect</h3>
-    {% include '@label' with { 'for': 'multiselect-id', 'label': 'Multiselect label' } %}
-    {% include '@input-multiselect' with {
-      'multiselect_id': 'multiselect-id',
-      "options": [
-      {
-        "label": "Option 1"
-      },
-      {
-        "label": "Option 2"
-      },
-      {
-        "label": "Option 3"
-      },
-      {
-        "label": "Option 4"
-      }
-    ]
+  <div class="preview-inner-container">
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: date</h4>
+      {% include '@label' with { 'for': 'input-date-id', 'label': 'Date label' } %}
+      {% include '@input-date' with { 'date_id': 'input-date-id' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: checkbox</h4>
+      {% include '@input-checkbox' with { 'checkbox_id': 'checkbox-id', 'checkbox_label': 'Checkbox option' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: radio</h4>
+      {% include '@input-radio' with { 'radio_id': 'radio-id', 'radio_label': 'Radio option' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: email</h4>
+      {% include '@label' with { 'for': 'email-id', 'label': 'Email label' } %}
+      {% include '@input-email' with { 'email_id': 'email-id' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: file</h4>
+      {% include '@label' with { 'for': 'file-id', 'label': 'File label' } %}
+      {% include '@input-file' with { 'file_id': 'file-id'} %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: select</h4>
+      {% include '@label' with { 'for': 'select-id', 'label': 'Select label' } %}
+      {% include '@input-select' with {
+        'select_id': 'select-id',
+        "options": [
+        {
+          "label": "Option 1"
+        },
+        {
+          "label": "Option 2"
+        },
+        {
+          "optgroup": true,
+          "label": "Option group",
+          "optgroupoptions": [
+            {
+              "label": "Option 3"
+            },
+            {
+              "label": "Option 4"
+            }
+          ]
+        }
+      ]
     } %}
-  </div>
-{#
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: multiselect-chosen</h3>
-    {% include '@label' with { 'for': 'multiselect-chosen-id', 'label': 'Multiselect chosen label' } %}
-    {% include '@input-multiselect-chosen' with {
-      'multiselect_id': 'multiselect-chosen-id',
-      "options": [
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: multiselect</h4>
+      {% include '@label' with { 'for': 'multiselect-id', 'label': 'Multiselect label' } %}
+      {% include '@input-multiselect' with {
+        'multiselect_id': 'multiselect-id',
+        "options": [
         {
           "label": "Option 1"
         },
@@ -245,56 +221,79 @@
           "label": "Option 4"
         }
       ]
-    } %}
-  </div>
+      } %}
+    </div>
+  {#
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: multiselect-chosen</h4>
+      {% include '@label' with { 'for': 'multiselect-chosen-id', 'label': 'Multiselect chosen label' } %}
+      {% include '@input-multiselect-chosen' with {
+        'multiselect_id': 'multiselect-chosen-id',
+        "options": [
+          {
+            "label": "Option 1"
+          },
+          {
+            "label": "Option 2"
+          },
+          {
+            "label": "Option 3"
+          },
+          {
+            "label": "Option 4"
+          }
+        ]
+      } %}
+    </div>
 #}
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: number</h3>
-    {% include '@label' with { 'for': 'number-id', 'label': 'Number label' } %}
-    {% include '@input-number' with { 'number_id': 'number-id' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: password</h3>
-    {% include '@label' with { 'for': 'password-id', 'label': 'Password label' } %}
-    {% include '@input-password' with { 'password_id': 'password-id' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: search</h3>
-    {% include '@label' with { 'for': 'search-id', 'label': 'Search label' } %}
-    {% include '@input-search' with { 'search_id': 'search-id'} %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: tel</h3>
-    {% include '@label' with { 'for': 'tel-id', 'label': 'Tel label' } %}
-    {% include '@input-tel' with { 'tel_id': 'tel-id' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: text</h3>
-    {% include '@label' with { 'for': 'text-id', 'label': 'Text label' } %}
-    {% include '@input-text' with { 'textfield_id': 'text-id' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: url</h3>
-    {% include '@label' with { 'for': 'url-id', 'label': 'Url label' } %}
-    {% include '@input-url' with { 'url_id': 'url-id' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: textarea</h3>
-    {% include '@label' with { 'for': 'textarea-id', 'label': 'Textarea label' } %}
-    {% include '@input-textarea' with { 'textarea_id': 'textarea-id' } %}
-  </div>
-  <div class="preview-inner-inner-container">
-    <h3 class="styleguide-title">Input type: submit</h3>
-    {% include '@input-submit' with {
-      "value": "Submit"
-    } %}
-  </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: number</h4>
+      {% include '@label' with { 'for': 'number-id', 'label': 'Number label' } %}
+      {% include '@input-number' with { 'number_id': 'number-id' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: password</h4>
+      {% include '@label' with { 'for': 'password-id', 'label': 'Password label' } %}
+      {% include '@input-password' with { 'password_id': 'password-id' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: search</h4>
+      {% include '@label' with { 'for': 'search-id', 'label': 'Search label' } %}
+      {% include '@input-search' with { 'search_id': 'search-id'} %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: tel</h4>
+      {% include '@label' with { 'for': 'tel-id', 'label': 'Tel label' } %}
+      {% include '@input-tel' with { 'tel_id': 'tel-id' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: text</h4>
+      {% include '@label' with { 'for': 'text-id', 'label': 'Text label' } %}
+      {% include '@input-text' with { 'textfield_id': 'text-id' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: url</h4>
+      {% include '@label' with { 'for': 'url-id', 'label': 'Url label' } %}
+      {% include '@input-url' with { 'url_id': 'url-id' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: textarea</h4>
+      {% include '@label' with { 'for': 'textarea-id', 'label': 'Textarea label' } %}
+      {% include '@input-textarea' with { 'textarea_id': 'textarea-id' } %}
+    </div>
+    <div class="preview-inner-inner-container">
+      <h4 class="styleguide-title">Input type: submit</h4>
+      {% include '@input-submit' with {
+        "value": "Submit"
+      } %}
+    </div>
 </div>
 
-<h3 id="styleguide-buttons" class="styleguide-title">Buttons</h3>
 
+{# --- BUTTONS --- #}
+<h3 id="styleguide-buttons" class="styleguide-title">Buttons</h3>
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Primary buttons</h3>
+  <h4 class="styleguide-title">Primary buttons</h4>
   <p>
     {% include '@button-primary' with { 'text': 'Button' } %}
   </p>
@@ -335,9 +334,8 @@
     } %}
   </p>
 </div>
-
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Secondary buttons</h3>
+  <h4 class="styleguide-title">Secondary buttons</h4>
   <p>
     {% include '@button-secondary' with { 'text': 'Button' } %}
   </p>
@@ -379,9 +377,8 @@
     } %}
   </p>
 </div>
-
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Dark buttons</h3>
+  <h4 class="styleguide-title">Dark buttons</h4>
   <p>
     {% include '@button-dark' with { 'text': 'Button' }%}
   </p>
@@ -423,9 +420,8 @@
     } %}
   </p>
 </div>
-
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Alert buttons</h3>
+  <h4 class="styleguide-title">Alert buttons</h4>
   <p>
     {% include '@button-alert' with { 'text': 'Button', 'modifier': 'icon-lightning' } %}
   </p>
@@ -456,9 +452,8 @@
     } %}
   </p>
 </div>
-
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Success buttons</h3>
+  <h4 class="styleguide-title">Success buttons</h4>
   <p>
     {% include '@button-success' with { 'text': 'Button' } %}
   </p>
@@ -501,17 +496,18 @@
   </p>
 </div>
 
+{# --- LINKS --- #}
 <h3 id="styleguide-links" class="styleguide-title">{{ 'Links' }}</h3>
 <div class="preview-inner-container">
   <p>
-    {% include '@h3' with { 'h3_text': 'Normal link' } %}
+    <h4 class="styleguide-title">Normal link</h4>
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Normal link'
     } %}
   </p>
   <p>
-    {% include '@h3' with { 'h3_text': 'Standalone link' } %}
+  <h4 class="styleguide-title">Standalone link</h4>
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Standalone link',
@@ -519,14 +515,14 @@
     } %}
   </p>
   <p>
-    {% include '@h3' with { 'h3_text': 'External link' } %}
+  <h4 class="styleguide-title">External link</h4>
     {% include '@link' with {
       'link': 'https://google.com',
       'text': 'External link'
     } %}
   </p>
   <p>
-    {% include '@h3' with { 'h3_text': 'Download link' } %}
+  <h4 class="styleguide-title">Download link</h4>
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Download link',
@@ -534,7 +530,7 @@
     } %}
   </p>
   <p>
-    {% include '@h3' with { 'h3_text': 'Link as a primary button' } %}
+    <h4 class="styleguide-title">Link as a primary button</h4>
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Link as a button',
@@ -542,7 +538,7 @@
     } %}
   </p>
   <p>
-    {% include '@h3' with { 'h3_text': 'Link as a secondary button' } %}
+    <h4 class="styleguide-title">Link as a secondary button</h4>
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Link as a button',
@@ -550,7 +546,7 @@
     } %}
   </p>
   <p>
-    {% include '@h3' with { 'h3_text': 'Link as an alert button' } %}
+    <h4 class="styleguide-title">Link as a alert button</h4>
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Link as a button',
@@ -558,15 +554,24 @@
     } %}
   </p>
   <p>
-    {% include '@h3' with { 'h3_text': 'Link as a success button' } %}
+    <h4 class="styleguide-title">Link as a success button</h4>
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Link as a button',
       'modifier': 'button button-success'
     } %}
   </p>
+  <p>
+    <h4 class="styleguide-title">Link as a dark button</h4>
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Link as a button',
+      'modifier': 'button button-dark'
+    } %}
+  </p>
 </div>
 
+{# --- TAGS --- #}
 <h3 id="styleguide-tags" class="styleguide-title">{{ 'Tags (inline)' }}</h3>
 <div class="preview-inner-container">
   {% include '@tag' with {

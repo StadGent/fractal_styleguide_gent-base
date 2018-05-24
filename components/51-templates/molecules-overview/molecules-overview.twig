@@ -1,15 +1,17 @@
+{# --- MESSAGES --- #}
 <h3 id="styleguide-messages" class="styleguide-title">Messages</h3>
 <div class="preview-inner-container">
-  <h3 class="styleguide">Success message</h3>
+  <h4 class="styleguide-title">Success message</h4>
   <p>{% include '@status-message' with { 'icon': 'icon-checkmark', 'modifier': 'messages--status', 'text': 'Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus.' } %}</p>
 
-  <h3 class="styleguide">Error message</h3>
+  <h4 class="styleguide-title">Error message</h4>
   <p>{% include '@status-message' with { 'icon': 'icon-cross', 'modifier': 'messages--error', 'text': 'Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus.' } %}</p>
 
-  <h3 class="styleguide">Warning message</h3>
+  <h4 class="styleguide-title">Warning message</h4>
   <p>{% include '@status-message' with { 'icon': 'icon-exclamation', 'modifier': 'messages--warning', 'text': 'Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus.' } %}</p>
 </div>
 
+{# --- FORM ITEMS --- #}
 <h3 id="styleguide-form-items" class="styleguide-title">Form items</h3>
 <div class="preview-inner-container">
   <form class="{{ modifier }}">
@@ -302,6 +304,8 @@
   </form>
 </div>
 
+
+{# --- COLLECTIONS --- #}
 <h3 id="styleguide-collections" class="styleguide-title">Collections</h3>
 <div class="preview-inner-container">
   {% include '@teaser-topic-collection' with {
@@ -313,15 +317,15 @@
   } %}
 </div>
 
-<h3 class="styleguide-title">Building blocks overview</h3>
 
+{# --- BUILDING BLOCKS OVERVIEW--- #}
+<h3 class="styleguide-title">Building blocks overview</h3>
 <div class="preview-inner-inner-container">
-  <h3 id="styleguide-quote" class="styleguide">{{ 'Quote' }}</h3>
+  <h4 id="styleguide-quote" class="styleguide-title">{{ 'Quote' }}</h4>
   {% include '@quote' %}
 </div>
-
 <div class="preview-inner-inner-container">
-  <h3 id="styleguide-breadcrumbs" class="styleguide">Breadcrumbs</h3>
+  <h4 id="styleguide-breadcrumbs" class="styleguide-title">Breadcrumbs</h4>
   {% include '@breadcrumbs' with {
     "items": [
       "<a href='#'>Stad.gent</a>",
@@ -332,10 +336,9 @@
     ]
   }%}
 </div>
-
 <div class="preview-inner-inner-container">
-  <h3 id="styleguide-image-gallery" class="styleguide">Galleries</h3>
-  <h4>Gallery: double</h4>
+  <h4 id="styleguide-image-gallery" class="styleguide-title">Galleries</h4>
+  <h5>Gallery: double</h5>
   {% include '@image-gallery' with {
     "items": [
       {
@@ -351,7 +354,7 @@
     ]
   } %}
 
-  <h4>Gallery: triple</h4>
+  <h5>Gallery: triple</h5>
   {% include '@image-gallery--triple' with {
     "items": [
       {
@@ -372,7 +375,7 @@
     ]
   } %}
 
-  <h4>Gallery: quadruple</h4>
+  <h5>Gallery: quadruple</h5>
   {% include '@image-gallery--quadruple' with {
     "items": [
       {
@@ -398,7 +401,7 @@
     ]
   } %}
 
-  <h4>Gallery: quintuple</h4>
+  <h5>Gallery: quintuple</h5>
   {% include '@image-gallery--quintuple' with {
     "items": [
       {
@@ -430,7 +433,7 @@
   } %}
 
 
-  <h4>Gallery: quintuple et plus</h4>
+  <h5>Gallery: quintuple et plus</h5>
   {% include '@image-gallery--quintuple-et-plus' with {
     "items": [
       {
@@ -584,18 +587,18 @@
 
 #}
 
+
+{# --- BLOCKS OVERVIEW--- #}
 <h2 class="styleguide-title">Blocks overview</h2>
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Disclaimer block</h3>
+  <h4 class="styleguide-title">Disclaimer block</h4>
   {% include '@disclaimer-block' %}
 </div>
-
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Post address block</h3>
+  <h4 class="styleguide-title">Post address block</h4>
   {% include '@post-address-block' %}
 </div>
-
 <div class="preview-inner-inner-container">
-  <h3 class="styleguide">Social media block</h3>
+  <h4 class="styleguide-title">Social media block</h4>
   {% include '@social-media-block' %}
 </div>

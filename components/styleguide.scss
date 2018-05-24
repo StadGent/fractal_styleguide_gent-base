@@ -93,24 +93,37 @@
   }
 }
 
+.styleguide-table-of-contents {
+  @include theme('background-color', 'color-primary--lighten-5', 'styleguide-table-of-contents-background');
+
+  margin-bottom: 4rem;
+  padding: 2rem;
+}
+
 //
 // Title styling for the style guide specific parts.
 //
-h1.styleguide,
-h2.styleguide,
-h3.styleguide,
-h4.styleguide,
-h5.styleguide {
-  margin-top: 0;
+h1.styleguide-title,
+h2.styleguide-title,
+h3.styleguide-title,
+h4.styleguide-title,
+h5.styleguide-title {
   margin-bottom: 1rem;
+  border-bottom: 1px dotted;
 }
 
 h2.styleguide-title {
-  @include theme('color', 'color-primary', 'styleguide-title-color');
-  @include theme('border-color', 'color-primary--lighten-3', 'styleguide-title-border-bottom');
+  @include theme('color', 'color-primary--darken-1', 'styleguide-h2-color');
+  @include theme('border-color', 'color-primary--lighten-2', 'styleguide-h2-border-bottom');
 
-  padding: .25rem .5rem;
   border-bottom: 1px solid;
+}
+
+h3.styleguide-title {
+  @include theme('color', 'color-primary', 'styleguide-h3-color');
+  @include theme('border-color', 'color-primary--lighten-1', 'styleguide-h3-border-bottom');
+
+  border-bottom: 1px dotted;
 }
 
 //
