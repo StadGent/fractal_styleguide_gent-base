@@ -6,12 +6,11 @@
           aria-label="{{ item.caption }}"
         {% endif %}
          aria-describedby="image-gallery__open-gallery">
-        <figure>
-          {% include '@image' with { 'src': item.src, 'alt_text' : item.alt } %}
-          {% if item.caption %}
-            <figcaption>{{ item.caption }}</figcaption>
-          {% endif %}
-        </figure>
+        {% include '@figure' with {
+          "figure_figcaption": item.caption,
+          "figure_image_src": item.src,
+          "figure_image_alt_text": item.alt
+        } %}
       </a>
     </li>
   {% endfor %}

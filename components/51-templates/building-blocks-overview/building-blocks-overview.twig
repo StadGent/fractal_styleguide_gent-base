@@ -167,12 +167,11 @@
 
 <div class="preview-inner-inner-container">
   <h3 class="styleguide">Page wide image</h3>
-  {% include '@page-wide-image' with {
-    "src": "https://via.placeholder.com/1600x420",
-    "alt_text": "Page wide image",
-    "modifier": "no-style",
-    "description": "Caption text comes here.",
-    "h2_text": "Page wide title"
+  {% include '@figure' with {
+    "figure_image_src": page_wide_image_src,
+    "figure_image_alt_text": page_wide_image_alt_text,
+    "modifier": 'page-wide-image',
+    "figure_figcaption": page_wide_image_description
   } %}
 </div>
 

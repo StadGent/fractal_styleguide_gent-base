@@ -1,9 +1,9 @@
-<figure>
+<figure {% if modifier %} class="{{ modifier }}" {% endif %}>
   {% include '@image' with {
-    "src": figure_image_src,
-    "alt_text": figure_image_alt_text
+  "src": figure_image_src,
+  "alt_text": figure_image_alt_text
   } %}
-  {% include '@figcaption' with {
-    "figcaption": figure_figcaption
-  } %}
+  {% if figure_figcaption %}
+    {% include '@figcaption' with {"figcaption": figure_figcaption} %}
+  {% endif %}
 </figure>
