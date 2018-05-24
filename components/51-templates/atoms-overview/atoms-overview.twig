@@ -1,0 +1,581 @@
+<h3 id="styleguide-headings" class="styleguide-title">Headings</h3>
+<div class="preview-inner-container">
+  {% include '@h1' with { 'h1_text': 'Heading 1' } %}
+  {% include '@h2' with { 'h2_text': 'Heading 2' } %}
+  {% include '@h3' with { 'h3_text': 'Heading 3' } %}
+  {% include '@h4' with { 'h4_text': 'Heading 4' } %}
+  {% include '@h5' with { 'h5_text': 'Heading 5' } %}
+</div>
+
+<h3 id="styleguide-paragraphs" class="styleguide-title">Paragraph types</h3>
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Normal paragraph' }}</h3>
+  {% include '@paragraph' with {
+    'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.'
+  }%}
+</div>
+
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Small text paragraph' }}</h3>
+  {% include '@paragraph--small-text'
+    with {
+      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.',
+      'modifier': 'small'
+    }
+  %}
+</div>
+
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Caption text paragraph' }}</h3>
+  {% include '@paragraph--caption-text'
+    with {
+      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.',
+    'modifier': 'caption'
+    }
+  %}
+</div>
+
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Left aligned paragraph' }}</h3>
+  {% include '@paragraph--left-text'
+    with {
+      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.',
+    'modifier': 'text-left'
+    }
+  %}
+</div>
+
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Right aligned paragraph' }}</h3>
+  {% include '@paragraph--right-text'
+    with {
+      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. Vestibulum in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.',
+    'modifier': 'text-right'
+    }
+  %}
+</div>
+
+<h3 id="styleguide-lists" class="styleguide-title">Lists</h3>
+<div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Ordered list' }}</h3>
+  {% include '@list'
+    with {
+      'type': 'ordered',
+      "items": [
+        "item 1",
+        "item 2",
+        "item 3",
+        "item 4"
+      ]
+    }
+  %}
+  </div>
+
+  <div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'Unordered list' }}</h3>
+  {% include '@list'
+    with {
+      'type': 'unordered',
+      "items": [
+        "item 1",
+        "item 2",
+        "item 3",
+        "item 4"
+      ]
+    }
+  %}
+  </div>
+
+  <div class="preview-inner-container">
+  <h3 class="styleguide">{{ 'List with links' }}</h3>
+  {% include '@list'
+    with {
+      'type': 'links',
+      "items": [
+        "<a href='#'>item 1</a>",
+        "<a href='#'>item 2</a>",
+        "<a href='#'>item 3</a>",
+        "<a href='#'>item 4</a>"
+      ]
+    }
+  %}
+  </div>
+
+  <div class="preview-inner-container">
+    <h3 class="styleguide">{{ 'List with icons' }}</h3>
+    {% include '@list'
+      with {
+        'type': 'iconlist',
+        "items": [
+          "item 1",
+          "item 2",
+          "item 3",
+          "item 4"
+        ]
+      }
+    %}
+  </div>
+
+  <div class="preview-inner-container">
+    <h3 class="styleguide">{{ 'List with small icons' }}</h3>
+    {% include '@list'
+      with {
+        'type': 'iconlist-small',
+        "items": [
+          "item 1",
+          "item 2",
+          "item 3",
+          "item 4"
+        ]
+      }
+    %}
+  </div>
+
+  <div class="preview-inner-container">
+    <h3 class="styleguide">{{ 'Definition list' }}</h3>
+    {% include '@list'
+      with {
+        'type': 'definition',
+        "items": [
+          "item 1",
+          "item 2",
+          "item 3",
+          "item 4"
+        ],
+        "definitions": [
+          "A short description",
+        "A short description",
+        "A larger description. Chocolate cake toffee candy tiramisu danish chupa chups croissant liquorice. Carrot cake gummi bears pastry. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread.",
+        "A larger description. Chocolate cake toffee candy tiramisu danish chupa chups croissant liquorice. Carrot cake gummi bears pastry. <Paste>"
+        ]
+      }
+      %}
+      </div>
+
+<h3 id="styleguide-inputs" class="styleguide-title">Input types</h3>
+<div class="preview-inner-container">
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: date</h3>
+    {% include '@label' with { 'for': 'input-date-id', 'label': 'Date label' } %}
+    {% include '@input-date' with { 'date_id': 'input-date-id' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: checkbox</h3>
+    {% include '@input-checkbox' with { 'checkbox_id': 'checkbox-id', 'checkbox_label': 'Checkbox option' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: radio</h3>
+    {% include '@input-radio' with { 'radio_id': 'radio-id', 'radio_label': 'Radio option' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: email</h3>
+    {% include '@label' with { 'for': 'email-id', 'label': 'Email label' } %}
+    {% include '@input-email' with { 'email_id': 'email-id' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: file</h3>
+    {% include '@label' with { 'for': 'file-id', 'label': 'File label' } %}
+    {% include '@input-file' with { 'file_id': 'file-id'} %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: select</h3>
+    {% include '@label' with { 'for': 'select-id', 'label': 'Select label' } %}
+    {% include '@input-select' with {
+      'select_id': 'select-id',
+      "options": [
+      {
+        "label": "Option 1"
+      },
+      {
+        "label": "Option 2"
+      },
+      {
+        "optgroup": true,
+        "label": "Option group",
+        "optgroupoptions": [
+          {
+            "label": "Option 3"
+          },
+          {
+            "label": "Option 4"
+          }
+        ]
+      }
+    ]
+  } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: multiselect</h3>
+    {% include '@label' with { 'for': 'multiselect-id', 'label': 'Multiselect label' } %}
+    {% include '@input-multiselect' with {
+      'multiselect_id': 'multiselect-id',
+      "options": [
+      {
+        "label": "Option 1"
+      },
+      {
+        "label": "Option 2"
+      },
+      {
+        "label": "Option 3"
+      },
+      {
+        "label": "Option 4"
+      }
+    ]
+    } %}
+  </div>
+{#
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: multiselect-chosen</h3>
+    {% include '@label' with { 'for': 'multiselect-chosen-id', 'label': 'Multiselect chosen label' } %}
+    {% include '@input-multiselect-chosen' with {
+      'multiselect_id': 'multiselect-chosen-id',
+      "options": [
+        {
+          "label": "Option 1"
+        },
+        {
+          "label": "Option 2"
+        },
+        {
+          "label": "Option 3"
+        },
+        {
+          "label": "Option 4"
+        }
+      ]
+    } %}
+  </div>
+#}
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: number</h3>
+    {% include '@label' with { 'for': 'number-id', 'label': 'Number label' } %}
+    {% include '@input-number' with { 'number_id': 'number-id' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: password</h3>
+    {% include '@label' with { 'for': 'password-id', 'label': 'Password label' } %}
+    {% include '@input-password' with { 'password_id': 'password-id' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: search</h3>
+    {% include '@label' with { 'for': 'search-id', 'label': 'Search label' } %}
+    {% include '@input-search' with { 'search_id': 'search-id'} %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: tel</h3>
+    {% include '@label' with { 'for': 'tel-id', 'label': 'Tel label' } %}
+    {% include '@input-tel' with { 'tel_id': 'tel-id' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: text</h3>
+    {% include '@label' with { 'for': 'text-id', 'label': 'Text label' } %}
+    {% include '@input-text' with { 'textfield_id': 'text-id' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: url</h3>
+    {% include '@label' with { 'for': 'url-id', 'label': 'Url label' } %}
+    {% include '@input-url' with { 'url_id': 'url-id' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: textarea</h3>
+    {% include '@label' with { 'for': 'textarea-id', 'label': 'Textarea label' } %}
+    {% include '@input-textarea' with { 'textarea_id': 'textarea-id' } %}
+  </div>
+  <div class="preview-inner-inner-container">
+    <h3 class="styleguide-title">Input type: submit</h3>
+    {% include '@input-submit' with {
+      "value": "Submit"
+    } %}
+  </div>
+</div>
+
+<h3 id="styleguide-buttons" class="styleguide-title">Buttons</h3>
+
+<div class="preview-inner-inner-container">
+  <h3 class="styleguide">Primary buttons</h3>
+  <p>
+    {% include '@button-primary' with { 'text': 'Button' } %}
+  </p>
+  <p>
+    {% include '@button-primary' with { 'text': 'Button', 'modifier': 'button-block' } %}
+  </p>
+  <p>
+    {% include '@button-primary' with { 'text': 'Button', 'modifier': 'button-block icon-digipolis' } %}
+  </p>
+  <p>
+    {% include '@button-primary' with { 'text': 'Small', 'modifier': 'button-small' } %}
+    {% include '@button-primary' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
+    {% include '@button-primary' with { 'text': 'Large', 'modifier': 'button-large' } %}
+  </p>
+  <p>
+    With icon:
+  </p>
+  <p>
+    {% include '@button-primary' with { 'text': 'Button', 'modifier': 'button-small icon-digipolis' } %}
+    {% include '@button-primary' with { 'text': 'Button', 'modifier': 'button-medium icon-digipolis' } %}
+    {% include '@button-primary' with { 'text': 'Button', 'modifier': 'button-large icon-digipolis' } %}
+  </p>
+  <p>
+    Disabled state:
+  </p>
+  <p>
+    {% include '@button-primary' with { 'disabled': 'button-disabled', 'text': 'Small', 'modifier': 'button-small' } %}
+    {% include '@button-primary' with { 'disabled': 'button-disabled', 'text': 'Medium', 'modifier': 'button-medium' } %}
+    {% include '@button-primary' with { 'disabled': 'button-disabled', 'text': 'Large', 'modifier': 'button-large' } %}
+  </p>
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'text': 'Link as a button',
+      'modifier': 'button button-primary'
+    } %}
+  </p>
+</div>
+
+<div class="preview-inner-inner-container">
+  <h3 class="styleguide">Secondary buttons</h3>
+  <p>
+    {% include '@button-secondary' with { 'text': 'Button' } %}
+  </p>
+  <p>
+    {% include '@button-secondary' with { 'text': 'Button', 'modifier': 'button-block' } %}
+  </p>
+  <p>
+    {% include '@button-secondary' with { 'text': 'Button', 'modifier': 'button-block icon-digipolis' } %}
+  </p>
+  <p>
+    {% include '@button-secondary' with { 'text': 'Small', 'modifier': 'button-small' } %}
+    {% include '@button-secondary' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
+    {% include '@button-secondary' with { 'text': 'Large', 'modifier': 'button-large' } %}
+  </p>
+  <p>
+  <p>
+    With icon:
+  </p>
+  <p>
+    {% include '@button-secondary' with { 'text': 'Small', 'modifier': 'button-small icon-digipolis' } %}
+    {% include '@button-secondary' with { 'text': 'Medium', 'modifier': 'button-medium icon-digipolis' } %}
+    {% include '@button-secondary' with { 'text': 'Large', 'modifier': 'button-large icon-digipolis' } %}
+  </p>
+  <p>
+    Disabled state:
+  </p>
+  <p>
+    {% include '@button-secondary' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled' } %}
+    {% include '@button-secondary' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled' } %}
+    {% include '@button-secondary' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled' } %}
+  </p>
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'text': 'Link as a button',
+      'modifier': 'button button-secondary'
+    } %}
+  </p>
+</div>
+
+<div class="preview-inner-inner-container">
+  <h3 class="styleguide">Dark buttons</h3>
+  <p>
+    {% include '@button-dark' with { 'text': 'Button' }%}
+  </p>
+  <p>
+    {% include '@button-dark' with { 'text': 'Button', 'modifier': 'button-block' } %}
+  </p>
+  <p>
+    {% include '@button-dark' with { 'text': 'Button', 'modifier': 'button-block icon-digipolis' } %}
+  </p>
+  <p>
+    {% include '@button-dark' with { 'text': 'Small', 'modifier': 'button-small' } %}
+    {% include '@button-dark' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
+    {% include '@button-dark' with { 'text': 'Large', 'modifier': 'button-large' } %}
+  </p>
+  <p>
+  <p>
+    With icon:
+  </p>
+  <p>
+    {% include '@button-dark' with { 'text': 'Small', 'modifier': 'button-small icon-digipolis' } %}
+    {% include '@button-dark' with { 'text': 'Medium', 'modifier': 'button-medium icon-digipolis' } %}
+    {% include '@button-dark' with { 'text': 'Large', 'modifier': 'button-large icon-digipolis' } %}
+  </p>
+  <p>
+    Disabled state:
+  </p>
+  <p>
+    {% include '@button-dark' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled' } %}
+    {% include '@button-dark' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled' } %}
+    {% include '@button-dark' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled' } %}
+  </p>
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'text': 'Link as a button',
+      'modifier': 'button button-dark'
+    } %}
+  </p>
+</div>
+
+<div class="preview-inner-inner-container">
+  <h3 class="styleguide">Alert buttons</h3>
+  <p>
+    {% include '@button-alert' with { 'text': 'Button', 'modifier': 'icon-lightning' } %}
+  </p>
+  <p>
+    {% include '@button-alert' with { 'text': 'Button', 'modifier': 'button-block icon-lightning' } %}
+  </p>
+  <p>
+  {% include '@button-alert' with { 'text': 'Small', 'modifier': 'button-small icon-lightning' } %}
+  {% include '@button-alert' with { 'text': 'Medium', 'modifier': 'button-medium icon-lightning' } %}
+  {% include '@button-alert' with { 'text': 'Large', 'modifier': 'button-large icon-lightning' } %}
+  </p>
+  <p>
+  <p>
+    Disabled state:
+  </p>
+  <p>
+    {% include '@button-alert' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled icon-digipolis' } %}
+    {% include '@button-alert' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled icon-digipolis' } %}
+    {% include '@button-alert' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled icon-digipolis' } %}
+  </p>
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'text': 'Link as a button',
+      'modifier': 'button button-alert'
+    } %}
+  </p>
+</div>
+
+<div class="preview-inner-inner-container">
+  <h3 class="styleguide">Success buttons</h3>
+  <p>
+    {% include '@button-success' with { 'text': 'Button' } %}
+  </p>
+  <p>
+    {% include '@button-success' with { 'text': 'Button', 'modifier': 'button-block' } %}
+  </p>
+  <p>
+    {% include '@button-success' with { 'text': 'Button', 'modifier': 'button-block icon-checkmark' } %}
+  </p>
+  <p>
+    {% include '@button-success' with { 'text': 'Small', 'modifier': 'button-small' } %}
+    {% include '@button-success' with { 'text': 'Medium', 'modifier': 'button-medium' } %}
+    {% include '@button-success' with { 'text': 'Large', 'modifier': 'button-large' } %}
+  </p>
+  <p>
+  <p>
+    With icon:
+  </p>
+  <p>
+    {% include '@button-success' with { 'text': 'Small', 'modifier': 'button-small icon-checkmark' } %}
+    {% include '@button-success' with { 'text': 'Medium', 'modifier': 'button-medium icon-checkmark' } %}
+    {% include '@button-success' with { 'text': 'Large', 'modifier': 'button-large icon-checkmark' } %}
+  </p>
+  <p>
+    Disabled state:
+  </p>
+  <p>
+    {% include '@button-success' with { 'text': 'Small', 'modifier': 'button-small', 'disabled': 'button-disabled' } %}
+    {% include '@button-success' with { 'text': 'Medium', 'modifier': 'button-medium', 'disabled': 'button-disabled' } %}
+    {% include '@button-success' with { 'text': 'Large', 'modifier': 'button-large', 'disabled': 'button-disabled' } %}
+  </p>
+  <p>
+    Link styled as a button:
+  </p>
+  <p>
+    {% include '@link--button' with {
+      'text': 'Link as a button',
+      'modifier': 'button button-success'
+    } %}
+  </p>
+</div>
+
+<h3 id="styleguide-links" class="styleguide-title">{{ 'Links' }}</h3>
+<div class="preview-inner-container">
+  <p>
+    {% include '@h3' with { 'h3_text': 'Normal link' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Normal link'
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Standalone link' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Standalone link',
+      'modifier': 'standalone-link'
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'External link' } %}
+    {% include '@link' with {
+      'link': 'https://google.com',
+      'text': 'External link'
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Download link' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Download link',
+        'download': true
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Link as a primary button' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Link as a button',
+      'modifier': 'button button-primary'
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Link as a secondary button' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Link as a button',
+      'modifier': 'button button-secondary'
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Link as an alert button' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Link as a button',
+      'modifier': 'button button-alert'
+    } %}
+  </p>
+  <p>
+    {% include '@h3' with { 'h3_text': 'Link as a success button' } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Link as a button',
+      'modifier': 'button button-success'
+    } %}
+  </p>
+</div>
+
+<h3 id="styleguide-tags" class="styleguide-title">{{ 'Tags (inline)' }}</h3>
+<div class="preview-inner-container">
+  {% include '@tag' with {
+    'tag_text': 'Inner city'
+  } %}
+  {% include '@tag' with {
+    'tag_text': 'Another tag'
+  } %}
+  {% include '@tag' with {
+    'tag_text': 'A very long tag with lots of text in it'
+  } %}
+</div>

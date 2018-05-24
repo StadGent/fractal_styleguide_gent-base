@@ -41,7 +41,6 @@
               <ol>
                 <li><a href="#styleguide-quote">Quote</a></li>
                 <li><a href="#styleguide-breadcrumbs">Breadcrumbs</a></li>
-                <li><a href="#styleguide-footer">Footer</a></li>
                 <li><a href="#styleguide-image-gallery">Image Gallery</a></li>
               </ol>
             </li>
@@ -50,34 +49,22 @@
         <li>
           Organisms
           <ol>
+            <li><a href="#styleguide-footer">Footer</a></li>
           </ol>
         </li>
       </ol>
     </nav>
 
     <h2 class="styleguide-title">1. Base</h2>
-    {% include '@colors' %}
-    {% include '@logos' %}
-    {% include '@fonts' %}
-    {% include '@icons-overview' %}
+    {% include '@base-overview' %}
 
     <h2 class="styleguide-title">2. Atoms</h2>
-    {% include '@headings' %}
-    {% include '@paragraph-types' with {
-      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. <u>Vestibulum</u> in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.'
-    } %}
-    {% include '@lists' %}
-    {% include '@input-overview' %}
-    {% include '@buttons' with { 'text': 'Button' } %}
-    {% include '@links' %}
-    <!-- {% include '@image-styles' %} -->
-    {% include '@tags-overview' %}
+    {% include '@atoms-overview' %}
 
     <h2 class="styleguide-title">3. Molecules</h2>
-    {% include '@messages-overview' %}
-    {% include '@forms' %}
-    {% include '@collections-overview' %}
-    {% include '@building-blocks-overview' %}
-    <!-- {% include '@blocks-overview' %} -->
+    {% include '@molecules-overview' %}
+
+    <h2 class="styleguide-title">4. Organisms</h2>
+    {% include '@organisms-overview' %}
 
   </div>
