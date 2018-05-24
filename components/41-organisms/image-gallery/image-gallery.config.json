@@ -5,7 +5,16 @@
   "variants": [
     {
       "name": "default",
-      "label": "Double",
+      "label": "Single",
+      "context": {
+        "src": "https://via.placeholder.com/704x440",
+        "alt": "placeholder image alternative text",
+        "caption": "image caption"
+      }
+    },
+    {
+      "name": "double",
+      "view": "image-gallery--multiple.twig",
       "context": {
         "items": [
           {
@@ -22,6 +31,7 @@
     },
     {
       "name": "triple",
+      "view": "image-gallery--multiple.twig",
       "context": {
         "items": [
           {
@@ -43,6 +53,7 @@
     },
     {
       "name": "quadruple",
+      "view": "image-gallery--multiple.twig",
       "context": {
         "items": [
           {
@@ -69,6 +80,7 @@
     },
     {
       "name": "quintuple",
+      "view": "image-gallery--multiple.twig",
       "context": {
         "items": [
           {
@@ -100,6 +112,7 @@
     },
     {
       "name": "quintuple et plus",
+      "view": "image-gallery--multiple.twig",
       "context": {
         "items": [
           {
