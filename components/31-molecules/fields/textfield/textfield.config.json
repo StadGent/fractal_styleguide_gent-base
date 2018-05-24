@@ -1,6 +1,6 @@
 {
   "title": "Textfield",
-  "status": "ready",
+  "status": "beta",
   "handle": "textfield",
   "order": 1,
   "context": {

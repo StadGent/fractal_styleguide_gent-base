@@ -1,7 +1,7 @@
 {
   "title": "Page wide image",
   "preview": "@preview-without-padding",
-  "status": "ready",
+  "status": "beta",
   "context": {
     "src": "https://via.placeholder.com/1600x420",
     "alt_text": "Page wide image",

@@ -1,6 +1,6 @@
 {
   "title": "Input tel",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-tel",
   "context": {
     "tel_id": "tel_id",

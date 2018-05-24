@@ -1,6 +1,6 @@
 {
   "title": "Form steps",
-  "status": "ready",
+  "status": "alpha",
   "hidden": "hidden",
   "handle": "form-steps",
   "context": {

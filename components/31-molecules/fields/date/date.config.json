@@ -1,6 +1,6 @@
 {
   "title": "Date",
-  "status": "ready",
+  "status": "beta",
   "handle": "date",
   "context": {
     "label": "Label date",

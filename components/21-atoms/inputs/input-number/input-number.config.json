@@ -1,6 +1,6 @@
 {
   "title": "Input number",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-number",
   "context": {
     "number_name": "number_name",

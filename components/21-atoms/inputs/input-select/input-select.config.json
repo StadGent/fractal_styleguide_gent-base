@@ -1,6 +1,6 @@
 {
   "title": "Input Select",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-select",
   "context": {
     "select_name": "select_name",

@@ -1,6 +1,6 @@
 {
   "title": "Input email",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-email",
   "context": {
     "email_name": "email_name",

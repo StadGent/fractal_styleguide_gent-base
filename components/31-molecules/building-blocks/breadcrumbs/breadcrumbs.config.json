@@ -1,6 +1,6 @@
 {
   "title": "Breadcrumbs",
-  "status": "ready",
+  "status": "alpha",
   "handle": "breadcrumbs",
   "preview": "@preview-without-padding",
   "context": {

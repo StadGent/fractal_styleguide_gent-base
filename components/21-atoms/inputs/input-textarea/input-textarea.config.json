@@ -1,6 +1,6 @@
 {
   "title": "Input textarea",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-textarea",
   "context": {
     "textarea_id": "textarea_id",

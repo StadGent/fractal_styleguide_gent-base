@@ -1,6 +1,6 @@
 {
   "title": "Checkbox",
-  "status": "ready",
+  "status": "beta",
   "handle": "checkbox",
   "context": {
     "label": "Label checkbox",

@@ -1,6 +1,6 @@
 {
   "title": "Telephone field",
-  "status": "ready",
+  "status": "beta",
   "handle": "telephone-field",
   "order": 1,
   "context": {

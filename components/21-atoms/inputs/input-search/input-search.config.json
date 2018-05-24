@@ -1,6 +1,6 @@
 {
   "title": "Input search",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-search",
   "context": {
     "placeholder": "Placeholder input search",

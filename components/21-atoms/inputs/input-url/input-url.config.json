@@ -1,6 +1,6 @@
 {
   "title": "Input url",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-url",
   "context": {
     "url_id": "url_id",

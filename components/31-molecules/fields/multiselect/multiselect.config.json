@@ -1,6 +1,6 @@
 {
   "title": "Multiselect",
-  "status": "ready",
+  "status": "beta",
   "handle": "multiselect",
   "context": {
     "label": "Label multiselect",

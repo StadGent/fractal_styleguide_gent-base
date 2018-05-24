@@ -1,6 +1,6 @@
 {
   "title": "Input Multiselect",
-  "status": "ready",
+  "status": "beta",
   "handle": "input-multiselect",
   "context": {
     "label": "Multiselect",
