@@ -2,7 +2,7 @@
   "title": "Telephone field",
   "status": "ready",
   "handle": "telephone-field",
-  "order": 1,
+  "collated": true,
   "context": {
     "label": "Label telephone field",
     "for": "tel_id",

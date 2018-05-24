@@ -2,7 +2,7 @@
   "title": "Number",
   "status": "ready",
   "handle": "number",
-  "order": 1,
+  "collated": true,
   "context": {
     "label": "Label number",
     "for": "number_id",

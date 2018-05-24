@@ -2,6 +2,7 @@
   "title": "File",
   "status": "ready",
   "handle": "file",
+  "collated": true,
   "context": {
     "label": "Label file",
     "for": "file_id",

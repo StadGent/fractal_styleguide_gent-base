@@ -2,7 +2,7 @@
   "title": "Textfield",
   "status": "ready",
   "handle": "textfield",
-  "order": 1,
+  "collated": true,
   "context": {
     "label": "Label textfield",
     "for": "textfield_id",

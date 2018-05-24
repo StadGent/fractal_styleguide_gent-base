@@ -2,7 +2,7 @@
   "title": "Textarea",
   "status": "ready",
   "handle": "textarea",
-  "order": 3,
+  "collated": true,
   "context": {
     "label": "Label textarea",
     "for": "textarea_id",

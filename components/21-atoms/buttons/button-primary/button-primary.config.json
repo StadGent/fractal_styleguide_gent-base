@@ -4,6 +4,7 @@
   "status": "ready",
   "handle": "button-primary",
   "default": "button-small",
+  "collated": "true",
   "order": 1,
   "context": {
     "text": "Button"

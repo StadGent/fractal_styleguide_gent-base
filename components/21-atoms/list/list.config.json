@@ -3,6 +3,7 @@
   "status": "ready",
   "handle": "list",
   "default": "unordered-list",
+  "collated": true,
   "context": {
     "type": "unordered",
     "items": [
