@@ -4,6 +4,10 @@
   "name": "Image gallery",
   "variants": [
     {
+      "name": "multiple",
+      "hidden": "hidden"
+    },
+    {
       "name": "default",
       "label": "Single",
       "context": {
@@ -14,7 +18,7 @@
     },
     {
       "name": "double",
-      "view": "image-gallery--multiple.twig",
+      "view": "image-gallery--multiple",
       "context": {
         "items": [
           {
@@ -31,7 +35,7 @@
     },
     {
       "name": "triple",
-      "view": "image-gallery--multiple.twig",
+      "view": "image-gallery--multiple",
       "context": {
         "items": [
           {
@@ -53,7 +57,7 @@
     },
     {
       "name": "quadruple",
-      "view": "image-gallery--multiple.twig",
+      "view": "image-gallery--multiple",
       "context": {
         "items": [
           {
@@ -80,7 +84,7 @@
     },
     {
       "name": "quintuple",
-      "view": "image-gallery--multiple.twig",
+      "view": "image-gallery--multiple",
       "context": {
         "items": [
           {
@@ -112,7 +116,7 @@
     },
     {
       "name": "quintuple et plus",
-      "view": "image-gallery--multiple.twig",
+      "view": "image-gallery--multiple",
       "context": {
         "items": [
           {
