@@ -2,6 +2,7 @@
   "title": "Date",
   "status": "beta",
   "handle": "date",
+  "collated": true,
   "context": {
     "label": "Label date",
     "for": "date_id",

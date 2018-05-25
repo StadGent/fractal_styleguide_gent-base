@@ -1,10 +1,22 @@
 {
   "title": "Figure",
-  "hidden": "hidden",
+  "label": "Image",
   "status": "ready",
   "context": {
     "figure_figcaption": "Figure caption comes here.",
-    "figure_image_src": "https://loremflickr.com/800/532/ghent",
+    "figure_image_src": "https://via.placeholder.com/704x440",
     "figure_image_alt_text": "Image alt text"
-  }
+  },
+  "variants": [
+    {
+      "name": "Page wide image",
+      "preview": "@preview-without-padding",
+      "context": {
+        "modifier": "page-wide-image",
+        "figure_figcaption": "Figure caption comes here.",
+        "figure_image_src": "https://via.placeholder.com/1600x420",
+        "figure_image_alt_text": "Image alt text"
+      }
+    }
+  ]
 }

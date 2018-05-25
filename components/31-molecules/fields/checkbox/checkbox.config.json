@@ -2,6 +2,7 @@
   "title": "Checkbox",
   "status": "beta",
   "handle": "checkbox",
+  "collated": true,
   "context": {
     "label": "Label checkbox",
     "label_optional": "Optional",

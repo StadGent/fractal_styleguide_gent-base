@@ -2,6 +2,7 @@
   "title": "Multiselect with Chosen",
   "status": "beta",
   "handle": "multiselect-chosen",
+  "collated": true,
   "context": {
     "label": "Label multiselect with chosen",
     "for": "multiselect_id",

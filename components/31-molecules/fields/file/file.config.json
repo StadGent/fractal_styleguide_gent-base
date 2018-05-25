@@ -2,6 +2,7 @@
   "title": "File",
   "status": "beta",
   "handle": "file",
+  "collated": true,
   "context": {
     "label": "Label file",
     "for": "file_id",

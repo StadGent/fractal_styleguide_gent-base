@@ -2,6 +2,7 @@
   "title": "Email",
   "status": "beta",
   "handle": "email",
+  "collated": true,
   "context": {
     "label": "Label email",
     "for": "email_id",

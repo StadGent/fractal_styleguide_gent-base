@@ -3,8 +3,8 @@
   "name": "Button success",
   "status": "ready",
   "handle": "button-success",
+  "collated": "true",
   "default": "button-small",
-  "order": 1,
   "context": {
     "text": "Button"
   },

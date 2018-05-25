@@ -3,8 +3,9 @@
   "name": "Button secondary",
   "status": "ready",
   "handle": "button-secondary",
+  "collated": "true",
   "default": "button-small",
-  "order": 1,
+  "order": 2,
   "context": {
     "text": "Button"
   },

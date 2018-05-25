@@ -2,6 +2,7 @@
   "title": "Image",
   "name": "Image",
   "handle": "image",
+  "hidden": "hidden",
   "order": 9,
   "context": {
     "src": "https://via.placeholder.com/800x532",

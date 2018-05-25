@@ -2,6 +2,7 @@
   "title": "Select",
   "status": "beta",
   "handle": "select",
+  "collated": true,
   "context": {
     "label": "Label select",
     "for": "select_id",

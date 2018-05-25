@@ -2,6 +2,7 @@
   "title": "Multiselect",
   "status": "beta",
   "handle": "multiselect",
+  "collated": true,
   "context": {
     "label": "Label multiselect",
     "for": "multiselect_id",

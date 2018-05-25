@@ -2,6 +2,7 @@
   "title": "Radio",
   "status": "beta",
   "handle": "radio",
+  "collated": true,
   "context": {
     "label": "Label radiobuttons",
     "label_optional": "Optional",

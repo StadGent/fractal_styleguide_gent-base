@@ -2,7 +2,7 @@
   "title": "Website",
   "status": "beta",
   "handle": "website",
-  "order": 4,
+  "collated": true,
   "context": {
     "label": "Label website",
     "for": "url_id",
