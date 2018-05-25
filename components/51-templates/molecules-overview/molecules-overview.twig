@@ -2,13 +2,13 @@
 <h3 id="styleguide-messages" class="styleguide-title">Messages</h3>
 <div class="preview-inner-container">
   <h4 class="styleguide-title">Success message</h4>
-  <p>{% include '@status-message' with { 'icon': 'icon-checkmark', 'modifier': 'messages--status', 'text': 'Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus.' } %}</p>
+  {% include '@status-message' with { 'icon': 'icon-checkmark', 'modifier': 'messages--status', 'text': 'Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus.' } %}
 
   <h4 class="styleguide-title">Error message</h4>
-  <p>{% include '@status-message' with { 'icon': 'icon-cross', 'modifier': 'messages--error', 'text': 'Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus.' } %}</p>
+  {% include '@status-message' with { 'icon': 'icon-cross', 'modifier': 'messages--error', 'text': 'Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus.' } %}
 
   <h4 class="styleguide-title">Warning message</h4>
-  <p>{% include '@status-message' with { 'icon': 'icon-exclamation', 'modifier': 'messages--warning', 'text': 'Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus.' } %}</p>
+  {% include '@status-message' with { 'icon': 'icon-exclamation', 'modifier': 'messages--warning', 'text': 'Aliquam ullamcorper vehicula leo. Mauris mattis egestas hendrerit. Sed vitae aliquet mauris. Morbi at erat sed mi mollis maximus at sit amet enim. Sed quis libero eu mauris eleifend accumsan vitae semper turpis. Vestibulum nisl ipsum, ullamcorper euismod ultrices nec, tempor sit amet urna. Pellentesque bibendum a mi commodo consectetur. Aliquam nec est tellus.' } %}
 </div>
 
 {# --- FORM ITEMS --- #}
@@ -262,45 +262,12 @@
           ]
         }
         %}
-
-{#
-        {% include '@multiselect-chosen'
-        with {
-          "label": "Label multiselect with chosen",
-          "for": "multiselect_chosen_id_field",
-          "label_optional": "Optional",
-
-          "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description multiselect with chosen.",
-
-          "multiselect_id": "multiselect_chosen_id_field",
-          "multiselect_name": "multiselect_name",
-          "options": [
-            {
-            "label": "Option 1"
-            },
-            {
-            "label": "Option 2"
-            },
-            {
-            "label": "Option 3"
-            },
-            {
-            "label": "Option 4"
-            }
-          ]
-        }
-        %}
-#}
-
       </div>
     </fieldset>
 
     {% include '@address' %}
 
     {% include '@form-actions--editor' %}
-
   </form>
 </div>
 
@@ -591,14 +558,14 @@
 {# --- BLOCKS OVERVIEW--- #}
 <h2 class="styleguide-title">Blocks overview</h2>
 <div class="preview-inner-inner-container">
-  <h4 class="styleguide-title">Disclaimer block</h4>
+  <h3 class="styleguide-title">Disclaimer block</h3>
   {% include '@disclaimer-block' %}
 </div>
 <div class="preview-inner-inner-container">
-  <h4 class="styleguide-title">Post address block</h4>
+  <h3 class="styleguide-title">Post address block</h3>
   {% include '@post-address-block' %}
 </div>
 <div class="preview-inner-inner-container">
-  <h4 class="styleguide-title">Social media block</h4>
+  <h3 class="styleguide-title">Social media block</h3>
   {% include '@social-media-block' %}
 </div>

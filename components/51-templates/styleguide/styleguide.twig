@@ -1,6 +1,7 @@
 <div class="{{ modifier }}">
-    <h1>Styleguide Stad Gent</h1>
+    <h1>Style guide City of Ghent</h1>
 
+    {# --- STYLE GUIDE TABLE OF CONTENTS--- #}
     <nav aria-labelledby="table-of-contents-section" class="styleguide-table-of-contents">
       <h2 id="table-of-contents-section">Table of contents</h2>
       <ol>
@@ -55,16 +56,18 @@
       </ol>
     </nav>
 
-    <h2 class="styleguide-title">1. Base</h2>
-    {% include '@base-overview' %}
+    {# --- STYLE GUIDE CONTENT PREVIEW --- #}
+    <main id="styleguide-content-preview">
+      <h2 class="styleguide-title">1. Base</h2>
+      {% include '@base-overview' %}
 
-    <h2 class="styleguide-title">2. Atoms</h2>
-    {% include '@atoms-overview' %}
+      <h2 class="styleguide-title">2. Atoms</h2>
+      {% include '@atoms-overview' %}
 
-    <h2 class="styleguide-title">3. Molecules</h2>
-    {% include '@molecules-overview' %}
+      <h2 class="styleguide-title">3. Molecules</h2>
+      {% include '@molecules-overview' %}
 
-    <h2 class="styleguide-title">4. Organisms</h2>
-    {% include '@organisms-overview' %}
-
+      <h2 class="styleguide-title">4. Organisms</h2>
+      {% include '@organisms-overview' %}
+    </main>
   </div>
