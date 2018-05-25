@@ -10,7 +10,8 @@
 ## Accessibility
 * The images are placed in a unordered list.
 * When a image caption is provided, this is also used as aria-label for the lightbox link.
-* All lightbox links are described by a hidden span to identify it's purpose (e.a.: 'open gallery).
+* All lightbox links are described by a hidden span to identify it's purpose (e.a.: 'open gallery), 
+add this to the bottom of your page template (above scripts).
 * Hidden images are not only visually hidden.
 * The lightbox can be closed by use of the escape key.
 * Navigating through images in the lightbox can be done by using the arrow keys.
