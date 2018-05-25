@@ -98,6 +98,13 @@
 
   margin-bottom: 4rem;
   padding: 2rem;
+
+  .table-of-contents-main {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 //
