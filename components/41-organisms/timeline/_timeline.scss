@@ -1,0 +1,12 @@
+dl.timeline {
+  display: flex;
+  flex-wrap: wrap;
+
+  > dt {
+    width: 20%;
+  }
+
+  > dd {
+    width: 100%;
+  }
+}
