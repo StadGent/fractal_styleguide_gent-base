@@ -14,14 +14,6 @@
   </ul>
 {% endif %}
 
-{% if type == 'links' %}
-  <ul class="links {{ modifier }}">
-      {% for item in items %}
-          <li>{{ item }}</li>
-      {% endfor %}
-  </ul>
-{% endif %}
-
 {% if type == 'iconlist' %}
   <ul class="iconlist {{ modifier }}">
       {% for item in items %}

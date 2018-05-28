@@ -25,6 +25,8 @@ ul {
   &.iconlist-small {
     @extend %list-no-style;
 
+    margin-left: 0;
+
     li {
       @include icon('checkmark');
 
