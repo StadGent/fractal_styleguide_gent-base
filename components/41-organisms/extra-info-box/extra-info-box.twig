@@ -1,0 +1,51 @@
+<aside class="extra-info-box">
+  <div class="extra-info-box-image">
+    {% include '@image' with {
+      'src': '/styleguide/img/svg/gentinfo.svg',
+      'alt_text': 'Gentinfo icon'
+    } %}
+  </div>
+  <div class="extra-info-box-content">
+    {% include '@h2' with {
+      'h2_text': 'Also interesting'
+    } %}
+
+    <div class="extra-info-box-content-column">
+      {% include '@h3' with {
+        'h3_text': 'Similar articles'
+      } %}
+
+      {% include '@list'
+        with {
+          'type': 'unordered',
+          "items": [
+            '<a href="javascript:(void);">Council meeting dates</a>',
+            '<a href="javascript:(void);">Neighborhood</a>',
+            '<a href="javascript:(void);">Service policy participation</a>',
+            '<a href="javascript:(void);">Re-listen the city council and the dec...<Paste></a>'
+          ]
+        }
+      %}
+    </div>
+    <div class="extra-info-box-content-column">
+      {% include '@h3' with {
+        'h3_text': 'More info about'
+      } %}
+      {% include '@tag' with {
+        'tag_text': 'Inner city'
+      } %}
+      {% include '@tag' with {
+        'tag_text': 'Another tag'
+      } %}
+
+      {% include '@h3' with {
+        'h3_text': 'Related Linked Open Data'
+      } %}
+
+      {% include '@link' with {
+        'link': 'https://stad.gent',
+        'text': 'Lorem ipsum dolor set'
+      } %}
+    </div>
+  </div>
+</aside>

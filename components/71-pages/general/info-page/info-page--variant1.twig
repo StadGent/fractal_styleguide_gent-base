@@ -1,13 +1,50 @@
-<main class="info-page-layout">
+{#
+{% include '@header' with {
+  "mijn_gent_block_items": [
+    "<a href='javascript:(void);'>Mijn profiel</a>",
+    "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+    "<a href='javascript:(void);'>Historiek</a>"
+  ],
+  "header_search_mobile_id": "header-search-mobile",
+  "header_search_mobile_name": "header-search-mobile",
+  "header_search_mobile_placeholder": "What are you looking for?",
+  "header_search_mobile_modifier_search": "inline",
+  "header_search_mobile_text": "Search",
+  "header_search_mobile_modifier_submit": "btn--inline",
+  "header_search_id": "header-search",
+  "header_search_name": "header-search",
+  "header_search_placeholder": "What are you looking for?",
+  "header_search_modifier_search": "inline",
+  "header_search_text": "Search",
+  "header_search_modifier_submit": "btn--inline",
+  "main_menu_modifier": "no-style",
+  "main_menu_items": [
+    "<a href='javascript:void(0);'>Menu item 1</a>",
+    "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
+    "<a href='javascript:void(0);'>Menu item 3</a>",
+    "<a href='javascript:void(0);'>Menu item 4</a>"
+  ],
+  "breadcrumbs_section": "section--default",
+  "breadcrumbs_items": [
+    "<a href='#'>Stad.gent</a>",
+    "<a href='#'>Overview</a>",
+    "<span>Overview</span>",
+    "<span>Overview</span>",
+    "<span>Page title</span>"
+  ]
+} %}
+#}
+
+<main class="detail-layout">
   <div class="content">
     {% include '@h1' with {
-      "h1_text": "Detail page title"
+      "h1_text": "This is an info page without a header image"
     } %}
 
-  {% include '@paragraph' with {
+    {% include '@paragraph' with {
     "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus.",
     "modifier": "summary-text"
-  } %}
+    } %}
 
     {% include '@paragraph' with {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio. In id tellus ut ligula facilisis efficitur at vel urna. Vivamus iaculis felis non tristique malesuada. Quisque venenatis, arcu sed luctus molestie, leo mauris commodo sem, eget <a href='https://stad.gent' alt='Stad Gent'>egestas orci</a> libero eu justo. Curabitur sollicitudin odio non vulputate tincidunt. Etiam vel dolor in massa dapibus bibendum sit amet vel ipsum. Donec sagittis, elit et hendrerit maximus, nulla tortor laoreet quam, id tincidunt massa neque a ex. Fusce suscipit, ipsum interdum elementum sodales, <a href='javascript:(void);' alt='Link'>tellus</a> sapien vehicula nisi, in condimentum neque nisl sit amet elit. Donec sed augue a elit sodales commodo pulvinar vitae nisl. Sed <a href='javascript:(void);' alt='File link' download>pharetra</a> ante non mollis consequat. Pellentesque a est neque. Nullam maximus ornare metus. Quisque porttitor turpis tristique faucibus efficitur."
@@ -17,44 +54,44 @@
       "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus."
     } %}
 
-  {% include '@image-gallery' with {
-    "items": [
-      {
-        "src": "https://via.placeholder.com/700x432",
-        "alt": "placeholder image alternative text",
-        "caption": "image caption"
-      },
-      {
-        "src": "https://via.placeholder.com/700x432",
-        "alt": "placeholder image alternative text",
-        "caption": "image caption"
-      },
-      {
-        "src": "https://via.placeholder.com/700x432",
-        "alt": "placeholder image alternative text",
-        "caption": "image caption"
-      },
-      {
-        "src": "https://via.placeholder.com/700x432",
-        "alt": "placeholder image alternative text",
-        "caption": "image caption"
-      },
-      {
-        "src": "https://via.placeholder.com/700x432",
-        "alt": "placeholder image alternative text",
-        "caption": "image caption"
-      },
-      {
-        "src": "https://via.placeholder.com/700x432",
-        "alt": "placeholder image alternative text",
-        "caption": "image caption"
-      },
-      {
-        "src": "https://via.placeholder.com/700x432",
-        "alt": "placeholder image alternative text"
-      }
-    ]
-  } %}
+    {% include '@image-gallery--multiple' with {
+      "items": [
+        {
+          "src": "https://via.placeholder.com/700x432",
+          "alt": "placeholder image alternative text",
+          "caption": "image caption"
+        },
+        {
+          "src": "https://via.placeholder.com/700x432",
+          "alt": "placeholder image alternative text",
+          "caption": "image caption"
+        },
+        {
+          "src": "https://via.placeholder.com/700x432",
+          "alt": "placeholder image alternative text",
+          "caption": "image caption"
+        },
+        {
+          "src": "https://via.placeholder.com/700x432",
+          "alt": "placeholder image alternative text",
+          "caption": "image caption"
+        },
+        {
+          "src": "https://via.placeholder.com/700x432",
+          "alt": "placeholder image alternative text",
+          "caption": "image caption"
+        },
+        {
+          "src": "https://via.placeholder.com/700x432",
+          "alt": "placeholder image alternative text",
+          "caption": "image caption"
+        },
+        {
+          "src": "https://via.placeholder.com/700x432",
+          "alt": "placeholder image alternative text"
+        }
+      ]
+    } %}
 
     {% include '@paragraph' with {
       "text": "Quisque sollicitudin leo at erat sagittis aliquet. Nullam ipsum erat, aliquet vel scelerisque posuere, interdum vitae dolor. Morbi finibus nisi efficitur, laoreet risus id, mollis mauris. Donec eu interdum velit, at mattis leo. Suspendisse eget finibus diam. Aliquam condimentum nec elit a aliquam. Donec efficitur et enim et tempor. Vestibulum quis tempor purus. Cras id magna ante. Morbi nec purus vehicula, auctor erat eget, aliquet mi. Nam at ligula convallis, vestibulum ligula a, pretium tellus. Sed pretium vulputate iaculis."
@@ -72,62 +109,13 @@
       "audio_description_src": "https://www.youtube.com/embed/S0vLmTWUmok"
     } %}
 
-{#
+    {#
     {% include '@feedback-form' with {
       'modifier': 'wider'
     }%}
 #}
-
   </div>
-  <aside class="extra-info-box">
-    <div class="extra-info-box-image">
-      {% include '@image' with {
-        'src': '/styleguide/img/svg/gentinfo.svg',
-        'alt_text': 'Gentinfo icon'
-      } %}
-    </div>
-    <div class="extra-info-box-content">
-      {% include '@h2' with {
-        'h2_text': 'Also interesting'
-      } %}
-
-      <div class="extra-info-box-content-column">
-        {% include '@h3' with {
-          'h3_text': 'Similar articles'
-        } %}
-
-        {% include '@list'
-          with {
-            'type': 'unordered',
-            "items": [
-              '<a href="javascript:(void);">Council meeting dates</a>',
-              '<a href="javascript:(void);">Neighborhood</a>',
-              '<a href="javascript:(void);">Service policy participation</a>',
-              '<a href="javascript:(void);">Re-listen the city council and the dec...<Paste></a>'
-            ]
-          }
-        %}
-      </div>
-      <div class="extra-info-box-content-column">
-        {% include '@h3' with {
-          'h3_text': 'More info about'
-        } %}
-        {% include '@tag' with {
-          'tag_text': 'Inner city'
-        } %}
-        {% include '@tag' with {
-          'tag_text': 'Another tag'
-        } %}
-
-        {% include '@h3' with {
-          'h3_text': 'Related Linked Open Data'
-        } %}
-
-        {% include '@link' with {
-          'link': 'https://stad.gent',
-          'text': 'Lorem ipsum dolor set'
-        } %}
-      </div>
-    </div>
-  </aside>
+  {% include '@extra-info-box' %}
 </main>
+
+{% include '@footer' %}
