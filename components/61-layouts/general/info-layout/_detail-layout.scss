@@ -8,27 +8,20 @@
   font-size: .9rem;
   line-height: 1.8;
 
-  > .content {
-    width: span(8 of 12);
-    max-width: 36rem;
-    padding-right: span(1 of 12);
-
-    .image-gallery,
-    .video,
-    .quote,
-    .feedback-form {
-      @extend %wider;
-    }
-
-    // Stub.
-    .image-gallery,
-    .video {
-      margin-bottom: $default-paragraph-margin;
-    }
-  }
 
   .summary-text {
     font-weight: 600;
+  }
+
+  > *:not(.quote):not(.video):not(.image-gallery):not(aside) {
+    width: span(7 of 12);
+  }
+
+  > .video,
+  > .gallery-link,
+  > .image-gallery {
+    width: span(9 of 12);
+    margin-bottom: $default-paragraph-margin;
   }
 }
 
