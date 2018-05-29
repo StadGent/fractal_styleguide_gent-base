@@ -12,6 +12,7 @@ a {
   &:hover {
     @include theme('background-color', 'color-primary--lighten-4', 'link-hover-background');
     @include theme('color', 'color-primary--darken-2', 'link-hover-color');
+    border-radius: border-radius('radius-1');
   }
 
   &:focus {
@@ -37,12 +38,23 @@ a {
     &.button-dark {
       @extend %button-dark;
     }
+
+    &::before {
+      margin-right: -.2rem;
+      padding-right: .2rem;
+      line-height: 1;
+    }
   }
 
-  &:not(.button)::after,
-  &:not(.button) i::after {
+  &::after {
+    transition: margin .1s ease-in;
+    font-size: 1.2rem;
+    line-height: 1;
+    vertical-align: text-bottom;
+  }
+
+  &:not(.button)::after {
     margin-left: .2rem;
-    vertical-align: middle;
   }
 
   ///
@@ -68,13 +80,35 @@ a {
     text-decoration: none;
   }
 
+  &.standalone-link:not([download]):not([href^="http://"]):not([href^="https://"]),
+  &.button {
+
+    &:focus,
+    &:hover {
+      &::after,
+      &::before {
+        animation: bounce 1s 2;
+
+        // Animation causes pointer flickering in IE.
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          animation: none;
+        }
+      }
+    }
+  }
+
   &[download],
   &[href^="http://"],
   &[href^="https://"] {
     display: inline-block;
     padding: 0 $link-padding;
 
-    &::after {
+    // For IE purposes first set underline, then remove it.
+    &::after { // sass-lint:disable-line no-mergeable-selectors
+      text-decoration: underline;
+    }
+
+    &::after { // sass-lint:disable-line no-mergeable-selectors
       display: inline-block;
       text-decoration: none;
     }
@@ -93,5 +127,20 @@ a {
   &[href^="http://"],
   &[href^="https://"] {
     @include icon(external-link, after);
+  }
+
+  @keyframes bounce {
+    0% {
+      padding-left: 0;
+      padding-right: .2rem;
+    }
+    40% {
+      padding-left: .2rem;
+      padding-right: 0;
+    }
+    100% {
+      padding-left: 0;
+      padding-right: .2rem;
+    }
   }
 }
