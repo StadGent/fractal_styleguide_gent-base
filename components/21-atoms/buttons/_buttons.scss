@@ -88,9 +88,6 @@
 @mixin button {
   @include button-medium; // Default.
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 2.6em;
   border: 2px solid;
   border-radius: border-radius('radius-1');
@@ -174,8 +171,8 @@
 
   &::before {
     order: 2;
-    padding: 0 0 0 .5rem;
-    font-size: 1.4em;
+    margin-left: .5rem;
+    font-size: 1.2rem;
   }
 }
 

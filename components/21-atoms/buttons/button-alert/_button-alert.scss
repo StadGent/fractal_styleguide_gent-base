@@ -18,15 +18,15 @@
     text-align: center;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: color('red', 2);
     background-color: color('red', 2);
     color: color('white');
-    box-shadow:  $box-shadow-primary color('red', -3);
+    box-shadow:  $box-shadow-primary color('red', -2);
   }
 
-  &:active,
-  &:focus {
+  &:active {
     border-color: color('red', 3);
     background-color: color('red', 3);
     color: color('white');
