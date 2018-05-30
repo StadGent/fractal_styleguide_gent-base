@@ -7,51 +7,72 @@ dl.timeline {
     flex-wrap: wrap;
     width: 100%;
 
+    // Alternating timeline-slots get another background color.
     &:nth-child(2n) {
       @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
 
+      // Fix for video on alternating timeline-slots.
       > dd .video .responsive-video::after {
         @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
       }
     }
 
+    // First timeline-slot specific styling.
     &:first-of-type {
       padding-top: 2rem;
 
+      > dt {
+        padding-top: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      // First definition description inside the first timeline-slot.
       > dd:first-of-type {
         margin-top: .3rem;
         padding-top: 0;
 
+        // Change the definition description indicator position.
         &::before {
           top: 0;
         }
 
+        // Fix whitespace.
         .timeline-slot-header {
           margin-top: -.3rem;
         }
       }
     }
 
+    // Last timeline-slot last definition description specific styling.
     &:last-of-type > dd:last-of-type {
       border: 0;
 
+      // Change the definition description indicator position.
       &::before {
         left: -.4rem;
       }
 
+      // Fix whitespace issue with the timeline border.
       &::after {
         @include theme('border-color', 'color-primary', 'timeline-line-color');
 
         position: absolute;
         top: 0;
         left: 0;
-        height: 2.3rem;
+        height: 1.3rem;
         border-left: 3px solid;
         content: '';
 
+        @include tablet {
+          height: 2.3rem;
+        }
       }
     }
 
+    // Timeline-slot title styling.
     &-title {
       &[aria-expanded="true"] {
         @include icon('minus');
@@ -62,10 +83,9 @@ dl.timeline {
       }
 
       position: relative;
-      // Stub
       padding: 0;
-      background: transparent;
       border: 0;
+      background: transparent;
 
       h3 {
         width: 100%;
@@ -93,102 +113,152 @@ dl.timeline {
     > dt {
       @extend %h5;
 
-      position: absolute;
-      top: 1.9rem;
-      left: 0;
-      width: 20%;
-      padding-right: 1rem;
-      text-align: right;
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 1.5rem 5% .5rem;
+
+      @include tablet {
+        position: absolute;
+        top: 1.9rem;
+        left: 0;
+        width: 20%;
+        padding: 0 1rem 0 0;
+        text-align: right;
+      }
+
+      &::before {
+        @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+        position: absolute;
+        top: 0;
+        left: 7%;
+        height: 1rem;
+        border-left: 3px solid;
+        content: '';
+        @include tablet {
+          display: none;
+        }
+      }
     }
 
     > dd {
       @include theme('border-color', 'color-primary', 'timeline-line-color');
 
-      position: relative;
       display: flex;
+      position: relative;
       flex-wrap: wrap;
       width: 80%;
-      margin: 0 0 0 20%;
-      padding: 2rem 0 2rem 5rem;
+      margin: 0 0 0 7%;
+      padding: .5rem 0 2rem 2.5rem;
       border-left: 3px solid;
+
+      @include tablet {
+        margin: 0 0 0 20%;
+        padding: 2rem 0 2rem 5rem;
+      }
 
       &::before {
         @include theme('background-color', 'color-secondary', 'timeline-slot-indicator-background');
         @include theme('border-color', 'color-primary', 'timeline-slot-indicator-border-color');
 
+        display: block;
         position: absolute;
-        top: 2.3rem;
+        top: .9rem;
         left: -.5rem;
         width: .9rem;
         height: .9rem;
-        display: block;
         border: 3px solid;
         border-radius: 100%;
         content: '';
         z-index: 2;
+
+        @include tablet {
+          top: 2.3rem;
+        }
       }
 
       &.active::before {
         @include theme('background-color', 'color-primary', 'timeline-slot-active-indicator-background');
       }
 
-      .gallery-link,
-      .image-gallery {
-        margin: 0;
-      }
-
+      // Video component styling inside a timeline-slot.
       .video-wrapper {
         position: relative;
+        width: 120%;
 
-        &::before {
-          position: absolute;
-          top: -0.2rem;
-          left: -5.2rem;
-          height: 1rem;
-          border-left: 4px dotted;
-          border-color: #009de1;
-          z-index: 10;
-          content: '';
+        @include tablet {
+          width: 100%;
         }
 
-        &::after {
+        // Dots before a video intersection.
+        &::before {
           position: absolute;
-          bottom: 0.1rem;
+          top: -.2rem;
           left: -5.2rem;
           height: 1rem;
           border-left: 4px dotted;
           border-color: #009de1;
-          z-index: 10;
           content: '';
+          z-index: 10;
+        }
+
+        // Dots after a video intersection.
+        &::after {
+          position: absolute;
+          bottom: .1rem;
+          left: -5.2rem;
+          height: 1rem;
+          border-left: 4px dotted;
+          border-color: #009de1;
+          content: '';
+          z-index: 10;
         }
 
         .video {
           position: relative;
-          margin-top: 2rem;
-          margin-bottom: 2rem;
-          margin-left: -20%;
+          width: 127%;
+          margin: 4rem 0 4rem -27%;
           padding-top: 2rem;
-          width: 120%;
           border: 0;
           z-index: 2;
+
+          @include tablet {
+            width: 120%;
+            margin: 2rem 0 2rem -20%;
+          }
         }
 
         .responsive-video {
+          // Fix to add whitespace to the video top and bottom areas.
           &::before,
           &::after {
             position: absolute;
-            top: -10%;
+            top: -20%;
             left: 0;
             width: 100%;
-            height: 120%;
+            height: 140%;
             background-color: color('white');
-            z-index: -1;
             content: '';
+            z-index: -1;
+
+            @include tablet {
+              top: -10%;
+              height: 120%;
+            }
           }
 
           &::after {
             @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
           }
+        }
+      }
+
+      // Image gallery component styling inside a timeline-slot.
+      .image-gallery-wrapper {
+        .gallery-link,
+        .image-gallery {
+          margin: 0;
         }
       }
     }
