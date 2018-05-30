@@ -1,12 +1,196 @@
 dl.timeline {
-  display: flex;
-  flex-wrap: wrap;
+  .timeline-slot {
+    @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
 
-  > dt {
-    width: 20%;
-  }
-
-  > dd {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
     width: 100%;
+
+    &:nth-child(2n) {
+      @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
+
+      > dd .video .responsive-video::after {
+        @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
+      }
+    }
+
+    &:first-of-type {
+      padding-top: 2rem;
+
+      > dd:first-of-type {
+        margin-top: .3rem;
+        padding-top: 0;
+
+        &::before {
+          top: 0;
+        }
+
+        .timeline-slot-header {
+          margin-top: -.3rem;
+        }
+      }
+    }
+
+    &:last-of-type > dd:last-of-type {
+      border: 0;
+
+      &::before {
+        left: -.4rem;
+      }
+
+      &::after {
+        @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2.3rem;
+        border-left: 3px solid;
+        content: '';
+
+      }
+    }
+
+    &-title {
+      &[aria-expanded="true"] {
+        @include icon('minus');
+      }
+
+      &[aria-expanded="false"] {
+        @include icon('plus');
+      }
+
+      position: relative;
+      // Stub
+      padding: 0;
+      background: transparent;
+      border: 0;
+
+      h3 {
+        width: 100%;
+        margin-bottom: .2rem;
+        font-size: .9rem;
+        text-align: left;
+      }
+
+      &::before {
+        position: absolute;
+        left: -1.6rem;
+        font-size: 1.6em;
+      }
+    }
+
+    &-date {
+      display: block;
+      width: 100%;
+    }
+
+    &-content {
+      width: 100%;
+    }
+
+    > dt {
+      @extend %h5;
+
+      position: absolute;
+      top: 1.9rem;
+      left: 0;
+      width: 20%;
+      padding-right: 1rem;
+      text-align: right;
+    }
+
+    > dd {
+      @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      margin: 0 0 0 20%;
+      padding: 2rem 0 2rem 5rem;
+      border-left: 3px solid;
+
+      &::before {
+        @include theme('background-color', 'color-secondary', 'timeline-slot-indicator-background');
+        @include theme('border-color', 'color-primary', 'timeline-slot-indicator-border-color');
+
+        position: absolute;
+        top: 2.3rem;
+        left: -.5rem;
+        width: .9rem;
+        height: .9rem;
+        display: block;
+        border: 3px solid;
+        border-radius: 100%;
+        content: '';
+        z-index: 2;
+      }
+
+      &.active::before {
+        @include theme('background-color', 'color-primary', 'timeline-slot-active-indicator-background');
+      }
+
+      .gallery-link,
+      .image-gallery {
+        margin: 0;
+      }
+
+      .video-wrapper {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: -0.2rem;
+          left: -5.2rem;
+          height: 1rem;
+          border-left: 4px dotted;
+          border-color: #009de1;
+          z-index: 10;
+          content: '';
+        }
+
+        &::after {
+          position: absolute;
+          bottom: 0.1rem;
+          left: -5.2rem;
+          height: 1rem;
+          border-left: 4px dotted;
+          border-color: #009de1;
+          z-index: 10;
+          content: '';
+        }
+
+        .video {
+          position: relative;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          margin-left: -20%;
+          padding-top: 2rem;
+          width: 120%;
+          border: 0;
+          z-index: 2;
+        }
+
+        .responsive-video {
+          &::before,
+          &::after {
+            position: absolute;
+            top: -10%;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-color: color('white');
+            z-index: -1;
+            content: '';
+          }
+
+          &::after {
+            @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
+          }
+        }
+      }
+    }
   }
 }
