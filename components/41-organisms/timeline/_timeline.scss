@@ -263,9 +263,81 @@ dl.timeline {
 
       // Image gallery component styling inside a timeline-slot.
       .image-gallery-wrapper {
-        .gallery-link,
+        figcaption {
+          display: none;
+        }
+
+        // single image styling
+        .gallery-link {
+          width: calc((100% / 2) - 2vw );
+          margin: 1vw 0 $gutter-width;
+
+          @include desktop {
+            width: calc((100% / 3) - #{$gutter-width} - .33px);
+            margin: calc((#{$gutter-width}/2)) 0 $gutter-width;
+          }
+        }
+
         .image-gallery {
-          margin: 0;
+          margin: 0 -1vw $gutter-width;
+
+          // overrule single image styling
+          .gallery-link {
+            width: 100%;
+            margin: 0;
+          }
+
+          li {
+            width: calc((100% / 2) - 2vw );
+            margin: 1vw;
+
+            // only show two images
+            &:not(.image-gallery__show-more):nth-of-type(n + 3) {
+              display: none;
+            }
+          }
+
+          .image-gallery__show-more {
+            width: calc((100% / 2) - 2vw );
+            margin: 1vw;
+            padding-bottom: calc(((100% / 2) - 2vw) / 1.6);
+          }
+
+          @include tablet {
+            // hide 'show more' if there are no more than two images
+            li:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
+              display: none;
+            }
+
+            .image-gallery__show-more {
+              display: inline-block;
+            }
+          }
+
+          @include desktop {
+            margin: 0 calc((#{$gutter-width}/2) * -1) $gutter-width;
+
+            li {
+              width: calc((100% / 3) - #{$gutter-width} - .33px);
+              margin: calc(#{$gutter-width}/2);
+            }
+
+            // only show first three images
+            li:not(.image-gallery__show-more):nth-of-type(-n + 3) {
+              display: inline-block;
+            }
+
+            // hide 'show more' if there are no more than three images
+            li:first-of-type:nth-last-of-type(-n+4) ~ .image-gallery__show-more {
+              display: none;
+            }
+
+            .image-gallery__show-more {
+              width: calc((100% / 3) - #{$gutter-width} -  .33px);
+              margin: calc(#{$gutter-width}/2);
+              padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.6);
+            }
+          }
         }
       }
     }
