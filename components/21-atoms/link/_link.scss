@@ -82,7 +82,6 @@ a {
 
   &.standalone-link:not([download]):not([href^="http://"]):not([href^="https://"]),
   &.button {
-
     &:focus,
     &:hover {
       &::after,
