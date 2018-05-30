@@ -124,7 +124,7 @@ dl.timeline {
         position: absolute;
         top: 1.9rem;
         left: 0;
-        width: 20%;
+        width: 11.5rem;
         padding: 0 1.2rem 0 0;
         text-align: right;
       }
@@ -134,7 +134,7 @@ dl.timeline {
 
         position: absolute;
         top: 0;
-        left: 7%;
+        left: 1.5rem;
         height: 1rem;
         border-left: 3px solid;
         content: '';
@@ -150,13 +150,13 @@ dl.timeline {
       display: flex;
       position: relative;
       flex-wrap: wrap;
-      width: 80%;
-      margin: 0 0 0 7%;
-      padding: .5rem 0 2rem 2.5rem;
+      width: 100%;
+      margin: 0 0 0 1.5rem;
+      padding: .5rem 2.5rem 2rem;
       border-left: 3px solid;
 
       @include tablet {
-        margin: 0 0 0 20%;
+        margin: 0 0 0 11.5rem;
         padding: 2rem 2rem 2rem 5rem;
       }
 
@@ -187,12 +187,12 @@ dl.timeline {
       // Video component styling inside a timeline-slot.
       .video-wrapper {
         position: relative;
-        width: calc(100% + 7rem);
+        width: calc(100% + 6.5rem + 4px);
         margin-left: calc(-4rem - 4px);
 
         @include tablet {
-          width: 42rem;
-          margin-left: calc(-9rem - 4px);
+          width: calc(100% + 10rem + 4px);
+          margin-left: calc(-10rem - 4px);
         }
 
         // Dots before a video intersection.
@@ -208,7 +208,7 @@ dl.timeline {
           z-index: 10;
 
           @include tablet {
-            left: 4rem;
+            left: 5rem;
           }
         }
 
@@ -225,7 +225,7 @@ dl.timeline {
           z-index: 10;
 
           @include tablet {
-            left: 4rem;
+            left: 5rem;
           }
         }
 
@@ -244,15 +244,10 @@ dl.timeline {
             top: -2rem;
             left: 0;
             width: 100%;
-            height: calc(100% + 4rem);
+            height: 140%;
             background-color: color('white');
             content: '';
             z-index: -1;
-
-            @include tablet {
-              top: -2rem;
-              height: calc(100% + 4rem);
-            }
           }
 
           &::after {
