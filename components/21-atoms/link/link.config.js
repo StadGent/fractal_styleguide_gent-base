@@ -21,16 +21,19 @@ module.exports = {
   variants: [
     {
       name: 'default',
+      preview: '@preview',
       handle: 'link'
     },
     {
       name: 'external-link',
+      preview: '@preview',
       context: {
         link: 'https://stad.gent'
       }
     },
     {
       name: 'download-link',
+      preview: '@preview',
       context: {
         link: '#',
         download: true
@@ -38,6 +41,7 @@ module.exports = {
     },
     {
       name: 'standalone',
+      preview: '@preview',
       handle: 'link',
       context: {
         link: '#',
@@ -46,6 +50,7 @@ module.exports = {
     },
     {
       name: 'standalone-external',
+      preview: '@preview',
       handle: 'link',
       context: {
         link: 'https://stad.gent',
@@ -54,6 +59,7 @@ module.exports = {
     },
     {
       name: 'standalone-download',
+      preview: '@preview',
       handle: 'link',
       context: {
         link: '#',
@@ -63,6 +69,7 @@ module.exports = {
     },
     {
       name: 'button',
+      preview: '@preview',
       context: {
         icon: 'icon-arrow-right',
         modifier: 'button button-primary'

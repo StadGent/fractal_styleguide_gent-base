@@ -20,7 +20,7 @@
     @include theme('border-color', 'color-primary--darken-1', 'button-primary-hover-border-color');
   }
 
-  &:active{
+  &:active {
     @include theme('background-color', 'color-primary--darken-3', 'button-primary-focus-background');
     @include theme('color', 'color-secondary', 'button-primary-focus-color');
     @include theme('border-color', 'color-primary--darken-3', 'button-primary-focus-border-color');
