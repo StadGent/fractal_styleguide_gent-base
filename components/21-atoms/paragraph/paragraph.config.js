@@ -17,7 +17,7 @@ module.exports = {
     {
       name: 'default',
       preview: '@preview',
-      handle: 'paragraph',
+      handle: 'paragraph'
     },
     {
       name: 'caption-text',
