@@ -11,6 +11,28 @@ const versions = [
   'button-block icon-download'
 ];
 
+const createVariant = (type, version) => {
+  return {
+    name: `${type}-${version}`,
+    preview: '@preview',
+    context: {
+      text: version.charAt(0).toUpperCase() + version.slice(1),
+      type: type,
+      modifier: (() => {
+        switch (version) {
+          case 'button-default':
+            return null;
+          case 'disabled':
+            return null;
+          default:
+            return version;
+        }
+      })(),
+      disabled: version === 'disabled'
+    }
+  };
+};
+
 const reduceVersions = (type) => {
   return versions.reduce((accumulator, v) => {
     // Alert buttons already have an icon.
@@ -18,25 +40,7 @@ const reduceVersions = (type) => {
       return accumulator;
     }
     // Create a variant and add it to the result.
-    return accumulator.concat({
-      name: `${type}-${v}`,
-      preview: '@preview',
-      context: {
-        text: v.charAt(0).toUpperCase() + v.slice(1),
-        type: type,
-        modifier: (() => {
-          switch (v) {
-            case 'button-default':
-              return null;
-            case 'disabled':
-              return null;
-            default:
-              return v;
-          }
-        })(),
-        disabled: v === 'disabled'
-      }
-    });
+    return accumulator.concat(createVariant(type, v));
   }, []);
 };
 
