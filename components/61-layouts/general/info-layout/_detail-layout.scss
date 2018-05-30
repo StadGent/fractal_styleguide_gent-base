@@ -13,7 +13,7 @@
     font-weight: 600;
   }
 
-  > *:not(.quote):not(.video):not(.image-gallery):not(aside) {
+  > *:not(.quote):not(.video):not(.image-gallery):not(aside):not(.timeline) {
     width: span(7 of 12);
   }
 

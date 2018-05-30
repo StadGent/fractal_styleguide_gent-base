@@ -1,4 +1,6 @@
 dl.timeline {
+  width: 100%;
+
   .timeline-slot {
     @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
 
@@ -123,7 +125,7 @@ dl.timeline {
         top: 1.9rem;
         left: 0;
         width: 20%;
-        padding: 0 1rem 0 0;
+        padding: 0 1.2rem 0 0;
         text-align: right;
       }
 
@@ -155,7 +157,7 @@ dl.timeline {
 
       @include tablet {
         margin: 0 0 0 20%;
-        padding: 2rem 0 2rem 5rem;
+        padding: 2rem 2rem 2rem 5rem;
       }
 
       &::before {
@@ -185,47 +187,58 @@ dl.timeline {
       // Video component styling inside a timeline-slot.
       .video-wrapper {
         position: relative;
-        width: 120%;
+        width: calc(100% + 7rem);
+        margin-left: calc(-4rem - 4px);
 
         @include tablet {
-          width: 100%;
+          margin-left: calc(-9rem - 4px);
         }
 
         // Dots before a video intersection.
         &::before {
+          @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
+
           position: absolute;
-          top: -.2rem;
-          left: -5.2rem;
+          top: .15rem;
+          left: 1.5rem;
           height: 1rem;
-          border-left: 4px dotted;
-          border-color: #009de1;
+          border-left: 5px dotted;
           content: '';
           z-index: 10;
+
+          @include tablet {
+            left: 4rem;
+          }
         }
 
         // Dots after a video intersection.
         &::after {
+          @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
+
           position: absolute;
-          bottom: .1rem;
-          left: -5.2rem;
+          bottom: .4rem;
+          left: 1.5rem;
           height: 1rem;
-          border-left: 4px dotted;
-          border-color: #009de1;
+          border-left: 5px dotted;
           content: '';
           z-index: 10;
+
+          @include tablet {
+            left: 4rem;
+          }
         }
 
         .video {
           position: relative;
-          width: 127%;
-          margin: 4rem 0 4rem -27%;
+          // width: 127%;
+          // margin: 4rem 0 4rem -27%;
           padding-top: 2rem;
           border: 0;
           z-index: 2;
 
           @include tablet {
-            width: 120%;
-            margin: 2rem 0 2rem -20%;
+            // width: 120%;
+            // margin: 2rem 0 2rem -20%;
           }
         }
 
@@ -234,17 +247,17 @@ dl.timeline {
           &::before,
           &::after {
             position: absolute;
-            top: -20%;
+            top: -2rem;
             left: 0;
             width: 100%;
-            height: 140%;
+            height: calc(100% + 4rem);
             background-color: color('white');
             content: '';
             z-index: -1;
 
             @include tablet {
-              top: -10%;
-              height: 120%;
+              top: -2rem;
+              height: calc(100% + 4rem);
             }
           }
 
