@@ -11,7 +11,9 @@
 {% if audio_description_src %}
   {% include '@link' with {
     'link': audio_description_src,
-    'text': 'Watch this video with audio description'
+    'text': 'Watch this video with audio description',
+    'modifier': 'standalone-link',
+    'title': null
   } %}
 {% endif %}
 </div>
