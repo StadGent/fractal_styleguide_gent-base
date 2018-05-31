@@ -279,8 +279,17 @@ dl.timeline {
 
         // single image styling
         .gallery-link {
-          width: calc((100% / 2) - 2vw );
+          width: calc((100% / 1) - 2vw );
           margin: 1vw 0 $gutter-width;
+
+          @include mobile {
+            max-width: 270px;
+          }
+
+          @include phablet {
+            max-width: 100%;
+            width: calc((100% / 2) - 2vw );
+          }
 
           @include desktop {
             width: calc((100% / 3) - #{$gutter-width} - .33px);
