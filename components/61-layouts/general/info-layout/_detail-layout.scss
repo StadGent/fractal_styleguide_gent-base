@@ -13,15 +13,20 @@
     font-weight: 600;
   }
 
-  > *:not(.quote):not(.video):not(.image-gallery):not(aside) {
+  > * {
     width: span(7 of 12);
   }
 
+  > .search-block,
   > .video,
   > .gallery-link,
   > .image-gallery {
     width: span(9 of 12);
     margin-bottom: $default-paragraph-margin;
+  }
+
+  .search-block {
+    margin-bottom: 4rem;
   }
 }
 

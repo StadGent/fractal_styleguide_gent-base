@@ -1,0 +1,54 @@
+.search-block {
+  @include theme('background-color', 'color-primary--lighten-4', 'search-block-background');
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3.1rem;
+  padding: 0 .8rem 2rem;
+
+  @include tablet {
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 2rem ($gutter-width*2);
+  }
+
+  h2 {
+    @extend %h4;
+  }
+
+  h3 {
+    @extend %h5;
+  }
+
+  ul {
+    margin: 0 0 2rem;
+    list-style-type: none;
+
+    @include tablet {
+      margin-left: auto;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+
+    i {
+      margin-right: .5rem;
+      font-size: 1.3em;
+    }
+  }
+
+  &-icon {
+    width: 6.2rem;
+    height: 6.2rem;
+    margin: -3.1rem 0 1rem;
+
+    @include tablet {
+      align-self: center;
+      width: span(2 of 9);
+      margin: 0 2.5rem 0 0;
+    }
+  }
+}
