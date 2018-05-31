@@ -1,3 +1,5 @@
+$timeline-border: 4px;
+
 dl.timeline {
   width: 100%;
 
@@ -15,7 +17,6 @@ dl.timeline {
     display: flex;
     position: relative;
     flex-wrap: wrap;
-    width: 100%;
 
     // Alternating timeline-slots get another background color.
     &:nth-child(2n) {
@@ -164,7 +165,6 @@ dl.timeline {
       display: flex;
       position: relative;
       flex-wrap: wrap;
-      width: 100%;
       margin: 0 0 0 1.5rem;
       padding: .5rem calc(#{$gutter-width/2}) 2rem 2.5rem;
       border-left: 3px solid;
@@ -201,12 +201,12 @@ dl.timeline {
       // Video component styling inside a timeline-slot.
       .video-wrapper {
         position: relative;
-        width: calc(100% + 4.6rem + 4px);
-        margin-left: calc(-4rem - 4px);
+        width: calc(100% + 4.6rem + #{$timeline-border});
+        margin-left: calc(-4rem - #{$timeline-border});
 
         @include tablet {
-          width: calc(100% + 10rem + 4px);
-          margin-left: calc(-10rem - 4px);
+          width: calc(100% + 10rem + #{$timeline-border});
+          margin-left: calc(-10rem - #{$timeline-border});
         }
 
         // Fix to add whitespace to the video top and bottom areas.
@@ -226,6 +226,22 @@ dl.timeline {
           @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
         }
 
+        .video .audio-description::after,
+        .responsive-video::before {
+          @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
+
+          position: absolute;
+          left: calc(1.5rem + 1px);
+          height: 1rem;
+          border-left: $timeline-border dotted;
+          content: '';
+          z-index: 10;
+
+          @include tablet {
+            left: calc(5rem + 1px);
+          }
+        }
+
         .video {
           position: relative;
           padding-top: 2rem;
@@ -238,19 +254,7 @@ dl.timeline {
 
             // Dots after a video intersection.
             &::after {
-              @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
-
-              position: absolute;
               bottom: .2rem;
-              left: calc(1.5rem + 1px);
-              height: 1rem;
-              border-left: 4px dotted;
-              content: '';
-              z-index: 10;
-
-              @include tablet {
-                left: calc(5rem + 1px);
-              }
             }
           }
         }
@@ -258,19 +262,7 @@ dl.timeline {
         .responsive-video {
           // Dots before a video intersection.
           &::before {
-            @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
-
-            position: absolute;
             top: -1.8rem;
-            left: calc(1.5rem + 1px);
-            height: 1rem;
-            border-left: 4px dotted;
-            content: '';
-            z-index: 10;
-
-            @include tablet {
-              left: calc(5rem + 1px);
-            }
           }
         }
       }
