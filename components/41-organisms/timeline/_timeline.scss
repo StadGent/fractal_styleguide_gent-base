@@ -8,7 +8,6 @@ dl.timeline {
    }
 
   .timeline-slot {
-    @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
 
     @include tablet {
       padding: 0 span(1 of 12) 0 span(2 of 12);
