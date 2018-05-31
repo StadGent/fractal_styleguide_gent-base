@@ -273,31 +273,35 @@ dl.timeline {
 
       // Image gallery component styling inside a timeline-slot.
       .image-gallery-wrapper {
-        figcaption {
-          display: none;
-        }
 
         // single image styling
-        .gallery-link {
-          width: calc((100% / 1) - 2vw );
-          margin: 1vw 0 $gutter-width;
-
-          @include mobile {
-            max-width: 270px;
+        .image-gallery {
+          figcaption {
+            display: none;
           }
 
-          @include phablet {
-            max-width: 100%;
-            width: calc((100% / 2) - 2vw );
-          }
+          .gallery-link {
+            @include mobile {
+              max-width: 270px;
+            }
 
-          @include desktop {
-            width: calc((100% / 3) - #{$gutter-width} - .33px);
-            margin: calc((#{$gutter-width}/2)) 0 $gutter-width;
+            @include phablet {
+              width: calc((100% / 2) - 2vw );
+              max-width: 100%;
+            }
+
+            @include desktop {
+              width: calc((100% / 3) - #{$gutter-width} - .33px);
+              margin: calc((#{$gutter-width}/2)) 0 $gutter-width;
+            }
+
+            width: calc((100% / 1) - 2vw );
+            margin: 1vw 0 $gutter-width;
           }
         }
 
-        .image-gallery {
+        // multiple image styling
+        ul.image-gallery {
           margin: 0 -1vw $gutter-width;
 
           // overrule single image styling
