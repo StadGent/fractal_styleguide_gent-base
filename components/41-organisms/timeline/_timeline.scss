@@ -99,7 +99,8 @@ dl.timeline {
       }
 
       position: relative;
-      padding: 0;
+      margin-left: -1.6rem;
+      padding-left: 1.6rem;
       border: 0;
       background: transparent;
 
@@ -112,7 +113,7 @@ dl.timeline {
 
       &::before {
         position: absolute;
-        left: -1.6rem;
+        left: 0;
         font-size: 1.6em;
       }
     }
