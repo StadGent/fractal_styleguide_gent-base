@@ -100,7 +100,8 @@ dl.timeline {
       }
 
       position: relative;
-      padding: 0;
+      margin-left: -1.6rem;
+      padding-left: 1.6rem;
       border: 0;
       background: transparent;
 
@@ -113,7 +114,7 @@ dl.timeline {
 
       &::before {
         position: absolute;
-        left: -1.6rem;
+        left: 0;
         font-size: 1.6em;
       }
     }
@@ -317,8 +318,6 @@ dl.timeline {
           }
 
           .image-gallery__show-more {
-            width: calc((100% / 1) - 2vw );
-            margin: 1vw;
             padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
           }
 
@@ -327,7 +326,7 @@ dl.timeline {
           }
 
           @include phablet {
-            max-width: unset;
+            max-width: calc(100% + 2vw);
 
             li {
               width: calc((100% / 2) - 2vw );
@@ -344,7 +343,6 @@ dl.timeline {
             }
 
             .image-gallery__show-more {
-              width: calc((100% / 2) - 2vw );
               padding-bottom: calc(((100% / 2) - 2vw) / 1.6);
             }
           }
@@ -364,6 +362,7 @@ dl.timeline {
 
           @include desktop {
             margin: 0 calc((#{$gutter-width}/2) * -1) $gutter-width;
+            max-width: calc(100% + #{$gutter-width});
 
             li {
               width: calc((100% / 3) - #{$gutter-width} - .33px);
@@ -381,8 +380,6 @@ dl.timeline {
             }
 
             .image-gallery__show-more {
-              width: calc((100% / 3) - #{$gutter-width} -  .33px);
-              margin: calc(#{$gutter-width}/2);
               padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.6);
             }
           }
