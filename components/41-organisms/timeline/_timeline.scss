@@ -162,7 +162,7 @@ dl.timeline {
       flex-wrap: wrap;
       width: 100%;
       margin: 0 0 0 1.5rem;
-      padding: .5rem 2.5rem 2rem;
+      padding: .5rem calc(#{$gutter-width/2}) 2rem 2.5rem;
       border-left: 3px solid;
 
       @include tablet {
@@ -197,12 +197,12 @@ dl.timeline {
       // Video component styling inside a timeline-slot.
       .video-wrapper {
         position: relative;
-        width: calc(100% + 6.5rem + 4px);
+        width: calc(100% + 4.6rem + 4px);
         margin-left: calc(-4rem - 4px);
 
         @include tablet {
           width: calc(100% + 10rem + 4px);
-          margin-left: calc(-10rem - 4px);
+          margin-left: calc(-10rem - #{$gutter-width} - 4px);
         }
 
         // Fix to add whitespace to the video top and bottom areas.
@@ -245,7 +245,7 @@ dl.timeline {
               z-index: 10;
 
               @include tablet {
-                left: 5rem;
+                left: calc(5rem + #{$gutter-width});
               }
             }
           }
@@ -265,7 +265,7 @@ dl.timeline {
             z-index: 10;
 
             @include tablet {
-              left: 5rem;
+              left: calc(5rem + #{$gutter-width});
             }
           }
         }
