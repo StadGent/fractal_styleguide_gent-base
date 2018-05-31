@@ -5,7 +5,7 @@ dl.timeline {
 
   * {
     font-size: .8rem;
-   }
+  }
 
   .timeline-slot {
 
@@ -58,12 +58,7 @@ dl.timeline {
 
     // Last timeline-slot last definition description specific styling.
     &:last-of-type > dd:last-of-type {
-      border: 0;
-
-      // Change the definition description indicator position.
-      &::before {
-        left: -.4rem;
-      }
+      border-color: transparent;
 
       // Fix whitespace issue with the timeline border.
       &::after {
@@ -71,7 +66,7 @@ dl.timeline {
 
         position: absolute;
         top: 0;
-        left: 0;
+        left: -3px;
         height: 1.3rem;
         border-left: 3px solid;
         content: '';
@@ -90,32 +85,33 @@ dl.timeline {
 
     // Timeline-slot title styling.
     &-title {
-      &[aria-expanded="true"] {
-        @include icon('minus');
-      }
+      button {
+        width: 100%;
+        margin-left: -1.6rem;
+        padding-left: 1.6rem;
+        color: inherit;
 
-      &[aria-expanded="false"] {
-        @include icon('plus');
+        &[aria-expanded="true"] {
+          @include icon('minus');
+        }
+
+        &[aria-expanded="false"] {
+          @include icon('plus');
+        }
+
+        &::before {
+          position: absolute;
+          left: -1.6rem;
+          font-size: 1.6em;
+          line-height: .9;
+        }
       }
 
       position: relative;
-      margin-left: -1.6rem;
-      padding-left: 1.6rem;
+      width: 100%;
+      margin: .2rem 0;
       border: 0;
       background: transparent;
-
-      h3 {
-        width: 100%;
-        margin-bottom: .2rem;
-        font-size: .9rem;
-        text-align: left;
-      }
-
-      &::before {
-        position: absolute;
-        left: 0;
-        font-size: 1.6em;
-      }
     }
 
     &-date {
@@ -123,7 +119,8 @@ dl.timeline {
       width: 100%;
     }
 
-    &-content {
+    &-content,
+    &-header {
       width: 100%;
     }
 
@@ -165,6 +162,7 @@ dl.timeline {
       display: flex;
       position: relative;
       flex-wrap: wrap;
+      width: 100%;
       margin: 0 0 0 1.5rem;
       padding: .5rem calc(#{$gutter-width/2}) 2rem 2.5rem;
       border-left: 3px solid;
@@ -282,16 +280,16 @@ dl.timeline {
             }
 
             @include phablet {
-              width: calc((100% / 2) - 2vw );
+              width: calc(100% / 2 - 1vw);
               max-width: 100%;
             }
 
             @include desktop {
-              width: calc((100% / 3) - #{$gutter-width} - .33px);
-              margin: calc((#{$gutter-width}/2)) 0 $gutter-width;
+              width: calc((100% / 3 - #{$gutter-width} / 1.5) - .33px);
+              margin: calc(#{$gutter-width} / 2) 0 $gutter-width;
             }
 
-            width: calc((100% / 1) - 2vw );
+            width: 100%;
             margin: 1vw 0 $gutter-width;
           }
         }
@@ -307,7 +305,7 @@ dl.timeline {
           }
 
           li {
-            width: calc((100% / 1) - 2vw );
+            width: calc((100% / 1) - 2vw);
             margin: 1vw;
 
             // only two images
@@ -328,7 +326,7 @@ dl.timeline {
             max-width: calc(100% + 2vw);
 
             li {
-              width: calc((100% / 2) - 2vw );
+              width: calc((100% / 2) - 2vw);
             }
 
             // only show first two images
@@ -360,12 +358,12 @@ dl.timeline {
           }
 
           @include desktop {
-            margin: 0 calc((#{$gutter-width}/2) * -1) $gutter-width;
             max-width: calc(100% + #{$gutter-width});
+            margin: 0 calc((#{$gutter-width} / 2) * -1) $gutter-width;
 
             li {
               width: calc((100% / 3) - #{$gutter-width} - .33px);
-              margin: calc(#{$gutter-width}/2);
+              margin: calc(#{$gutter-width} / 2);
             }
 
             // only show first three images
