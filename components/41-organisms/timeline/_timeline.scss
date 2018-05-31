@@ -292,7 +292,7 @@ dl.timeline {
 
             @include phablet {
               width: calc((100% / 2) - 2vw );
-              max-width: unset;
+              max-width: 100%;
             }
 
             @include desktop {
