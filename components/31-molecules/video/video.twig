@@ -8,10 +8,12 @@
             allow="autoplay; encrypted-media"
             allowfullscreen></iframe>
   </div>
-{% if audio_description_src %}
-  {% include '@link' with {
-    'link': audio_description_src,
-    'text': 'Watch this video with audio description'
-  } %}
-{% endif %}
+  <div class="audio-description">
+    {% if audio_description_src %}
+      {% include '@link' with {
+        'link': audio_description_src,
+        'text': 'Watch this video with audio description'
+      } %}
+    {% endif %}
+  </div>
 </div>

@@ -1,6 +1,10 @@
 dl.timeline {
   width: 100%;
 
+  * {
+    font-size: .8rem;
+   }
+
   .timeline-slot {
     @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
 
@@ -14,7 +18,7 @@ dl.timeline {
       @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
 
       // Fix for video on alternating timeline-slots.
-      > dd .video .responsive-video::after {
+      > dd .video-wrapper::after {
         @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
       }
     }
@@ -71,6 +75,12 @@ dl.timeline {
         @include tablet {
           height: 2.3rem;
         }
+      }
+
+      // Hide video dots on last timeline-slot's last definition description.
+      .responsive-video::before,
+      .audio-description::after {
+        display: none;
       }
     }
 
@@ -157,7 +167,7 @@ dl.timeline {
 
       @include tablet {
         margin: 0 0 0 11.5rem;
-        padding: 2rem 2rem 2rem 5rem;
+        padding: 2rem 0 2rem 5rem;
       }
 
       &::before {
@@ -195,38 +205,21 @@ dl.timeline {
           margin-left: calc(-10rem - 4px);
         }
 
-        // Dots before a video intersection.
-        &::before {
-          @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
-
+        // Fix to add whitespace to the video top and bottom areas.
+        &::before,
+        &::after {
           position: absolute;
-          top: .15rem;
-          left: 1.5rem;
-          height: 1rem;
-          border-left: 5px dotted;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: color('white');
           content: '';
-          z-index: 10;
-
-          @include tablet {
-            left: 5rem;
-          }
+          z-index: 1;
         }
 
-        // Dots after a video intersection.
         &::after {
-          @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
-
-          position: absolute;
-          bottom: .4rem;
-          left: 1.5rem;
-          height: 1rem;
-          border-left: 5px dotted;
-          content: '';
-          z-index: 10;
-
-          @include tablet {
-            left: 5rem;
-          }
+          @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
         }
 
         .video {
@@ -234,24 +227,46 @@ dl.timeline {
           padding-top: 2rem;
           border: 0;
           z-index: 2;
+
+          .audio-description {
+            min-height: 2rem;
+            padding-left: 3rem;
+
+            // Dots after a video intersection.
+            &::after {
+              @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
+
+              position: absolute;
+              bottom: .2rem;
+              left: 1.5rem;
+              height: 1rem;
+              border-left: 5px dotted;
+              content: '';
+              z-index: 10;
+
+              @include tablet {
+                left: 5rem;
+              }
+            }
+          }
         }
 
         .responsive-video {
-          // Fix to add whitespace to the video top and bottom areas.
-          &::before,
-          &::after {
-            position: absolute;
-            top: -2rem;
-            left: 0;
-            width: 100%;
-            height: 140%;
-            background-color: color('white');
-            content: '';
-            z-index: -1;
-          }
+          // Dots before a video intersection.
+          &::before {
+            @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
 
-          &::after {
-            @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
+            position: absolute;
+            top: -1.8rem;
+            left: 1.5rem;
+            height: 1rem;
+            border-left: 5px dotted;
+            content: '';
+            z-index: 10;
+
+            @include tablet {
+              left: 5rem;
+            }
           }
         }
       }
