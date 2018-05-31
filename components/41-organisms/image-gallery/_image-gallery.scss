@@ -2,7 +2,6 @@
   @include clearfix();
 
   position: relative;
-  margin: 2rem calc(-1 * (#{$gutter-width} / 2)) 5rem;
   padding: 0;
   list-style: none;
 
@@ -17,10 +16,6 @@
     &:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
       display: none;
     }
-  }
-
-  figcaption {
-    display: none;
   }
 
   .image-gallery__show-more {
@@ -66,6 +61,23 @@
     i {
       font-size: 1.5rem;
       vertical-align: middle;
+    }
+  }
+
+  a.gallery-link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    text-decoration: none;
+
+    &::after {
+      content: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
     }
   }
 
@@ -132,19 +144,10 @@
   }
 }
 
-a.gallery-link {
-  display: block;
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-  text-decoration: none;
+ul.image-gallery {
+  margin: 0 calc(-1 * (#{$gutter-width} / 2));
 
-  &::after {
-    content: none;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: transparent;
+  figcaption {
+    display: none;
   }
 }
