@@ -167,7 +167,7 @@ dl.timeline {
 
       @include tablet {
         margin: 0 0 0 11.5rem;
-        padding: 2rem 0 2rem 5rem;
+        padding: 2rem calc(#{$gutter-width/2}) 2rem 5rem;
       }
 
       &::before {
@@ -202,7 +202,7 @@ dl.timeline {
 
         @include tablet {
           width: calc(100% + 10rem + 4px);
-          margin-left: calc(-10rem - #{$gutter-width} - 4px);
+          margin-left: calc(-10rem - 4px);
         }
 
         // Fix to add whitespace to the video top and bottom areas.
@@ -238,14 +238,14 @@ dl.timeline {
 
               position: absolute;
               bottom: .2rem;
-              left: 1.5rem;
+              left: calc(1.5rem + 1px);
               height: 1rem;
-              border-left: 5px dotted;
+              border-left: 3px dotted;
               content: '';
               z-index: 10;
 
               @include tablet {
-                left: calc(5rem + #{$gutter-width});
+                left: calc(5rem + 1px);
               }
             }
           }
@@ -258,14 +258,14 @@ dl.timeline {
 
             position: absolute;
             top: -1.8rem;
-            left: 1.5rem;
+            left: calc(1.5rem + 1px);
             height: 1rem;
-            border-left: 5px dotted;
+            border-left: 3px dotted;
             content: '';
             z-index: 10;
 
             @include tablet {
-              left: calc(5rem + #{$gutter-width});
+              left: calc(5rem + 1px);
             }
           }
         }
@@ -287,7 +287,7 @@ dl.timeline {
 
             @include phablet {
               width: calc((100% / 2) - 2vw );
-              max-width: 100%;
+              max-width: unset;
             }
 
             @include desktop {
@@ -331,7 +331,7 @@ dl.timeline {
           }
 
           @include phablet {
-            max-width: 100%;
+            max-width: unset;
 
             li {
               width: calc((100% / 2) - 2vw );
