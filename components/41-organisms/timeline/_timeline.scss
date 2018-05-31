@@ -8,6 +8,10 @@ dl.timeline {
   .timeline-slot {
     @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
 
+    @include tablet {
+      padding: 0 span(1 of 12) 0 span(2 of 12);
+    }
+
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -133,7 +137,7 @@ dl.timeline {
       @include tablet {
         position: absolute;
         top: 1.9rem;
-        left: 0;
+        left: span(2 of 12);
         width: 11.5rem;
         padding: 0 1.2rem 0 0;
         text-align: right;
@@ -240,7 +244,7 @@ dl.timeline {
               bottom: .2rem;
               left: calc(1.5rem + 1px);
               height: 1rem;
-              border-left: 3px dotted;
+              border-left: 4px dotted;
               content: '';
               z-index: 10;
 
@@ -260,7 +264,7 @@ dl.timeline {
             top: -1.8rem;
             left: calc(1.5rem + 1px);
             height: 1rem;
-            border-left: 3px dotted;
+            border-left: 4px dotted;
             content: '';
             z-index: 10;
 
