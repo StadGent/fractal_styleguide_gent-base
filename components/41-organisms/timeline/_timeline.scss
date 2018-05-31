@@ -334,7 +334,7 @@ dl.timeline {
           }
 
           @include phablet {
-            max-width: unset;
+            max-width: calc(100% + 2vw);
 
             li {
               width: calc((100% / 2) - 2vw );
@@ -370,6 +370,7 @@ dl.timeline {
 
           @include desktop {
             margin: 0 calc((#{$gutter-width}/2) * -1) $gutter-width;
+            max-width: calc(100% + #{$gutter-width});
 
             li {
               width: calc((100% / 3) - #{$gutter-width} - .33px);
