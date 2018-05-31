@@ -217,7 +217,7 @@ gulp.task('styles:extract', () => {
  *
  */
 gulp.task('js:dist', () => {
-  return gulp.src('components/**/*.js')
+  return gulp.src(['components/**/*.js', '!components/**/*.config.js'])
     .pipe(rename({
       dirname: '',
       suffix: '-min'
@@ -233,7 +233,7 @@ gulp.task('js:dist', () => {
  *
  */
 gulp.task('js:build', () => {
-  return gulp.src('components/**/*.js')
+  return gulp.src(['components/**/*.js', '!components/**/*.config.js'])
     .pipe(rename({
       dirname: '',
       suffix: '-min'
