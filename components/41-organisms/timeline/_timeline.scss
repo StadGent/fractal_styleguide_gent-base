@@ -283,29 +283,58 @@ dl.timeline {
           }
 
           li {
-            width: calc((100% / 2) - 2vw );
+            width: calc((100% / 1) - 2vw );
             margin: 1vw;
 
-            // only show two images
+            // only two images
             &:not(.image-gallery__show-more):nth-of-type(n + 3) {
               display: none;
             }
           }
 
           .image-gallery__show-more {
-            width: calc((100% / 2) - 2vw );
+            width: calc((100% / 1) - 2vw );
             margin: 1vw;
-            padding-bottom: calc(((100% / 2) - 2vw) / 1.6);
+            padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
           }
 
-          @include tablet {
+          @include mobile {
+            max-width: 270px;
+          }
+
+          @include phablet {
+            max-width: 100%;
+
+            li {
+              width: calc((100% / 2) - 2vw );
+            }
+
+            // only show first two images
+            li:not(.image-gallery__show-more):nth-of-type(-n + 2) {
+              display: inline-block;
+            }
+
             // hide 'show more' if there are no more than two images
             li:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
               display: none;
             }
 
             .image-gallery__show-more {
+              width: calc((100% / 2) - 2vw );
+              padding-bottom: calc(((100% / 2) - 2vw) / 1.6);
+            }
+          }
+
+          @include tablet {
+
+            // overrule image gallery
+            .image-gallery__show-more {
               display: inline-block;
+            }
+
+            // hide 'show more' if there are no more than three images
+            li:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
+              display: none;
             }
           }
 
