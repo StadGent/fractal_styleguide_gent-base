@@ -326,8 +326,6 @@ dl.timeline {
           }
 
           .image-gallery__show-more {
-            width: calc((100% / 1) - 2vw );
-            margin: 1vw;
             padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
           }
 
@@ -353,7 +351,6 @@ dl.timeline {
             }
 
             .image-gallery__show-more {
-              width: calc((100% / 2) - 2vw );
               padding-bottom: calc(((100% / 2) - 2vw) / 1.6);
             }
           }
@@ -390,8 +387,6 @@ dl.timeline {
             }
 
             .image-gallery__show-more {
-              width: calc((100% / 3) - #{$gutter-width} -  .33px);
-              margin: calc(#{$gutter-width}/2);
               padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.6);
             }
           }
