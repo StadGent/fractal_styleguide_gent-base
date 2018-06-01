@@ -31,7 +31,7 @@ ul {
       @include icon('checkmark');
 
       position: relative;
-      padding-left: 2rem;
+      padding-left: 1.6em;
 
       &::before {
         position: absolute;
@@ -46,7 +46,6 @@ ul {
 
   &.iconlist-small {
     li {
-      padding-left: 1.6em;
       font-size: .8rem;
       line-height: 2.4;
 
