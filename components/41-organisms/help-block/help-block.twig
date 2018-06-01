@@ -1,0 +1,55 @@
+<div class="help-block">
+  {% include '@h2' with {'h2_text': 'How can we help you further?'} %}
+
+  <div class="help-block-section">
+    {% include '@h3' with {'h3_text': '1. Maybe you were looking for this?'} %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'Filip Watteeuw',
+      'modifier': 'standalone-link'
+    } %}
+    {% include '@paragraph' with {
+      'text': 'Donec condimentum morbi et mollis ultrices eleifend a montes ante ad morbi est ad eleifend ullamcorper. Sapien tristique lectus integer ac condimentum orci nunc quisque',
+    } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'This is another link',
+      'modifier': 'standalone-link'
+    } %}
+    {% include '@paragraph' with {
+    'text': 'Donec condimentum morbi et mollis ultrices eleifend a montes ante ad morbi est ad eleifend ullamcorper.',
+    } %}
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'text': 'And a third link',
+      'modifier': 'standalone-link'
+    } %}
+    {% include '@paragraph' with {
+    'text': 'Donec condimentum morbi et mollis ultrices eleifend a montes ante ad morbi est ad eleifend ullamcorper. Sapien tristique lectus integer ac condimentum orci nunc quisque',
+    } %}
+  </div>
+
+  <div class="help-block-section">
+    {% include '@h3' with {'h3_text': ''} %}
+    {% include '@search' with {
+      'label': '2. Try to find the page through our search function',
+      'text': 'Search!',
+      'for': 'search_field_403',
+      'search_id': 'search_field_403'
+    } %}
+  </div>
+
+  <div class="help-block-section">
+  {% include '@h3' with {'h3_text': '3. Continue to navigate from here'} %}
+  {% include '@paragraph' with {
+    'text': 'This can be done in several ways:',
+  } %}
+  {% include '@list' with {
+    'type': 'unordered',
+    'items': [
+      '<i class="icon-home"></i> Return to the <a href="javascript:(void);" alt="Homepage">homepage</a>',
+      '<i class="icon-fancyback"></i>Use the back button of your browser'
+    ]
+  } %}
+  </div>
+</div>
