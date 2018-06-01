@@ -1,6 +1,14 @@
 .form-item {
   margin-bottom: 1rem;
 
+  &.error {
+    legend,
+    label,
+    .label-optional {
+      color: color('red');
+    }
+  }
+
   .form-label {
     > label {
       @at-root .no-optional .label-optional {

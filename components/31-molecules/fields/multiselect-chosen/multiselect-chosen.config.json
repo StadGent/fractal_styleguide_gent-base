@@ -1,6 +1,7 @@
 {
   "title": "Multiselect with Chosen",
   "status": "beta",
+  "hidden": "hidden",
   "handle": "multiselect-chosen",
   "collated": true,
   "context": {

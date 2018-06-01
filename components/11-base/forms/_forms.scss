@@ -42,7 +42,7 @@ $field-icon-padding: 2.5rem;
     padding-right: $field-icon-padding;
     border: 0;
     background: color('dark-gray', -5) $field-icon-position;
-    background-image: svg-as-background('lock-closed', color('dark-gray', -2));
+    background-image: svg-as-background('lock-closed', color('dark-gray', -2), 20, 20);
     cursor: not-allowed;
   }
 
@@ -50,13 +50,13 @@ $field-icon-padding: 2.5rem;
     padding-right: $field-icon-padding;
     border: 1px solid color('green');
     background: color('green', -6) $field-icon-position;
-    background-image: svg-as-background('checkmark', color('green'));
+    background-image: svg-as-background('checkmark-circle', color('green'), 26, 26);
     color: color('dark-gray', 1);
 
     &:focus {
       border-color: color('green');
       background: color('green', -6) $field-icon-position;
-      background-image: svg-as-background('checkmark', color('green'));
+      background-image: svg-as-background('checkmark-circle', color('green'), 26, 26);
     }
   }
 
@@ -64,14 +64,14 @@ $field-icon-padding: 2.5rem;
     padding-right: $field-icon-padding;
     border: 1px solid color('red');
     background: color('red', -6) $field-icon-position;
-    background-image: svg-as-background('exclamation-circle', color('red'));
+    background-image: svg-as-background('exclamation-circle', color('red'), 26, 26);
     color: color('red');
     font-style: italic;
 
     &:focus {
       border-color: color('red');
       background: color('red', -6) $field-icon-position;
-      background-image: svg-as-background('exclamation-circle', color('red'));
+      background-image: svg-as-background('exclamation-circle', color('red'), 26, 26);
     }
   }
 

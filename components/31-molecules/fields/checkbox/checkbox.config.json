@@ -11,22 +11,18 @@
     "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.",
     "description": "Description checkboxes.",
 
-    "label_checkbox1": "Checkbox option 1",
-    "checkbox1_name": "checkbox-1",
-    "checkbox1_id": "checkbox-1",
-
-    "checkbox1_label": "Label checkbox 1",
-    "checkbox1_label_for": "checkbox-1",
-    "checkbox1_label_optional": "",
-
-
-    "label_checkbox2": "Checkbox option 2",
-    "checkbox2_name": "checkbox-2",
-    "checkbox2_id": "checkbox-2",
-
-    "checkbox2_label": "Label checkbox 2",
-    "checkbox2_label_for": "checkbox-2",
-    "checkbox2_label_optional": ""
+    "options": [
+      {
+        "label_checkbox": "Checkbox option 1",
+        "checkbox_name": "checkboxgroup",
+        "checkbox_id": "checkbox-1"
+      },
+      {
+        "label_checkbox": "Checkbox option 2",
+        "checkbox_name": "checkboxgroup",
+        "checkbox_id": "checkbox-2"
+      }
+    ]
   },
   "variants": [
     {
@@ -36,13 +32,37 @@
     {
       "name": "with-error",
       "context": {
-        "modifier": "error"
+        "modifier": "error",
+        "options": [
+          {
+            "label_checkbox": "Checkbox option 1",
+            "checkbox_name": "checkboxgroup-error",
+            "checkbox_id": "checkbox-error-1"
+          },
+          {
+            "label_checkbox": "Checkbox option 2",
+            "checkbox_name": "checkboxgroup-error",
+            "checkbox_id": "checkbox-error-2"
+          }
+        ]
       }
     },
     {
       "name": "with-success",
       "context": {
-        "modifier": "success"
+        "modifier": "success",
+        "options": [
+          {
+            "label_checkbox": "Checkbox option 1",
+            "checkbox_name": "checkboxgroup-success",
+            "checkbox_id": "checkbox-success-1"
+          },
+          {
+            "label_checkbox": "Checkbox option 2",
+            "checkbox_name": "checkboxgroup-success",
+            "checkbox_id": "checkbox-success-2"
+          }
+        ]
       }
     }
   ]
