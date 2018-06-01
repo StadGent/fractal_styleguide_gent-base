@@ -3,11 +3,17 @@
   "version": "3.0.0",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
     "@frctl/fractal": "^1.1.7",
     "@frctl/twig": "git+https://github.com/tnottu/fractal-twig-adapter.git",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
     "event-stream": "^3.3.4",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.1",
     "gulp-bump": "^2.7.0",
     "gulp-cached": "^1.1.1",
     "gulp-contrib-copy": "^0.1.3",
@@ -47,7 +53,7 @@
   "optionalDependencies": {
     "gulp-axe-webdriver": "^1.4.0"
   },
-  "scripts" : {
+  "scripts": {
     "postinstall": "cd scripts; ./postinstall.sh"
   }
 }

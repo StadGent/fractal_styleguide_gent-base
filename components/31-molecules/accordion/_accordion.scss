@@ -1,0 +1,17 @@
+.accordion {
+  [aria-expanded=true] {
+    @include icon(minus);
+  }
+
+  [aria-expanded=false] {
+    @include icon(plus);
+  }
+
+  .accordion--content {
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+  }
+
+  .accordion--expanded {
+  }
+}

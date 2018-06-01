@@ -25,10 +25,10 @@ a {
     @include button-icon;
     @include icon(arrow-right);
 
-    text-decoration: none;
     // Overrule flex for IE
-    padding-top: .6em;
     align-items: flex-start;
+    padding-top: .6em;
+    text-decoration: none;
 
     &.button-success {
       @extend %button-success;
