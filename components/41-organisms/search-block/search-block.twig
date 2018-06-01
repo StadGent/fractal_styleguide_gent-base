@@ -16,6 +16,11 @@
       ]
     } %}
 
-    {% include '@h3' with {'h3_text': 'Are you looking for another page?'} %}
+    {% include '@search' with {
+      'label': 'Are you looking for another page?',
+      'text': 'Search!',
+      'for': 'search_field_403',
+      'search_id': 'search_field_403'
+    } %}
   </div>
 </div>

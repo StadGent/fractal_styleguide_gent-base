@@ -1,7 +1,6 @@
 {
   "title": "Search",
   "status": "alpha",
-  "hidden": "hidden",
   "handle": "search",
   "context": {
     "label": "What are you looking for?",
@@ -11,7 +10,6 @@
     "modifier_search": "inline",
     "text": "Submit",
     "search_id": "header-search",
-    "search_name": "header-search",
-    "modifier_submit": "btn--inline"
+    "search_name": "header-search"
   }
 }

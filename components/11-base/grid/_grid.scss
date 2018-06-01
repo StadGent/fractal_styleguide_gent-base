@@ -73,6 +73,6 @@ $susy: (
 ///
 %wider,
 .wider {
-  margin-right: -16.66%;
-  margin-left: -16.66%;
+  margin-right: -$gutter-width/2;
+  margin-left: -$gutter-width/2;
 }

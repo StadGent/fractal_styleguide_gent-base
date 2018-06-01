@@ -3,7 +3,8 @@ ol {
   position: relative;
   margin-left: 1rem;
 
-  li {
+  li,
+  li > a {
     font-family: $default-font-family;
     font-size: .9rem;
     line-height: 2.1;
@@ -14,8 +15,6 @@ ol {
   }
 
   a {
-    margin-left: -.3rem;
-    font-size: .8rem;
     font-weight: normal;
   }
 }

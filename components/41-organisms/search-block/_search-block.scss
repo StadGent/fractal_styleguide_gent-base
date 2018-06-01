@@ -2,23 +2,21 @@
   @include theme('background-color', 'color-primary--lighten-4', 'search-block-background');
 
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 3.1rem;
   padding: 0 .8rem 2rem;
 
   @include tablet {
     justify-content: flex-start;
+    flex-wrap: nowrap;
     margin-top: 0;
     padding: 2rem ($gutter-width*2);
   }
 
   h2 {
     @extend %h4;
-  }
-
-  h3 {
-    @extend %h5;
   }
 
   ul {
@@ -30,14 +28,34 @@
     }
 
     li {
-      display: flex;
-      align-items: center;
+      position: relative;
+      margin-bottom: .5rem;
+      padding-left: 1.8rem;
+      line-height: 1.8;
+
+      &,
+      > * {
+        font-size: .8rem;
+      }
     }
 
     i {
-      margin-right: .5rem;
-      font-size: 1.3em;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: 2rem;
+      margin: auto;
+      font-size: 1.4em;
     }
+  }
+
+  input[type="search"] {
+    @include theme('background-color', 'color-secondary', 'search-block-input-background');
+  }
+
+  input[type="submit"] {
+    @include button-block;
   }
 
   &-icon {
@@ -46,8 +64,10 @@
     margin: -3.1rem 0 1rem;
 
     @include tablet {
+      width: 8rem;
+      height: 8rem;
       align-self: center;
-      width: span(2 of 9);
+      justify-self: flex-start;
       margin: 0 2.5rem 0 0;
     }
   }
