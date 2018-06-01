@@ -96,6 +96,7 @@
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+  vertical-align: bottom;
 
   &:disabled {
     @include button-disabled;
