@@ -1,6 +1,6 @@
 {
   "title": "Input file",
-  "status": "beta",
+  "status": "alpha",
   "handle": "input-file",
   "context": {
     "file_name": "file_name",

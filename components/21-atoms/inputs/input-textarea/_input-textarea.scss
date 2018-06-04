@@ -1,5 +1,5 @@
 textarea {
-  @extend %field-base;
+  @include field-base;
 
   height: auto;
   min-height: 7.2rem;

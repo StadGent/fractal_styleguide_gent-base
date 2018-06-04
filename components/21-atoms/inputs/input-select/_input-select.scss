@@ -1,5 +1,5 @@
 select {
-  @extend %field-base;
+  @include field-base;
 
   $fill-color: color('cyan-wcag');
   $svg-shevron-down: svg-icon('shevron-down', $fill-color, 24, 24);

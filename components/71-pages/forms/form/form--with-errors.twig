@@ -21,12 +21,18 @@
         "label": "Name",
         "for": "name_id",
 
+        "modifier": "error",
+        "field_message": "Please fill in your name",
+
         "textfield_id": "name_id",
         "textfield_name": "name_name"
       }%}
       {% include '@textfield' with {
-        "label": "Name",
+        "label": "First name",
         "for": "name_id",
+
+        "modifier": "error",
+        "field_message": "Please fill in your first name",
 
         "textfield_id": "name_id",
         "textfield_name": "name_name"
@@ -36,6 +42,9 @@
         "label": "E-mail address",
         "for": "email_id",
 
+        "modifier": "error",
+        "field_message": "Please fill in your email",
+
         "email_id": "email_id",
         "email_name": "email_name"
       }
@@ -44,6 +53,9 @@
       with {
         "label": "Phone number",
         "for": "tel_id",
+
+        "modifier": "error",
+        "field_message": "Please fill in a valid telephone number",
 
         "tel_id": "tel_id",
         "tel_name": "tel_name"
@@ -72,7 +84,9 @@
             "radio_name": "radiogroup",
             "radio_id": "radio-3"
           }
-        ]
+        ],
+        "modifier": "error",
+        "field_message": "Please pick a date."
       }
       %}
     </fieldset>
@@ -87,6 +101,9 @@
         "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
         "field_error": "",
         "description": "Description textfield.",
+
+        "modifier": "error",
+        "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
 
         "textfield_id": "textfield_id",
         "textfield_name": "textfield_name"
@@ -127,7 +144,9 @@
           "checkbox_name": "checkboxgroup",
           "checkbox_id": "checkbox-1"
         },
-      ]
+      ],
+        "modifier": "error",
+        "field_message": "Lorem ipsum dolor set"
     }
     %}
 

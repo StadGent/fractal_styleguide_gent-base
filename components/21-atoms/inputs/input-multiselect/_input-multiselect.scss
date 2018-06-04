@@ -1,5 +1,5 @@
 select[multiple] {
-  @extend %field-base;
+  @include field-base;
 
   height: auto;
   padding: .6rem .8rem 1.8rem;
