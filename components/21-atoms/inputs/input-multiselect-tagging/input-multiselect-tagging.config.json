@@ -1,9 +1,9 @@
 {
-  "title": "Input Multiselect with Chosen",
+  "title": "Input Multiselect with tagging",
   "status": "beta",
-  "handle": "input-multiselect-chosen",
+  "handle": "input-multiselect-tagging",
   "context": {
-    "label": "Multiselect with Chosen",
+    "label": "Multiselect with tagging",
     "multiselect_name": "multiselect_name",
     "multiselect_id": "multiselect_id",
     "options": [

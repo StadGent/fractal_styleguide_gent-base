@@ -82,7 +82,6 @@ Inside this stylguide we have the following Javascript enabled components:
 ** Atoms **
 
 * Button-drop
-* Input-multiselect-chosen
 
 ** Molecules **
 
@@ -111,22 +110,6 @@ Implements a drop-down button based on a list element.
 
 Binds the functionality to a DOM element and the window.onload event
 inside this style guide.
-
-## Input multi-select chosen
-
-Style guide implementation of the
-<a href="{{path '/components/detail/input-multiselect-chosen'}}">multiselect
-with Chosen</a>.
-
-We omitted to create a functions.js file, since all functions are provided
-by the Chosen jQuery plugin.
-
-**Dependencies**
-[Chosen jQuery plugin](https://github.com/harvesthq/chosen)
-
-### Input-multiselect-chosen.binding.js
-
-Implements chosen jQuery plugin in this Style guide.
 
 ## Breadcrumbs
 

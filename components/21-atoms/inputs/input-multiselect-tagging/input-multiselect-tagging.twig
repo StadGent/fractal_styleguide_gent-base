@@ -1,7 +1,7 @@
 <select name="{{ multiselect_name }}"
         id="{{ multiselect_id }}"
         multiple="multiple"
-        class="chosen-select {% if modifier %}{{ modifier }}{% endif %}">
+        class="multiselect-tagging {% if modifier %}{{ modifier }}{% endif %}">
   {% for option in options %}
     <option>{{ option.label }}</option>
   {% endfor %}

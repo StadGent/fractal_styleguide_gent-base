@@ -1,11 +1,10 @@
 {
-  "title": "Multiselect with Chosen",
+  "title": "Multiselect with tagging",
   "status": "beta",
-  "hidden": "hidden",
-  "handle": "multiselect-chosen",
+  "handle": "multiselect-tagging",
   "collated": true,
   "context": {
-    "label": "Label multiselect with chosen",
+    "label": "Label multiselect with tagging",
     "for": "multiselect_id",
     "label_optional": "Optional",
 
@@ -33,7 +32,7 @@
   "variants": [
     {
       "name": "default",
-      "handle": "multiselect-chosen"
+      "handle": "multiselect-tagging"
     },
     {
       "name": "with-error",
