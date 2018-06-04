@@ -18,6 +18,9 @@
 
   return (elem, options) => {
 
+    /**
+     * Override default options with options param
+     */
     options = Object.assign({
       expand: (button, content) => {
         content.style.maxHeight = `${content.scrollHeight}px`;
@@ -33,16 +36,29 @@
           e.target.setAttribute('hidden', 'true');
         }
       },
-      init: true
+      init: true,
+      buttonSelector: 'button.accordion-button'
     }, options);
 
-    const buttons = elem.querySelectorAll('button.accordion-button');
+    const buttons = elem.querySelectorAll(options.buttonSelector);
+
+    /**
+     * Toggle aria-expanded attributes and trigger visibility Change function
+     *
+     * @param {event} e
+     */
     const toggle = (e) => {
       e.preventDefault();
       const button = e.target;
       button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
       setVisibility(button);
     };
+
+    /**
+     * Handle keyboard input: arrows, home & end
+     *
+     * @param {event} e
+     */
     const keyDown = (e) => {
       const keyCode = e.keyCode || e.which;
       let current = (() => {
@@ -77,6 +93,11 @@
           break;
       }
     };
+
+    /**
+     * Add events to buttons.
+     * Listen for animationEnd on accordionContent.
+     */
     const addEvents = () => {
       for (let i = buttons.length; i--;) {
         const button = buttons[i];
@@ -87,6 +108,12 @@
         accordionContent.addEventListener('transitionend', options.transitionEnd);
       }
     };
+
+    /**
+     * Hide or show the accordion content.
+     *
+     * @param {element} button
+     */
     const setVisibility = (button) => {
 
       const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
@@ -106,12 +133,19 @@
         options.collapse(button, accordionContent);
       }
     };
+
+    /**
+     * Set all attributes and toggle visibility accordingly.
+     */
     const setInitial = () => {
       for (let i = buttons.length; i--;) {
         setVisibility(buttons[i]);
       }
     };
 
+    /**
+     * Enable accordion functionality
+     */
     const init = () => {
       setInitial();
       addEvents();

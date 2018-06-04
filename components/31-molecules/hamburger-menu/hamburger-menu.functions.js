@@ -31,7 +31,7 @@
         return;
       }
 
-      // TabTrap doens't use jquery opbjects.
+      // TabTrap doens't use jquery objects.
       var tabTrap = new gent_styleguide.TabTrap($drawer[0]); // eslint-disable-line no-undef
 
       /**
