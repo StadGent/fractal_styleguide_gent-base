@@ -11,15 +11,34 @@
       module.exports = factory();
     }
     else {
-      root.accordion = factory();
+      root.Accordion = factory();
     }
   }
 }(this || window, function () {
 
-  let Accordion = (elem) => {
+  return (elem, options) => {
+
+    let custom = options || {};
+
+    const defaults = {
+      expand: (button, content) => {
+        content.style.maxHeight = `${content.scrollHeight}px`;
+      },
+      collapse: (button, content) => {
+        content.style.maxHeight = 0;
+      },
+      transitionEnd: (e) => {
+        if (e.propertyName !== 'max-height') {
+          return;
+        }
+        if (!e.target.classList.contains('accordion--expanded')) {
+          e.target.setAttribute('hidden', 'true');
+        }
+      },
+      init: true
+    };
 
     const buttons = elem.querySelectorAll('button.accordion-button');
-
     const toggle = (e) => {
       e.preventDefault();
       const button = e.target;
@@ -67,14 +86,7 @@
         button.addEventListener('keydown', keyDown);
 
         const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
-        accordionContent.addEventListener('transitionend', (e) => {
-          if (e.propertyName !== 'max-height') {
-            return;
-          }
-          if (!e.target.classList.contains('accordion--expanded')) {
-            e.target.setAttribute('hidden', 'true');
-          }
-        });
+        accordionContent.addEventListener('transitionend', custom.transitionEnd || defaults.transitionEnd);
       }
     };
     const setVisibility = (button) => {
@@ -88,12 +100,22 @@
         accordionContent.classList.add('accordion--expanded');
         accordionContent.setAttribute('aria-hidden', 'false');
         accordionContent.removeAttribute('hidden');
-        accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`;
+        if (custom.expand) {
+          custom.expand(button, accordionContent);
+        }
+        else {
+          defaults.expand(button, accordionContent);
+        }
       }
       else {
         accordionContent.classList.remove('accordion--expanded');
         accordionContent.setAttribute('aria-hidden', 'true');
-        accordionContent.style.maxHeight = 0;
+        if (custom.collapse) {
+          custom.collapse(button, accordionContent);
+        }
+        else {
+          defaults.collapse(button, accordionContent);
+        }
       }
     };
     const setInitial = () => {
@@ -107,20 +129,10 @@
       addEvents();
     };
 
-    return {init};
-
-  };
-
-  const init = (selector) => {
-
-    const selected = document.querySelectorAll(selector);
-    for (let i = selected.length; i--;) {
-      let accordion = new Accordion(selected[i]);
-      accordion.init();
+    if (custom.init !== false) {
+      init();
     }
-  };
 
-  return {
-    init: init
+    return {init};
   };
 }));

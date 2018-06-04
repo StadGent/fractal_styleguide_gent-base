@@ -1,4 +1,11 @@
 .accordion {
+
+  .accordion-button {
+    width: 100%;
+    padding: 0;
+    color: inherit;
+  }
+
   [aria-expanded=true] {
     @include icon(minus);
   }
@@ -8,10 +15,22 @@
   }
 
   .accordion--content {
-    transition: all .5s ease-in-out;
+    transition: max-height .5s ease-in-out;
     overflow: hidden;
   }
 
-  .accordion--expanded {
+}
+
+ul.accordion {
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+dl.accordion {
+  dd {
+    padding: 0;
   }
 }
