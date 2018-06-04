@@ -163,6 +163,7 @@ dl.timeline {
       position: relative;
       flex-wrap: wrap;
       width: 100%;
+      max-width: none;
       margin: 0 0 0 1.5rem;
       padding: .5rem calc(#{$gutter-width/2}) 2rem 2.5rem;
       border-left: 3px solid;
