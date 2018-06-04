@@ -18,9 +18,7 @@
 
   return (elem, options) => {
 
-    let custom = options || {};
-
-    const defaults = {
+    options = Object.assign({
       expand: (button, content) => {
         content.style.maxHeight = `${content.scrollHeight}px`;
       },
@@ -36,7 +34,7 @@
         }
       },
       init: true
-    };
+    }, options);
 
     const buttons = elem.querySelectorAll('button.accordion-button');
     const toggle = (e) => {
@@ -86,7 +84,7 @@
         button.addEventListener('keydown', keyDown);
 
         const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
-        accordionContent.addEventListener('transitionend', custom.transitionEnd || defaults.transitionEnd);
+        accordionContent.addEventListener('transitionend', options.transitionEnd);
       }
     };
     const setVisibility = (button) => {
@@ -100,22 +98,12 @@
         accordionContent.classList.add('accordion--expanded');
         accordionContent.setAttribute('aria-hidden', 'false');
         accordionContent.removeAttribute('hidden');
-        if (custom.expand) {
-          custom.expand(button, accordionContent);
-        }
-        else {
-          defaults.expand(button, accordionContent);
-        }
+        options.expand(button, accordionContent);
       }
       else {
         accordionContent.classList.remove('accordion--expanded');
         accordionContent.setAttribute('aria-hidden', 'true');
-        if (custom.collapse) {
-          custom.collapse(button, accordionContent);
-        }
-        else {
-          defaults.collapse(button, accordionContent);
-        }
+        options.collapse(button, accordionContent);
       }
     };
     const setInitial = () => {
@@ -129,7 +117,7 @@
       addEvents();
     };
 
-    if (custom.init !== false) {
+    if (options.init !== false) {
       init();
     }
 
