@@ -1,0 +1,17 @@
+<ul class="accordion">
+  {% for item in items %}
+    <li>
+      <h3>
+        <button class="accordion--button"
+                aria-expanded="false"
+                aria-controls="accordion--multiple--content--{{ loop.index }}">
+          {{ item.buttonText }}
+        </button>
+      </h3>
+      <div class="accordion--content"
+           id="accordion--multiple--content--{{ loop.index }}">
+        {{ item.content }}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

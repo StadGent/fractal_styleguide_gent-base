@@ -1,6 +1,6 @@
 .accordion {
 
-  .accordion-button {
+  .accordion--button {
     @include icon(chevron-down);
 
     &::before{
@@ -44,7 +44,7 @@ dl.accordion {
 ul.accordion,
 dl.accordion {
 
-  .accordion-button {
+  .accordion--button {
     &[aria-expanded=true] {
       @include icon(minus);
 

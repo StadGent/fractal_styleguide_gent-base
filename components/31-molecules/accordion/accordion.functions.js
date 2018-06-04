@@ -19,7 +19,7 @@
   return (elem, options) => {
 
     /**
-     * Override default options with options param
+     * Override default options with options param.
      */
     options = Object.assign({
       expand: (button, content) => {
@@ -37,15 +37,15 @@
         }
       },
       init: true,
-      buttonSelector: 'button.accordion-button'
+      buttonSelector: 'button.accordion--button'
     }, options);
 
     const buttons = elem.querySelectorAll(options.buttonSelector);
 
     /**
-     * Toggle aria-expanded attributes and trigger visibility Change function
+     * Toggle aria-expanded attributes and trigger visibility Change function.
      *
-     * @param {event} e
+     * @param {event} e The triggered event.
      */
     const toggle = (e) => {
       e.preventDefault();
@@ -55,9 +55,9 @@
     };
 
     /**
-     * Handle keyboard input: arrows, home & end
+     * Handle keyboard input: arrows, home & end.
      *
-     * @param {event} e
+     * @param {event} e The triggered event.
      */
     const keyDown = (e) => {
       const keyCode = e.keyCode || e.which;
@@ -112,7 +112,7 @@
     /**
      * Hide or show the accordion content.
      *
-     * @param {element} button
+     * @param {Object} button  The accordion button.
      */
     const setVisibility = (button) => {
 
@@ -144,7 +144,7 @@
     };
 
     /**
-     * Enable accordion functionality
+     * Enable accordion functionality.
      */
     const init = () => {
       setInitial();
