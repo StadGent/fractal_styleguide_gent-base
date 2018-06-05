@@ -1,4 +1,8 @@
-$timeline-border: 4px;
+$timeline-border: 3px;
+$timeline-m-left-padding: 1.5rem;
+$timeline-m-right-padding: 2.5rem;
+$timeline-dt-left-padding: 11.5rem;
+$timeline-dt-right-padding: 5rem;
 
 dl.timeline {
   width: 100%;
@@ -9,7 +13,7 @@ dl.timeline {
 
   .timeline-slot {
 
-    @include tablet {
+    @include desktop {
       padding: 0 span(1 of 12) 0 span(2 of 12);
     }
 
@@ -31,55 +35,48 @@ dl.timeline {
     &:first-of-type {
       padding-top: 2rem;
 
-      > dt {
-        padding-top: 0;
-
-        &::before {
-          display: none;
-        }
-      }
-
       // First definition description inside the first timeline-slot.
       > dd:first-of-type {
-        margin-top: .3rem;
+        margin-top: -.4rem;
         padding-top: 0;
-
-        // Change the definition description indicator position.
-        &::before {
-          top: 0;
-        }
 
         // Fix whitespace.
         .timeline-slot-header {
-          margin-top: -.3rem;
+          margin-top: -.4rem;
+          padding-top: 0;
+        }
+      }
+
+      > dt:first-of-type {
+        margin-top: -.6rem;
+        padding-bottom: 1.2rem;
+
+        &::before {
+          content: none;
         }
       }
     }
 
     // Last timeline-slot last definition description specific styling.
-    &:last-of-type > dd:last-of-type {
-      border-color: transparent;
+    &:last-of-type {
+      padding-bottom: 2rem;
 
-      // Fix whitespace issue with the timeline border.
-      &::after {
-        @include theme('border-color', 'color-primary', 'timeline-line-color');
+      > dd:last-of-type {
 
-        position: absolute;
-        top: 0;
-        left: -3px;
-        height: 1.3rem;
-        border-left: 3px solid;
-        content: '';
+        // Horizontal timeline end.
+        &::before {
+          @include theme('border-color', 'color-primary', 'timeline-line-color');
+          position: absolute;
+          bottom: 0;
+          left: calc(#{$timeline-m-left-padding} - 1rem - 2px);
+          width: 2rem;
+          border-bottom: $timeline-border solid;
+          content: '';
 
-        @include tablet {
-          height: 2.3rem;
+          @include desktop {
+            left: calc(#{$timeline-dt-left-padding} - 1rem - 2px);
+          }
         }
-      }
-
-      // Hide video dots on last timeline-slot's last definition description.
-      .responsive-video::before,
-      .audio-description::after {
-        display: none;
       }
     }
 
@@ -90,14 +87,6 @@ dl.timeline {
         margin-left: -1.6rem;
         padding-left: 1.6rem;
         color: inherit;
-
-        &[aria-expanded="true"] {
-          @include icon('minus');
-        }
-
-        &[aria-expanded="false"] {
-          @include icon('plus');
-        }
 
         &::before {
           position: absolute;
@@ -112,6 +101,39 @@ dl.timeline {
       margin: .2rem 0;
       border: 0;
       background: transparent;
+
+      &::before,
+      button::after {
+
+        @include theme('background-color', 'color-secondary', 'timeline-slot-indicator-background');
+        @include theme('border-color', 'color-primary', 'timeline-slot-indicator-border-color');
+
+        display: block;
+        position: absolute;
+        top: .2rem;
+        left: -3rem;
+        width: .9rem;
+        height: .9rem;
+        transition: background-color .2s ease-in-out;
+        border: $timeline-border solid;
+        border-radius: 100%;
+        content: '';
+        z-index: 2;
+
+        @include desktop {
+          left: -5.5rem;
+        }
+      }
+
+      button:hover::after,
+      button:focus::after {
+        @include theme('background-color', 'color-primary--lighten-2', 'timeline-slot-active-indicator-background');
+      }
+
+      button[aria-expanded=true]::after {
+        @include theme('background-color', 'color-primary', 'timeline-slot-active-indicator-background');
+      }
+
     }
 
     &-date {
@@ -124,6 +146,24 @@ dl.timeline {
       width: 100%;
     }
 
+    &-header {
+      margin-bottom: $gutter-width;
+      padding-top: .5rem;
+
+      @include desktop {
+        padding-top: 2rem;
+      }
+    }
+
+    &-content {
+      &::after {
+        display: block;
+        position: relative;
+        height: $timeline-border;
+        content: '';
+      }
+    }
+
     > dt {
       @extend %h5;
 
@@ -132,11 +172,11 @@ dl.timeline {
       margin: 0;
       padding: 1.5rem 5% .5rem;
 
-      @include tablet {
+      @include desktop {
         position: absolute;
         top: 1.9rem;
         left: span(2 of 12);
-        width: 11.5rem;
+        width: $timeline-dt-left-padding;
         padding: 0 1.2rem 0 0;
         text-align: right;
       }
@@ -146,11 +186,11 @@ dl.timeline {
 
         position: absolute;
         top: 0;
-        left: 1.5rem;
+        left: calc(#{$timeline-m-left-padding} - 2px);
         height: 1rem;
-        border-left: 3px solid;
+        border-left: $timeline-border solid;
         content: '';
-        @include tablet {
+        @include desktop {
           display: none;
         }
       }
@@ -164,32 +204,32 @@ dl.timeline {
       flex-wrap: wrap;
       width: 100%;
       max-width: none;
-      margin: 0 0 0 1.5rem;
-      padding: .5rem calc(#{$gutter-width/2}) 2rem 2.5rem;
-      border-left: 3px solid;
+      margin: 0;
+      padding: 0 calc(#{$gutter-width/2}) 0 calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
+      overflow: hidden;
 
-      @include tablet {
-        margin: 0 0 0 11.5rem;
-        padding: 2rem calc(#{$gutter-width/2}) 2rem 5rem;
+      .accordion--content {
+        overflow: visible;
       }
 
-      &::before {
-        @include theme('background-color', 'color-secondary', 'timeline-slot-indicator-background');
-        @include theme('border-color', 'color-primary', 'timeline-slot-indicator-border-color');
+      @include desktop {
+        margin: 0;
+        padding: 0 calc(#{$gutter-width/2}) 0 calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+      }
 
-        display: block;
+      // new
+      &::after {
+        @include theme('border-color', 'color-primary', 'timeline-line-color');
+
         position: absolute;
-        top: .9rem;
-        left: -.5rem;
-        width: .9rem;
-        height: .9rem;
-        border: 3px solid;
-        border-radius: 100%;
+        top: 0;
+        bottom: 0;
+        left: calc(#{$timeline-m-left-padding} - 2px);
+        border-left: $timeline-border solid;
         content: '';
-        z-index: 2;
 
-        @include tablet {
-          top: 2.3rem;
+        @include desktop {
+          left: calc(#{$timeline-dt-left-padding} - 2px);
         }
       }
 
@@ -203,7 +243,7 @@ dl.timeline {
         width: calc(100% + 4.6rem + #{$timeline-border});
         margin-left: calc(-4rem - #{$timeline-border});
 
-        @include tablet {
+        @include desktop {
           width: calc(100% + 10rem + #{$timeline-border});
           margin-left: calc(-10rem - #{$timeline-border});
         }
@@ -230,14 +270,14 @@ dl.timeline {
           @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
 
           position: absolute;
-          left: calc(1.5rem + 1px);
+          left: calc(#{$timeline-m-left-padding} + 1px);
           height: 1rem;
           border-left: $timeline-border dotted;
           content: '';
           z-index: 10;
 
-          @include tablet {
-            left: calc(5rem + 1px);
+          @include desktop {
+            left: calc(#{$timeline-dt-right-padding} + 1px);
           }
         }
 
@@ -299,7 +339,7 @@ dl.timeline {
 
         // multiple image styling
         ul.image-gallery {
-          margin: 0 -1vw $gutter-width;
+          margin: 0 -1vw;
 
           // overrule single image styling
           .gallery-link {
@@ -347,7 +387,7 @@ dl.timeline {
             }
           }
 
-          @include tablet {
+          @include desktop {
 
             // overrule image gallery
             .image-gallery__show-more {
@@ -362,7 +402,7 @@ dl.timeline {
 
           @include desktop {
             max-width: calc(100% + #{$gutter-width});
-            margin: 0 calc((#{$gutter-width} / 2) * -1) $gutter-width;
+            margin: 0 calc((#{$gutter-width} / 2) * -1);
 
             li {
               width: calc((100% / 3) - #{$gutter-width} - .33px);
