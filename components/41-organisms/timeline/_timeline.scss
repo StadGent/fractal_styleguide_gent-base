@@ -1,4 +1,5 @@
 $timeline-border: 3px;
+$timeline-dot-width: 16px;
 $timeline-m-left-padding: 1.5rem;
 $timeline-m-right-padding: 2.5rem;
 $timeline-dt-left-padding: 11.5rem;
@@ -84,25 +85,6 @@ dl.timeline {
 
     // Timeline-slot title styling.
     &-title {
-      button {
-        width: 100%;
-        margin-left: -1.6rem;
-        padding-left: 1.6rem;
-        color: inherit;
-
-        &::before {
-          position: absolute;
-          left: -1.6rem;
-          font-size: 1.6em;
-          line-height: .9;
-        }
-      }
-
-      position: relative;
-      width: 100%;
-      margin: .2rem 0;
-      border: 0;
-      background: transparent;
 
       &::before,
       button::after {
@@ -113,9 +95,9 @@ dl.timeline {
         display: block;
         position: absolute;
         top: .2rem;
-        left: -3rem;
-        width: .9rem;
-        height: .9rem;
+        left: calc(-#{$timeline-m-right-padding} - #{$timeline-dot-width} / 2);
+        width: $timeline-dot-width;
+        height: $timeline-dot-width;
         transition: background-color .2s ease-in-out;
         border: $timeline-border solid;
         border-radius: 100%;
@@ -123,9 +105,38 @@ dl.timeline {
         z-index: 2;
 
         @include desktop {
-          left: -5.5rem;
+          left: calc(-#{$timeline-dt-right-padding} - #{$timeline-dot-width} / 2);
+          //left: -5.5rem;
         }
       }
+
+      button {
+        width: 100%;
+        margin-left: -2em;
+        padding-left: 2em;
+        color: inherit;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          font-size: 1.6em;
+          line-height: .9;
+        }
+
+        &::after {
+          left: calc(-#{$timeline-m-right-padding} - #{$timeline-dot-width} / 2 + 2em);
+
+          @include desktop {
+            left: calc(-#{$timeline-dt-right-padding} - #{$timeline-dot-width} / 2 + 2em);
+          }
+        }
+      }
+
+      position: relative;
+      width: 100%;
+      margin: .2rem 0;
+      border: 0;
+      background: transparent;
 
       button:hover::after,
       button:focus::after {

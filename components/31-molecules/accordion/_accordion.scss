@@ -1,22 +1,17 @@
 .accordion {
 
-  padding-left: 3rem;
-
   .accordion--button {
     @include icon(chevron-down);
-
-    width: 100%;
-    margin-left: -3rem;
-    padding-left: 3rem;
+    position: relative;
+    padding-right: 1.6em;
     color: inherit;
 
-
-    &::before{
+    &::before {
       position: absolute;
-      left: 0;
+      right: 0;
+      transition: transform .2s ease-in-out;
       font-size: 1.6em;
       line-height: .9;
-      transition: transform .2s ease-in-out;
     }
 
     &[aria-expanded=true] {
@@ -25,8 +20,6 @@
       }
     }
   }
-
-
 
   .accordion--content {
     transition: max-height .5s ease-in-out;
@@ -52,7 +45,22 @@ dl.accordion {
 ul.accordion,
 dl.accordion {
 
+
   .accordion--button {
+
+    width: 100%;
+    padding: 0;
+
+    &::before {
+      position: relative;
+      right: auto;
+      left: 0;
+      padding-right: .2em;
+      transition: transform .2s ease-in-out;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+
     &[aria-expanded=true] {
       @include icon(minus);
 
@@ -65,5 +73,4 @@ dl.accordion {
       @include icon(plus);
     }
   }
-
 }
