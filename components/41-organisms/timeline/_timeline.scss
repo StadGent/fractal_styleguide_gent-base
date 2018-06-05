@@ -106,7 +106,6 @@ dl.timeline {
 
         @include desktop {
           left: calc(-#{$timeline-dt-right-padding} - #{$timeline-dot-width} / 2);
-          //left: -5.5rem;
         }
       }
 
@@ -235,7 +234,6 @@ dl.timeline {
         padding: 0 calc(#{$gutter-width/2}) 0 calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
       }
 
-      // new
       &::after {
         @include theme('border-color', 'color-primary', 'timeline-line-color');
 
@@ -369,8 +367,6 @@ dl.timeline {
             width: calc((100% / 1) - 2vw);
             margin: 1vw;
 
-            //max-width: 270px;
-
             .gallery-link {
               padding-bottom: 2.3em;
             }
@@ -383,7 +379,7 @@ dl.timeline {
 
           .image-gallery__show-more {
 
-            //padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
+            // padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
             padding-bottom: 2.3em;
 
             &::before {
