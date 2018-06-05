@@ -12,10 +12,9 @@
     font-weight: 600;
   }
 
-  > * {
-    @include tablet {
-      width: span(7 of 12);
-    }
+
+  > *:not(.quote):not(.video):not(.image-gallery):not(aside):not(.timeline) {
+    width: span(7 of 12);
   }
 
   > .search-block,
