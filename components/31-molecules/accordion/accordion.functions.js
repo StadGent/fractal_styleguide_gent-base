@@ -23,29 +23,39 @@
     /**
      * Override default options with options param.
      */
-    options = Object.assign({
-      expand: (button, content) => {
-        content.style.maxHeight = `${content.scrollHeight}px`;
-      },
-      collapse: (button, content) => {
-        content.style.maxHeight = 0;
-      },
-      transitionEnd: (e) => {
-        if (e.propertyName !== 'max-height') {
-          return;
-        }
-        if (!e.target.classList.contains('accordion--expanded')) {
-          e.target.setAttribute('hidden', 'true');
-        }
-      },
-      resizeEvent: (e, expandedContent) => {
-        for (let i = expandedContent.length; i--;) {
-          options.expand(null, expandedContent[i]);
-        }
-      },
-      init: true,
-      buttonSelector: 'button.accordion--button'
-    }, options);
+    options = (() => {
+      const defaults = {
+        expand: (button, content) => {
+          content.style.maxHeight = `${content.scrollHeight}px`;
+        },
+        collapse: (button, content) => {
+          content.style.maxHeight = 0;
+        },
+        transitionEnd: (e) => {
+          if (e.propertyName !== 'max-height') {
+            return;
+          }
+          if (!e.target.classList.contains('accordion--expanded')) {
+            e.target.setAttribute('hidden', 'true');
+          }
+        },
+        resizeEvent: (e, expandedContent) => {
+          for (let i = expandedContent.length; i--;) {
+            options.expand(null, expandedContent[i]);
+          }
+        },
+        init: true,
+        buttonSelector: 'button.accordion--button'
+      };
+      const keys = Object.keys(defaults);
+      let options = options || {};
+
+      for (let i = keys.length; i--;) {
+        options[keys[i]] = options[keys[i]] || defaults[keys[i]];
+      }
+
+      return options;
+    })();
 
     const buttons = elem.querySelectorAll(options.buttonSelector);
 
@@ -126,6 +136,7 @@
      * Hide or show the accordion content.
      *
      * @param {Object} button  The accordion button.
+     * @param {boolean} isInitial  True if this is the first run triggered by init().
      */
     const setVisibility = (button, isInitial) => {
 
