@@ -173,6 +173,9 @@
       }
     };
 
+    /**
+     * Closes all accordion items.
+     */
     const closeAll = () => {
       for (let i = buttons.length; i--;) {
         buttons[i].setAttribute('aria-expanded', 'false');
@@ -180,6 +183,9 @@
       }
     };
 
+    /**
+     * Opens all accordion items.
+     */
     const openAll = () => {
       for (let i = buttons.length; i--;) {
         buttons[i].setAttribute('aria-expanded', 'true');
