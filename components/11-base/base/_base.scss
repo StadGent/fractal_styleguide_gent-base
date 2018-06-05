@@ -79,3 +79,8 @@ dd,
 q {
   max-width: 40rem;
 }
+
+input[type=button],
+button {
+  font: $default-font-weight $default-font-size $default-font-family;
+}
