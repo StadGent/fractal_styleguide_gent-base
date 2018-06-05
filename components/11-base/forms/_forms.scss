@@ -65,7 +65,6 @@ $field-icon-padding: 2.5rem;
     border: 1px solid color('red');
     background: color('red', -6) $field-icon-position;
     background-image: svg-as-background('exclamation-circle', color('red'), 26, 26);
-    color: color('red');
     font-style: italic;
 
     &:focus {
@@ -226,24 +225,12 @@ $field-icon-padding: 2.5rem;
     // Checkbox specific error state.
     //
     [class*="cs--"] & {
-      &.success {
-        + label {
-          color: color('green');
-        }
-
-        + label::before {
-          border-color: color('green');
-        }
+      &.success + label::before {
+        border-color: color('green');
       }
 
-      &.error {
-        + label {
-          color: color('red');
-        }
-
-        + label::before {
-          border-color: color('red');
-        }
+      &.error + label::before {
+        border-color: color('red');
       }
     }
 
@@ -328,14 +315,6 @@ $field-icon-padding: 2.5rem;
 
 .form-item {
   margin-bottom: 1rem;
-
-  &.error {
-    legend,
-    label,
-    .label-optional {
-      color: color('red');
-    }
-  }
 
   .form-label {
     > label {

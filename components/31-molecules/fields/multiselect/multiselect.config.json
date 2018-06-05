@@ -16,16 +16,22 @@
     "multiselect_name": "multiselect_name",
     "options": [
       {
-        "label": "Option 1"
+      "label": "Option 1"
       },
       {
-        "label": "Option 2"
+      "label": "Option 2"
       },
       {
-        "label": "Option 3"
-      },
-      {
-        "label": "Option 4"
+      "optgroup": true,
+      "label": "Option group",
+      "optgroupoptions": [
+        {
+          "label": "Option 3"
+        },
+        {
+          "label": "Option 4"
+        }
+        ]
       }
     ]
   },
