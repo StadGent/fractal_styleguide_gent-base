@@ -136,7 +136,8 @@
      * Hide or show the accordion content.
      *
      * @param {Object} button  The accordion button.
-     * @param {boolean} isInitial  True if this is the first run triggered by init().
+     * @param {boolean|false} isInitial  True if this is the first run triggered by
+     *   init().
      */
     const setVisibility = (button, isInitial) => {
 
@@ -172,6 +173,20 @@
       }
     };
 
+    const closeAll = () => {
+      for (let i = buttons.length; i--;) {
+        buttons[i].setAttribute('aria-expanded', 'false');
+        setVisibility(buttons[i]);
+      }
+    };
+
+    const openAll = () => {
+      for (let i = buttons.length; i--;) {
+        buttons[i].setAttribute('aria-expanded', 'true');
+        setVisibility(buttons[i]);
+      }
+    };
+
     /**
      * Enable accordion functionality.
      */
@@ -184,6 +199,6 @@
       init();
     }
 
-    return {init};
+    return {init, closeAll, openAll};
   };
 }));
