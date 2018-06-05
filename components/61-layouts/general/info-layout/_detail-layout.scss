@@ -18,6 +18,7 @@
 
     &.image-gallery,
     &.quote,
+    &.help-block,
     &.search-block {
       @include tablet {
         margin-right: span(2 of 12);
@@ -36,6 +37,7 @@
     font-weight: 600;
   }
 
+  .help-block,
   .search-block {
     @extend %wider;
 

@@ -1,6 +1,7 @@
 .help-block {
   @include theme('background-color', 'color-primary--lighten-4', 'search-block-background');
 
+  margin-bottom: 2rem;
   padding: 2rem .8rem;
 
   @include tablet {
@@ -46,19 +47,15 @@
     }
   }
 
-  input[type="search"] {
-    @include theme('background-color', 'color-secondary', 'search-block-input-background');
-  }
-
-  input[type="submit"] {
-    @include button-block;
-  }
-
   &-section {
     margin-bottom: 2rem;
 
     &:last-of-type {
       margin: 0;
     }
+  }
+
+  .search {
+    width: span(7 of 9);
   }
 }

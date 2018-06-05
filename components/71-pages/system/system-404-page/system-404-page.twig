@@ -1,13 +1,27 @@
 <main class="detail-layout">
 
-    {% include '@h1' with { 'h1_text': "We can\'t find the page you're looking for" } %}
+    {% include '@h1' with { 'h1_text': "We can't find the page you're looking for" } %}
 
 		{% include 'paragraph' with { 'text': 'Fusce malesuada enim a sagittis ornare. Proin placerat lacinia quam ut pulvinar. Morbi nec leo ante. Donec rhoncus enim velit, eu imperdiet mauris pulvinar eget. Suspendisse vitae gravida ex. Mauris convallis aliquam mi vitae commodo. Aenean at velit ornare, feugiat ligula eget, ultricies erat.' } %}
 
     {% include '@help-block' %}
 
-    {% include '@quote' %}
-
+    <div class="404-poetry">
+      {% include '@h2' with { 'h2_text': 'Speurtocht' } %}
+      {% include 'paragraph' with {
+        'text': 'we kamden de stad uit,<br />
+                braken tegels los, keerden <br />
+                kapelletjes, kerken, begraafplaatsen <br />
+                ondersteboven, daalden in waterputten af, <br />
+                stonden met huiszoekingsbevelen te zwaaien.<br />
+                <br />
+                helaas, wat u zocht, heeft zich verstopt<br />
+                bij het verdwenen paneel van het Lam Gods. '
+      } %}
+      {% include 'paragraph' with {
+        'text': '<strong>David Troch, Stadsdichter Gent</strong>'
+      } %}
+    </div>
 </main>
 
 {% include '@footer' %}
