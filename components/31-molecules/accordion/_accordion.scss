@@ -10,7 +10,7 @@
       position: absolute;
       right: 0;
       transition: transform .2s ease-in-out;
-      font-size: 1.6em;
+      font-size: 1.6rem;
       line-height: .9;
     }
 
@@ -50,6 +50,7 @@ dl.accordion {
 
     width: 100%;
     padding: 0;
+    overflow: visible;
 
     &::before {
       position: relative;
