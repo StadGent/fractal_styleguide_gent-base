@@ -18,6 +18,8 @@
 
   return (elem, options) => {
 
+    let expandedContent = [];
+
     /**
      * Override default options with options param.
      */
@@ -34,6 +36,11 @@
         }
         if (!e.target.classList.contains('accordion--expanded')) {
           e.target.setAttribute('hidden', 'true');
+        }
+      },
+      resizeEvent: (e, expandedContent) => {
+        for (let i = expandedContent.length; i--;) {
+          options.expand(null, expandedContent[i]);
         }
       },
       init: true,
@@ -106,6 +113,12 @@
 
         const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
         accordionContent.addEventListener('transitionend', options.transitionEnd);
+
+        if (options.resizeEvent) {
+          window.addEventListener('resize', (e) => {
+            options.resizeEvent(e, expandedContent);
+          });
+        }
       }
     };
 
@@ -114,7 +127,7 @@
      *
      * @param {Object} button  The accordion button.
      */
-    const setVisibility = (button) => {
+    const setVisibility = (button, isInitial) => {
 
       const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
       if (!accordionContent) {
@@ -125,11 +138,16 @@
         accordionContent.classList.add('accordion--expanded');
         accordionContent.setAttribute('aria-hidden', 'false');
         accordionContent.removeAttribute('hidden');
+        expandedContent.push(accordionContent);
         options.expand(button, accordionContent);
       }
       else {
         accordionContent.classList.remove('accordion--expanded');
         accordionContent.setAttribute('aria-hidden', 'true');
+        if (isInitial) {
+          accordionContent.setAttribute('hidden', 'true');
+        }
+        expandedContent.filter(content => content !== accordionContent);
         options.collapse(button, accordionContent);
       }
     };
@@ -139,7 +157,7 @@
      */
     const setInitial = () => {
       for (let i = buttons.length; i--;) {
-        setVisibility(buttons[i]);
+        setVisibility(buttons[i], true);
       }
     };
 
