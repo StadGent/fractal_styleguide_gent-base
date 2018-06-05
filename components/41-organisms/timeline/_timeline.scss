@@ -67,6 +67,7 @@ dl.timeline {
         // Horizontal timeline end.
         &::before {
           @include theme('border-color', 'color-primary', 'timeline-line-color');
+
           position: absolute;
           bottom: 0;
           left: calc(#{$timeline-m-left-padding} - 1rem - 2px);
@@ -157,10 +158,15 @@ dl.timeline {
     }
 
     &-content {
+
+      *:last-of-type {
+        margin-bottom: 0;
+      }
+
       &::after {
         display: block;
         position: relative;
-        height: $timeline-border;
+        height: 1.6rem;
         content: '';
       }
     }
@@ -325,11 +331,11 @@ dl.timeline {
 
             @include phablet {
               width: calc(100% / 2 - 1vw);
-              max-width: 100%;
             }
 
             @include desktop {
               width: calc((100% / 3 - #{$gutter-width} / 1.5) - .33px);
+              max-width: 100%;
               margin: calc(#{$gutter-width} / 2) 0 $gutter-width;
             }
 
@@ -352,14 +358,38 @@ dl.timeline {
             width: calc((100% / 1) - 2vw);
             margin: 1vw;
 
+            //max-width: 270px;
+
+            .gallery-link {
+              padding-bottom: 2.3em;
+            }
+
             // only two images
-            &:not(.image-gallery__show-more):nth-of-type(n + 3) {
+            &:not(.image-gallery__show-more):nth-of-type(n + 2) {
               display: none;
             }
           }
 
           .image-gallery__show-more {
-            padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
+
+            //padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
+            padding-bottom: 2.3em;
+
+            &::before {
+              background-color: transparent;
+            }
+
+            .show-more__content {
+              @include theme('color', 'color-primary', 'link-color');
+
+              display: inline-block;
+              margin-top: .3rem;
+              text-align: right;
+
+              .show-more__total {
+                display: none;
+              }
+            }
           }
 
           @include mobile {
@@ -367,10 +397,14 @@ dl.timeline {
           }
 
           @include phablet {
-            max-width: calc(100% + 2vw);
+            max-width: calc(270px * 2 + 2vw);
 
             li {
               width: calc((100% / 2) - 2vw);
+
+              .gallery-link {
+                padding: 0;
+              }
             }
 
             // only show first two images
@@ -385,10 +419,26 @@ dl.timeline {
 
             .image-gallery__show-more {
               padding-bottom: calc(((100% / 2) - 2vw) / 1.6);
+
+              &::before {
+                @include theme('background-color', 'color-primary--darken-3', 'image-gallery-show-more-background-color');
+              }
+
+              .show-more__content {
+                @include theme('color', 'color-secondary', 'image-gallery-show-more-color');
+
+                display: flex;
+                margin-top: 0;
+                text-align: center;
+
+                .show-more__total {
+                  display: inline-block;
+                }
+              }
             }
           }
 
-          @include desktop {
+          @include tablet {
 
             // overrule image gallery
             .image-gallery__show-more {
