@@ -24,7 +24,7 @@ $field-icon-padding: 2.5rem;
 /// @require field-base
 /// @require theme
 ///
-%field-base {
+@mixin field-base {
   @include theme('border-color', 'color-tertiary--lighten-2', 'fields-border-color');
   @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
   @include theme('color', 'color-tertiary--darken-1', 'fields-color');
@@ -42,7 +42,7 @@ $field-icon-padding: 2.5rem;
     padding-right: $field-icon-padding;
     border: 0;
     background: color('dark-gray', -5) $field-icon-position;
-    background-image: svg-as-background('lock-closed', color('dark-gray', -2));
+    background-image: svg-as-background('lock-closed', color('dark-gray', -2), 20, 20);
     cursor: not-allowed;
   }
 
@@ -50,13 +50,13 @@ $field-icon-padding: 2.5rem;
     padding-right: $field-icon-padding;
     border: 1px solid color('green');
     background: color('green', -6) $field-icon-position;
-    background-image: svg-as-background('checkmark', color('green'));
+    background-image: svg-as-background('checkmark-circle', color('green'), 26, 26);
     color: color('dark-gray', 1);
 
     &:focus {
       border-color: color('green');
       background: color('green', -6) $field-icon-position;
-      background-image: svg-as-background('checkmark', color('green'));
+      background-image: svg-as-background('checkmark-circle', color('green'), 26, 26);
     }
   }
 
@@ -64,14 +64,13 @@ $field-icon-padding: 2.5rem;
     padding-right: $field-icon-padding;
     border: 1px solid color('red');
     background: color('red', -6) $field-icon-position;
-    background-image: svg-as-background('exclamation-circle', color('red'));
-    color: color('red');
+    background-image: svg-as-background('exclamation-circle', color('red'), 26, 26);
     font-style: italic;
 
     &:focus {
       border-color: color('red');
       background: color('red', -6) $field-icon-position;
-      background-image: svg-as-background('exclamation-circle', color('red'));
+      background-image: svg-as-background('exclamation-circle', color('red'), 26, 26);
     }
   }
 
@@ -120,3 +119,248 @@ $field-icon-padding: 2.5rem;
     font-size: .7rem;
   }
 }
+
+///
+/// The base styling for choice fields.
+///   - Radio buttons.
+///   - Checkboxes.
+///
+/// @since 3.0.0
+/// @group theming
+/// @access public
+/// @author Gert-Jan Meire
+///
+@mixin choices-field-base($type) {
+  position:  relative;
+  margin-bottom: .5rem;
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 1.4rem;
+    line-height: 1.1rem;
+    overflow: unset;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+    }
+
+    &::before {
+      display: inline-block;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid;
+      border-radius: border-radius('radius-1');
+      content: '';
+    }
+
+    &::after {
+      display: block;
+    }
+  }
+
+  @if $type == 'checkbox' {
+    label {
+      &::before {
+        @include theme('background-color', 'color-tertiary--lighten-6', 'checkbox-background-color');
+        @include theme('border-color', 'color-tertiary--lighten-2', 'checkbox-border-color');
+      }
+
+      &::after {
+        top: 0;
+        left: -.1rem;
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+  @if $type == 'radio' {
+    label {
+      &::before {
+        @include theme('background-color', 'color-tertiary--lighten-6', 'radio-background-color');
+        @include theme('border-color', 'color-tertiary--lighten-2', 'radio-border-color');
+
+        border-radius: border-radius('radius-4');
+      }
+
+      &::after {
+        @include theme('background-color', 'color-primary--lighten-1', 'radio-background-color');
+        @include theme('border-color', 'color-primary--lighten-1', 'radio-border-color');
+
+        top: .3rem;
+        left: .3rem;
+        width: .4rem;
+        height: .4rem;
+        border-radius: border-radius('radius-4');
+        z-index: 999;
+      }
+    }
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    opacity: 0;
+
+    //
+    // Styling of the label.
+    //
+    + label {
+      @include theme('color', 'color-tertiary', 'label-color');
+
+      // Hide checkmark by default.
+      &::after {
+        content: none;
+      }
+    }
+
+    //
+    // Checkbox specific success state.
+    // Checkbox specific error state.
+    //
+    [class*="cs--"] & {
+      &.success + label::before {
+        border-color: color('green');
+      }
+
+      &.error + label::before {
+        border-color: color('red');
+      }
+    }
+
+    //
+    // @TODO: Update when a focus style has been designed.
+    //
+    &:focus + label {
+      outline: 1px dotted;
+    }
+
+    //
+    // Disabled state.
+    //
+    &:disabled {
+      + label {
+        font-weight: normal !important; // sass-lint:disable-line no-important
+        cursor: not-allowed;
+
+        &::before {
+          border-color: color('dark-gray', -4) !important; // sass-lint:disable-line no-important
+          background: color('dark-gray', -4) !important; // sass-lint:disable-line no-important
+        }
+
+        &::after {
+          color: color('dark-gray') !important; // sass-lint:disable-line no-important
+        }
+      }
+    }
+
+    //
+    // Checkbox specific styling.
+    //
+    @if $type == 'checkbox' {
+      // Checked state.
+      &:checked {
+        // Show checkmark on checked.
+        + label {
+          @include icon('checkmark', 'after');
+
+          font-weight: 700;
+
+          &::after {
+            font-size: 1.2rem;
+          }
+        }
+
+        + label::before {
+          @include theme('background-color', 'color-primary--lighten-5', 'checkbox-background-color-checked');
+          @include theme('border-color', 'color-primary', 'checkbox-border-color-checked');
+        }
+
+        + label::after {
+          @include theme('color', 'color-primary', 'checkbox-checkmark-color');
+        }
+      }
+    }
+
+    //
+    // Radio specific styling.
+    //
+    @if $type == 'radio' {
+      // Checked state.
+      &:checked {
+        // Show checkmark on checked.
+        + label {
+          font-weight: 700;
+        }
+
+        + label::before {
+          @include theme('background-color', 'color-primary--lighten-5', 'radio-background-color-checked');
+          @include theme('border-color', 'color-primary', 'radio-border-color-checked');
+        }
+
+        + label::after {
+          @include theme('color', 'color-primary', 'radio-checkmark-color');
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+.form-item {
+  margin-bottom: 1rem;
+
+  .form-label {
+    > label {
+      @at-root .no-optional .label-optional {
+        display: none;
+      }
+    }
+  }
+
+  .form-columns {
+    display: flex;
+    flex-wrap: wrap;
+
+    .form-item-column {
+      @include tablet {
+        width: calc(50% - #{$gutter-width});
+        margin-right: $gutter-width;
+      }
+
+      width: 100%;
+
+      &:first-child {
+        @include tablet {
+          order: 2;
+          width: 50%;
+          margin-right: 0;
+        }
+      }
+
+      &:last-child {
+        @include tablet {
+          order: 1;
+        }
+      }
+
+      .no-style & {
+        // Make full width form.
+        width: 100%;
+      }
+    }
+  }
+
+  .field-description {
+    margin-bottom: .8rem;
+
+    .no-style & {
+      display: none;
+    }
+  }
+}
+

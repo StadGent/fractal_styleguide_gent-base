@@ -1,0 +1,387 @@
+$timeline-border: 4px;
+
+dl.timeline {
+  width: 100%;
+
+  * {
+    font-size: .8rem;
+  }
+
+  .timeline-slot {
+
+    @include tablet {
+      padding: 0 span(1 of 12) 0 span(2 of 12);
+    }
+
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+    // Alternating timeline-slots get another background color.
+    &:nth-child(2n) {
+      @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
+
+      // Fix for video on alternating timeline-slots.
+      > dd .video-wrapper::after {
+        @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
+      }
+    }
+
+    // First timeline-slot specific styling.
+    &:first-of-type {
+      padding-top: 2rem;
+
+      > dt {
+        padding-top: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      // First definition description inside the first timeline-slot.
+      > dd:first-of-type {
+        margin-top: .3rem;
+        padding-top: 0;
+
+        // Change the definition description indicator position.
+        &::before {
+          top: 0;
+        }
+
+        // Fix whitespace.
+        .timeline-slot-header {
+          margin-top: -.3rem;
+        }
+      }
+    }
+
+    // Last timeline-slot last definition description specific styling.
+    &:last-of-type > dd:last-of-type {
+      border-color: transparent;
+
+      // Fix whitespace issue with the timeline border.
+      &::after {
+        @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+        position: absolute;
+        top: 0;
+        left: -3px;
+        height: 1.3rem;
+        border-left: 3px solid;
+        content: '';
+
+        @include tablet {
+          height: 2.3rem;
+        }
+      }
+
+      // Hide video dots on last timeline-slot's last definition description.
+      .responsive-video::before,
+      .audio-description::after {
+        display: none;
+      }
+    }
+
+    // Timeline-slot title styling.
+    &-title {
+      button {
+        width: 100%;
+        margin-left: -1.6rem;
+        padding-left: 1.6rem;
+        color: inherit;
+
+        &[aria-expanded="true"] {
+          @include icon('minus');
+        }
+
+        &[aria-expanded="false"] {
+          @include icon('plus');
+        }
+
+        &::before {
+          position: absolute;
+          left: -1.6rem;
+          font-size: 1.6em;
+          line-height: .9;
+        }
+      }
+
+      position: relative;
+      width: 100%;
+      margin: .2rem 0;
+      border: 0;
+      background: transparent;
+    }
+
+    &-date {
+      display: block;
+      width: 100%;
+    }
+
+    &-content,
+    &-header {
+      width: 100%;
+    }
+
+    > dt {
+      @extend %h5;
+
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 1.5rem 5% .5rem;
+
+      @include tablet {
+        position: absolute;
+        top: 1.9rem;
+        left: span(2 of 12);
+        width: 11.5rem;
+        padding: 0 1.2rem 0 0;
+        text-align: right;
+      }
+
+      &::before {
+        @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+        position: absolute;
+        top: 0;
+        left: 1.5rem;
+        height: 1rem;
+        border-left: 3px solid;
+        content: '';
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
+    > dd {
+      @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 0 0 1.5rem;
+      padding: .5rem calc(#{$gutter-width/2}) 2rem 2.5rem;
+      border-left: 3px solid;
+
+      @include tablet {
+        margin: 0 0 0 11.5rem;
+        padding: 2rem calc(#{$gutter-width/2}) 2rem 5rem;
+      }
+
+      &::before {
+        @include theme('background-color', 'color-secondary', 'timeline-slot-indicator-background');
+        @include theme('border-color', 'color-primary', 'timeline-slot-indicator-border-color');
+
+        display: block;
+        position: absolute;
+        top: .9rem;
+        left: -.5rem;
+        width: .9rem;
+        height: .9rem;
+        border: 3px solid;
+        border-radius: 100%;
+        content: '';
+        z-index: 2;
+
+        @include tablet {
+          top: 2.3rem;
+        }
+      }
+
+      &.active::before {
+        @include theme('background-color', 'color-primary', 'timeline-slot-active-indicator-background');
+      }
+
+      // Video component styling inside a timeline-slot.
+      .video-wrapper {
+        position: relative;
+        width: calc(100% + 4.6rem + #{$timeline-border});
+        margin-left: calc(-4rem - #{$timeline-border});
+
+        @include tablet {
+          width: calc(100% + 10rem + #{$timeline-border});
+          margin-left: calc(-10rem - #{$timeline-border});
+        }
+
+        // Fix to add whitespace to the video top and bottom areas.
+        &::before,
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: color('white');
+          content: '';
+          z-index: 1;
+        }
+
+        &::after {
+          @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
+        }
+
+        .video .audio-description::after,
+        .responsive-video::before {
+          @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
+
+          position: absolute;
+          left: calc(1.5rem + 1px);
+          height: 1rem;
+          border-left: $timeline-border dotted;
+          content: '';
+          z-index: 10;
+
+          @include tablet {
+            left: calc(5rem + 1px);
+          }
+        }
+
+        .video {
+          position: relative;
+          padding-top: 2rem;
+          border: 0;
+          z-index: 2;
+
+          .audio-description {
+            min-height: 2rem;
+            padding-left: 3rem;
+
+            // Dots after a video intersection.
+            &::after {
+              bottom: .2rem;
+            }
+          }
+        }
+
+        .responsive-video {
+          // Dots before a video intersection.
+          &::before {
+            top: -1.8rem;
+          }
+        }
+      }
+
+      // Image gallery component styling inside a timeline-slot.
+      .image-gallery-wrapper {
+
+        // single image styling
+        .image-gallery {
+          figcaption {
+            display: none;
+          }
+
+          .gallery-link {
+            @include mobile {
+              max-width: 270px;
+            }
+
+            @include phablet {
+              width: calc(100% / 2 - 1vw);
+              max-width: 100%;
+            }
+
+            @include desktop {
+              width: calc((100% / 3 - #{$gutter-width} / 1.5) - .33px);
+              margin: calc(#{$gutter-width} / 2) 0 $gutter-width;
+            }
+
+            width: 100%;
+            margin: 1vw 0 $gutter-width;
+          }
+        }
+
+        // multiple image styling
+        ul.image-gallery {
+          margin: 0 -1vw $gutter-width;
+
+          // overrule single image styling
+          .gallery-link {
+            width: 100%;
+            margin: 0;
+          }
+
+          li {
+            width: calc((100% / 1) - 2vw);
+            margin: 1vw;
+
+            // only two images
+            &:not(.image-gallery__show-more):nth-of-type(n + 3) {
+              display: none;
+            }
+          }
+
+          .image-gallery__show-more {
+            padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
+          }
+
+          @include mobile {
+            max-width: 270px;
+          }
+
+          @include phablet {
+            max-width: calc(100% + 2vw);
+
+            li {
+              width: calc((100% / 2) - 2vw);
+            }
+
+            // only show first two images
+            li:not(.image-gallery__show-more):nth-of-type(-n + 2) {
+              display: inline-block;
+            }
+
+            // hide 'show more' if there are no more than two images
+            li:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
+              display: none;
+            }
+
+            .image-gallery__show-more {
+              padding-bottom: calc(((100% / 2) - 2vw) / 1.6);
+            }
+          }
+
+          @include tablet {
+
+            // overrule image gallery
+            .image-gallery__show-more {
+              display: inline-block;
+            }
+
+            // hide 'show more' if there are no more than three images
+            li:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
+              display: none;
+            }
+          }
+
+          @include desktop {
+            max-width: calc(100% + #{$gutter-width});
+            margin: 0 calc((#{$gutter-width} / 2) * -1) $gutter-width;
+
+            li {
+              width: calc((100% / 3) - #{$gutter-width} - .33px);
+              margin: calc(#{$gutter-width} / 2);
+            }
+
+            // only show first three images
+            li:not(.image-gallery__show-more):nth-of-type(-n + 3) {
+              display: inline-block;
+            }
+
+            // hide 'show more' if there are no more than three images
+            li:first-of-type:nth-last-of-type(-n+4) ~ .image-gallery__show-more {
+              display: none;
+            }
+
+            .image-gallery__show-more {
+              padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.6);
+            }
+          }
+        }
+      }
+    }
+  }
+}
