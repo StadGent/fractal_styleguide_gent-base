@@ -139,7 +139,7 @@ $field-icon-padding: 2.5rem;
     top: 0;
     left: 0;
     padding-left: 1.4rem;
-    line-height: 1.1rem;
+    line-height: 1.6;
     overflow: unset;
 
     &::before,
@@ -331,8 +331,6 @@ $field-icon-padding: 2.5rem;
         width: calc(50% - #{$gutter-width});
         margin-right: $gutter-width;
       }
-
-      width: 100%;
 
       &:first-child {
         @include tablet {
