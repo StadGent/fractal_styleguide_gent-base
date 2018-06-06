@@ -1,6 +1,6 @@
 .accordion {
 
-  .accordion--button {
+  &--button {
     @include icon(chevron-down);
     position: relative;
     padding-right: 1.6em;
@@ -29,20 +29,11 @@
 
 }
 
-ul.accordion {
-  margin: 0;
+ul, dt {
+  .accordion {
 
-  li {
-    list-style: none;
   }
 }
-
-dl.accordion {
-  dd {
-    padding: 0;
-  }
-}
-
 ul.accordion,
 dl.accordion {
 
@@ -73,5 +64,19 @@ dl.accordion {
     &[aria-expanded=false] {
       @include icon(plus);
     }
+  }
+}
+
+ul.accordion {
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+dl.accordion {
+  dd {
+    padding: 0;
   }
 }
