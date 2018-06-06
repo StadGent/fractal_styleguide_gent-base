@@ -53,6 +53,8 @@ a {
     transition: margin .1s ease-in;
     font-size: 1.2rem;
     line-height: 1;
+    // For IE purposes first set underline, then remove it.
+    text-decoration: underline;
     vertical-align: text-bottom;
   }
 
@@ -105,12 +107,7 @@ a {
     display: inline-block;
     padding: 0 $link-padding;
 
-    // For IE purposes first set underline, then remove it.
-    &::after { // sass-lint:disable-line no-mergeable-selectors
-      text-decoration: underline;
-    }
-
-    &::after { // sass-lint:disable-line no-mergeable-selectors
+    &::after {
       display: inline-block;
       text-decoration: none;
     }
