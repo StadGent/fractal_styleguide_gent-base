@@ -45,7 +45,8 @@
           }
         },
         init: true,
-        buttonSelector: 'button.accordion--button'
+        buttonSelector: 'button.accordion--button',
+        accordionExpandedClass: 'accordion--expanded'
       };
       const keys = Object.keys(defaults);
       let options = options || {};
@@ -147,14 +148,14 @@
       }
 
       if (button.getAttribute('aria-expanded') === 'true') {
-        accordionContent.classList.add('accordion--expanded');
+        accordionContent.classList.add(options.accordionExpandedClass);
         accordionContent.setAttribute('aria-hidden', 'false');
         accordionContent.removeAttribute('hidden');
         expandedContent.push(accordionContent);
         options.expand(button, accordionContent);
       }
       else {
-        accordionContent.classList.remove('accordion--expanded');
+        accordionContent.classList.remove(options.accordionExpandedClass);
         accordionContent.setAttribute('aria-hidden', 'true');
         if (isInitial) {
           accordionContent.setAttribute('hidden', 'true');
