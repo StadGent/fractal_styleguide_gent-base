@@ -187,7 +187,7 @@ dl.timeline {
       position: relative;
       width: 100%;
       margin: 0;
-      padding: 1.5rem 5% .5rem;
+      padding: 1.5rem calc(#{$timeline-m-left-padding} -  #{$timeline-dot-width} / 2) .5rem;
 
       @include desktop {
         position: absolute;
