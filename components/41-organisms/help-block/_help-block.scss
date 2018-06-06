@@ -41,7 +41,7 @@
       top: 0;
       bottom: 0;
       left: 0;
-      height: 2rem;
+      height: 1.8em;
       margin: auto;
       font-size: 1.4em;
     }
@@ -56,6 +56,8 @@
   }
 
   .search {
-    width: span(7 of 9);
+    @include desktop {
+      width: span(7 of 9);
+    }
   }
 }

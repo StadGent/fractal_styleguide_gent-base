@@ -30,9 +30,8 @@
   </div>
 
   <div class="help-block-section">
-    {% include '@h3' with {'h3_text': ''} %}
+    {% include '@h3' with {'h3_text': '2. Try to find the page through our search function'} %}
     {% include '@search' with {
-      'label': '2. Try to find the page through our search function',
       'text': 'Search!',
       'for': 'search_field_403',
       'search_id': 'search_field_403'
@@ -47,8 +46,8 @@
   {% include '@list' with {
     'type': 'unordered',
     'items': [
-      '<i class="icon-home"></i> Return to the <a href="javascript:(void);" alt="Homepage">homepage</a>',
-      '<i class="icon-fancyback"></i>Use the back button of your browser'
+      '<i class="icon-home" aria-hidden="true"></i> Return to the <a href="javascript:(void);" alt="Homepage">homepage</a>',
+      '<i class="icon-fancyback" aria-hidden="true"></i>Use the back button of your browser'
     ]
   } %}
   </div>
