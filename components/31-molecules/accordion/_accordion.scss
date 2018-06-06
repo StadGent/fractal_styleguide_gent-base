@@ -1,6 +1,6 @@
 .accordion {
 
-  &--button {
+  .accordion--button {
     @include icon(chevron-down);
     position: relative;
     padding-right: 1.6em;
@@ -29,11 +29,6 @@
 
 }
 
-ul, dt {
-  .accordion {
-
-  }
-}
 ul.accordion,
 dl.accordion {
 
