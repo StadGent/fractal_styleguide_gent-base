@@ -1,5 +1,5 @@
 <div class="feedback-form {{ modifier }}">
-  <h2><button aria-expanded="true" aria-controls="feedback-form-content">{{ 'Can we improve something about this page?' }}<i class="icon-chevron-down" aria-hidden="true"></i></button></h2>
+  <h2><button>{{ 'Can we improve something about this page?' }}<i class="icon-chevron-down" aria-hidden="true" aria-expanded="true" aria-controls="feedback-form-content"></i></button></h2>
   <div id="feedback-form-content" class="content" tabindex="-1">
     <div class="info-box">
       {% include '@image' with {
@@ -30,8 +30,7 @@
         {% include '@textarea' with {
           'label':  'Let us know'
         } %}
-        {% include '@button' with {
-          'type': 'primary',
+        {% include '@button-primary' with {
           'text': 'Send suggestion'
         } %}
       </fieldset>
