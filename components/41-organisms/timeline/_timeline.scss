@@ -71,13 +71,13 @@ dl.timeline {
 
           position: absolute;
           bottom: 0;
-          left: calc(#{$timeline-m-left-padding} - 1rem - 2px);
-          width: 2rem;
+          left: calc(#{$timeline-m-left-padding} - .5rem - 1px);
+          width: 1rem;
           border-bottom: $timeline-border solid;
           content: '';
 
           @include desktop {
-            left: calc(#{$timeline-dt-left-padding} - 1rem - 2px);
+            left: calc(#{$timeline-dt-left-padding} - .5rem - 1px);
           }
         }
       }
