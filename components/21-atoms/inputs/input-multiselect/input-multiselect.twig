@@ -8,7 +8,18 @@
           disabled="disabled"
         {% endif %}
 >
-  {% for option in options %}
+{% for option in options %}
+
+  {% if option.optgroup %}
+    <optgroup label="{{ option.label }}">
+      {% for opt in option.optgroupoptions %}
+        <option>{{ opt.label }}</option>
+      {% endfor %}
+    </optgroup>
+
+  {% else %}
     <option>{{ option.label }}</option>
-  {% endfor %}
+  {% endif %}
+
+{% endfor %}
 </select>
