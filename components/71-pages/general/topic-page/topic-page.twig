@@ -8,6 +8,10 @@
 </header>
 
 <main class="content-container">
+  {% include '@h1' with {
+    "h1_text": "Topic page"
+  } %}
+
   <section class="page-container section--default">
     <div class="content-container">
       {% include '@teaser-topic-collection' with {
