@@ -1,0 +1,77 @@
+.accordion {
+
+  .accordion--button {
+    @include icon(chevron-down);
+    position: relative;
+    padding-right: 1.6em;
+    padding-left: 0;
+    color: inherit;
+
+    &::before {
+      position: absolute;
+      right: 0;
+      transition: transform .2s ease-in-out;
+      font-size: 1.6rem;
+      line-height: .9;
+    }
+
+    &[aria-expanded=true] {
+      &::before {
+        transform: scaleY(-1);
+      }
+    }
+  }
+
+  .accordion--content {
+    transition: max-height .5s ease-in-out;
+    overflow: hidden;
+  }
+
+}
+
+ul.accordion,
+dl.accordion {
+
+  .accordion--button {
+
+    width: 100%;
+    padding: 0;
+    overflow: visible;
+
+    &::before {
+      position: relative;
+      right: auto;
+      left: 0;
+      padding-right: .2em;
+      transition: transform .2s ease-in-out;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+
+    &[aria-expanded=true] {
+      @include icon(minus);
+
+      &::before {
+        transform: none;
+      }
+    }
+
+    &[aria-expanded=false] {
+      @include icon(plus);
+    }
+  }
+}
+
+ul.accordion {
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+dl.accordion {
+  dd {
+    padding: 0;
+  }
+}

@@ -25,6 +25,9 @@ a {
     @include button-icon;
     @include icon(arrow-right);
 
+    // Overrule flex for IE
+    align-items: flex-start;
+    padding-top: .6em;
     text-decoration: none;
 
     &.button-success {

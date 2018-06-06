@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 100%;
   margin-top: 3.1rem;
   padding: 0 .8rem 2rem;
 
@@ -17,6 +18,16 @@
 
   h2 {
     @extend %h4;
+  }
+
+  h3 {
+    @extend %h5;
+
+    margin: 0;
+  }
+
+  a {
+    @include theme('color', 'color-primary--darken-1', 'search-block-link-color');
   }
 
   ul {

@@ -1,10 +1,10 @@
 <h2 class="visually-hidden">Timeline</h2>
-<dl class="timeline">
+<dl class="timeline accordion">
   <div class="timeline-slot">
     <dt>2018</dt>
     <dd>
       <div class="timeline-slot-header">
-        <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content">Title</button></h3>
+        <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--1" class="accordion--button">Title</button></h3>
         <span class="timeline-slot-date">27 august 2017</span>
         <div class="image-gallery-wrapper">
           {% include '@image-gallery--multiple' with {
@@ -27,6 +27,11 @@
             ]
           } %}
         </div>
+      </div>
+      <div class="timeline-slot-content accordion--content" id="timeline-slot-content--1">
+        {% include '@paragraph' with {
+          'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+        } %}
       </div>
     </dd>
   </div>
@@ -34,7 +39,7 @@
     <dt>2017</dt>
     <dd>
       <div class="timeline-slot-header">
-        <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content">Title</button></h3>
+        <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--2" class="accordion--button">Title</button></h3>
         <span class="timeline-slot-date">27 august 2017</span>
         <div class="image-gallery-wrapper">
           {% include '@image-gallery--multiple' with {
@@ -58,16 +63,21 @@
           } %}
         </div>
       </div>
+      <div class="timeline-slot-content accordion--content" id="timeline-slot-content--2">
+        {% include '@paragraph' with {
+          'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+        } %}
+      </div>
     </dd>
     <dd>
       <div class="timeline-slot-header">
-        <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content">Title</button></h3>
+        <h3 class="timeline-slot-title">Title</h3>
         <span class="timeline-slot-date">7 november 2017</span>
       </div>
     </dd>
     <dd>
       <div class="timeline-slot-header">
-        <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content">Title</button></h3>
+        <h3 class="timeline-slot-title">Title</h3>
         <span class="timeline-slot-date">7 november 2017</span>
       </div>
     </dd>
@@ -76,7 +86,7 @@
     <dt>Once upon a time</dt>
     <dd>
       <div class="timeline-slot-header">
-        <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content">Title</button></h3>
+        <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--5" class="accordion--button">Title</button></h3>
         <span class="timeline-slot-date">27 august 2011</span>
         <div class="image-gallery-wrapper">
           {% include '@image-gallery--multiple' with {
@@ -115,13 +125,18 @@
           } %}
         </div>
       </div>
+      <div class="timeline-slot-content accordion--content" id="timeline-slot-content--5">
+        {% include '@paragraph' with {
+        'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+        } %}
+      </div>
     </dd>
   </div>
   <div class="timeline-slot">
     <dt>Sometime in 2016</dt>
     <dd class="active">
       <div class="timeline-slot-header">
-        <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content">Title</button></h3>
+        <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content--6" class="accordion--button">Title</button></h3>
         <span class="timeline-slot-date">Januari 2016</span>
         <div class="image-gallery-wrapper">
           {% include '@image-gallery--multiple' with {
@@ -145,7 +160,7 @@
           } %}
         </div>
       </div>
-      <div class="timeline-slot-content">
+      <div class="timeline-slot-content accordion--content" id="timeline-slot-content--6">
         {% include '@paragraph' with {
           'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
         } %}
@@ -163,7 +178,7 @@
     <dt>1,4 till 1,6 milion years ago</dt>
     <dd>
       <div class="timeline-slot-header">
-        <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content">Title</button></h3>
+        <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content--7" class="accordion--button">Title</button></h3>
         <span class="timeline-slot-date">On a thursday</span>
         <div class="image-gallery-wrapper">
           {% include '@image-gallery' with {
@@ -173,7 +188,7 @@
           } %}
         </div>
       </div>
-      <div class="timeline-slot-content">
+      <div class="timeline-slot-content accordion--content" id="timeline-slot-content--7">
         <div class="video-wrapper">
           {% include '@video' with {
             'title': 'Promofilm stad Gent.',
@@ -184,7 +199,7 @@
     </dd>
     <dd>
       <div class="timeline-slot-header">
-        <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content">Title</button></h3>
+        <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content--8" class="accordion--button">Title</button></h3>
         <span class="timeline-slot-date">On a thursday</span>
         <div class="image-gallery-wrapper">
           {% include '@image-gallery' with {
@@ -194,7 +209,7 @@
           } %}
         </div>
       </div>
-      <div class="timeline-slot-content">
+      <div class="timeline-slot-content accordion--content" id="timeline-slot-content--8">
         <div class="video-wrapper">
           {% include '@video' with {
             'title': 'Promofilm stad Gent.',
