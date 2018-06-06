@@ -1165,15 +1165,6 @@ change-case@2.3.x:
     upper-case "^1.1.1"
     upper-case-first "^1.1.0"
 
-choices.js@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/choices.js/-/choices.js-3.0.4.tgz#c0f76bd795e7b36939e87891a0cf17402fb6a2d2"
-  dependencies:
-    classnames "^2.2.5"
-    fuse.js "^2.2.2"
-    opn "^5.1.0"
-    redux "^3.3.1"
-
 chokidar@1.7.0, chokidar@^1.6.0, chokidar@^1.6.1:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
