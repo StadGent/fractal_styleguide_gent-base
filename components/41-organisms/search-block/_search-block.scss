@@ -19,6 +19,12 @@
     @extend %h4;
   }
 
+  h3 {
+    @extend %h5;
+
+    margin: 0;
+  }
+
   a {
     @include theme('color', 'color-primary--darken-1', 'search-block-link-color');
   }
