@@ -71,10 +71,30 @@ $susy: (
 /// @access  public
 /// @author Gert-Jan Meire
 ///
-%wider,
-.wider {
+%wide,
+.wide {
   margin-right: -$gutter-width/2;
   margin-left: -$gutter-width/2;
+
+  @include tablet {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+///
+/// Helper class to break out of the grid structure in targeted places.
+///
+/// @since 3.0.0
+/// @group grid
+/// @access  public
+/// @author Gert-Jan Meire
+///
+%extra-wide,
+.extra-wide {
+  width: calc(100% + (#{$gutter-width} * 2));
+  margin-right: -$gutter-width;
+  margin-left: -$gutter-width;
 
   @include tablet {
     margin-right: 0;

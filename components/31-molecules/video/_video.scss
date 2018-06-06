@@ -1,6 +1,8 @@
 .video {
   @include clearfix;
 
+  width: 100%;
+
   %responsive-video,
   .responsive-video {
     position: relative;
