@@ -38,7 +38,6 @@
   "dependencies": {
     "baguettebox.js": "^1.10.0",
     "breakpoint-sass": "^2.7.1",
-    "choices.js": "^3.0.4",
     "chosen-js": "^1.8.2",
     "masonry-layout": "^4.2.0",
     "sassdoc": "^2.5.0",
