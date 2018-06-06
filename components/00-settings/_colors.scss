@@ -190,9 +190,9 @@ $themes: (
     'color-box-shadow-hover': $box-shadow-primary color('cyan-wcag', -2),
     'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
     'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-primary-accolade': svg-as-background('accolade', color('cyan-wcag', -4)),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan-wcag', -4)),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1)),
+    'color-primary-accolade': svg-as-background('accolade', color('cyan-wcag', -4), 36, 19),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan-wcag', -4), 54, 23),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1), 54, 23),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
@@ -217,6 +217,7 @@ $themes: (
 
     'image-gallery-show-more-background-color': color('cyan-wcag', 3),
     'disclaimer-block-link-color': color('cyan-wcag', 1),
+    'fields-border-focus-color': color('cyan-wcag'),
   ),
   'purple': (
     // Required colors!
@@ -227,9 +228,9 @@ $themes: (
     'color-box-shadow-hover': $box-shadow-primary color('purple', -2),
     'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
     'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-primary-accolade': svg-as-background('accolade', color('purple', -4)),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('purple', -4)),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('purple', 1)),
+    'color-primary-accolade': svg-as-background('accolade', color('purple', -4), 36, 19),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('purple', -4), 54, 23),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('purple', 1), 54, 23),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
@@ -242,9 +243,9 @@ $themes: (
     'color-box-shadow': $box-shadow-primary color('orange', -3),
     'color-box-shadow-hover': $box-shadow-primary color('orange', -2),
     'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),    'color-primary-accolade': svg-as-background('accolade', color('orange', -4)),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('orange', -4)),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('orange', 1)),
+    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),    'color-primary-accolade': svg-as-background('accolade', color('orange', -4), 36, 19),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('orange', -4), 54, 23),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('orange', 1), 54, 23),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!

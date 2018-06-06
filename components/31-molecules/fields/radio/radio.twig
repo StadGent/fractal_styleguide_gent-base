@@ -1,7 +1,9 @@
-<fieldset class="form-item">
+<fieldset class="form-item {{ modifier }}">
   <legend>
     {{ label }}
-    <span class="label-optional">({{ label_optional }})</span>
+    {% if label_optional %}
+      <span class="label-optional">({{ label_optional }})</span>
+    {% endif %}
   </legend>
   <div class="form-columns">
     <div class="form-item-column">
@@ -11,17 +13,14 @@
     </div>
     <div class="form-item-column">
 
-      {% include '@input-radio' with {
-        'radio_label': label_radio1,
-        'radio_name': radio1_name,
-        'radio_id': radio1_id
-      } %}
+      {% for option in options %}
+        {% include '@input-radio' with {
+          'radio_label': option.label_radio,
+          'radio_name': option.radio_name,
+          'radio_id': option.radio_id
+        } %}
+      {% endfor %}
 
-      {% include '@input-radio' with {
-        'radio_label': label_radio2,
-        'radio_name': radio2_name,
-        'radio_id': radio2_id
-      } %}
 
       {% if modifier == 'error' %}
         {% include '@field-message' with {
