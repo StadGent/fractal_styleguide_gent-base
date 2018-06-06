@@ -1,0 +1,11 @@
+.search {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+
+  label {
+    @extend %h5;
+
+    width: 100%;
+  }
+}

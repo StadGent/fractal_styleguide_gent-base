@@ -3,25 +3,43 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin-top: 1.2rem;
+  padding: 0 $gutter-width;
   font-size: .9rem;
   line-height: 1.8;
 
+  > * {
+    width: calc(100% + $gutter-width);
+
+    @include tablet {
+      margin-right: span(3 of 12);
+      margin-left: span(2 of 12);
+    }
+
+    &.image-gallery,
+    &.quote,
+    &.search-block {
+      @include tablet {
+        margin-right: span(2 of 12);
+        margin-left: span(1 of 12);
+      }
+    }
+
+    &.timeline,
+    &.extra-info-box {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
 
   .summary-text {
     font-weight: 600;
   }
 
-  > *:not(.quote):not(.video):not(.image-gallery):not(aside):not(.timeline) {
-    width: span(7 of 12);
-  }
+  .search-block {
+    @extend %wider;
 
-  > .video,
-  > .gallery-link,
-  > .image-gallery {
-    width: span(9 of 12);
-    margin-bottom: $default-paragraph-margin;
+    margin-bottom: 4rem;
   }
 }
 

@@ -1,14 +1,28 @@
 <div class="search-block">
-  {% include '@h2' with {'h2_text': 'From here you can...'} %}
-
-  {% include '@list' with {
-    'type': 'unordered',
-    'items': [
-      '<i class="icon-home"></i> Return to the <a href="javascript:(void);" alt="Homepage">homepage</a>',
-      '<i class="icon-home"></i>Use the back button of your browser',
-      '<i class="icon-home"></i>Or notify us of the page through the <a href="javascript:(void);" alt="Contact form">contact form</a>',
-    ]
+  {% include '@image' with {
+    'src': '/styleguide/img/svg/whistle-light.svg',
+    'alt_text': '',
+    'modifier': 'search-block-icon'
   } %}
+  <div class="search-block-content">
+    {% include '@h2' with {'h2_text': 'From here you can...'} %}
 
-  {% include '@h3' with {'h3_text': 'Are you looking for another page?'} %}
+    {% include '@list' with {
+      'type': 'unordered',
+      'items': [
+        '<i class="icon-home"></i> Return to the <a href="javascript:(void);" alt="Homepage">homepage</a>',
+        '<i class="icon-fancyback"></i>Use the back button of your browser',
+        '<i class="icon-document"></i>Or notify us of the page through the <a href="javascript:(void);" alt="Contact form">contact form</a>',
+      ]
+    } %}
+
+    {% include '@h3' with {'h3_text': 'Are you looking for another page?'} %}
+
+    {% include '@search' with {
+      'label': '',
+      'text': 'Search!',
+      'for': 'search_field_403',
+      'search_id': 'search_field_403'
+    } %}
+  </div>
 </div>

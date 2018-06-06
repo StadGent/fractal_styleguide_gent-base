@@ -1,0 +1,110 @@
+.search-block {
+  @include theme('background-color', 'color-primary--lighten-4', 'search-block-background');
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3.1rem;
+  padding: 0 .8rem 2rem;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 2rem 3.7rem 2rem ($gutter-width*2);
+  }
+
+  h2 {
+    @extend %h4;
+  }
+
+  h3 {
+    @extend %h5;
+
+    margin: 0;
+  }
+
+  a {
+    @include theme('color', 'color-primary--darken-1', 'search-block-link-color');
+  }
+
+  ul {
+    margin: 0 0 2rem;
+    list-style-type: none;
+
+    @include tablet {
+      margin-left: auto;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: .5rem;
+      padding-left: 1.8rem;
+      line-height: 1.8;
+
+      &,
+      > * {
+        font-size: .8rem;
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: 2rem;
+      margin: auto;
+      font-size: 1.4em;
+    }
+  }
+
+  input[type="search"] {
+    @include theme('background-color', 'color-secondary', 'search-block-input-background');
+
+    margin-bottom: .5rem;
+    padding-left: 2.4rem;
+    background-image: svg-as-background('search', color('dark-gray'), 32, 32);
+    background-repeat: no-repeat;
+    background-position: left .4rem center;
+
+    &:focus {
+      background-image: svg-as-background('search', color('dark-gray'), 32, 32);
+      background-repeat: no-repeat;
+      background-position: left .4rem center;
+    }
+
+    @include desktop {
+      margin: 0 7rem 0 0;
+    }
+  }
+
+  input[type="submit"] {
+    @include desktop {
+      position: absolute;
+      right: -.5rem;
+      bottom: .1rem;
+      width: 7rem;
+    }
+  }
+
+  &-icon {
+    width: 6.2rem;
+    height: 6.2rem;
+    margin: -3.1rem 0 1rem;
+
+    @include tablet {
+      align-self: center;
+      width: 8rem;
+      height: 8rem;
+      margin: 0 2.5rem 0 0;
+      justify-self: flex-start;
+    }
+  }
+
+  &-content {
+    width: 100%;
+  }
+}
