@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   title: 'Timeline',
   status: 'ready',
