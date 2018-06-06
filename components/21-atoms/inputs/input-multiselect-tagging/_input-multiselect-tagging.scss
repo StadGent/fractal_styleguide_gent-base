@@ -30,7 +30,7 @@
       @include theme('background-color', 'color-primary--lighten-4', 'fields-tagging-tag-background');
       @include theme('color', 'color-tertiary', 'fields-tagging-tag-color');
 
-      margin: .4rem .4rem 0 .4rem ;
+      margin: .4rem .4rem 0;
       border-radius: border-radius('radius-1');
       border-color: transparent;
 
