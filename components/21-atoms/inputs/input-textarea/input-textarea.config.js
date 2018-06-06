@@ -31,7 +31,7 @@ module.exports = {
       name: 'disabled',
       hidden: 'hidden',
       context: {
-        disabled: 1
+        disabled: true
       }
     }
   ]

@@ -4,7 +4,7 @@
     @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
     @include theme('color', 'color-tertiary--darken-1', 'fields-color');
 
-    padding: .4rem 0 0 .4rem;
+    padding: 0;
 
     .error & {
       border: 1px solid color('red');
@@ -30,7 +30,7 @@
       @include theme('background-color', 'color-primary--lighten-4', 'fields-tagging-tag-background');
       @include theme('color', 'color-tertiary', 'fields-tagging-tag-color');
 
-      margin: 0 .4rem .4rem 0 ;
+      margin: .4rem .4rem 0 .4rem ;
       border-radius: border-radius('radius-1');
       border-color: transparent;
 
