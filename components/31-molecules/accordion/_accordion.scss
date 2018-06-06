@@ -4,6 +4,7 @@
     @include icon(chevron-down);
     position: relative;
     padding-right: 1.6em;
+    padding-left: 0;
     color: inherit;
 
     &::before {
@@ -44,7 +45,6 @@ dl.accordion {
 
 ul.accordion,
 dl.accordion {
-
 
   .accordion--button {
 

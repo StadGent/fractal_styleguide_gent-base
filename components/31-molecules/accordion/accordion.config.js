@@ -4,6 +4,7 @@ module.exports = {
   title: 'Accordion',
   name: 'Accordion',
   status: 'beta',
+  hidden: 'hidden',
   variants: [
     {
       name: 'default',
