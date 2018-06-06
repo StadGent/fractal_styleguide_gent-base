@@ -71,6 +71,7 @@ a {
   &[class^="icon-"] {
     display: inline-flex;
     align-items: center;
+    margin-left: -.3em;
     padding: 0 $link-padding;
   }
 
