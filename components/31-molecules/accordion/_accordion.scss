@@ -11,8 +11,8 @@
       position: absolute;
       right: 0;
       transition: transform .2s ease-in-out;
-      font-size: 1.6rem;
-      line-height: .9;
+      font-size: 1.2em;
+      line-height: 1.2;
     }
 
     &[aria-expanded=true] {
@@ -44,8 +44,12 @@ dl.accordion {
       left: 0;
       padding-right: .2em;
       transition: transform .2s ease-in-out;
-      font-size: 1em;
-      line-height: 1.4;
+      font-size: 1.2em;
+      line-height: 1.2;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+        top: .2em;
+      }
     }
 
     &[aria-expanded=true] {
