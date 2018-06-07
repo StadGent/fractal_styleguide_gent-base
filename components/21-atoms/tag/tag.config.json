@@ -1,9 +1,0 @@
-{
-  "title": "Tag",
-  "status": "beta",
-  "handle": "tag",
-  "order": 11,
-  "context": {
-    "tag_text": "Inner city"
-  }
-}
