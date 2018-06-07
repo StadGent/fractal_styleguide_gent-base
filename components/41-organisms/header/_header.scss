@@ -26,22 +26,10 @@ header.header {
       justify-content: flex-end;
 
       form {
-        @include icon(clock, 'before');
         display: flex;
         flex: 1;
         justify-content: flex-end;
 
-        &::before {
-          @include theme('background-color', 'color-primary--lighten-5', 'header-search-background-color');
-          display: flex;
-          align-items: center;
-          padding-left: .8rem;
-
-          border-top-left-radius: border-radius('radius-1');
-          border-bottom-left-radius: border-radius('radius-1');
-          font-size: 1.5rem;
-          line-height: 1;
-        }
       }
 
       label {
@@ -65,15 +53,15 @@ header.header {
 
       input[type=search],
       input[type=text] {
-
         @include theme('background-color', 'color-primary--lighten-5', 'header-search-background-color');
+
+
         flex: 0 1 320px;
         width: 100%;
         min-width: 0;
+        margin: 0;
         transition: flex-grow .2s ease-in;
         border: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
 
         &:invalid {
           box-shadow: none;
