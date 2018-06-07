@@ -1,40 +1,36 @@
-<div class="feedback-form {{ modifier }}">
-  <h2><button>{{ 'Can we improve something about this page?' }}<i class="icon-chevron-down" aria-hidden="true" aria-expanded="true" aria-controls="feedback-form-content"></i></button></h2>
-  <div id="feedback-form-content" class="content" tabindex="-1">
-    <div class="info-box">
-      {% include '@image' with {
-        'src': '/styleguide/img/svg/gentinfo.svg',
-        'alt_text': 'Gentinfo icon',
-        'modifier': 'info-box-icon'
-      } %}
-      <div class="info-box-text">
-        {% include '@h4' with {
-          'h4_text': 'You can contact Gentinfo for personal questions or complaints.'
+<div class="feedback-form accordion {{ modifier }}">
+  <h2><button class="accordion--button" aria-expanded="false" aria-controls="feedback-form-content">{{ 'Can we improve something about this page?' }}</button></h2>
+  <div id="feedback-form-content" class="content accordion--content" tabindex="-1">
+        {% include '@h3' with {
+          'h3_text': 'You can contact Gentinfo for personal questions or complaints.'
         } %}
 
         {% include '@paragraph' with {
-          'text': 'You can contact Gentinfo from Monday to Saturday from 08:00 till 19:00<br />
-            09 210 10 10<br />
-            <a href="mailto:Gentinfo@stad.gent">Gentinfo@stad.gent</a>'
+          'text': 'How to reach?'
         } %}
 
-      </div>
-    </div>
+        {% include '@list' with {
+          'type': 'icon-list',
+          'icon_items': [
+            '<i class="icon-phone"></i> By phone: <a href="tel: 09 210 10 10">09 210 10 10</a> (from monday till saturday from 08:00 till 19:00)',
+            '<i class="icon-envelope"></i> Send us an <a href="mailto: info@stad.gent">email</a>',
+            '<i class="icon-twitter-outline"></i> Through the <a href="https://twitter.com/stadgent">Twitter account</a> of the City of Gent (<a href="https://twitter.com/stadgent">@StadGent</a>)',
+            '<i class="icon-document"></i> Through the <a href="#">contact form</a>',
+            '<i class="icon-chat-round"></i> Through the <a href="#">chat</a>',
+          ]
+        } %}
+
     <form action="#" class="no-style">
-      <fieldset>
-        <legend>
-          {% include 'h5' with {
-            'h5_text': 'Do you have suggestions or comments concerning this page?'
-          } %}
-        </legend>
-        {% include '@textarea' with {
-          'label':  'Let us know'
-        } %}
-        {% include '@button' with {
-          'text': 'Send suggestion',
-          'type': 'primary'
-        } %}
-      </fieldset>
+      {% include '@h3' with {
+        'h3_text': 'Do you have suggestions or comments concerning this page?'
+      } %}
+
+      {% include '@textarea' with {} %}
+
+      {% include '@button' with {
+        'text': 'Send suggestion',
+        'type': 'primary'
+      } %}
     </form>
   </div>
 </div>

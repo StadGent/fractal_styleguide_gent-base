@@ -59,7 +59,7 @@ $susy: (
   padding: 0 $gutter-width;
 
   @include tablet {
-    padding: 0 $gutter-width + ($gutter-width / 2); // gutter + padding cols
+    padding: 0;
   }
 }
 
