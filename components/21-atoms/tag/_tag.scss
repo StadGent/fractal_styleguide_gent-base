@@ -43,4 +43,8 @@ a.tag {
   &:hover {
     @include theme('background-color', 'color-primary--lighten-5', 'tag-background-color-hover');
   }
+
+  &:hover {
+    @include theme('background-color', 'color-primary--lighten-5', 'tag-background-color-hover');
+  }
 }
