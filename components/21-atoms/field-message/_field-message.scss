@@ -9,7 +9,7 @@
   align-items: center;
   max-width: 40rem;
   min-height: 4rem;
-  margin-top: 1.7rem;
+  margin-top: 1.3rem;
   margin-bottom: 1rem;
   padding: 1rem 1.2rem 1rem 4.4rem;
   border-radius: border-radius('radius-1');
@@ -54,7 +54,7 @@
     }
 
     &::after {
-      background-image: svg-as-background('accolade', color('green', -4));
+      background-image: svg-as-background('accolade', color('green', -4), 36, 19);
     }
   }
 
@@ -68,7 +68,7 @@
     }
 
     &::after {
-      background-image: svg-as-background('accolade', color('red', -4));
+      background-image: svg-as-background('accolade', color('red', -4), 36, 19);
     }
   }
 

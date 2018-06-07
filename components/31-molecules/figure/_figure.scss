@@ -1,3 +1,20 @@
-figure > figcaption {
-  margin-top: .25rem;
+figure {
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &.page-wide-image {
+    img {
+      max-height: 26.25rem;
+      overflow: hidden;
+    }
+
+    figcaption {
+      @extend %content-container;
+      margin: .4rem 0;
+    }
+  }
 }
+

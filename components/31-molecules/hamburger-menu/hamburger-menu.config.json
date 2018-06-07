@@ -1,0 +1,15 @@
+{
+  "title": "Hamburger menu",
+  "status": "alpha",
+  "hidden": "hidden",
+  "handle": "hamburger-menu",
+  "preview": "@preview-hamburger-menu",
+  "context": {
+    "items": [
+      "<a href='javascript:void(0);'>Menu item 1</a>",
+      "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
+      "<a href='javascript:void(0);'>Menu item 3</a>",
+      "<a href='javascript:void(0);'>Menu item 4</a>"
+    ]
+  }
+}

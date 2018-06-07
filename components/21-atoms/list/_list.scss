@@ -1,0 +1,97 @@
+ul,
+ol {
+  position: relative;
+  margin-left: 1rem;
+
+  li,
+  li > a {
+    font-family: $default-font-family;
+    font-size: .9rem;
+    line-height: 2.1;
+  }
+
+  &.links {
+    @extend %list-no-style;
+  }
+
+  a {
+    font-weight: normal;
+  }
+}
+
+ul {
+  &.iconlist,
+  &.iconlist-small {
+    @extend %list-no-style;
+
+    margin-left: 0;
+
+    li {
+      @include icon('checkmark');
+
+      position: relative;
+      padding-left: 1.6em;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -.2em;
+        font-size: 1.6rem;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  &.iconlist-small {
+    li {
+      font-size: .8rem;
+      line-height: 2.4;
+
+      &::before {
+        font-size: 1.2rem;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+
+dl {
+  dt,
+  dd {
+    font-family: $default-font-family;
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  dt {
+    font-weight: 600;
+  }
+
+  dd {
+    margin-bottom: .4rem;
+    padding-left: 1.2rem;
+  }
+}
+
+
+///
+/// Remove default styling from a list.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+///
+%list-no-style {
+  padding-left: 0;
+  list-style: none;
+
+  p {
+    font-size: .8rem;
+  }
+
+  a {
+    font-size: .8rem;
+    font-weight: 600;
+  }
+}

@@ -31,6 +31,7 @@ const cache = require('gulp-cached');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const gulpif = require('gulp-if');
+const babel = require('gulp-babel');
 // require our configurated fractal module
 const fractal = require('./fractal');
 
@@ -217,10 +218,13 @@ gulp.task('styles:extract', () => {
  *
  */
 gulp.task('js:dist', () => {
-  return gulp.src('components/**/*.js')
+  return gulp.src(['components/**/*.js', '!components/**/*.config.js'])
     .pipe(rename({
       dirname: '',
       suffix: '-min'
+    }))
+    .pipe(babel({
+      presets: ['env', 'es2015']
     }))
     .pipe(gulp.dest('./public/styleguide/js/'));
 });
@@ -233,10 +237,13 @@ gulp.task('js:dist', () => {
  *
  */
 gulp.task('js:build', () => {
-  return gulp.src('components/**/*.js')
+  return gulp.src(['components/**/*.js', '!components/**/*.config.js'])
     .pipe(rename({
       dirname: '',
       suffix: '-min'
+    }))
+    .pipe(babel({
+      presets: ['env', 'es2015']
     }))
     .pipe(uglify())
     .pipe(gulp.dest('./build/styleguide/js/'));

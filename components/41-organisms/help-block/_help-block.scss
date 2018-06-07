@@ -1,0 +1,63 @@
+.help-block {
+  @include theme('background-color', 'color-primary--lighten-4', 'search-block-background');
+
+  margin-bottom: 2rem;
+  padding: 2rem .8rem;
+
+  @include tablet {
+    padding: 2rem 5.5rem;
+  }
+
+  h2 {
+    @extend %h4;
+  }
+
+  h3 {
+    @extend %h5;
+  }
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+
+    @include tablet {
+      margin-left: auto;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: .5rem;
+      padding-left: 1.8rem;
+      line-height: 1.8;
+
+      &,
+      > * {
+        font-size: .8rem;
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: 1.8em;
+      margin: auto;
+      font-size: 1.4em;
+    }
+  }
+
+  &-section {
+    margin-bottom: 2rem;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .search {
+    @include desktop {
+      width: span(7 of 9);
+    }
+  }
+}

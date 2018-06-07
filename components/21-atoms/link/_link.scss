@@ -1,14 +1,18 @@
+$link-padding: .3em;
+
+%a,
 a {
   @include theme('color', 'color-primary', 'link-color');
 
-  padding: .3em;
-  transition: color .11s ease-in-out;
+  padding: $link-padding;
   font-weight: 600;
   text-decoration: underline;
 
+  &:focus,
   &:hover {
     @include theme('background-color', 'color-primary--lighten-4', 'link-hover-background');
     @include theme('color', 'color-primary--darken-2', 'link-hover-color');
+    border-radius: border-radius('radius-1');
   }
 
   &:focus {
@@ -19,24 +23,126 @@ a {
   &.button {
     @include button;
     @include button-icon;
+    @include icon(arrow-right);
 
+    // Overrule flex for IE
+    align-items: flex-start;
+    padding-top: .6em;
     text-decoration: none;
+
+    &.button-success {
+      @extend %button-success;
+    }
 
     &.button-alert {
       @extend %button-alert;
     }
 
-    &.button-success {
-      @extend %button-success;
+    &.button-dark {
+      @extend %button-dark;
+    }
+
+    &::before {
+      margin-right: -.2rem;
+      padding-right: .2rem;
+      line-height: 1;
     }
   }
 
-  // Standalone links (could be used for external links.)
-  &.stand-alone {
-    text-decoration: none;
+  &::after {
+    transition: margin .1s ease-in;
+    font-size: 1.2rem;
+    line-height: 1;
+    // For IE purposes first set underline, then remove it.
+    text-decoration: underline;
+    vertical-align: text-bottom;
+  }
 
-    i {
-      line-height: inherit;
+  &:not(.button)::after {
+    margin-left: .2rem;
+  }
+
+  ///
+  /// Styling of:
+  ///   - standalone links
+  ///   - links with an icon class on them
+  ///   - links that go to an external source
+  ///
+  &.standalone-link,
+  &[download],
+  &[class^="icon-"] {
+    display: inline-flex;
+    align-items: center;
+    margin-left: -.3em;
+    padding: 0 $link-padding;
+  }
+
+  ///
+  /// Stand alone links.
+  ///
+  &.standalone-link {
+    @include icon(arrow-right, after);
+
+    text-decoration: none;
+  }
+
+  &.standalone-link:not([download]):not([href^="http://"]):not([href^="https://"]),
+  &.button {
+    &:focus,
+    &:hover {
+      &::after,
+      &::before {
+        animation: bounce 1s 2;
+
+        // Animation causes pointer flickering in IE.
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+          animation: none;
+        }
+      }
+    }
+  }
+
+  &[download],
+  &[href^="http://"],
+  &[href^="https://"] {
+    display: inline-block;
+    padding: 0 $link-padding;
+
+    &::after {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+
+  ///
+  /// Download links.
+  ///
+  &[download] {
+    @include icon(download, after);
+  }
+
+  ///
+  /// External links get an indicator.
+  ///
+  &[href^="http://"],
+  &[href^="https://"] {
+    @include icon(external-link, after);
+  }
+
+  @keyframes bounce {
+    0% {
+      padding-right: .2rem;
+      padding-left: 0;
+    }
+
+    40% {
+      padding-right: 0;
+      padding-left: .2rem;
+    }
+
+    100% {
+      padding-right: .2rem;
+      padding-left: 0;
     }
   }
 }

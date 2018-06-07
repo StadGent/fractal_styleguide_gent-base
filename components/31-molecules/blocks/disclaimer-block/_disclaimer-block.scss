@@ -9,10 +9,9 @@
   ul {
     margin: 0;
     list-style: none;
-
-    a {
-      font-size: .8rem;
-    }
   }
 
+  a {
+    @include theme('color', 'color-primary--darken-1', 'disclaimer-block-link-color');
+  }
 }

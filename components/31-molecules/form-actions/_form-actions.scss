@@ -1,0 +1,7 @@
+.form-actions {
+  display: flex;
+
+  > * {
+    margin-right: $gutter-width;
+  }
+}

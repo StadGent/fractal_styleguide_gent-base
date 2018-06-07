@@ -5,8 +5,7 @@
       <meta charset="utf-8">
       <title>{% block title %}Preview Layout{% endblock %}</title>
 
-      <link media="all" rel="stylesheet" href="{{ '/styleguide/vendor/chosen-js/chosen.min.css'| path }}">
-      <link media="all" rel="stylesheet" href="{{ '/styleguide/vendor/lightgallery/dist/css/lightgallery.min.css'| path }}">
+      <link media="all" rel="stylesheet" href="{{ '/styleguide/vendor/baguettebox/dist/baguetteBox.min.css'| path }}">
       <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
       <link media="all" rel="stylesheet" href="{{ '/css/styleguide.css'| path }}">
 
@@ -21,29 +20,14 @@
         })(document);
       </script>
 
-      <!-- Load jQuery -->
-      <script type="text/javascript" src="{{ '/styleguide/vendor/jquery/dist/jquery.min.js'|path }}"></script>
-
-      <script type="text/javascript" src="{{ '/styleguide/vendor/lightgallery/dist/js/lightgallery.min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/vendor/chosen-js/chosen.jquery.min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/vendor/masonry-layout/dist/masonry.pkgd.min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/base-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/hamburger-menu.functions-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/hamburger-menu.binding-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/header.functions-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/header.binding-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/gallery.functions-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/gallery.binding-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/input-multiselect-chosen.binding-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/input-multiselect-chosen.functions-min.js'|path }}"></script>
-      <script type="text/javascript" src="{{ '/styleguide/js/teaser-collection.binding-min.js'|path }}"></script>
+      <!-- gradually move all scripts to bottom! -->
+      <script type="text/javascript" src="{{ '/styleguide/js/base-min.js' | path }}"></script>
 
       <meta name="MobileOptimized" content="320">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="cs--default">
-    <main class="container">
-      <h1 class="visually-hidden">{{ 'Component preview' }}</h1>
+    <div class="container">
       {% block content %}
         <div class="preview-container">
           <div class="content-container">
@@ -51,6 +35,18 @@
           </div>
         </div>
       {% endblock %}
-    </main>
+    </div>
+
+    <!-- hidden fields for screenreaders -->
+    <span hidden id="image-gallery__open-gallery">open gallery</span>
+
+    <!--  scripts -->
+    <script type="text/javascript" src="{{ '/styleguide/vendor/baguettebox/dist/baguetteBox.min.js'|path }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/accordion.functions-min.js'|path }}"></script>
+
+    <!--  JS bindings -->
+    <script type="text/javascript" src="{{ '/styleguide/js/image-gallery.bindings-min.js' | path }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/accordion.bindings-min.js'|path }}"></script>
+
   </body>
 </html>

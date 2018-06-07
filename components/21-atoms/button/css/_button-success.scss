@@ -1,0 +1,27 @@
+///
+/// Success button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+/// @require color
+///
+%button-success,
+.button-success {
+  border-color: color('green');
+  background-color: color('white');
+  color: color('green', 2);
+
+  &:hover {
+    border-color: color('green');
+    background-color: color('green', -5);
+    color: color('green', 2);
+  }
+
+  &:active,
+  &:focus {
+    border-color: color('green');
+    background-color: color('green', -4);
+    color: color('green', 2);
+  }
+}

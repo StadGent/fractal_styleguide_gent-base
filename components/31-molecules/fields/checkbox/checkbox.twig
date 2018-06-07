@@ -1,7 +1,9 @@
-<fieldset class="form-item">
+<fieldset class="form-item {{ modifier }}">
   <legend>
     {{ label }}
-    <span class="label-optional">({{ label_optional }})</span>
+    {% if label_optional %}
+      <span class="label-optional">({{ label_optional }})</span>
+    {% endif %}
   </legend>
   <div class="form-columns">
     <div class="form-item-column">
@@ -11,17 +13,14 @@
     </div>
     <div class="form-item-column">
 
+    {% for option in options %}
       {% include '@input-checkbox' with {
-        'checkbox_label': label_checkbox1,
-        'checkbox_name': checkbox1_name,
-        'checkbox_id': checkbox1_id
+        'checkbox_label': option.label_checkbox,
+        'checkbox_name': option.checkbox_name,
+        'checkbox_id': option.checkbox_id
       } %}
+    {% endfor %}
 
-      {% include '@input-checkbox' with {
-        'checkbox_label': label_checkbox2,
-        'checkbox_name': checkbox2_name,
-        'checkbox_id': checkbox2_id
-      } %}
       {% if modifier == 'error' %}
         {% include '@field-message' with {
           "modifier": "error"

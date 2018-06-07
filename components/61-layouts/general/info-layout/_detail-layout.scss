@@ -1,0 +1,47 @@
+.detail-layout {
+  @extend %content-container;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+  padding: 0 $gutter-width;
+  font-size: .9rem;
+  line-height: 1.8;
+
+  > * {
+    width: calc(100% + $gutter-width);
+
+    @include tablet {
+      margin-right: span(3 of 12);
+      margin-left: span(2 of 12);
+    }
+
+    &.image-gallery,
+    &.quote,
+    &.help-block,
+    &.search-block {
+      @include tablet {
+        margin-right: span(2 of 12);
+        margin-left: span(1 of 12);
+      }
+    }
+
+    &.timeline,
+    &.extra-info-box {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .summary-text {
+    font-weight: 600;
+  }
+
+  .help-block,
+  .search-block {
+    @extend %wider;
+
+    margin-bottom: 4rem;
+  }
+}
+

@@ -48,6 +48,7 @@ All notable changes to this style guide are documented here.
 * DTGB-394: Moved layouts from 61-layouts directory to a 71-pages directory.
 * DTGB-180: Added gulp task to perform accessibility checks.
 * DTGB-209: Added new styling for basic input field atoms.
+* DTGB-431: Added video component.
 
 > We added styling for radio buttons and checkboxes. These were not styled in
 > previous versions of the style guide.
@@ -59,6 +60,9 @@ All notable changes to this style guide are documented here.
 * DTGB-406: Added styling for the footer organism.
 * DTGB-407: Changed the default font size breakpoints.
 * DTGB-421: Added a feedback form component.
+* DTGB-282: Added an image gallery organism.
+* DTGB-282: Replaced lightgallery by baguettebox as lightbox libary.
+* DTGB-423: Added a topic collection organism.
 
 ### 2.11.0
 

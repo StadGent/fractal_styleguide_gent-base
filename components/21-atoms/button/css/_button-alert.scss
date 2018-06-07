@@ -1,0 +1,39 @@
+///
+/// Alert button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $box-shadow-primary
+/// @require color
+///
+%button-alert,
+.button-alert {
+  @include button-icon;
+  @include icon(lightning);
+
+  border-color: color('red', 1);
+  background-color: color('red', 1);
+  color: color('white');
+  box-shadow: $box-shadow-primary color('red', -3);
+
+  &.button-block {
+    display: flex;
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: color('red', 2);
+    background-color: color('red', 2);
+    color: color('white');
+    box-shadow:  $box-shadow-primary color('red', -2);
+  }
+
+  &:active {
+    border-color: color('red', 3);
+    background-color: color('red', 3);
+    color: color('white');
+    box-shadow: none;
+  }
+}

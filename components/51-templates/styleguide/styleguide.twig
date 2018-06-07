@@ -1,37 +1,87 @@
 <div class="{{ modifier }}">
-    <h1>Styleguide</h1>
+    {# --- STYLE GUIDE CONTENT PREVIEW --- #}
+    <main id="styleguide-content-preview">
+      <h1>Style guide City of Ghent</h1>
 
-    {% include '@colors' %}
+      {# --- STYLE GUIDE TABLE OF CONTENTS--- #}
+      <nav aria-labelledby="table-of-contents-section" class="styleguide-table-of-contents">
+        <h2 id="table-of-contents-section">Table of contents</h2>
+        <ul class="table-of-contents-main">
+          <li>
+            <strong>Base</strong>
+            <ul>
+              <li><a href="#styleguide-colors">Colors</a></li>
+              <li><a href="#styleguide-logos">Logos / favicon</a></li>
+              <li><a href="#styleguide-fonts">Fonts</a></li>
+              <li><a href="#styleguide-iconfont">Iconfont</a></li>
+            </ul>
+          </li>
+          <li>
+            <strong>Atoms</strong>
+            <ul>
+              <li><a href="#styleguide-headings">Headings</a></li>
+              <li><a href="#styleguide-paragraphs">Paragraphs</a></li>
+              <li><a href="#styleguide-lists">Lists</a></li>
+              <li><a href="#styleguide-inputs">Inputs</a></li>
+              <li><a href="#styleguide-buttons">Buttons</a></li>
+              <li><a href="#styleguide-links">Links</a></li>
+              <li><a href="#styleguide-tags">Tags</a></li>
+            </ul>
+          </li>
+          <li>
+            <strong>Molecules</strong>
+            <ul>
+              <li><a href="#styleguide-messages">Messsages</a></li>
+              <li><a href="#styleguide-form-items">Form items</a></li>
+              <li>
+                <strong>Collections</strong>
+                <ul>
+                  <li><a href="#styleguide-collections">Topics</a></li>
+                </ul>
+              </li>
+              <li>
+                <strong>Building blocks</strong>
+                <ul>
+                  <li><a href="#styleguide-quote">Quote</a></li>
+                  <li><a href="#styleguide-breadcrumbs">Breadcrumbs</a></li>
+                  <li><a href="#styleguide-video">Video</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Organisms</strong>
+            <ul>
+              <li><a href="#styleguide-image-gallery">Image Gallery</a></li>
+              <li><a href="#styleguide-timeline">Timeline</a></li>
+              <li><a href="#styleguide-footer">Footer</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
-    {% include '@logos' %}
+      {# --- STYLE GUIDE BASE OVERVIEW--- #}
+      <section id="styleguide-base">
+        <h2 class="styleguide-title">1. Base</h2>
+        {% include '@base-overview' %}
+      </section>
 
-    {% include '@fonts' %}
+      {# --- STYLE GUIDE ATOMS OVERVIEW--- #}
+      <section id="styleguide-atoms">
+        <h2 class="styleguide-title">2. Atoms</h2>
+        {% include '@atoms-overview' %}
+      </section>
 
-    {% include '@headings' %}
+      {# --- STYLE GUIDE MOLECULES OVERVIEW--- #}
+      <section id="styleguide-molecules">
+        <h2 class="styleguide-title">3. Molecules</h2>
+        {% include '@molecules-overview' %}
+      </section>
 
-    {% include '@paragraph-types' with {
-      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. <u>Vestibulum</u> in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.'
-    } %}
-
-    {% include '@lists' %}
-
-    {% include '@input-overview' %}
-
-    {% include '@buttons' with { 'text': 'Button' }%}
-
-    <!-- {% include '@image-styles' %} -->
-
-    {% include '@messages-overview' %}
-
-    {% include '@tags-overview' %}
-
-    {% include '@icons-overview' %}
-
-    {% include '@forms' %}
-
-    <!-- {% include '@collections-overview' %} -->
-
-    {% include '@building-blocks-overview' %}
-
-    <!-- {% include '@blocks-overview' %} -->
+      {# --- STYLE GUIDE ORGANISMS OVERVIEW--- #}
+      <section id="styleguide-organisms">
+        <h2 class="styleguide-title">4. Organisms</h2>
+        {% include '@organisms-overview' %}
+      </section>
+    </main>
   </div>

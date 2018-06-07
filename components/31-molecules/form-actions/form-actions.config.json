@@ -1,0 +1,10 @@
+{
+  "title": "Form actions",
+  "status": "beta",
+  "handle": "form-actions",
+  "variants": [
+    {
+      "name": "Editor"
+    }
+  ]
+}

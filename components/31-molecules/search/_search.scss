@@ -1,0 +1,40 @@
+.search {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+
+  label {
+    @extend %h5;
+
+    width: 100%;
+  }
+
+  input[type="search"] {
+    @include theme('background-color', 'color-secondary', 'search-block-input-background');
+
+    margin-bottom: .5rem;
+    padding-left: 2.4rem;
+    background-image: svg-as-background('search', color('dark-gray'), 32, 32);
+    background-repeat: no-repeat;
+    background-position: left .4rem center;
+
+    &:focus {
+      background-image: svg-as-background('search', color('dark-gray'), 32, 32);
+      background-repeat: no-repeat;
+      background-position: left .4rem center;
+    }
+
+    @include desktop {
+      margin: 0 7rem 0 0;
+    }
+  }
+
+  input[type="submit"] {
+    @include desktop {
+      position: absolute;
+      right: -.5rem;
+      bottom: .1rem;
+      width: 7rem;
+    }
+  }
+}

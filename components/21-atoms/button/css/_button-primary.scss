@@ -1,0 +1,30 @@
+///
+/// Primary button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+///
+%button-primary,
+.button-primary {
+  @include theme('background-color', 'color-primary', 'button-primary-background');
+  @include theme('color', 'color-secondary', 'button-primary-color');
+  @include theme('box-shadow', 'color-box-shadow', 'button-primary-shadow');
+  @include theme('border-color', 'color-primary', 'button-primary-border-color');
+
+  &:hover,
+  &:focus {
+    @include theme('background-color', 'color-primary--darken-1', 'button-primary-hover-background');
+    @include theme('color', 'color-secondary', 'button-primary-hover-color');
+    @include theme('box-shadow', 'color-box-shadow-hover', 'button-primary-hover-shadow');
+    @include theme('border-color', 'color-primary--darken-1', 'button-primary-hover-border-color');
+  }
+
+  &:active {
+    @include theme('background-color', 'color-primary--darken-3', 'button-primary-focus-background');
+    @include theme('color', 'color-secondary', 'button-primary-focus-color');
+    @include theme('border-color', 'color-primary--darken-3', 'button-primary-focus-border-color');
+
+    box-shadow: none;
+  }
+}

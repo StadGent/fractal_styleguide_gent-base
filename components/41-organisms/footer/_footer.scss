@@ -1,52 +1,61 @@
 // General footer styling.
 footer.footer {
-  margin-top: 4rem;
-
-  .footer-top,
+  .footer-top > .content-container,
   .footer-bottom {
     padding: 0 $gutter-width;
 
-    @include tablet {
-      padding: 0 $gutter-width/2;
+    @include desktop-xl {
+      padding: 0;
     }
   }
 
   .footer-top {
-    @include theme('border-color', 'color-primary--lighten-4', 'footer-border-color');
+    @include theme('background-color', 'color-primary--lighten-5', 'footer-background-color');
 
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-    padding-bottom: 1.5rem;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
+    > .content-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      padding-bottom: 1.5rem;
 
-    @include tablet {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      @include tablet {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
     }
+
 
     .footer--column {
       width: 100%;
 
       @include tablet {
         flex: 1 0 auto;
-        width: span(3 of 12);
+        order: 1;
+        width: span(2 of 12);
+      }
+
+      &:nth-of-type(3) {
+        display: flex;
+
+        @include tablet {
+          justify-content: center;
+        }
+
+        @include desktop {
+          width: span(2 of 12);
+        }
       }
 
       &:first-of-type {
         width: 100%;
 
         @include tablet  {
+          order: 3;
           width: span(6 of 12);
         }
-      }
 
-      &:nth-of-type(2) {
-        display: flex;
-
-        @include tablet {
-          justify-content: center;
+        @include desktop {
+          width: span(7 of 12);
         }
       }
     }
@@ -56,6 +65,8 @@ footer.footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: .8rem;
+    overflow: hidden;
 
     @include tablet {
       flex-wrap: nowrap;
@@ -71,7 +82,7 @@ footer.footer {
 
         @include tablet {
           order: 1;
-          width: span(8 of 24);
+          width: span(4 of 12);
         }
       }
 
@@ -82,8 +93,11 @@ footer.footer {
 
         @include tablet {
           order: 2;
-          width: span(16 of 24);
-          margin-bottom: 0;
+          width: span(8 of 12);
+        }
+
+        @include desktop {
+          width: span(6 of 12);
         }
       }
     }
@@ -92,6 +106,11 @@ footer.footer {
   .dg-block-post-address,
   .dg-block-disclaimer {
     margin-top: 2.2rem;
+    margin-left: 1.2rem;
+
+    @include tablet {
+      margin-left: 0;
+    }
   }
 
   .db-block-partnership {

@@ -1,0 +1,133 @@
+.quote {
+  @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
+
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 2px solid;
+
+  @include desktop {
+    flex-direction: row;
+    margin: 2.5rem 0;
+    padding-top: 1.6rem;
+  }
+
+  blockquote {
+    position: relative;
+    flex: 1;
+    max-width: 40rem;
+
+    @include desktop {
+      align-items: center;
+      padding-left: 9rem;
+    }
+
+    .content {
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: 3rem;
+      margin-top: 1rem;
+
+      @include desktop {
+        min-height: 6rem;
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        top: -7rem;
+        right: 0;
+        left: 0;
+        width: 5rem;
+        height: 5rem;
+        margin: auto;
+        border: 1rem solid color('white');
+        background-color: color('white');
+        background-image: url('#{$styleguide-dir}/img/svg/quote.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        content: '';
+        box-sizing: content-box;
+
+        @include desktop {
+          top: 0;
+          right: auto;
+          bottom: 0;
+          left: -9rem;
+          width: 6.5rem;
+          height: 6.5rem;
+          margin: auto;
+          border: 0;
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    p {
+      font-size: .8rem;
+      font-weight: 600;
+      line-height: 1.9;
+      text-align: center;
+
+      &:first-of-type::before {
+        content: '\201C';
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+
+        &::after {
+          content: '\201D';
+        }
+      }
+
+      @include desktop {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-align: left;
+      }
+    }
+
+    footer {
+      @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
+
+      position: relative;
+      margin-top: 1rem;
+      padding-top: 1.6rem;
+      border-top: 2px solid;
+      font-size: .8rem;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.6;
+      text-align: center;
+
+      @include desktop {
+        margin-top: 1.6rem;
+        font-size: .9rem;
+        line-height: 1.4;
+      }
+
+      &::before {
+        @include theme('background-image', 'accolade-stroke-light', 'quote-accolade-stroke');
+
+        display: block;
+        position: absolute;
+        top: -.1rem;
+        right: 0;
+        left: 0;
+        width: 2rem;
+        height: 1rem;
+        margin: auto;
+        transform: rotate(180deg);
+        background-color: color('white');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        content: '';
+      }
+    }
+  }
+}

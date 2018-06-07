@@ -1,0 +1,487 @@
+$timeline-border: 3px;
+$timeline-dot-width: 16px;
+$timeline-m-left-padding: 1.5rem;
+$timeline-m-right-padding: 2.5rem;
+$timeline-dt-left-padding: 11.5rem;
+$timeline-dt-right-padding: 5rem;
+
+dl.timeline {
+  width: 100%;
+  padding: 0;
+
+  * {
+    font-size: .8rem;
+  }
+
+  .timeline-slot {
+
+    @include desktop {
+      padding: 0 span(1 of 12) 0 span(2 of 12);
+    }
+
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+    // Alternating timeline-slots get another background color.
+    &:nth-child(2n) {
+      @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
+
+      // Fix for video on alternating timeline-slots.
+      > dd .video-wrapper::after {
+        @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
+      }
+    }
+
+    // First timeline-slot specific styling.
+    &:first-of-type {
+      padding-top: 2rem;
+
+      // First definition description inside the first timeline-slot.
+      > dd:first-of-type {
+        margin-top: -.4rem;
+        padding-top: 0;
+
+        // Fix whitespace.
+        .timeline-slot-header {
+          margin-top: -.4rem;
+          padding-top: 0;
+        }
+      }
+
+      > dt:first-of-type {
+        margin-top: -.6rem;
+        padding-bottom: 1.2rem;
+
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    // Last timeline-slot last definition description specific styling.
+    &:last-of-type {
+      padding-bottom: 2rem;
+
+      > dd:last-of-type {
+
+        // Horizontal timeline end.
+        &::before {
+          @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+          position: absolute;
+          bottom: 0;
+          left: calc(#{$timeline-m-left-padding} - .5rem - 1px);
+          width: 1rem;
+          border-bottom: $timeline-border solid;
+          content: '';
+
+          @include desktop {
+            left: calc(#{$timeline-dt-left-padding} - .5rem - 1px);
+          }
+        }
+      }
+    }
+
+    // Timeline-slot title styling.
+    &-title {
+
+      &::before,
+      button::after {
+
+        @include theme('background-color', 'color-secondary', 'timeline-slot-indicator-background');
+        @include theme('border-color', 'color-primary', 'timeline-slot-indicator-border-color');
+
+        display: block;
+        position: absolute;
+        top: .2rem;
+        left: calc(-#{$timeline-m-right-padding} - #{$timeline-dot-width} / 2);
+        width: $timeline-dot-width;
+        height: $timeline-dot-width;
+        transition: background-color .2s ease-in-out;
+        border: $timeline-border solid;
+        border-radius: 100%;
+        content: '';
+        z-index: 2;
+
+        @include desktop {
+          left: calc(-#{$timeline-dt-right-padding} - #{$timeline-dot-width} / 2);
+        }
+      }
+
+      button {
+        width: 100%;
+        margin-left: -2em;
+        padding-left: 2em;
+        color: inherit;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          font-size: 1.2rem;
+          line-height: .9;
+        }
+
+        &::after {
+          left: calc(-#{$timeline-m-right-padding} - #{$timeline-dot-width} / 2 + 2em);
+
+          @include desktop {
+            left: calc(-#{$timeline-dt-right-padding} - #{$timeline-dot-width} / 2 + 2em);
+          }
+        }
+      }
+
+      position: relative;
+      width: 100%;
+      margin: .2rem 0;
+      border: 0;
+      background: transparent;
+
+      button:hover::after,
+      button:focus::after {
+        @include theme('background-color', 'color-primary--lighten-2', 'timeline-slot-active-indicator-background');
+      }
+
+      button[aria-expanded=true]::after {
+        @include theme('background-color', 'color-primary', 'timeline-slot-active-indicator-background');
+      }
+
+    }
+
+    &-date {
+      display: block;
+      width: 100%;
+    }
+
+    &-content,
+    &-header {
+      width: 100%;
+    }
+
+    &-header {
+      margin-bottom: $gutter-width;
+      padding-top: .5rem;
+
+      @include desktop {
+        padding-top: 2rem;
+      }
+    }
+
+    &-content {
+      *:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &::after {
+        display: block;
+        position: relative;
+        height: 1.6rem;
+        content: '';
+      }
+    }
+
+    > dt {
+      @extend %h5;
+
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 1.5rem calc(#{$timeline-m-left-padding} -  #{$timeline-dot-width} / 2) .5rem;
+
+      @include desktop {
+        position: absolute;
+        top: 1.9rem;
+        left: span(2 of 12);
+        width: $timeline-dt-left-padding;
+        padding: 0 1.2rem 0 0;
+        text-align: right;
+      }
+
+      &::before {
+        @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+        position: absolute;
+        top: 0;
+        left: calc(#{$timeline-m-left-padding} - 2px);
+        height: 1rem;
+        border-left: $timeline-border solid;
+        content: '';
+        @include desktop {
+          display: none;
+        }
+      }
+    }
+
+    > dd {
+      @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0 calc(#{$gutter-width/2}) 0 calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
+      overflow: hidden;
+
+      .accordion--content {
+        overflow: visible;
+      }
+
+      @include desktop {
+        margin: 0;
+        padding: 0 calc(#{$gutter-width/2}) 0 calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+      }
+
+      &::after {
+        @include theme('border-color', 'color-primary', 'timeline-line-color');
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(#{$timeline-m-left-padding} - 2px);
+        border-left: $timeline-border solid;
+        content: '';
+
+        @include desktop {
+          left: calc(#{$timeline-dt-left-padding} - 2px);
+        }
+      }
+
+      &.active::before {
+        @include theme('background-color', 'color-primary', 'timeline-slot-active-indicator-background');
+      }
+
+      // Video component styling inside a timeline-slot.
+      .video-wrapper {
+        position: relative;
+        width: calc(100% + 4.6rem + #{$timeline-border});
+        margin-left: calc(-4rem - #{$timeline-border});
+
+        @include desktop {
+          width: calc(100% + 10rem + #{$timeline-border});
+          margin-left: calc(-10rem - #{$timeline-border});
+        }
+
+        // Fix to add whitespace to the video top and bottom areas.
+        &::before,
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: color('white');
+          content: '';
+          z-index: 1;
+        }
+
+        &::after {
+          @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
+        }
+
+        .video .audio-description::after,
+        .responsive-video::before {
+          @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
+
+          position: absolute;
+          left: calc(#{$timeline-m-left-padding} + 1px);
+          height: 1rem;
+          border-left: $timeline-border dotted;
+          content: '';
+          z-index: 10;
+
+          @include desktop {
+            left: calc(#{$timeline-dt-right-padding} + 1px);
+          }
+        }
+
+        .video {
+          position: relative;
+          padding-top: 2rem;
+          border: 0;
+          z-index: 2;
+
+          .audio-description {
+            min-height: 2rem;
+            padding-left: 3rem;
+
+            // Dots after a video intersection.
+            &::after {
+              bottom: .2rem;
+            }
+          }
+        }
+
+        .responsive-video {
+          // Dots before a video intersection.
+          &::before {
+            top: -1.8rem;
+          }
+        }
+      }
+
+      // Image gallery component styling inside a timeline-slot.
+      .image-gallery-wrapper {
+
+        // single image styling
+        .image-gallery {
+          text-align: left;
+
+          figcaption {
+            display: none;
+          }
+
+          .gallery-link {
+            @include mobile {
+              max-width: 270px;
+            }
+
+            @include phablet {
+              width: calc(100% / 2 - 1vw);
+            }
+
+            @include desktop {
+              width: calc((100% / 3 - #{$gutter-width} / 1.5) - .33px);
+              max-width: 100%;
+              margin: calc(#{$gutter-width} / 2) 0 $gutter-width;
+            }
+
+            width: 100%;
+            margin: 1vw 0 $gutter-width;
+          }
+        }
+
+        // multiple image styling
+        ul.image-gallery {
+          margin: 0 -1vw;
+
+          // overrule single image styling
+          .gallery-link {
+            width: 100%;
+            margin: 0;
+          }
+
+          li {
+            width: calc((100% / 1) - 2vw);
+            margin: 1vw;
+
+            .gallery-link {
+              padding-bottom: 2.3em;
+            }
+
+            // only two images
+            &:not(.image-gallery__show-more):nth-of-type(n + 2) {
+              display: none;
+            }
+          }
+
+          .image-gallery__show-more {
+
+            // padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
+            padding-bottom: 2.3em;
+
+            &::before {
+              background-color: transparent;
+            }
+
+            .show-more__content {
+              @include theme('color', 'color-primary', 'link-color');
+
+              display: inline-block;
+              margin-top: .3rem;
+              text-align: right;
+
+              .show-more__total {
+                display: none;
+              }
+            }
+          }
+
+          @include mobile {
+            max-width: 270px;
+          }
+
+          @include phablet {
+            max-width: calc(270px * 2 + 2vw);
+
+            li {
+              width: calc((100% / 2) - 2vw);
+
+              .gallery-link {
+                padding: 0;
+              }
+            }
+
+            // only show first two images
+            li:not(.image-gallery__show-more):nth-of-type(-n + 2) {
+              display: inline-block;
+            }
+
+            // hide 'show more' if there are no more than two images
+            li:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
+              display: none;
+            }
+
+            .image-gallery__show-more {
+              padding-bottom: calc(((100% / 2) - 2vw) / 1.6);
+
+              &::before {
+                @include theme('background-color', 'color-primary--darken-3', 'image-gallery-show-more-background-color');
+              }
+
+              .show-more__content {
+                @include theme('color', 'color-secondary', 'image-gallery-show-more-color');
+
+                display: flex;
+                margin-top: 0;
+                text-align: center;
+
+                .show-more__total {
+                  display: inline-block;
+                }
+              }
+            }
+          }
+
+          @include tablet {
+
+            // overrule image gallery
+            .image-gallery__show-more {
+              display: inline-block;
+            }
+
+            // hide 'show more' if there are no more than three images
+            li:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
+              display: none;
+            }
+          }
+
+          @include desktop {
+            max-width: calc(100% + #{$gutter-width});
+            margin: 0 calc((#{$gutter-width} / 2) * -1);
+
+            li {
+              width: calc((100% / 3) - #{$gutter-width} - .33px);
+              margin: calc(#{$gutter-width} / 2);
+            }
+
+            // only show first three images
+            li:not(.image-gallery__show-more):nth-of-type(-n + 3) {
+              display: inline-block;
+            }
+
+            // hide 'show more' if there are no more than three images
+            li:first-of-type:nth-last-of-type(-n+4) ~ .image-gallery__show-more {
+              display: none;
+            }
+
+            .image-gallery__show-more {
+              padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.6);
+            }
+          }
+        }
+      }
+    }
+  }
+}

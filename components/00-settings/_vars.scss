@@ -70,6 +70,16 @@ $bp-desktop-xl-fonts: 1920px !default;
 $bp-mobile: 320px !default;
 
 ///
+/// Defines the min-width breakpoint for phablet screens.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Bart Delrue
+///
+$bp-phablet: 576px !default;
+
+///
 /// Defines the min-width breakpoint for tablet screens.
 ///
 /// @since 3.0.0
@@ -107,7 +117,7 @@ $bp-desktop-xl: 1680px !default;
 /// @access public
 /// @author Gert-Jan Meire
 ///
-$bp-max-content: 1440px !default;
+$bp-max-content: 1280px !default;
 
 ///
 /// Defines the max width of a grid container.
@@ -117,7 +127,7 @@ $bp-max-content: 1440px !default;
 /// @access public
 /// @author Gert-Jan Meire
 ///
-$bp-container: 1600px !default;
+$bp-container: 1680px !default;
 
 ///
 /// Defines the number of grid columns for a given grid container.
@@ -138,6 +148,16 @@ $grid-columns: 12 !default;
 /// @author Gert-Jan Meire
 ///
 $gutter-width: 1.2rem !default;
+
+///
+/// Defines the default paragraph bottom margin.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Bart Delrue
+///
+$default-paragraph-margin: 1.6rem !default;
 
 ///
 /// Defines the default font family Fira Sans.

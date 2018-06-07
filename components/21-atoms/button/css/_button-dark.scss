@@ -1,0 +1,29 @@
+///
+/// Dark button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+///
+%button-dark,
+.button-dark {
+  @include theme('background-color', 'color-tertiary', 'button-dark-background');
+  @include theme('color', 'color-secondary', 'button-dark-color');
+  @include theme('box-shadow', 'color-box-shadow-dark', 'button-dark-shadow');
+  @include theme('border-color', 'color-tertiary', 'button-dark-border-color');
+
+  &:hover,
+  &:focus {
+    @include theme('background-color', 'color-tertiary--darken-1', 'button-dark-hover-background');
+    @include theme('color', 'color-secondary', 'button-dark-hover-color');
+    @include theme('box-shadow', 'color-box-shadow-dark-hover', 'button-dark-hover-shadow');
+    @include theme('border-color', 'color-tertiary--darken-1', 'button-dark-border-color');
+  }
+
+  &:active {
+    @include theme('background-color', 'color-tertiary--darken-2', 'button-dark-hover-background');
+    @include theme('color', 'color-secondary', 'button-dark-hover-color');
+    @include theme('box-shadow', 'color-box-shadow', 'button-dark-hover-shadow');
+    @include theme('border-color', 'color-tertiary--darken-2', 'button-dark-border-color');
+  }
+}

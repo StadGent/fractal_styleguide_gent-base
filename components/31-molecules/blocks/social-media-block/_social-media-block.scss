@@ -1,3 +1,5 @@
+$social-media-link-width: 1.6rem;
+
 .dg-blocks-social {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +13,7 @@
   span {
     width: 100%;
     margin-bottom: 1.2rem;
+    font-size: .7rem;
     line-height: 1rem;
     text-align: center;
 
@@ -38,14 +41,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 2rem;
+      width: $social-media-link-width;
+      height: $social-media-link-width;
+      border-radius: $social-media-link-width;
       text-decoration: none;
+
+      &::after {
+        display: none;
+        content: '';
+      }
     }
 
     i {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
 }

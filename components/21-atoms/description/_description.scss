@@ -1,0 +1,6 @@
+.caption,
+.description {
+  @include theme('color', 'color-tertiary--lighten-1', 'figcaption-color');
+
+  font-size: .6rem;
+}

@@ -1,0 +1,28 @@
+///
+/// Secondary button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+///
+%button-secondary,
+.button-secondary {
+  @include theme('background-color', 'color-secondary', 'button-secondary-background');
+  @include theme('color', 'color-primary', 'button-secondary-color');
+  @include theme('border-color', 'color-primary--lighten-1', 'button-secondary-border-color');
+
+  &:hover,
+  &:focus {
+    @include theme('background-color', 'color-primary--lighten-5', 'button-secondary-hover-background');
+    @include theme('color', 'color-primary', 'button-secondary-hover-color');
+    @include theme('border-color', 'color-primary--lighten-2', 'button-secondary-hover-border-color');
+  }
+
+  &:active {
+    @include theme('background-color', 'color-primary--lighten-3', 'button-secondary-focus-background');
+    @include theme('color', 'color-primary--darken-3', 'button-secondary-focus-color');
+    @include theme('border-color', 'color-primary', 'button-secondary-focus-border-color');
+
+    box-shadow: none;
+  }
+}

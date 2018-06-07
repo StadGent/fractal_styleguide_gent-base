@@ -1,0 +1,7 @@
+figcaption {
+  @include theme('color', 'color-tertiary--lighten-1', 'figcaption-color');
+
+  margin: .4rem 0;
+  font-size: .6rem;
+  text-align: right;
+}
