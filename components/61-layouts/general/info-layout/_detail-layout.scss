@@ -9,14 +9,12 @@
   line-height: 1.8;
 
   > * {
-    width: calc(100% + $gutter-width);
-
     @include tablet {
       margin-right: span(3 of 12);
       margin-left: span(2 of 12);
     }
 
-    &.image-gallery,
+    &ul.image-gallery
     &.quote,
     &.help-block,
     &.search-block {
@@ -26,7 +24,6 @@
       }
     }
 
-    &.timeline,
     &.extra-info-box {
       margin-right: 0;
       margin-left: 0;
@@ -39,9 +36,13 @@
 
   .help-block,
   .search-block {
-    @extend %wider;
+    @extend %wide;
 
     margin-bottom: 4rem;
+  }
+
+  .timeline {
+    @extend %extra-wide;
   }
 }
 
