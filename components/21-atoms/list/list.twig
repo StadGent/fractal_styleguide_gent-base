@@ -14,24 +14,32 @@
   </ul>
 {% endif %}
 
-{% if type == 'iconlist' %}
-  <ul class="iconlist {{ modifier }}">
+{% if type == 'checkmark-list' %}
+  <ul class="checkmark-list {{ modifier }}">
       {% for item in items %}
           <li>{{ item }}</li>
       {% endfor %}
   </ul>
 {% endif %}
 
-{% if type == 'iconlist-small' %}
-  <ul class="iconlist-small {{ modifier }}">
+{% if type == 'checkmark-list-small' %}
+  <ul class="checkmark-list-small {{ modifier }}">
       {% for item in items %}
+          <li>{{ item }}</li>
+      {% endfor %}
+  </ul>
+{% endif %}
+
+{% if type == 'icon-list' %}
+  <ul class="icon-list{{ modifier }}">
+      {% for item in icon_items %}
           <li>{{ item }}</li>
       {% endfor %}
   </ul>
 {% endif %}
 
 {% if type == 'definition' %}
-  <dl class="iconlist {{ modifier }}">
+  <dl class="checkmark-list {{ modifier }}">
       {% for key, item in items %}
           <dt>{{ item  }}</dt>
           <dd>{{ definitions[key] }}</dd>

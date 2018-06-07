@@ -44,7 +44,7 @@
   } %}
 </header>
 
-<main>
+<main class="info-page">
   <article class="detail-layout">
     {% block info_page_article_content %}
       {% include '@h1' with {
@@ -90,7 +90,14 @@
     {% endblock %}
   </article>
 
-  {% include '@extra-info-box' %}
+  <aside>
+    {% include '@extra-info-box' %}
+    {% include '@feedback-form' %}
+    {% include '@paragraph' with {
+      "text": "Last changed on 1th of june 2018 - 17:45",
+      "modifier": "info-page--edit-date"
+    } %}
+  </aside>
 </main>
 
 {% include '@footer' %}
