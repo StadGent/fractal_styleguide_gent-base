@@ -16,6 +16,10 @@
     @extend %h4;
   }
 
+  a {
+    @include theme('color', 'color-primary--darken-1', 'feedback-form-link-color');
+  }
+
   .info-box {
     @include theme('background-color', 'color-primary--lighten-5', 'feedback-form-info-background');
 
