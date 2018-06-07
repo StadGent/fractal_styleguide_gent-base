@@ -34,7 +34,7 @@ dl.timeline {
 
       a,
       .image-gallery .image-gallery__show-more .show-more__content {
-        @include theme('color', 'color-primary--darken-1', 'timeline-colored-row-link-color');
+        @include theme('color', 'color-primary--darken-2', 'timeline-colored-row-link-color');
       }
     }
 
