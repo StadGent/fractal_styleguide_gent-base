@@ -25,7 +25,7 @@
   }
 
   a {
-    @include theme('color', 'color-primary--darken-1', 'search-block-link-color');
+    @include theme('color', 'color-primary--darken-2', 'search-block-link-color');
   }
 
   &-icon {

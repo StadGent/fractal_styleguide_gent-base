@@ -30,7 +30,7 @@ $field-icon-padding: 2.5rem;
   @include theme('color', 'color-tertiary--darken-1', 'fields-color');
 
   &:focus {
-    @include theme('border-color', 'color-primary--lighten-1', 'fields-border-focus-color');
+    @include theme('border-color', 'color-primary--lighten-2', 'fields-border-focus-color');
     @include theme('background', 'color-primary--lighten-5', 'fields-focus-background');
 
     border: 1px solid;
