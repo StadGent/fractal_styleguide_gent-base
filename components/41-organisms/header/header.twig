@@ -3,7 +3,6 @@
 
     {% include '@logo' %}
 
-    <div class="header-component header-search right">
       {% include '@search' with {
       "label": header_search_label,
       "search_id": header_search_id,
@@ -13,7 +12,6 @@
       "text": header_search_text,
       "modifier_submit": header_search_modifier_submit
       } %}
-    </div>
 
       {% include '@mijn-gent-block' with {
       "items": mijn_gent_block_items,
