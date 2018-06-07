@@ -1,4 +1,6 @@
-<main class="detail-layout">
+{% extends '@info-page' %}
+
+{% block info_page_article_content %}
   {% include '@h1' with {
     "h1_text": "This is an info page without a header image"
   } %}
@@ -70,8 +72,4 @@
     "src": "https://www.youtube.com/embed/S0vLmTWUmok",
     "audio_description_src": "https://www.youtube.com/embed/S0vLmTWUmok"
   } %}
-
-  {% include '@extra-info-box' %}
-</main>
-
-{% include '@footer' %}
+{% endblock %}

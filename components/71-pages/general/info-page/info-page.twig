@@ -44,47 +44,51 @@
   } %}
 </header>
 
-<main class="detail-layout">
-  {% include '@h1' with {
-    "h1_text": "Info page title"
-  } %}
+<main>
+  <article class="detail-layout">
+    {% block info_page_article_content %}
+      {% include '@h1' with {
+        "h1_text": "Info page title"
+      } %}
 
-  {% include '@paragraph' with {
-  "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus.",
-  "modifier": "summary-text"
-  } %}
+      {% include '@paragraph' with {
+      "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus.",
+      "modifier": "summary-text"
+      } %}
 
-  {% include '@paragraph' with {
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio. In id tellus ut ligula facilisis efficitur at vel urna. Vivamus iaculis felis non tristique malesuada. Quisque venenatis, arcu sed luctus molestie, leo mauris commodo sem, eget <a href='https://stad.gent' alt='Stad Gent'>egestas orci</a> libero eu justo. Curabitur sollicitudin odio non vulputate tincidunt. Etiam vel dolor in massa dapibus bibendum sit amet vel ipsum. Donec sagittis, elit et hendrerit maximus, nulla tortor laoreet quam, id tincidunt massa neque a ex. Fusce suscipit, ipsum interdum elementum sodales, <a href='javascript:(void);' alt='Link'>tellus</a> sapien vehicula nisi, in condimentum neque nisl sit amet elit. Donec sed augue a elit sodales commodo pulvinar vitae nisl. Sed <a href='javascript:(void);' alt='File link' download>pharetra</a> ante non mollis consequat. Pellentesque a est neque. Nullam maximus ornare metus. Quisque porttitor turpis tristique faucibus efficitur."
-  } %}
+      {% include '@paragraph' with {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio. In id tellus ut ligula facilisis efficitur at vel urna. Vivamus iaculis felis non tristique malesuada. Quisque venenatis, arcu sed luctus molestie, leo mauris commodo sem, eget <a href='https://stad.gent' alt='Stad Gent'>egestas orci</a> libero eu justo. Curabitur sollicitudin odio non vulputate tincidunt. Etiam vel dolor in massa dapibus bibendum sit amet vel ipsum. Donec sagittis, elit et hendrerit maximus, nulla tortor laoreet quam, id tincidunt massa neque a ex. Fusce suscipit, ipsum interdum elementum sodales, <a href='javascript:(void);' alt='Link'>tellus</a> sapien vehicula nisi, in condimentum neque nisl sit amet elit. Donec sed augue a elit sodales commodo pulvinar vitae nisl. Sed <a href='javascript:(void);' alt='File link' download>pharetra</a> ante non mollis consequat. Pellentesque a est neque. Nullam maximus ornare metus. Quisque porttitor turpis tristique faucibus efficitur."
+      } %}
 
-  {% include '@paragraph' with {
-    "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus."
-  } %}
+      {% include '@paragraph' with {
+        "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus."
+      } %}
 
-  {% include '@image-gallery' with {
-    "src": "https://via.placeholder.com/700x432",
-    "alt": "placeholder image alternative text",
-    "caption": "image caption"
-  } %}
+      {% include '@image-gallery' with {
+        "src": "https://via.placeholder.com/700x432",
+        "alt": "placeholder image alternative text",
+        "caption": "image caption"
+      } %}
 
-  {% include '@paragraph' with {
-    "text": "Quisque sollicitudin leo at erat sagittis aliquet. Nullam ipsum erat, aliquet vel scelerisque posuere, interdum vitae dolor. Morbi finibus nisi efficitur, laoreet risus id, mollis mauris. Donec eu interdum velit, at mattis leo. Suspendisse eget finibus diam. Aliquam condimentum nec elit a aliquam. Donec efficitur et enim et tempor. Vestibulum quis tempor purus. Cras id magna ante. Morbi nec purus vehicula, auctor erat eget, aliquet mi. Nam at ligula convallis, vestibulum ligula a, pretium tellus. Sed pretium vulputate iaculis."
-  } %}
+      {% include '@paragraph' with {
+        "text": "Quisque sollicitudin leo at erat sagittis aliquet. Nullam ipsum erat, aliquet vel scelerisque posuere, interdum vitae dolor. Morbi finibus nisi efficitur, laoreet risus id, mollis mauris. Donec eu interdum velit, at mattis leo. Suspendisse eget finibus diam. Aliquam condimentum nec elit a aliquam. Donec efficitur et enim et tempor. Vestibulum quis tempor purus. Cras id magna ante. Morbi nec purus vehicula, auctor erat eget, aliquet mi. Nam at ligula convallis, vestibulum ligula a, pretium tellus. Sed pretium vulputate iaculis."
+      } %}
 
-  {% include '@quote' %}
+      {% include '@quote' %}
 
-  {% include '@paragraph' with {
-    "text": "Nam lorem ex, posuere non lectus tempus, ornare scelerisque mauris. Integer vitae tortor orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas enim lectus, malesuada in hendrerit in, vulputate ut enim. Integer pretium elit purus, ac pulvinar augue scelerisque quis. In velit elit, luctus vitae nunc quis, hendrerit congue felis. Nulla tincidunt tincidunt cursus. Mauris pretium eu ex id aliquet. Aenean massa metus, posuere ac dui sit amet, volutpat interdum libero."
-  } %}
+      {% include '@paragraph' with {
+        "text": "Nam lorem ex, posuere non lectus tempus, ornare scelerisque mauris. Integer vitae tortor orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas enim lectus, malesuada in hendrerit in, vulputate ut enim. Integer pretium elit purus, ac pulvinar augue scelerisque quis. In velit elit, luctus vitae nunc quis, hendrerit congue felis. Nulla tincidunt tincidunt cursus. Mauris pretium eu ex id aliquet. Aenean massa metus, posuere ac dui sit amet, volutpat interdum libero."
+      } %}
 
-  {% include '@video' with {
-    "title": "Promofilm stad Gent.",
-    "src": "https://www.youtube.com/embed/S0vLmTWUmok",
-    "audio_description_src": "https://www.youtube.com/embed/S0vLmTWUmok"
-  } %}
+      {% include '@video' with {
+        "title": "Promofilm stad Gent.",
+        "src": "https://www.youtube.com/embed/S0vLmTWUmok",
+        "audio_description_src": "https://www.youtube.com/embed/S0vLmTWUmok"
+      } %}
 
-  {% include '@timeline' %}
+      {% include '@timeline' %}
+    {% endblock %}
+  </article>
 
   {% include '@extra-info-box' %}
 </main>

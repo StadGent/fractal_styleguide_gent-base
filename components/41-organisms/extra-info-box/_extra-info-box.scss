@@ -1,41 +1,39 @@
+$bulb-image-width: 6rem;
+
 .extra-info-box {
+  @extend %content-container;
+
   @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
 
-  display: flex;
-  flex-wrap: wrap;
-  width: span(12 of 12);
-  margin-top: 2.4rem;
-  padding-top: 4rem;
+  position: relative;
+  margin-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 2rem;
   border-top: 2px solid;
-  justify-self: center;
 
-  ul a {
-    @include theme('color', 'color-tertiary', 'extra-info-box-link-color');
+  @include tablet {
+    padding-top: 2rem;
   }
 
   &-image {
-    display: none;
+    display: block;
+    width: $bulb-image-width;
+    margin: -$bulb-image-width auto 1rem;
 
-    @include desktop {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: span(4 of 12);
-    }
-
-    img {
-      width: 13rem;
+    @include tablet {
+      position: absolute;
+      top: $bulb-image-width/2;
+      right: span(1 of 12);
     }
   }
 
   &-content {
     display: flex;
     flex-wrap: wrap;
-    width: span(12 of 12);
 
-    @include desktop {
-      width: span(8 of 12);
+    @include tablet {
+      margin-right: span(1 of 12);
+      margin-left: span(2 of 12);
     }
 
     > h2 {
@@ -50,7 +48,7 @@
       padding-right: 2rem;
 
       @include tablet {
-        width: span(6 of 12);
+        width: span(4 of 8);
       }
 
       > h3 {
