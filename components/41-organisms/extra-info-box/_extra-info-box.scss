@@ -1,8 +1,6 @@
 $bulb-image-width: 6rem;
 
 .extra-info-box {
-  @extend %content-container;
-
   @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
 
   position: relative;
@@ -30,11 +28,6 @@ $bulb-image-width: 6rem;
   &-content {
     display: flex;
     flex-wrap: wrap;
-
-    @include tablet {
-      margin-right: span(1 of 12);
-      margin-left: span(2 of 12);
-    }
 
     > h2 {
       @extend %h3;

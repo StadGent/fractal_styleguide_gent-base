@@ -22,45 +22,11 @@
 
   h3 {
     @extend %h5;
-
-    margin: 0;
   }
 
   a {
     @include theme('color', 'color-primary--darken-1', 'search-block-link-color');
   }
-
-  ul {
-    margin: 0 0 2rem;
-    list-style-type: none;
-
-    @include tablet {
-      margin-left: auto;
-    }
-
-    li {
-      position: relative;
-      margin-bottom: .5rem;
-      padding-left: 1.8rem;
-      line-height: 1.8;
-
-      &,
-      > * {
-        font-size: .8rem;
-      }
-    }
-
-    i {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      height: 2rem;
-      margin: auto;
-      font-size: 1.4em;
-    }
-  }
-
 
   &-icon {
     width: 6.2rem;

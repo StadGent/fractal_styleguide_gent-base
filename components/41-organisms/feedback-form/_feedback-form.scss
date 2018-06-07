@@ -1,21 +1,19 @@
 .feedback-form {
-  h2 {
-    @extend %h3;
+  @include theme('background-color', 'color-primary--lighten-4', 'feedback-form-background');
 
-    margin-left: span(1 of 12);
+  padding: 1.2rem $gutter-width 2rem $gutter-width;
+  border-radius: border-radius('radius-1');
 
-    i {
-      margin-left: 1rem;
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
+  @include tablet {
+    padding: 1.2rem 10rem 2rem 5.5rem;
   }
 
-  .content {
-    @include theme('border-color', 'color-tertiary--lighten-4', 'feedback-form-border-color');
+  h2 {
+    @extend %h3;
+  }
 
-    border: 2px dashed;
-    border-radius: border-radius('radius-1');
+  h3 {
+    @extend %h4;
   }
 
   .info-box {
@@ -36,10 +34,10 @@
   }
 
   form {
-    padding: 2rem 3.7rem;
-
     textarea {
-      min-height: 4rem;
+      @include theme('background-color', 'color-secondary', 'feedback-form-textarea-background');
+
+      min-height: 5.5rem;
     }
   }
 }

@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 1.2rem;
-  padding: 0 $gutter-width;
   font-size: .9rem;
   line-height: 1.8;
 
@@ -22,11 +21,6 @@
         margin-right: span(2 of 12);
         margin-left: span(1 of 12);
       }
-    }
-
-    &.extra-info-box {
-      margin-right: 0;
-      margin-left: 0;
     }
   }
 

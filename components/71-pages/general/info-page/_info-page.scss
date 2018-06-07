@@ -1,0 +1,27 @@
+.info-page {
+  aside {
+    @extend %content-container;
+
+    margin-bottom: 2rem;
+
+    .extra-info-box,
+    .info-page--edit-date {
+      @include tablet {
+        margin-right: span(1 of 12);
+        margin-left: span(2 of 12);
+      }
+    }
+
+    .feedback-form {
+      @extend %extra-wide;
+
+      margin-bottom: 2rem;
+
+      @include tablet {
+        width: auto;
+        margin-right: span(2 of 12);
+        margin-left: span(1 of 12);
+      }
+    }
+  }
+}

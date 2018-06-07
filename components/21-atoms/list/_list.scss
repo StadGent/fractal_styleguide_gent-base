@@ -20,8 +20,8 @@ ol {
 }
 
 ul {
-  &.iconlist,
-  &.iconlist-small {
+  &.checkmark-list,
+  &.checkmark-list-small {
     @extend %list-no-style;
 
     margin-left: 0;
@@ -43,7 +43,7 @@ ul {
     }
   }
 
-  &.iconlist-small {
+  &.checkmark-list-small {
     li {
       font-size: .8rem;
       line-height: 2.4;
@@ -52,6 +52,28 @@ ul {
         font-size: 1.2rem;
         line-height: 1.7;
       }
+    }
+  }
+
+  &.icon-list {
+    list-style-type: none;
+    margin: 0 0 2rem;
+
+    li {
+      position: relative;
+      margin-bottom: .5rem;
+      padding-left: 1.8rem;
+      line-height: 1.6;
+    }
+
+    i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: 2rem;
+      margin: auto;
+      font-size: 1.4em;
     }
   }
 }
