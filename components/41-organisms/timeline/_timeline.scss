@@ -31,6 +31,11 @@ dl.timeline {
       > dd .video-wrapper::after {
         @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
       }
+
+      a,
+      .image-gallery .image-gallery__show-more .show-more__content {
+        @include theme('color', 'color-primary--darken-1', 'timeline-colored-row-link-color');
+      }
     }
 
     // First timeline-slot specific styling.
@@ -114,6 +119,7 @@ dl.timeline {
         margin-left: -2em;
         padding-left: 2em;
         color: inherit;
+        font-size: inherit;
 
         &::before {
           position: absolute;
@@ -136,6 +142,7 @@ dl.timeline {
       margin: .2rem 0;
       border: 0;
       background: transparent;
+      font-size: .9rem;
 
       button:hover::after,
       button:focus::after {
@@ -186,7 +193,7 @@ dl.timeline {
       position: relative;
       width: 100%;
       margin: 0;
-      padding: 1.5rem calc(#{$timeline-m-left-padding} -  #{$timeline-dot-width} / 2) .5rem;
+      padding: 1.5rem calc(#{$timeline-m-left-padding} - #{$timeline-dot-width} / 2) .5rem;
 
       @include desktop {
         position: absolute;
@@ -324,6 +331,27 @@ dl.timeline {
       // Image gallery component styling inside a timeline-slot.
       .image-gallery-wrapper {
 
+        // show more content: base settings
+        .image-gallery__show-more {
+          padding-bottom: 2.3em;
+
+          &::before {
+            background-color: transparent;
+          }
+        }
+
+        .show-more__content {
+          @include theme('color', 'color-primary', 'link-color');
+
+          display: inline-block;
+          margin-top: .3rem;
+          text-align: right;
+
+          .show-more__total {
+            display: none;
+          }
+        }
+
         // single image styling
         .image-gallery {
           text-align: left;
@@ -373,28 +401,6 @@ dl.timeline {
             // only two images
             &:not(.image-gallery__show-more):nth-of-type(n + 2) {
               display: none;
-            }
-          }
-
-          .image-gallery__show-more {
-
-            // padding-bottom: calc(((100% / 1) - 2vw) / 1.6);
-            padding-bottom: 2.3em;
-
-            &::before {
-              background-color: transparent;
-            }
-
-            .show-more__content {
-              @include theme('color', 'color-primary', 'link-color');
-
-              display: inline-block;
-              margin-top: .3rem;
-              text-align: right;
-
-              .show-more__total {
-                display: none;
-              }
             }
           }
 
