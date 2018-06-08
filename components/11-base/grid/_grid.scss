@@ -64,40 +64,61 @@ $susy: (
 }
 
 ///
-/// Helper class to break out of the grid structure in targeted places.
+/// Helper mixin to break out of the grid structure in targeted places.
 ///
 /// @since 3.0.0
 /// @group grid
 /// @access  public
 /// @author Gert-Jan Meire
 ///
-%wide,
-.wide {
-  margin-right: -$gutter-width/2;
-  margin-left: -$gutter-width/2;
-
-  @include tablet {
-    margin-right: 0;
-    margin-left: 0;
+@mixin wide {
+  @include tablet-and-below {
+    width: calc(100% + (#{$gutter-width}));
+    margin-right: -$gutter-width/2;
+    margin-left: -$gutter-width/2;
   }
 }
 
 ///
-/// Helper class to break out of the grid structure in targeted places.
+/// Helper mixin to break out of the grid structure in targeted places.
 ///
 /// @since 3.0.0
 /// @group grid
 /// @access  public
 /// @author Gert-Jan Meire
 ///
-%extra-wide,
-.extra-wide {
-  width: calc(100% + (#{$gutter-width} * 2));
-  margin-right: -$gutter-width;
-  margin-left: -$gutter-width;
+@mixin extra-wide {
+  @include tablet-and-below {
+    width: calc(100% + (#{$gutter-width} * 2));
+    margin-right: -$gutter-width;
+    margin-left: -$gutter-width;
+  }
+}
 
-  @include tablet {
-    margin-right: 0;
+///
+/// Provide a helper mixin to easily position items on the grid..
+///
+/// @since 3.0.0
+/// @group grid
+/// @access  public
+/// @author Gert-Jan Meire
+///
+/// @param {string} $width
+///   The width in columns: e.g. 3 (... of 12).
+///
+/// @param {string} $offset
+///   The offset in columns: e.g. 3 (... of 12).
+///
+/// @param {string} $columns
+///   The amount of columns.
+///
+@mixin set-layout($width: 'width-12', $offset: 'offset-0', $columns: 'columns-12') {
+  width: span(number(nth(str-split($width, '-'), 2)) of number(nth(str-split($columns, '-'), 2)));
+
+  @if $offset != 'offset-0' {
+    margin-left: span(number(nth(str-split($offset, '-'), 2)) of number(nth(str-split($columns, '-'), 2)));
+  }
+  @else {
     margin-left: 0;
   }
 }
