@@ -47,20 +47,6 @@
     z-index: 9999;
   }
 
-  .login-link {
-    @include theme('color', 'color-tertiary', 'mijn-gent-toggle-link-color');
-    @include icon(chevron-right, after);
-
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-
-    &::after {
-      margin-left: .4rem;
-      font-size: 1.1rem;
-    }
-  }
-
   .content {
     padding: 1.2rem;
 
