@@ -1,23 +1,30 @@
 <header class="header section--wrapper">
   <div class="content-container">
-
+    
     {% include '@logo' %}
-
-      {% include '@search' with {
-      "label": header_search_label,
-      "search_id": header_search_id,
-      "search_name": header_search_name,
-      "placeholder": header_search_placeholder,
-      "modifier_search": header_search_modifier_search,
-      "text": header_search_text,
-      "modifier_submit": header_search_modifier_submit
-      } %}
-
-      {% include '@mijn-gent-block' with {
-      "items": mijn_gent_block_items,
-      'auth': 'true',
-      } %}
-
+    
+    {% include '@link' with {
+    "link": "#",
+    "text": "search",
+    "modifier": "search--link",
+      "title": "search"
+    } %}
+    
+    {% include '@search' with {
+    "label": header_search_label,
+    "search_id": header_search_id,
+    "search_name": header_search_name,
+    "placeholder": header_search_placeholder,
+    "modifier_search": header_search_modifier_search,
+    "text": header_search_text,
+    "modifier_submit": header_search_modifier_submit
+    } %}
+    
+    {% include '@mijn-gent-block' with {
+    "items": mijn_gent_block_items,
+    'auth': 'true',
+    } %}
+  
   </div>
 </header>
 

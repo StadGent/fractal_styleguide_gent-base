@@ -9,6 +9,7 @@
 
   .accordion--button {
 
+    display: flex;
     border: 0;
     background: transparent;
     cursor: pointer;
@@ -18,16 +19,24 @@
     }
 
     img {
+      display: none;
       max-width: 2.3rem;
+
+      @include tablet {
+        display: inline-block;
+      }
     }
 
     span {
+      display: inline-block;
       padding: 0 .5em;
       font-weight: 600;
     }
 
     &::before {
-      line-height: 2.3rem;
+      @include tablet {
+        line-height: 2.3rem;
+      }
     }
   }
 

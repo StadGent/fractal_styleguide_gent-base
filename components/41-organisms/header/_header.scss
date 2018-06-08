@@ -10,7 +10,7 @@ header.header {
   > .content-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     > * {
       padding: .3rem;
@@ -18,9 +18,11 @@ header.header {
 
     .site-logo {
       flex-shrink: 0;
+      margin-right: auto;
     }
 
-  .search {
+    .search {
+      display: none;
       flex: 1;
       flex-wrap: nowrap;
       justify-content: flex-end;
@@ -52,7 +54,6 @@ header.header {
       input[type=text] {
         @include theme('background-color', 'color-primary--lighten-5', 'header-search-background-color');
 
-
         flex: 0 1 210px;
         width: 100%;
         min-width: 0;
@@ -78,6 +79,26 @@ header.header {
           }
 
         }
+      }
+
+      @include tablet {
+        display: flex;
+      }
+    }
+
+    .search--link {
+      @include theme('background-color', 'color-primary--lighten-5', 'header-search-background-color');
+
+      min-width: 2.4rem;
+      max-width: calc(.8rem + 32px);
+      height: 2.4rem;
+      border-radius: border-radius('radius-1');
+      background: svg-as-background('search', color('dark-gray'), 32, 32) no-repeat left .4rem center;
+      text-indent: 200%;
+      overflow: hidden;
+
+      @include tablet {
+        display: none;
       }
     }
   }
