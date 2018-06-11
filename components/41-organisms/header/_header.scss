@@ -147,7 +147,7 @@ header.header {
 
         @include tablet {
           left: $offset;
-          width: calc(#{$span} - #{$offset} + 2rem );
+          width: calc(#{$span} - #{$offset} + 2rem);
         }
       }
 
@@ -164,6 +164,7 @@ header.header {
         }
       }
     }
+
   }
 
   // Hero image, overlaps and hides breadcrumb accolade.
@@ -172,6 +173,7 @@ header.header {
 
     display: none;
     position: relative;
+    min-height: 1.6rem;
     margin-top: -1.3rem;
     margin-bottom: .3rem;
 

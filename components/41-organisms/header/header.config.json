@@ -9,6 +9,7 @@
       "<a href='javascript:(void);'>Nieuwsbrieven</a>",
       "<a href='javascript:(void);'>Historiek</a>"
     ],
+    "mijn_gent_block_auth": "false",
     "header_search_mobile_id": "header-search-mobile",
     "header_search_mobile_name": "header-search-mobile",
     "header_search_mobile_placeholder": "Search",
@@ -24,16 +25,21 @@
     "header_search_modifier_submit": "btn--inline",
     "breadcrumbs_section": "section--default",
     "breadcrumbs_items": [
-      "<a href='#'>Stad.gent</a>",
+      "<a href='https://stad.gent'>Stad.gent</a>",
       "<a href='#'>Overview</a>",
       "<a href='#'>Theme</a>",
       "<a href='#'>Subpage</a>",
       "<span>Page title</span>"
     ],
-    "page_wide_image_src": "https://via.placeholder.com/1600x420",
-    "page_wide_image_alt_text": "Page wide image",
-    "page_wide_image_modifier": "no-style",
-    "page_wide_image_description": "Caption text comes here.",
-    "page_wide_image_h2_text": "Page wide title"
-  }
+    "hero_image_src": "https://via.placeholder.com/1600x420",
+    "hero_image_description": "Caption text comes here."
+  },
+  "variants": [
+    {
+      "name": "logged-in",
+      "context": {
+        "mijn_gent_block_auth": "true"
+      }
+    }
+  ]
 }

@@ -2,9 +2,9 @@
 
 {% block hero %}
   {% include '@figure' with {
-  "figure_figcaption": "Figure caption comes here.",
-  "figure_image_src": "https://via.placeholder.com/704x440",
-  "figure_image_alt_text": "Image alt text",
+  "figure_figcaption": hero_image_description,
+  "figure_image_src": hero_image_src,
+  "figure_image_alt_text": "",
   "modifier": "hero"
   } %}
 {% endblock hero %}

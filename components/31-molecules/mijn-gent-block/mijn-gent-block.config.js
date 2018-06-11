@@ -2,7 +2,8 @@
 
 module.exports = {
   title: 'Mijn Gent block',
-  status: 'beta',
+  status: 'ready',
+  hidden: 'true',
   handle: 'mijn-gent-block',
   default: 'logged-in',
   context: {
