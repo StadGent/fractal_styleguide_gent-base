@@ -139,7 +139,6 @@ header.header {
       }
 
       &::before {
-
         left: 0;
         width: 3rem;
         border-right: 2px solid;
@@ -152,7 +151,6 @@ header.header {
       }
 
       &::after {
-
         right: 0;
         width: calc(100% - 3rem + 2px);
         border-left: 2px solid;
