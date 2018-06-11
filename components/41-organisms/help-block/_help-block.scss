@@ -8,14 +8,6 @@
     padding: 2rem 5.5rem;
   }
 
-  h2 {
-    @extend %h4;
-  }
-
-  h3 {
-    @extend %h5;
-  }
-
   ul {
     margin: 0;
     list-style-type: none;

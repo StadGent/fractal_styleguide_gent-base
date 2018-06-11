@@ -9,10 +9,6 @@ dl.timeline {
   width: 100%;
   padding: 0;
 
-  * {
-    font-size: .8rem;
-  }
-
   .timeline-slot {
 
     @include desktop {
@@ -123,6 +119,7 @@ dl.timeline {
 
         &::before {
           position: absolute;
+          padding-left: .2em;
           left: 0;
           font-size: 1.2rem;
           line-height: .9;
@@ -142,7 +139,7 @@ dl.timeline {
       margin: .2rem 0;
       border: 0;
       background: transparent;
-      font-size: .9rem;
+      line-height: 1.2;
 
       button:hover::after,
       button:focus::after {
@@ -188,7 +185,7 @@ dl.timeline {
     }
 
     > dt {
-      @extend %h5;
+      @extend %h3;
 
       position: relative;
       width: 100%;

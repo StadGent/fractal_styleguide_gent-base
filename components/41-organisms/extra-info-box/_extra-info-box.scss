@@ -30,8 +30,6 @@ $bulb-image-width: 6rem;
     flex-wrap: wrap;
 
     > h2 {
-      @extend %h3;
-
       flex-basis: 100%;
     }
 
@@ -45,7 +43,6 @@ $bulb-image-width: 6rem;
       }
 
       > h3 {
-        @extend %h5;
 
         margin-top: 1.6rem;
         margin-bottom: .8rem;

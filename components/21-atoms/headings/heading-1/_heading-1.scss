@@ -3,7 +3,5 @@ h1,
 %h1 {
   @include theme('color', 'color-primary', 'heading-1-color');
 
-  margin-bottom: 1.6rem;
   font-size: 2.1rem;
-  line-height: 1.33;
 }

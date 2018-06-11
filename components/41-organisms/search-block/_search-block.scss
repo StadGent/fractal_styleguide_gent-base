@@ -16,14 +16,6 @@
     padding: 2rem 3.7rem 2rem ($gutter-width*2);
   }
 
-  h2 {
-    @extend %h4;
-  }
-
-  h3 {
-    @extend %h5;
-  }
-
   a {
     @include theme('color', 'color-primary--darken-2', 'search-block-link-color');
   }
