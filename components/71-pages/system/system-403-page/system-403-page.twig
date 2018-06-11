@@ -1,9 +1,11 @@
-<main class="detail-layout">
-  {% include '@h1' with { 'h1_text': 'No access to this page' } %}
+<main id="main">
+  <article class="detail-layout">
+    {% include '@h1' with { 'h1_text': 'No access to this page' } %}
 
-  {% include 'paragraph' with { 'text': 'Fusce malesuada enim a sagittis ornare. Proin placerat lacinia quam ut pulvinar. Morbi nec leo ante. Donec rhoncus enim velit, eu imperdiet mauris pulvinar eget. Suspendisse vitae gravida ex. Mauris convallis aliquam mi vitae commodo. Aenean at velit ornare, feugiat ligula eget, ultricies erat.' } %}
+    {% include 'paragraph' with { 'text': 'Fusce malesuada enim a sagittis ornare. Proin placerat lacinia quam ut pulvinar. Morbi nec leo ante. Donec rhoncus enim velit, eu imperdiet mauris pulvinar eget. Suspendisse vitae gravida ex. Mauris convallis aliquam mi vitae commodo. Aenean at velit ornare, feugiat ligula eget, ultricies erat.' } %}
 
-  {% include '@search-block' %}
+    {% include '@search-block' %}
+  </article>
 </main>
 
 {% include '@footer' %}
