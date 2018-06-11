@@ -55,8 +55,15 @@ $bulb-image-width: 6rem;
         }
       }
 
+      ul.extra-info-box-tags {
+        @extend %list-no-style;
+
+        display: flex;
+        flex-wrap: wrap;
+      }
+
       .tag {
-        margin-right: .8rem;
+        margin: 0 .8rem .8rem 0;
       }
     }
   }
