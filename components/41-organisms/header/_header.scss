@@ -76,7 +76,7 @@ header.header {
         &:valid {
 
           flex-grow: .4;
-          margin-right: .4rem;
+          margin: 0 .4rem;
 
           ~ input[type=submit] {
             max-width: 9999px;
