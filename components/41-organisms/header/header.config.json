@@ -3,27 +3,16 @@
   "status": "ready",
   "preview": "@preview-without-padding",
   "context": {
-    "section": "section--wrapper",
     "mijn_gent_block_items": [
       "<a href='javascript:(void);'>Mijn profiel</a>",
       "<a href='javascript:(void);'>Nieuwsbrieven</a>",
       "<a href='javascript:(void);'>Historiek</a>"
     ],
     "mijn_gent_block_auth": "false",
-    "header_search_mobile_id": "header-search-mobile",
-    "header_search_mobile_name": "header-search-mobile",
-    "header_search_mobile_placeholder": "Search",
-    "header_search_mobile_modifier_search": "inline",
-    "header_search_mobile_text": "Search",
-    "header_search_mobile_modifier_submit": "btn--inline",
     "header_search_id": "header-search",
-    "header_search_name": "header-search",
     "header_search_label": "Search",
     "header_search_placeholder": "Search",
-    "header_search_modifier_search": "inline",
     "header_search_text": "Search",
-    "header_search_modifier_submit": "btn--inline",
-    "breadcrumbs_section": "section--default",
     "breadcrumbs_items": [
       "<a href='https://stad.gent'>Stad.gent</a>",
       "<a href='#'>Overview</a>",
