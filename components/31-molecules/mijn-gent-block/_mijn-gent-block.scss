@@ -41,6 +41,7 @@
     width: calc(100vw - 2 * #{$gutter-width});
     max-width: $bp-mobile;
     margin-top: .5rem;
+    transition: max-height .3s ease-in-out;
     border-radius: border-radius('radius-1');
     background: color('white');
     box-shadow: 0 2px 12px 0 rgba(35, 51, 58, .25);

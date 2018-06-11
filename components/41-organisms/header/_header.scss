@@ -1,11 +1,10 @@
 header.header {
-  $offset: $gutter-width + ($gutter-width / 2);
-
   position: relative;
   margin-bottom: .3rem;
-  padding: .3rem 0 0;
+  padding: .3rem 0;
   font-size: .7rem;
 
+  // first row
   > .content-container {
     display: flex;
     flex-wrap: wrap;
@@ -115,11 +114,16 @@ header.header {
     }
   }
 
-  nav {
+  // Add accolade to breadcrumbs
+  nav.breadcrumb {
     padding: .3rem 0;
 
     .content-container {
+      $span: span(2 of 12);
+      $offset: $gutter-width + ($gutter-width / 2);
+
       position: relative;
+      margin-bottom: 1.3rem;
 
       &::before,
       &::after {
@@ -135,7 +139,6 @@ header.header {
       }
 
       &::before {
-        $span: span(2 of 12);
 
         left: 0;
         width: 3rem;
@@ -144,12 +147,11 @@ header.header {
 
         @include tablet {
           left: $offset;
-          width: calc(#{$span} - #{$offset} + 2rem + #{$gutter-width});
+          width: calc(#{$span} - #{$offset} + 2rem );
         }
       }
 
       &::after {
-        $span: span(10 of 12);
 
         right: 0;
         width: calc(100% - 3rem + 2px);
@@ -158,15 +160,20 @@ header.header {
 
         @include tablet {
           right: $offset;
-          width: calc(#{$span} - #{$offset} - 2rem + 2px);
+          width: calc(100% - #{$span} - #{$offset} - 2rem + 2px);
         }
       }
     }
   }
 
+  // Hero image, overlaps and hides breadcrumb accolade.
   figure.hero {
-    position: relative;
+    $span: span(2 of 12);
+
     display: none;
+    position: relative;
+    margin-top: -1.3rem;
+    margin-bottom: .3rem;
 
     @include tablet {
       display: block;
@@ -202,35 +209,31 @@ header.header {
       content: '';
     }
 
-    &::after {
-      $span: span(10 of 12);
+    &::before {
+      left: 0;
+      width: 3rem;
+      border-top-right-radius: border-radius('radius-5');
 
+      @include tablet {
+        width: calc(#{$span} + 2rem);
+      }
+
+      @media (min-width: $bp-max-content) {
+        width: calc(#{$span} + 2rem + ((100% - #{$bp-max-content}) / 2));
+      }
+    }
+
+    &::after {
       right: 0;
       width: calc(100% - 3rem + 2px);
       border-top-left-radius: border-radius('radius-5');
 
       @include tablet {
-        width: calc(#{$span} - 2rem);
+        width: calc(100% - #{$span} - 2rem);
       }
 
       @media (min-width: $bp-max-content) {
-        width: calc((100%/12) * 10 - 2rem - ((100% - #{$bp-max-content}) / 2));
-      }
-    }
-
-    &::before {
-      $span: span(2 of 12);
-
-      left: 0;
-      width: 3rem;
-      border-top-right-radius: border-radius('radius-4');
-
-      @include tablet {
-        width: calc(#{$span}  + 2rem + #{$gutter-width});
-      }
-
-      @media (min-width: $bp-max-content) {
-        width: calc((100%/12) * 2 + 2rem + ((100% - #{$bp-max-content}) / 2));
+        width: calc(100% - #{$span} - 2rem - ((100% - #{$bp-max-content}) / 2));
       }
     }
   }
