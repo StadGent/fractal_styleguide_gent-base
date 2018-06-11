@@ -2,11 +2,13 @@
        name="{{ search_name }}"
        id="{{ search_id }}"
        placeholder="{{ placeholder }}"
-       {% if modifier %}
-         class="{{ modifier }}"
-       {% endif %}
-      {% if disabled %}
-        disabled="disabled"
-      {% endif %}
-      aria-label="search"
-/>
+       aria-label="search"
+  {% if modifier %}
+    class="{{ modifier }}"
+  {% endif %}
+  {% if disabled %}
+    disabled="disabled"
+  {% endif %}
+  {% if required %}
+    required
+  {% endif %} >

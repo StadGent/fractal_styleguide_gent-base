@@ -99,7 +99,7 @@ $field-icon-padding: 2.5rem;
   }
 
   &::placeholder {
-    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
+    @include theme('color', 'color-tertiary', 'fields-placeholder-color');
     font-style: italic;
     font-weight: normal;
   }

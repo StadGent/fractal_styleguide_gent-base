@@ -3,13 +3,8 @@
 
   ul,
   ol {
-    display: none;
     margin: 0;
     list-style: none;
-
-    @media (min-width: $bp-tablet) {
-      display: block;
-    }
 
     li {
       @include icon('chevron-right', 'after');
@@ -39,6 +34,10 @@
 
       a {
         font-weight: 600;
+
+        &::after {
+          content: none;
+        }
       }
     }
 
