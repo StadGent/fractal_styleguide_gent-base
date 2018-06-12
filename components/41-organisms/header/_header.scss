@@ -120,7 +120,6 @@ header.header {
 
     .content-container {
       $span: percentage(2 / 12);
-      $offset: 0 ;
 
       position: relative;
       margin-bottom: 1.3rem;
@@ -144,9 +143,9 @@ header.header {
         border-right: 2px solid;
         border-top-right-radius: border-radius('radius-4');
 
-        @include tablet {
-          left: $offset;
-          width: calc(#{$span} - #{$offset} + 2rem);
+        @include desktop {
+          left: 0;
+          width: calc(#{$span} + 2rem);
         }
       }
 
@@ -156,9 +155,9 @@ header.header {
         border-left: 2px solid;
         border-top-left-radius: border-radius('radius-4');
 
-        @include tablet {
-          right: $offset;
-          width: calc(100% - #{$span} - #{$offset} - 2rem + 2px);
+        @include desktop {
+          right: 0;
+          width: calc(100% - #{$span} - 2rem + 2px);
         }
       }
     }
@@ -214,7 +213,7 @@ header.header {
       width: 3rem;
       border-top-right-radius: border-radius('radius-5');
 
-      @include tablet {
+      @include desktop {
         width: calc(#{$span} + 2rem);
       }
 
@@ -228,7 +227,7 @@ header.header {
       width: calc(100% - 3rem + 2px);
       border-top-left-radius: border-radius('radius-5');
 
-      @include tablet {
+      @include desktop {
         width: calc(100% - #{$span} - 2rem);
       }
 

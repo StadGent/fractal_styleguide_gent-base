@@ -1,27 +1,37 @@
 .detail-layout {
   @extend %content-container;
 
-  display: flex;
-  flex-wrap: wrap;
   margin-top: 1.2rem;
   font-size: .9rem;
   line-height: 1.8;
 
   > * {
-    @include tablet {
+    @include desktop {
       @include set-layout('width-7', 'offset-2');
     }
   }
 
   > .quote,
-  > ul.image-gallery,
+  > .image-gallery--wrapper,
   > .help-block,
   > .search-block {
-    margin-bottom: 2rem;
-
-    @include tablet {
+    @include desktop {
       @include set-layout('width-9', 'offset-1');
     }
+  }
+
+  > .help-block {
+    @include desktop {
+      padding-left: span(1 wide of 12);
+    }
+  }
+
+  > .quote,
+  > .image-gallery--wrapper,
+  > .help-block,
+  > .search-block,
+  > .video {
+    margin-bottom: 2rem;
   }
 
   > .help-block,
@@ -44,18 +54,18 @@
     margin-bottom: 2rem;
 
     > * {
-      @include tablet {
+      @include desktop {
         @include set-layout('width-7', 'offset-2');
       }
     }
 
     .extra-info-box {
-      @include tablet {
+      @include desktop {
         @include set-layout();
         width: 100%;
         margin-left: 0;
-        padding-right: span(2 of 12);
-        padding-left: span(2 of 12);
+        padding-right: span(2 wide of 12);
+        padding-left: span(2 wide of 12);
       }
     }
 
@@ -64,8 +74,10 @@
 
       margin-bottom: 2rem;
 
-      @include tablet {
+      @include desktop {
         @include set-layout('width-9', 'offset-1');
+
+        padding-left: span(1 wide of 12);
       }
     }
   }

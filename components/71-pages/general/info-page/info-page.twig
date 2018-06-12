@@ -1,23 +1,23 @@
 {% include '@header--with-banner' with {
-  "mijn_gent_block_items": [
-    "<a href='javascript:(void);'>Mijn profiel</a>",
-    "<a href='javascript:(void);'>Nieuwsbrieven</a>",
-    "<a href='javascript:(void);'>Historiek</a>"
-  ],
-  "mijn_gent_block_auth": "true",
-  "header_search_id": "header-search",
-  "header_search_label": "Search",
-  "header_search_placeholder": "Search",
-  "header_search_text": "Search",
-  "breadcrumbs_items": [
-    "<a href='https://stad.gent'>Stad.gent</a>",
-    "<a href='#'>Overview</a>",
-    "<a href='#'>Theme</a>",
-    "<a href='#'>Subpage</a>",
-    "<span>Page title</span>"
-  ],
-  "hero_image_src": "https://via.placeholder.com/1600x420",
-  "hero_image_description": "Caption text comes here."
+"mijn_gent_block_items": [
+"<a href='javascript:(void);'>Mijn profiel</a>",
+"<a href='javascript:(void);'>Nieuwsbrieven</a>",
+"<a href='javascript:(void);'>Historiek</a>"
+],
+"mijn_gent_block_auth": "true",
+"header_search_id": "header-search",
+"header_search_label": "Search",
+"header_search_placeholder": "Search",
+"header_search_text": "Search",
+"breadcrumbs_items": [
+"<a href='https://stad.gent'>Stad.gent</a>",
+"<a href='#'>Overview</a>",
+"<a href='#'>Theme</a>",
+"<a href='#'>Subpage</a>",
+"<span>Page title</span>"
+],
+"hero_image_src": "https://via.placeholder.com/1600x420",
+"hero_image_description": "Caption text comes here."
 } %}
 
 <main class="info-page">
@@ -40,11 +40,13 @@
       "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus."
       } %}
       
-      {% include '@image-gallery' with {
-      "src": "https://via.placeholder.com/700x432",
-      "alt": "placeholder image alternative text",
-      "caption": "image caption"
-      } %}
+      <div class="image-gallery--wrapper">
+        {% include '@image-gallery' with {
+        "src": "https://via.placeholder.com/700x432",
+        "alt": "placeholder image alternative text",
+        "caption": "image caption"
+        } %}
+      </div>
       
       {% include '@paragraph' with {
       "text": "Quisque sollicitudin leo at erat sagittis aliquet. Nullam ipsum erat, aliquet vel scelerisque posuere, interdum vitae dolor. Morbi finibus nisi efficitur, laoreet risus id, mollis mauris. Donec eu interdum velit, at mattis leo. Suspendisse eget finibus diam. Aliquam condimentum nec elit a aliquam. Donec efficitur et enim et tempor. Vestibulum quis tempor purus. Cras id magna ante. Morbi nec purus vehicula, auctor erat eget, aliquet mi. Nam at ligula convallis, vestibulum ligula a, pretium tellus. Sed pretium vulputate iaculis."
