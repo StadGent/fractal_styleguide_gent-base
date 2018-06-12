@@ -171,8 +171,7 @@ header.header {
     display: none;
     position: relative;
     min-height: 1.6rem;
-    margin-top: -1.3rem;
-    margin-bottom: .3rem;
+    margin: (-1.3rem) (-$gutter-width) .3rem;
 
     @include tablet {
       display: block;
