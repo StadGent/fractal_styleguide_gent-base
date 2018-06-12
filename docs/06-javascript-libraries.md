@@ -17,15 +17,12 @@ Take into consideration that all Javascript included in this style guide is
 dependent on:
 
 * base.js
-* jQuery
 
 ## Base JS
 
 base.js contains all global variables and must be included before all other
 javascript files.
 Global variables are prefixed with **gent_styleguide** to avoid contamination.
-
-## Objects
 
 ### TabTrap
 
@@ -36,7 +33,7 @@ DOM-element.
 * a modal window
 * mobile navigation
 
-### Properties
+#### Properties
 
 * hasfocusables (boolean): does the DOM-element contain focusable elements?
 * next(): place focus on the next focusable element.
@@ -45,7 +42,7 @@ DOM-element.
 * end(): place focus on the last focusable element.
 * reset(): resets the TabTrap to it's original values.
 
-### Attention
+#### Attention
 
 Detecting and handling keyboard input remains the responsibility of the invoking
 function!
@@ -61,55 +58,14 @@ e.preventDefault();
 tabTrap.next();
 ```
 
-## Component.functions.js
-
-This is the main functionalty of a component. This file defines several jQuery
-function extensions that can be implemented in your project.
-
-Use this file if you want to write your own bindings or integrate it into
-another Javascript framework, eg. integration in a Drupal theme.
-
-## Component.binding.js
-
-This file integrates the Component.functions.js with the Style guide components
-inside Fractal. These bindings can be used inside your own project to implement
-the correct Javascript functionality per component.
-
 # Javascript enabled components
 
 Inside this stylguide we have the following Javascript enabled components:
 
-** Atoms **
-
-* Button-drop
-
-** Molecules **
-
 * Breadcrumbs
-
 * Hamburger-menu
 * Gallery
-
-** Organisms **
-
-* Header
-
-## Button-drop
-
-Style guide implementation of the
-<a href="{{path '/components/detail/button-drop'}}">drop button atom</a>.
-
-### Button-drop.functions.js
-
-Implements a drop-down button based on a list element.
-
-* dropButtonLoad(): jQuery extension to bind the drop-down functionality to a
-  DOM element.
-
-### Button-drop.binding.js
-
-Binds the functionality to a DOM element and the window.onload event
-inside this style guide.
+* Accordion (Faq, timeline, mijn_gent, feedback form...)
 
 ## Breadcrumbs
 
@@ -121,45 +77,70 @@ Style guide implementation of the
 Style guide implementation of the
 <a href="{{path '/components/detail/hamburger-menu'}}">hamburger menu</a>.
 
-### Hamburger-menu.functions.js
-
-Implements a hamburger-menu button combined with a slide-in panel for easy
-navigation.
-
-* loadHamburgerMenu(): jQuery extension to bind the slide functionality to a
-  DOM element.
-
-### Hamburger-menu.binding.js
-
-Binds the functionality to a DOM element and the window.onload event
- inside the style guide.
-
 ## Gallery
 
 We omitted to create a functions.js file, since all functions are provided
-by the swipebox jQuery plugin.
+by the lightbox plugin.
 
 **Dependencies**
-[Light Gallery](http://sachinchoolur.github.io/lightGallery/)
+[baguetteBox](https://github.com/feimosi/baguetteBox.js)
 
-### Gallery.binding.js
+## Accordion
 
-Implements swipebox jQuery plugin in this Style guide.
+Our own accessible accordion library used for all collapsible content.
 
-## Header
+### CSS
+A basic css styling can be found in the accordion component
 
-Style guide implementation of the
-<a href="{{path '/components/detail/header'}}">header organism</a>.
+### Usage
+Create a new accordion object by running:
 
-### Header.functions.js
+```js
+new Accordion(element);
+```
 
-Implements a minimized search button combined with a slide-in form for easy
-searching on mobile devices.
+Where element contains a button with:
+* default class: accordion-\-button
+* aria-expanded (true or false)
+* aria-controls, the unique ID of the collapsible element
 
-* loadMobileHeader(): jQuery extension to bind the search functionality to a
-  DOM element.
+And a collapsible element with:
+* default class: accordion-\-content
 
-### Header.bindings.js
+By default, the accordion will initiate automatically and hide or show the content 
+according to the aria-expanded attribute.
 
-Binds the functionality to a DOM element and the window.onload event
-inside this style guide.
+For instance:
+
+```html
+<div class="accordion">
+    <h3>
+        <button aria-controls="accordion--content-ID" 
+                aria-expanded="false" 
+                class="accordion--button">
+            single accordion
+        </button>
+    </h3>
+    <div class="accordion--content" id="accordion--content-ID">
+        ...
+    </div>
+</div>
+```
+
+### Options
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| `expand` | `function` | `function(button, content)` | Function triggered after the expanded class is added, the 'hidden' attribute is removed from the content and aria-hidden is set to false. |
+| `collapse` | `function` | `function(button, content)` | Function triggered after the expanded class is removed and aria-hidden is set to true. By default, the 'hidden' attribute is set in the transitionEnd function |
+| `transitionEnd` | `function` | `function(event)` | Triggered for each transitionEnd event, use this to add the 'hidden' attribute after the content has been transitioned out of view. |
+| `resizeEvent` | `function` | `function(event, expandedContent)` | ExpandedContent is an array containing all expanded elements. Use this to trigger the 'expand' function on window.resize |
+| `init` | `Boolean` | `true` | Set to false if you want to manually initiate the accordion object (object.init()) |
+| `buttonSelector` | `String` | `'button.accordion--button'` | QuerySelector to identify the accordion trigger button |
+| `accordionExpandedClass` | `String` | `'accordion--expanded'` | Determine which class is added to the expanded content. |
+
+### Functions
+| Function | Description |
+| --- | --- |
+| `init()` | Manually initiate the accordion, this will expand or collapse all content according to the aria-expanded state |
+| `closeAll()` | Close all collapsible content in this accordion |
+| `openAll()` | Open all collapsible content in this accordion |

@@ -76,7 +76,7 @@ header.header {
         &:valid {
 
           flex-grow: .4;
-          margin-right: .4rem;
+          margin: 0 .4rem;
 
           ~ input[type=submit] {
             max-width: 9999px;
@@ -119,8 +119,8 @@ header.header {
     padding: .3rem 0;
 
     .content-container {
-      $span: span(2 of 12);
-      $offset: $gutter-width + ($gutter-width / 2);
+      $span: percentage(2 / 12);
+      $offset: 0 ;
 
       position: relative;
       margin-bottom: 1.3rem;
@@ -167,7 +167,7 @@ header.header {
 
   // Hero image, overlaps and hides breadcrumb accolade.
   figure.hero {
-    $span: span(2 of 12);
+    $span: percentage(2/12);
 
     display: none;
     position: relative;
