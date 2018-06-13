@@ -14,6 +14,7 @@ const twigAdapter = require('@frctl/twig');
 * Give your project a title.
 */
 fractal.set('project.title', 'City of Ghent Style Guide - Version ' + packageInfo.version);
+fractal.set('plugins.web.build.root', 'v3');
 
 /*
 * Tell Fractal where to look for components.
