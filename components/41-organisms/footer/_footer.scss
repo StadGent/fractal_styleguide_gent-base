@@ -3,10 +3,6 @@ footer.footer {
 
   .footer-top {
     @include theme('background-color', 'color-primary--lighten-5', 'footer-background-color');
-    margin-left: -$gutter-width;
-    margin-right: -$gutter-width;
-    width: calc(100% + 2 * #{$gutter-width});
-
 
     width: calc(100% + 2 * #{$gutter-width});
     margin-right: -$gutter-width;
