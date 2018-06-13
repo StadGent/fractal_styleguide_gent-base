@@ -15,7 +15,7 @@ select {
     }
   }
 
-  &::-ms-expand {
+  &::-ms-expand { // sass-lint:disable-line no-vendor-prefixes
     display: none;
   }
 }

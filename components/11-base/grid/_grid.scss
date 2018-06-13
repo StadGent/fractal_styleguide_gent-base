@@ -114,7 +114,8 @@ $susy: (
 
   @if $offset != 'offset-0' {
     margin-left: span(number(nth(str-split($offset, '-'), 2)) wide of number(nth(str-split($columns, '-'), 2)));
-  } @else {
+  }
+  @else {
     margin-left: 0;
   }
 }
