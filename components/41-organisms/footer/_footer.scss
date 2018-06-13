@@ -12,6 +12,10 @@ footer.footer {
   .footer-top {
     @include theme('background-color', 'color-primary--lighten-5', 'footer-background-color');
 
+    width: calc(100% + 2 * #{$gutter-width});
+    margin-right: -$gutter-width;
+    margin-left: -$gutter-width;
+
     > .content-container {
       display: flex;
       flex-wrap: wrap;
