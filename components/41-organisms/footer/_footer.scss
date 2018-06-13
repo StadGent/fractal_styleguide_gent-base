@@ -1,12 +1,11 @@
 // General footer styling.
 footer.footer {
-
   .footer-top {
     @include theme('background-color', 'color-primary--lighten-5', 'footer-background-color');
+
     width: calc(100% + 2 * #{$gutter-width});
     margin-right: -$gutter-width;
     margin-left: -$gutter-width;
-
 
     > .content-container {
       display: flex;
@@ -18,7 +17,6 @@ footer.footer {
         padding-top: 4rem;
         padding-bottom: 4rem;
       }
-
 
       @media (min-width: $bp-max-content) {
         padding: 4rem 0;
