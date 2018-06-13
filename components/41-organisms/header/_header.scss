@@ -9,7 +9,6 @@ header.header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
 
     .site-logo {
       margin-right: auto;
@@ -60,11 +59,12 @@ header.header {
       input[type=text] {
         @include theme('background-color', 'color-primary--lighten-5', 'header-search-background-color');
 
-        flex: 0 1 210px;
+        flex: 0 1 auto;
         width: 100%;
         min-width: 0;
+        max-width: 210px;
         margin-right: 0;
-        transition: flex-grow .2s ease-in-out;
+        transition: max-width .2s ease-in-out;
 
         &:invalid {
           box-shadow: none;
@@ -76,8 +76,7 @@ header.header {
 
         &:focus,
         &:valid {
-
-          flex-grow: .4;
+          max-width: 440px;
           margin: 0 0 0 .4rem;
 
           ~ input[type=submit] {
@@ -141,8 +140,8 @@ header.header {
       }
 
       &::before {
-        left: 0;
-        width: 3rem;
+        left: -$gutter-width;
+        width: 3rem + $gutter-width;
         border-right: 2px solid;
         border-top-right-radius: border-radius('radius-4');
 
@@ -153,8 +152,8 @@ header.header {
       }
 
       &::after {
-        right: 0;
-        width: calc(100% - 3rem + 2px);
+        right: -$gutter-width;
+        width: calc(100% - 3rem + 2px + #{$gutter-width});
         border-left: 2px solid;
         border-top-left-radius: border-radius('radius-4');
 
@@ -205,15 +204,15 @@ header.header {
     &::before,
     &::after {
       position: absolute;
-      bottom: 0;
-      height: 1.6rem;
+      bottom: -.1rem;
+      height: 1.7rem;
       background-color: color('white');
       content: '';
     }
 
     &::before {
       left: 0;
-      width: 3rem;
+      width: 3rem + $gutter-width;
       border-top-right-radius: border-radius('radius-5');
 
       @include desktop {
@@ -227,7 +226,7 @@ header.header {
 
     &::after {
       right: 0;
-      width: calc(100% - 3rem + 2px);
+      width: calc(100% - 3rem + 2px - #{$gutter-width});
       border-top-left-radius: border-radius('radius-5');
 
       @include desktop {
