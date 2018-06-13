@@ -30,6 +30,7 @@ header.header {
       flex: 1;
       flex-wrap: nowrap;
       justify-content: flex-end;
+      overflow: hidden;
 
       label {
         @extend %visually-hidden;
@@ -43,12 +44,13 @@ header.header {
       input[type=submit] {
         max-width: 0;
         padding: 0;
-        transition: opacity .2s ease-in, max-width .2s ease-in, padding .2s ease-in;
+        transition: opacity .2s ease-in-out, max-width .2s ease-in-out, padding .2s ease-in-out;
         box-shadow: none;
         opacity: 0;
 
         &:focus {
           max-width: 9999px;
+          margin-left: .4rem;
           padding: 0 1rem;
           opacity: 1;
         }
@@ -62,7 +64,7 @@ header.header {
         width: 100%;
         min-width: 0;
         margin-right: 0;
-        transition: flex-grow .2s ease-in;
+        transition: flex-grow .2s ease-in-out;
 
         &:invalid {
           box-shadow: none;
@@ -76,10 +78,11 @@ header.header {
         &:valid {
 
           flex-grow: .4;
-          margin: 0 .4rem;
+          margin: 0 0 0 .4rem;
 
           ~ input[type=submit] {
             max-width: 9999px;
+            margin-left: .4rem;
             padding: 0 1rem;
             opacity: 1;
           }
