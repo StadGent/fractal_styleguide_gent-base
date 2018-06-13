@@ -2,6 +2,7 @@
 
 /* global define, module */
 (function (root, factory) {
+  console.log('test');
 
   if (typeof define === 'function' && define.amd) {
     define(factory);
@@ -198,6 +199,7 @@
      * Enable accordion functionality.
      */
     const init = () => {
+      console.log('init');
       setInitial();
       addEvents();
     };
