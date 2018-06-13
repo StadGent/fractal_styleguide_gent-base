@@ -1,16 +1,12 @@
 // General footer styling.
 footer.footer {
-  .footer-top > .content-container,
-  .footer-bottom {
-    padding: 0 $gutter-width;
-
-    @include desktop-xl {
-      padding: 0;
-    }
-  }
 
   .footer-top {
     @include theme('background-color', 'color-primary--lighten-5', 'footer-background-color');
+    margin-left: -$gutter-width;
+    margin-right: -$gutter-width;
+    width: calc(100% + 2 * #{$gutter-width});
+
 
     width: calc(100% + 2 * #{$gutter-width});
     margin-right: -$gutter-width;
@@ -20,14 +16,18 @@ footer.footer {
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 1rem;
-      padding-bottom: 1.5rem;
+      padding: 0 $gutter-width 1.5rem;
 
       @include tablet {
         padding-top: 4rem;
         padding-bottom: 4rem;
       }
-    }
 
+
+      @media (min-width: $bp-max-content) {
+        padding: 4rem 0;
+      }
+    }
 
     .footer--column {
       width: 100%;
@@ -53,7 +53,7 @@ footer.footer {
       &:first-of-type {
         width: 100%;
 
-        @include tablet  {
+        @include tablet {
           order: 3;
           width: span(6 of 12);
         }

@@ -41,6 +41,8 @@ $susy: (
     border-right: $border-outside-container; //smaller width
     border-left: $border-outside-container; //smaller width
   }
+
+  padding: 0 calc(#{$gutter-width});
 }
 
 ///
@@ -56,11 +58,6 @@ $susy: (
 .content-container {
   max-width: $bp-max-content;
   margin: 0 auto;
-  padding: 0 $gutter-width;
-
-  @include tablet {
-    padding: 0;
-  }
 }
 
 ///
@@ -72,8 +69,8 @@ $susy: (
 /// @author Gert-Jan Meire
 ///
 @mixin wide {
-  @include tablet-and-below {
-    width: calc(100% + (#{$gutter-width}));
+  @include desktop-and-below {
+    width: calc(100% + #{$gutter-width});
     margin-right: -$gutter-width/2;
     margin-left: -$gutter-width/2;
   }
@@ -88,7 +85,7 @@ $susy: (
 /// @author Gert-Jan Meire
 ///
 @mixin extra-wide {
-  @include tablet-and-below {
+  @include desktop-and-below {
     width: calc(100% + (#{$gutter-width} * 2));
     margin-right: -$gutter-width;
     margin-left: -$gutter-width;
@@ -116,9 +113,8 @@ $susy: (
   width: span(number(nth(str-split($width, '-'), 2)) of number(nth(str-split($columns, '-'), 2)));
 
   @if $offset != 'offset-0' {
-    margin-left: span(number(nth(str-split($offset, '-'), 2)) of number(nth(str-split($columns, '-'), 2)));
-  }
-  @else {
+    margin-left: span(number(nth(str-split($offset, '-'), 2)) wide of number(nth(str-split($columns, '-'), 2)));
+  } @else {
     margin-left: 0;
   }
 }

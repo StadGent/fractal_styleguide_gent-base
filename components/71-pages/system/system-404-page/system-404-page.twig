@@ -1,3 +1,23 @@
+{% include '@header' with {
+"mijn_gent_block_items": [
+"<a href='javascript:(void);'>Mijn profiel</a>",
+"<a href='javascript:(void);'>Nieuwsbrieven</a>",
+"<a href='javascript:(void);'>Historiek</a>"
+],
+"mijn_gent_block_auth": "true",
+"header_search_id": "header-search",
+"header_search_label": "Search",
+"header_search_placeholder": "Search",
+"header_search_text": "Search",
+"breadcrumbs_items": [
+"<a href='https://stad.gent'>Stad.gent</a>",
+"<a href='#'>Overview</a>",
+"<a href='#'>Theme</a>",
+"<a href='#'>Subpage</a>",
+"<span>Page title</span>"
+]
+} %}
+
 <main id="main">
   <article class="detail-layout">
     {% include '@h1' with { 'h1_text': "We can't find the page you're looking for" } %}

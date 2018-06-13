@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 3.1rem;
-  padding: 0 .8rem 2rem;
+  padding: 0 calc(#{$gutter-width} / 2) 2rem;
 
   @include tablet {
     flex-wrap: nowrap;
@@ -35,5 +35,7 @@
 
   &-content {
     width: 100%;
+    max-width: $six-of-bp-container;
+    margin-right: auto;
   }
 }

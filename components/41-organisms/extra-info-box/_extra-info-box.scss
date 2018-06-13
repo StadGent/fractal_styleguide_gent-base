@@ -28,6 +28,7 @@ $bulb-image-width: 6rem;
   &-content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     > h2 {
       flex-basis: 100%;

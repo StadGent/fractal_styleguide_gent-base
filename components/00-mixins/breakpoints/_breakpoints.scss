@@ -66,8 +66,8 @@
 /// @author Gert-Jan Meire
 /// @require $bp-mobile
 ///
-@mixin tablet-and-below {
-  @include breakpoint(max-width $bp-tablet) {
+@mixin desktop-and-below {
+  @include breakpoint(max-width $bp-desktop) {
     @content;
   }
 }

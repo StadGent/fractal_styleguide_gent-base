@@ -2,11 +2,7 @@
   @include theme('background-color', 'color-primary--lighten-4', 'search-block-background');
 
   margin-bottom: 2rem;
-  padding: 2rem .8rem;
-
-  @include tablet {
-    padding: 2rem 5.5rem;
-  }
+  padding: 2rem calc(#{$gutter-width} / 2);
 
   ul {
     margin: 0;
@@ -40,6 +36,8 @@
   }
 
   &-section {
+    max-width: $six-of-bp-container;
+    margin-right: auto;
     margin-bottom: 2rem;
 
     &:last-of-type {
