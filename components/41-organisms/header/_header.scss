@@ -190,8 +190,8 @@ header.header {
       left: 0;
       width: 100%;
       margin: 0;
-      padding-right: $gutter-width;
       padding-top: .4rem;
+      padding-right: $gutter-width;
       z-index: 1;
 
       @media (min-width: $bp-max-content) {
