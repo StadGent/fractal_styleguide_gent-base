@@ -3,12 +3,17 @@
 module.exports = {
   title: 'Accordion',
   name: 'Accordion',
-  status: 'beta',
-  hidden: 'hidden',
+  status: 'ready',
+  collated: 'true',
+  collator: function (markup, item) {
+    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+  },
+  preview: '@preview-description-list',
   variants: [
     {
       name: 'default',
       label: 'Single',
+      preview: '@preview',
       context: {
         buttonText: 'single accordion',
         content: '<p>Single item accordions are indicated by a chevron.</p>' +
@@ -20,6 +25,7 @@ module.exports = {
     },
     {
       name: 'multiple',
+      preview: '@preview',
       context: {
         items: [
           {
