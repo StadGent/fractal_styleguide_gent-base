@@ -1,21 +1,50 @@
 .tag {
   @include theme('border-color', 'color-primary--lighten-3', 'tag-border-color');
-  @include icon(arrow-right, after);
+
+  &.filter {
+    @include theme('background-color', 'color-primary--lighten-4', 'tag-filter-background-color');
+
+    padding: .3em .6em;
+    border-color: transparent;
+
+    button {
+      width: 1.3rem;
+      height: 1.3rem;
+      margin-left: .7rem;
+      border: 0;
+      background: transparent svg-as-background('cross', color('dark-gray'), 16, 16);
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+  }
 
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 1.5rem;
-  padding: 0 .5em;
+  padding: .7em .6em;
   border: 1px solid;
   border-radius: border-radius('radius-1');
   font-size: .7rem;
-  font-weight: 600;
-  line-height: 1;
+  line-height: 1.1;
   text-decoration: none;
+}
+
+a.tag {
+  @include icon(arrow-right, after);
+
+  padding: .5em .6em;
 
   &::after {
-    padding-left: .5rem;
     font-size: 1rem;
+    padding-left: .5rem;
+  }
+
+  &:hover {
+    @include theme('background-color', 'color-primary--lighten-5', 'tag-background-color-hover');
+  }
+
+  &:hover {
+    @include theme('background-color', 'color-primary--lighten-5', 'tag-background-color-hover');
   }
 }

@@ -1,3 +1,19 @@
-<a href="javascript:(void);" class="tag {{ modifier }}">
-  {{ tag_text }}
-</a>
+{% if type == 'tag' %}
+  <a href="javascript:(void);" class="tag {{ modifier }}">
+    {{ tag_text }}
+  </a>
+{% endif %}
+
+{% if type == 'filter-tag' %}
+  <span class="tag filter {{ modifier }}">
+    {{ tag_text }}
+    <button><span class="visually-hidden">{{ 'Remove tag' }}</span></button>
+  </span>
+{% endif %}
+
+{% if type == 'link-tag-without-icon' %}
+  <span class="tag {{ modifier }}">
+    {{ tag_text }}
+  </span>
+{% endif %}
+
