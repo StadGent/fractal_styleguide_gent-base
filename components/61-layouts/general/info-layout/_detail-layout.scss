@@ -20,6 +20,12 @@
     }
   }
 
+  > ul.accordion {
+    @include desktop {
+      @include set-layout('width-7', 'offset-2');
+    }
+  }
+
   > .help-block {
     @include desktop {
       padding-left: span(1 wide of 12);
