@@ -8,17 +8,18 @@
 ## Markup
 
 * Multiple expandable items must always be contained in an unordered-
-or description list.
+  or description list.
 * The toggle must be of type button and preferably wrapped in an
-element with (implicit) role header.
+  element with (implicit) role header.
 * The toggle button has both aria-expanded to indicate it's current
-state and aria-controls to indicate which element it controls.
+  state and aria-controls to indicate which element it controls.
 
 ## Functionality
 
 * Multiple items can be expanded at the same time
 
 ## Javascript
+
 ### Usage
 
 Create a new accordion object by running:
@@ -84,6 +85,7 @@ QuerySelector to identify the accordion trigger button |
 Determine which class is added to the expanded content. |
 
 ### Functions
+
 | Function | Description |
 | --- | --- |
 | `init()` | Manually initiate the accordion, this will expand

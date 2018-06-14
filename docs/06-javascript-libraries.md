@@ -88,4 +88,5 @@ by the lightbox plugin.
 ## Accordion
 
 Our own accessible accordion library used for all collapsible content.
-For a detailed description of this library, see the notes on our <a href="{{path '/components/detail/accordion'}}">accordion molecule</a>.
+For a detailed description of this library, see the notes on our
+<a href="{{path '/components/detail/accordion'}}">accordion molecule</a>.
