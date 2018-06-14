@@ -143,20 +143,8 @@ footer.footer {
         /// Stand alone links.
         ///
         &.standalone-link {
+          @extend %a-bounce-animation;
           @include icon(arrow-right, after);
-
-          &:focus,
-          &:hover {
-            &::after,
-            &::before {
-              animation: bounce 1s 2;
-
-              // Animation causes pointer flickering in IE.
-              @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
-                animation: none;
-              }
-            }
-          }
         }
       }
     }
@@ -165,20 +153,8 @@ footer.footer {
       &[href^="http://"],
       &[href^="https://"] {
         &[href*="stad.gent"] {
+          @extend %a-bounce-animation;
           @include icon(arrow-right);
-
-          &:focus,
-          &:hover {
-            &::after,
-            &::before {
-              animation: bounce 1s 2;
-
-              // Animation causes pointer flickering in IE.
-              @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
-                animation: none;
-              }
-            }
-          }
 
           &::after {
             content: none;
