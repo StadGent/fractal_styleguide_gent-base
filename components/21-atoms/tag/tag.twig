@@ -7,11 +7,11 @@
 {% if type == 'filter-tag' %}
   <span class="tag filter {{ modifier }}">
     {{ tag_text }}
-    <button></button>
+    <button><span class="visually-hidden">{{ 'Remove tag' }}</span></button>
   </span>
 {% endif %}
 
-{% if type == 'link-tag-with-icon' %}
+{% if type == 'link-tag-without-icon' %}
   <span class="tag {{ modifier }}">
     {{ tag_text }}
   </span>
