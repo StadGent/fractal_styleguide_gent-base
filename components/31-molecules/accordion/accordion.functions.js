@@ -2,7 +2,6 @@
 
 /* global define, module */
 (function (root, factory) {
-
   if (typeof define === 'function' && define.amd) {
     define(factory);
   }
@@ -35,8 +34,8 @@
           if (e.propertyName !== 'max-height') {
             return;
           }
-          if (!e.target.classList.contains('accordion--expanded')) {
-            e.target.setAttribute('hidden', 'true');
+          if (!e.currentTarget.classList.contains('accordion--expanded')) {
+            e.currentTarget.setAttribute('hidden', 'true');
           }
         },
         resizeEvent: (e, expandedContent) => {
@@ -67,7 +66,7 @@
      */
     const toggle = (e) => {
       e.preventDefault();
-      const button = e.target;
+      const button = e.currentTarget;
       button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
       setVisibility(button);
     };
@@ -81,7 +80,7 @@
       const keyCode = e.keyCode || e.which;
       let current = (() => {
         for (let i = buttons.length; i--;) {
-          if (buttons[i] === e.target) {
+          if (buttons[i] === e.currentTarget) {
             return i;
           }
         }

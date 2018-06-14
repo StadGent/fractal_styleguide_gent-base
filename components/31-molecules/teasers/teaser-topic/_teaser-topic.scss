@@ -25,10 +25,6 @@
   &-content {
     margin: 0;
 
-    h3 {
-      @extend %h4;
-    }
-
     p {
       line-height: 1.7;
     }

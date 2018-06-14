@@ -1,72 +1,70 @@
-<div class="mijn-gent-block">
-
+<div class="mijn-gent-block accordion">
+  
   {% if auth == 'false' %}
-
-    {% include '@link' with {
-      'modifier': 'login-link',
-      'link': 'javascript:(void);',
-      'text': 'Aanmelden<i class="icon-user"></i>'
-    } %}
-
+  
+  {% include '@link' with {
+  'modifier': 'login-link',
+  'link': 'javascript:(void);',
+  'text': 'Aanmelden'
+  } %}
+  
   {% else %}
-
-    <div class="toggle">
-      <div class="label">
-        {% include '@link' with {
-          'link': 'javascript:(void);',
-          'modifier': 'toggle',
-          'text': 'Username'
+  
+  <button aria-expanded="false"
+          aria-controls="mijn_gent_content"
+          class="toggle accordion--button">
+    {% include '@image' with { 'src': 'https://via.placeholder.com/64x64', 'alt_text': 'Username' } %}
+    <span>James M.</span>
+  </button>
+  
+  <div id="mijn_gent_content" class="accordion--content" aria-hidden="true" hidden>
+    <article class="content">
+      {% include '@h2' with { 'h2_text': 'Mijn Gent' } %}
+      <section class="profile">
+        {% include '@image' with { 'src': 'https://via.placeholder.com/64x64', 'alt_text': 'Username' } %}
+        <div class="profile-info">
+          <span>{{ 'John Doe' }}</span>
+          {% include 'link' with {
+          'link': '#',
+          'text': 'Show profile',
+          'modifier': 'button button-primary button-small'
+          } %}
+        </div>
+      </section>
+      <section>
+        {% include '@list' with {
+        'type': 'unordered',
+        'modifier': 'links',
+        'items': [
+        "<a href='javascript:(void);'>Overzicht</a>",
+        "<a href='javascript:(void);'>Leestips</a>",
+        "<a href='javascript:(void);'>Mijn profiel</a>"
+        ]
         } %}
-      </div>
-      <div class="picture">
-        {% include '@image' with { 'src': 'https://via.placeholder.com/32x32', 'alt_text': 'Username' } %}
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="mijn-gent-component">
-        <header>
-          {% include '@h3' with { 'h3_text': 'Mijn Bibliotheek Gent' } %}
-        </header>
-
-        <section>
-          {% include '@list' with {
-            'modifier': 'no-style',
-            'items': [
-              "<a href='javascript:(void);'>Overzicht</a>",
-              "<a href='javascript:(void);'>Leestips</a>",
-              "<a href='javascript:(void);'>Mijn profiel</a>"
-            ]
-          } %}
-        </section>
-
-      </div>
-      <div class="mijn-gent-component">
-        <header>
-          {% include '@h3' with { 'h3_text': 'Mijn Gent' } %}
-        </header>
-
-        <section>
-          {% include '@list' with {
-            'modifier': 'no-style',
-            'items': [
-              "<a href='javascript:(void);'>Mijn profiel</a>",
-              "<a href='javascript:(void);'>Nieuwsbrieven</a>",
-              "<a href='javascript:(void);'>Historiek</a>"
-            ]
-          } %}
-        </section>
-
-      </div>
+      </section>
+      <section>
+        {% include '@h2' with { 'h2_text': 'Mijn Gent' } %}
+        
+        {% include '@list' with {
+        'type': 'unordered',
+        'modifier': 'links',
+        'items': [
+        "<a href='javascript:(void);'>Mijn profiel</a>",
+        "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+        "<a href='javascript:(void);'>Historiek</a>"
+        ]
+        } %}
+      </section>
       <footer>
         {% include '@link' with {
-          'link': 'javascript:(void);',
-          'modifier': '',
-          'text': 'Afmelden'
+        'link': 'javascript:(void);',
+        'modifier': 'button button-small button-secondary',
+        'type': 'unordered',
+        'text': 'Afmelden'
         } %}
       </footer>
-    </div>
-
+    </article>
+  </div>
   {% endif %}
-
 </div>
+

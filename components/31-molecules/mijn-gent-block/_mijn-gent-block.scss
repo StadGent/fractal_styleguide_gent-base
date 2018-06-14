@@ -1,119 +1,101 @@
 .mijn-gent-block {
-  display: inline-block;
+  display: flex;
   position: relative;
-
-  &:hover .content {
-    display: inline-block;
-  }
+  justify-content: flex-end;
 
   .login-link {
-    display: inline-block;
-    position: relative;
-    height: 2rem;
-
-    @include tablet {
-      padding-right: 2rem;
-    }
-
-    i {
-      display: none;
-
-      @include tablet {
-        display: inline;
-        position: absolute;
-        margin-top: -.2rem;
-        margin-left: .625rem;
-      }
-    }
-  }
-
-  .toggle {
-    display: inline-block;
-    position: relative;
-    height: 2rem;
+    text-overflow: ellipsis;
     overflow: hidden;
-  }
 
-  .label,
-  .picture {
-    height: 2rem;
-    float: left;
-  }
-
-  .label {
-    display: none;
-
-    @include tablet {
-      display: inline;
-      margin-right: .5rem;
+    &::after {
+      content: none;
     }
   }
 
-  .picture {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 2rem;
-    margin: auto;
+  img {
+    border-radius: 50%;
+  }
+
+  .accordion--button {
+
+    display: flex;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    * {
+      vertical-align: middle;
+    }
 
     img {
-      width: 100%;
-      border-radius: border-radius('radius-1');
+      max-width: 2.3rem;
     }
+
+    span {
+      display: none;
+      padding: 0 .5em;
+      font-weight: 600;
+
+      @include tablet {
+        display: inline-block;
+      }
+    }
+
+    &::before {
+      line-height: 0;
+    }
+  }
+
+  .accordion--content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: calc(100vw - 2 * #{$gutter-width});
+    max-width: $bp-mobile;
+    margin-top: .5rem;
+    transition: max-height .3s ease-in-out;
+    border-radius: border-radius('radius-1');
+    background: color('white');
+    box-shadow: 0 2px 12px 0 rgba(35, 51, 58, .25);
+    z-index: 9999;
   }
 
   .content {
-    display: none;
-    position: absolute;
-    top: calc(2.4rem - 10px);
-    right: 0;
-    min-width: 200px;
-    margin-top: 10px;
-    border-radius: border-radius('radius-1');
-    background: color('white');
-    box-shadow: 2px 2px 2px 0 rgba(44, 63, 72, .2), -2px 2px 2px 0 rgba(44, 63, 72, .2);
-    z-index: 9999;
+    padding: 1.2rem;
 
-    h3 {
-      margin-bottom: .2rem;
-      color: color('dark-gray');
-      font-size: .8rem;
-    }
-
-    li {
-      line-height: 1.6rem;
-    }
-
-    a {
-      color: color('blue');
-      font-size: .8rem;
-      text-decoration: none;
-    }
-
-    header,
-    section {
-      padding-right: .625rem;
-      padding-left: .625rem;
-    }
-
-    header {
-      padding-top: .9rem;
+    h2 {
+      @extend %h3;
+      margin-bottom: 0;
     }
 
     section {
-      padding-left: 1.25rem;
+      @include theme('border-color', 'color-primary--lighten-4', 'mijn_gent-border-color');
+
+      padding: .6rem 0;
+      border-top: 2px solid;
+
+      ul {
+        margin: 0;
+      }
     }
 
-    footer {
-      padding: 0 .625rem;
-      border-bottom-left-radius: border-radius('radius-1');
-      border-bottom-right-radius: border-radius('radius-1');
-      background: color('blue', -1);
-      text-align: right;
-    }
-  }
+    .profile {
+      display: flex;
+      padding-bottom: 1rem;
+      border-top: 0;
 
-  .mijn-gent-component {
-    border-bottom: 1px solid color('blue', -2);
+      &-info {
+        span {
+          display: block;
+        }
+      }
+
+      img {
+        align-self: flex-start;
+        max-width: 3.4rem;
+        margin-right: $gutter-width;
+      }
+    }
   }
 }

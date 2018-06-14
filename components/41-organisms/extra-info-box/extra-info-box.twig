@@ -30,12 +30,22 @@
       {% include '@h3' with {
         'h3_text': 'More info about'
       } %}
-      {% include '@tag' with {
-        'tag_text': 'Inner city'
-      } %}
-      {% include '@tag' with {
-        'tag_text': 'Another tag'
-      } %}
+
+      {% if tags.length > 1 %}
+        <ul class="extra-info-box-tags">
+          {% for tag in tags %}
+            <li>
+              {% include '@tag' with {
+                'tag_text': tag
+              } %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        {% include '@tag' with {
+          'tag_text': tags.0
+        } %}
+      {% endif %}
 
       {% include '@h3' with {
         'h3_text': 'Related Linked Open Data'

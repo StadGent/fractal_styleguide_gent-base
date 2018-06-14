@@ -5,23 +5,14 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 100%;
   margin-top: 3.1rem;
-  padding: 0 .8rem 2rem;
+  padding: 0 calc(#{$gutter-width} / 2) 2rem;
 
   @include tablet {
     flex-wrap: nowrap;
     justify-content: flex-start;
     margin-top: 0;
     padding: 2rem 3.7rem 2rem ($gutter-width*2);
-  }
-
-  h2 {
-    @extend %h4;
-  }
-
-  h3 {
-    @extend %h5;
   }
 
   a {
@@ -44,5 +35,7 @@
 
   &-content {
     width: 100%;
+    max-width: $six-of-bp-container;
+    margin-right: auto;
   }
 }

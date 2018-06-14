@@ -1,9 +1,7 @@
 .dg-block-disclaimer {
-  font-size: .8rem;
-  line-height: 2.13;
 
   h2 {
-    @extend %h5;
+    @extend %h3;
   }
 
   ul {

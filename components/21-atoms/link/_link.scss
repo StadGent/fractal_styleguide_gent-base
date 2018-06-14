@@ -23,7 +23,17 @@ a {
   &.button {
     @include button;
     @include button-icon;
+
     @include icon(arrow-right);
+
+    &[href^="http://"],
+    &[href^="https://"] {
+      @include icon(external-link);
+
+      &::after {
+        content: none;
+      }
+    }
 
     // Overrule flex for IE
     align-items: flex-start;
@@ -87,7 +97,7 @@ a {
   }
 
   &.standalone-link:not([download]):not([href^="http://"]):not([href^="https://"]),
-  &.button {
+  &.button:not([download]):not([href^="http://"]):not([href^="https://"]) {
     &:focus,
     &:hover {
       &::after,
@@ -102,9 +112,9 @@ a {
     }
   }
 
-  &[download],
-  &[href^="http://"],
-  &[href^="https://"] {
+  &[download]:not(.button),
+  &[href^="http://"]:not(.button),
+  &[href^="https://"]:not(.button) {
     display: inline-block;
     padding: 0 $link-padding;
 

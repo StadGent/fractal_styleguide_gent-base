@@ -1,42 +1,96 @@
 .detail-layout {
   @extend %content-container;
 
-  display: flex;
-  flex-wrap: wrap;
   margin-top: 1.2rem;
   font-size: .9rem;
   line-height: 1.8;
 
   > * {
-    @include tablet {
-      margin-right: span(3 of 12);
-      margin-left: span(2 of 12);
+    @include desktop {
+      @include set-layout('width-7', 'offset-2');
     }
+  }
 
-    &ul.image-gallery
-    &.quote,
-    &.help-block,
-    &.search-block {
-      @include tablet {
-        margin-right: span(2 of 12);
-        margin-left: span(1 of 12);
-      }
+  > .quote,
+  > .image-gallery--wrapper,
+  > .help-block,
+  > .search-block {
+    @include desktop {
+      @include set-layout('width-9', 'offset-1');
     }
+  }
+
+  > .help-block {
+    @include desktop {
+      padding-left: span(1 wide of 12);
+    }
+  }
+
+  > .quote,
+  > .image-gallery--wrapper,
+  > .help-block,
+  > .search-block,
+  > .video,
+  > .timeline {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  > .quote {
+    // Spot image escapes the container by 2.5rem.
+    margin-top: 5.5rem;
+
+    @include desktop {
+      margin-top: 2rem;
+    }
+  }
+
+  > .help-block,
+  > .search-block {
+    @include wide;
+  }
+
+  > .timeline {
+    @include set-layout();
+    @include extra-wide;
   }
 
   .summary-text {
     font-weight: 600;
   }
 
-  .help-block,
-  .search-block {
-    @extend %wide;
+  + aside {
+    @extend %content-container;
 
-    margin-bottom: 4rem;
-  }
+    margin-bottom: 2rem;
 
-  .timeline {
-    @extend %extra-wide;
+    > * {
+      @include desktop {
+        @include set-layout('width-7', 'offset-2');
+      }
+    }
+
+    .extra-info-box {
+      @include desktop {
+        @include set-layout();
+        width: 100%;
+        margin-left: 0;
+        padding-right: span(2 wide of 12);
+        padding-left: span(2 wide of 12);
+      }
+    }
+
+    .feedback-form {
+      @include wide;
+
+      margin-bottom: 2rem;
+
+      @include desktop {
+        @include set-layout('width-9', 'offset-1');
+
+        padding-left: span(1 wide of 12);
+      }
+    }
   }
 }
 

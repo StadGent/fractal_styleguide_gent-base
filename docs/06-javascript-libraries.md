@@ -17,15 +17,12 @@ Take into consideration that all Javascript included in this style guide is
 dependent on:
 
 * base.js
-* jQuery
 
 ## Base JS
 
 base.js contains all global variables and must be included before all other
 javascript files.
 Global variables are prefixed with **gent_styleguide** to avoid contamination.
-
-## Objects
 
 ### TabTrap
 
@@ -36,7 +33,7 @@ DOM-element.
 * a modal window
 * mobile navigation
 
-### Properties
+#### Properties
 
 * hasfocusables (boolean): does the DOM-element contain focusable elements?
 * next(): place focus on the next focusable element.
@@ -45,7 +42,7 @@ DOM-element.
 * end(): place focus on the last focusable element.
 * reset(): resets the TabTrap to it's original values.
 
-### Attention
+#### Attention
 
 Detecting and handling keyboard input remains the responsibility of the invoking
 function!
@@ -61,55 +58,14 @@ e.preventDefault();
 tabTrap.next();
 ```
 
-## Component.functions.js
-
-This is the main functionalty of a component. This file defines several jQuery
-function extensions that can be implemented in your project.
-
-Use this file if you want to write your own bindings or integrate it into
-another Javascript framework, eg. integration in a Drupal theme.
-
-## Component.binding.js
-
-This file integrates the Component.functions.js with the Style guide components
-inside Fractal. These bindings can be used inside your own project to implement
-the correct Javascript functionality per component.
-
 # Javascript enabled components
 
 Inside this stylguide we have the following Javascript enabled components:
 
-** Atoms **
-
-* Button-drop
-
-** Molecules **
-
 * Breadcrumbs
-
 * Hamburger-menu
 * Gallery
-
-** Organisms **
-
-* Header
-
-## Button-drop
-
-Style guide implementation of the
-<a href="{{path '/components/detail/button-drop'}}">drop button atom</a>.
-
-### Button-drop.functions.js
-
-Implements a drop-down button based on a list element.
-
-* dropButtonLoad(): jQuery extension to bind the drop-down functionality to a
-  DOM element.
-
-### Button-drop.binding.js
-
-Binds the functionality to a DOM element and the window.onload event
-inside this style guide.
+* Accordion (Faq, timeline, mijn_gent, feedback form...)
 
 ## Breadcrumbs
 
@@ -121,45 +77,16 @@ Style guide implementation of the
 Style guide implementation of the
 <a href="{{path '/components/detail/hamburger-menu'}}">hamburger menu</a>.
 
-### Hamburger-menu.functions.js
-
-Implements a hamburger-menu button combined with a slide-in panel for easy
-navigation.
-
-* loadHamburgerMenu(): jQuery extension to bind the slide functionality to a
-  DOM element.
-
-### Hamburger-menu.binding.js
-
-Binds the functionality to a DOM element and the window.onload event
- inside the style guide.
-
 ## Gallery
 
 We omitted to create a functions.js file, since all functions are provided
-by the swipebox jQuery plugin.
+by the lightbox plugin.
 
 **Dependencies**
-[Light Gallery](http://sachinchoolur.github.io/lightGallery/)
+[baguetteBox](https://github.com/feimosi/baguetteBox.js)
 
-### Gallery.binding.js
+## Accordion
 
-Implements swipebox jQuery plugin in this Style guide.
-
-## Header
-
-Style guide implementation of the
-<a href="{{path '/components/detail/header'}}">header organism</a>.
-
-### Header.functions.js
-
-Implements a minimized search button combined with a slide-in form for easy
-searching on mobile devices.
-
-* loadMobileHeader(): jQuery extension to bind the search functionality to a
-  DOM element.
-
-### Header.bindings.js
-
-Binds the functionality to a DOM element and the window.onload event
-inside this style guide.
+Our own accessible accordion library used for all collapsible content.
+For a detailed description of this library, see the notes on our
+<a href="{{path '/components/detail/accordion'}}">accordion molecule</a>.

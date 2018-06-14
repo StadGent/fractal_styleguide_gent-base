@@ -45,7 +45,8 @@ $border-radius: (
   'radius-1': .2rem,
   'radius-2': .6rem,
   'radius-3': 1rem,
-  'radius-4': 1.2rem
+  'radius-4': 1.2rem,
+  'radius-5': 1.6rem,
 ) !default;
 
 ///
@@ -128,6 +129,17 @@ $bp-max-content: 1280px !default;
 /// @author Gert-Jan Meire
 ///
 $bp-container: 1680px !default;
+
+///
+/// Defines the width of six columns on container max-width.
+/// Used to limit with of block content.
+///
+/// @since 3.0.0
+/// @group settings
+/// @access public
+/// @author Bart Delrue
+///
+$six-of-bp-container: 32rem !default;
 
 ///
 /// Defines the number of grid columns for a given grid container.

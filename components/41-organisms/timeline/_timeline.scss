@@ -9,10 +9,6 @@ dl.timeline {
   width: 100%;
   padding: 0;
 
-  * {
-    font-size: .8rem;
-  }
-
   .timeline-slot {
 
     @include desktop {
@@ -34,7 +30,7 @@ dl.timeline {
 
       a,
       .image-gallery .image-gallery__show-more .show-more__content {
-        @include theme('color', 'color-primary--darken-1', 'timeline-colored-row-link-color');
+        @include theme('color', 'color-primary--darken-2', 'timeline-colored-row-link-color');
       }
     }
 
@@ -124,6 +120,7 @@ dl.timeline {
         &::before {
           position: absolute;
           left: 0;
+          padding-left: .2em;
           font-size: 1.2rem;
           line-height: .9;
         }
@@ -142,7 +139,7 @@ dl.timeline {
       margin: .2rem 0;
       border: 0;
       background: transparent;
-      font-size: .9rem;
+      line-height: 1.2;
 
       button:hover::after,
       button:focus::after {
@@ -188,7 +185,7 @@ dl.timeline {
     }
 
     > dt {
-      @extend %h5;
+      @extend %h3;
 
       position: relative;
       width: 100%;
@@ -232,6 +229,7 @@ dl.timeline {
       overflow: hidden;
 
       .accordion--content {
+        margin-left: 0;
         overflow: visible;
       }
 

@@ -1,19 +1,21 @@
 .feedback-form {
   @include theme('background-color', 'color-primary--lighten-4', 'feedback-form-background');
 
-  padding: 1.2rem $gutter-width 2rem $gutter-width;
+  padding: 1.2rem calc(#{$gutter-width} / 2);
   border-radius: border-radius('radius-1');
 
-  @include tablet {
-    padding: 1.2rem 10rem 2rem 5.5rem;
+  > * {
+    max-width: $six-of-bp-container;
   }
 
   h2 {
     @extend %h3;
+
+    margin-bottom: 0;
   }
 
-  h3 {
-    @extend %h4;
+  .accordion--content {
+    margin-top: 1rem;
   }
 
   a {
