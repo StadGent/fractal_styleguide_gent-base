@@ -80,6 +80,12 @@
       }
     }
 
+    .extra-articles {
+      @include desktop {
+        @include set-layout('width-8', 'offset-2');
+      }
+    }
+
     .feedback-form {
       @include wide;
 
