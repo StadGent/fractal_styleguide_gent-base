@@ -120,4 +120,16 @@ footer.footer {
       justify-content: start;
     }
   }
+
+  ///
+  /// External links other than group Ghent get an indicator.
+  ///
+  a {
+    &[href^="http://"],
+    &[href^="https://"] {
+      &[href*="stad.gent"]::after {
+        display: none;
+      }
+    }
+  }
 }
