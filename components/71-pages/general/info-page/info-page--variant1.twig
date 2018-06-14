@@ -69,6 +69,44 @@
     "text": "Nam lorem ex, posuere non lectus tempus, ornare scelerisque mauris. Integer vitae tortor orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas enim lectus, malesuada in hendrerit in, vulputate ut enim. Integer pretium elit purus, ac pulvinar augue scelerisque quis. In velit elit, luctus vitae nunc quis, hendrerit congue felis. Nulla tincidunt tincidunt cursus. Mauris pretium eu ex id aliquet. Aenean massa metus, posuere ac dui sit amet, volutpat interdum libero."
   } %}
 
+  {% include '@accordion--multiple' with {
+    items: [
+      {
+        'buttonText': 'First item',
+        'content': '<p>Multiple item accordions are contained in a list element.</p>' ~
+        '<p>They are indicated with a \'plus\' or \'minus\' icon</p>' ~
+        '<p>Below is some nonsens text.</p>' ~
+        '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' ~
+        'Animi culpa dolorum enim molestiae molestias nemo nulla quas sed, ' ~
+        'temporibus voluptatem!</p>'
+      },
+      {
+        'buttonText': 'Second item',
+        'content': '<p>Single item accordions are indicated by a chevron.</p>' ~
+        '<p>Below is some nonsens text.</p>' ~
+        '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' ~
+        'Animi culpa dolorum enim molestiae molestias nemo nulla quas sed, ' ~
+        'temporibus voluptatem!</p>'
+      },
+      {
+        'buttonText': 'Third item',
+        'content': '<p>Single item accordions are indicated by a chevron.</p>' ~
+        '<p>Below is some nonsens text.</p>' ~
+        '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' ~
+        'Animi culpa dolorum enim molestiae molestias nemo nulla quas sed, ' ~
+        'temporibus voluptatem!</p>'
+      },
+      {
+        'buttonText': 'Fourth item',
+        'content': '<p>Single item accordions are indicated by a chevron.</p>' ~
+        '<p>Below is some nonsens text.</p>' ~
+        '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' ~
+        'Animi culpa dolorum enim molestiae molestias nemo nulla quas sed, ' ~
+        'temporibus voluptatem!</p>'
+      }
+    ]
+    } %}
+
   {% include '@video' with {
     "title": "Promofilm stad Gent.",
     "src": "https://www.youtube.com/embed/S0vLmTWUmok",
