@@ -1,7 +1,5 @@
-<li class="teaser-topic">
-  <a href="{{ teaser_link_link }}" class="teaser-topic-overlay-link" tabindex="-1"
-     aria-hidden="true">{{ teaser_h3_title }}</a>
-  <div class="teaser-topic-content">
+<li class="teaser teaser-topic">
+  <div class="teaser-content">
     <h3 id="{{ teaser_uid }}">{{ teaser_h3_title }}</h3>
 
     {% include '@paragraph' with {
@@ -15,5 +13,7 @@
       'modifier': 'read-more standalone-link'
     } %}
   </div>
+  <a href="{{ teaser_link_link }}" class="teaser-overlay-link" tabindex="-1"
+     aria-hidden="true">{{ teaser_h3_title }}</a>
 </li>
 

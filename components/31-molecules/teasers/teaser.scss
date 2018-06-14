@@ -1,0 +1,40 @@
+.teaser {
+
+  position: relative;
+  list-style: none;
+
+  .teaser-content {
+
+    a {
+      position: relative;
+      z-index: 2;
+    }
+
+    a.read-more {
+      margin-left: 0;
+      line-height: 1em;
+    }
+
+    p {
+      margin-bottom: .4rem;
+    }
+
+  }
+
+  a.teaser-overlay-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
