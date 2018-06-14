@@ -63,32 +63,18 @@ For instance:
 
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `expand` | `function` | `function(button, content)` |
-Function triggered after the expanded class is added, the 'hidden'
-attribute is removed from the content and aria-hidden is set to false. |
-| `collapse` | `function` | `function(button, content)` |
-Function triggered after the expanded class is removed and aria-hidden
-is set to true. By default, the 'hidden' attribute is set
-in the transitionEnd function |
-| `transitionEnd` | `function` | `function(event)` |
-Triggered for each transitionEnd event, use this to add the 'hidden'
-attribute after the content has been transitioned out of view. |
-| `resizeEvent` | `function` | `function(event, expandedContent)` |
-ExpandedContent is an array containing all expanded elements.
-Use this to trigger the 'expand' function on window.resize |
-| `init` | `Boolean` | `true` |
-Set to false if you want to manually initiate
-the accordion object (object.init()) |
-| `buttonSelector` | `String` | `'button.accordion--button'` |
-QuerySelector to identify the accordion trigger button |
-| `accordionExpandedClass` | `String` | `'accordion--expanded'` |
-Determine which class is added to the expanded content. |
+| `expand` | `function` | `function(button, content)` | Function triggered after the expanded class is added, the 'hidden' attribute is removed from the content and aria-hidden is set to false. |
+| `collapse` | `function` | `function(button, content)` | Function triggered after the expanded class is removed and aria-hidden is set to true. By default, the 'hidden' attribute is set in the transitionEnd function |
+| `transitionEnd` | `function` | `function(event)` | Triggered for each transitionEnd event, use this to add the 'hidden' attribute after the content has been transitioned out of view. |
+| `resizeEvent` | `function` | `function(event, expandedContent)` | ExpandedContent is an array containing all expanded elements. Use this to trigger the 'expand' function on window.resize |
+| `init` | `Boolean` | `true` | Set to false if you want to manually initiate the accordion object (object.init()) |
+| `buttonSelector` | `String` | `'button.accordion--button'` | QuerySelector to identify the accordion trigger button |
+| `accordionExpandedClass` | `String` | `'accordion--expanded'` | Determine which class is added to the expanded content. |
 
 ### Functions
 
 | Function | Description |
 | --- | --- |
-| `init()` | Manually initiate the accordion, this will expand
-or collapse all content according to the aria-expanded state |
+| `init()` | Manually initiate the accordion, this will expand or collapse all content according to the aria-expanded state |
 | `closeAll()` | Close all collapsible content in this accordion |
 | `openAll()` | Open all collapsible content in this accordion |
