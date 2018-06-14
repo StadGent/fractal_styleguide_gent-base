@@ -3,16 +3,17 @@
   .accordion--button {
     @include icon(chevron-down);
     position: relative;
-    padding-right: 1.6em;
+    padding-right: 1.6rem;
     padding-left: 0;
     color: inherit;
+    text-align: left;
 
     &::before {
       position: absolute;
       right: 0;
       transition: transform .2s ease-in-out;
-      font-size: 1.2em;
-      line-height: 1.2;
+      font-size: 1.4rem;
+      line-height: 1.1;
     }
 
     &[aria-expanded=true] {
@@ -42,14 +43,11 @@ dl.accordion {
       position: relative;
       right: auto;
       left: 0;
-      padding-right: .2em;
+      min-width: 1.6rem;
       transition: transform .2s ease-in-out;
-      font-size: 1.2em;
+      font-size: 1.2rem;
       line-height: 1.2;
-
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
-        top: .2em;
-      }
+      text-align: left;
     }
 
     &[aria-expanded=true] {
@@ -63,6 +61,10 @@ dl.accordion {
     &[aria-expanded=false] {
       @include icon(plus);
     }
+  }
+
+  .accordion--content {
+    margin-left: 1.6rem;
   }
 }
 
