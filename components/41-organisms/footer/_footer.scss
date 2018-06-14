@@ -127,8 +127,63 @@ footer.footer {
   a {
     &[href^="http://"],
     &[href^="https://"] {
-      &[href*="stad.gent"]::after {
-        display: none;
+      &[href*="stad.gent"] {
+        &:not([download]):not(.standalone-link)::after {
+          content: none;
+        }
+
+        ///
+        /// Download links.
+        ///
+        &[download] {
+          @include icon(download, after);
+        }
+
+        ///
+        /// Stand alone links.
+        ///
+        &.standalone-link {
+          @include icon(arrow-right, after);
+
+          &:focus,
+          &:hover {
+            &::after,
+            &::before {
+              animation: bounce 1s 2;
+
+              // Animation causes pointer flickering in IE.
+              @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+                animation: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.button {
+      &[href^="http://"],
+      &[href^="https://"] {
+        &[href*="stad.gent"] {
+          @include icon(arrow-right);
+
+          &:focus,
+          &:hover {
+            &::after,
+            &::before {
+              animation: bounce 1s 2;
+
+              // Animation causes pointer flickering in IE.
+              @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+                animation: none;
+              }
+            }
+          }
+
+          &::after {
+            content: none;
+          }
+        }
       }
     }
   }
