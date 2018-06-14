@@ -21,17 +21,29 @@
       margin-bottom: 0;
     }
 
+    time.event,
+    span.published {
+      margin: .4rem 0;
+      line-height: 1.5;
+    }
+
     time.event {
       @include icon('calendar');
 
       display: flex;
       align-items: center;
-      margin: .4rem 0;
 
       &::before {
-        font-size: 1.2rem;
         padding-right: .5rem;
+        font-size: 1.2rem;
       }
+    }
+
+    span.published {
+      display: inline-block;
+      color: color('dark-gray', -1);
+      font-style: italic;
+      line-height: 2;
     }
 
 

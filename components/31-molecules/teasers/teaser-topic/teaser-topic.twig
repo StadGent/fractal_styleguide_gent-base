@@ -1,6 +1,6 @@
 <li class="teaser teaser-topic">
   <div class="teaser-content">
-    <h3 id="{{ teaser_uid }}">{{ teaser_h3_title }}</h3>
+    <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
 
     {% include '@paragraph' with {
       'text': teaser_paragraph_text
@@ -14,6 +14,6 @@
     } %}
   </div>
   <a href="{{ teaser_link_link }}" class="teaser-overlay-link" tabindex="-1"
-     aria-hidden="true">{{ teaser_h3_title }}</a>
+     aria-hidden="true">{{ teaser_title }}</a>
 </li>
 

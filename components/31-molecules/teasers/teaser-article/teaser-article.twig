@@ -1,20 +1,19 @@
 <li class="teaser teaser-article">
-
+  
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__bottom">
-      <h3 id="{{ teaser_uid }}">{{ teaser_h3_title }}</h3>
-  
+      <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
       {% if teaser_event_date %}
         <time class="event">{{ teaser_event_date }}</time>
-      {% elseif teaser_published_date %}
+      {% else %}
         <span class="published">{{ teaser_published_date }}</span>
       {% endif %}
       
       {% include '@paragraph' with {
       'text': teaser_paragraph_text
       } %}
-  
+      
       {% include '@link' with {
       'text': teaser_link_text,
       'aria_labelledby': teaser_uid,
@@ -24,15 +23,16 @@
     </div>
     <div class="content__top">
       {% include '@figure' with {
-      "figure_image_src": "https://via.placeholder.com/800x500"
+      "figure_image_src": teaser_image_src
       } %}
-  
+      
       {% include '@tag' with {
-      "tag_text": "Mobiliteit & openbare werken"
+      "tag_text": teaser_tag,
+      "type": 'span-tag'
       } %}
     </div>
   </article>
   <a href="{{ teaser_link_link }}" class="teaser-overlay-link" tabindex="-1"
-     aria-hidden="true">{{ teaser_h3_title }}</a>
+     aria-hidden="true">{{ teaser_title }}</a>
 </li>
 
