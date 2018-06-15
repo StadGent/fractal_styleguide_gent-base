@@ -29,7 +29,9 @@
     }
 
     img {
-      max-width: 2.3rem;
+      width: 2.3rem;
+      height: 2.3rem;
+      object-fit: cover;
     }
 
     span {
@@ -95,13 +97,16 @@
       &-info {
         span {
           display: block;
+          font-size: .7rem;
         }
       }
 
       img {
         align-self: flex-start;
-        max-width: 3.4rem;
+        width: 3.3rem;
+        height: 3.3rem;
         margin-right: $gutter-width;
+        object-fit: cover;
       }
     }
   }
