@@ -78,6 +78,8 @@ All notable changes to this style guide are documented here.
   now inside their own fieldset.
 * DTGB-401: Updated links to new public gent_base repository.
 * DTGB-402: Added a required form fields indicator at the top of forms.
+* DTGB-443: Added article teaser component.
+* DTGB-443: Added 'more articles' block.
 
 ### 2.9.0
 
