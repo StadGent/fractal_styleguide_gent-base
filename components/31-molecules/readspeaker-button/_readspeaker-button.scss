@@ -12,7 +12,7 @@
       @include theme('background-color', 'color-primary', 'readspeaker-icon-color');
 
       [class*='cs--'] & {
-        color: #fff;
+        color: color('white');
       }
     }
   }
