@@ -5,7 +5,7 @@
     <div class="content__bottom">
       <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
       {% if teaser_event_date %}
-        <time class="event">{{ teaser_event_date }}</time>
+        <time class="event" datetime="{{ teaser_event_datetime }}">{{ teaser_event_date }}</time>
       {% else %}
         <span class="published">{{ teaser_published_date }}</span>
       {% endif %}
@@ -18,7 +18,8 @@
       'text': teaser_link_text,
       'aria_labelledby': teaser_uid,
       'link': teaser_link_link,
-      'modifier': 'read-more standalone-link'
+      'modifier': 'read-more standalone-link',
+      'title': null
       } %}
     </div>
     <div class="content__top">
