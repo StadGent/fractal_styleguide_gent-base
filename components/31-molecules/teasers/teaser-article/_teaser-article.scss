@@ -22,7 +22,7 @@
     }
 
     time.event,
-    span.published {
+    time.published {
       margin: .4rem 0;
       line-height: 1.5;
     }
@@ -39,7 +39,7 @@
       }
     }
 
-    span.published {
+    time.published {
       display: inline-block;
       color: color('dark-gray', -1);
       font-style: italic;
