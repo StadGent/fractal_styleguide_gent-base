@@ -19,7 +19,7 @@
         width: span(12 of 12);
         margin-bottom: 1.6rem;
 
-        @include tablet {
+        @include phablet {
           width: span(4 of 8);
         }
       }
