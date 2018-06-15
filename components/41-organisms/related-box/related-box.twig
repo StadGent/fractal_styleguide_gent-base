@@ -1,15 +1,15 @@
-<div class="extra-info-box">
+<div class="related-box">
   {% include '@image' with {
     'src': '/styleguide/img/svg/lightbulb.svg',
     'alt_text': '',
-    'modifier': 'extra-info-box-image'
+    'modifier': 'related-box-image'
   } %}
-  <div class="extra-info-box-content">
+  <div class="related-box-content">
     {% include '@h2' with {
       'h2_text': 'Also interesting'
     } %}
 
-    <div class="extra-info-box-content-column">
+    <div class="related-box-content-column">
       {% include '@h3' with {
         'h3_text': 'Similar articles'
       } %}
@@ -26,17 +26,18 @@
         }
       %}
     </div>
-    <div class="extra-info-box-content-column">
+    <div class="related-box-content-column">
       {% include '@h3' with {
         'h3_text': 'More info about'
       } %}
 
       {% if tags.length > 1 %}
-        <ul class="extra-info-box-tags">
+        <ul class="related-box-tags">
           {% for tag in tags %}
             <li>
               {% include '@tag' with {
-                'tag_text': tag
+                'tag_text': tag,
+                type: 'tag'
               } %}
             </li>
           {% endfor %}
