@@ -2,6 +2,8 @@
   @include theme('color', 'color-tertiary--lighten-1', 'readspeaker-color');
   @include icon('readspeaker');
 
+  margin: .8rem 0;
+  padding: 0;
   border: 0;
   background: transparent;
   cursor: pointer;
