@@ -13,7 +13,7 @@
   <button aria-expanded="false"
           aria-controls="mijn_gent_content"
           class="toggle accordion--button">
-    {% include '@image' with { 'src': 'https://via.placeholder.com/64x64', 'alt_text': 'Username' } %}
+    {% include '@image' with { 'src': '/styleguide/img/stock/user_avatar.jpg'|path, 'alt_text': 'Username' } %}
     <span>James M.</span>
   </button>
   
@@ -21,7 +21,7 @@
     <article class="content">
       {% include '@h2' with { 'h2_text': 'Mijn Gent' } %}
       <section class="profile">
-        {% include '@image' with { 'src': 'https://via.placeholder.com/64x64', 'alt_text': 'Username' } %}
+        {% include '@image' with { 'src': '/styleguide/img/stock/user_avatar.jpg'|path, 'alt_text': 'Username' } %}
         <div class="profile-info">
           <span>{{ 'John Doe' }}</span>
           {% include 'link' with {
