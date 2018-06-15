@@ -14,7 +14,8 @@
   > .quote,
   > .image-gallery--wrapper,
   > .help-block,
-  > .search-block {
+  > .search-block,
+  > .info-box {
     @include desktop {
       @include set-layout('width-9', 'offset-1');
     }
@@ -39,6 +40,10 @@
   > .video,
   > .timeline {
     margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  > .info-box {
     margin-bottom: 2rem;
   }
 

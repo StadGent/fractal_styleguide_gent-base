@@ -5,9 +5,9 @@
     <div class="content__bottom">
       <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
       {% if teaser_event_date %}
-        <time class="event" datetime="{{ teaser_event_datetime }}">{{ teaser_event_date }}</time>
+        <time class="event" datetime="{{ teaser_datetime }}">{{ teaser_event_date }}</time>
       {% else %}
-        <span class="published">{{ teaser_published_date }}</span>
+        <time class="published" datetime="{{ teaser_datetime }}" pubdate="pubdate">{{ teaser_published_date }}</time>
       {% endif %}
       
       {% include '@paragraph' with {

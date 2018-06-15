@@ -1,0 +1,28 @@
+<div class="info-box">
+  {% include '@image' with {
+  'src': '/styleguide/img/svg/whistle-light.svg'|path,
+  'alt_text': '',
+  'modifier': 'info-box-icon'
+  } %}
+  <aside class="info-box-content">
+    {% include '@h2' with {'h2_text': 'Extra information about this event'} %}
+    
+    {% include '@list' with {
+    'type': 'icon-list',
+    'icon_items': [
+    '<i class="icon-calendar"></i><time datetime="2018-07-13">from the 13th</time> until <time datetime="2018-07-22">the 22th of July</time> with ongoing activities, also at night</time>',
+    '<i class="icon-digipolis"></i>Use the back button of your browser',
+    ]
+    } %}
+    
+    {% include 'link' with {
+    "link": "https://stad.gent",
+    "text": "Register for this event",
+    "aria_label": null,
+    "aria_labelledby": null,
+    "modifier": "standalone-link"
+    } %}
+    
+
+  </aside>
+</div>

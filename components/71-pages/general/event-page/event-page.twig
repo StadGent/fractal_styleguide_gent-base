@@ -24,6 +24,8 @@
       {% include '@h1' with {
       "h1_text": "Event page title"
       } %}
+  
+      {% include '@info-box' %}
       
       {% include '@paragraph' with {
       "text": "Some introtext. Gestas ad vestibulum eu adipiscing a a dapibus sed a orci aenean sit ac parturient class vestibulum a scelerisque.Lobortis nibh adipiscing eget dui torquent consectetur vulputate orci pulvinar ",
@@ -49,7 +51,9 @@
     'Another tag'
     ]
     } %}
-    {% include '@extra-articles' %}
+    {% include '@extra-articles' with {
+    title: 'More news and articles'
+    } %}
     {% include '@feedback-form' %}
     {% include '@paragraph' with {
     "text": "Last changed on 1th of june 2018 - 17:45",

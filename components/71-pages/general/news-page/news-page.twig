@@ -48,7 +48,9 @@
     'Another tag'
     ]
     } %}
-    {% include '@extra-articles' %}
+    {% include '@extra-articles' with {
+    title: 'More news and articles'
+    } %}
     {% include '@feedback-form' %}
     {% include '@paragraph' with {
     "text": "Last changed on 1th of june 2018 - 17:45",
