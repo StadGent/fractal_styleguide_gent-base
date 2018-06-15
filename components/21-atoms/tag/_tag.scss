@@ -36,12 +36,8 @@ a.tag {
   padding: .5em .6em;
 
   &::after {
-    font-size: 1rem;
     padding-left: .5rem;
-  }
-
-  &:hover {
-    @include theme('background-color', 'color-primary--lighten-5', 'tag-background-color-hover');
+    font-size: 1rem;
   }
 
   &:hover {
