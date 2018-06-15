@@ -1,4 +1,4 @@
-<li class="teaser teaser-article">
+<div class="teaser teaser-article">
   
   <article class="teaser-content">
     {# title must be the first element in markup #}
@@ -7,7 +7,7 @@
       {% if teaser_event_date %}
         <time class="event" datetime="{{ teaser_event_datetime }}">{{ teaser_event_date }}</time>
       {% else %}
-        <span class="published">{{ teaser_published_date }}</span>
+        <time class="published" datetime="{{ teaser_event_datetime }}" pubdate="pubdate">{{ teaser_published_date }}</time>
       {% endif %}
       
       {% include '@paragraph' with {
@@ -35,5 +35,5 @@
   </article>
   <a href="{{ teaser_link_link }}" class="teaser-overlay-link" tabindex="-1"
      aria-hidden="true">{{ teaser_title }}</a>
-</li>
+</div>
 
