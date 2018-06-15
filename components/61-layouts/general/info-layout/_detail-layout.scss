@@ -11,6 +11,15 @@
     }
   }
 
+  .readspeaker-button {
+    display: block;
+    width: auto;
+  }
+
+  .info-box + .readspeaker-button {
+    margin-top: -1.2rem;
+  }
+
   > .quote,
   > .image-gallery--wrapper,
   > .help-block,
