@@ -33,12 +33,12 @@ module.exports = {
       }
     },
     {
-      name: 'link-tag-without-icon',
+      name: 'span-tag',
       preview: '@preview',
-      handle: 'link-tag-without-icon',
+      handle: 'span-tag',
       context: {
         tag_text: 'Inner city',
-        type: 'link-tag-without-icon'
+        type: 'span-tag'
       }
     }
   ]

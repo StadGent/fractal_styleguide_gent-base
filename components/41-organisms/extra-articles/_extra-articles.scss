@@ -1,0 +1,28 @@
+
+.extra-articles {
+  @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 2px solid;
+
+  &-content {
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+      padding-top: .8rem;
+
+      li {
+        @include phablet {
+          width: span(4 of 8);
+        }
+
+        width: span(12 of 12);
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+}

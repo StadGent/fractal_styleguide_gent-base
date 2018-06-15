@@ -83,7 +83,6 @@ a {
   &[class^="icon-"] {
     display: inline-flex;
     align-items: center;
-    margin-left: -.3em;
     padding: 0 $link-padding;
   }
 
@@ -93,7 +92,16 @@ a {
   &.standalone-link {
     @include icon(arrow-right, after);
 
+    margin-left: 0;
+    padding-left: 0;
     text-decoration: none;
+
+    &:focus,
+    &:hover {
+      @include theme('color', 'color-primary--darken-2', 'link-hover-color');
+
+      background-color: transparent;
+    }
   }
 
   &.standalone-link:not([download]):not([href^="http://"]):not([href^="https://"]),
@@ -105,7 +113,6 @@ a {
   &[href^="http://"]:not(.button),
   &[href^="https://"]:not(.button) {
     display: inline-block;
-    padding: 0 $link-padding;
 
     &::after {
       display: inline-block;

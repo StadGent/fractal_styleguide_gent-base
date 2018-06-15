@@ -1,0 +1,49 @@
+.teaser-article {
+  @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
+
+  .teaser-content {
+    display: flex;
+    flex-direction: column;
+
+    .content__top {
+      order: 1;
+    }
+
+    .content__bottom {
+      order: 2;
+    }
+
+    .tag {
+      margin: .8rem 0;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    time.event,
+    span.published {
+      margin: .4rem 0;
+      line-height: 1.5;
+    }
+
+    time.event {
+      @include icon('calendar');
+
+      display: flex;
+      align-items: center;
+
+      &::before {
+        padding-right: .5rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    span.published {
+      display: inline-block;
+      color: color('dark-gray', -1);
+      font-style: italic;
+      line-height: 2;
+    }
+  }
+}
