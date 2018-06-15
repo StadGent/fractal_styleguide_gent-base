@@ -64,7 +64,7 @@
       a {
         @include theme('color', 'color-primary--darken-2', 'gentinfo-block-link-color');
 
-        margin-left: -.3rem;
+        margin-left: -.2em;
         font-size: .8rem;
         font-weight: 600;
         text-decoration: none;
@@ -80,7 +80,6 @@
 
           @include tablet {
             display: inline;
-            margin: 0 0 0 -.3rem;
             padding: .3em;
             border: 0;
             box-shadow: none;

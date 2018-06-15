@@ -106,18 +106,7 @@ a {
 
   &.standalone-link:not([download]):not([href^="http://"]):not([href^="https://"]),
   &.button:not([download]):not([href^="http://"]):not([href^="https://"]) {
-    &:focus,
-    &:hover {
-      &::after,
-      &::before {
-        animation: bounce 1s 2;
-
-        // Animation causes pointer flickering in IE.
-        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
-          animation: none;
-        }
-      }
-    }
+    @extend %a-bounce-animation;
   }
 
   &[download]:not(.button),
@@ -144,6 +133,21 @@ a {
   &[href^="http://"],
   &[href^="https://"] {
     @include icon(external-link, after);
+  }
+}
+
+%a-bounce-animation {
+  &:focus,
+  &:hover {
+    &::after,
+    &::before {
+      animation: bounce 1s 2;
+
+      // Animation causes pointer flickering in IE.
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+        animation: none;
+      }
+    }
   }
 
   @keyframes bounce {
