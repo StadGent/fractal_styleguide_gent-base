@@ -7,29 +7,29 @@ module.exports = {
   hidden: true,
   context: {
     teaser_uid: 'uid',
-    teaser_paragraph_text: 'Buitenschoolse opvang De Rakkertjes en Basisschool Victor Carpentier organiseren een vervolg op de LEF-actie van vorig jaar en…',
-    teaser_title: 'Kom naar de paasspeurtocht en Shop-op Zondag op 1 april',
+    teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+    teaser_title: 'General article title text',
     teaser_published_date: 'Gepost op Zaterdag 7 januari 2019',
     teaser_link_text: 'read more',
     teaser_link_link: '#',
     teaser_image_src: 'https://via.placeholder.com/800x500',
     teaser_image_alt_text: 'alt text',
-    teaser_tag: 'Mobiliteit & openbare werken'
+    teaser_tag: 'Just some tag'
   },
   variants: [
     {
       name: 'event',
       context: {
         teaser_uid: 'uid',
-        teaser_paragraph_text: 'Buitenschoolse opvang De Rakkertjes en Basisschool Victor Carpentier organiseren een vervolg op de LEF-actie van vorig jaar en…',
-        teaser_title: 'Kom naar de paasspeurtocht en Shop-op Zondag op 1 april',
-        teaser_event_date: 'Zaterdag 7 januari 2019',
+        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+        teaser_title: 'News article title text',
+        teaser_event_date: 'Saturday 7th of January 2019',
         teaser_event_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
         teaser_image_src: 'https://via.placeholder.com/800x500',
         teaser_image_alt_text: 'alt text',
-        teaser_tag: 'Mobiliteit & openbare werken'
+        teaser_tag: 'I\'m another tag'
       }
     }
   ]
