@@ -1,6 +1,6 @@
 $bulb-image-width: 6rem;
 
-.extra-info-box {
+.related-box {
   @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
 
   position: relative;
@@ -53,7 +53,7 @@ $bulb-image-width: 6rem;
         }
       }
 
-      ul.extra-info-box-tags {
+      ul.related-box-tags {
         @extend %list-no-style;
 
         display: flex;

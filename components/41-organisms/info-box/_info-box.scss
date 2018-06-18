@@ -1,5 +1,5 @@
-.search-block {
-  @include theme('background-color', 'color-primary--lighten-4', 'search-block-background');
+.info-box {
+  @include theme('background-color', 'color-primary--lighten-4', 'info-box-background');
 
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +16,18 @@
   }
 
   a {
-    @include theme('color', 'color-primary--darken-2', 'search-block-link-color');
+    @include theme('color', 'color-primary--darken-2', 'info-box-link-color');
+  }
+
+  h2 {
+    @extend %h3
+  }
+
+  ul.icon-list:not(:last-child) {
+    @include theme('border-color', 'color-primary--lighten-4', 'info-box-divider-border');
+
+    margin-bottom: .8rem;
+    border-bottom: 2px solid;
   }
 
   &-icon {

@@ -64,6 +64,7 @@ All notable changes to this style guide are documented here.
 * DTGB-282: Replaced lightgallery by baguettebox as lightbox libary.
 * DTGB-423: Added a topic collection organism.
 * DTGB-148: Refactored heading organism.
+* DTGB-148: Added info-box organism.
 
 ### 2.11.0
 

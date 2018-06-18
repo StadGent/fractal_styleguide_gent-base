@@ -23,6 +23,7 @@
 
     time.event,
     time.published {
+      display: inline-block;
       margin: .4rem 0;
       line-height: 1.5;
     }
@@ -40,7 +41,6 @@
     }
 
     time.published {
-      display: inline-block;
       color: color('dark-gray', -1);
       font-style: italic;
       line-height: 2;
