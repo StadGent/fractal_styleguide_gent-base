@@ -21,14 +21,14 @@
       margin-bottom: 0;
     }
 
-    time.event,
+    div.event,
     time.published {
       display: inline-block;
       margin: .4rem 0;
       line-height: 1.5;
     }
 
-    time.event {
+    div.event {
       @include icon('calendar');
 
       display: flex;
