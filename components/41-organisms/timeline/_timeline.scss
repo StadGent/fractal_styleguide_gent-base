@@ -396,8 +396,17 @@ dl.timeline {
               padding-bottom: 2.3em;
             }
 
+            &.image-gallery__show-more {
+              display: block;
+            }
+
             // only two images
             &:not(.image-gallery__show-more):nth-of-type(n + 2) {
+              display: none;
+            }
+
+            // hide show more if there is only one image
+            &:first-of-type:nth-last-of-type(-n+2) ~ .image-gallery__show-more {
               display: none;
             }
           }
