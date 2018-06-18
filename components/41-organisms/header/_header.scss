@@ -189,15 +189,19 @@ header.header {
 
       position: absolute;
       top: calc(100% - 1.6rem);
-      left: 0;
-      width: 100%;
+      right: 0;
+      width: calc(100% - 3rem + 2px - #{$gutter-width});
       margin: 0;
-      padding-top: .4rem;
-      padding-right: $gutter-width;
+      padding: .4rem $gutter-width 0;
       z-index: 1;
 
+      @include desktop {
+        width: calc(100% - #{$span} - 2rem);
+      }
+
       @media (min-width: $bp-max-content) {
-        left: calc((100% - #{$bp-max-content}) / 2);
+        right: calc((100% - #{$bp-max-content}) / 2);
+        width: calc(100% - #{$span} - 2rem -  (100% - #{$bp-max-content}));
       }
     }
 
