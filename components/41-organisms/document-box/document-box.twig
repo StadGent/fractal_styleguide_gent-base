@@ -1,0 +1,49 @@
+<div class="document-box accordion">
+  {% include '@h2' with {
+    'h2_text': 'Documents'
+  } %}
+  <ul class="links">
+    {% for document in documents %}
+      <li>
+        {% block link %}
+          {% include '@link' with {
+            'link': 'javascript:(void);',
+            'text': document.text,
+            'download': true,
+            'modifier': 'standalone-link'
+          } %}
+          <span class="file-type">
+            {{ document.type }}<span class="file-size">({{ document.size }})</span>
+          </span>
+        {% endblock %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h3>
+    <button class="accordion--button"
+            aria-expanded="false"
+            aria-controls="documents--content">
+      {{ 'There are 5 other documents available' }}
+    </button>
+  </h3>
+
+  <div class="accordion--content"
+    id="documents--content">
+    <ul class="links">
+      {% for document in other_documents %}
+        <li>
+          {% include '@link' with {
+            'link': 'javascript:(void);',
+            'text': document.text,
+            'download': true,
+            'modifier': 'standalone-link'
+          } %}
+          <span class="file-type">
+            {{ document.type }}<span class="file-size">({{ document.size }})</span>
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
