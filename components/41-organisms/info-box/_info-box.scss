@@ -1,5 +1,5 @@
 .info-box {
-  @include theme('background-color', 'color-primary--lighten-4', 'info-box-background');
+  @include theme('background-color', 'color-primary--lighten-5', 'info-box-background');
 
   display: flex;
   flex-wrap: wrap;
