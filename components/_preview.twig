@@ -27,15 +27,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="cs--default">
-    <div class="container">
-      {% block content %}
+    {% block content %}
+      <div class="container">
         <div class="preview-container">
           <div class="content-container">
             {{ yield | raw }}
           </div>
         </div>
-      {% endblock %}
-    </div>
+      </div>
+    {% endblock %}
 
     <!-- hidden fields for screenreaders -->
     <span hidden id="image-gallery__open-gallery">open gallery</span>

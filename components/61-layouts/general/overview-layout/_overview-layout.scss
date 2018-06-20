@@ -1,0 +1,84 @@
+.overview-page {
+  position: relative;
+
+  // Center accolade on the header for overview pages.
+  header.header nav.breadcrumb .content-container {
+    &::after,
+    &::before {
+      width: calc(50% + #{$gutter-width} +  1px);
+
+      @include desktop {
+        width: calc(50% + 1px);
+      }
+    }
+  }
+}
+
+.overview-layout {
+  @extend %content-container;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  > h1 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 3.5rem;
+    text-align: center;
+
+    &::after {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -.1em;
+      left: 0;
+      width: 70%;
+      margin: auto;
+      border-bottom: 2px solid;
+      content: '';
+    }
+  }
+
+  > ul {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+
+    li {
+      margin-bottom: 3.4rem;
+
+      @include phablet {
+        width: span(6 of 12);
+        margin: 0 $gutter-width 3.4rem 0;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      @include desktop {
+        width: span(4 of 12);
+
+        &:nth-child(2n) {
+          margin-right: auto;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    width: 100%;
+  }
+
+  > .pager {
+    @include tablet {
+      flex: 1;
+      justify-self: flex-start;
+    }
+  }
+}

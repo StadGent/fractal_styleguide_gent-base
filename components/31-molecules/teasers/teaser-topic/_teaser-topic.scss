@@ -1,6 +1,17 @@
 .teaser-topic {
-  @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
-
   padding-bottom: 1rem;
-  border-bottom: 2px solid;
+
+  .teaser-content {
+    display: flex;
+    flex-direction: column;
+
+    .content-bottom {
+      order: 2;
+    }
+
+    .content-top {
+      order: 1;
+      margin-bottom: 1rem;
+    }
+  }
 }
