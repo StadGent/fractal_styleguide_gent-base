@@ -167,3 +167,35 @@ a {
     }
   }
 }
+
+%a-bounce-animation--left {
+  &:focus,
+  &:hover {
+    &::after,
+    &::before {
+      animation: bounce-left 1s 2;
+
+      // Animation causes pointer flickering in IE.
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+        animation: none;
+      }
+    }
+  }
+
+  @keyframes bounce-left {
+    0% {
+      padding-right: .2rem;
+      padding-left: .4rem;
+    }
+
+    40% {
+      padding-right: .4rem;
+      padding-left: .2rem;
+    }
+
+    100% {
+      padding-right: .2rem;
+      padding-left: .4rem;
+    }
+  }
+}

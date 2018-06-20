@@ -1,40 +1,66 @@
-<nav class="pager">
-    <ul class="pager__items">
-        <li class="pager__item">
-            <a href="#" title="Current page">1</a>
-        </li>
-        <li class="pager__item">
-            <a href="#" title="Go to page 2">2</a>
-        </li>
-        <li class="pager__item is-active">
-            <a href="#" title="Go to page 3">3</a>
-        </li>
-        <li class="pager__item">
-            <a href="#" title="Go to page 4">4</a>
-        </li>
-        <li class="pager__item">
-            <a href="#" title="Go to page 5">5</a>
-        </li>
-        <li class="pager__item">
-            <a href="#" title="Go to page 6">6</a>
-        </li>
-        <li class="pager__item">
-            <a href="#" title="Go to page 7">7</a>
-        </li>
-        <li class="pager__item">
-            <a href="#" title="Go to page 8">8</a>
-        </li>
-        <li class="pager__item">
-            <a href="#" title="Go to page 9">9</a>
-        </li>
-        <li class="pager__item pager__item--ellipsis" role="presentation">
-          …
-        </li>
-        <li class="pager__item pager__item--next">
-            <a href="#" title="Go to the next page" rel="next">next ›</a>
-        </li>
-        <li class="pager__item pager__item--last">
-            <a href="#" title="Go to the last page">last »</a>
-        </li>
-    </ul>
+<nav class="pager" aria-labelledby="pagination_1">
+  <h2 id="pagination_1" class="visually-hidden">Pagination</h2>
+  <ul class="pager__items">
+    <li>
+      <a href="#" class="previous">
+        <span class="visually-hidden">previous page</span>
+        previous
+      </a>
+    </li>
+
+    <li>
+      <a href="#" title="Go to page {{ 1 }}"
+        {% if 1 == active %}
+        class="active"
+        {% endif %}>
+        <span class="visually-hidden">Page</span>
+        {{ 1 }}
+      </a>
+    </li>
+    {% if active > 3 %}
+      <li>...</li>
+    {% endif %}
+    {% if active-1 > 1 and active-1 != total %}
+      <li>
+        <a href="#" title="Go to page {{ active-1 }}">
+          <span class="visually-hidden">Page</span>
+         {{ active-1 }}
+        </a>
+      </li>
+    {% endif %}
+    {% if active != 1 and active != total %}
+      <li>
+        <a href="#" title="Go to page {{ active }}"
+          class="active">
+          <span class="visually-hidden">Page</span>
+          {{ active }}
+        </a>
+      </li>
+    {% endif %}
+    {% if active+1 < total %}
+      <li>
+        <a href="#" title="Go to page {{ active+1 }}">
+          <span class="visually-hidden">Page</span>
+          {{ active+1 }}
+        </a>
+      </li>
+    {% endif %}
+    {% if total - active > 3 %}
+      <li>...</li>
+    {% endif %}
+    <li>
+      <a href="#" title="Go to page {{ total }}"
+        {% if total == active %}
+        class="active"
+        {% endif %}>
+        <span class="visually-hidden">Page</span>
+        {{ total }}
+      </a>
+    </li>
+    <li>
+      <a href="#" class="next">
+        <span class="visually-hidden">next page</span>
+        next
+      </a>
+  </ul>
 </nav>
