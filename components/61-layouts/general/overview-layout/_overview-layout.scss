@@ -73,7 +73,12 @@
     }
 
     width: 100%;
-    margin-bottom: 3.4rem;
+    margin-bottom: -1.6rem;
+  }
+
+  > .pager,
+  > .pager + button {
+    margin-top: 1.6rem;
   }
 
   > .pager {

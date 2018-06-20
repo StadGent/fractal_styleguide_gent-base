@@ -24,6 +24,7 @@
       {% include '@h1' with {
       "h1_text": "News and events"
       } %}
+      <h2 class="visually-hidden">Overview</h2>
       <ul class="links">
         {% for key, article in articles %}
           {% include '@teaser-article' with {
