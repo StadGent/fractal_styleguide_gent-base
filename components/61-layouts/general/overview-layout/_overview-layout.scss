@@ -5,8 +5,10 @@
   header.header nav.breadcrumb .content-container {
     &::after,
     &::before {
+      width: calc(50% + #{$gutter-width} +  1px);
+
       @include desktop {
-        width: 50%;
+        width: calc(50% + 1px);
       }
     }
   }
@@ -25,6 +27,7 @@
     display: inline-block;
     position: relative;
     margin-bottom: 3.5rem;
+    text-align: center;
 
     &::after {
       display: block;
@@ -41,20 +44,41 @@
 
   > ul {
     display: flex;
+    flex: 1 1 100%;
     flex-wrap: wrap;
 
     li {
-      width: span(4 of 12);
-      margin: 0 $gutter-width 3.4rem 0;
+      margin-bottom: 3.4rem;
 
-      &:nth-child(3n) {
-        margin-right: 0;
+      @include phablet {
+        width: span(6 of 12);
+        margin: 0 $gutter-width 3.4rem 0;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      @include desktop {
+        width: span(4 of 12);
+
+        &:nth-child(2n) {
+          margin-right: auto;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
       }
     }
+
+    width: 100%;
   }
 
   > .pager {
-    flex: 1;
-    justify-self: flex-start;
+    @include tablet {
+      flex: 1;
+      justify-self: flex-start;
+    }
   }
 }
