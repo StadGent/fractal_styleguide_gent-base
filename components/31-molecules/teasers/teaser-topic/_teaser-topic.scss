@@ -1,6 +1,3 @@
 .teaser-topic {
-  @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
-
   padding-bottom: 1rem;
-  border-bottom: 2px solid;
 }
