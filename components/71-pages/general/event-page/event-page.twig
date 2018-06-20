@@ -20,32 +20,32 @@
 
 <main class="event-page">
   <article class="detail-layout">
-    {% block info_page_article_content %}
+    {% block event_page_content %}
       {% include '@h1' with {
       "h1_text": "Event page title"
       } %}
-  
+
       {% include '@info-box' %}
-      
+
       {% include '@readspeaker-button' %}
-      
+
       {% include '@paragraph' with {
       "text": "Some introtext. Gestas ad vestibulum eu adipiscing a a dapibus sed a orci aenean sit ac parturient class vestibulum a scelerisque.Lobortis nibh adipiscing eget dui torquent consectetur vulputate orci pulvinar ",
       "modifier": "summary-text"
       } %}
-      
+
       {% include '@h2' with {
       "h2_text": "This is a paragraph title"
       } %}
-      
+
       {% include '@paragraph' with {
       "text": "This is bodytext. Egestas ad vestibulum eu adipiscing a a dapibus sed a orci aenean sit ac parturient class vestibulum a scelerisque.Lobortis nibh adipiscing eget dui torquent consectetur vulputate orci pulvinar adipiscing per auctor cursus a. Commodo nibh a quam felis condimentum aliquam sit enim in maecenas parturient vehicula euismod ad neque. Dapibus sed a orci aenean sit ac parturient class vestibulum a scelerisque.Lobortis nibh adipiscing eget dui torquent consectetur vulputate orci pulvinar adipiscing per auctor cursus a.Commodo nibh a quam felis condimentum aliquam sit enim in maecenas parturient vehicula euismod ad neque. Egestas ad vestibulum eu adipiscing a a dapibus sed a orci aenean sit ac parturient class vestibulum a scelerisque.Lobortis nibh adipiscing eget dui torquent consectetur vulputate orci pulvinar adipiscing per auctor cursus a. Commodo nibh a quam felis condimentum aliquam sit enim in maecenas parturient vehicula."
       } %}
-  
+
       {% include '@timeline' %}
     {% endblock %}
   </article>
-  
+
   <aside>
     {% include '@related-box' with {
     tags: [
