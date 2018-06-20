@@ -1,3 +1,17 @@
 .teaser-topic {
   padding-bottom: 1rem;
+
+  .teaser-content {
+    display: flex;
+    flex-direction: column;
+
+    .content-bottom {
+      order: 2;
+    }
+
+    .content-top {
+      order: 1;
+      margin-bottom: 1rem;
+    }
+  }
 }

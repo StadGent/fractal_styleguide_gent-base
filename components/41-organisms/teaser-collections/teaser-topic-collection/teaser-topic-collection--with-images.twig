@@ -1,5 +1,5 @@
 <div class="collection teaser-topic-collection">
-  <h2><span>{{ 'Topics' }}</span></h2>
+  <h2><span>{{ 'Topics with images' }}</span></h2>
   <ul>
     {% for i in 0..6 %}
       {% include '@teaser-topic' with {
@@ -8,7 +8,8 @@
         "teaser_uid":  teaser_uid ~ i,
         "teaser_link_text": teaser_link_text,
         "teaser_link_link": teaser_link_link,
-        "teaser_image_src": ''
+        "teaser_image_src": teaser_image_src,
+        "teaser_image_alt_text": teaser_image_alt_text
       } %}
     {% endfor %}
   </ul>
