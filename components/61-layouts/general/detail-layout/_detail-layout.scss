@@ -1,0 +1,122 @@
+.detail-layout {
+  @extend %content-container;
+
+  margin-top: 1.2rem;
+  font-size: .9rem;
+  line-height: 1.8;
+
+  > * {
+    @include desktop {
+      @include set-layout('width-7', 'offset-2');
+    }
+  }
+
+  .readspeaker-button {
+    display: block;
+    width: auto;
+  }
+
+  .info-box + .readspeaker-button {
+    margin-top: -1.2rem;
+  }
+
+  > .quote,
+  > .image-gallery--wrapper,
+  > .help-block,
+  > .search-block,
+  > .info-box {
+    @include desktop {
+      @include set-layout('width-9', 'offset-1');
+    }
+  }
+
+  > ul.accordion {
+    @include desktop {
+      @include set-layout('width-7', 'offset-2');
+    }
+  }
+
+  > .help-block {
+    @include desktop {
+      padding-left: span(1 wide of 12);
+    }
+  }
+
+  > .quote,
+  > .image-gallery--wrapper,
+  > .help-block,
+  > .search-block,
+  > .video,
+  > .timeline {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  > .info-box {
+    margin-bottom: 2rem;
+  }
+
+  > .quote {
+    // Spot image escapes the container by 2.5rem.
+    margin-top: 5.5rem;
+
+    @include desktop {
+      margin-top: 2rem;
+    }
+  }
+
+  > .help-block,
+  > .search-block {
+    @include wide;
+  }
+
+  > .timeline {
+    @include set-layout();
+    @include extra-wide;
+  }
+
+  .summary-text {
+    font-weight: 600;
+  }
+
+  + aside {
+    @extend %content-container;
+
+    margin-bottom: 2rem;
+
+    > * {
+      @include desktop {
+        @include set-layout('width-7', 'offset-2');
+      }
+    }
+
+    .related-box {
+      @include desktop {
+        @include set-layout();
+        width: 100%;
+        margin-left: 0;
+        padding-right: span(2 wide of 12);
+        padding-left: span(2 wide of 12);
+      }
+    }
+
+    .extra-articles {
+      @include desktop {
+        @include set-layout('width-8', 'offset-2');
+      }
+    }
+
+    .feedback-form {
+      @include wide;
+
+      margin-bottom: 2rem;
+
+      @include desktop {
+        @include set-layout('width-9', 'offset-1');
+
+        padding-left: span(1 wide of 12);
+      }
+    }
+  }
+}
+
