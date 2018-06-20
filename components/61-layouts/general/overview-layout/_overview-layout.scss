@@ -48,8 +48,6 @@
     flex-wrap: wrap;
 
     li {
-      margin-bottom: 3.4rem;
-
       @include phablet {
         width: span(6 of 12);
         margin: 0 $gutter-width 3.4rem 0;
@@ -73,6 +71,7 @@
     }
 
     width: 100%;
+    margin-bottom: 3.4rem;
   }
 
   > .pager {
