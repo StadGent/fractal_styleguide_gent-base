@@ -24,7 +24,7 @@
     <button class="accordion--button"
             aria-expanded="false"
             aria-controls="documents--content">
-      {{ 'There are 5 other documents available' }}
+      {{ 'There are %s other documents available'|format(other_documents|length) }}
     </button>
   </h3>
 
