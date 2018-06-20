@@ -1,6 +1,7 @@
 .pager {
 
   ul {
+    margin: 0;
     list-style: none;
 
     li {
@@ -16,6 +17,7 @@
     padding-left: 1rem;
     font-size: 1rem;
     font-weight: 600;
+    line-height: 1.2;
     text-decoration: none;
   }
 
@@ -71,6 +73,7 @@
     @include icon(arrow-left, after);
 
     flex-direction: row-reverse;
+    padding-left: 0;
 
     &::after {
       margin-left: -.2rem;
