@@ -25,7 +25,7 @@
       "h1_text": "News and events"
       } %}
       <ul class="links">
-        {% for article in articles %}
+        {% for key, article in articles %}
           {% include '@teaser-article' with {
             "teaser_uid": article.teaser_uid,
             "teaser_paragraph_text": article.teaser_paragraph_text,
@@ -39,7 +39,7 @@
             "teaser_datetime": article.teaser_datetime,
             "teaser_link_text": article.teaser_link_text,
             "teaser_link_link": article.teaser_link_link,
-            "teaser_image_src": article.teaser_image_src,
+            "teaser_image_src": article.teaser_image_src ~ '?random=' ~ key,
             "teaser_image_alt_text": article.teaser_image_alt_text,
             "teaser_tag": article.teaser_tag
           } %}
