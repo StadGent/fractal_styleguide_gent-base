@@ -1,0 +1,46 @@
+.document-box {
+  @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+  position: relative;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  border-top: 2px solid;
+
+  @include tablet {
+    padding-top: 2rem;
+  }
+
+  li {
+    @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid;
+
+    @include tablet {
+      max-width: 36rem;
+    }
+
+    &:last-of-type {
+      border: 0;
+    }
+
+    > a {
+      margin-right: 1rem;
+    }
+  }
+
+  h3 {
+    @extend %h4;
+  }
+
+  button {
+    margin-top: 2.3rem;
+  }
+
+  .file-size {
+    margin-left: .3em;
+  }
+}
