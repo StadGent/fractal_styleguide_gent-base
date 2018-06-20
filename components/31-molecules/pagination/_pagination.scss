@@ -1,49 +1,84 @@
-//
-// Pagination
-//
 .pager {
+
   ul {
-    @extend %list-no-style;
-    font-size: .8rem;
-    font-weight: bold;
+    margin: 0;
+    list-style: none;
 
     li {
-      display: inline;
-      margin-left: .25rem;
+      @include theme('color', 'color-primary', 'link-color');
 
-      a,
-      span {
-        display: inline-block;
-        padding: .4rem .5rem;
-        border-radius: border-radius('radius-1');
-        text-decoration: none;
+      display: inline-block;
+    }
+  }
 
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: color('blue', -1);
-        }
-      }
+  a {
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+  }
 
-      &.is-active {
-        span,
-        a {
-          background-color: color('orange');
-          color: color('white');
-        }
-      }
+  .active {
+    @include theme('color', 'color-tertiary', 'pagination-active-color');
 
-      &.pager-ellipsis {
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: transparent;
-        }
-      }
+    position: relative;
 
-      &:first-child {
-        margin-left: 0;
-      }
+    &::after {
+      @include theme('background-color', 'color-primary', 'link-color');
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 1.2rem;
+      height: 2px;
+      margin: auto;
+      content: '';
+    }
+  }
+
+  .previous,
+  .next {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0;
+    font-size: .9rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
+
+
+  }
+
+  .next {
+    @extend %a-bounce-animation;
+
+    @include icon(arrow-right, after);
+
+    &::after {
+      margin-right: -.2rem;
+      padding-right: .2rem;
+    }
+  }
+
+  .previous {
+    @extend %a-bounce-animation--left;
+
+    @include icon(arrow-left, after);
+
+    flex-direction: row-reverse;
+    padding-left: 0;
+
+    &::after {
+      margin-left: -.2rem;
+      padding-right: .2rem;
+      padding-left: .4rem;
     }
   }
 }

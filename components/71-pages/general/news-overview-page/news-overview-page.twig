@@ -46,7 +46,10 @@
         {% endfor %}
       </ul>
 
-      {% include '@pagination' %}
+      {% include '@pagination' with {
+        total: 20,
+        active: 4
+      }%}
       {% include '@button' with { 'text': 'Show all', 'type': 'primary' } %}
 
     {% endblock %}
