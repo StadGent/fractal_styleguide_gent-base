@@ -219,6 +219,9 @@ $themes: (
 
     'readspeaker-icon-color': color('cyan-wcag'),
     'readspeaker-icon-border-color': color('cyan-wcag', -2),
+
+    'tag-border-color': color('cyan-wcag', -3),
+    'tag-border-color-hover': color('cyan-wcag', -2)
   ),
   'purple': (
     // Required colors!

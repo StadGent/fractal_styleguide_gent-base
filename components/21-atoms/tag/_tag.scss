@@ -46,6 +46,7 @@ a.tag {
   }
 
   &:hover {
-    @include theme('background-color', 'color-primary--lighten-5', 'tag-background-color-hover');
+    @include theme('background-color', 'color-primary--lighten-4', 'tag-background-color-hover');
+    @include theme('border-color', 'color-primary--lighten-2', 'tag-border-color-hover');
   }
 }
