@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
   flex-wrap: wrap;
+  align-items: center;
 
   label {
     @extend %h3;
