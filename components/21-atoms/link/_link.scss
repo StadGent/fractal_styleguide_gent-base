@@ -81,7 +81,9 @@ a {
   ///
   &.standalone-link,
   &[download],
-  &[class^="icon-"] {
+  &[class^="icon-"],
+  &[href^="http://"],
+  &[href^="https://"] {
     display: inline-flex;
     align-items: center;
     padding: 0 $link-padding;
