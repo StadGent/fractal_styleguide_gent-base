@@ -7,56 +7,56 @@ module.exports = {
   collated: 'true',
   context: {
     total: 15,
-    active: 7
+    active: 1
   },
   variants: [
     {
       name: 'large_1',
       context: {
         total: 15,
-        active: 1
+        active: 2
       }
     },
     {
       name: 'large_2',
       context: {
         total: 15,
-        active: 15
+        active: 7
       }
     },
     {
       name: 'large_3',
       context: {
         total: 15,
-        active: 2
+        active: 14
       }
     },
     {
-      name: 'large_5',
+      name: 'large_4',
       context: {
         total: 15,
-        active: 14
+        active: 15
       }
     },
     {
       name: 'small_1',
       context: {
         total: 3,
-        active: 2
+        active: 1
       }
     },
     {
       name: 'small_2',
       context: {
         total: 3,
-        active: 3
+        active: 2
       }
     },
     {
       name: 'small_3',
       context: {
         total: 3,
-        active: 1
+        active: 3
       }
     }
   ]
