@@ -26,4 +26,8 @@
       background: svg-as-background('search', color('dark-gray'), 32, 32) no-repeat left .4rem center;
     }
   }
+
+  input[type="submit"] {
+    @include button-large;
+  }
 }
