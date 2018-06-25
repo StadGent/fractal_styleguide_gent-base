@@ -15,10 +15,6 @@
     padding: 2rem 3.7rem 1.6rem ($gutter-width*2);
   }
 
-  a {
-    @include theme('color', 'color-primary--darken-2', 'info-box-link-color');
-  }
-
   h2 {
     @extend %h3
   }
