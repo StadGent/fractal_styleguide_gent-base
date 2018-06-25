@@ -27,16 +27,30 @@
       <h2 class="visually-hidden">Overview</h2>
       <ul class="links">
         {% for key, article in articles %}
+          {% if article.teaser_event_date %}
+            {% include '@teaser-article' with {
+              "teaser_uid": article.teaser_uid,
+              "teaser_paragraph_text": article.teaser_paragraph_text,
+              "teaser_title": article.teaser_title,
+              "teaser_event_date": {
+                "text_1": article.text_1,
+                "datetime_1": article.datetime_1,
+                "text_2": article.text_2,
+                "datetime_2": article.datetime_2
+              },
+              "teaser_datetime": article.teaser_datetime,
+              "teaser_link_text": article.teaser_link_text,
+              "teaser_link_link": article.teaser_link_link,
+              "teaser_image_src": article.teaser_image_src ~ '?random=' ~ key,
+              "teaser_image_alt_text": article.teaser_image_alt_text,
+              "teaser_tag": article.teaser_tag
+            } %}
+          {% else %}
           {% include '@teaser-article' with {
             "teaser_uid": article.teaser_uid,
             "teaser_paragraph_text": article.teaser_paragraph_text,
             "teaser_title": article.teaser_title,
-            "teaser_event_date": {
-              "text_1": article.text_1,
-              "datetime_1": article.datetime_1,
-              "text_2": article.text_2,
-              "datetime_2": article.datetime_2
-            },
+            "teaser_published_date": article.teaser_published_date,
             "teaser_datetime": article.teaser_datetime,
             "teaser_link_text": article.teaser_link_text,
             "teaser_link_link": article.teaser_link_link,
@@ -44,6 +58,7 @@
             "teaser_image_alt_text": article.teaser_image_alt_text,
             "teaser_tag": article.teaser_tag
           } %}
+          {% endif %}
         {% endfor %}
       </ul>
 

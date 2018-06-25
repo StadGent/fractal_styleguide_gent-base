@@ -43,9 +43,11 @@
   }
 
   > ul {
-    display: flex;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
+    @include tablet {
+      display: flex;
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+    }
 
     li {
       @include phablet {
