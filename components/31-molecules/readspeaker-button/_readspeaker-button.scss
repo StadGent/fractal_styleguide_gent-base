@@ -1,17 +1,17 @@
 .readspeaker-button {
   @include theme('color', 'color-tertiary--lighten-1', 'readspeaker-color');
-  @include icon('readspeaker');
 
-  margin: .8rem 0;
-  padding: 0;
+  min-height: 1.8rem;
   border: 0;
   background: transparent;
   cursor: pointer;
 
   &:focus,
   &:hover {
-    &::before {
+    i {
       @include theme('background-color', 'color-primary', 'readspeaker-icon-color');
+
+      display: inline-block;
 
       [class*='cs--'] & {
         color: color('white');
@@ -19,23 +19,20 @@
     }
   }
 
-  &::before,
-  span {
-    vertical-align: middle;
-  }
-
-  &::before {
+  i {
     @include theme('color', 'color-primary', 'readspeaker-icon-color');
     @include theme('border-color', 'color-primary', 'readspeaker-icon-border-color');
 
-    margin-right: .1rem;
+    margin-right: .3rem;
     padding: .1em .3em;
     border: 2px solid;
     border-radius: border-radius('radius-1');
     font-size: .9rem;
+    vertical-align: middle;
   }
 
   span {
     font-size: .6rem;
+    vertical-align: middle;
   }
 }
