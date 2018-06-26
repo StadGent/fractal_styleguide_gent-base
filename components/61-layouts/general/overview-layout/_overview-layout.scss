@@ -85,7 +85,7 @@
 
   > .pager {
     @include tablet {
-      flex: 1;
+      flex: 1 1 80%;
       justify-self: flex-start;
     }
   }
