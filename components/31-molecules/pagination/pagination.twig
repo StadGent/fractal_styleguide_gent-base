@@ -1,13 +1,15 @@
 <nav class="pager" aria-labelledby="pagination_1">
   <h2 id="pagination_1" class="visually-hidden">Pagination</h2>
   <ul class="pager__items">
+
+    {% if 1 != active %}
     <li>
       <a href="#" class="previous">
-        <span class="visually-hidden">previous page</span>
         previous
+        <span class="visually-hidden">page</span>
       </a>
     </li>
-
+    {% endif %}
     <li>
       <a href="#" title="Go to page {{ 1 }}"
         {% if 1 == active %}
@@ -57,10 +59,13 @@
         {{ total }}
       </a>
     </li>
+    {% if total != active %}
     <li>
       <a href="#" class="next">
-        <span class="visually-hidden">next page</span>
         next
+        <span class="visually-hidden">page</span>
       </a>
+    </li>
+    {% endif %}
   </ul>
 </nav>

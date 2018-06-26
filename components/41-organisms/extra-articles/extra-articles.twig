@@ -1,15 +1,15 @@
 <div class="extra-articles">
-  
+
   <div class="extra-articles-content">
     {% include '@h2' with {
     'h2_text': title
     } %}
-    
+
     <ul>
       {% include '@teaser-article' with {
       "teaser_uid": "uid",
       "teaser_paragraph_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?",
-      "teaser_title": "News article title text",
+      "teaser_title": "Event title text",
       "teaser_event_date": {
         "text_1": "From the 7th",
         "datetime_1": "2019-01-07",
@@ -22,7 +22,7 @@
       "teaser_image_alt_text": "alt text",
       "teaser_tag": "Just some tag"
       } %}
-      
+
       {% include '@teaser-article' with {
       "teaser_uid": "uid_1",
       "teaser_paragraph_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias nihil quisquam ratione. Ab deserunt omnis quam quisquam quo repudiandae temporibus totam voluptates.",
@@ -36,7 +36,7 @@
       "teaser_image_alt_text": "alt text",
       "teaser_tag": "I'm another tag"
       } %}
-    
+
     </ul>
   </div>
 </div>

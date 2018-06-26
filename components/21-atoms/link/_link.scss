@@ -5,6 +5,7 @@ a {
   @include theme('color', 'color-primary', 'link-color');
 
   padding: $link-padding;
+  transition: background-color .1s ease-in-out;
   font-weight: 600;
   text-decoration: underline;
 
@@ -80,7 +81,9 @@ a {
   ///
   &.standalone-link,
   &[download],
-  &[class^="icon-"] {
+  &[class^="icon-"],
+  &[href^="http://"],
+  &[href^="https://"] {
     display: inline-flex;
     align-items: center;
     padding: 0 $link-padding;

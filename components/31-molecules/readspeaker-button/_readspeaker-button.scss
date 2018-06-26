@@ -1,17 +1,15 @@
 .readspeaker-button {
   @include theme('color', 'color-tertiary--lighten-1', 'readspeaker-color');
-
+  display: inline-block;
   min-height: 1.8rem;
   border: 0;
-  background: transparent;
+  background-color: transparent;
   cursor: pointer;
 
   &:focus,
   &:hover {
     i {
       @include theme('background-color', 'color-primary', 'readspeaker-icon-color');
-
-      display: inline-block;
 
       [class*='cs--'] & {
         color: color('white');
@@ -23,8 +21,10 @@
     @include theme('color', 'color-primary', 'readspeaker-icon-color');
     @include theme('border-color', 'color-primary', 'readspeaker-icon-border-color');
 
+    display: inline-block;
     margin-right: .3rem;
     padding: .1em .3em;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
     border: 2px solid;
     border-radius: border-radius('radius-1');
     font-size: .9rem;
