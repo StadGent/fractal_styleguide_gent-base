@@ -2,6 +2,7 @@
   @include theme('color', 'color-tertiary--lighten-1', 'readspeaker-color');
   display: inline-block;
   min-height: 1.8rem;
+  padding: 0;
   border: 0;
   background-color: transparent;
   cursor: pointer;
