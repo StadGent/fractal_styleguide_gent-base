@@ -14,10 +14,8 @@
   .readspeaker-button {
     display: block;
     width: auto;
-  }
-
-  .info-box + .readspeaker-button {
-    margin-top: -1.2rem;
+    margin-top: -.4rem;
+    margin-bottom: .4rem;
   }
 
   > .quote,
