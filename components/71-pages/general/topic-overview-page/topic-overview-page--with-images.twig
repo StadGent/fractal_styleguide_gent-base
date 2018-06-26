@@ -21,10 +21,13 @@
 <main class="news-overview-page">
   <section class="overview-layout">
     {% block news_overview_content %}
-      {% include '@h1' with {
-      "h1_text": "Topic page"
-      } %}
-      <ul class="links">
+      <div class="page-title">
+        {% include '@h1' with {
+          "h1_text": "News and events"
+        } %}
+      </div>
+      <h2 class="visually-hidden">Overview</h2>
+      <ul class="grid-3">
         {% for key, topic in topics %}
           {% include '@teaser-topic' with {
             "teaser_paragraph_text": topic.teaser_paragraph_text,

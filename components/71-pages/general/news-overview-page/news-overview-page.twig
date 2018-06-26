@@ -21,11 +21,13 @@
 <main class="news-overview-page">
   <section class="overview-layout">
     {% block news_overview_content %}
-      {% include '@h1' with {
-      "h1_text": "News and events"
-      } %}
+      <div class="page-title">
+        {% include '@h1' with {
+          "h1_text": "News and events"
+        } %}
+      </div>
       <h2 class="visually-hidden">Overview</h2>
-      <ul class="links">
+      <ul class="grid-3">
         {% for key, article in articles %}
           {% include '@teaser-article' with {
             "teaser_uid": article.teaser_uid,
@@ -51,7 +53,6 @@
         total: 20,
         active: 4
       }%}
-      {% include '@button' with { 'text': 'Show all', 'type': 'primary' } %}
 
     {% endblock %}
   </section>

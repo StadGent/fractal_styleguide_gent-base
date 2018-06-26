@@ -12,37 +12,36 @@
       }
     }
   }
+
+  .page-title {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      position: relative;
+      margin-bottom: 3.5rem;
+
+      &::after {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -.1em;
+        left: 0;
+        width: 70%;
+        margin: auto;
+        border-bottom: 2px solid;
+        content: '';
+      }
+    }
+  }
 }
 
 .overview-layout {
   @extend %content-container;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 4rem;
 
-  > h1 {
-    display: inline-block;
-    position: relative;
-    margin-bottom: 3.5rem;
-    text-align: center;
-
-    &::after {
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: -.1em;
-      left: 0;
-      width: 70%;
-      margin: auto;
-      border-bottom: 2px solid;
-      content: '';
-    }
-  }
-
-  > ul {
+  ul.grid-3 {
+    @extend %list-no-style;
     display: flex;
     flex: 1 1 100%;
     flex-wrap: wrap;
@@ -73,18 +72,5 @@
     }
 
     width: 100%;
-    margin-bottom: -1.6rem;
-  }
-
-  > .pager,
-  > .pager + button {
-    margin-top: 1.6rem;
-  }
-
-  > .pager {
-    @include tablet {
-      flex: 1;
-      justify-self: flex-start;
-    }
   }
 }
