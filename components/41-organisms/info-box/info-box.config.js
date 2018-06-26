@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Related box',
+  title: 'Info box',
   status: 'alpha',
   context: {
     tags: [
