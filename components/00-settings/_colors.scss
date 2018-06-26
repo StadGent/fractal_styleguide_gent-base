@@ -244,14 +244,38 @@ $themes: (
     'color-primary': color('orange'),
     'color-secondary': color('white'),
     'color-tertiary': color('dark-gray'),
-    'color-box-shadow': $box-shadow-primary color('orange', -3),
-    'color-box-shadow-hover': $box-shadow-primary color('orange', -2),
+    'color-box-shadow': $box-shadow-primary color('cyan-wcag', -3),
+    'color-box-shadow-hover': $box-shadow-primary color('cyan-wcag', -2),
     'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),    'color-primary-accolade': svg-as-background('accolade', color('orange', -4), 36, 19),
+    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
+    'color-primary-accolade': svg-as-background('accolade', color('orange', -4), 36, 19),
     'accolade-stroke-light': svg-as-background('accolade-stroke', color('orange', -4), 54, 23),
     'accolade-stroke-dark': svg-as-background('accolade-stroke', color('orange', 1), 54, 23),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
+    'link-color': color('cyan-wcag', 1),
+    'link-hover-background': color('cyan-wcag', -4),
+    'link-hover-color': color('cyan-wcag', 2),
+
+    'disclaimer-block-link-color': color('cyan', 2),
+    'gentinfo-block-link-color': color('cyan', 2),
+    'social-media-icon-background': color('cyan', -5),
+
+    'button-primary-background': color('cyan-wcag'),
+    'button-primary-border-color': color('cyan-wcag'),
+    'button-primary-hover-background': color('cyan-wcag', 1),
+    'button-primary-hover-border-color': color('cyan-wcag', 1),
+    'button-primary-focus-background': color('cyan-wcag', 3),
+    'button-primary-focus-border-color': color('cyan-wcag', 3),
+
+    'button-secondary-border-color': color('cyan-wcag', -2),
+    'button-secondary-color': color('cyan-wcag'),
+    'button-secondary-hover-color': color('cyan-wcag', 1),
+    'button-secondary-hover-background': color('cyan-wcag', -4),
+    'button-secondary-hover-border-color': color('cyan', -1),
+    'button-secondary-focus-color': color('cyan-wcag', 3),
+    'button-secondary-focus-background': color('cyan-wcag', -4),
+    'button-secondary-focus-border-color': color('cyan-wcag', -1),
   )
 ) !default;
