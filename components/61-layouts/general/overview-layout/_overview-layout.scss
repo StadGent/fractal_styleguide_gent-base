@@ -43,7 +43,8 @@
   }
 
   > ul {
-    @include tablet {
+
+    @include phablet {
       display: flex;
       flex: 1 1 100%;
       flex-wrap: wrap;
@@ -74,6 +75,7 @@
       margin-bottom: 3.4rem;
     }
 
+    display: block;
     width: 100%;
     margin-bottom: -1.6rem;
   }
