@@ -42,9 +42,12 @@
 
   ul.grid-3 {
     @extend %list-no-style;
-    display: flex;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
+
+    @include phablet {
+      display: flex;
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+    }
 
     li {
       @include phablet {
