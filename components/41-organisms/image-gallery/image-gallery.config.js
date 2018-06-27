@@ -11,7 +11,7 @@ module.exports = {
   },
   variants: [
     {
-      name:'multiple',
+      name: 'multiple',
       hidden: true
     },
     {
