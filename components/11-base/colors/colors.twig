@@ -15,6 +15,22 @@
               <div class="color color-swatch-{{ text|e }}-{{ key }}"></div>
               <strong>{{ '+ ' ~ tint|e }}</strong>
               <code>color('{{ text }}', {{ key }});</code>
+              <code>{{ 'rgb(' ~
+                ((1 - tint|trim('%')/100) *
+                ("0123456789abcdef"|split(color|slice(1,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(2,1))[0]|length)
+                + (tint|trim('%')/100) * 0)|round
+                ~ ", " ~
+                ((1 - tint|trim('%')/100) *
+                ("0123456789abcdef"|split(color|slice(3,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(4,1))[0]|length)
+                + (tint|trim('%')/100) * 0)|round
+                ~ ", " ~
+                ((1 - tint|trim('%')/100) *
+                ("0123456789abcdef"|split(color|slice(5,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(6,1))[0]|length)
+                + (tint|trim('%')/100) * 0)|round
+                ~ ")" }}</code>
             </div>
           {% endif %}
         {% endfor %}
@@ -24,8 +40,19 @@
           {% if key < 0 %}
             <div class="color-box">
               <div class="color color-swatch-{{ text|e }}-{{ key }}"></div>
-              <strong>{{ '- ' ~ tint|e }}</strong>
+              <strong>{{ tint|e }}</strong>
               <code>color('{{ text }}', {{ key }});</code>
+              <code>{{ 'rgba(' ~
+                ("0123456789abcdef"|split(color|slice(1,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(2,1))[0]|length)|round
+                ~ ", " ~
+                ("0123456789abcdef"|split(color|slice(3,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(4,1))[0]|length)|round
+                ~ ", " ~
+                ("0123456789abcdef"|split(color|slice(5,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(6,1))[0]|length)|round
+                ~ ", "
+                ~ tint|trim('%')/100 ~ ")" }}</code>
             </div>
           {% endif %}
         {% endfor %}
@@ -51,6 +78,22 @@
               <div class="color color-swatch-{{ text|e }}-{{ key }}"></div>
               <strong>{{ '+ ' ~ tint|e }}</strong>
               <code>color('{{ text }}', {{ key }});</code>
+              <code>{{ 'rgb(' ~
+                ((1 - tint|trim('%')/100) *
+                ("0123456789abcdef"|split(color|slice(1,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(2,1))[0]|length)
+                + (tint|trim('%')/100) * 0)|round
+                ~ ", " ~
+                ((1 - tint|trim('%')/100) *
+                ("0123456789abcdef"|split(color|slice(3,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(4,1))[0]|length)
+                + (tint|trim('%')/100) * 0)|round
+                ~ ", " ~
+                ((1 - tint|trim('%')/100) *
+                ("0123456789abcdef"|split(color|slice(5,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(6,1))[0]|length)
+                + (tint|trim('%')/100) * 0)|round
+                ~ ")" }}</code>
             </div>
           {% endif %}
         {% endfor %}
@@ -60,8 +103,19 @@
           {% if key < 0 %}
             <div class="color-box">
               <div class="color color-swatch-{{ text|e }}-{{ key }}"></div>
-              <strong>{{ '- ' ~ tint|e }}</strong>
+              <strong>{{ tint|e }}</strong>
               <code>color('{{ text }}', {{ key }});</code>
+              <code>{{ 'rgba(' ~
+                ("0123456789abcdef"|split(color|slice(1,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(2,1))[0]|length)|round
+                ~ ", " ~
+                ("0123456789abcdef"|split(color|slice(3,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(4,1))[0]|length)|round
+                ~ ", " ~
+                ("0123456789abcdef"|split(color|slice(5,1))[0]|length * 16
+                + "0123456789abcdef"|split(color|slice(6,1))[0]|length)|round
+                ~ ", "
+                ~ tint|trim('%')/100 ~ ")" }}</code>
             </div>
           {% endif %}
         {% endfor %}
