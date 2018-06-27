@@ -9,10 +9,10 @@
 Thank you for your interest in contributing to this project. There are several
 ways to help out, even if you've never worked on an open source project before.
 
-> Note that the development of this style guide is not done here. So 
-> please do not create any pull requests directly here. 
-> Instead use 
-> [this repo](https://github.com/digipolisgent/drupal_theme_gent-base) to 
+> Note that the development of this style guide is not done here. So
+> please do not create any pull requests directly here.
+> Instead use
+> [this repo](https://github.com/digipolisgent/drupal_theme_gent-base) to
 > create your pull requests.
 
 If you've found a bug or want to request a feature, you can report it by

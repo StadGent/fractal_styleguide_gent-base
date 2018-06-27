@@ -19,20 +19,20 @@ All notable changes to this style guide are documented here.
 
 > Refactored the way themify works. This removed the use of variables
 > to determine the themified variant of a component.
-
+<!-- -->
 > **Sections have changed into color schemes**
 > Sections have been changed into color schemes with the `cs--` prefix.
 > Colors are now defined in a `$colors` SASS map and accessed through the
 > `color()` function. See the documentation of colors for more information.
-
+<!-- -->
 > **Themify changes**
 > Refactored the way themify works. This removed the use of variables
 > to determine the themified variant of a component.
-
+<!-- -->
 > **Color scheme nesting removed**
 > Color scheme nesting has also been removed because they won't be used
 > anymore in the new style guide.
-
+<!-- -->
 > **Color panals introduced**
 > Color panels have been added to allow easier default styling of new
 > components and to allow easier overriding of the properties of these
@@ -52,7 +52,7 @@ All notable changes to this style guide are documented here.
 
 > We added styling for radio buttons and checkboxes. These were not styled in
 > previous versions of the style guide.
-
+<!-- -->
 > **Removed jQuery UI Datepicker support and integration!**
 > Did some refactoring to the SASS partials. Most of the input field styling
 > can now be found in the `_forms.scss` partial.
@@ -74,7 +74,8 @@ All notable changes to this style guide are documented here.
 * DTGB-276: Fixed a bug where the breadcrumb alignment was not correct.
 
   > **Some markup changes have been introduced so you might need some
-    refactoring.**
+refactoring.**
+
 * DTGB-397: Changed the markup of radio buttons and checkboxes. They are
   now inside their own fieldset.
 * DTGB-401: Updated links to new public gent_base repository.
