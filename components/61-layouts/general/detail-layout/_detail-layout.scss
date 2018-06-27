@@ -32,6 +32,10 @@
     @include desktop {
       @include set-layout('width-7', 'offset-2');
     }
+
+    .accordion--content p {
+      line-height: 1.75;
+    }
   }
 
   > .help-block {
