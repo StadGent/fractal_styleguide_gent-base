@@ -27,11 +27,6 @@ dl.timeline {
       > dd .video-wrapper::after {
         @include theme('background-color', 'color-primary--lighten-5', 'timeline-slot-alternating-background');
       }
-
-      a,
-      .image-gallery .image-gallery__show-more .show-more__content {
-        @include theme('color', 'color-primary--darken-2', 'timeline-colored-row-link-color');
-      }
     }
 
     // First timeline-slot specific styling.

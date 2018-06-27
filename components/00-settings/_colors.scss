@@ -223,22 +223,6 @@ $themes: (
     'tag-border-color-hover': color('cyan-wcag', -2),
     'tag-close-button-background-hover': color('cyan-wcag', -4),
   ),
-  'purple': (
-    // Required colors!
-    'color-primary': color('purple'),
-    'color-secondary': color('white'),
-    'color-tertiary': color('dark-gray'),
-    'color-box-shadow': $box-shadow-primary color('purple', -3),
-    'color-box-shadow-hover': $box-shadow-primary color('purple', -2),
-    'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-primary-accolade': svg-as-background('accolade', color('purple', -4), 36, 19),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('purple', -4), 54, 23),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('purple', 1), 54, 23),
-
-    // Exceptions to colors go here...
-    // These should be as limited as possible though!
-  ),
   'orange': (
     // Required colors!
     'color-primary': color('orange'),
@@ -258,8 +242,6 @@ $themes: (
     'link-hover-background': color('cyan-wcag', -4),
     'link-hover-color': color('cyan-wcag', 2),
 
-    'disclaimer-block-link-color': color('cyan', 2),
-    'gentinfo-block-link-color': color('cyan', 2),
     'social-media-icon-background': color('cyan', -5),
 
     'button-primary-background': color('cyan-wcag'),
