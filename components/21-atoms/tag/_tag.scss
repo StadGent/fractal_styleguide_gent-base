@@ -19,8 +19,6 @@
 
     &:hover button {
       @include theme('background-color', 'color-primary--lighten-4', 'tag-close-button-background-hover');
-
-      border-radius: 100%;
     }
 
     button {
@@ -28,7 +26,9 @@
       height: 1.1rem;
       margin-left: .5rem;
       padding: 0;
+      transition: background-color .2s ease-in-out;
       border: 0;
+      border-radius: 100%;
       background: transparent svg-as-background('cross', color('dark-gray'), 16, 16);
       background-repeat: no-repeat;
       background-position: center;

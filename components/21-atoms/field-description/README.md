@@ -7,4 +7,5 @@
 
 ## Web accessibility
 
-* A field must reference the field description by use of aria-describedby, unless a field message has priority.
+* A field must reference the field description by use of aria-describedby,
+ unless a field message has priority.
