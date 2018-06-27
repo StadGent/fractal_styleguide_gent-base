@@ -18,10 +18,6 @@
     margin-top: 1rem;
   }
 
-  a {
-    @include theme('color', 'color-primary--darken-2', 'feedback-form-link-color');
-  }
-
   .info-box {
     @include theme('background-color', 'color-primary--lighten-5', 'feedback-form-info-background');
 
@@ -42,6 +38,7 @@
   form {
     textarea {
       @include theme('background-color', 'color-secondary', 'feedback-form-textarea-background');
+      @include theme('border-color', 'color-primary--darken-2', 'feedback-form-textarea-border');
 
       min-height: 5.5rem;
     }
