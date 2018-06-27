@@ -62,3 +62,4 @@ plugins:
 
 exclude_patterns:
 - "**/.idea/**/*"
+- "**/*.config.json"
