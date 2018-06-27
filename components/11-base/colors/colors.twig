@@ -1,52 +1,71 @@
 <h3 id="styleguide-colors" class="styleguide-title">{{ 'Primary colors' }}</h3>
-<div class="preview-inner-container styleguide-primary-colors">
-  {% for text, color in primary %}
-    <div class="color-wrapper">
+{% for text, color in primary %}
+  <div class="color-wrapper {{ text == 'white' ? 'white' : '' }}">
+    <div>
       <div class="color" style="background: {{ color|e }}"></div>
-      <div class="color-info">
-        <p><strong>{{ text|e }}</strong></p>
-        <code>color('{{ text }}');</code>
-        <p>{{ color|e }}</p>
-      </div>
-      <div class="color-variants">
+      <p><strong>{{ text|e }}</strong></p>
+      <code>color('{{ text }}');</code>
+      <code>{{ color|e }}</code>
+    </div>
+    <div class="color-variants">
+      <div>
         {% for key, tint in tints %}
-          <div class="color-variant">
-            <div>
+          {% if key > 0 %}
+            <div class="color-box">
+              <div class="color color-swatch-{{ text|e }}-{{ key }}"></div>
+              <strong>{{ '+ ' ~ tint|e }}</strong>
               <code>color('{{ text }}', {{ key }});</code>
             </div>
-            <div>
-              {{ tint|e }}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div>
+        {% for key, tint in tints %}
+          {% if key < 0 %}
+            <div class="color-box">
+              <div class="color color-swatch-{{ text|e }}-{{ key }}"></div>
+              <strong>{{ '- ' ~ tint|e }}</strong>
+              <code>color('{{ text }}', {{ key }});</code>
             </div>
-            <div class="color-swatch-variant color-swatch-{{ text|e }}-{{ key }}"></div>
-          </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
-  {% endfor %}
-</div>
+  </div>
+{% endfor %}
 
 <h3 class="styleguide-title">{{ 'Secondary colors' }}</h3>
-<div class="preview-inner-container styleguide-secondary-colors">
-  {% for text, color in secondary %}
-  <div class="color-wrapper">
-    <div class="color" style="background: {{ color|e }}"></div>
-    <div class="color-info">
+{% for text, color in secondary %}
+  <div class="color-wrapper {{ text == 'white' ? 'white' : '' }}">
+    <div>
+      <div class="color" style="background: {{ color|e }}"></div>
       <p><strong>{{ text|e }}</strong></p>
-      <p>{{ color|e }}</p>
+      <code>color('{{ text }}');</code>
+      <code>{{ color|e }}</code>
     </div>
     <div class="color-variants">
-      {% for key, tint in tints %}
-        <div class="color-variant">
-        <div>
-          <code>color('{{ text }}', {{ key }});</code>
-        </div>
-        <div>
-          {{ tint|e }}
-        </div>
-        <div class="color-swatch-variant color-swatch-{{ text|e }}-{{ key }}"></div>
-        </div>
-      {% endfor %}
+      <div>
+        {% for key, tint in tints %}
+          {% if key > 0 %}
+            <div class="color-box">
+              <div class="color color-swatch-{{ text|e }}-{{ key }}"></div>
+              <strong>{{ '+ ' ~ tint|e }}</strong>
+              <code>color('{{ text }}', {{ key }});</code>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div>
+        {% for key, tint in tints %}
+          {% if key < 0 %}
+            <div class="color-box">
+              <div class="color color-swatch-{{ text|e }}-{{ key }}"></div>
+              <strong>{{ '- ' ~ tint|e }}</strong>
+              <code>color('{{ text }}', {{ key }});</code>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </div>
-  {% endfor %}
-</div>
+{% endfor %}
