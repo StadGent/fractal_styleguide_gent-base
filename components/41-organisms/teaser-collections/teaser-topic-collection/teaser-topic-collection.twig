@@ -1,5 +1,8 @@
 <div class="collection teaser-topic-collection">
-  <h2><span>{{ 'Topics' }}</span></h2>
+  {% include '@titles' with {
+    "type": "collection-title",
+    "heading_text": "Topics"
+  } %}
   <ul>
     {% for i in 0..6 %}
       {% include '@teaser-topic' with {

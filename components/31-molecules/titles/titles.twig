@@ -1,0 +1,7 @@
+{% if type == "overview-title" %}
+  <{{ heading|default('h1') }} class="overview-title"><span>{{ heading_text }}</span></{{ heading|default('h1') }}>
+{% endif %}
+
+{% if type == "collection-title" %}
+  <{{ heading|default('h2') }} class="collection-title"><span>{{ heading_text }}</span></{{ heading|default('h2') }}>
+{% endif %}
