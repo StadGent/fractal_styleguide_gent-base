@@ -10,6 +10,7 @@ footer.footer {
     > .content-container {
       display: flex;
       flex-wrap: wrap;
+      max-width: calc(#{$bp-max-content} + 54px);
       margin-bottom: 1rem;
       padding: 0 $gutter-width 1.5rem;
 
@@ -18,7 +19,8 @@ footer.footer {
         padding-bottom: 4rem;
       }
 
-      @media (min-width: $bp-max-content) {
+      @media (min-width: $bp-max-content + 54px) {
+        max-width: $bp-max-content;
         padding: 4rem 0;
       }
     }
