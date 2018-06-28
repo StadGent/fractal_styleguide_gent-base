@@ -1,25 +1,32 @@
-.overview-title {
-  @extend %h1;
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-  margin-bottom: 3.5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.overview-title {
+    @extend %h1;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 3.5rem;
 
-  span {
-    position: relative;
-    padding: inherit;
-    font-size: inherit;
+    span {
+      position: relative;
+      padding: inherit;
+      font-size: inherit;
 
-    &::after {
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: -.1em;
-      left: 0;
-      width: 70%;
-      margin: auto;
-      border-bottom: 2px solid;
-      content: '';
+      &::after {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -.1em;
+        left: 0;
+        width: 70%;
+        margin: auto;
+        border-bottom: 2px solid;
+        content: '';
+      }
     }
   }
 }
