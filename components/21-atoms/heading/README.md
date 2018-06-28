@@ -16,11 +16,12 @@ They provide a quick way to scan the main sections of a website.
 * Don’t skip headings: e.g. do not jump from H1 to H3.
 
 ## Variants
+
 There a few title variants available in style guide.
 
-- **Overview titles:** Can be used above an overview, mostly as the page title.
+* **Overview titles:** Can be used above an overview, mostly as the page title.
   This variant is always styled as a heading 1.
-- **Collection titles:** Can be used above a collection of teasers or tiles.
+* **Collection titles:** Can be used above a collection of teasers or tiles.
   This variant is always styled as a heading 2.
 
 Simply add the title class on any heading element (according SEO guidelines) to
