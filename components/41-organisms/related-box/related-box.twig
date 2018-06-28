@@ -5,13 +5,15 @@
     'modifier': 'related-box-image'
   } %}
   <div class="related-box-content">
-    {% include '@h2' with {
-      'h2_text': 'Also interesting'
+    {% include '@heading' with {
+      'type': 'h2',
+      'heading_text': 'Also interesting'
     } %}
 
     <div class="related-box-content-column">
-      {% include '@h3' with {
-        'h3_text': 'Similar articles'
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Similar articles'
       } %}
 
       {% include '@list'
@@ -27,8 +29,9 @@
       %}
     </div>
     <div class="related-box-content-column">
-      {% include '@h3' with {
-        'h3_text': 'More info about'
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'More info about'
       } %}
 
       {% if tags.length > 1 %}
@@ -48,8 +51,9 @@
         } %}
       {% endif %}
 
-      {% include '@h3' with {
-        'h3_text': 'Related Linked Open Data'
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Related Linked Open Data'
       } %}
 
       {% include '@link' with {
