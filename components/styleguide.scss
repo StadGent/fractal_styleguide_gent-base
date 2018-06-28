@@ -13,82 +13,60 @@
 // Color classes to show the color swatches in the style guide.
 //
 .color-wrapper {
-  display: block;
-  width: 100%;
-  margin: 0 .625rem .625rem 0;
-  float: left;
-  border: 1px solid color('dark-gray', -3);
-  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: .2rem;
 
-  .color {
-    height: 75px;
-    padding: 1rem;
-    border-bottom: 1px solid color('dark-gray', -3);
+  &.white {
+    background-color: color('dark-gray');
+    color: color('white');
   }
 
-  .color-info {
-    min-height: 50px;
-    padding: .5rem;
-    border-bottom: 1px solid color('dark-gray', -3);
-
-    @media all and (min-width: 480px) {
-      min-height: 125px;
-    }
+  p {
+    margin: 0;
   }
 
   code {
     display: block;
-    margin-bottom: .5rem;
-    border: 1px dotted color('dark-gray', -4);
-    background-color: color('dark-gray', -6);
-    font-size: .8rem;
-    font-style: italic;
-    overflow-x: scroll;
+    font-size: .6rem;
+    white-space: nowrap;
+  }
+
+  .color {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    overflow: hidden;
   }
 
   .color-variants {
-    padding: .5rem;
 
-    .color-variant {
-      margin-bottom: 2rem;
+    > div {
+      display: flex;
+      flex: auto;
+      flex-wrap: wrap;
     }
 
-    .color-variants-title {
-      margin-bottom: 1rem;
+    .color-box {
+      padding: .5rem;
+    }
+
+    .color {
+      width: 3rem;
+      height: 3rem;
+      margin: .5rem;
     }
   }
-
-  @media all and (min-width: 480px) {
-    width: 250px;
-  }
-}
-
-//
-// Generate style guide specific classes to show the color swatch variants.
-//
-.color-swatch-variant {
-  position: relative;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 1px solid color('dark-gray', -3);
 }
 
 @each $color-key, $color in $colors {
   @each $tint-key, $tint in $tints {
     .color-swatch-#{$color-key}-#{$tint-key} {
       background-color: color($color-key, $tint-key);
-
-      &::after {
-        position: absolute;
-        top: -1.5rem;
-        right: 0;
-        left: 0;
-        margin: auto;
-        font-size: .8rem;
-
-        content: '#{color($color-key, $tint-key)}';
-      }
     }
   }
 }
