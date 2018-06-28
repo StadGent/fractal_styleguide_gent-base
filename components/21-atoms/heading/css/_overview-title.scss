@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   max-width: 100%;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3.5rem; !important; // sass-lint:disable-line no-important
 
   span {
     position: relative;
