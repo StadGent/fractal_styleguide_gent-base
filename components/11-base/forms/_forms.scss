@@ -27,7 +27,7 @@ $field-icon-padding: 2.5rem;
 @mixin field-base {
   @include theme('border-color', 'color-tertiary--lighten-2', 'fields-border-color');
   @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
-  @include theme('color', 'color-tertiary--darken-1', 'fields-color');
+  @include theme('color', 'color-tertiary', 'fields-color');
 
   &:focus {
     @include theme('border-color', 'color-primary--lighten-2', 'fields-border-focus-color');
@@ -51,7 +51,6 @@ $field-icon-padding: 2.5rem;
     border: 1px solid color('green');
     background: color('green', -6) $field-icon-position;
     background-image: svg-as-background('checkmark-circle', color('green'), 26, 26);
-    color: color('dark-gray', 1);
 
     &:focus {
       border-color: color('green');
