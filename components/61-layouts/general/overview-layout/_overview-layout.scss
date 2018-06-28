@@ -27,7 +27,7 @@
       flex-wrap: wrap;
     }
 
-    li {
+    > li {
       @include phablet {
         width: span(6 of 12);
         margin: 0 $gutter-width 3.4rem 0;
