@@ -4,7 +4,7 @@ h3,
 h4,
 h5,
 h6 {
-  .collection-title {
+  &.collection-title {
     @extend %h2;
     @include theme('border-color', 'color-primary--lighten-4', 'block-title-border-color');
 
