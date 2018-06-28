@@ -3,7 +3,7 @@
   "status": "ready",
   "name": "Teaser topic collection",
   "context": {
-    "teaser_image_src": "https://loremflickr.com/650/400/ghent?random=",
+    "teaser_image_src": "https://loremflickr.com/800/500/ghent?random=",
     "teaser_image_alt_text": "alt text",
     "teaser_paragraph_text": "Teaser text, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.",
     "teaser_title": "Title text ",

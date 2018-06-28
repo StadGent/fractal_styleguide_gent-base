@@ -14,10 +14,8 @@
   .readspeaker-button {
     display: block;
     width: auto;
-  }
-
-  .info-box + .readspeaker-button {
-    margin-top: -1.2rem;
+    margin-top: -.4rem;
+    margin-bottom: .4rem;
   }
 
   > .quote,
@@ -33,6 +31,10 @@
   > ul.accordion {
     @include desktop {
       @include set-layout('width-7', 'offset-2');
+    }
+
+    .accordion--content p {
+      line-height: 1.75;
     }
   }
 

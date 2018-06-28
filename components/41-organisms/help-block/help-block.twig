@@ -1,8 +1,14 @@
 <div class="help-block">
-  {% include '@h2' with {'h2_text': 'How can we help you further?'} %}
+  {% include '@heading' with {
+    'type': 'h2',
+    'heading_text': 'How can we help you further?'
+  } %}
 
   <div class="help-block-section">
-    {% include '@h3' with {'h3_text': '1. Maybe you were looking for this?'} %}
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': '1. Maybe you were looking for this?'
+    } %}
     {% include '@link' with {
       'link': 'javascript:(void);',
       'text': 'Filip Watteeuw',
@@ -30,7 +36,10 @@
   </div>
 
   <div class="help-block-section">
-    {% include '@h3' with {'h3_text': '2. Try to find the page through our search function'} %}
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': '2. Try to find the page through our search function:'
+    } %}
     {% include '@search' with {
       'text': 'Search!',
       'for': 'search_field_403',
@@ -39,7 +48,10 @@
   </div>
 
   <div class="help-block-section">
-    {% include '@h3' with {'h3_text': '3. Continue to navigate from here'} %}
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': '3. Continue to navigate from here?'
+    } %}
     {% include '@paragraph' with {
       'text': 'This can be done in several ways:',
     } %}

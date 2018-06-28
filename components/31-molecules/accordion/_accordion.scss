@@ -26,6 +26,10 @@
   .accordion--content {
     transition: max-height .5s ease-in-out;
     overflow: hidden;
+
+    p {
+      line-height: 1.75;
+    }
   }
 
 }

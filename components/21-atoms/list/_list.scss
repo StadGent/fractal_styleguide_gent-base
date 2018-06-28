@@ -59,20 +59,18 @@ ul {
     list-style-type: none;
 
     li {
+      display: flex;
       position: relative;
-      margin-bottom: .8rem;
-      padding-left: 1.8rem;
+      align-items: center;
+      margin-bottom: .4rem;
+      padding-left: 0;
       line-height: 1.6;
     }
 
     i {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      height: 2rem;
-      margin: auto;
-      font-size: 1.4em;
+      margin-right: .4em;
+      font-size: 1.5em;
+      vertical-align: middle;
     }
   }
 }
@@ -112,7 +110,6 @@ dl {
   }
 
   a {
-    font-size: .8rem;
     font-weight: 600;
   }
 }

@@ -19,7 +19,10 @@
   
   <div id="mijn_gent_content" class="accordion--content" aria-hidden="true" hidden>
     <article class="content">
-      {% include '@h2' with { 'h2_text': 'Mijn Gent' } %}
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': 'Mijn gent'
+      } %}
       <section class="profile">
         {% include '@image' with { 'src': '/styleguide/img/stock/user_avatar.jpg'|path, 'alt_text': 'Username' } %}
         <div class="profile-info">
@@ -43,8 +46,11 @@
         } %}
       </section>
       <section>
-        {% include '@h2' with { 'h2_text': 'Mijn Gent' } %}
-        
+        {% include '@heading' with {
+          'type': 'h2',
+          'heading_text': 'Mijn gent'
+        } %}
+
         {% include '@list' with {
         'type': 'unordered',
         'modifier': 'links',

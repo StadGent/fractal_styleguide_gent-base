@@ -10,7 +10,6 @@
   }
 
   a {
-    @include theme('color', 'color-primary--darken-2', 'disclaimer-block-link-color');
     margin-left: -.2em;
   }
 }

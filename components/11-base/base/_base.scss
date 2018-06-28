@@ -85,6 +85,10 @@ q {
   max-width: 40rem;
 }
 
+strong {
+  font-weight: 600;
+}
+
 input[type=button],
 button {
   font: $default-font-weight $default-font-size $default-font-family;

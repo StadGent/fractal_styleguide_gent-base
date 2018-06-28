@@ -5,7 +5,10 @@
     'modifier': 'search-block-icon'
   } %}
   <div class="search-block-content">
-    {% include '@h2' with {'h2_text': 'From here you can...'} %}
+    {% include '@heading' with {
+      'type': 'h2',
+      'heading_text': 'From here you can...'
+    } %}
 
     {% include '@list' with {
       'type': 'icon-list',
@@ -16,7 +19,10 @@
       ]
     } %}
 
-    {% include '@h3' with {'h3_text': 'Are you looking for another page?'} %}
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': 'Are you looking for another page?'
+    } %}
 
     {% include '@search' with {
       'label': '',

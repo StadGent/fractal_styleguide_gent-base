@@ -20,14 +20,20 @@
 
 <main id="main">
   <article class="detail-layout">
-    {% include '@h1' with { 'h1_text': "We can't find the page you're looking for" } %}
+    {% include '@heading' with {
+      'type': 'h1',
+      'heading_text': 'We can\'t find the page you\'re looking for'
+    } %}
 
     {% include 'paragraph' with { 'text': 'Fusce malesuada enim a sagittis ornare. Proin placerat lacinia quam ut pulvinar. Morbi nec leo ante. Donec rhoncus enim velit, eu imperdiet mauris pulvinar eget. Suspendisse vitae gravida ex. Mauris convallis aliquam mi vitae commodo. Aenean at velit ornare, feugiat ligula eget, ultricies erat.' } %}
 
     {% include '@help-block' %}
 
     <div class="404-poetry">
-      {% include '@h2' with { 'h2_text': 'Speurtocht' } %}
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': 'Speurtocht'
+      } %}
       {% include 'paragraph' with {
         'text': 'we kamden de stad uit,<br />
                 braken tegels los, keerden <br />

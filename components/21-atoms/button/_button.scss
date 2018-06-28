@@ -89,6 +89,7 @@
   @include button-medium; // Default.
 
   padding: 0 2.6em;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .1s ease-in-out;
   border: 2px solid;
   border-radius: border-radius('radius-1');
   outline: 0;

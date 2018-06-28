@@ -1,5 +1,5 @@
 .info-box {
-  @include theme('background-color', 'color-primary--lighten-4', 'info-box-background');
+  @include theme('background-color', 'color-primary--lighten-5', 'info-box-background');
 
   display: flex;
   flex-wrap: wrap;
@@ -13,10 +13,6 @@
     justify-content: flex-start;
     margin-top: 0;
     padding: 2rem 3.7rem 1.6rem ($gutter-width*2);
-  }
-
-  a {
-    @include theme('color', 'color-primary--darken-2', 'info-box-link-color');
   }
 
   h2 {

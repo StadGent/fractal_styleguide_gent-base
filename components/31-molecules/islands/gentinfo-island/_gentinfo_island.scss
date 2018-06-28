@@ -62,14 +62,14 @@
       list-style: none;
 
       a {
-        @include theme('color', 'color-primary--darken-2', 'gentinfo-block-link-color');
-
         margin-left: -.2em;
-        // align the standalone link
-        padding-left: .2em;
         font-size: .8rem;
         font-weight: 600;
         text-decoration: none;
+
+        &.standalone-link {
+          padding-left: .2em;
+        }
 
         &.button-call {
           display: flex;

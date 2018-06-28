@@ -4,7 +4,6 @@
 
 For information about input fields see the general docs about Forms.
 
-
 ## UX / Accessibility
 
 * Only use a multi select field if the user has more than 7 options to choose

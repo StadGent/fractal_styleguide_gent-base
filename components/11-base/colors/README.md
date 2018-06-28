@@ -42,10 +42,10 @@ means they will change colors based on predefined sub themes.
 To make a property themable use the mixin `theme()` in your component.
 
 The `$themes` map exists out of multiple keys that define the themes for the
-style guide. Based on these maps you have to require some basic colors such 
+style guide. Based on these maps you have to require some basic colors such
 as `color-primary` and `color-secondary`. See the `$themes` map inside
 `_colors.scss` for more information.
-These form the basic of the theming system. Through a syntax convention you 
+These form the basic of the theming system. Through a syntax convention you
 can theme the colors of your components:
 
 ```scss
@@ -61,6 +61,6 @@ gets transformed by the system to:
 It does this by searching for the key `color-primary` in the `$themes` map.
 Everything just before the double dashes gets used as the key value.
 
-It then checks the part after the double dashes `--` and strips out `lighten` 
+It then checks the part after the double dashes `--` and strips out `lighten`
 or `darken` (everything before the dash `-`). Based on that result it applies
 the `color()` mixin with the correct parameters.

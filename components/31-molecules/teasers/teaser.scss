@@ -3,6 +3,12 @@
   position: relative;
   list-style: none;
 
+  figure {
+    figcaption {
+      display: none;
+    }
+  }
+
   .teaser-content {
 
     a {

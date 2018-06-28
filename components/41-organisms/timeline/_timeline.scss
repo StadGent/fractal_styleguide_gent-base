@@ -20,17 +20,12 @@ dl.timeline {
     flex-wrap: wrap;
 
     // Alternating timeline-slots get another background color.
-    &:nth-child(2n) {
-      @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
+    &:nth-child(2n+1) {
+      @include theme('background-color', 'color-primary--lighten-5', 'timeline-slot-alternating-background');
 
       // Fix for video on alternating timeline-slots.
       > dd .video-wrapper::after {
-        @include theme('background-color', 'color-primary--lighten-4', 'timeline-slot-alternating-background');
-      }
-
-      a,
-      .image-gallery .image-gallery__show-more .show-more__content {
-        @include theme('color', 'color-primary--darken-2', 'timeline-colored-row-link-color');
+        @include theme('background-color', 'color-primary--lighten-5', 'timeline-slot-alternating-background');
       }
     }
 

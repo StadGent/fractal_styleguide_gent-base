@@ -1,51 +1,57 @@
 .tag {
   @include theme('border-color', 'color-primary--lighten-3', 'tag-border-color');
 
-  &.filter {
-    @include theme('background-color', 'color-primary--lighten-4', 'tag-filter-background-color');
-
-    padding-right: .8em;
-    border-color: transparent;
-
-    button {
-      width: 1.3rem;
-      height: .9rem;
-      margin-left: 0;
-      padding-right: 0;
-      padding-left: .5rem;
-      border: 0;
-      background: transparent svg-as-background('cross', color('dark-gray'), 16, 16);
-      background-repeat: no-repeat;
-      background-position: right;
-      cursor: pointer;
-    }
-  }
-
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  padding: .6em 1.2em;
+  padding: .7em .8em;
   border: 1px solid;
   border-radius: border-radius('radius-1');
   font-size: .7rem;
   line-height: 1.1;
   text-decoration: none;
+
+  &.filter {
+    @include theme('background-color', 'color-primary--lighten-4', 'tag-filter-background-color');
+
+    padding: .4em .8em .4em 1.2em;
+    border-color: transparent;
+
+    &:hover button {
+      @include theme('background-color', 'color-primary--lighten-4', 'tag-close-button-background-hover');
+    }
+
+    button {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-left: .5rem;
+      padding: 0;
+      transition: background-color .2s ease-in-out;
+      border: 0;
+      border-radius: 100%;
+      background: transparent svg-as-background('cross', color('dark-gray'), 16, 16);
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+  }
 }
 
 a.tag {
   @include icon(arrow-right, after);
 
-  padding-right: .8em;
+  padding: .4em .8em;
 
   &::after {
-    width: 1.3rem;
-    height: .9rem;
-    margin-left: 0;
-    padding-left: .5rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-left: .5rem;
     font-size: 1rem;
+    vertical-align: middle;
   }
 
   &:hover {
-    @include theme('background-color', 'color-primary--lighten-5', 'tag-background-color-hover');
+    @include theme('background-color', 'color-primary--lighten-4', 'tag-background-color-hover');
+    @include theme('border-color', 'color-primary--lighten-2', 'tag-border-color-hover');
   }
 }

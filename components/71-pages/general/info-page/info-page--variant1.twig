@@ -1,8 +1,9 @@
 {% extends '@info-page' %}
 
 {% block info_page_article_content %}
-  {% include '@h1' with {
-    "h1_text": "This is an info page without a header image"
+  {% include '@heading' with {
+    'type': 'h1',
+    'heading_text': 'This is an info page variant'
   } %}
 
   {% include '@paragraph' with {
@@ -22,37 +23,37 @@
     {% include '@image-gallery--multiple' with {
     "items": [
     {
-    "src": "https://via.placeholder.com/735x459",
+    "src": "https://loremflickr.com/735/459/ghent?random=1",
     "alt": "placeholder image alternative text",
     "caption": "image caption"
     },
     {
-    "src": "https://via.placeholder.com/735x459",
+    "src": "https://loremflickr.com/735/459/ghent?random=2",
     "alt": "placeholder image alternative text",
     "caption": "image caption"
     },
     {
-    "src": "https://via.placeholder.com/735x459",
+    "src": "https://loremflickr.com/735/459/ghent?random=3",
     "alt": "placeholder image alternative text",
     "caption": "image caption"
     },
     {
-    "src": "https://via.placeholder.com/735x459",
+    "src": "https://loremflickr.com/735/459/ghent?random=4",
     "alt": "placeholder image alternative text",
     "caption": "image caption"
     },
     {
-    "src": "https://via.placeholder.com/735x459",
+    "src": "https://loremflickr.com/735/459/ghent?random=5",
     "alt": "placeholder image alternative text",
     "caption": "image caption"
     },
     {
-    "src": "https://via.placeholder.com/735x459",
+    "src": "https://loremflickr.com/735/459/ghent?random=6",
     "alt": "placeholder image alternative text",
     "caption": "image caption"
     },
     {
-    "src": "https://via.placeholder.com/735x459",
+    "src": "https://loremflickr.com/735/459/ghent?random=7",
     "alt": "placeholder image alternative text"
     }
     ]
@@ -67,6 +68,11 @@
 
   {% include '@paragraph' with {
     "text": "Nam lorem ex, posuere non lectus tempus, ornare scelerisque mauris. Integer vitae tortor orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas enim lectus, malesuada in hendrerit in, vulputate ut enim. Integer pretium elit purus, ac pulvinar augue scelerisque quis. In velit elit, luctus vitae nunc quis, hendrerit congue felis. Nulla tincidunt tincidunt cursus. Mauris pretium eu ex id aliquet. Aenean massa metus, posuere ac dui sit amet, volutpat interdum libero."
+  } %}
+
+  {% include '@heading' with {
+    'type': 'h2',
+    'heading_text': 'This is a FAQ main title'
   } %}
 
   {% include '@accordion--multiple' with {
