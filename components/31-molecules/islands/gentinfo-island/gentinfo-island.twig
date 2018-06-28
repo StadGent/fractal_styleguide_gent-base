@@ -5,11 +5,10 @@
     'modifier': 'gentinfo-icon'
   } %}
   <div class="gentinfo-block-content">
-    {% include '@h2'
-      with {
-        'h2_text': 'Gentinfo'
-      }
-    %}
+    {% include '@heading' with {
+      'type': 'h2',
+      'heading_text': 'Gentinfo'
+    } %}
     {% include '@paragraph'
       with {
         'text': 'Gentinfo is available from Monday till Saturday from 08:00 till 19:00'

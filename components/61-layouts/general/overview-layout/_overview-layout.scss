@@ -12,28 +12,6 @@
       }
     }
   }
-
-  .page-title {
-    display: flex;
-    justify-content: center;
-
-    h1 {
-      position: relative;
-      margin-bottom: 3.5rem;
-
-      &::after {
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: -.1em;
-        left: 0;
-        width: 70%;
-        margin: auto;
-        border-bottom: 2px solid;
-        content: '';
-      }
-    }
-  }
 }
 
 .overview-layout {

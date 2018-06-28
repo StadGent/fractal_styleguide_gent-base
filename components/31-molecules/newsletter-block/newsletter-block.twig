@@ -8,15 +8,17 @@
         } %}
       </div>
       <div class="island section--wrapper">
-        {% include '@h2' with {
-        'h2_text': 'Don\'t miss the latest news of Ghent.'
+        {% include '@heading' with {
+          'type': 'h2',
+          'heading_text': 'Don\'t miss the latest news of Ghent.'
         } %}
       </div>
     </div>
     <div class="island section--default newsletter-block__content">
       <div>
-        {% include '@h3' with {
-          'h3_text': 'Subscribe to the newsletter of the City of Ghent.'
+        {% include '@heading' with {
+          'type': 'h3',
+          'heading_text': 'Subscribe to the newsletter of the City of Ghent.'
         } %}
         {% include '@list' with {
           'items': [
@@ -36,8 +38,9 @@
       </div>
     </div>
     <div class="island section--wrapper newsletter-block__social-media">
-      {% include '@h3' with {
-      'h3_text': 'Follow us on:'
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Follow us on:'
       } %}
       {% include '@list' with {
         'modifier': 'no-style',

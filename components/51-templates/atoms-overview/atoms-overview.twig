@@ -1,10 +1,30 @@
 {# --- HEADINGS --- #}
 <h3 id="styleguide-headings" class="styleguide-title">Headings</h3>
 <div class="preview-inner-container">
-  {% include '@h1' with { 'h1_text': 'Heading 1' } %}
-  {% include '@h2' with { 'h2_text': 'Heading 2' } %}
-  {% include '@h3' with { 'h3_text': 'Heading 3' } %}
-  {% include '@h4' with { 'h4_text': 'Heading 4' } %}
+  {% include '@heading' with {
+    'type': 'h1',
+    'heading_text': 'Heading 1'
+  } %}
+  {% include '@heading' with {
+    'type': 'h2',
+    'heading_text': 'Heading 2'
+  } %}
+  {% include '@heading' with {
+    'type': 'h3',
+    'heading_text': 'Heading 3'
+  } %}
+  {% include '@heading' with {
+    'type': 'h4',
+    'heading_text': 'Heading 4'
+  } %}
+  {% include '@heading' with {
+    'type': 'overview-title',
+    'heading_text': 'Overview title'
+  } %}
+  {% include '@heading' with {
+    'type': 'collection-title',
+    'heading_text': 'Collection title'
+  } %}
 </div>
 
 

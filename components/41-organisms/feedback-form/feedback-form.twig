@@ -1,8 +1,9 @@
 <div class="feedback-form accordion {{ modifier }}">
   <h2><button class="accordion--button" aria-expanded="false" aria-controls="feedback-form-content">{{ 'Can we improve something about this page?' }}</button></h2>
   <div id="feedback-form-content" class="accordion--content">
-        {% include '@h3' with {
-          'h3_text': 'You can contact Gentinfo for personal questions or complaints.'
+        {% include '@heading' with {
+          'type': 'h3',
+          'heading_text': 'You can contact Gentinfo for personal questions or complaints.'
         } %}
 
         {% include '@paragraph' with {
@@ -21,8 +22,9 @@
         } %}
 
     <form action="#" class="no-style">
-      {% include '@h3' with {
-        'h3_text': 'Do you have suggestions or comments concerning this page?'
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Do you have suggestions or comments concerning this page?'
       } %}
 
       {% include '@textarea' with {} %}

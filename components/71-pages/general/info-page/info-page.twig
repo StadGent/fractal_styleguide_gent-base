@@ -23,8 +23,9 @@
 <main class="info-page">
   <article class="detail-layout">
     {% block info_page_article_content %}
-      {% include '@h1' with {
-      "h1_text": "Info page title"
+      {% include '@heading' with {
+        'type': 'h1',
+        'heading_text': 'Info page title'
       } %}
 
       {% include '@readspeaker-button' %}
@@ -34,24 +35,27 @@
       "modifier": "summary-text"
       } %}
 
-      {% include '@h2' with {
-        "h2_text": "This is an H2 paragraph title"
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': 'This is an H2 paragraph title'
       } %}
 
       {% include '@paragraph' with {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio. In id tellus ut ligula facilisis efficitur at vel urna. Vivamus iaculis felis non <strong>bold text</strong> tristique malesuada. Quisque venenatis, arcu sed luctus molestie, leo mauris commodo sem, eget <a href='https://stad.gent' alt='Stad Gent'>egestas orci</a> libero eu justo. Curabitur sollicitudin odio non vulputate tincidunt. Etiam vel dolor in massa dapibus bibendum sit amet vel ipsum. Donec sagittis, elit et hendrerit maximus, nulla tortor laoreet quam, id tincidunt massa neque a ex. Fusce suscipit, ipsum interdum elementum sodales, <a href='javascript:(void);' alt='Link'>tellus</a> sapien vehicula nisi, in condimentum neque nisl sit amet elit. Donec sed augue a elit sodales commodo pulvinar vitae nisl. Sed <a href='javascript:(void);' alt='File link' download>pharetra</a> ante non mollis consequat. Pellentesque a est neque. Nullam maximus ornare metus. Quisque porttitor turpis tristique faucibus efficitur."
       } %}
 
-      {% include '@h3' with {
-        "h3_text": "This is an H3 paragraph title"
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'This is an H3 paragraph title'
       } %}
 
       {% include '@paragraph' with {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio."
       } %}
 
-      {% include '@h4' with {
-        "h4_text": "This is an H4 paragraph title"
+      {% include '@heading' with {
+        'type': 'h4',
+        'heading_text': 'This is an H4 paragraph title'
       } %}
 
       {% include '@paragraph' with {

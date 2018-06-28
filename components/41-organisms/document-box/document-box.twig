@@ -1,6 +1,7 @@
 <div class="document-box accordion">
-  {% include '@h2' with {
-    'h2_text': 'Documents'
+  {% include '@heading' with {
+    'type': 'h2',
+    'heading_text': 'Documents'
   } %}
   <ul class="links">
     {% for document in documents %}

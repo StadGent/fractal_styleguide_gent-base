@@ -5,8 +5,11 @@
   'modifier': 'info-box-icon'
   } %}
   <div class="info-box-content">
-    {% include '@h2' with {'h2_text': 'Extra information about this event'} %}
-    
+    {% include '@heading' with {
+      'type': 'h2',
+      'heading_text': 'Extra information about this event'
+    } %}
+
     {% include '@list' with {
     'type': 'icon-list',
     'icon_items': [

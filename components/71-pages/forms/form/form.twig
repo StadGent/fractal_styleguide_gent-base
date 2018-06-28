@@ -1,18 +1,22 @@
 <main class="content-container">
-  {% include '@h1' with {
-    "h1_text": "Form page"
+  {% include '@heading' with {
+    'type': 'h1',
+    'heading_text': 'Form page'
   } %}
 
   <form action="#" method="#">
-    {% include '@h2' with {
-      "h2_text": "Some title"
+    {% include '@heading' with {
+      'type': 'h2',
+      'heading_text': 'Some title'
     } %}
+
     {% include '@paragraph' with {
       "text": "De verkiezingsshow 'Stem wijs' vindt plaats op woensdag 6 juni 2018 in Muziekcentrum De Bijloke (Bijlokekaai 7, 9000 Gent). Niet alleen de jury, maar ook het publiek kan die avond stemmen voor de beste spreker, die Gent zal vertegenwoordigen in Edinburgh."
     } %}
 
-    {% include '@h3' with {
-      "h3_text": "Subscribe for the election show"
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': 'Subscribe for the election show'
     } %}
 
     <fieldset>

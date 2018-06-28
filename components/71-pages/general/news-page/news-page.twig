@@ -21,8 +21,9 @@
 <main class="news-page">
   <article class="detail-layout">
     {% block news_page_content %}
-      {% include '@h1' with {
-      "h1_text": "News page title"
+      {% include '@heading' with {
+        'type': 'h1',
+        'heading_text': 'News page title'
       } %}
 
       {% include '@readspeaker-button' %}
@@ -32,8 +33,9 @@
       "modifier": "summary-text"
       } %}
 
-      {% include '@h2' with {
-      "h2_text": "This is a paragraph title"
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': 'This is a paragraph title'
       } %}
 
       {% include '@paragraph' with {

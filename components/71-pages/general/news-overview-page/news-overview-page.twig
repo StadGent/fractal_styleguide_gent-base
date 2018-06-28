@@ -21,11 +21,10 @@
 <main class="news-overview-page">
   <section class="overview-layout">
     {% block news_overview_content %}
-      <div class="page-title">
-        {% include '@h1' with {
-          "h1_text": "News and events"
-        } %}
-      </div>
+      {% include '@heading' with {
+        "type": "overview-title",
+        "heading_text": "News and events"
+      } %}
       <h2 class="visually-hidden">Overview</h2>
       <ul class="grid-3">
         {% for key, article in articles %}

@@ -50,8 +50,9 @@
     <div class="content-container info-container">
       <div class="info-block">
         <section class="island section--default">
-          {% include '@h2' with {
-            "h2_text": "Veelgevraagde info"
+          {% include '@heading' with {
+            'type': 'h2',
+            'heading_text': 'Veelgevraagde info'
           } %}
           {% include '@list' with {
             "modifier": "links",
@@ -69,8 +70,9 @@
       </div>
       <div class="info-block">
         <section class="island section--default">
-          {% include '@h2' with {
-            "h2_text": "Openingsuren en adressen"
+          {% include '@heading' with {
+            'type': 'h2',
+            'heading_text': 'Openingsuren en adresssen'
           } %}
           {% include '@list' with {
             "modifier": "links",
@@ -87,8 +89,9 @@
       </div>
       <div class="info-block">
         <section class="gent-info-block island section--highlighted">
-          {% include '@h2' with {
-          "h2_text": "Gentinfo"
+          {% include '@heading' with {
+            'type': 'h2',
+            'heading_text': 'Gentinfo'
           } %}
           {% include '@paragraph' with {
             "text": "Gentinfo is hét centrale aanspreekpunt voor informatie over het stadsbestuur en de stadsdiensten. Heeft u vragen, klachten, suggesties, meldingen ... over de Stad Gent? Neem contact op met Gentinfo." } %}
@@ -108,8 +111,9 @@
   </section>
   <section class="topics-container section--default">
     <div class="content-container">
-      {% include '@h2' with {
-        "h2_text": "Diensten & info"
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': 'Diensten & info'
       } %}
       {% include '@teaser-topic-collection' with {
         "teaser_image_src": "https://loremflickr.com/650/400/ghent?random=",
@@ -124,8 +128,9 @@
   </section>
   <section class="news-container section--inverse">
     <div class="content-container">
-      {% include '@h2' with {
-        "h2_text": "Nieuws & evenementen"
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': 'Nieuws & evenementen'
       } %}
       {% include '@teaser-topic-collection' with {
         "teaser_image_src": "https://loremflickr.com/650/400/ghent?random=",
