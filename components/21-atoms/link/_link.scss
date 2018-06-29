@@ -115,10 +115,10 @@ a {
   &[download]:not(.button),
   &[href^="http://"]:not(.button),
   &[href^="https://"]:not(.button) {
-    display: inline-block;
+    display: inline-flex;
 
     &::after {
-      display: inline-block;
+      display: block;
       text-decoration: none;
     }
   }
