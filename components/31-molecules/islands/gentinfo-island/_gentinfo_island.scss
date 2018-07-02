@@ -1,6 +1,5 @@
 .gentinfo-block {
   @include theme('background-color', 'color-secondary', 'gentinfo-block-background');
-
   display: flex;
   position: relative;
   flex-wrap: wrap;
@@ -72,11 +71,10 @@
         }
 
         &.button-call {
+          @include icon('phone');
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
-
-          @include icon('phone');
 
           &::after {
             display: none;
