@@ -59,9 +59,11 @@ ul {
     list-style-type: none;
 
     li {
-      display: flex;
+      @include mobile {
+        display: flex;
+        align-items: center;
+      }
       position: relative;
-      align-items: center;
       margin-bottom: .4rem;
       padding-left: 0;
       line-height: 1.6;
