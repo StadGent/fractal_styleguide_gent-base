@@ -166,6 +166,13 @@ header.header {
 
   }
 
+  // Align main menu with site logo and breadcrumb.
+  nav.menu {
+    .content-container {
+      padding-left: .2rem;
+    }
+  }
+
   // Hero image, overlaps and hides breadcrumb accolade.
   figure.hero {
     $span: percentage(2/12);

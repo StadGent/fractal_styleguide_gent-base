@@ -1,7 +1,7 @@
 $hamburger-menu-width: 320px;
 
 nav.menu {
-  margin: 1rem 0;
+  margin: 0;
 
   .drawer {
     @include theme('background-color', 'color-primary--lighten-4', 'hamburger-menu-background');
