@@ -59,20 +59,26 @@ ul {
     list-style-type: none;
 
     li {
-      @include mobile {
-        display: flex;
-        align-items: center;
-      }
       position: relative;
-      margin-bottom: .4rem;
+      margin-bottom: .8rem;
       padding-left: 0;
       line-height: 1.6;
-    }
+      overflow: hidden;
 
-    i {
-      margin-right: .4em;
-      font-size: 1.5em;
-      vertical-align: middle;
+      i {
+        width: calc(15% - .4em);
+        max-width: 1.2rem;
+        margin-right: .4em;
+        float: left;
+        font-size: 1.5em;
+        vertical-align: middle;
+        line-height: 1;
+      }
+
+      span {
+        width: 85%;
+        float: left;
+      }
     }
   }
 }

@@ -15,23 +15,12 @@
     li {
       position: relative;
       margin-bottom: .5rem;
-      padding-left: 1.8rem;
       line-height: 1.8;
 
       &,
       > * {
         font-size: .8rem;
       }
-    }
-
-    i {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      height: 1.8em;
-      margin: auto;
-      font-size: 1.4em;
     }
   }
 

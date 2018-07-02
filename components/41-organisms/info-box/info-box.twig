@@ -13,11 +13,11 @@
     {% include '@list' with {
     'type': 'icon-list',
     'icon_items': [
-    '<i class="icon-calendar"></i><time datetime="2018-07-13">from the 13th</time> until <time datetime="2018-07-22">the 22th of July</time> with ongoing activities, also at night</time>',
-    '<i class="icon-marker"></i>Inner city',
+    '<i class="icon-calendar"></i><span><time datetime="2018-07-13">from the 13th</time> until <time datetime="2018-07-22">the 22th of July</time> with ongoing activities, also at night</time></span>',
+    '<i class="icon-marker"></i><span>Inner city</span>',
     ]
     } %}
-    
+
     {% include 'link' with {
     "link": "https://stad.gent",
     "text": "Register for this event",
@@ -25,7 +25,7 @@
     "aria_labelledby": null,
     "modifier": "standalone-link"
     } %}
-    
+
 
   </div>
 </aside>
