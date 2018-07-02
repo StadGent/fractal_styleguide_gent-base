@@ -76,11 +76,11 @@
           justify-content: space-between;
           margin-bottom: 1rem;
 
-          @include icon('phone');
-
           &::after {
             display: none;
           }
+
+          @include icon('phone');
 
           @include tablet {
             display: inline;
