@@ -17,41 +17,4 @@
 .overview-layout {
   @extend %content-container;
   margin-bottom: 4rem;
-
-  ul.grid-3 {
-    @extend %list-no-style;
-
-    @include phablet {
-      display: flex;
-      flex: 1 1 100%;
-      flex-wrap: wrap;
-    }
-
-    > li {
-      @include phablet {
-        width: span(6 of 12);
-        margin: 0 $gutter-width 3.4rem 0;
-
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
-      }
-
-      @include desktop {
-        width: span(4 of 12);
-
-        &:nth-child(2n) {
-          margin-right: auto;
-        }
-
-        &:nth-child(3n) {
-          margin-right: 0;
-        }
-      }
-
-      margin-bottom: 3.4rem;
-    }
-
-    width: 100%;
-  }
 }
