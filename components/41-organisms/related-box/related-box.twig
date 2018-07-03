@@ -10,24 +10,26 @@
       'heading_text': 'Also interesting'
     } %}
 
+  {% if similar_articles %}
     <div class="related-box-content-column">
-      {% include '@heading' with {
-        'type': 'h3',
-        'heading_text': 'Similar articles'
-      } %}
+        {% include '@heading' with {
+          'type': 'h3',
+          'heading_text': 'Similar articles'
+        } %}
 
-      {% include '@list'
-        with {
-          'type': 'unordered',
-          "items": [
-            '<a href="javascript:(void);">Council meeting dates</a>',
-            '<a href="javascript:(void);">Neighborhood</a>',
-            '<a href="javascript:(void);">Service policy participation</a>',
-            '<a href="javascript:(void);">Re-listen the city council and the dec...<Paste></a>'
-          ]
-        }
-      %}
-    </div>
+        {% include '@list'
+          with {
+            'type': 'unordered',
+            "items": [
+              '<a href="javascript:(void);">Council meeting dates</a>',
+              '<a href="javascript:(void);">Neighborhood</a>',
+              '<a href="javascript:(void);">Service policy participation</a>',
+              '<a href="javascript:(void);">Re-listen the city council and the dec...<Paste></a>'
+            ]
+          }
+        %}
+      </div>
+    {% endif %}
     <div class="related-box-content-column">
       {% include '@heading' with {
         'type': 'h3',

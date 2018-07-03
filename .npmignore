@@ -2,6 +2,7 @@ components
 docs
 node_modules
 public
+fractal
 build/components
 build/css
 build/docs
@@ -11,7 +12,7 @@ build/assets.html
 build/components.html
 build/docs.html
 build/index.html
-scripts
+scripts/version_tag.sh
 aXeReports
 
 .DS_Store
