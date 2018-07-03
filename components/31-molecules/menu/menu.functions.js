@@ -49,7 +49,6 @@
       }
 
       // remove the menu from the tabindex
-      // jquery .css() doesn't now 'important'
       setTimeout(function () {
         drawer.style.display = 'none';
       }, 500);
@@ -70,7 +69,6 @@
         drawer.classList.add('js-opened');
         overlay.classList.add('js-opened');
       });
-
 
       // remember the trigger
       // trigger = e.target;
