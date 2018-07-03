@@ -16,7 +16,7 @@
   }
 
   h2 {
-    @extend %h3
+    @extend %h4;
   }
 
   ul.icon-list:not(:last-child) {
