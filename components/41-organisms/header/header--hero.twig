@@ -1,0 +1,11 @@
+{% extends '@header' %}
+
+{% block hero %}
+  {% include '@figure' with {
+    "figure_figcaption": hero_image_description,
+    "figure_image_src": hero_image_src,
+    "figure_image_alt_text": "",
+    "modifier": "hero"
+  } %}
+{% endblock hero %}
+

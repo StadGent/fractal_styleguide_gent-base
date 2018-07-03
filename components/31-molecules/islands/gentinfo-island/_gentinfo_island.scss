@@ -72,11 +72,10 @@
         }
 
         &.button-call {
+          @include icon('phone');
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
-
-          @include icon('phone');
 
           &::after {
             display: none;

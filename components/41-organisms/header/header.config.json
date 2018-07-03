@@ -20,8 +20,9 @@
       "<a href='#'>Subpage</a>",
       "<span>Page title</span>"
     ],
-    "hero_image_src": "https://via.placeholder.com/1600x420",
-    "hero_image_description": "Caption text comes here."
+    "hero_image_src": "https://via.placeholder.com/1680x400",
+    "hero_image_description": "Caption text comes here.",
+    "hero_title": "Subsite <span>Digipolis Gent</span>"
   },
   "variants": [
     {
