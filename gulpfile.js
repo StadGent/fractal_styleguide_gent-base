@@ -78,6 +78,8 @@ gulp.task('styles:inject', () => {
   const injectAtomsFiles = gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
   const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
   const injectOrganismsFiles = gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
+  const injectLayoutsFiles = gulp.src('components/61-layouts/**/*.s+(a|c)ss', {read: false});
+  const injectPagesFiles = gulp.src('components/71-pages/**/*.s+(a|c)ss', {read: false});
 
   const transformFilepath = (filepath) => `@import "${filepath}";`;
 
@@ -123,6 +125,20 @@ gulp.task('styles:inject', () => {
     addRootSlash: false,
     relative: true
   };
+  const injectLayoutsOptions = {
+    transform: transformFilepath,
+    starttag: '// inject:layouts',
+    endtag: '// endinject',
+    addRootSlash: false,
+    relative: true
+  };
+  const injectPagesOptions = {
+    transform: transformFilepath,
+    starttag: '// inject:pages',
+    endtag: '// endinject',
+    addRootSlash: false,
+    relative: true
+  };
 
   return gulp.src('components/main_cli.scss', {allowEmpty: true})
     .pipe(inject(injectSettingsFiles, injectSettingsOptions))
@@ -131,6 +147,8 @@ gulp.task('styles:inject', () => {
     .pipe(inject(injectAtomsFiles, injectAtomsOptions))
     .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
     .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
+    .pipe(inject(injectLayoutsFiles, injectLayoutsOptions))
+    .pipe(inject(injectPagesFiles, injectPagesOptions))
     .pipe(gulp.dest('components/'));
 });
 
