@@ -80,6 +80,8 @@
             display: none;
           }
 
+          @include icon('phone');
+
           @include tablet {
             display: inline;
             padding: .3em;
