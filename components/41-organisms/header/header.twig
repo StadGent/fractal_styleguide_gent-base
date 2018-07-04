@@ -17,16 +17,14 @@
       "text": header_search_text,
       "modifier_submit": header_search_modifier_submit
     } %}
-    
-    {% include '@mijn-gent-block' with {
-      "items": mijn_gent_block_items,
-      'auth': mijn_gent_block_auth,
-    } %}
-  
-  </div>
 
-  {% block menu %}
-  {% endblock %}
+    {% block menu %}
+      {% include '@mijn-gent-block' with {
+        "items": mijn_gent_block_items,
+        'auth': mijn_gent_block_auth,
+      } %}
+    {% endblock %}
+  </div>
 
   {% include '@breadcrumbs' with {
     "items": breadcrumbs_items
