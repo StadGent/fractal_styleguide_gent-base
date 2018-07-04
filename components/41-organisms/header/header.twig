@@ -10,23 +10,26 @@
     } %}
     
     {% include '@search' with {
-    "label": header_search_label,
-    "search_id": header_search_id,
-    "placeholder": header_search_placeholder,
-    "modifier_search": header_search_modifier_search,
-    "text": header_search_text,
-    "modifier_submit": header_search_modifier_submit
+      "label": header_search_label,
+      "search_id": header_search_id,
+      "placeholder": header_search_placeholder,
+      "modifier_search": header_search_modifier_search,
+      "text": header_search_text,
+      "modifier_submit": header_search_modifier_submit
     } %}
     
     {% include '@mijn-gent-block' with {
-    "items": mijn_gent_block_items,
-    'auth': mijn_gent_block_auth,
+      "items": mijn_gent_block_items,
+      'auth': mijn_gent_block_auth,
     } %}
   
   </div>
-  
+
+  {% block menu %}
+  {% endblock %}
+
   {% include '@breadcrumbs' with {
-  "items": breadcrumbs_items
+    "items": breadcrumbs_items
   } %}
 
   {% block hero %}

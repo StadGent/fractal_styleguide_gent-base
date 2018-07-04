@@ -4,9 +4,9 @@
   "preview": "@preview-without-padding",
   "context": {
     "mijn_gent_block_items": [
-      "<a href='javascript:(void);'>Mijn profiel</a>",
-      "<a href='javascript:(void);'>Nieuwsbrieven</a>",
-      "<a href='javascript:(void);'>Historiek</a>"
+      "<a href=\"javascript:(void);\">Mijn profiel</a>",
+      "<a href=\"javascript:(void);\">Nieuwsbrieven</a>",
+      "<a href=\"javascript:(void);\">Historiek</a>"
     ],
     "mijn_gent_block_auth": "false",
     "header_search_id": "header-search",
@@ -14,15 +14,21 @@
     "header_search_placeholder": "Search",
     "header_search_text": "Search",
     "breadcrumbs_items": [
-      "<a href='https://stad.gent'>Stad.gent</a>",
-      "<a href='#'>Overview</a>",
-      "<a href='#'>Theme</a>",
-      "<a href='#'>Subpage</a>",
+      "<a href=\"https://stad.gent\">Stad.gent</a>",
+      "<a href=\"#\">Overview</a>",
+      "<a href=\"#\">Theme</a>",
+      "<a href=\"#\">Subpage</a>",
       "<span>Page title</span>"
     ],
-    "hero_image_src": "https://via.placeholder.com/1680x400",
+    "hero_image_src": "https://via.placeholder.com/1600x420",
     "hero_image_description": "Caption text comes here.",
-    "hero_title": "Subsite <span>Digipolis Gent</span>"
+    "hero_title": "Subsite <span>Digipolis Gent</span>",
+    "menu_items": [
+      "<a href=\"#\" class=\"active\">Home</a>",
+      "<a href=\"#\">News & events</a>",
+      "<a href=\"#\">Subpage</a>",
+      "<a href=\"#\">Another page</a>"
+    ]
   },
   "variants": [
     {

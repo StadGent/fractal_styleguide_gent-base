@@ -165,4 +165,11 @@ header.header {
     }
 
   }
+
+  // Align main menu with site logo and breadcrumb.
+  nav.menu {
+    .content-container {
+      padding-left: .2rem;
+    }
+  }
 }

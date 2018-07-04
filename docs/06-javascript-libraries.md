@@ -72,10 +72,10 @@ Inside this stylguide we have the following Javascript enabled components:
 Style guide implementation of the
 <a href="{{path '/components/detail/breadcrumbs'}}">breadcrumbs molecule</a>.
 
-## Hamburger-menu
+## Main menu
 
 Style guide implementation of the
-<a href="{{path '/components/detail/hamburger-menu'}}">hamburger menu</a>.
+<a href="{{path '/components/detail/menu'}}">main menu</a>.
 
 ## Gallery
 
