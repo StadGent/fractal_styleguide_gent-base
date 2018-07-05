@@ -80,8 +80,8 @@ const _spotimagesMap = () => {
 
   const colormap = colors.context.secondary;
   let map = [{
-    'suffix': '--default',
-    'colors': [Color('#009DE0')]
+    suffix: '--default',
+    colors: [Color('#009DE0')]
   }];
 
   for (const cs in colormap) {
