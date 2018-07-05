@@ -32,6 +32,8 @@ const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const gulpif = require('gulp-if');
 const babel = require('gulp-babel');
+const Color = require('color');
+const RecolorSvg = require('gulp-recolor-svg');
 // require our configurated fractal module
 const fractal = require('./fractal');
 
@@ -64,6 +66,34 @@ const _sassCompile = () => {
   ]);
   combined.on('error', sass.logError);
   return combined;
+};
+
+/*
+* Get the spotimages map.
+*/
+const _spotimagesMap = () => {
+  // require colors
+  const colors = require('./components/11-base/colors/colors.config.js');
+  if (!colors) {
+    return [];
+  }
+
+  const colormap = colors.context.secondary;
+  let map = [{
+    suffix: '--default',
+    colors: [Color('#009DE0')]
+  }];
+
+  for (const cs in colormap) {
+    if (colormap.hasOwnProperty(cs)) {
+      map.push({
+        suffix: '--' + cs,
+        colors: [Color(colormap[cs])]
+      });
+    }
+  }
+
+  return map;
 };
 
 /*
@@ -567,6 +597,15 @@ gulp.task('iconfont', () => {
     .pipe(gulp.dest('./public/styleguide/fonts/'));
 });
 
+gulp.task('spotimages', () => {
+  return gulp.src('./public/styleguide/img/svg/*.svg')
+    .pipe(RecolorSvg.GenerateVariants(
+      [RecolorSvg.ColorMatcher(Color('#009DE0'))],
+      _spotimagesMap()
+    ))
+    .pipe(gulp.dest('./public/styleguide/img/svg/build'));
+});
+
 /**
  * Generate SassDoc.
  */
@@ -614,11 +653,37 @@ gulp.task('validate', gulp.parallel('styles:validate', 'js:validate', 'axe'), ca
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', gulp.series('iconfont', 'fractal:build', gulp.parallel('styles:build', 'styles:dist', 'styles:inject', 'styles:extract', 'sassdoc', 'js:build', 'js:dist', 'images:minify'
-)), callback => callback());
+gulp.task('compile', gulp.series(
+  gulp.parallel(
+    'iconfont',
+    'spotimages'
+  ),
+  'fractal:build',
+  gulp.parallel(
+    'styles:build',
+    'styles:dist',
+    'styles:inject',
+    'styles:extract',
+    'sassdoc',
+    'js:build',
+    'js:dist',
+    'images:minify'
+  )
+), callback => callback());
 
-gulp.task('compile:dev', gulp.series('iconfont', 'fractal:build', gulp.parallel('styles:dist', 'sassdoc', 'js:dist', 'images:minify'
-)));
+gulp.task('compile:dev', gulp.series(
+  gulp.parallel(
+    'iconfont',
+    'spotimages'
+  ),
+  'fractal:build',
+  gulp.parallel(
+    'styles:dist',
+    'sassdoc',
+    'js:dist',
+    'images:minify'
+  )
+));
 
 /*
  *
@@ -629,13 +694,13 @@ gulp.task('compile:dev', gulp.series('iconfont', 'fractal:build', gulp.parallel(
  *  Used to validate and build production ready code.
  *
  */
-gulp.task('build', gulp.series((cb) => {
+gulp.task('build', gulp.series((callback) => {
   // set env variable to be used in gulp-if
   build = true;
-  cb();
-}, gulp.parallel('validate', 'compile'), (cb) => {
+  callback();
+}, gulp.parallel('validate', 'compile'), (callback) => {
   build = false;
-  cb();
+  callback();
 }));
 
 /*

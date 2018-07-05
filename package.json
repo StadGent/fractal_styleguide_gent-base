@@ -44,6 +44,7 @@
   "dependencies": {
     "baguettebox.js": "^1.10.0",
     "breakpoint-sass": "^2.7.1",
+    "gulp-recolor-svg": "^1.0.3",
     "masonry-layout": "^4.2.0",
     "sassdoc": "^2.5.0",
     "sassdoc-theme-flippant": "^0.1.0",

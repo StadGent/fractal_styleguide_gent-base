@@ -22,7 +22,8 @@
     ],
     "hero_image_src": "https://via.placeholder.com/1600x420",
     "hero_image_description": "Caption text comes here.",
-    "hero_title": "Subsite <span>Digipolis Gent</span>",
+    "hero_title": "ICT Supplier <span>Digipolis Gent</span>",
+    "subsite": "ICT Supplier Digipolis Gent",
     "menu_items": [
       "<a href=\"#\" class=\"active\">Home</a>",
       "<a href=\"#\">News & events</a>",
