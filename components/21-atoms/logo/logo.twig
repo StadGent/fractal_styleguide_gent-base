@@ -1,6 +1,3 @@
-<a href="#" title="Home" class="site-logo" rel="home">
-  {% include '@image' with {
-    'src': '/styleguide/img/svg/logo.svg'|path,
-    'alt_text': 'Home'
-  } %}
+<a href="#" title="Home" class="site-logo {{ type }}" rel="home">
+  {{ site_name }}
 </a>
