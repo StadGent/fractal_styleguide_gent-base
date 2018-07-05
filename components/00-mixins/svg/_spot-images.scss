@@ -37,8 +37,8 @@
       display: block;
       width: $size;
       height: $size;
-      background-image: url('#{$styleguide-dir}/img/svg/build/#{$image}--#{$theme}.svg');
       background: no-repeat center center;
+      background-image: url('#{$styleguide-dir}/img/svg/build/#{$image}--#{$theme}.svg');
       background-size: 100%;
       content: '';
     }

@@ -653,11 +653,37 @@ gulp.task('validate', gulp.parallel('styles:validate', 'js:validate', 'axe'), ca
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', gulp.series('iconfont', 'fractal:build', gulp.parallel('styles:build', 'styles:dist', 'styles:inject', 'styles:extract', 'sassdoc', 'js:build', 'js:dist', 'images:minify'
-)), callback => callback());
+gulp.task('compile', gulp.series(
+  gulp.parallel(
+    'iconfont',
+    'spotimages'
+  ),
+  'fractal:build',
+  gulp.parallel(
+    'styles:build',
+    'styles:dist',
+    'styles:inject',
+    'styles:extract',
+    'sassdoc',
+    'js:build',
+    'js:dist',
+    'images:minify'
+  )
+), callback => callback());
 
-gulp.task('compile:dev', gulp.series('iconfont', 'fractal:build', gulp.parallel('styles:dist', 'sassdoc', 'js:dist', 'images:minify'
-)));
+gulp.task('compile:dev', gulp.series(
+  gulp.parallel(
+    'iconfont',
+    'spotimages'
+  ),
+  'fractal:build',
+  gulp.parallel(
+    'styles:dist',
+    'sassdoc',
+    'js:dist',
+    'images:minify'
+  )
+));
 
 /*
  *
@@ -668,13 +694,13 @@ gulp.task('compile:dev', gulp.series('iconfont', 'fractal:build', gulp.parallel(
  *  Used to validate and build production ready code.
  *
  */
-gulp.task('build', gulp.series((cb) => {
+gulp.task('build', gulp.series((callback) => {
   // set env variable to be used in gulp-if
   build = true;
-  cb();
-}, gulp.parallel('validate', 'compile'), (cb) => {
+  callback();
+}, gulp.parallel('validate', 'compile'), (callback) => {
   build = false;
-  cb();
+  callback();
 }));
 
 /*
