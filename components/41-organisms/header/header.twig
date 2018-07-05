@@ -1,6 +1,8 @@
 <header class="header">
   <div class="content-container">
-    {% include '@logo' %}
+    {% block logo %}
+      {% include '@logo' %}
+    {% endblock %}
     
     {% include '@link' with {
       "link": "#",

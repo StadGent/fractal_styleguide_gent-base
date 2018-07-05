@@ -1,0 +1,46 @@
+////
+///
+/// This file defines Spot images related functions and mixins.
+///
+/// @group tools
+/// @author Jeroen Goossens
+///
+////
+
+
+
+///
+/// Theme mixin to generate all themes spot images.
+/// This generates the necessary theme CSS for all defined themes based on the
+/// $themes map defined in _colors.scss
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @author Jeroen Goossens
+///
+/// @param {string} $image [null]
+///   The filename of the spot image.
+///
+/// @param {string} $size [8rem]
+///   The default width + height for the spot image.
+///
+@mixin spot-image($image, $size: 8rem) {
+  @each $theme, $colors in $themes {
+    // Apply the default section as default color scheme if there is no section
+    // defined in the DOM.
+    .cs--#{$theme} & {
+      background-image: url('#{$styleguide-dir}/img/svg/build/#{$image}--#{$theme}.svg');
+    }
+
+    @if $theme == 'default' {
+      display: block;
+      width: $size;
+      height: $size;
+      background-image: url('#{$styleguide-dir}/img/svg/build/#{$image}--#{$theme}.svg');
+      background: no-repeat center center;
+      background-size: 100%;
+      content: '';
+    }
+  }
+}

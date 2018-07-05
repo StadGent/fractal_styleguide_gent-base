@@ -32,6 +32,8 @@ const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const gulpif = require('gulp-if');
 const babel = require('gulp-babel');
+const Color = require("color");
+const RecolorSvg = require("gulp-recolor-svg");
 // require our configurated fractal module
 const fractal = require('./fractal');
 
@@ -64,6 +66,34 @@ const _sassCompile = () => {
   ]);
   combined.on('error', sass.logError);
   return combined;
+};
+
+/*
+* Get the spotimages map.
+*/
+const _spotimagesMap = () => {
+  // require colors
+  const colors = require('./components/11-base/colors/colors.config.js');
+  const map = [];
+
+  map.push({
+    'suffix': '--default',
+    'colors': [ Color('#009DE0') ]
+  });
+
+  if (colors) {
+    const colormap = colors.context.secondary;
+    for (const cs in colormap) {
+      if (colormap.hasOwnProperty(cs)) {
+        map.push({
+          'suffix': '--' + cs,
+          'colors': [ Color(colormap[cs]) ]
+        });
+      }
+    }
+  }
+
+  return map;
 };
 
 /*
@@ -565,6 +595,15 @@ gulp.task('iconfont', () => {
       console.log(glyphs, options);
     })
     .pipe(gulp.dest('./public/styleguide/fonts/'));
+});
+
+gulp.task('spotimages', () => {
+  return gulp.src('./public/styleguide/img/svg/*.svg')
+    .pipe(RecolorSvg.GenerateVariants(
+      [RecolorSvg.ColorMatcher(Color('#009DE0'))],
+      _spotimagesMap()
+    ))
+    .pipe(gulp.dest('./public/styleguide/img/svg/build'));
 });
 
 /**

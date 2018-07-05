@@ -17,11 +17,10 @@
     text-align: left;
   }
 
-  .gentinfo-icon {
-    display: block;
-    width: 7.8rem;
+  &::before {
+    @include spot-image('gentinfo');
+    height: 10rem;
     margin: -6rem auto 0;
-    padding: 1rem 0;
 
     @include tablet {
       display: none;
@@ -79,8 +78,6 @@
           &::after {
             display: none;
           }
-
-          @include icon('phone');
 
           @include tablet {
             display: inline;
