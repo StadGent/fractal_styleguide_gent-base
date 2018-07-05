@@ -365,7 +365,7 @@ dl.timeline {
             @include desktop {
               width: calc((100% / 3 - #{$gutter-width} / 1.5) - .33px);
               max-width: 100%;
-              margin: calc(#{$gutter-width} / 2) 0 $gutter-width;
+              margin: calc(#{$gutter-width} / 2) 0 0;
             }
 
             width: 100%;
