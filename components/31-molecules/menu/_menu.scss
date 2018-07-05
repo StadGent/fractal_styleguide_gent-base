@@ -68,6 +68,7 @@ nav.menu {
 
       &::after {
         right: -$gutter-width;
+        // viewport - ::before + border-width + gutter-width
         width: calc(100% - 3rem + 2px + #{$gutter-width});
         border-left: 2px solid;
         border-top-left-radius: border-radius('radius-4');
@@ -98,6 +99,8 @@ nav.menu {
   button {
     @include button-icon;
     padding: 0;
+    border: 0;
+    background: transparent;
     font-size: .8rem;
 
     @include tablet {
@@ -132,13 +135,13 @@ nav.menu {
       a {
         @include theme('color', 'color-tertiary', 'default-text-color');
         display: inline-block;
-        padding: 1rem;
         margin-bottom: 1rem;
+        padding: 1rem;
         text-decoration: none;
 
         @include tablet {
-          padding: .5rem 0;
           margin-bottom: 0;
+          padding: .5rem 0;
         }
 
         &::after {
@@ -158,7 +161,6 @@ nav.menu {
           &::after {
             @include theme('color', 'color-primary--darken-2', 'link-hover-color');
             width: 70%;
-
           }
         }
       }
