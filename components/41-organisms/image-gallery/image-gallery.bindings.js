@@ -15,7 +15,8 @@
     captions: function (element) {
       var figcaption = element.querySelector('figcaption');
       return figcaption ? figcaption.innerText : null;
-    }
+    },
+    buttons: true
   });
 
 })();
