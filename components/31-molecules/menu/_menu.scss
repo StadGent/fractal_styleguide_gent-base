@@ -145,6 +145,7 @@ nav.menu {
         }
 
         &::after {
+          @include theme('color', 'color-primary', 'menu-hover-color');
           display: block;
           width: 0;
           margin: 0 auto;
@@ -159,7 +160,6 @@ nav.menu {
           background: transparent;
 
           &::after {
-            @include theme('color', 'color-primary--darken-2', 'link-hover-color');
             width: 70%;
           }
         }
