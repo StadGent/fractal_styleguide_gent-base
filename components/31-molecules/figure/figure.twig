@@ -1,15 +1,22 @@
 <figure {% if modifier %} class="{{ modifier }}" {% endif %}>
   {% if subsite %}
     <div class="subsite">
-      <picture>
-        <source media="(min-width: 768px)" srcset="{{ figure_logo_src_light }}">
-        <source srcset="{{ figure_logo_src_dark }}">
-        <img src="{{ figure_logo_src_dark }}" alt="{{ figure_title }}">
-      </picture>
-      {% include '@heading' with {
-        'type': 'h1',
-        'heading_text': figure_title
-      } %}
+      <div class="subsite-title">
+        {% include '@image' with {
+          'src': figure_logo_src_dark,
+          'alt_text': figure_title,
+          'modifier': 'dark'
+        } %}
+        {% include '@image' with {
+          'src': figure_logo_src_light,
+          'alt_text': figure_title,
+          'modifier': 'light'
+        } %}
+        {% include '@heading' with {
+          'type': 'h1',
+          'heading_text': figure_title
+        } %}
+      </div>
     </div>
   {% endif %}
   {% include '@image' with {
