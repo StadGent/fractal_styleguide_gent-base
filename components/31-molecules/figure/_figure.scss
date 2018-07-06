@@ -37,6 +37,10 @@ figure {
         padding: 0 2rem;
       }
 
+      @media (min-width: $bp-max-content) {
+        right: calc((100% - #{$bp-max-content}) / 2);
+      }
+
       &::before,
       &::after {
         @include theme('background-color', 'color-primary', 'hero-background-color');
@@ -111,7 +115,6 @@ figure {
         }
 
         @media (min-width: $bp-max-content) {
-          right: calc((100% - #{$bp-max-content}) / 2);
           font-size: 2rem;
         }
 
