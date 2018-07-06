@@ -114,6 +114,16 @@ header.header {
       max-width: 10rem;
       margin-left: 1.2rem;
     }
+
+    // Align main menu with site logo and breadcrumb.
+    nav.menu {
+      margin-left: 1.2rem;
+
+      @include tablet {
+        margin-left: 0;
+        padding-left: .2rem;
+      }
+    }
   }
 
   // Add accolade to breadcrumbs
@@ -164,12 +174,5 @@ header.header {
       }
     }
 
-  }
-
-  // Align main menu with site logo and breadcrumb.
-  nav.menu {
-    .content-container {
-      padding-left: .2rem;
-    }
   }
 }

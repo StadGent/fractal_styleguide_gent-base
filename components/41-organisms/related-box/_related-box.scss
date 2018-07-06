@@ -1,27 +1,13 @@
-$bulb-image-width: 6rem;
 
 .related-box {
   @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
   position: relative;
-  margin-top: 3rem;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
   border-top: 2px solid;
 
   @include tablet {
     padding-top: 2rem;
-  }
-
-  &::before {
-    @include spot-image('lightbulb', $bulb-image-width);
-    display: block;
-    margin: -$bulb-image-width auto 1rem;
-
-    @include tablet {
-      position: absolute;
-      top: $bulb-image-width/2;
-      right: span(1 of 12);
-    }
   }
 
   &-content {
