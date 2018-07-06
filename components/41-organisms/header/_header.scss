@@ -14,13 +14,9 @@ header.header {
       margin-right: auto;
       padding: 0 0 0 .2rem;
 
-      img {
-        @include mobile {
-          width: auto;
-        }
-
-        width: 2.4rem;
-        vertical-align: middle;
+      &.subsite {
+        flex: 1;
+        margin-right: .7rem;
       }
     }
 
