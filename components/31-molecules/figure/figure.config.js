@@ -26,8 +26,12 @@ module.exports = {
       name: 'subsite',
       context: {
         figure_image_src: 'https://via.placeholder.com/1600x420',
-        figure_title: 'Subsite <span>Digipolis Gent</span>',
-        modifier: 'hero'
+        figure_logo_src_dark: '/styleguide/img/stock/digipolis-dark.svg',
+        figure_logo_src_light: '/styleguide/img/stock/digipolis-light.svg',
+        figure_logo_alt_text: 'Logo Digipolis',
+        figure_title: '<span>ICT Supplier</span> Digipolis Gent',
+        modifier: 'hero',
+        subsite: true
       }
     }
   ]

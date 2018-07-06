@@ -14,13 +14,10 @@ figure {
       margin: -1.3rem -#{$gutter-width} .3rem;
     }
 
-    h1 {
-      @include theme('color', 'color-tertiary', 'default-text-color');
-      font-size: .9rem;
+    .subsite {
+      display: inline-flex;
 
       @include tablet {
-        @include theme('color', 'color-secondary', 'hero-text-color');
-        display: inline-flex;
         position: absolute;
         top: 0;
         right: 0;
@@ -31,13 +28,13 @@ figure {
         max-width: 23rem;
         height: calc(100% - 1.6rem);
         margin: 0;
-        padding: $gutter-width;
-        font-size: 3rem;
+        padding: $gutter-width 2rem;
+        text-align: center;
         z-index: 0;
       }
 
-      @media (min-width: $bp-max-content) {
-        right: calc((100% - #{$bp-max-content}) / 2);
+      @include desktop {
+        padding: 0 2rem;
       }
 
       &::before,
@@ -55,7 +52,7 @@ figure {
       &::before {
         @include tablet {
           top: 0;
-          height: 50%;
+          height: 70%;
           border-bottom-left-radius: border-radius('radius-5');
         }
       }
@@ -63,22 +60,77 @@ figure {
       &::after {
         @include tablet {
           bottom: 0;
-          height: 50%;
+          height: 30%;
           border-top-left-radius: border-radius('radius-5');
-        }
-      }
-
-      span {
-        font-size: inherit;
-
-        @include tablet {
-          font-size: 1.5rem;
         }
       }
 
       ~ figcaption {
         width: 100%;
         background-color: color('white');
+      }
+
+      picture {
+        order: 2;
+
+        @include tablet {
+          order: 1;
+        }
+
+        img {
+          display: inline-block;
+          width: auto;
+          margin-left: .7rem;
+
+          @include tablet {
+            height: 3rem;
+            margin-bottom: 1rem;
+            margin-left: 0;
+          }
+
+          @include desktop {
+            height: 5rem;
+          }
+        }
+      }
+
+      h1 {
+        @include theme('color', 'color-tertiary', 'default-text-color');
+        order: 1;
+        margin: 0;
+        font-size: .9rem;
+
+        @include tablet {
+          @include theme('color', 'color-secondary', 'hero-text-color');
+          order: 2;
+          font-size: 1.2rem;
+        }
+
+        @include desktop {
+          font-size: 1.6rem;
+        }
+
+        @media (min-width: $bp-max-content) {
+          right: calc((100% - #{$bp-max-content}) / 2);
+          font-size: 2rem;
+        }
+
+        span {
+          font-size: inherit;
+
+          @include tablet {
+            display: block;
+            font-size: .9rem;
+          }
+
+          @include desktop {
+            font-size: 1.2rem;
+          }
+
+          @media (min-width: $bp-max-content) {
+            font-size: 1.5rem;
+          }
+        }
       }
     }
 
