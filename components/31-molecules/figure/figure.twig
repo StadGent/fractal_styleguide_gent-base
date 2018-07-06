@@ -3,13 +3,13 @@
     <div class="subsite">
       <div class="subsite-title">
         {% include '@image' with {
-          'src': figure_logo_src_dark,
-          'alt_text': figure_title,
+          'src': figure_logo_src_dark|path,
+          'alt_text': figure_logo_alt_text,
           'modifier': 'dark'
         } %}
         {% include '@image' with {
-          'src': figure_logo_src_light,
-          'alt_text': figure_title,
+          'src': figure_logo_src_light|path,
+          'alt_text': figure_logo_alt_text,
           'modifier': 'light'
         } %}
         {% include '@heading' with {
