@@ -113,6 +113,10 @@ figure {
         }
 
         @include desktop {
+          height: 4rem;
+        }
+
+        @media (min-width: $bp-max-content) {
           height: 5rem;
         }
       }
