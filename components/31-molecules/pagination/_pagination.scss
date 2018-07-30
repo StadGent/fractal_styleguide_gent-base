@@ -1,30 +1,54 @@
 .pager {
 
   ul {
+    @include tablet {
+      justify-content: flex-start;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     list-style: none;
 
     li {
       @include theme('color', 'color-primary', 'link-color');
 
-      display: inline-block;
+      display: flex;
+      flex: 0 0 auto;
+      justify-content: center;
+      min-width: 1.6rem;
+      text-align: center;
     }
   }
 
-  a {
-    display: inline-block;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    font-size: 1rem;
+  a,
+  li.active {
+    @include phablet {
+      padding-right: 1rem;
+      padding-left: 1rem;
+      font-size: 1rem;
+    }
+
+    padding-right: .4rem;
+    padding-left: .4rem;
+    font-size: .8rem;
     font-weight: 600;
     line-height: 1.2;
     text-decoration: none;
+  }
+
+  li.spacing {
+    min-width: 1rem;
+    padding: .3rem;
   }
 
   .active {
     @include theme('color', 'color-tertiary', 'pagination-active-color');
 
     position: relative;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
 
     &::after {
       @include theme('background-color', 'color-primary', 'link-color');
@@ -42,43 +66,54 @@
 
   .previous,
   .next {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 0;
-    font-size: .9rem;
-    text-decoration: none;
+    display: none;
 
-    &:hover,
-    &:focus {
-      background: transparent;
+    @include tablet {
+      display: flex;
     }
 
+    a {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 0;
+      padding: 0 1rem;
+      font-size: .9rem;
+      text-decoration: none;
 
+      &:hover,
+      &:focus {
+        background: transparent;
+      }
+    }
   }
 
   .next {
-    @extend %a-bounce-animation;
+    a {
+      @extend %a-bounce-animation;
+      @include icon(arrow-right, after);
 
-    @include icon(arrow-right, after);
+      padding-right: 0;
 
-    &::after {
-      margin-right: -.2rem;
-      padding-right: .2rem;
+      &::after {
+        margin-right: -.2rem;
+        padding-right: .2rem;
+      }
     }
   }
 
   .previous {
-    @extend %a-bounce-animation--left;
+    a {
+      @extend %a-bounce-animation--left;
+      @include icon(arrow-left, after);
 
-    @include icon(arrow-left, after);
+      flex-direction: row-reverse;
+      padding-left: 0;
 
-    flex-direction: row-reverse;
-    padding-left: 0;
-
-    &::after {
-      margin-left: -.2rem;
-      padding-right: .2rem;
-      padding-left: .4rem;
+      &::after {
+        margin-left: -.2rem;
+        padding-right: .2rem;
+        padding-left: .4rem;
+      }
     }
   }
 }
