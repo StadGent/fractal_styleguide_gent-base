@@ -7,11 +7,16 @@ figure {
   // Hero image, overlaps and hides breadcrumb accolade.
   &.hero {
     $span: percentage(2/12);
+    margin: .3rem 0;
 
     @include tablet {
       position: relative;
       min-height: 1.6rem;
-      margin: -1.3rem -#{$gutter-width} .3rem;
+      margin: .3rem -#{$gutter-width};
+
+      @at-root hr + & {
+        margin-top: -2rem;
+      }
     }
 
     .subsite {
@@ -113,6 +118,10 @@ figure {
         }
 
         @include desktop {
+          height: 4rem;
+        }
+
+        @media (min-width: $bp-max-content) {
           height: 5rem;
         }
       }
