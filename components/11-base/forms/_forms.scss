@@ -203,6 +203,7 @@ $field-icon-padding: 2.5rem;
 
   input[type="radio"],
   input[type="checkbox"] {
+    position: absolute;
     opacity: 0;
 
     //
@@ -210,6 +211,8 @@ $field-icon-padding: 2.5rem;
     //
     + label {
       @include theme('color', 'color-tertiary', 'label-color');
+
+      position: relative;
 
       // Hide checkmark by default.
       &::after {
@@ -271,6 +274,7 @@ $field-icon-padding: 2.5rem;
 
           &::after {
             font-size: 1.2rem;
+            line-height: 1;
           }
         }
 

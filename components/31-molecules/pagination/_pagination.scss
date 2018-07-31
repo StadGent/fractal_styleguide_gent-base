@@ -1,84 +1,130 @@
 .pager {
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   ul {
-    margin: 0;
+    @include tablet {
+      flex-basis: auto;
+      justify-content: flex-start;
+    }
+
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem 0 0;
     list-style: none;
 
     li {
       @include theme('color', 'color-primary', 'link-color');
 
-      display: inline-block;
-    }
-  }
-
-  a {
-    display: inline-block;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.2;
-    text-decoration: none;
-  }
-
-  .active {
-    @include theme('color', 'color-tertiary', 'pagination-active-color');
-
-    position: relative;
-
-    &::after {
-      @include theme('background-color', 'color-primary', 'link-color');
-
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 1.2rem;
-      height: 2px;
-      margin: auto;
-      content: '';
-    }
-  }
-
-  .previous,
-  .next {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 0;
-    font-size: .9rem;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      background: transparent;
+      display: flex;
+      flex: 0 0 auto;
+      justify-content: center;
+      min-width: 1.6rem;
+      text-align: center;
     }
 
+    a,
+    li.active {
+      @include phablet {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 1rem;
+      }
 
-  }
-
-  .next {
-    @extend %a-bounce-animation;
-
-    @include icon(arrow-right, after);
-
-    &::after {
-      margin-right: -.2rem;
-      padding-right: .2rem;
-    }
-  }
-
-  .previous {
-    @extend %a-bounce-animation--left;
-
-    @include icon(arrow-left, after);
-
-    flex-direction: row-reverse;
-    padding-left: 0;
-
-    &::after {
-      margin-left: -.2rem;
-      padding-right: .2rem;
+      padding-right: .4rem;
       padding-left: .4rem;
+      font-size: .8rem;
+      font-weight: 600;
+      line-height: 1.2;
+      text-decoration: none;
     }
+
+    li.spacing {
+      min-width: 1rem;
+      padding: .3rem;
+    }
+
+    .active {
+      @include theme('color', 'color-tertiary', 'pagination-active-color');
+
+      position: relative;
+      padding-top: .3rem;
+      padding-bottom: .3rem;
+
+      &::after {
+        @include theme('background-color', 'color-primary', 'link-color');
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 1.2rem;
+        height: 2px;
+        margin: auto;
+        content: '';
+      }
+    }
+
+    .previous,
+    .next {
+      display: none;
+
+      @include tablet {
+        display: flex;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 0;
+        padding: 0 1rem;
+        font-size: .9rem;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          background: transparent;
+        }
+      }
+    }
+
+    .next {
+      a {
+        @extend %a-bounce-animation;
+        @include icon(arrow-right, after);
+
+        padding-right: 0;
+
+        &::after {
+          margin-right: -.2rem;
+          padding-right: .2rem;
+        }
+      }
+    }
+
+    .previous {
+      a {
+        @extend %a-bounce-animation--left;
+        @include icon(arrow-left, after);
+
+        flex-direction: row-reverse;
+        padding-left: 0;
+
+        &::after {
+          margin-left: -.2rem;
+          padding-right: .2rem;
+          padding-left: .4rem;
+        }
+      }
+    }
+  }
+
+  .button {
+    margin: 1rem 0;
   }
 }
