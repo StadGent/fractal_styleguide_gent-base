@@ -17,19 +17,23 @@
 
   return (elem, options) => {
 
-    const filterfield = elem.querySelector('.checkboxes__filter');
+    const filterfield = elem.querySelector('.checkbox-filter__filter');
     const checkboxes = elem.querySelectorAll('div.checkbox') || [];
     const selectedContainer = elem.querySelector('.selected');
-    const showBtn = elem.querySelector('.checkbox-filter-show');
-    const confirmBtn = elem.querySelector('.checkbox-filter-confirm');
-    const modal = elem.querySelector('.checkboxes');
-    const closeBtns = elem.querySelectorAll('.checkbox-filter-close');
-    const resultSpan = elem.querySelector('.result__number');
+    const openBtn = elem.querySelector('.checkbox-filter__open');
+    const submitBtn = elem.querySelector('.checkbox-filter__submit');
+    const modal = elem.querySelector('.checkbox-filter__modal');
+    const closeBtns = elem.querySelectorAll('.checkbox-filter__close');
+    const resultSpan = elem.querySelector('.checkbox-filter__result');
     let trigger = null;
 
     let selectedFilters = [];
 
     const filter = (clear) => {
+
+      if (!filterfield) {
+        return;
+      }
 
       if (clear) {
         filterfield.value = '';
@@ -159,10 +163,10 @@
         });
       }
 
-      if (showBtn) {
+      if (openBtn) {
 
-        showBtn.addEventListener('click', () => {
-          trigger = showBtn;
+        openBtn.addEventListener('click', () => {
+          trigger = openBtn;
           selectedFilters = [];
 
           for (let i = checkboxes.length; i--;) {
@@ -187,8 +191,8 @@
         }
       }
 
-      if (confirmBtn) {
-        confirmBtn.addEventListener('click', toggleModal);
+      if (submitBtn) {
+        submitBtn.addEventListener('click', toggleModal);
       }
 
     };

@@ -16,21 +16,21 @@
       <div class="selected">
 
       </div>
-      <div class="checkboxes">
+      <div class="checkbox-filter__modal">
 
-        <button class="button icon-cross checkbox-filter-close"><span>Close</span><i class="icon-close" aria-hidden="true"></i></button>
+        <button class="button icon-cross checkbox-filter__close"><span>Close</span><i class="icon-close" aria-hidden="true"></i></button>
 
         <header>
           <h3>{{ label }} <span class="label-optional">({{ label_optional }})</span></h3>
         </header>
         <div class="form-item">
-          <label for="checkboxes__filter_id">Filter the list below</label>
-          <input type="search" id="checkboxes__filter_id"
-                 class="checkboxes__filter">
-          <strong aria-live="polite" class="result">There are <span class="result__number">#</span> results</strong>
+          <label for="checkboxes__filter_id_{{ modifier }}">Filter the list below</label>
+          <input type="search" id="checkboxes__filter_id_{{ modifier }}"
+                 class="checkbox-filter__filter">
+          <strong aria-live="polite" class="checkbox-filter__result-wrapper">There are <span class="checkbox-filter__result">#</span> results</strong>
         </div>
 
-        <div class="options">
+        <div class="checkbox-filter__checkboxes">
           {% for option in options %}
             {% include '@input-checkbox' with {
             'checkbox_label': option.label_checkbox,
@@ -41,13 +41,13 @@
           {% endfor %}
         </div>
 
-        <footer class="actions">
-          <button class="button button-primary button-small checkbox-filter-confirm">Confirm selection</button>
+        <footer class="checkbox-filter__actions">
+          <button class="button button-primary button-small checkbox-filter__submit">Confirm selection</button>
         </footer>
 
       </div>
-      <div class="overlay checkbox-filter-close"></div>
-      <button class="button button-secondary button-small checkbox-filter-show">
+      <div class="overlay checkbox-filter__close"></div>
+      <button class="button button-secondary button-small checkbox-filter__open">
         Select ...
       </button>
 
