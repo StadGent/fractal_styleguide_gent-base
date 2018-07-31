@@ -86,6 +86,7 @@
 
       // hide
       if (modal.classList.contains('visible')) {
+        openBtn.setAttribute('aria-expanded', 'false');
         modal.setAttribute('aria-hidden', 'true');
         document.querySelector('body').style.overflow = null;
         modal.classList.remove('visible');
@@ -97,6 +98,7 @@
       }
       // show
       else {
+        openBtn.setAttribute('aria-expanded', 'true');
         modal.removeAttribute('aria-hidden');
         document.querySelector('body').style.overflow = 'hidden';
         modal.classList.add('visible');
@@ -122,6 +124,8 @@
       selectedFilters = [];
       selectedContainer.innerHTML = '';
       modal.setAttribute('tabindex', '-1');
+      modal.setAttribute('aria-hidden', 'true');
+      openBtn.setAttribute('aria-expanded', 'false');
 
       for (let i = checkboxes.length; i--;) {
         let checkbox = checkboxes[i].querySelector('input[type=checkbox]');
