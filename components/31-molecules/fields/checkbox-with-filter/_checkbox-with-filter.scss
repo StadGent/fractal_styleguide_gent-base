@@ -1,0 +1,139 @@
+.checkbox-filter {
+
+  .checkboxes__filter {
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    margin: 0 .5rem .5rem 0;
+  }
+
+  .checkboxes {
+
+    @include tablet {
+      top: 10vh;
+      left: 10vw;
+      width: 80vw;
+      height: 80vh;
+      padding: 2rem;
+    }
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    background-color: color('white');
+    box-shadow: $box-shadow-primary color('dark-gray', -4);
+    z-index: 999;
+    overflow-y: scroll;
+
+    header {
+      @include tablet {
+        margin-top: 0;
+      }
+
+      margin-top: 2rem;
+    }
+
+    .actions {
+      @include theme('border-color', 'color-primary--lighten-4', 'checkbox-with-filter-action-border-bottom');
+      @include tablet {
+        bottom: 10vh;
+        left: 10vw;
+        width: 80vw;
+        height: 3rem;
+        padding-left: 2rem;
+      }
+
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      align-items: center;
+      width: 100vw;
+      height: 3rem;
+      padding-left: 1rem;
+      border-top: 2px solid;
+      background-color: color('white');
+    }
+
+    button.checkbox-filter-close {
+
+      @include tablet {
+        top: 10vh;
+        right: 10vw;
+        width: auto;
+      }
+      position: fixed;
+
+      top: 0;
+      right: 0;
+      justify-content: flex-end;
+
+      width: 100vw;
+      border: 0;
+      background-color: color('white');
+      font-weight: normal;
+
+      span {
+        @include tablet {
+          opacity: 0;
+          width: 0;
+        }
+
+        display: inline-block;
+        width: auto;
+        transition: opacity .2s ease-in-out;
+        opacity: 1;
+        overflow: hidden;
+      }
+
+      &:hover,
+      &:focus {
+        span {
+          width: auto;
+          opacity: 1;
+        }
+      }
+    }
+
+    .options {
+      padding-bottom: 4rem;
+      columns: auto 320px;
+
+      > * {
+        display: inline-block;
+        width: 100%;
+        padding-right: 1rem;
+      }
+
+      > [hidden] {
+        display: none;
+      }
+    }
+  }
+
+  .overlay {
+    @include theme('background-color', 'color-primary--darken-3', 'checkbox-with-filter-overlay-background-color');
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: .5;
+    z-index: 998;
+  }
+
+  .checkboxes.visible {
+    display: block;
+
+    + .overlay {
+      display: block;
+    }
+  }
+}

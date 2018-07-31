@@ -1,0 +1,67 @@
+<fieldset class="form-item checkbox-filter {{ modifier }}">
+  <legend>
+    {{ label }}
+    {% if label_optional %}
+      <span class="label-optional">({{ label_optional }})</span>
+    {% endif %}
+  </legend>
+  <div class="form-columns">
+    <div class="form-item-column">
+      {% include '@field-description' with {
+      "field_description": field_description
+      } %}
+    </div>
+    <div class="form-item-column">
+
+      <div class="selected">
+
+      </div>
+      <div class="checkboxes">
+
+        <button class="button icon-cross checkbox-filter-close"><span>Close</span><i class="icon-close" aria-hidden="true"></i></button>
+
+        <header>
+          <h3>{{ label }} <span class="label-optional">({{ label_optional }})</span></h3>
+        </header>
+        <div class="form-item">
+          <label for="checkboxes__filter_id">Filter the list below</label>
+          <input type="search" id="checkboxes__filter_id"
+                 class="checkboxes__filter">
+          <strong aria-live="polite" class="result">There are <span class="result__number">#</span> results</strong>
+        </div>
+
+        <div class="options">
+          {% for option in options %}
+            {% include '@input-checkbox' with {
+            'checkbox_label': option.label_checkbox,
+            'checkbox_name': option.checkbox_name,
+            'checkbox_id': option.checkbox_id,
+            'checkbox_value': option.checkbox_value
+            } %}
+          {% endfor %}
+        </div>
+
+        <footer class="actions">
+          <button class="button button-primary button-small checkbox-filter-confirm">Confirm selection</button>
+        </footer>
+
+      </div>
+      <div class="overlay checkbox-filter-close"></div>
+      <button class="button button-secondary button-small checkbox-filter-show">
+        Select ...
+      </button>
+
+
+      {% if modifier == 'error' %}
+        {% include '@field-message' with {
+        "modifier": "error"
+        } %}
+      {% endif %}
+      {% if modifier == 'success' %}
+        {% include '@field-message' with {
+        "modifier": "success"
+        } %}
+      {% endif %}
+    </div>
+  </div>
+</fieldset>
