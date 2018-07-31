@@ -257,6 +257,7 @@ dl.timeline {
         position: relative;
         width: calc(100% + 4.6rem + #{$timeline-border});
         margin-left: calc(-4rem - #{$timeline-border});
+        padding-bottom: 2rem;
 
         @include desktop {
           width: calc(100% + 10rem + #{$timeline-border});
@@ -280,19 +281,29 @@ dl.timeline {
           @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
         }
 
-        .video .audio-description::after,
-        .responsive-video::before {
-          @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
+        .video-inner-wrapper {
+          &::before,
+          &::after {
+            @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
 
-          position: absolute;
-          left: calc(#{$timeline-m-left-padding} + 1px);
-          height: 1rem;
-          border-left: $timeline-border dotted;
-          content: '';
-          z-index: 10;
+            position: absolute;
+            left: calc(#{$timeline-m-left-padding} + 1px);
+            height: 1rem;
+            border-left: $timeline-border dotted;
+            content: '';
+            z-index: 10;
 
-          @include desktop {
-            left: calc(#{$timeline-dt-right-padding} + 1px);
+            @include desktop {
+              left: calc(#{$timeline-dt-right-padding} + 1px);
+            }
+          }
+
+          &::before {
+            top: 0;
+          }
+
+          &::after {
+            bottom: 0;
           }
         }
 
@@ -310,13 +321,6 @@ dl.timeline {
             &::after {
               bottom: .2rem;
             }
-          }
-        }
-
-        .responsive-video {
-          // Dots before a video intersection.
-          &::before {
-            top: -1.8rem;
           }
         }
       }

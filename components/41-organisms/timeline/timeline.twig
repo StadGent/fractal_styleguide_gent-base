@@ -160,11 +160,13 @@
           'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
         } %}
         <div class="video-wrapper">
-          {% include '@video' with {
-            'title': 'Promofilm stad Gent.',
-            'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
-            'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
-          } %}
+          <div class="video-inner-wrapper">
+            {% include '@video' with {
+              'title': 'Promofilm stad Gent.',
+              'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
+              'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
+            } %}
+          </div>
         </div>
       </div>
     </dd>
@@ -184,12 +186,15 @@
         </div>
       </div>
       <div class="timeline-slot-content accordion--content" id="timeline-slot-content--7">
-        <div class="video-wrapper">
+      <div class="video-wrapper">
+        <div class="video-inner-wrapper">
           {% include '@video' with {
             'title': 'Promofilm stad Gent.',
             'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
+            'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
           } %}
         </div>
+      </div>
       </div>
     </dd>
     <dd>
@@ -205,13 +210,15 @@
         </div>
       </div>
       <div class="timeline-slot-content accordion--content" id="timeline-slot-content--8">
-        <div class="video-wrapper">
+      <div class="video-wrapper">
+        <div class="video-inner-wrapper">
           {% include '@video' with {
             'title': 'Promofilm stad Gent.',
             'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
             'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
           } %}
         </div>
+      </div>
       </div>
     </dd>
   </div>
