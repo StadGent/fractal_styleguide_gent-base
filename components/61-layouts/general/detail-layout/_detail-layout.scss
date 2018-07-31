@@ -97,24 +97,24 @@
       margin: 5rem auto;
     }
 
-    &::before {
-      @include spot-image('lightBulb', $bulb-image-width);
-
-      display: block;
-      position: relative;
-      margin: 2rem auto (-$bulb-image-width/2);
-      z-index: 1;
-
-      @include tablet {
-        position: absolute;
-        top: -($bulb-image-width/2);
-        right: span(1 of 12);
-        margin: 0;
-      }
-    }
-
     > div:first-child {
       padding-top: 5rem;
+
+      &::before {
+        @include spot-image('lightBulb', $bulb-image-width);
+
+        display: block;
+        position: relative;
+        margin: 2rem auto (-$bulb-image-width/2);
+        z-index: 1;
+
+        @include tablet {
+          position: absolute;
+          top: -($bulb-image-width/2);
+          right: span(1 of 12);
+          margin: 0;
+        }
+      }
 
       @include tablet {
         padding-top: 2rem;
