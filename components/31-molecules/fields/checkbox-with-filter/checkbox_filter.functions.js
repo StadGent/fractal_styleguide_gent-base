@@ -40,9 +40,8 @@
       }
 
       let count = 0;
-      for (let i = checkboxes.length; i--;) {
-        const checkboxContainer = checkboxes[i];
-        const label = checkboxContainer.querySelector('label');
+
+      checkboxLoop(({checkboxContainer, label}) => {
         if (!label ||
           label.innerText.toUpperCase()
             .indexOf(filterfield.value.toUpperCase()) === -1) {
@@ -52,7 +51,8 @@
           checkboxContainer.removeAttribute('hidden');
           count++;
         }
-      }
+      });
+
       resultSpan.innerText = count;
     };
     const makeTag = (checkbox, label) => {
@@ -107,32 +107,23 @@
 
     const checkboxLoop = (next) => {
       for (let i = checkboxes.length; i--;) {
-        let checkbox = checkboxes[i].querySelector('input[type=checkbox]');
-        let label = checkboxes[i].querySelector('label');
-
-        next(checkbox, label);
+        let checkboxContainer = checkboxes[i];
+        let checkbox = checkboxContainer.querySelector('input[type=checkbox]');
+        let label = checkboxContainer.querySelector('label');
+        next({checkboxContainer, checkbox, label});
       }
     };
 
     const reset = () => {
       selectedContainer.innerHTML = '';
 
-      checkboxLoop((checkbox, label) => {
-        if (selectedFilters.includes(checkbox)) {
+      checkboxLoop(({checkbox, label}) => {
+        if (selectedFilters.indexOf(checkbox) !== -1) {
           checkbox.checked = true;
         }
         else {
           checkbox.checked = false;
         }
-        if (checkbox.checked) {
-          selectedContainer.appendChild(makeTag(checkbox, label));
-        }
-      });
-    };
-
-    const resetTags = () => {
-
-      checkboxLoop((checkbox, label) => {
         if (checkbox.checked) {
           selectedContainer.appendChild(makeTag(checkbox, label));
         }
@@ -145,7 +136,13 @@
       modal.setAttribute('aria-hidden', 'true');
       openBtn.setAttribute('aria-expanded', 'false');
 
-      resetTags();
+      checkboxLoop(({checkbox, label}) => {
+        if (checkbox.checked) {
+          selectedContainer.appendChild(makeTag(checkbox, label));
+        }
+      });
+
+      filter(true);
     };
 
     const addEvents = () => {
@@ -163,7 +160,7 @@
         });
       }
 
-      checkboxLoop((checkbox, label) => {
+      checkboxLoop(({checkbox, label}) => {
         checkbox.addEventListener('change', (e) => {
 
           if (checkbox.checked) {
@@ -181,7 +178,7 @@
           trigger = openBtn;
           selectedFilters = [];
 
-          checkboxLoop((checkbox) => {
+          checkboxLoop(({checkbox}) => {
             if (checkbox.checked) {
               selectedFilters.push(checkbox);
             }
