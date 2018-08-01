@@ -35,7 +35,7 @@
      * Container to display the selected items.
      * @type {Element}
      */
-    const selectedContainer = elem.querySelector(options.selectedContainer || '.selected');
+    const selectedContainer = elem.querySelector(options.selectedContainer || '.checkbox-filter__selected');
     /**
      * Button to trigger opening the modal.
      * @type {Element}
