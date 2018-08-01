@@ -11,6 +11,14 @@
     }
   }
 
+  > p {
+    margin-bottom: 2rem;
+
+    strong {
+      font-size: inherit;
+    }
+  }
+
   .readspeaker-button {
     display: block;
     width: auto;
@@ -52,14 +60,6 @@
   > .timeline {
     margin-top: 2rem;
     margin-bottom: 2rem;
-  }
-
-  > p {
-    margin-bottom: 2rem;
-
-    strong {
-      font-size: .9rem;
-    }
   }
 
   > .info-box {
