@@ -129,9 +129,9 @@
 
     /**
      * Make a tag.
-     * @param checkbox
-     * @param label
-     * @returns {Element}
+     * @param {Element} checkbox Input type checkbox.
+     * @param {Element} label Label for the input type checkbox.
+     * @return {Element} A gent styleguide tag component.
      */
     const makeTag = (checkbox, label) => {
       let tag = document.createElement('span');
@@ -154,7 +154,7 @@
 
     /**
      * Remove a tag from the selectedContainer.
-     * @param checkbox
+     * @param {Element} checkbox Input type checkbox.
      */
     const removeTag = (checkbox) => {
       let test = selectedContainer.querySelectorAll('.filter');
@@ -197,7 +197,7 @@
 
     /**
      * Loop over all checkboxes and execute a callback for each iteration.
-     * @param next
+     * @param {function} next The callback function.
      */
     const checkboxLoop = (next) => {
       for (let i = checkboxes.length; i--;) {
