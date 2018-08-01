@@ -5,15 +5,6 @@
   }
 
   .checkbox-filter__modal {
-
-    @include tablet {
-      top: 10vh;
-      left: 10vw;
-      width: 80vw;
-      height: 80vh;
-      padding: 2rem;
-    }
-
     display: none;
     position: fixed;
     top: 0;
@@ -26,6 +17,14 @@
     z-index: 999;
     overflow-y: scroll;
 
+    @include tablet {
+      top: 10vh;
+      left: 10vw;
+      width: 80vw;
+      height: 80vh;
+      padding: 2rem;
+    }
+
     &.visible {
       display: block;
 
@@ -35,11 +34,11 @@
     }
 
     header {
+      margin-top: 2rem;
+
       @include tablet {
         margin-top: 0;
       }
-
-      margin-top: 2rem;
     }
 
     .checkbox-filter__filter {
@@ -63,13 +62,6 @@
 
     .checkbox-filter__actions {
       @include theme('border-color', 'color-primary--lighten-4', 'checkbox-with-filter-action-border-bottom');
-      @include tablet {
-        bottom: 10vh;
-        left: 10vw;
-        width: 80vw;
-        height: 3rem;
-        padding-left: 2rem;
-      }
 
       display: flex;
       position: fixed;
@@ -81,37 +73,43 @@
       padding-left: 1rem;
       border-top: 2px solid;
       background-color: color('white');
+
+      @include tablet {
+        bottom: 10vh;
+        left: 10vw;
+        width: 80vw;
+        height: 3rem;
+        padding-left: 2rem;
+      }
     }
 
     button.checkbox-filter__close {
+      position: fixed;
+      top: 0;
+      right: 0;
+      justify-content: flex-end;
+      width: 100vw;
+      border: 0;
+      background-color: color('white');
+      font-weight: normal;
 
       @include tablet {
         top: 10vh;
         right: 10vw;
         width: auto;
       }
-      position: fixed;
-
-      top: 0;
-      right: 0;
-      justify-content: flex-end;
-
-      width: 100vw;
-      border: 0;
-      background-color: color('white');
-      font-weight: normal;
 
       span {
-        @include tablet {
-          width: 0;
-          opacity: 0;
-        }
-
         display: inline-block;
         width: auto;
         transition: opacity .2s ease-in-out;
         opacity: 1;
         overflow: hidden;
+
+        @include tablet {
+          width: 0;
+          opacity: 0;
+        }
       }
 
       &:hover,

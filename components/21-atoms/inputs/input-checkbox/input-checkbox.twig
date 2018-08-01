@@ -1,12 +1,12 @@
 <div class="checkbox">
   <input type="checkbox"
-        id="{{ checkbox_id }}"
-        name="{{ checkbox_name }}"
+         id="{{ checkbox_id }}"
+         name="{{ checkbox_name }}"
          value="{{ checkbox_value }}"
-        class="checkbox {% if modifier %}{{ modifier }}{% endif %}"
-        {% if disabled %}
-          disabled="disabled"
-        {% endif %}
+         class="checkbox {% if modifier %}{{ modifier }}{% endif %}"
+    {% if disabled %}
+      disabled="disabled"
+    {% endif %}
   />
   <label for="{{ checkbox_id }}">{{ checkbox_label }}</label>
 </div>

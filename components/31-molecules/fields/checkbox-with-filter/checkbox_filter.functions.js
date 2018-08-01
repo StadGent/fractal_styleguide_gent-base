@@ -140,7 +140,7 @@
       tag.setAttribute('data-value', checkbox.value);
 
       let button = document.createElement('button');
-      button.innerHTML = '<span class="visually-hidden">Remove tag</span>';
+      button.innerHTML = `<span class="visually-hidden">${options.hiddenTagText || 'Remove tag'}</span>`;
 
       button.addEventListener('click', () => {
         checkbox.checked = false;
@@ -313,8 +313,6 @@
      * @param {object} e event
      */
     const handleKeyboardInput = (e) => {
-
-
 
       if (!tabTrap || !tabTrap.hasFocusables || !e) {
         return;
