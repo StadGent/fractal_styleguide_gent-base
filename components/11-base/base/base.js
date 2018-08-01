@@ -30,6 +30,10 @@ var gent_styleguide = (function () { // eslint-disable-line no-unused-vars
       return Array.prototype.slice.call(focusables);
     }
 
+    this.setFocusables = function () {
+      focusables = getFocusables(container);
+    };
+
     this.next = function () {
       if (++focusPosition > focusables.length - 1) {
         focusPosition = 0;

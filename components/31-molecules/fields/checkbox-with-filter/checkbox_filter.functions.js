@@ -17,6 +17,11 @@
 
   return (elem, options) => {
 
+    if (typeof gent_styleguide === 'undefined') {
+      console.error('You need to include base.js.'); // eslint-disable-line no-console
+      return;
+    }
+
     if (!options) {
       options = {};
     }
@@ -26,37 +31,44 @@
      * @type {Element}
      */
     const filterfield = elem.querySelector(options.filterfield || '.checkbox-filter__filter');
+
     /**
      * List of checkboxwrappers, each containing a checkbox and a label.
      * @type {NodeList|Array}
      */
     const checkboxes = elem.querySelectorAll(options.checkboxes || 'div.checkbox') || [];
+
     /**
      * Container to display the selected items.
      * @type {Element}
      */
     const selectedContainer = elem.querySelector(options.selectedContainer || '.checkbox-filter__selected');
+
     /**
      * Button to trigger opening the modal.
      * @type {Element}
      */
     const openBtn = elem.querySelector(options.openBtn || '.checkbox-filter__open');
+
     /**
      * Button to confirm the selection and close the modal.
      * @type {Element}
      */
     const submitBtn = elem.querySelector(options.submitBtn || '.checkbox-filter__submit');
+
     /**
      * The modal containing checkboxes and filter.
      * @type {Element}
      */
     const modal = elem.querySelector(options.modal || '.checkbox-filter__modal');
+
     /**
      * A list of elements to trigger closing the modal.
      * At least one must have the button role.
      * @type {NodeList}
      */
     const closeBtns = elem.querySelectorAll(options.closeBtns || '.checkbox-filter__close');
+
     /**
      * Container to display the number of search results.
      * @type {Element}
@@ -68,11 +80,18 @@
      * @type {null|Element}
      */
     let trigger = null;
+
     /**
      * Store the checked checkboxes prior to making changes.
      * @type {Array}
      */
     let selectedFilters = [];
+
+    /**
+     * A Gent styleguide class to create a tabTrap.
+     * @type {TabTrap}
+     */
+    const tabTrap = new gent_styleguide.TabTrap(modal); // eslint-disable-line no-undef
 
     /**
      * Filter the displayed checkboxes.
@@ -90,19 +109,22 @@
 
       let count = 0;
 
-      checkboxLoop(({checkboxContainer, label}) => {
+      checkboxLoop(({checkboxContainer, checkbox, label}) => {
         if (!label ||
           label.innerText.toUpperCase()
             .indexOf(filterfield.value.toUpperCase()) === -1) {
           checkboxContainer.setAttribute('hidden', 'true');
+          checkbox.setAttribute('hidden', 'true');
         }
         else {
           checkboxContainer.removeAttribute('hidden');
+          checkbox.removeAttribute('hidden');
           count++;
         }
       });
 
       resultSpan.innerText = count;
+      tabTrap.setFocusables();
     };
 
     /**
@@ -129,6 +151,7 @@
 
       return tag;
     };
+
     /**
      * Remove a tag from the selectedContainer.
      * @param checkbox
@@ -141,6 +164,7 @@
         }
       }
     };
+
     /**
      * Open or close the modal
      */
@@ -157,12 +181,15 @@
         }
 
         filter(true);
+        document.removeEventListener('keydown', handleKeyboardInput);
+        tabTrap.reset();
       }
       // show
       else {
         openBtn.setAttribute('aria-expanded', 'true');
         modal.removeAttribute('aria-hidden');
         document.querySelector('body').style.overflow = 'hidden';
+        document.addEventListener('keydown', handleKeyboardInput);
         modal.classList.add('visible');
         modal.focus();
       }
@@ -279,6 +306,36 @@
         submitBtn.addEventListener('click', toggleModal);
       }
 
+    };
+
+    /**
+     * Handle keyboard input
+     * @param {object} e event
+     */
+    const handleKeyboardInput = (e) => {
+
+
+
+      if (!tabTrap || !tabTrap.hasFocusables || !e) {
+        return;
+      }
+
+      var keyCode = e.keyCode || e.which;
+
+      switch (keyCode) {
+        case 9: // tab
+          e.preventDefault();
+          if (e.shiftKey) {
+            tabTrap.back();
+          }
+          else {
+            tabTrap.next();
+          }
+          break;
+        case 27: // esc
+          close(e);
+          break;
+      }
     };
 
     init();
