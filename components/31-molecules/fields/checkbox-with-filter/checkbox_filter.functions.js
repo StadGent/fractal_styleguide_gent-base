@@ -17,18 +17,67 @@
 
   return (elem, options) => {
 
-    const filterfield = elem.querySelector('.checkbox-filter__filter');
-    const checkboxes = elem.querySelectorAll('div.checkbox') || [];
-    const selectedContainer = elem.querySelector('.selected');
-    const openBtn = elem.querySelector('.checkbox-filter__open');
-    const submitBtn = elem.querySelector('.checkbox-filter__submit');
-    const modal = elem.querySelector('.checkbox-filter__modal');
-    const closeBtns = elem.querySelectorAll('.checkbox-filter__close');
-    const resultSpan = elem.querySelector('.checkbox-filter__result');
+    if (!options) {
+      options = {};
+    }
 
+    /**
+     * Filter input field.
+     * @type {Element}
+     */
+    const filterfield = elem.querySelector(options.filterfield || '.checkbox-filter__filter');
+    /**
+     * List of checkboxwrappers, each containing a checkbox and a label.
+     * @type {NodeList|Array}
+     */
+    const checkboxes = elem.querySelectorAll(options.checkboxes || 'div.checkbox') || [];
+    /**
+     * Container to display the selected items.
+     * @type {Element}
+     */
+    const selectedContainer = elem.querySelector(options.selectedContainer || '.selected');
+    /**
+     * Button to trigger opening the modal.
+     * @type {Element}
+     */
+    const openBtn = elem.querySelector(options.openBtn || '.checkbox-filter__open');
+    /**
+     * Button to confirm the selection and close the modal.
+     * @type {Element}
+     */
+    const submitBtn = elem.querySelector(options.submitBtn || '.checkbox-filter__submit');
+    /**
+     * The modal containing checkboxes and filter.
+     * @type {Element}
+     */
+    const modal = elem.querySelector(options.modal || '.checkbox-filter__modal');
+    /**
+     * A list of elements to trigger closing the modal.
+     * At least one must have the button role.
+     * @type {NodeList}
+     */
+    const closeBtns = elem.querySelectorAll(options.closeBtns || '.checkbox-filter__close');
+    /**
+     * Container to display the number of search results.
+     * @type {Element}
+     */
+    const resultSpan = elem.querySelector(options.resultSpan || '.checkbox-filter__result');
+
+    /**
+     * Store the button that triggered the modal.
+     * @type {null|Element}
+     */
     let trigger = null;
+    /**
+     * Store the checked checkboxes prior to making changes.
+     * @type {Array}
+     */
     let selectedFilters = [];
 
+    /**
+     * Filter the displayed checkboxes.
+     * @param {boolean} clear Clear the filtervalue if true.
+     */
     const filter = (clear) => {
 
       if (!filterfield) {
@@ -55,6 +104,13 @@
 
       resultSpan.innerText = count;
     };
+
+    /**
+     * Make a tag.
+     * @param checkbox
+     * @param label
+     * @returns {Element}
+     */
     const makeTag = (checkbox, label) => {
       let tag = document.createElement('span');
       tag.className = 'tag filter';
@@ -73,6 +129,10 @@
 
       return tag;
     };
+    /**
+     * Remove a tag from the selectedContainer.
+     * @param checkbox
+     */
     const removeTag = (checkbox) => {
       let test = selectedContainer.querySelectorAll('.filter');
       for (let i = test.length; i--;) {
@@ -81,6 +141,9 @@
         }
       }
     };
+    /**
+     * Open or close the modal
+     */
     const toggleModal = () => {
 
       // hide
@@ -105,6 +168,10 @@
       }
     };
 
+    /**
+     * Loop over all checkboxes and execute a callback for each iteration.
+     * @param next
+     */
     const checkboxLoop = (next) => {
       for (let i = checkboxes.length; i--;) {
         let checkboxContainer = checkboxes[i];
@@ -114,6 +181,9 @@
       }
     };
 
+    /**
+     * Reset the component to it's stored value.
+     */
     const reset = () => {
       selectedContainer.innerHTML = '';
 
@@ -130,6 +200,9 @@
       });
     };
 
+    /**
+     * Initialise the component.
+     */
     const init = () => {
       selectedFilters = [];
       modal.setAttribute('tabindex', '-1');
@@ -145,21 +218,24 @@
       filter(true);
     };
 
+    /**
+     * Add all events.
+     */
     const addEvents = () => {
 
-      let filterTimeOut = null;
-
+      // Make sure the filter method is not repeated while typing.
       if (filterfield) {
-        filterfield.addEventListener('input', (e) => {
+        let filterTimeOut = null;
 
+        filterfield.addEventListener('input', (e) => {
           if (filterTimeOut) {
             clearTimeout(filterTimeOut);
           }
-
           filterTimeOut = setTimeout(filter, 200);
         });
       }
 
+      // Add events for all checkboxes.
       checkboxLoop(({checkbox, label}) => {
         checkbox.addEventListener('change', (e) => {
 
@@ -172,8 +248,8 @@
         });
       });
 
+      // Enable opening the modal.
       if (openBtn) {
-
         openBtn.addEventListener('click', () => {
           trigger = openBtn;
           selectedFilters = [];
@@ -188,6 +264,7 @@
         });
       }
 
+      // Add close events to all closeBtns.
       if (closeBtns) {
         for (let i = closeBtns.length; i--;) {
           closeBtns[i].addEventListener('click', () => {
@@ -197,6 +274,7 @@
         }
       }
 
+      // Update selectedFilters and close.
       if (submitBtn) {
         submitBtn.addEventListener('click', toggleModal);
       }
