@@ -142,7 +142,8 @@
       let button = document.createElement('button');
       button.innerHTML = `<span class="visually-hidden">${options.hiddenTagText || 'Remove tag'}</span>`;
 
-      button.addEventListener('click', () => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
         checkbox.checked = false;
         selectedContainer.removeChild(tag);
       });
@@ -277,7 +278,8 @@
 
       // Enable opening the modal.
       if (openBtn) {
-        openBtn.addEventListener('click', () => {
+        openBtn.addEventListener('click', (e) => {
+          e.preventDefault();
           trigger = openBtn;
           selectedFilters = [];
 
@@ -294,7 +296,8 @@
       // Add close events to all closeBtns.
       if (closeBtns) {
         for (let i = closeBtns.length; i--;) {
-          closeBtns[i].addEventListener('click', () => {
+          closeBtns[i].addEventListener('click', (e) => {
+            e.preventDefault();
             reset();
             toggleModal();
           });
@@ -303,7 +306,10 @@
 
       // Update selectedFilters and close.
       if (submitBtn) {
-        submitBtn.addEventListener('click', toggleModal);
+        submitBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          toggleModal();
+        });
       }
 
     };
