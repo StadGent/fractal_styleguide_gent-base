@@ -2,11 +2,10 @@
   @extend %content-container;
 
   margin-top: 1.2rem;
+  font-size: .9rem;
+  line-height: 1.8;
 
   > * {
-    font-size: .9rem;
-    line-height: 1.8;
-
     @include desktop {
       @include set-layout('width-7', 'offset-2');
     }
@@ -57,6 +56,10 @@
 
   > p {
     margin-bottom: 2rem;
+
+    strong {
+      font-size: .9rem;
+    }
   }
 
   > .info-box {
