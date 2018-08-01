@@ -25,8 +25,8 @@
     const modal = elem.querySelector('.checkbox-filter__modal');
     const closeBtns = elem.querySelectorAll('.checkbox-filter__close');
     const resultSpan = elem.querySelector('.checkbox-filter__result');
-    let trigger = null;
 
+    let trigger = null;
     let selectedFilters = [];
 
     const filter = (clear) => {
@@ -41,17 +41,16 @@
 
       let count = 0;
       for (let i = checkboxes.length; i--;) {
-        const checkbox = checkboxes[i];
-        const label = checkbox.querySelector('label');
+        const checkboxContainer = checkboxes[i];
+        const label = checkboxContainer.querySelector('label');
         if (!label ||
           label.innerText.toUpperCase()
             .indexOf(filterfield.value.toUpperCase()) === -1) {
-          checkbox.setAttribute('hidden', 'true');
+          checkboxContainer.setAttribute('hidden', 'true');
         }
         else {
-          checkbox.removeAttribute('hidden');
+          checkboxContainer.removeAttribute('hidden');
           count++;
-
         }
       }
       resultSpan.innerText = count;
@@ -106,35 +105,47 @@
       }
     };
 
-    const reset = () => {
+    const checkboxLoop = (next) => {
       for (let i = checkboxes.length; i--;) {
         let checkbox = checkboxes[i].querySelector('input[type=checkbox]');
+        let label = checkboxes[i].querySelector('label');
 
+        next(checkbox, label);
+      }
+    };
+
+    const reset = () => {
+      selectedContainer.innerHTML = '';
+
+      checkboxLoop((checkbox, label) => {
         if (selectedFilters.includes(checkbox)) {
           checkbox.checked = true;
         }
         else {
           checkbox.checked = false;
         }
-      }
-      init();
+        if (checkbox.checked) {
+          selectedContainer.appendChild(makeTag(checkbox, label));
+        }
+      });
+    };
+
+    const resetTags = () => {
+
+      checkboxLoop((checkbox, label) => {
+        if (checkbox.checked) {
+          selectedContainer.appendChild(makeTag(checkbox, label));
+        }
+      });
     };
 
     const init = () => {
       selectedFilters = [];
-      selectedContainer.innerHTML = '';
       modal.setAttribute('tabindex', '-1');
       modal.setAttribute('aria-hidden', 'true');
       openBtn.setAttribute('aria-expanded', 'false');
 
-      for (let i = checkboxes.length; i--;) {
-        let checkbox = checkboxes[i].querySelector('input[type=checkbox]');
-        let label = checkboxes[i].querySelector('label');
-
-        if (checkbox.checked) {
-          selectedContainer.appendChild(makeTag(checkbox, label));
-        }
-      }
+      resetTags();
     };
 
     const addEvents = () => {
@@ -152,10 +163,7 @@
         });
       }
 
-      for (let i = checkboxes.length; i--;) {
-        let checkbox = checkboxes[i].querySelector('input[type=checkbox]');
-        let label = checkboxes[i].querySelector('label');
-
+      checkboxLoop((checkbox, label) => {
         checkbox.addEventListener('change', (e) => {
 
           if (checkbox.checked) {
@@ -165,7 +173,7 @@
             removeTag(checkbox);
           }
         });
-      }
+      });
 
       if (openBtn) {
 
@@ -173,15 +181,12 @@
           trigger = openBtn;
           selectedFilters = [];
 
-          for (let i = checkboxes.length; i--;) {
-            let checkbox = checkboxes[i].querySelector('input[type=checkbox]');
-
+          checkboxLoop((checkbox) => {
             if (checkbox.checked) {
               selectedFilters.push(checkbox);
             }
-          }
+          });
 
-          filter();
           toggleModal();
         });
       }
