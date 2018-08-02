@@ -1,27 +1,8 @@
 /**
  * @file
- * Javascript binding of baguettebox.min.js and macy.js.
+ * Javascript binding of macy.js.
  */
 'use strict';
-
-(function () {
-
-  if (!baguetteBox) { // eslint-disable-line no-undef
-    return;
-  }
-
-  baguetteBox.run('.image-wall', { // eslint-disable-line no-undef
-    filter: /.*/i,
-    async: true,
-    captions: function (element) {
-      var figcaption = element.querySelector('figcaption');
-      return figcaption ? figcaption.innerText : null;
-    },
-    buttons: true
-  });
-
-})();
-
 
 (function () {
 
