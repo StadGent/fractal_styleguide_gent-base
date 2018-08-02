@@ -140,7 +140,7 @@
       tag.setAttribute('data-value', checkbox.value);
 
       let button = document.createElement('button');
-      button.type = "button";
+      button.type = 'button';
       button.innerHTML = `<span class="visually-hidden">${options.hiddenTagText || 'Remove tag'}</span>`;
 
       button.addEventListener('click', () => {
