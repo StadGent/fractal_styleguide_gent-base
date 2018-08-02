@@ -105,7 +105,7 @@
       padding-top: 5rem;
 
       &::before {
-        @include spot-image('lightBulb', $bulb-image-width);
+        @include spot-image('lightbulb', $bulb-image-width);
 
         display: block;
         position: relative;
