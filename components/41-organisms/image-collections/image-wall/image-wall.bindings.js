@@ -10,6 +10,8 @@
     return;
   }
 
+  // Prevent a console error from Macy.js when there are no image-wall's
+  // on the page.
   let list = document.getElementsByClassName('image-wall');
   if (list.length === 0) {
     return;

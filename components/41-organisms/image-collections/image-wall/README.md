@@ -1,4 +1,4 @@
-# Image gallery
+# Image wall
 
 ## Functionality
 
