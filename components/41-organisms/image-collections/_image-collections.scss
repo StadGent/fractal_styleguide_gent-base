@@ -1,0 +1,26 @@
+ul.image-wall,
+ul.image-gallery {
+  margin: 0;
+  list-style: none;
+
+  figcaption {
+    display: none;
+  }
+
+  a.gallery-link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    text-decoration: none;
+
+    &::after {
+      content: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}

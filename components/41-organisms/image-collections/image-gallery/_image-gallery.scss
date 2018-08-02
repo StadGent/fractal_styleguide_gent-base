@@ -2,6 +2,7 @@
   @include clearfix();
 
   position: relative;
+  margin: 0 calc(-1 * (#{$gutter-width} / 2));
   padding: 0;
   text-align: center;
 
@@ -141,18 +142,5 @@
       width: calc((100% / 3) - #{$gutter-width} - .33px);
       padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.6);
     }
-  }
-}
-
-ul.image-gallery {
-  margin: 0 calc(-1 * (#{$gutter-width} / 2));
-  list-style: none;
-
-  figcaption {
-    display: none;
-  }
-
-  a.gallery-link {
-    display: block;
   }
 }

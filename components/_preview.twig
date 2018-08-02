@@ -40,8 +40,12 @@
     <!-- hidden fields for screenreaders -->
     <span hidden id="image-gallery__open-gallery">open gallery</span>
 
+    <!-- IE11 polyfills -->
+    <script type="text/javascript" src="{{ '/styleguide/vendor/promise-polyfill/dist/polyfill.min.js'|path }}"></script>
+
     <!--  scripts -->
     <script type="text/javascript" src="{{ '/styleguide/vendor/baguettebox/dist/baguetteBox.min.js'|path }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/vendor/macy/dist/macy.js'|path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/accordion.functions-min.js'|path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/menu.functions-min.js'|path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/checkbox_filter.functions-min.js'|path }}"></script>
@@ -49,6 +53,7 @@
 
     <!--  JS bindings -->
     <script type="text/javascript" src="{{ '/styleguide/js/image-gallery.bindings-min.js' | path }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/image-wall.bindings-min.js' | path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/accordion.bindings-min.js'|path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/menu.bindings-min.js'|path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/checkbox_filter.bindings-min.js'|path }}"></script>

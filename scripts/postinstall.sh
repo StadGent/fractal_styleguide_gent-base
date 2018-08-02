@@ -38,6 +38,8 @@ if [ -d "../public" ]; then
   mkdir ../public/styleguide/vendor;
 
   cp -R ../node_modules/baguettebox.js ../public/styleguide/vendor/baguettebox;
+  cp -R ../node_modules/macy ../public/styleguide/vendor/macy;
+  cp -R ../node_modules/promise-polyfill ../public/styleguide/vendor/promise-polyfill;
 fi
 
 #
