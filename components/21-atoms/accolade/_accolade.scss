@@ -1,7 +1,6 @@
 .accolade {
   $span: percentage(6 / 12);
-  $span-left: percentage(3 / 12);
-  $span-top: percentage(3 / 12);
+  $span-end: percentage(3 / 12);
 
   position: absolute;
   right: 0;
@@ -56,22 +55,22 @@
   &.top-left,
   &.bottom-right {
     &::before {
-      width: calc(100% - #{$span-left} - 2px);
+      width: calc(100% - #{$span-end} - 2px);
     }
 
     &::after {
-      width: calc(#{$span-left});
+      width: calc(#{$span-end});
     }
   }
 
   &.top-right,
   &.bottom-left {
     &::before {
-      width: calc(#{$span-left});
+      width: calc(#{$span-end});
     }
 
     &::after {
-      width: calc(100% - #{$span-left} - 2px);
+      width: calc(100% - #{$span-end} - 2px);
     }
   }
 
@@ -134,22 +133,22 @@
   &.left-top,
   &.right-bottom {
     &::before {
-      height: calc(#{$span-top});
+      height: calc(#{$span-end});
     }
 
     &::after {
-      height: calc(100% - #{$span-top} - 2px);
+      height: calc(100% - #{$span-end} - 2px);
     }
   }
 
   &.left-bottom,
   &.right-top {
     &::before {
-      height: calc(100% - #{$span-top} - 2px);
+      height: calc(100% - #{$span-end} - 2px);
     }
 
     &::after {
-      height: calc(#{$span-top});
+      height: calc(#{$span-end});
     }
   }
 }
