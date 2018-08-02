@@ -2,6 +2,8 @@
   <div class="field-description">
     {{ field_description|default(field_description) }}
 
-    <div class="accolade left-top"></div>
+    {% include '@accolade' with {
+      'position': 'left-top'
+    } %}
   </div>
 {% endif %}
