@@ -4,25 +4,8 @@
 
   position: relative;
   max-width: 40rem;
-  padding: .7rem 1.1rem;
+  padding: .7rem 1.1rem .7rem 2.1rem;
   border-radius: border-radius('radius-1');
   font-size: .7rem;
   line-height: 1.4;
-
-  &::after {
-    @include theme('background-image', 'color-primary-accolade', 'field-description-accolade');
-
-    display: block;
-    position: absolute;
-    top: 1.5rem;
-    left: -.7rem;
-    width: 2rem;
-    height: 1.4rem;
-    transform: rotate(-90deg);
-    transform-origin: left;
-    background: no-repeat center bottom;
-    background-size: contain;
-    font-size: 1.2rem;
-    content: '';
-  }
 }

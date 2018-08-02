@@ -1,32 +1,17 @@
 .accolade {
   $span: percentage(6 / 12);
+  $span-left: percentage(3 / 12);
+  $span-top: percentage(3 / 12);
 
   position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   max-width: $bp-max-content;
   height: 1rem;
   margin: 0;
   border: 0;
   overflow: visible;
-
-  &.bottom {
-    bottom: 0;
-
-    &.center {
-      right: 0;
-      left: 0;
-    }
-  }
-
-  &.top {
-    top: 0;
-    transform: rotate(180deg);
-
-    &.center {
-      right: 0;
-      left: 0;
-    }
-  }
-
 
   &::before,
   &::after {
@@ -55,5 +40,116 @@
     border-left: 2px solid;
     border-top-left-radius: border-radius('radius-4');
     border-color: transparent;
+  }
+
+  //
+  // Top variants.
+  // Bottom variants.
+  //
+  &.top-left,
+  &.top-center,
+  &.top-right {
+    top: 0;
+    transform: rotate(180deg);
+  }
+
+  &.top-left,
+  &.bottom-right {
+    &::before {
+      width: calc(100% - #{$span-left} - 2px);
+    }
+
+    &::after {
+      width: calc(#{$span-left});
+    }
+  }
+
+  &.top-right,
+  &.bottom-left {
+    &::before {
+      width: calc(#{$span-left});
+    }
+
+    &::after {
+      width: calc(100% - #{$span-left} - 2px);
+    }
+  }
+
+  //
+  // Left variants.
+  // Right variants.
+  //
+  &.left-top,
+  &.left-center,
+  &.left-bottom,
+  &.right-top,
+  &.right-center,
+  &.right-bottom {
+    right: auto;
+    left: 0;
+    width: 1rem;
+    height: 100%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 1rem;
+      height: 100%;
+      margin-top: 0;
+      border-left: 2px solid;
+      border-color: transparent;
+      background: color('white');
+      content: '';
+    }
+
+    &::before {
+      left: 0;
+      height: calc(#{$span});
+      border-left: 2px solid;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: border-radius('radius-4');
+      border-color: transparent;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 0;
+      height: calc(100% - #{$span} - 2px);
+      border-left: 2px solid;
+      border-top-left-radius: 0;
+      border-top-right-radius: border-radius('radius-4');
+      border-color: transparent;
+    }
+  }
+
+  &.right-top,
+  &.right-center,
+  &.right-bottom {
+    right: 0;
+    left: auto;
+    transform: rotate(180deg);
+  }
+
+  &.left-top,
+  &.right-bottom {
+    &::before {
+      height: calc(#{$span-top});
+    }
+
+    &::after {
+      height: calc(100% - #{$span-top} - 2px);
+    }
+  }
+
+  &.left-bottom,
+  &.right-top {
+    &::before {
+      height: calc(100% - #{$span-top} - 2px);
+    }
+
+    &::after {
+      height: calc(#{$span-top});
+    }
   }
 }
