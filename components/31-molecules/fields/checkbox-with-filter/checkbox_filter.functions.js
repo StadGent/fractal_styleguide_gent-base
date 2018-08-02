@@ -15,7 +15,7 @@
   }
 }(this || window, function () {
 
-  return (elem, options) => {
+  return function (elem, options) {
 
     if (typeof gent_styleguide === 'undefined') {
       console.error('You need to include base.js.'); // eslint-disable-line no-console
@@ -140,10 +140,10 @@
       tag.setAttribute('data-value', checkbox.value);
 
       let button = document.createElement('button');
+      button.type = "button";
       button.innerHTML = `<span class="visually-hidden">${options.hiddenTagText || 'Remove tag'}</span>`;
 
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
+      button.addEventListener('click', () => {
         checkbox.checked = false;
         selectedContainer.removeChild(tag);
       });
@@ -278,8 +278,7 @@
 
       // Enable opening the modal.
       if (openBtn) {
-        openBtn.addEventListener('click', (e) => {
-          e.preventDefault();
+        openBtn.addEventListener('click', () => {
           trigger = openBtn;
           selectedFilters = [];
 
@@ -296,8 +295,7 @@
       // Add close events to all closeBtns.
       if (closeBtns) {
         for (let i = closeBtns.length; i--;) {
-          closeBtns[i].addEventListener('click', (e) => {
-            e.preventDefault();
+          closeBtns[i].addEventListener('click', () => {
             reset();
             toggleModal();
           });
@@ -306,10 +304,7 @@
 
       // Update selectedFilters and close.
       if (submitBtn) {
-        submitBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          toggleModal();
-        });
+        submitBtn.addEventListener('click', toggleModal);
       }
 
     };
@@ -337,8 +332,13 @@
           }
           break;
         case 27: // esc
-          close(e);
+          e.preventDefault();
+          reset();
+          toggleModal();
           break;
+        case 13: // enter
+          e.preventDefault();
+          toggleModal();
       }
     };
 
