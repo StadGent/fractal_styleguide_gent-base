@@ -29,10 +29,15 @@
   > .quote,
   > .image-gallery--wrapper,
   > .help-block,
-  > .search-block,
-  > .info-box {
+  > .search-block {
     @include desktop {
       @include set-layout('width-9', 'offset-1');
+    }
+  }
+
+  > .summary-box {
+    @include desktop {
+      @include set-layout('width-10', 'offset-1');
     }
   }
 
@@ -50,6 +55,10 @@
     @include desktop {
       padding-left: span(1 wide of 12);
     }
+  }
+
+  > .summary-box {
+    margin-bottom: 2rem;
   }
 
   > .quote,

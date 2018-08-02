@@ -190,7 +190,7 @@ $themes: (
     'color-box-shadow-hover': $box-shadow-primary color('cyan-wcag', -2),
     'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
     'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-primary-accolade': svg-as-background('accolade', color('cyan-wcag', -4), 36, 19),
+    'color-primary-accolade': svg-as-background('accolade', color('cyan', -4), 36, 19),
     'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan-wcag', -4), 54, 23),
     'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1), 54, 23),
 
