@@ -29,10 +29,17 @@
   > .quote,
   > .image-gallery--wrapper,
   > .help-block,
-  > .search-block,
-  > .info-box {
+  > .search-block {
     @include desktop {
       @include set-layout('width-9', 'offset-1');
+    }
+  }
+
+  > .summary-box {
+    margin-bottom: 2rem;
+
+    @include desktop {
+      @include set-layout('width-10', 'offset-1');
     }
   }
 

@@ -1,5 +1,9 @@
 {% if field_description %}
   <div class="field-description">
     {{ field_description|default(field_description) }}
+
+    {% include '@accolade' with {
+      'position': 'left-top'
+    } %}
   </div>
 {% endif %}
