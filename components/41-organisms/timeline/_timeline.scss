@@ -49,6 +49,10 @@ dl.timeline {
         margin-top: -.6rem;
         padding-bottom: 1.2rem;
 
+        @include desktop {
+          top: 1.9rem;
+        }
+
         &::before {
           content: none;
         }
@@ -189,7 +193,7 @@ dl.timeline {
 
       @include desktop {
         position: absolute;
-        top: 1.9rem;
+        top: 2rem;
         left: span(2 of 12);
         width: $timeline-dt-left-padding;
         padding: 0 1.2rem 0 0;
