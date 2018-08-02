@@ -14,7 +14,7 @@
     }
   }
 }(this || window, function () {
-  return (elem, options) => {
+  return function (elem, options) {
     if (typeof gent_styleguide === 'undefined') {
       console.error('You need to include base.js.'); // eslint-disable-line no-console
       return;
