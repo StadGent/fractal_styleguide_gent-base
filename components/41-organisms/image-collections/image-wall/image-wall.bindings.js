@@ -13,7 +13,7 @@
   const grid = document.querySelector('.image-wall');
 
   const msnry = new Masonry(grid, { // eslint-disable-line no-undef
-    columnWidth: 'li',
+    columnWidth: 'li:not(.hidden)',
     itemSelector: 'li',
     transitionDuration: 0,
     gutter: 24
