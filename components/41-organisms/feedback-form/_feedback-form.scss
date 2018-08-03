@@ -18,24 +18,11 @@
     margin-top: 1rem;
   }
 
-  .info-box {
-    @include theme('background-color', 'color-primary--lighten-5', 'feedback-form-info-background');
-
-    display: flex;
-    padding: 2rem 3.7rem;
-
-    &-icon {
-      width: span(3 of 9);
-      max-width: 7.8rem;
-      margin-right: 3.6rem;
-    }
-
-    &-text {
-      width: span(6 of 9);
-    }
-  }
-
   form {
+    label {
+      display: none;
+    }
+
     textarea {
       @include theme('background-color', 'color-secondary', 'feedback-form-textarea-background');
       @include theme('border-color', 'color-primary--darken-2', 'feedback-form-textarea-border');
