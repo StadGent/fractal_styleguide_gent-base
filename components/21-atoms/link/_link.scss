@@ -130,6 +130,10 @@ a {
     @include icon(download, after);
   }
 
+  &[href*="mailto:"] {
+    @include icon(envelope, after);
+  }
+
   ///
   /// External links get an indicator.
   ///

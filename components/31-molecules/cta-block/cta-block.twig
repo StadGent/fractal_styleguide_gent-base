@@ -1,0 +1,34 @@
+<div class="cta-block {{ type }}">
+  <div class="cta-block-inner">
+    {% include '@heading' with {
+      'type': 'h2',
+      'heading_text': title
+    } %}
+
+    {% include '@paragraph' with {
+      'text': description
+    } %}
+
+  {% if links|length > 1 %}
+    <ul class="links">
+      {% for link in links %}
+        <li>
+          {% include '@link' with {
+            'link': link.url,
+            'text': link.text,
+            'modifier': link.modifier
+          } %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    {% for link in links %}
+      {% include '@link' with {
+        'link': link.url,
+        'text': link.text,
+        'modifier': link.modifier
+      } %}
+    {% endfor %}
+  {% endif %}
+  </div>
+</div>

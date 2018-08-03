@@ -1,0 +1,58 @@
+.cta-block {
+  @include theme('background-color', 'color-primary--lighten-5', 'cta-block-background');
+
+  display: flex;
+  position: relative;
+  padding: 2rem;
+
+  &::before {
+    @include spot-image('download-light');
+    height: 10rem;
+    margin: -6rem auto 0;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: block;
+      align-self: center;
+      margin: 0 2.4rem 0 0;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    max-width: 36rem;
+
+    p {
+      @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+      margin: 0;
+      padding-bottom: .8rem;
+
+      border-bottom: 2px solid;
+    }
+
+    li {
+      @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+      width: 100%;
+      margin-top: .8rem;
+      padding-bottom: .8rem;
+      border-bottom: 2px solid;
+
+      &:last-of-type {
+        padding: 0;
+        border: 0;
+      }
+
+      > a {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

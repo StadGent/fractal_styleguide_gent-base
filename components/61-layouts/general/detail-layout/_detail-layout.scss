@@ -35,7 +35,8 @@
     }
   }
 
-  > .summary-box {
+  > .summary-box,
+  > .cta-block {
     margin-bottom: 2rem;
 
     @include desktop {

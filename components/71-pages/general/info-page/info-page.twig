@@ -53,6 +53,23 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio."
       } %}
 
+      {% include '@cta-block' with {
+        'type': 'link',
+          'description': 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.',
+        'links': [
+          {
+            'text': 'In the summertime',
+            'url': '#',
+            'modifier': 'standalone-link'
+          },
+          {
+            'text': 'When the weather is hot',
+            'url': '#',
+            'modifier': 'standalone-link'
+          }
+        ]
+      } %}
+
       {% include '@heading' with {
         'type': 'h4',
         'heading_text': 'This is an H4 paragraph title'
