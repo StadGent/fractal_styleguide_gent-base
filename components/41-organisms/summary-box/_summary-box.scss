@@ -1,0 +1,53 @@
+.summary-box {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4.5rem;
+
+  h2 {
+    @extend %h4;
+  }
+
+  ul.icon-list {
+    width: 100%;
+    margin: 0;
+  }
+
+  &-content {
+    @include theme('background-color', 'color-primary--lighten-5', 'info-box-background');
+
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 .5rem;
+    padding: 4.5rem 2rem 2rem;
+
+    @include tablet {
+      margin: 0 0 .5rem;
+      padding: 2rem 10rem 2rem 2rem;
+    }
+
+    &::before {
+      @include spot-image('lightbulb-light', 7rem);
+
+      position:  absolute;
+      top: -3rem;
+      right: 0;
+      left: 0;
+      width: 6rem;
+      height: 6rem;
+      margin: auto;
+      z-index: 10;
+
+      @include tablet {
+        top: -3.5rem;
+        right: 2rem;
+        left: auto;
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+  }
+}
