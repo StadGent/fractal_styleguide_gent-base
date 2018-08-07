@@ -11,13 +11,13 @@ module.exports = {
     links: [
       {
         text: 'In the summertime',
-        url: 'mailto: info@stad.gent',
-        modifier: 'standalone-link'
+        url: '#',
+        document: 'document',
+        size: '102kb'
       },
       {
         text: 'When the weather is hot',
-        url: '#',
-        modifier: 'standalone-link'
+        url: '#'
       }
     ]
   }

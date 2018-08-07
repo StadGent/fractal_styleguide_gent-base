@@ -36,6 +36,22 @@ a {
       }
     }
 
+    &[href*="mailto:"] {
+      @include icon(envelope);
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &[download] {
+      @include icon(download);
+
+      &::after {
+        content: none;
+      }
+    }
+
     // Overrule flex for IE
     align-items: flex-start;
     padding-top: .6em;

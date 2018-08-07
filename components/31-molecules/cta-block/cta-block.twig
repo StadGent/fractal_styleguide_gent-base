@@ -1,5 +1,5 @@
 <div class="cta-block {{ type }}">
-  <div class="cta-block-inner">
+  <div class="inner-box">
     {% include '@heading' with {
       'type': 'h2',
       'heading_text': title
@@ -11,22 +11,39 @@
 
   {% if links|length > 1 %}
     <ul class="links">
-      {% for link in links %}
-        <li>
-          {% include '@link' with {
-            'link': link.url,
-            'text': link.text,
-            'modifier': link.modifier
-          } %}
-        </li>
-      {% endfor %}
+      <li>
+        {% include '@link' with {
+          'link': links[0].url,
+          'text': links[0].text,
+          'modifier':  'button button-primary'
+        } %}
+        {% if links[0].document|length %}
+          <span class="link-type">PDF</span>
+        {% endif %}
+        {% if links[0].size|length %}
+          <span class="link-filesize">(102kb)</span>
+        {% endif %}
+      </li>
+      <li>
+        {% include '@link' with {
+          'link': links[1].url,
+          'text': links[1].text,
+          'modifier': 'standalone-link'
+        } %}
+        {% if links[1].document|length %}
+          <span class="link-type">PDF</span>
+        {% endif %}
+        {% if links[1].size|length %}
+          <span class="link-filesize">(102kb)</span>
+        {% endif %}
+      </li>
     </ul>
   {% else %}
     {% for link in links %}
       {% include '@link' with {
-        'link': link.url,
-        'text': link.text,
-        'modifier': link.modifier
+        'link': links[0].url,
+        'text': links[0].text,
+        'modifier': 'standalone-link'
       } %}
     {% endfor %}
   {% endif %}

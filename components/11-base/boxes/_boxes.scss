@@ -1,0 +1,119 @@
+///
+///  Helper function to style boxes with an icon in a left aligned column.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access public
+/// @author Gert-Jan Meire
+///
+@mixin box-left {
+  @include theme('background-color', 'color-primary--lighten-5', 'search-block-background');
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.1rem;
+  padding: 0 calc(#{$gutter-width} / 2) 1.6rem;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 2rem 3.7rem 1.6rem ($gutter-width*2);
+  }
+
+  &::before {
+    @include spot-image('lightbulb-light', 6.2rem);
+    margin: -3.1rem 0 1rem;
+
+    @include tablet {
+      align-self: center;
+      width: 8rem;
+      height: 8rem;
+      margin: 0 2.5rem 0 0;
+      justify-self: flex-start;
+    }
+  }
+}
+
+///
+///  Helper function to style boxes with an icon in the top right corner.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access public
+/// @author Gert-Jan Meire
+///
+@mixin box-top {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4.5rem;
+
+  .inner-box {
+    @include theme('background-color', 'color-primary--lighten-5', 'info-box-background');
+
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 .5rem;
+    padding: 4.5rem 2rem 2rem;
+
+    @include tablet {
+      margin: 0 0 .5rem;
+      padding: 2rem 10rem 2rem 2rem;
+    }
+
+    &::before {
+      @include spot-image('lightbulb-light', 7rem);
+
+      position:  absolute;
+      top: -3rem;
+      right: 0;
+      left: 0;
+      width: 6rem;
+      height: 6rem;
+      margin: auto;
+      z-index: 10;
+
+      @include tablet {
+        top: -3.5rem;
+        right: 2rem;
+        left: auto;
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+  }
+}
+
+
+///
+///  Helper function to style boxes without an icon.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access public
+/// @author Gert-Jan Meire
+///
+@mixin box-no-icon {
+  @include theme('background-color', 'color-primary--lighten-5', 'feedback-form-background');
+
+  padding: 1.2rem calc(#{$gutter-width} / 2);
+  border-radius: border-radius('radius-1');
+}
+
+.box-left {
+  @include box-left;
+}
+
+.box-top {
+  @include box-top;
+}
+
+.box-no-icon {
+  @include box-no-icon;
+}
