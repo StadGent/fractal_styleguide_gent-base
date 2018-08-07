@@ -20,6 +20,9 @@ module.exports = {
     },
     {
       name: 'with images'
+    },
+    {
+      name: 'with show more'
     }
   ]
 };

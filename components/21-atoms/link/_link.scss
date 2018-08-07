@@ -24,11 +24,19 @@ a {
   &.button {
     @include button;
     @include button-icon;
+    // Overrule flex for IE
+    align-items: flex-start;
+    padding-top: .6em;
+    text-decoration: none;
 
-    @include icon(arrow-right);
+    &:not([class*="icon-"]) {
+      @include button-icon;
+      @include icon(arrow-right);
+    }
 
     &[href^="http://"],
     &[href^="https://"] {
+      @include button-icon;
       @include icon(external-link);
 
       &::after {
@@ -36,10 +44,14 @@ a {
       }
     }
 
-    // Overrule flex for IE
-    align-items: flex-start;
-    padding-top: .6em;
-    text-decoration: none;
+    &[download] {
+      @include button-icon;
+      @include icon(download);
+
+      &::after {
+        content: none;
+      }
+    }
 
     &.button-success {
       @extend %button-success;
@@ -80,7 +92,7 @@ a {
   ///   - links that go to an external source
   ///
   &.standalone-link,
-  &[download],
+  &[download]:not(.button),
   &[class^="icon-"],
   &[href^="http://"],
   &[href^="https://"] {
@@ -108,7 +120,7 @@ a {
   }
 
   &.standalone-link:not([download]):not([href^="http://"]):not([href^="https://"]),
-  &.button:not([download]):not([href^="http://"]):not([href^="https://"]) {
+  &.button:not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]) {
     @extend %a-bounce-animation;
   }
 
@@ -120,6 +132,7 @@ a {
     &::after {
       display: block;
       text-decoration: none;
+      overflow: hidden; // Hides text decoration underline.
     }
   }
 
@@ -140,6 +153,11 @@ a {
 }
 
 %a-bounce-animation {
+  &::after,
+  &::before {
+    padding-right: .2rem;
+  }
+
   &:focus,
   &:hover {
     &::after,

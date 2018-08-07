@@ -138,21 +138,9 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-block {
-  display: block;
+  display: inline-flex;
   width: 100%;
-}
-
-///
-/// Make a button display: inline-block.
-///
-/// @since 3.0.0
-/// @group buttons
-/// @access public
-/// @author Gert-Jan Meire
-///
-@mixin button-inlineblock {
-  display: inline-block;
-  width: auto;
+  justify-content: center;
 }
 
 ///

@@ -1,5 +1,8 @@
+ul.grid-2,
 ul.grid-3 {
   @extend %list-no-style;
+  width: 100%;
+  margin: 0;
 
   @include phablet {
     display: flex;
@@ -7,6 +10,17 @@ ul.grid-3 {
     flex-wrap: wrap;
   }
 
+  > li {
+    margin-bottom: 1.2rem;
+  }
+
+  + .show-more {
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+}
+
+ul.grid-3 {
   > li {
     @include phablet {
       width: span(6 of 12);
@@ -28,22 +42,10 @@ ul.grid-3 {
         margin-right: 0;
       }
     }
-
-    margin-bottom: 1.2rem;
   }
-
-  width: 100%;
 }
 
 ul.grid-2 {
-  @extend %list-no-style;
-
-  @include phablet {
-    display: flex;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
-  }
-
   > li {
     @include phablet {
       width: span(6 of 12);
@@ -53,9 +55,5 @@ ul.grid-2 {
         margin-right: 0;
       }
     }
-
-    margin-bottom: 1.2rem;
   }
-
-  width: 100%;
 }
