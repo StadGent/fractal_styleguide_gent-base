@@ -83,7 +83,7 @@ a {
 
   &::after {
     transition: margin .1s ease-in;
-    font-size: 1.2rem;
+    font-size: inherit;
     line-height: 1;
     // For IE purposes first set underline, then remove it.
     text-decoration: underline;
@@ -136,10 +136,10 @@ a {
   &[download]:not(.button),
   &[href^="http://"]:not(.button),
   &[href^="https://"]:not(.button) {
-    display: inline-flex;
+    display: inline;
 
     &::after {
-      display: block;
+      display: inline-block;
       text-decoration: none;
       overflow: hidden; // Hides text decoration underline.
     }
@@ -165,6 +165,10 @@ a {
   &[href^="http://"],
   &[href^="https://"] {
     @include icon(external-link, after);
+
+    &[download]:not(.button) {
+      @include icon(download, after);
+    }
   }
 }
 
