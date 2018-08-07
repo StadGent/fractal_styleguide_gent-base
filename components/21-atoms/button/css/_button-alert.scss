@@ -18,9 +18,8 @@
   box-shadow: $box-shadow-primary color('red', -3);
 
   &.button-block {
-    display: flex;
-    text-align: center;
-  }
+    @include button-icon;
+ }
 
   &:hover,
   &:focus {

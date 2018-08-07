@@ -70,8 +70,50 @@ module.exports = {
       name: 'button',
       preview: '@preview',
       context: {
-        icon: 'icon-arrow-right',
+        link: '#',
         modifier: 'button button-primary'
+      }
+    },
+    {
+      name: 'button download',
+      preview: '@preview',
+      context: {
+        link: '#',
+        modifier: 'button button-primary',
+        download: true
+      }
+    },
+    {
+      name: 'button external',
+      preview: '@preview',
+      context: {
+        link: 'https://stad.gent',
+        modifier: 'button button-primary'
+      }
+    },
+    {
+      name: 'button block',
+      preview: '@preview',
+      context: {
+        link: '#',
+        modifier: 'button button-primary button-block'
+      }
+    },
+    {
+      name: 'button block download',
+      preview: '@preview',
+      context: {
+        link: '#',
+        modifier: 'button button-primary button-block',
+        download: true
+      }
+    },
+    {
+      name: 'button block custom icon',
+      preview: '@preview',
+      context: {
+        link: '#',
+        modifier: 'button button-primary button-block icon-favicon'
       }
     }
   ]
