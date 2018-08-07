@@ -53,6 +53,7 @@ a {
     }
 
     &[download] {
+      @include button-icon;
       @include icon(download);
 
       &::after {
