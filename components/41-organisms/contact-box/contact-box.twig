@@ -1,0 +1,67 @@
+<div class="contact-box accordion">
+{% include '@heading' with {
+  'type': 'h2',
+  'heading_text': 'Contact'
+} %}
+
+  <div class="contact-box--header">
+    <div class="contact-box-column">
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Contacts'
+      } %}
+
+      <ul class="main-contacts links">
+        {% for contact in contacts %}
+          <li>
+            <address class="contact-fiche">
+              {% include '@link' with {
+                'link': contact.link,
+                'text': contact.link_text,
+                'modifier': 'standalone-link contact-name'
+              } %}
+              <p>
+                {{ contact.address }}
+              </p>
+              {% include '@link' with {
+                'link': 'mailto:' ~ contact.email,
+                'text': contact.email,
+                'modifier': 'contact-email'
+              } %}
+            </address>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="contact-box-column">
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Location'
+      } %}
+    </div>
+  </div>
+
+  <h3>
+    <button class="accordion--button"
+            aria-expanded="false"
+            aria-controls="contact-box--content">
+      {{ 'There are 5 other documents available' }}
+    </button>
+  </h3>
+
+  <div class="accordion--content"
+    id="contact-box--content">
+    <ul class="links">
+      {% for contact in other_contacts %}
+        <li>
+          {% include '@link' with {
+            'link': contact.link,
+            'text': contact.link_text,
+            'modifier': 'standalone-link'
+          } %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

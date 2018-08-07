@@ -1,0 +1,46 @@
+.contact-box {
+  @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+  position: relative;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  border-top: 2px solid;
+
+  @include tablet {
+    padding-top: 2rem;
+  }
+
+  &--header {
+    display: flex;
+    flex-wrap: wrap;
+
+    address.contact-fiche {
+      margin-bottom: 1.6rem;
+
+      .contact-name {
+        margin-bottom: .8rem;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .contact-email {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &-column {
+    width: span(6 of 12);
+  }
+
+  h3 {
+    @extend %h4;
+  }
+
+  button {
+    margin-top: 2.3rem;
+  }
+}
