@@ -17,12 +17,16 @@
           'text': links[0].text,
           'modifier':  'button button-primary'
         } %}
-        {% if links[0].document|length %}
-          <span class="link-type">PDF</span>
-        {% endif %}
-        {% if links[0].size|length %}
-          <span class="link-filesize">(102kb)</span>
-        {% endif %}
+          {% if links[0].document|length %}
+            <span class="file-type">
+              PDF
+              {% if links[0].size|length %}
+                <span class="file-size">
+                  (753.77 KB)
+                </span>
+              {% endif %}
+            </span>
+          {% endif %}
       </li>
       <li>
         {% include '@link' with {
@@ -31,10 +35,14 @@
           'modifier': 'standalone-link'
         } %}
         {% if links[1].document|length %}
-          <span class="link-type">PDF</span>
-        {% endif %}
-        {% if links[1].size|length %}
-          <span class="link-filesize">(102kb)</span>
+          <span class="file-type">
+            PDF
+            {% if links[1].size|length %}
+              <span class="file-size">
+                (753.77 KB)
+              </span>
+            {% endif %}
+          </span>
         {% endif %}
       </li>
     </ul>

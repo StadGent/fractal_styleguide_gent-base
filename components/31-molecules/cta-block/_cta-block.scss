@@ -21,6 +21,12 @@
       width: 100%;
       margin-top: .8rem;
 
+      &:first-of-type a {
+        @extend %button-primary;
+        @include button;
+        @include button-icon;
+      }
+
       &:last-of-type {
         @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
 
@@ -30,7 +36,16 @@
 
       > a {
         margin-right: 1rem;
+
       }
+    }
+  }
+
+  .file-type {
+    text-transform: uppercase;
+
+    .file-size {
+      text-transform: lowercase;
     }
   }
 }
