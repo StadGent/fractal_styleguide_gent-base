@@ -96,72 +96,66 @@
   .summary-text {
     font-weight: 600;
   }
+}
 
-  $bulb-image-width: 6rem;
+$bulb-image-width: 6rem;
 
-  + aside {
-    @extend %content-container;
+aside.top,
+aside.bottom {
+  @extend %content-container;
 
-    position: relative;
-    margin: 2rem 0;
-
-    @include tablet {
-      margin: 5rem auto;
+  > * {
+    @include desktop {
+      @include set-layout('width-7', 'offset-2');
     }
+  }
 
-    > div:first-child {
-      padding-top: 5rem;
+  .document-box,
+  .extra-articles,
+  .related-box {
+    @include desktop {
+      @include set-layout();
+      width: 100%;
+      margin-left: 0;
+      padding-right: span(2 wide of 12);
+      padding-left: span(2 wide of 12);
+    }
+  }
+}
 
-      &::before {
-        @include spot-image('lightbulb', $bulb-image-width);
+aside.top {
+  position: relative;
+  margin: 5rem auto 0;
 
-        display: block;
-        position: relative;
-        margin: 2rem auto (-$bulb-image-width/2);
-        z-index: 1;
+  > div:first-child {
+    &::before {
+      @include spot-image('lightbulb', $bulb-image-width);
 
-        @include tablet {
-          position: absolute;
-          top: -($bulb-image-width/2);
-          right: span(1 of 12);
-          margin: 0;
-        }
-      }
+      display: block;
+      position: relative;
+      margin: (-$bulb-image-width) auto 1rem;
+      z-index: 1;
 
       @include tablet {
-        padding-top: 2rem;
-      }
-    }
-
-    > * {
-      @include desktop {
-        @include set-layout('width-7', 'offset-2');
-      }
-    }
-
-    .document-box,
-    .extra-articles,
-    .related-box {
-      @include desktop {
-        @include set-layout();
-        width: 100%;
-        margin-left: 0;
-        padding-right: span(2 wide of 12);
-        padding-left: span(2 wide of 12);
-      }
-    }
-
-    .feedback-form {
-      @include wide;
-
-      margin-bottom: 2rem;
-
-      @include desktop {
-        @include set-layout('width-9', 'offset-1');
-
-        padding-left: span(1 wide of 12);
+        position: absolute;
+        top: -($bulb-image-width/2);
+        right: span(1 of 12);
+        margin: 0;
       }
     }
   }
 }
 
+aside.bottom {
+  .feedback-form {
+    @include wide;
+
+    margin-bottom: 2rem;
+
+    @include desktop {
+      @include set-layout('width-9', 'offset-1');
+
+      padding-left: span(1 wide of 12);
+    }
+  }
+}

@@ -111,7 +111,7 @@
     {% endblock %}
   </article>
 
-  <aside>
+  <aside class="top">
     {% include '@document-box' with {
         documents: [
           {
@@ -156,6 +156,8 @@
     'Another tag'
     ]
     } %}
+  </aside>
+  <aside class="bottom">
     {% include '@feedback-form' %}
   </aside>
 </main>

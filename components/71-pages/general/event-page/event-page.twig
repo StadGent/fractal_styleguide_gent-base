@@ -48,7 +48,7 @@
     {% endblock %}
   </article>
 
-  <aside>
+  <aside class="top">
     {% include '@related-box' with {
     tags: [
     'Inner city',
@@ -58,6 +58,8 @@
     {% include '@extra-articles' with {
     title: 'More news and articles'
     } %}
+  </aside>
+  <aside class="bottom">
     {% include '@feedback-form' %}
     {% include '@paragraph' with {
     "text": "Last changed on 1th of june 2018 - 17:45",
