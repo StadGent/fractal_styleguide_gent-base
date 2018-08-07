@@ -45,6 +45,7 @@ a {
     }
 
     &[href^="mailto:"] {
+      @include button-icon;
       @include icon(envelope);
 
       &::after {
@@ -151,6 +152,9 @@ a {
     @include icon(download, after);
   }
 
+  ///
+  /// Mail links.
+  ///
   &[href^="mailto:"] {
     @include icon(envelope, after);
   }
