@@ -15,7 +15,7 @@
   }
 }(this || window, function () {
 
-  return (elem, options) => {
+  return function (elem, options) {
 
     let expandedContent = [];
 

@@ -27,5 +27,9 @@
 Create a new CheckboxFilter object by running:
 
 ```js
-new CheckboxFilter(element);
+new CheckboxFilter(element, [options]);
 ```
+
+The optional 'options' object contains all queryselectors, a string 'hiddenTagText'
+to use as hidden text on the selected tags buttons and a boolean to prevent creating
+selected tags in case you need your own implementation.
