@@ -25,6 +25,7 @@
 
   &::before {
     @include spot-image('lightbulb-light', 6.2rem);
+
     margin: -3.1rem 0 1rem;
 
     @include tablet {
@@ -34,6 +35,14 @@
       margin: 0 2.5rem 0 0;
       justify-self: flex-start;
     }
+  }
+
+  .inner-box {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    max-width: 36rem;
   }
 }
 
