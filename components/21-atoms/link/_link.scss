@@ -83,7 +83,7 @@ a {
 
   &::after {
     transition: margin .1s ease-in;
-    font-size: inherit;
+    font-size: 1.2rem;
     line-height: 1;
     // For IE purposes first set underline, then remove it.
     text-decoration: underline;
