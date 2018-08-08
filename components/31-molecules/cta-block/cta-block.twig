@@ -15,7 +15,8 @@
         {% include '@link' with {
           'link': links[0].url,
           'text': links[0].text,
-          'modifier':  'button button-primary'
+          'modifier':  'button button-primary',
+          'download': 'download'
         } %}
           {% if links[0].document|length %}
             <span class="file-type">
