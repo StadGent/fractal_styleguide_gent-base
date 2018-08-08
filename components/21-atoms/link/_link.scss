@@ -27,7 +27,6 @@ a {
     // Overrule flex for IE
     align-items: flex-start;
     padding-top: .6em;
-    line-height: 3em;
     text-decoration: none;
 
     &:not([class*="icon-"]) {
