@@ -97,7 +97,6 @@
   font-weight: 600;
   text-align: center;
   cursor: pointer;
-  vertical-align: bottom;
 
   &:disabled {
     @include button-disabled;
@@ -133,8 +132,7 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-block {
-  display: inline-flex;
-  justify-content: center;
+  display: inline-block;
   width: 100%;
 }
 
@@ -158,7 +156,20 @@
   &::before {
     order: 2;
     margin-left: .5rem;
-    font-size: 1.7em;
+    padding-right: .2rem;
+    // Fix for IE11 flex order property.
+    float: right;
+    font-size: 1.8em;
+
+    // Font-size specificly for IE11.
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+      font-size: 1.2rem;
+    }
+  }
+
+  &::after {
+    padding-right: .2rem;
+    content: '';
   }
 }
 

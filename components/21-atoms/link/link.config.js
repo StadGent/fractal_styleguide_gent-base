@@ -39,6 +39,13 @@ module.exports = {
       }
     },
     {
+      name: 'mailto-link',
+      preview: '@preview',
+      context: {
+        link: 'mailto:info@stad.gent'
+      }
+    },
+    {
       name: 'standalone',
       preview: '@preview',
       handle: 'link',
@@ -57,6 +64,15 @@ module.exports = {
       }
     },
     {
+      name: 'standalone-mailto',
+      preview: '@preview',
+      handle: 'link',
+      context: {
+        link: 'mailto:info@stad.gent',
+        modifier: 'standalone-link'
+      }
+    },
+    {
       name: 'standalone-download',
       preview: '@preview',
       handle: 'link',
@@ -71,6 +87,14 @@ module.exports = {
       preview: '@preview',
       context: {
         link: '#',
+        modifier: 'button button-primary'
+      }
+    },
+    {
+      name: 'button mailto',
+      preview: '@preview',
+      context: {
+        link: 'mailto:info@stad.gent',
         modifier: 'button button-primary'
       }
     },
@@ -96,6 +120,14 @@ module.exports = {
       preview: '@preview',
       context: {
         link: '#',
+        modifier: 'button button-primary button-block'
+      }
+    },
+    {
+      name: 'button block mailto',
+      preview: '@preview',
+      context: {
+        link: 'mailto:info@stad.gent',
         modifier: 'button button-primary button-block'
       }
     },
