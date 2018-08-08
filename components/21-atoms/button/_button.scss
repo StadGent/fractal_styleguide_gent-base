@@ -119,11 +119,6 @@
     @include button-block;
   }
 
-  &.button-icon.button-block {
-    display: flex;
-    justify-content: center;
-  }
-
   &[class*="icon-"] {
     @include button-icon;
   }
