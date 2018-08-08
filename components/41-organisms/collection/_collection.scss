@@ -1,5 +1,6 @@
 ul.grid-2,
-ul.grid-3 {
+ul.grid-3,
+ul.grid-4 {
   @extend %list-no-style;
   width: 100%;
   margin: 0;
@@ -17,6 +18,37 @@ ul.grid-3 {
   + .show-more {
     margin-bottom: 1.2rem;
     text-align: center;
+  }
+}
+
+ul.grid-4 {
+  &::after {
+    flex: auto;
+    margin-left: span(3 of 12);
+    content: '';
+  }
+
+  > li {
+    @include phablet {
+      width: span(6 of 12);
+      margin: 0 $gutter-width 1.2rem 0;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include desktop {
+      width: span(3 of 12);
+
+      &:nth-child(2n) {
+        margin-right: $gutter-width;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
   }
 }
 
