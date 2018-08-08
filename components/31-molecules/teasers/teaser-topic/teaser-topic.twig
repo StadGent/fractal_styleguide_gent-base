@@ -1,14 +1,14 @@
 <li class="teaser teaser-topic">
   <article class="teaser-content">
       {% if teaser_image_src is not empty %}
-        <div class="content-top">
+        <div class="content__top">
           {% include '@figure' with {
           "figure_image_src": teaser_image_src
           } %}
         </div>
       {% endif %}
 
-    <div class="content-bottom">
+    <div class="content__bottom">
       <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
 
       {% include '@paragraph' with {
