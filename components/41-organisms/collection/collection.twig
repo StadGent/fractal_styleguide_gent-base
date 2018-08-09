@@ -1,4 +1,4 @@
-<ul class="grid-4">
+<ul class="{{ grid }}">
   {% for i in 0..6 %}
     {% include '@teaser-topic' with {
       "teaser_paragraph_text": teaser_paragraph_text,
@@ -6,7 +6,8 @@
       "teaser_uid":  teaser_uid ~ i,
       "teaser_link_text": teaser_link_text,
       "teaser_link_link": teaser_link_link,
-      "teaser_image_src": ''
+      "teaser_image_src": teaser_image_src,
+      "teaser_image_alt_text": teaser_image_alt_text
     } %}
   {% endfor %}
 </ul>

@@ -1,5 +1,5 @@
 {% if type == "overview-title" %}
-  <{{ heading|default('h1') }} class="overview-title"><span>{{ heading_text }}</span></{{ heading|default('h1') }}>
+  <{{ heading|default('h1') }} class="overview-title"><span class="overview-title-colon">{{ heading_text }}<span class="colon" aria-hidden="true"></span></span></{{ heading|default('h1') }}>
 {% elseif type == "collection-title" %}
   <{{ heading|default('h2') }} class="collection-title"><span>{{ heading_text }}</span></{{ heading|default('h2') }}>
 {% else %}

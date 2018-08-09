@@ -48,7 +48,7 @@ module.exports = {
       preview: '@preview',
       context: {
         heading: 'h1',
-        heading_text: 'Overview title',
+        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
         type: 'overview-title'
       }
     },
