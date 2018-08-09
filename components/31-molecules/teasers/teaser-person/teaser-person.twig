@@ -5,25 +5,29 @@
       <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
 
       {% include '@paragraph' with {
-      'text': teaser_paragraph_text
+        'text': teaser_paragraph_text
       } %}
 
       {% include '@link' with {
-      'text': teaser_link_text,
-      'aria_labelledby': teaser_uid,
-      'link': teaser_link_link,
-      'modifier': 'read-more standalone-link',
-      'title': null
+        'text': teaser_link_text,
+        'aria_labelledby': teaser_uid,
+        'link': teaser_link_link,
+        'modifier': 'read-more standalone-link',
+        'title': null
       } %}
     </div>
     <div class="content__top">
-      {% include '@figure' with {
-      "figure_image_src": teaser_image_src
-      } %}
+      <div class="person_image_wrapper">
+        {% include '@figure' with {
+          "figure_image_src": teaser_image_src
+        } %}
+
+        <div class="accolade-inverse bottom-left"></div>
+      </div>
 
       {% include '@tag' with {
-      "tag_text": teaser_tag,
-      "type": 'span-tag'
+        "tag_text": teaser_tag,
+        "type": 'span-tag'
       } %}
     </div>
   </article>

@@ -1,7 +1,7 @@
-.accolade {
-  $span: percentage(6 / 12);
-  $span-end: percentage(3 / 12);
+$span: percentage(6 / 12);
+$span-end: percentage(3 / 12);
 
+.accolade {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -150,5 +150,82 @@
     &::after {
       height: calc(#{$span-end});
     }
+  }
+}
+
+
+$span-inverse: percentage(2 / 12);
+$accolade-width: 2rem;
+$accolade-height: 1rem;
+
+.accolade-inverse {
+  position: absolute;
+  width: $accolade-width;
+  height: $accolade-height;
+  background: transparent svg-as-background('accolade', color('white'), $accolade-width, $accolade-height);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  content: '';
+
+  &.bottom-left,
+  &.bottom-center,
+  &.bottom-right {
+    bottom: 0;
+  }
+
+  &.top-left,
+  &.top-center,
+  &.top-right {
+    top: 0;
+    transform: rotate(180deg);
+  }
+
+  &.top-left,
+  &.bottom-left {
+    left: calc(#{$span-inverse});
+  }
+
+  &.top-center,
+  &.bottom-center {
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &.top-right,
+  &.bottom-right {
+    right: calc(#{$span-inverse});
+  }
+
+  &.left-top,
+  &.left-center,
+  &.left-bottom {
+    left: -($accolade-height/2);
+    transform: rotate(90deg);
+  }
+
+  &.right-top,
+  &.right-center,
+  &.right-bottom {
+    right: -($accolade-height/2);
+    transform: rotate(-90deg);
+  }
+
+  &.right-top,
+  &.left-top {
+    top: calc(#{$span-inverse});
+  }
+
+  &.right-center,
+  &.left-center {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &.right-bottom,
+  &.left-bottom {
+    bottom: calc(#{$span-inverse});
   }
 }
