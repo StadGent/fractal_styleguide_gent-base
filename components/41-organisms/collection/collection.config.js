@@ -12,20 +12,30 @@ module.exports = {
     teaser_title: 'Title text ',
     teaser_uid: 'uid',
     teaser_link_text: 'read more',
-    teaser_link_link: '#'
+    teaser_link_link: '#',
+    grid: 'grid-4'
   },
   variants: [
     {
       name: 'grid-4'
     },
     {
-      name: 'grid-3'
+      name: 'grid-3',
+      context: {
+        grid: 'grid-3'
+      }
     },
     {
-      name: 'grid-2'
+      name: 'grid-2',
+      context: {
+        grid: 'grid-2'
+      }
     },
     {
-      name: 'with show more'
+      name: 'with show more',
+      context: {
+        grid: 'grid-4'
+      }
     }
   ]
 };
