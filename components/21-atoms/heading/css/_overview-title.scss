@@ -15,12 +15,15 @@ h6 {
       padding: inherit;
       font-size: inherit;
 
-      &::after {
-        margin-left: .5rem;
-        font-size: 3.5rem;
-        line-height: .5;
-        content: ':';
-        vertical-align: -8%;
+      span {
+        &::after {
+          margin-left: .5rem;
+          font-size: 3.5rem;
+          line-height: .5;
+          content: ':';
+          speak: none;
+          vertical-align: -8%;
+        }
       }
     }
   }
