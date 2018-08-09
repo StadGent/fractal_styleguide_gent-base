@@ -4,7 +4,7 @@ module.exports = {
   name: 'Collections',
   status: 'alpha',
   handle: 'collection',
-  default: 'default',
+  default: 'grid-4',
   context: {
     teaser_image_src: 'https://via.placeholder.com/528x330&text=16:10+(528x330)',
     teaser_image_alt_text: 'alt text',
@@ -16,10 +16,13 @@ module.exports = {
   },
   variants: [
     {
-      name: 'default'
+      name: 'grid-4'
     },
     {
-      name: 'with images'
+      name: 'grid-3'
+    },
+    {
+      name: 'grid-2'
     },
     {
       name: 'with show more'
