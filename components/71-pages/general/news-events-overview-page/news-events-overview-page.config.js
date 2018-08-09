@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'News Overview page',
+  title: 'News and events overview page',
   status: 'alpha',
   preview: '@preview-overview-without-padding',
   context: {
