@@ -3,7 +3,7 @@ ul.grid-3,
 ul.grid-4 {
   @extend %list-no-style;
   width: 100%;
-  margin: 0;
+  margin: 0 0 3rem;
 
   @include phablet {
     display: flex;

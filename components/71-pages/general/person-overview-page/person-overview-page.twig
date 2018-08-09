@@ -1,0 +1,55 @@
+{% include '@header' with {
+"mijn_gent_block_items": [
+"<a href='javascript:(void);'>Mijn profiel</a>",
+"<a href='javascript:(void);'>Nieuwsbrieven</a>",
+"<a href='javascript:(void);'>Historiek</a>"
+],
+"mijn_gent_block_auth": "true",
+"header_search_id": "header-search",
+"header_search_label": "Search",
+"header_search_placeholder": "Search",
+"header_search_text": "Search",
+"breadcrumbs_items": [
+"<a href='https://stad.gent'>Stad.gent</a>",
+"<a href='#'>Overview</a>",
+"<a href='#'>Theme</a>",
+"<a href='#'>Subpage</a>",
+"<span>Page title</span>"
+]
+} %}
+
+<main class="person-overview-page">
+  <section class="overview-layout">
+    {% block person_overview_content %}
+      {% include '@heading' with {
+        "type": "overview-title",
+        "heading_text": "People overview"
+      } %}
+
+      {% include '@readspeaker-button' %}
+      <h2 class="visually-hidden">Overview</h2>
+      <ul class="grid-4">
+        {% for key, person in people %}
+          {% include '@teaser-person' with {
+            "teaser_uid": person.teaser_uid,
+            "teaser_paragraph_text": person.teaser_paragraph_text,
+            "teaser_title": person.teaser_title,
+            "teaser_link_text": person.teaser_link_text,
+            "teaser_link_link": person.teaser_link_link,
+            "teaser_image_src": person.teaser_image_src,
+            "teaser_image_alt_text": person.teaser_image_alt_text,
+            "teaser_tag": person.teaser_tag
+          } %}
+        {% endfor %}
+      </ul>
+
+      {% include '@pagination' with {
+        total: 20,
+        active: 4
+      }%}
+
+    {% endblock %}
+  </section>
+</main>
+
+{% include '@footer' %}
