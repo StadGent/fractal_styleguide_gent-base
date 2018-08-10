@@ -5,25 +5,27 @@
   font-size: .9rem;
   line-height: 1.8;
 
+  // Give each direct child a specific width.
+  // This is a fallback width given to all children of the detail layout.
   > * {
+    margin-bottom: 2rem;
+
     @include desktop {
       @include set-layout('width-7', 'offset-2');
     }
   }
 
-  > p {
-    margin-bottom: 2rem;
+  // All direct children of a detail layout should get default margins.
+  // Except heading tags and paragraphs.
+  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p) {
+    margin-top: 2rem;
+  }
 
+  // Paragraphs are an exception to the above rule.
+  > p {
     strong {
       font-size: inherit;
     }
-  }
-
-  .readspeaker-button {
-    display: block;
-    width: auto;
-    margin-top: -.4rem;
-    margin-bottom: .4rem;
   }
 
   > .quote,
@@ -37,8 +39,6 @@
 
   > .summary-box,
   > .cta-block {
-    margin-bottom: 2rem;
-
     @include desktop {
       @include set-layout('width-10', 'offset-1');
     }
@@ -60,20 +60,6 @@
     }
   }
 
-  > .quote,
-  > .image-gallery--wrapper,
-  > .help-block,
-  > .search-block,
-  > .video,
-  > .timeline {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  > .info-box {
-    margin-bottom: 2rem;
-  }
-
   > .quote {
     // Spot image escapes the container by 2.5rem.
     margin-top: 5.5rem;
@@ -93,6 +79,13 @@
     @include extra-wide;
   }
 
+  .readspeaker-button {
+    display: block;
+    width: auto;
+    margin-top: -.4rem;
+    margin-bottom: .4rem;
+  }
+
   .summary-text {
     font-weight: 600;
   }
@@ -105,14 +98,6 @@ aside.bottom {
   @extend %content-container;
 
   > * {
-    @include desktop {
-      @include set-layout('width-7', 'offset-2');
-    }
-  }
-
-  .document-box,
-  .extra-articles,
-  .related-box {
     @include desktop {
       @include set-layout();
       width: 100%;
