@@ -17,8 +17,11 @@
         width: span(4 of 8);
       }
 
-      > h3 {
+      @include desktop {
+        margin-bottom: 0;
+      }
 
+      > h3 {
         margin-bottom: .8rem;
 
         &:first-of-type {
