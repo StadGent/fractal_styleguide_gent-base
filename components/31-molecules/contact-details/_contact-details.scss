@@ -1,0 +1,44 @@
+.cta-block {
+  @include box-left;
+
+  &::before {
+    @include spot-image('download-light');
+  }
+
+  .inner-box {
+    p {
+      margin: 0;
+    }
+
+    li {
+      width: 100%;
+      margin-top: .8rem;
+
+      &:first-of-type a {
+        @extend %button-primary;
+        @include button;
+        @include button-icon;
+      }
+
+      &:last-of-type {
+        @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+        padding-top: .8rem;
+        border-top: 2px solid;
+      }
+
+      > a {
+        margin-right: 1rem;
+
+      }
+    }
+  }
+
+  .file-type {
+    text-transform: uppercase;
+
+    .file-size {
+      text-transform: lowercase;
+    }
+  }
+}
