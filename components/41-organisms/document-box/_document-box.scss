@@ -1,6 +1,5 @@
 .document-box {
   position: relative;
-  margin-bottom: 2rem;
 
   li {
     @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
