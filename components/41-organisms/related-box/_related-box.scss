@@ -1,14 +1,8 @@
 
 .related-box {
-  @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
   position: relative;
   margin-bottom: 2rem;
   padding-top: 2rem;
-  border-top: 2px solid;
-
-  @include tablet {
-    padding-top: 2rem;
-  }
 
   &-content {
     display: flex;
