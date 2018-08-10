@@ -100,7 +100,12 @@ aside.bottom {
   > * {
     @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
 
+    padding-top: 3rem;
     border-top: 2px solid;
+
+    @include tablet {
+      padding-top: 2rem;
+    }
 
     @include desktop {
       @include set-layout();
@@ -111,6 +116,11 @@ aside.bottom {
       padding-left: span(2 wide of 12);
     }
   }
+
+  > p {
+    padding-top: 0;
+    border-top: 0;
+  }
 }
 
 aside.top {
@@ -118,12 +128,6 @@ aside.top {
   margin: 5rem auto 0;
 
   > div:first-child {
-    padding-top: 3rem;
-
-    @include tablet {
-      padding-top: 2rem;
-    }
-
     &::before {
       @include spot-image('lightbulb', $bulb-image-width);
 
@@ -147,6 +151,7 @@ aside.bottom {
     @include wide;
 
     margin-bottom: 2rem;
+    padding-top: 1.2rem;
     border-top: 0;
 
     @include desktop {
