@@ -113,6 +113,14 @@ aside.top {
   margin: 5rem auto 0;
 
   > div:first-child {
+    @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+     padding-top: 3rem;
+     border-top: 2px solid;
+
+     @include tablet {
+       padding-top: 2rem;
+     }
+
     &::before {
       @include spot-image('lightbulb', $bulb-image-width);
 

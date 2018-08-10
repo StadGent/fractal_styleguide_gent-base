@@ -1,14 +1,6 @@
 .document-box {
-  @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
-
   position: relative;
   margin-bottom: 2rem;
-  padding-top: 3rem;
-  border-top: 2px solid;
-
-  @include tablet {
-    padding-top: 2rem;
-  }
 
   li {
     @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
