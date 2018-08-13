@@ -111,7 +111,8 @@
 @mixin box-no-icon {
   @include theme('background-color', 'color-primary--lighten-5', 'feedback-form-background');
 
-  padding: 1.2rem calc(#{$gutter-width} / 2);
+  position: relative;
+  padding: 2rem calc(#{$gutter-width} / 2);
   border-radius: border-radius('radius-1');
 }
 
