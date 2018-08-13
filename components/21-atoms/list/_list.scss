@@ -13,6 +13,19 @@ ol {
     @extend %list-no-style;
   }
 
+  &.inline {
+    @extend %list-no-style;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    li {
+      width: auto;
+      margin-right: $gutter-width;
+    }
+  }
+
   a {
     font-weight: normal;
   }
