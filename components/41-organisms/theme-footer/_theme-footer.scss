@@ -13,6 +13,10 @@
     flex-direction: column;
     padding: 0 $gutter-width;
 
+    @include desktop {
+      padding: 0;
+    }
+
     h3 {
       align-self: center;
     }
