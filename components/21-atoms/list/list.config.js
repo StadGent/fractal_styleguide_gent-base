@@ -40,6 +40,14 @@ module.exports = {
       }
     },
     {
+      name: 'Inline list',
+      handle: 'inline-list',
+      preview: '@preview',
+      context: {
+        type: 'inline'
+      }
+    },
+    {
       name: 'List with links',
       handle: 'links-list',
       preview: '@preview',

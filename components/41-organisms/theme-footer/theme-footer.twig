@@ -1,0 +1,49 @@
+<section class="theme-footer">
+  <h2 class="visually-hidden">{{ 'Theme footer' }}</h2>
+  <div class="content-container">
+    <div class="box-no-icon">
+      <ul class="grid-2">
+        <li>
+          {% include '@heading' with {
+            'type': 'h3',
+            'heading_text': 'Contact us'
+          } %}
+
+          {% include '@list'
+            with {
+              'type': 'icon-list',
+              'icon_items': [
+                '<i class="icon-phone" aria-hidden="true"></i><a href="tel:+32 9 210 10 10" alt="Gentinfo tel link">09 210 10 10</a>',
+                '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:gentinfo@stad.gent" alt="Gentinfo mail link">Gentinfo@stad.gent</a>',
+                '<i class="icon-document" aria-hidden="true"></i><a href="#">Contactformulier</a>'
+              ]
+            }
+          %}
+        </li>
+        <li>
+          {% include '@heading' with {
+            'type': 'h3',
+            'heading_text': 'Important links'
+          } %}
+
+          {% include '@list'
+            with {
+              'type': 'links',
+              'items': [
+                '<a href="#" alt="Link alt text">This is a link</a>',
+                '<a href="#" alt="Link alt text">This is a second link that is longer</a>',
+                '<a href="#">This is a third link</a>'
+              ]
+            }
+          %}
+        </li>
+      </ul>
+      <div class="accolade bottom-center "></div>
+    </div>
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': 'Follow this theme site on social media:'
+    } %}
+    {% include '@social-list' %}
+  </div>
+</section>
