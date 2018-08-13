@@ -38,10 +38,22 @@ ul.grid-4 {
       }
     }
 
+    @include tablet {
+      width: span(4 of 12);
+
+      &:nth-child(2n) {
+        margin-right: $gutter-width;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
     @include desktop {
       width: span(3 of 12);
 
-      &:nth-child(2n) {
+      &:nth-child(3n) {
         margin-right: $gutter-width;
       }
 
