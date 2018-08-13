@@ -6,12 +6,15 @@ $social-media-link-width: 1.6rem;
   align-items: center;
   justify-content: space-between;
   min-height: 2rem;
+  margin-bottom: 1rem;
 
   @include tablet {
     flex-wrap: nowrap;
+    margin-bottom: 0;
   }
 
-  > span {
+  > span,
+  > div {
     width: 100%;
     margin-bottom: 1.2rem;
     font-size: .7rem;
