@@ -222,3 +222,46 @@ a {
     }
   }
 }
+
+///
+/// External links other than group Ghent get an indicator.
+///
+%a-remove-indicator {
+  &[href^="http://"],
+  &[href^="https://"] {
+    &[href*="stad.gent"] {
+      &:not([download]):not(.standalone-link)::after {
+        content: none;
+      }
+
+      ///
+      /// Download links.
+      ///
+      &[download] {
+        @include icon(download, after);
+      }
+
+      ///
+      /// Stand alone links.
+      ///
+      &.standalone-link {
+        @extend %a-bounce-animation;
+        @include icon(arrow-right, after);
+      }
+    }
+  }
+
+  &.button {
+    &[href^="http://"],
+    &[href^="https://"] {
+      &[href*="stad.gent"] {
+        @extend %a-bounce-animation;
+        @include icon(arrow-right);
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}

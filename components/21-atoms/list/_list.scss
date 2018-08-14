@@ -94,11 +94,11 @@ ul {
         font-size: 1.5em;
         line-height: 1;
         vertical-align: middle;
-      }
 
-      span {
-        width: 85%;
-        float: left;
+        + span {
+          width: 85%;
+          float: left;
+        }
       }
     }
   }
