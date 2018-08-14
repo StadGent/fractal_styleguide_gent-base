@@ -3,10 +3,15 @@
   @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
 
   width: calc(100% + 2 * #{$gutter-width});
+  margin-top: 4rem;
   margin-right: -$gutter-width;
   margin-left: -$gutter-width;
   padding: 2.7rem 0 2.1rem;
   border-bottom: 2px solid;
+
+  + footer.footer {
+    margin-top: 0;
+  }
 
   .content-container {
     display: flex;
