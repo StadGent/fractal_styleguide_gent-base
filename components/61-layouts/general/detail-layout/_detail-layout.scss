@@ -160,4 +160,12 @@ aside.bottom {
       padding-left: span(1 wide of 12);
     }
   }
+
+  .changed-date {
+    @include desktop {
+      @include set-layout('width-9', 'offset-2');
+    }
+
+    padding: 0;
+  }
 }
