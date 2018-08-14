@@ -11,7 +11,7 @@
         'heading_text': 'Contacts'
       } %}
 
-      <ul class="main-contacts links">
+      <ul class="main-contacts">
         {% for contact in contacts %}
           <li>
             <address class="contact-fiche">
@@ -29,9 +29,40 @@
                 'modifier': 'contact-email'
               } %}
             </address>
+              {% if contact.opening_hours|length > 0 %}
+                <span class="opening-hours open">
+                  {{ 'Today open - ' }}<time>{{ contact.opening_hours }}</time>
+                </span>
+              {% else %}
+              <span class="opening-hours closed">
+                {{ 'Closed today' }}
+              </span>
+              {% endif %}
           </li>
         {% endfor %}
       </ul>
+      <h3>
+        <button class="accordion--button"
+                aria-expanded="false"
+                aria-controls="contact-box--content">
+          {{ 'There are 5 other contacts available' }}
+        </button>
+      </h3>
+
+      <div class="accordion--content"
+        id="contact-box--content">
+        <ul class="links">
+          {% for contact in other_contacts %}
+            <li>
+              {% include '@link' with {
+                'link': contact.link,
+                'text': contact.link_text,
+                'modifier': 'standalone-link'
+              } %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
 
     <div class="contact-box-column">
@@ -39,29 +70,28 @@
         'type': 'h3',
         'heading_text': 'Location'
       } %}
+
+      {% include '@paragraph' with {
+      "text": "Map stub",
+      } %}
+
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Authorized persons'
+      } %}
+
+      <ul class="links">
+        {% for contact in other_contacts %}
+          <li>
+            {% include '@link' with {
+              'link': contact.link,
+              'text': contact.link_text,
+              'modifier': 'standalone-link'
+            } %}
+          </li>
+        {% endfor %}
+      </ul>
+
     </div>
-  </div>
-
-  <h3>
-    <button class="accordion--button"
-            aria-expanded="false"
-            aria-controls="contact-box--content">
-      {{ 'There are 5 other documents available' }}
-    </button>
-  </h3>
-
-  <div class="accordion--content"
-    id="contact-box--content">
-    <ul class="links">
-      {% for contact in other_contacts %}
-        <li>
-          {% include '@link' with {
-            'link': contact.link,
-            'text': contact.link_text,
-            'modifier': 'standalone-link'
-          } %}
-        </li>
-      {% endfor %}
-    </ul>
   </div>
 </div>
