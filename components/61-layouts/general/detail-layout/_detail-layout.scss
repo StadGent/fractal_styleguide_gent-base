@@ -17,7 +17,7 @@
 
   // All direct children of a detail layout should get default margins.
   // Except heading tags and paragraphs.
-  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p) {
+  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(.box-top):not(.box-left) {
     margin-top: 2rem;
   }
 

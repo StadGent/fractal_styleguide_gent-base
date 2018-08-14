@@ -1,6 +1,4 @@
 .summary-box {
-  @include box-top;
-
   h2 {
     @extend %h4;
   }
