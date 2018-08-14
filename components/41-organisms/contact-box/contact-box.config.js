@@ -4,6 +4,7 @@ module.exports = {
   title: 'Contact box',
   status: 'alpha',
   context: {
+    unique_id: '1',
     contacts: [
       {
         link: '#',
