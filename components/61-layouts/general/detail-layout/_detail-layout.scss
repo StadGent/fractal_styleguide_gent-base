@@ -8,10 +8,8 @@
   // Give each direct child a specific width.
   // This is a fallback width given to all children of the detail layout.
   > * {
-    & {
-      &:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-        margin-bottom: 2rem;
-      }
+    &:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      margin-bottom: 2rem;
     }
 
     @include desktop {
