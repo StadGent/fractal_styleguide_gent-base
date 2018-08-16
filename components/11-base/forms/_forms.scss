@@ -29,10 +29,6 @@ $field-icon-padding: 2.5rem;
   @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
   @include theme('color', 'color-tertiary', 'fields-color');
 
-  [class^="box-"] & {
-    @include theme('background', 'color-secondary', 'box-fields-background');
-  }
-
   &:focus {
     @include theme('border-color', 'color-primary--lighten-2', 'fields-border-focus-color');
     @include theme('background', 'color-primary--lighten-5', 'fields-focus-background');
@@ -170,10 +166,6 @@ $field-icon-padding: 2.5rem;
       &::before {
         @include theme('background-color', 'color-tertiary--lighten-6', 'checkbox-background-color');
         @include theme('border-color', 'color-tertiary--lighten-2', 'checkbox-border-color');
-
-        [class^="box-"] & {
-          @include theme('background-color', 'color-secondary', 'checkbox-background-color');
-        }
       }
 
       &::after {
@@ -192,10 +184,6 @@ $field-icon-padding: 2.5rem;
         @include theme('border-color', 'color-tertiary--lighten-2', 'radio-border-color');
 
         border-radius: border-radius('radius-4');
-
-        [class^="box-"] & {
-          @include theme('background-color', 'color-secondary', 'checkbox-background-color');
-        }
       }
 
       &::after {

@@ -1,3 +1,13 @@
+.box-left,
+.box-top,
+.box-no-icon {
+  input[type="checkbox"] + label::before,
+  input[type="radio"] + label::before,
+  input:not([disabled]):not([type="submit"]) {
+    @include theme('background-color', 'color-secondary', 'box-input-background-color');
+  }
+}
+
 .box-left {
   @include theme('background-color', 'color-primary--lighten-5', 'search-block-background');
 
