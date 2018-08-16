@@ -1,16 +1,18 @@
 .teaser {
-
   position: relative;
   list-style: none;
 
   figure {
+    &:only-child {
+      margin-bottom: .8rem;
+    }
+
     figcaption {
       display: none;
     }
   }
 
   .teaser-content {
-
     a {
       position: relative;
       z-index: 2;
@@ -25,7 +27,6 @@
       margin-bottom: .4rem;
       line-height: 1.7;
     }
-
   }
 
   a.teaser-overlay-link {
