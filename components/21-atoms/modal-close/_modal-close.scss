@@ -1,0 +1,12 @@
+button[class*="icon-"].modal-close {
+  padding: 0;
+  border: 0;
+  font-size: .8rem;
+  font-weight: 400;
+  background: transparent;
+
+  &::before {
+    order: 0;
+    margin: 0 .5rem 0 0;
+  }
+}
