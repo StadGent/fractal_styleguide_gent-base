@@ -15,8 +15,6 @@
   }
 
   input[type="search"] {
-    @include theme('background-color', 'color-secondary', 'search-block-input-background');
-
     flex: 1 1 $bp-mobile;
     margin-right: .4rem;
     padding-left: 2.4rem;

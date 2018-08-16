@@ -3,7 +3,8 @@
 .box-no-icon {
   input[type="checkbox"] + label::before,
   input[type="radio"] + label::before,
-  input:not([disabled]):not([type="submit"]) {
+  input:not([disabled]):not([type="submit"]),
+  textarea {
     @include theme('background-color', 'color-secondary', 'box-input-background-color');
   }
 }
