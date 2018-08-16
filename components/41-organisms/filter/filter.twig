@@ -1,0 +1,49 @@
+<div class="sidebar-layout filter">
+  <section id="filter" class="filter-section sidebar modal" tabindex="-1">
+
+    <div class="modal-actions">
+      {% include '@modal-close' %}
+    </div>
+    <h2>Filter the results</h2>
+    <div class="form-item">
+      {% include '@label' with {
+        "label": "Name",
+        "for": "id_name",
+        "label_optional": "Optional"
+      } %}
+      {% include '@input-text'
+        with {
+        "textfield_id": "id_name",
+        "textfield_name": "name"
+      }
+      %}
+    </div>
+    <div class="form-item">
+      {% include '@label' with {
+        "label": "Category",
+        "for": "id_category",
+        "label_optional": "Optional"
+      } %}
+      {% include '@input-text'
+        with {
+        "textfield_id": "id_category",
+        "textfield_name": "category"
+      }
+      %}
+    </div>
+    {% include '@checkbox-with-filter'
+      with {
+      "label": "Checkboxes with filter",
+      "label_optional": "Optional",
+    } %}
+
+  </section>
+
+  <section class="content">
+    {% include '@heading' with {
+      "type": "overview-title",
+      "heading_text": "Filtercomponent"
+    } %}
+  </section>
+
+</div>

@@ -1,0 +1,61 @@
+.filter {
+  .filter-section {
+    display: none;
+    padding-top: .7rem;
+
+    @include tablet {
+      display: block;
+    }
+
+    &.visible {
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+      width: 100vw;
+      height: 100vh;
+      overflow-y: scroll;
+      background-color: color('white');
+      z-index: 200;
+
+      .modal-actions {
+        display: block;
+      }
+    }
+
+    .modal-actions {
+      display: none;
+      text-align: right;
+
+      button.close {
+        padding: 0;
+        border: 0;
+        font-size: .8rem;
+        font-weight: 400;
+        background: transparent;
+      }
+    }
+
+    form {
+      margin-bottom: 2rem;
+    }
+  }
+  .result-section {
+    .result__show-filters {
+      margin-bottom: 2rem;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .selected-filters {
+      margin-bottom: 1rem;
+
+      .tag {
+        margin: 0 .5rem .5rem 0;
+      }
+    }
+  }
+}
