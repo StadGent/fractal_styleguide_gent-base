@@ -5,45 +5,89 @@
       {% include '@modal-close' %}
     </div>
     <h2>Filter the results</h2>
-    <div class="form-item">
-      {% include '@label' with {
-        "label": "Name",
-        "for": "id_name",
-        "label_optional": "Optional"
-      } %}
-      {% include '@input-text'
+    <form action="#result">
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Name",
+          "for": "id_name",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input-text'
+          with {
+          "textfield_id": "id_name",
+          "textfield_name": "name"
+        } %}
+      </div>
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Category",
+          "for": "id_category",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input-text'
+          with {
+          "textfield_id": "id_category",
+          "textfield_name": "category"
+        } %}
+      </div>
+      {% include '@checkbox-with-filter'
         with {
-        "textfield_id": "id_name",
-        "textfield_name": "name"
-      }
-      %}
-    </div>
-    <div class="form-item">
-      {% include '@label' with {
-        "label": "Category",
-        "for": "id_category",
-        "label_optional": "Optional"
+        "label": "Checkboxes with filter",
+        "label_optional": "Optional",
       } %}
-      {% include '@input-text'
-        with {
-        "textfield_id": "id_category",
-        "textfield_name": "category"
-      }
-      %}
-    </div>
-    {% include '@checkbox-with-filter'
-      with {
-      "label": "Checkboxes with filter",
-      "label_optional": "Optional",
-    } %}
 
+      <button type="submit" class="button button-primary">Search</button>
+
+    </form>
   </section>
 
-  <section class="content">
+  <section class="content result-section" id="result">
     {% include '@heading' with {
       "type": "overview-title",
       "heading_text": "Filtercomponent"
     } %}
+
+    {% include '@readspeaker-button' %}
+
+    <div class="selected-filters">
+      <h2>U koos voor:</h2>
+      <span :key="filter.key" class="tag filter">
+        Filter one
+        <button><span class="visually-hidden">Remove this filter</span></button>
+      </span>
+      <span :key="filter.key" class="tag filter">
+        Filter two
+        <button><span class="visually-hidden">Remove this filter</span></button>
+      </span>
+      <a href="#">Remove all filters</a>
+    </div>
+
+    <button type="button"
+            class="button button-primary icon-filter result__show-filters modal-trigger"
+            aria-expanded="false"
+            aria-controls="filter">Toon filters</button>
+
+    <h2>We have found 666 results</h2>
+    <ul class="grid-4">
+      {% for key, person in people %}
+        {% include '@teaser-person' with {
+          "teaser_uid": person.teaser_uid,
+          "teaser_paragraph_text": person.teaser_paragraph_text,
+          "teaser_title": person.teaser_title,
+          "teaser_link_text": person.teaser_link_text,
+          "teaser_link_link": person.teaser_link_link,
+          "teaser_image_src": person.teaser_image_src,
+          "teaser_image_alt_text": person.teaser_image_alt_text,
+          "teaser_tag": person.teaser_tag
+        } %}
+      {% endfor %}
+    </ul>
+
+    {% include '@pagination' with {
+      total: 20,
+      active: 4
+    }%}
+
   </section>
 
 </div>
