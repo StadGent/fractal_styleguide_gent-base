@@ -5,6 +5,7 @@
       <span class="label-optional">({{ label_optional }})</span>
     {% endif %}
   </legend>
+  {% if field_description %}
   <div class="form-columns">
     <div class="form-item-column">
       {% include '@field-description' with {
@@ -12,16 +13,21 @@
       } %}
     </div>
     <div class="form-item-column">
-
+  {% endif %}
       <div class="checkbox-filter__selected">
 
       </div>
       <div class="checkbox-filter__modal">
-
-        <button type="button" class="button icon-cross checkbox-filter__close"><span>Close</span><i class="icon-close" aria-hidden="true"></i></button>
+        <div class="modal-actions">
+          <button type="button" class="button icon-cross modal-close checkbox-filter__close"><span>Close</span><i class="icon-close" aria-hidden="true"></i></button>
+        </div>
 
         <header>
-          <h3>{{ label }} <span class="label-optional">({{ label_optional }})</span></h3>
+          <h3>{{ label }}
+            {% if label_optional %}
+              <span class="label-optional">({{ label_optional }})</span>
+            {% endif %}
+          </h3>
         </header>
         <div class="form-item">
           <label for="checkboxes__filter_id_{{ modifier }}">Filter the list below</label>
@@ -62,6 +68,8 @@
         "modifier": "success"
         } %}
       {% endif %}
-    </div>
+  {% if field_description %}
+      </div>
   </div>
+  {% endif %}
 </fieldset>
