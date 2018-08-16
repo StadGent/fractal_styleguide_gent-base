@@ -89,4 +89,10 @@
   position: relative;
   padding: 2rem calc(#{$gutter-width} / 2);
   border-radius: border-radius('radius-1');
+
+  .inner-box {
+    @include desktop {
+      @include set-layout('width-10', 'offset-1');
+    }
+  }
 }
