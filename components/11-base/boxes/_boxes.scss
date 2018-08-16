@@ -1,19 +1,11 @@
-///
-///  Helper function to style boxes with an icon in a left aligned column.
-///
-/// @since 3.0.0
-/// @group tools
-/// @access public
-/// @author Gert-Jan Meire
-///
-@mixin box-left {
+.box-left {
   @include theme('background-color', 'color-primary--lighten-5', 'search-block-background');
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 3.1rem;
+  margin-top: 4.5rem;
   padding: 0 calc(#{$gutter-width} / 2) 1.6rem;
 
   @include tablet {
@@ -46,15 +38,7 @@
   }
 }
 
-///
-///  Helper function to style boxes with an icon in the top right corner.
-///
-/// @since 3.0.0
-/// @group tools
-/// @access public
-/// @author Gert-Jan Meire
-///
-@mixin box-top {
+.box-top {
   display: flex;
   position: relative;
   flex-wrap: wrap;
@@ -99,31 +83,10 @@
   }
 }
 
-
-///
-///  Helper function to style boxes without an icon.
-///
-/// @since 3.0.0
-/// @group tools
-/// @access public
-/// @author Gert-Jan Meire
-///
-@mixin box-no-icon {
+.box-no-icon {
   @include theme('background-color', 'color-primary--lighten-5', 'feedback-form-background');
 
   position: relative;
   padding: 2rem calc(#{$gutter-width} / 2);
   border-radius: border-radius('radius-1');
-}
-
-.box-left {
-  @include box-left;
-}
-
-.box-top {
-  @include box-top;
-}
-
-.box-no-icon {
-  @include box-no-icon;
 }

@@ -24,13 +24,13 @@
   <h3>
     <button class="accordion--button"
             aria-expanded="false"
-            aria-controls="documents--content">
+            aria-controls="documents--content--documentbox-{{ unique_id }}">
       {{ 'There are %s other documents available'|format(other_documents|length) }}
     </button>
   </h3>
 
   <div class="accordion--content"
-    id="documents--content">
+    id="documents--content--documentbox-{{ unique_id }}">
     <ul class="links">
       {% for document in other_documents %}
         <li>

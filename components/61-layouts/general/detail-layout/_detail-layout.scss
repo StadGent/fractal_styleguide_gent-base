@@ -8,7 +8,9 @@
   // Give each direct child a specific width.
   // This is a fallback width given to all children of the detail layout.
   > * {
-    margin-bottom: 2rem;
+    &:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      margin-bottom: 2rem;
+    }
 
     @include desktop {
       @include set-layout('width-7', 'offset-2');
@@ -17,7 +19,7 @@
 
   // All direct children of a detail layout should get default margins.
   // Except heading tags and paragraphs.
-  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p) {
+  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(.box-top):not(.box-left) {
     margin-top: 2rem;
   }
 
@@ -159,5 +161,13 @@ aside.bottom {
 
       padding-left: span(1 wide of 12);
     }
+  }
+
+  .changed-date {
+    @include desktop {
+      @include set-layout('width-9', 'offset-2');
+    }
+
+    padding: 0;
   }
 }

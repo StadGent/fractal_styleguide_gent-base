@@ -4,12 +4,14 @@ module.exports = {
   title: 'Contact box',
   status: 'alpha',
   context: {
+    unique_id: '1',
     contacts: [
       {
         link: '#',
         link_text: 'Thomas Vandersteen',
         address: 'Kasteelwegel 23<br />9000 Gent',
-        email: 'thomas.vandersteen@stad.gent'
+        email: 'thomas.vandersteen@stad.gent',
+        opening_hours: 'From 10:00 till 18:00'
       },
       {
         link: '#',
@@ -19,6 +21,16 @@ module.exports = {
       }
     ],
     other_contacts: [
+      {
+        link: '#',
+        link_text: 'Thomas Vandersteen'
+      },
+      {
+        link: '#',
+        link_text: 'Tester De Test'
+      }
+    ],
+    authorized_persons: [
       {
         link: '#',
         link_text: 'Thomas Vandersteen'

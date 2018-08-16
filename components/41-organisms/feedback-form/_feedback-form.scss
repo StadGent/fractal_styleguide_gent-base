@@ -1,6 +1,4 @@
 .feedback-form {
-  @include box-no-icon;
-
   > * {
     max-width: $six-of-bp-container;
   }
