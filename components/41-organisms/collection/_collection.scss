@@ -85,7 +85,7 @@ ul.grid-3 {
       width: span(4 of 12);
 
       &:nth-child(2n) {
-        margin-right: auto;
+        margin-right: $gutter-width;
       }
 
       &:nth-child(3n) {
