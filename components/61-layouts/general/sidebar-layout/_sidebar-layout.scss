@@ -13,7 +13,7 @@
       padding-right: gutter();
     }
 
-    @include tablet {
+    @include desktop {
       width: span(3 of 12);
     }
   }
@@ -25,7 +25,7 @@
       width: span(8 of 12);
     }
 
-    @include tablet {
+    @include desktop {
       width: span(9 of 12);
     }
   }
