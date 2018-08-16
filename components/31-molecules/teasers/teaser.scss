@@ -3,10 +3,6 @@
   list-style: none;
 
   figure {
-    &:only-child {
-      margin-bottom: .8rem;
-    }
-
     figcaption {
       display: none;
     }
@@ -26,6 +22,12 @@
     p {
       margin-bottom: .4rem;
       line-height: 1.7;
+    }
+  }
+
+  .content__top {
+    > * {
+      margin-bottom: .8rem;
     }
   }
 
