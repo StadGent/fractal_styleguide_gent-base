@@ -81,7 +81,7 @@
       "name": "styleguide-default-cyan",
       "handle": "styleguide",
       "context": {
-        "modifier": "cs--default"
+        "modifier": "cs--cyan"
       }
     },
     {
