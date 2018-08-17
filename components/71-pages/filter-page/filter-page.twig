@@ -19,7 +19,10 @@
 } %}
 
 <main class="filter-page">
-  {% include '@filter' %}
+  {% include '@filter' with {
+    'checkboxes': checkboxes,
+    'results': teasers
+  }%}
 </main>
 
 {% include '@footer' %}
