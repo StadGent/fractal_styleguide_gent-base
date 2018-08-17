@@ -88,6 +88,14 @@
     );
 
     /**
+     * Container to display the number of selected values.
+     * @type {Element}
+     */
+    const countSpan = elem.querySelector(
+      options.countSpan || '.checkbox-filter__count'
+    );
+
+    /**
      * Store the button that triggered the modal.
      * @type {null|Element}
      */
@@ -199,6 +207,7 @@
     const toggleModal = () => {
       // hide
       if (modal.classList.contains('visible')) {
+        countSpan.innerText = selectedContainer.children.length;
         openBtn.setAttribute('aria-expanded', 'false');
         modal.setAttribute('aria-hidden', 'true');
         modal.classList.remove('visible');

@@ -20,7 +20,7 @@
       return;
     }
 
-    if (!modal.id) {
+    if (!modal || !modal.id) {
       return;
     }
 
