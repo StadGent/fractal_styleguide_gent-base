@@ -40,7 +40,6 @@
       drawer.classList.remove('js-opened');
       overlay.classList.remove('js-opened');
       document.removeEventListener('keydown', handleKeyboardInput);
-      tabTrap.reset();
 
       // return focus to the trigger
       if (openbtn) {
