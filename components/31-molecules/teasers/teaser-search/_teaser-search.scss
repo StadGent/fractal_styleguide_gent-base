@@ -8,6 +8,7 @@
   &:first-of-type {
     @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
 
+    margin-top: 1.2rem;
     border-top: 2px solid;
   }
 }
