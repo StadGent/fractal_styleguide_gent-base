@@ -87,8 +87,24 @@
       }
     }
 
-    ul {
+    ul.filter__results {
       margin: 0 0 2rem;
+    }
+
+    .pager {
+      @include tablet {
+        li.previous,
+        li.next {
+          display: none;
+        }
+      }
+
+      @include desktop {
+        li.previous,
+        li.next {
+          display: block;
+        }
+      }
     }
   }
 }

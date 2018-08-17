@@ -81,7 +81,7 @@
             aria-controls="filter">Show filters</button>
 
     <h2>We have found 666 results</h2>
-    <ul>
+    <ul class="filter__results">
       {% for key, result in results %}
         {% include '@teaser-search' with {
           "teaser_uid": result.teaser_uid,
