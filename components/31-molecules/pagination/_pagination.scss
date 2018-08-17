@@ -3,12 +3,11 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  ul {
-    @include tablet {
-      flex-basis: auto;
-      justify-content: flex-start;
-    }
+  @include tablet {
+    justify-content: flex-end;
+  }
 
+  ul {
     display: flex;
     flex: 1;
     flex-basis: 100%;
@@ -16,6 +15,11 @@
     justify-content: center;
     margin: 0;
     list-style: none;
+
+    @include tablet {
+      flex-basis: auto;
+      justify-content: flex-start;
+    }
 
     li {
       @include theme('color', 'color-primary', 'link-color');
@@ -29,18 +33,18 @@
 
     a,
     li.active {
-      @include phablet {
-        padding-right: 1rem;
-        padding-left: 1rem;
-        font-size: 1rem;
-      }
-
       padding-right: .4rem;
       padding-left: .4rem;
       font-size: .8rem;
       font-weight: 600;
       line-height: 1.2;
       text-decoration: none;
+
+      @include phablet {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 1rem;
+      }
     }
 
     li.spacing {
