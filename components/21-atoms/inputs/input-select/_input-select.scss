@@ -5,9 +5,9 @@ select {
     // Apply the default section as default color scheme if there is no section
     // defined in the DOM.
     .cs--#{$theme} & {
-        &,
-        &:focus {
-        $fill-color: color(#{$theme});
+      &,
+      &:focus {
+        $fill-color: set-themified-property($colors, 'color-primary', 'link-color');
         $svg-shevron-down: svg-icon('shevron-down', $fill-color, 24, 24);
 
         padding-right: 3.8rem;
