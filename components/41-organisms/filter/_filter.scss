@@ -8,16 +8,16 @@
     }
 
     &.visible {
-      position: fixed;
       display: block;
+      position: fixed;
       top: 0;
       left: 0;
-      padding: 1rem;
       width: 100vw;
       height: 100vh;
-      overflow-y: scroll;
+      padding: 1rem;
       background-color: color('white');
       z-index: 200;
+      overflow-y: scroll;
 
       .modal-actions {
         display: block;
@@ -31,9 +31,9 @@
       button.close {
         padding: 0;
         border: 0;
+        background: transparent;
         font-size: .8rem;
         font-weight: 400;
-        background: transparent;
       }
     }
 
@@ -41,6 +41,7 @@
       margin-bottom: 2rem;
     }
   }
+
   .result-section {
 
     h2 {
@@ -60,6 +61,10 @@
 
       .tag {
         margin: 0 .5rem .5rem 0;
+      }
+
+      a {
+        white-space: nowrap;
       }
     }
   }

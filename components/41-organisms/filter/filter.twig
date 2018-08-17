@@ -34,6 +34,7 @@
         with {
         "label": "Checkboxes with filter",
         "label_optional": "Optional",
+        "options": checkboxes
       } %}
 
       <button type="submit" class="button button-primary">Search</button>
@@ -50,7 +51,7 @@
     {% include '@readspeaker-button' %}
 
     <div class="selected-filters">
-      <h2>U koos voor:</h2>
+      <h2>You have selected:</h2>
       <span :key="filter.key" class="tag filter">
         Filter one
         <button><span class="visually-hidden">Remove this filter</span></button>
