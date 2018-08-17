@@ -32,7 +32,7 @@
       </div>
       {% include '@checkbox-with-filter'
         with {
-        "label": "Checkboxes with filter",
+        "label": "Activities",
         "label_optional": "Optional",
         "options": checkboxes
       } %}
@@ -48,7 +48,7 @@
           "textfield_name": "type"
         } %}
       </div>
-      <button type="submit" class="button button-primary filter__submit">Search</button>
+      <button type="submit" class="button button-primary filter__submit">Show result</button>
 
     </form>
   </section>
@@ -77,7 +77,7 @@
     <button type="button"
             class="button button-primary icon-filter result__show-filters modal-trigger"
             aria-expanded="false"
-            aria-controls="filter">Toon filters</button>
+            aria-controls="filter">Show filters</button>
 
     <h2>We have found 666 results</h2>
     <ul class="grid-4">
@@ -97,7 +97,7 @@
 
     {% include '@pagination' with {
       total: 20,
-      active: 4
+      active: 17
     }%}
 
   </section>

@@ -39,6 +39,21 @@
 
     form {
       margin-bottom: 2rem;
+
+      // style first level labels as headings
+      > .form-item > label,
+      > fieldset.form-item > legend {
+        @extend %h3;
+      }
+
+      > fieldset {
+        padding: 0;
+        border: 0;
+      }
+    }
+
+    .label-optional {
+      display: none;
     }
 
     .filter__submit {
