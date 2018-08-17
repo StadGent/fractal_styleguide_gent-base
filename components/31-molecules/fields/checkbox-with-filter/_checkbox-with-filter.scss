@@ -15,14 +15,14 @@
     background-color: color('white');
     box-shadow: $box-shadow-primary color('dark-gray', -4);
     z-index: 999;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     @include tablet {
       top: 10vh;
       left: 10vw;
       width: 80vw;
       height: 80vh;
-      padding: 2rem;
+      padding: .5rem 2rem 2rem;
     }
 
     &.visible {
@@ -30,14 +30,12 @@
 
       + .overlay {
         display: block;
+        cursor: pointer;
       }
-    }
 
-    header {
-      margin-top: 2rem;
-
-      @include tablet {
-        margin-top: 0;
+      .modal-actions {
+        display: block;
+        text-align: right;
       }
     }
 
@@ -82,44 +80,6 @@
         padding-left: 2rem;
       }
     }
-
-    button.checkbox-filter__close {
-      position: fixed;
-      top: 0;
-      right: 0;
-      justify-content: flex-end;
-      width: 100vw;
-      border: 0;
-      background-color: color('white');
-      font-weight: normal;
-
-      @include tablet {
-        top: 10vh;
-        right: 10vw;
-        width: auto;
-      }
-
-      span {
-        display: inline-block;
-        width: auto;
-        transition: opacity .2s ease-in-out;
-        opacity: 1;
-        overflow: hidden;
-
-        @include tablet {
-          width: 0;
-          opacity: 0;
-        }
-      }
-
-      &:hover,
-      &:focus {
-        span {
-          width: auto;
-          opacity: 1;
-        }
-      }
-    }
   }
 
   .overlay {
@@ -131,7 +91,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    opacity: .5;
+    opacity: .7;
     z-index: 998;
   }
 }
