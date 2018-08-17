@@ -9,7 +9,7 @@ window.gent_styleguide = (function () {
    * @constructor
    */
   function TabTrap(container) {
-    var focusables = getFocusables(container);
+    let focusables = getFocusables(container);
 
     /**
      * Returns all focusable elements within a given container.
@@ -18,7 +18,7 @@ window.gent_styleguide = (function () {
      * @return {array} focusable elements
      */
     function getFocusables(container) {
-      var focusables = container.querySelectorAll(
+      let focusables = container.querySelectorAll(
         'a[href], ' +
         'area[href], ' +
         'input:not([disabled]):not([hidden]), ' +
