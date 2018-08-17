@@ -97,23 +97,20 @@
 
       switch (keyCode) {
         case 9: // tab
-          e.preventDefault();
           if (e.shiftKey) {
-            tabTrap.back();
+            tabTrap.back(e);
           }
           else {
-            tabTrap.next();
+            tabTrap.next(e);
           }
           break;
         case 40: // arrow down
         case 39: // arrow right
-          e.preventDefault();
-          tabTrap.next();
+          tabTrap.next(e);
           break;
         case 38: // arrow up
         case 37: // arrow left
-          e.preventDefault();
-          tabTrap.back();
+          tabTrap.back(e);
           break;
         case 36: // home
           e.preventDefault();

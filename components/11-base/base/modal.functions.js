@@ -124,6 +124,7 @@
           break;
         case 27: // esc
           e.preventDefault();
+          close();
           break;
       }
     };
