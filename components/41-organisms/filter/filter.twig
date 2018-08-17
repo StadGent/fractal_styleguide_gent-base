@@ -36,8 +36,19 @@
         "label_optional": "Optional",
         "options": checkboxes
       } %}
-
-      <button type="submit" class="button button-primary">Search</button>
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Type",
+          "for": "id_type",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input-text'
+          with {
+          "textfield_id": "id_type",
+          "textfield_name": "type"
+        } %}
+      </div>
+      <button type="submit" class="button button-primary filter__submit">Search</button>
 
     </form>
   </section>
