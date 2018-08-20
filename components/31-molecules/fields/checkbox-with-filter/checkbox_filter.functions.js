@@ -227,10 +227,10 @@
         while ((elem = elem.parentElement) && !elem.classList.contains('modal')) {}
 
         if (elem && elem.classList.contains('visible')) {
-          elem.style.overflow = null;
+          elem.style.overflow = '';
         }
         else {
-          document.body.style.overflow = null;
+          document.body.style.overflow = '';
         }
       }
       // show

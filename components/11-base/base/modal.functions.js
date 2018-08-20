@@ -97,7 +97,7 @@
       modal.classList.remove('visible');
       modal.setAttribute('aria-hidden', 'true');
       trigger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = null;
+      document.body.style.overflow = '';
       document.removeEventListener('keydown', handleKeyboardInput);
       trigger.focus();
     };
