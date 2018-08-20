@@ -1,11 +1,11 @@
 .box-left,
 .box-top,
 .box-no-icon {
-  input[type="checkbox"] + label::before,
-  input[type="radio"] + label::before,
+  input[type="checkbox"]:not([disabled]) + label::before,
+  input[type="radio"]:not([disabled]) + label::before,
   input:not([disabled]):not([type="submit"]),
-  select,
-  textarea {
+  select:not([disabled]),
+  textarea:not([disabled]) {
     @include theme('background-color', 'color-secondary', 'box-input-background-color');
   }
 }
