@@ -63,20 +63,20 @@
 
       display: flex;
       position: fixed;
-      bottom: 0;
+      top: 100vh;
       left: 0;
       align-items: center;
       width: 100vw;
       height: 3rem;
+      margin-top: -3rem;
       padding-left: 1rem;
       border-top: 2px solid;
       background-color: color('white');
 
       @include tablet {
-        bottom: 10vh;
+        top: 90vh;
         left: 10vw;
         width: 80vw;
-        height: 3rem;
         padding-left: 2rem;
       }
     }
