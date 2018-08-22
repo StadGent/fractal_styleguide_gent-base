@@ -135,7 +135,11 @@ nav.menu {
         margin-right: 1rem;
       }
 
-      a {
+      a,
+      a[href^="mailto:"],
+      a[download],
+      a[href^="http://"],
+      a[href^="https://"] {
         @include theme('color', 'color-tertiary', 'default-text-color');
         display: inline-block;
         margin-bottom: 1rem;
@@ -156,6 +160,7 @@ nav.menu {
           transition: width 100ms;
           border-bottom: 2px solid;
           content: '';
+          overflow: visible;
         }
 
         &.active,
