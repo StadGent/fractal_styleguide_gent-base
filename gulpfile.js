@@ -284,18 +284,26 @@ gulp.task('js:dist', () => {
  *  minify
  *
  */
-gulp.task('js:build', () => {
-  return gulp.src(['components/**/*.js', '!components/**/*.config.js'])
-    .pipe(rename({
-      dirname: '',
-      suffix: '-min'
-    }))
-    .pipe(babel({
-      presets: ['env', 'es2015']
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/styleguide/js/'));
-});
+gulp.task('js:build', gulp.parallel(
+  () => {
+    return gulp.src(['components/**/*.js', '!components/**/*.config.js'])
+      .pipe(rename({
+        dirname: '',
+        suffix: '-min'
+      }))
+      .pipe(babel({
+        presets: ['env', 'es2015']
+      }))
+      .pipe(uglify())
+      .pipe(gulp.dest('./build/styleguide/js/'));
+  },
+  () => {
+    return gulp.src(['components/**/*.js', '!components/**/*.config.js'])
+      .pipe(rename({
+        dirname: ''
+      }))
+      .pipe(gulp.dest('./build/styleguide/js/'));
+  }));
 
 /*
  *
@@ -663,12 +671,12 @@ gulp.task('compile', gulp.series(
     'styles:build',
     'styles:dist',
     'styles:inject',
-    'styles:extract',
     'sassdoc',
     'js:build',
     'js:dist',
     'images:minify'
-  )
+  ),
+  'styles:extract'
 ), callback => callback());
 
 gulp.task('compile:dev', gulp.series(
