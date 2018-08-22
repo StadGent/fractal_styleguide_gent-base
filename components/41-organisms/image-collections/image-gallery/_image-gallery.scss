@@ -86,12 +86,12 @@
     // two on each row
     // |____||____|
     li {
-      width: calc((100% / 2) - #{$gutter-width});
+      width: calc((100% / 2) - #{$gutter-width} - .5px);
     }
 
     .image-gallery__show-more {
       width: calc((100% / 2) - #{$gutter-width});
-      padding-bottom: calc(((100% / 2) - #{$gutter-width}) / 1.6);
+      padding-bottom: calc(((100% / 2) - #{$gutter-width}) / 1.6 - .5px);
     }
   }
 
