@@ -8,19 +8,26 @@
   // Give each direct child a specific width.
   // This is a fallback width given to all children of the detail layout.
   > * {
-    &:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-      margin-bottom: 2rem;
-    }
-
     @include desktop {
       @include set-layout('width-7', 'offset-2');
     }
   }
 
-  // All direct children of a detail layout should get default margins.
-  // Except heading tags and paragraphs.
-  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(.box-top):not(.box-left):not(.readspeaker-button) {
+  > div,
+  > section,
+  > aside,
+  > article {
     margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  // // All direct children of a detail layout should get default margins.
+  // // Except heading tags and paragraphs.
+  // > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(.box-top):not(.box-left):not(.readspeaker-button) {
+  // }
+
+  > ul {
+    padding-left: 2rem;
   }
 
   // Paragraphs are an exception to the above rule.
@@ -40,7 +47,8 @@
   }
 
   > .summary-box,
-  > .cta-block {
+  > .cta-block,
+  > .contact-details {
     @include desktop {
       @include set-layout('width-10', 'offset-1');
     }

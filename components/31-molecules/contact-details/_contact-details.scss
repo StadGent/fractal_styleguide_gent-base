@@ -1,44 +1,25 @@
-.cta-block {
-  @include box-left;
-
-  &::before {
-    @include spot-image('download-light');
-  }
-
+.contact-details {
   .inner-box {
-    p {
-      margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    > h2 {
+      width: 100%;
     }
 
-    li {
-      width: 100%;
-      margin-top: .8rem;
+    &::before {
+      @include spot-image('book-light', 7rem);
+    }
+  }
 
-      &:first-of-type a {
-        @extend %button-primary;
-        @include button;
-        @include button-icon;
-      }
+  &-column {
+    @include tablet {
+      width: span(6 of 12);
+      margin-right: $gutter-width;
 
       &:last-of-type {
-        @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
-
-        padding-top: .8rem;
-        border-top: 2px solid;
+        margin-right: 0;
       }
-
-      > a {
-        margin-right: 1rem;
-
-      }
-    }
-  }
-
-  .file-type {
-    text-transform: uppercase;
-
-    .file-size {
-      text-transform: lowercase;
     }
   }
 }

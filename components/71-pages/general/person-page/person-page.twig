@@ -23,24 +23,21 @@
     {% block person_page_article_content %}
       {% include '@heading' with {
         'type': 'h1',
-        'heading_text': 'Person detail page title'
+        'heading_text': 'Name and firstname'
       } %}
 
       {% include '@readspeaker-button' %}
 
-      {% include '@heading' with {
-        'type': 'h2',
-        'heading_text': 'Function'
-      } %}
-
       {% include '@paragraph' with {
-        'text': 'Mayor<br />sp.a',
+        'text': 'Mayor - sp.a',
         'modifier': 'summary-text'
       } %}
 
       {% include '@paragraph' with {
         'text': 'Is member of <a href="#">local council</a> and <a href="#">college of mayor and aldermen</a>',
       } %}
+
+      {% include '@contact-details' %}
 
       {% include '@heading' with {
         'type': 'h2',
@@ -65,7 +62,6 @@
           ]
         }
       %}
-
 
     {% endblock %}
   </article>
