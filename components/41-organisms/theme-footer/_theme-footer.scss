@@ -1,0 +1,59 @@
+.theme-footer {
+  @include theme('background-color', 'color-primary--lighten-5', 'theme-footer-background-color');
+  @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
+
+  width: calc(100% + 2 * #{$gutter-width});
+  margin-top: 4rem;
+  margin-right: -$gutter-width;
+  margin-left: -$gutter-width;
+  padding: 2.7rem 0 2.1rem;
+  border-bottom: 2px solid;
+
+  + footer.footer {
+    margin-top: 0;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 $gutter-width;
+
+    @include desktop {
+      padding: 0;
+    }
+
+    h3 {
+      align-self: center;
+    }
+
+    .social-list {
+      align-self: center;
+
+      @include tablet {
+        max-width: 50%;
+      }
+
+      @include desktop {
+        max-width: 30%;
+      }
+    }
+  }
+
+  .box-no-icon {
+    @include theme('background-color', 'color-secondary', 'theme-footer-ineer-background-color');
+
+    margin-bottom: .6rem;
+
+    .accolade::before,
+    .accolade::after {
+      @include theme('background-color', 'color-primary--lighten-5', 'theme-footer-background-color');
+    }
+  }
+
+  ///
+  /// External links other than group Ghent get an indicator.
+  ///
+  a {
+    @extend %a-remove-indicator;
+  }
+}

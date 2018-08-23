@@ -59,37 +59,12 @@
       margin: 0;
       list-style: none;
 
+      li {
+        margin-bottom: .5rem;
+      }
+
       a {
-        margin-left: -.2em;
-        font-size: .8rem;
         font-weight: 600;
-        text-decoration: none;
-
-        &.standalone-link {
-          padding-left: .2em;
-        }
-
-        &.button-call {
-          @include icon('phone');
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 1rem;
-
-          &::after {
-            display: none;
-          }
-
-          @include tablet {
-            display: inline;
-            padding: .3em;
-            border: 0;
-            box-shadow: none;
-
-            &::before {
-              display: none;
-            }
-          }
-        }
       }
     }
   }

@@ -1,14 +1,3 @@
-////
-///
-/// This file defines Spot images related functions and mixins.
-///
-/// @group tools
-/// @author Jeroen Goossens
-///
-////
-
-
-
 ///
 /// Theme mixin to generate all themes spot images.
 /// This generates the necessary theme CSS for all defined themes based on the
@@ -33,14 +22,11 @@
       background-image: url('#{$styleguide-dir}/img/svg/build/#{$image}--#{$theme}.svg');
     }
 
-    @if $theme == 'default' {
-      display: block;
-      width: $size;
-      height: $size;
-      background: no-repeat center center;
-      background-image: url('#{$styleguide-dir}/img/svg/build/#{$image}--#{$theme}.svg');
-      background-size: 100%;
-      content: '';
-    }
+    display: block;
+    width: $size;
+    height: $size;
+    background: no-repeat center center;
+    background-size: 100%;
+    content: '';
   }
 }

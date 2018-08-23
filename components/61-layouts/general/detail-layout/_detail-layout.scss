@@ -8,7 +8,9 @@
   // Give each direct child a specific width.
   // This is a fallback width given to all children of the detail layout.
   > * {
-    margin-bottom: 2rem;
+    &:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      margin-bottom: 2rem;
+    }
 
     @include desktop {
       @include set-layout('width-7', 'offset-2');
@@ -17,7 +19,7 @@
 
   // All direct children of a detail layout should get default margins.
   // Except heading tags and paragraphs.
-  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p) {
+  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(.box-top):not(.box-left):not(.readspeaker-button) {
     margin-top: 2rem;
   }
 
@@ -98,13 +100,28 @@ aside.bottom {
   @extend %content-container;
 
   > * {
+    @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+
+    padding-top: 3rem;
+    border-top: 2px solid;
+
+    @include tablet {
+      padding-top: 2rem;
+    }
+
     @include desktop {
       @include set-layout();
       width: 100%;
+      margin-bottom: 2rem;
       margin-left: 0;
       padding-right: span(2 wide of 12);
       padding-left: span(2 wide of 12);
     }
+  }
+
+  > p {
+    padding-top: 0;
+    border-top: 0;
   }
 }
 
@@ -136,11 +153,21 @@ aside.bottom {
     @include wide;
 
     margin-bottom: 2rem;
+    padding-top: 1.2rem;
+    border-top: 0;
 
     @include desktop {
       @include set-layout('width-9', 'offset-1');
 
       padding-left: span(1 wide of 12);
     }
+  }
+
+  .changed-date {
+    @include desktop {
+      @include set-layout('width-9', 'offset-2');
+    }
+
+    padding: 0;
   }
 }

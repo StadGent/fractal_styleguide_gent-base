@@ -5,20 +5,27 @@
   flex-wrap: wrap;
   margin-bottom: 4rem;
 
-  aside.sidebar {
+  .sidebar {
     width: 100%;
 
     @include tablet {
-      width: span(3 of 12);
-      margin-top: .9rem;
+      width: span(4 of 12);
       padding-right: gutter();
+    }
+
+    @include desktop {
+      width: span(3 of 12);
     }
   }
 
-  section.content {
+  .content {
     width: 100%;
 
     @include tablet {
+      width: span(8 of 12);
+    }
+
+    @include desktop {
       width: span(9 of 12);
     }
   }

@@ -1,15 +1,4 @@
-
 .related-box {
-  @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
-  position: relative;
-  margin-bottom: 2rem;
-  padding-top: 2rem;
-  border-top: 2px solid;
-
-  @include tablet {
-    padding-top: 2rem;
-  }
-
   &-content {
     display: flex;
     flex-wrap: wrap;
@@ -28,8 +17,11 @@
         width: span(4 of 8);
       }
 
-      > h3 {
+      @include desktop {
+        margin-bottom: 0;
+      }
 
+      > h3 {
         margin-bottom: .8rem;
 
         &:first-of-type {

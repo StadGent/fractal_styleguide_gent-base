@@ -1,0 +1,104 @@
+<div class="sidebar-layout filter">
+  <section id="filter" class="filter-section sidebar modal" tabindex="-1">
+
+    <div class="modal-actions">
+      {% include '@modal-close' %}
+    </div>
+    <h2>Filter the results</h2>
+    <form action="#result">
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Name",
+          "for": "id_name",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input-text'
+          with {
+          "textfield_id": "id_name",
+          "textfield_name": "name"
+        } %}
+      </div>
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Category",
+          "for": "id_category",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input-text'
+          with {
+          "textfield_id": "id_category",
+          "textfield_name": "category"
+        } %}
+      </div>
+      {% include '@checkbox-with-filter'
+        with {
+        "label": "Activities",
+        "label_optional": "Optional",
+        "label_count": "activities",
+        "options": checkboxes
+      } %}
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Type",
+          "for": "id_type",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input-text'
+          with {
+          "textfield_id": "id_type",
+          "textfield_name": "type"
+        } %}
+      </div>
+      <button type="submit" class="button button-primary filter__submit">Show result</button>
+
+    </form>
+  </section>
+
+  <section class="content result-section" id="result">
+    {% include '@heading' with {
+      "type": "overview-title",
+      "heading_text": "Filtercomponent"
+    } %}
+
+    {% include '@readspeaker-button' %}
+
+    <div class="selected-filters">
+      <h2>You have selected:</h2>
+      <span :key="filter.key" class="tag filter">
+        Filter one
+        <button><span class="visually-hidden">Remove this filter</span></button>
+      </span>
+      <span :key="filter.key" class="tag filter">
+        Filter two
+        <button><span class="visually-hidden">Remove this filter</span></button>
+      </span>
+      <a href="#">Remove all filters</a>
+    </div>
+
+    <button type="button"
+            class="button button-primary icon-filter result__show-filters modal-trigger"
+            aria-expanded="false"
+            aria-controls="filter">Show filters</button>
+
+    <h2>We have found 666 results</h2>
+    <ul class="filter__results">
+      {% for key, result in results %}
+        {% include '@teaser-search' with {
+          "teaser_uid": result.teaser_uid,
+          "teaser_paragraph_text": result.teaser_paragraph_text,
+          "teaser_title": result.teaser_title,
+          "teaser_link_text": result.teaser_link_text,
+          "teaser_link_link": result.teaser_link_link,
+          "teaser_tag": result.teaser_tag
+        } %}
+      {% endfor %}
+    </ul>
+
+    {% include '@pagination' with {
+      total: 20,
+      active: 17
+    }%}
+
+  </section>
+
+</div>

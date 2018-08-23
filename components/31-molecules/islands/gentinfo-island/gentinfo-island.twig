@@ -11,11 +11,11 @@
     %}
     {% include '@list'
       with {
-        'type': 'unordered',
-        'items': [
-          '<a href="tel:09 210 10 10" alt="Gentinfo tel link" class="button button-secondary button-call icon-phone">T: 09 210 10 10</a>',
-          '<a href="mailto:gentinfo@stad.gent" alt="Gentinfo mail link">Gentinfo@stad.gent</a>',
-          '<a href="javascript:(void);" class="standalone-link" alt="Contact form">Contactformulier</a>'
+        'type': 'icon-list',
+        'icon_items': [
+          '<i class="icon-phone" aria-hidden="true"></i><a href="tel:+32 9 210 10 10" alt="Gentinfo tel link">09 210 10 10</a>',
+          '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:gentinfo@stad.gent" alt="Gentinfo mail link">Gentinfo@stad.gent</a>',
+          '<i class="icon-document" aria-hidden="true"></i><a href="#">Contactformulier</a>'
         ]
       }
     %}

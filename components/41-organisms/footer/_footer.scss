@@ -1,5 +1,7 @@
 // General footer styling.
 footer.footer {
+  margin-top: 4rem;
+
   .footer-top {
     @include theme('background-color', 'color-primary--lighten-5', 'footer-background-color');
 
@@ -131,42 +133,6 @@ footer.footer {
   /// External links other than group Ghent get an indicator.
   ///
   a {
-    &[href^="http://"],
-    &[href^="https://"] {
-      &[href*="stad.gent"] {
-        &:not([download]):not(.standalone-link)::after {
-          content: none;
-        }
-
-        ///
-        /// Download links.
-        ///
-        &[download] {
-          @include icon(download, after);
-        }
-
-        ///
-        /// Stand alone links.
-        ///
-        &.standalone-link {
-          @extend %a-bounce-animation;
-          @include icon(arrow-right, after);
-        }
-      }
-    }
-
-    &.button {
-      &[href^="http://"],
-      &[href^="https://"] {
-        &[href*="stad.gent"] {
-          @extend %a-bounce-animation;
-          @include icon(arrow-right);
-
-          &::after {
-            content: none;
-          }
-        }
-      }
-    }
+    @extend %a-remove-indicator;
   }
 }

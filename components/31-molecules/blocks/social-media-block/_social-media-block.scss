@@ -1,17 +1,18 @@
-$social-media-link-width: 1.6rem;
-
 .dg-blocks-social {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   min-height: 2rem;
+  margin-bottom: 1rem;
 
   @include tablet {
     flex-wrap: nowrap;
+    margin-bottom: 0;
   }
 
-  > span {
+  > span,
+  > div {
     width: 100%;
     margin-bottom: 1.2rem;
     font-size: .7rem;
@@ -21,45 +22,6 @@ $social-media-link-width: 1.6rem;
     @include tablet {
       margin: 0 1.4rem 0 0;
       text-align: right;
-    }
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0;
-    list-style: none;
-
-    @include tablet {
-      justify-content: space-between;
-    }
-
-    a {
-      &,
-      &[download]:not(.button),
-      &[href^="http://"]:not(.button),
-      &[href^="https://"]:not(.button) {
-        @include theme('background-color', 'color-primary--lighten-5', 'social-media-icon-background');
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: $social-media-link-width;
-        height: $social-media-link-width;
-        border-radius: $social-media-link-width;
-        text-decoration: none;
-
-        &::after {
-          display: none;
-          content: '';
-        }
-      }
-    }
-
-    i {
-      font-size: 1.4rem;
     }
   }
 }

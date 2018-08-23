@@ -1,20 +1,3 @@
 .teaser-topic {
   padding-bottom: 1rem;
-
-  .teaser-content {
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .content__bottom {
-      order: 2;
-    }
-
-    .content__top {
-      order: 1;
-      margin-bottom: 1rem;
-      overflow: hidden;
-    }
-  }
 }

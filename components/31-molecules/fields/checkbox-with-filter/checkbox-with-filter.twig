@@ -5,31 +5,36 @@
       <span class="label-optional">({{ label_optional }})</span>
     {% endif %}
   </legend>
-  <div class="form-columns">
-    <div class="form-item-column">
-      {% include '@field-description' with {
-      "field_description": field_description
-      } %}
-    </div>
-    <div class="form-item-column">
-
-      <div class="checkbox-filter__selected">
-
+  {% if field_description %}
+    <div class="form-columns">
+      <div class="form-item-column">
+        {% include '@field-description' with {
+        "field_description": field_description
+        } %}
       </div>
+    <div class="form-item-column">
+  {% endif %}
       <div class="checkbox-filter__modal">
-
-        <button type="button" class="button icon-cross checkbox-filter__close"><span>Close</span><i class="icon-close" aria-hidden="true"></i></button>
+        <div class="modal-actions">
+          <button type="button" class="button icon-cross modal-close checkbox-filter__close"><span>Close</span><i class="icon-close" aria-hidden="true"></i></button>
+        </div>
 
         <header>
-          <h3>{{ label }} <span class="label-optional">({{ label_optional }})</span></h3>
+          <h3>{{ label }}
+            {% if label_optional %}
+              <span class="label-optional">({{ label_optional }})</span>
+            {% endif %}
+          </h3>
         </header>
         <div class="form-item">
           <label for="checkboxes__filter_id_{{ modifier }}">Filter the list below</label>
           <input type="search" id="checkboxes__filter_id_{{ modifier }}"
                  class="checkbox-filter__filter">
-          <strong aria-live="polite" class="checkbox-filter__result-wrapper">There are <span class="checkbox-filter__result">#</span> results</strong>
+          <div class="checkbox-filter__selected"></div>
         </div>
-
+        <p>
+          <strong aria-live="polite" class="checkbox-filter__result-wrapper">There are <span class="checkbox-filter__result">#</span> results</strong>
+        </p>
         <div class="checkbox-filter__checkboxes">
           {% for option in options %}
             {% include '@input-checkbox' with {
@@ -47,6 +52,9 @@
 
       </div>
       <div class="overlay checkbox-filter__close"></div>
+      <p>
+        <strong><span class="checkbox-filter__count">0</span> {{ label_count }} selected</strong>
+      </p>
       <button type="button" class="button button-secondary button-small checkbox-filter__open">
         Select ...
       </button>
@@ -62,6 +70,8 @@
         "modifier": "success"
         } %}
       {% endif %}
+  {% if field_description %}
+      </div>
     </div>
-  </div>
+  {% endif %}
 </fieldset>

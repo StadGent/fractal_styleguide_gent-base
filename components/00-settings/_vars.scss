@@ -7,6 +7,8 @@
 ///
 ////
 
+@import 'susy';
+
 ///
 /// Defines the style guide directory. This is used for things such as
 /// images for backgrounds in SASS.
@@ -248,3 +250,19 @@ $bg-hover-breadcrumb: color('blue') !default;
 
 // Map settings.
 $map-border-radius: border-radius('radius-1') !default;
+
+
+///
+/// This map describes the susy grid system settings.
+///
+/// @since 3.0.0
+/// @group grid
+/// @access private
+/// @type map
+/// @author Gert-Jan Meire
+///
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': $gutter-width,
+  'spread': 'narrow',
+);

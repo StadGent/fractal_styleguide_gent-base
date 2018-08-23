@@ -3,7 +3,7 @@ ul.grid-3,
 ul.grid-4 {
   @extend %list-no-style;
   width: 100%;
-  margin: 0 0 3rem;
+  margin: 0;
 
   @include phablet {
     display: flex;
@@ -38,10 +38,22 @@ ul.grid-4 {
       }
     }
 
+    @include tablet {
+      width: span(4 of 12);
+
+      &:nth-child(2n) {
+        margin-right: $gutter-width;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
     @include desktop {
       width: span(3 of 12);
 
-      &:nth-child(2n) {
+      &:nth-child(3n) {
         margin-right: $gutter-width;
       }
 
@@ -53,6 +65,12 @@ ul.grid-4 {
 }
 
 ul.grid-3 {
+  &::after {
+    flex: auto;
+    margin-left: span(4 of 12);
+    content: '';
+  }
+
   > li {
     @include phablet {
       width: span(6 of 12);
@@ -67,7 +85,7 @@ ul.grid-3 {
       width: span(4 of 12);
 
       &:nth-child(2n) {
-        margin-right: auto;
+        margin-right: $gutter-width;
       }
 
       &:nth-child(3n) {
@@ -78,6 +96,12 @@ ul.grid-3 {
 }
 
 ul.grid-2 {
+  &::after {
+    flex: auto;
+    margin-left: span(6 of 12);
+    content: '';
+  }
+
   > li {
     @include phablet {
       width: span(6 of 12);

@@ -1,6 +1,4 @@
 .cta-block {
-  @include box-left;
-
   &::before {
     @include spot-image('download-light');
   }

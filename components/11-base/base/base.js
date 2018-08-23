@@ -1,6 +1,6 @@
 'use strict';
 
-window.gent_styleguide = (function () { // eslint-disable-line no-unused-vars
+window.gent_styleguide = (function () {
 
   /**
    * Generates a tabTrap object
@@ -9,8 +9,7 @@ window.gent_styleguide = (function () { // eslint-disable-line no-unused-vars
    * @constructor
    */
   function TabTrap(container) {
-    var focusPosition = -1;
-    var focusables = getFocusables(container);
+    let focusables = getFocusables(container);
 
     /**
      * Returns all focusable elements within a given container.
@@ -19,14 +18,15 @@ window.gent_styleguide = (function () { // eslint-disable-line no-unused-vars
      * @return {array} focusable elements
      */
     function getFocusables(container) {
-      var focusables = container
-        .querySelectorAll('a[href], ' +
-          'area[href], ' +
-          'input:not([disabled]):not([hidden]), ' +
-          'select:not([disabled]), ' +
-          'textarea:not([disabled]), ' +
-          'button:not([disabled]), ' +
-          '[tabindex="0"]');
+      let focusables = container.querySelectorAll(
+        'a[href], ' +
+        'area[href], ' +
+        'input:not([disabled]):not([hidden]), ' +
+        'select:not([disabled]), ' +
+        'textarea:not([disabled]), ' +
+        'button:not([disabled]), ' +
+        '[tabindex="0"]'
+      );
       return Array.prototype.slice.call(focusables);
     }
 
@@ -34,32 +34,28 @@ window.gent_styleguide = (function () { // eslint-disable-line no-unused-vars
       focusables = getFocusables(container);
     };
 
-    this.next = function () {
-      if (++focusPosition > focusables.length - 1) {
-        focusPosition = 0;
+    this.next = function (e) {
+      let active = document.activeElement;
+      if (active && active === focusables[focusables.length - 1]) {
+        focusables[0].focus();
+        e.preventDefault();
       }
-      focusables[focusPosition].focus();
     };
 
-    this.back = function () {
-      if (--focusPosition < 0) {
-        focusPosition = focusables.length - 1;
+    this.back = function (e) {
+      let active = document.activeElement;
+      if (active && active === focusables[0]) {
+        focusables[focusables.length - 1].focus();
+        e.preventDefault();
       }
-      focusables[focusPosition].focus();
     };
 
     this.home = function () {
-      focusPosition = 0;
-      focusables[focusPosition].focus();
+      focusables[0].focus();
     };
 
     this.end = function () {
-      focusPosition = focusables.length - 1;
-      focusables[focusPosition].focus();
-    };
-
-    this.reset = function () {
-      focusPosition = -1;
+      focusables[focusables.length - 1].focus();
     };
 
     this.hasFocusables = focusables && focusables.length > 0;
@@ -68,5 +64,4 @@ window.gent_styleguide = (function () { // eslint-disable-line no-unused-vars
   return {
     TabTrap: TabTrap
   };
-
 })();
