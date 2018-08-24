@@ -1,9 +1,13 @@
+.quote-wrapper {
+  overflow: hidden;
+}
+
 .quote {
   @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
 
   display: flex;
   flex-direction: column;
-  margin: 5rem 0 2.5rem;
+  margin: 3.5rem 0 000000000;
   padding-top: 2.5rem;
   border-top: 2px solid;
 

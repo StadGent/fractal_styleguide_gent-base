@@ -37,7 +37,7 @@
     }
   }
 
-  > .quote,
+  > .quote-wrapper,
   > .image-gallery--wrapper,
   > .help-block,
   > .search-block {
@@ -67,15 +67,6 @@
   > .help-block {
     @include desktop {
       padding-left: span(1 wide of 12);
-    }
-  }
-
-  > .quote {
-    // Spot image escapes the container by 2.5rem.
-    margin-top: 5.5rem;
-
-    @include desktop {
-      margin-top: 2rem;
     }
   }
 
