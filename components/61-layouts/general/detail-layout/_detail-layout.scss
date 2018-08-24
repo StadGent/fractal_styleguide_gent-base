@@ -75,7 +75,7 @@
     @include wide;
   }
 
-  > .timeline {
+  > .timeline-wrapper {
     @include set-layout();
     @include extra-wide;
   }
@@ -156,7 +156,7 @@ aside.bottom {
     border-top: 0;
 
     @include desktop {
-      @include set-layout('width-9', 'offset-1');
+      @include set-layout('width-10', 'offset-1');
 
       padding-left: span(1 wide of 12);
     }
