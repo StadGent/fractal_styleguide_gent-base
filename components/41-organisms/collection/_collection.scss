@@ -1,6 +1,7 @@
 ul.grid-2,
 ul.grid-3,
-ul.grid-4 {
+ul.grid-4,
+ul.grid-5 {
   @extend %list-no-style;
 
   display: flex;
@@ -9,7 +10,10 @@ ul.grid-4 {
   margin: 0 -#{gutter()/2};
 
   > li {
+    flex-basis: 100%;
+    flex-shrink: 1;
     margin-bottom: 1.2rem;
+    padding: 0 gutter()/2;
   }
 
   + .show-more {
@@ -18,12 +22,27 @@ ul.grid-4 {
   }
 }
 
-ul.grid-4 {
-  li {
-    flex-basis: 100%;
-    flex-shrink: 1;
-    padding: 0 gutter()/2;
+ul.grid-5 {
+  > li {
+    @include phablet {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
 
+    @include tablet {
+      flex-basis: 25%;
+      max-width: 25%;
+    }
+
+    @include desktop {
+      flex-basis: 20%;
+      max-width: 20%;
+    }
+  }
+}
+
+ul.grid-4 {
+  > li {
     @include phablet {
       flex-basis: 50%;
       max-width: 50%;
@@ -42,51 +61,24 @@ ul.grid-4 {
 }
 
 ul.grid-3 {
-  &::after {
-    flex: auto;
-    margin-left: span(4 of 12);
-    content: '';
-  }
-
   > li {
     @include phablet {
-      width: span(6 of 12);
-      margin: 0 $gutter-width 1.2rem 0;
-
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
+      flex-basis: 50%;
+      max-width: 50%;
     }
 
     @include desktop {
-      width: span(4 of 12);
-
-      &:nth-child(2n) {
-        margin-right: $gutter-width;
-      }
-
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
+      flex-basis: calc(100% / 3);
+      max-width: calc(100% / 3);
     }
   }
 }
 
 ul.grid-2 {
-  &::after {
-    flex: auto;
-    margin-left: span(6 of 12);
-    content: '';
-  }
-
   > li {
     @include phablet {
-      width: span(6 of 12);
-      margin: 0 $gutter-width 1.2rem 0;
-
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
+      flex-basis: 50%;
+      max-width: 50%;
     }
   }
 }
