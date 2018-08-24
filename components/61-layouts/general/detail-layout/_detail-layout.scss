@@ -28,6 +28,10 @@
 
   > ul {
     padding-left: 2rem;
+
+    li {
+      font-size: inherit;
+    }
   }
 
   // Paragraphs are an exception to the above rule.
