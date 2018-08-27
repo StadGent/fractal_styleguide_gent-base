@@ -1,6 +1,4 @@
-.teaser-article {
-  @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
-
+.teaser.teaser-article {
   .teaser-content {
 
     div.event,

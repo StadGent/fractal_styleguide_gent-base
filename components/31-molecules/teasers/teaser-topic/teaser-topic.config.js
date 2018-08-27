@@ -11,7 +11,7 @@ module.exports = {
     teaser_title: 'Title text',
     teaser_link_text: 'read more',
     teaser_link_link: '#',
-    teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+    teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
     teaser_image_alt_text: 'alt text'
   }
 };

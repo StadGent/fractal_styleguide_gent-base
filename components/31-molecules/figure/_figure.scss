@@ -29,7 +29,7 @@ figure {
         height: calc(100% - 1.6rem);
         margin: 0;
         text-align: center;
-        z-index: 0;
+        z-index: 1;
       }
 
 
@@ -186,7 +186,7 @@ figure {
         width: calc(100% - 3rem + 2px - #{$gutter-width});
         margin: 0;
         padding: .4rem $gutter-width 0;
-        z-index: 1;
+        z-index: 2;
 
         @include desktop {
           width: calc(100% - #{$span} - 2rem);
@@ -207,6 +207,7 @@ figure {
         height: 1.7rem;
         background-color: color('white');
         content: '';
+        z-index: 1;
       }
     }
 

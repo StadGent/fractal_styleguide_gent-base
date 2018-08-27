@@ -13,8 +13,6 @@
     width: $bp-container;
     max-width: 100%;
     margin: 0 auto;
-    border-right: $border-outside-container; //smaller width
-    border-left: $border-outside-container; //smaller width
   }
 
   padding: 0 calc(#{$gutter-width});

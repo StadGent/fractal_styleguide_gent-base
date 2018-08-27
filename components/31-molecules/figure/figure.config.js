@@ -8,8 +8,9 @@ module.exports = {
   default: 'default',
   context: {
     figure_figcaption: 'Figure caption comes here.',
-    figure_image_src: 'https://via.placeholder.com/704x440',
-    figure_image_alt_text: 'Image alt text'
+    figure_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+    figure_image_alt_text: 'Image alt text',
+    figure_ratio: '8:5',
   },
   variants: [
     {
@@ -18,14 +19,16 @@ module.exports = {
     {
       name: 'hero',
       context: {
-        figure_image_src: 'https://via.placeholder.com/1600x420',
+        figure_image_src: 'https://via.placeholder.com/1600x400&text=4:1+(1600x400)',
+        figure_ratio: '4:1',
         modifier: 'hero'
       }
     },
     {
       name: 'subsite',
       context: {
-        figure_image_src: 'https://via.placeholder.com/1600x420',
+        figure_image_src: 'https://via.placeholder.com/1600x400&text=4:1+(1600x400)',
+        figure_ratio: '4:1',
         figure_logo_src_dark: '/styleguide/img/stock/digipolis-dark.svg',
         figure_logo_src_light: '/styleguide/img/stock/digipolis-light.svg',
         figure_logo_alt_text: 'Logo Digipolis',

@@ -219,40 +219,6 @@ $default-font-size: 20px !default; //px
 $default-line-height: 1.75 !default;
 
 ///
-/// Defines the background color of the outside container of the site.
-///
-/// @since 3.0.0
-/// @group settings
-/// @access public
-/// @author Gert-Jan Meire
-///
-$bg-outside-container: color('white') !default;
-
-///
-/// Defines the border of the outside container of the site.
-///
-/// @since 3.0.0
-/// @group settings
-/// @access public
-/// @author Gert-Jan Meire
-///
-$border-outside-container: 1px solid color('dark-gray', 2) !default;
-
-// Breadcrumb settings.
-$bg-hover-breadcrumb: color('blue') !default;
-
-//
-// Section dependent variables!
-//
-// These variables can and must be set, but might get overridden when used by a
-// component that is within a section!
-//
-
-// Map settings.
-$map-border-radius: border-radius('radius-1') !default;
-
-
-///
 /// This map describes the susy grid system settings.
 ///
 /// @since 3.0.0

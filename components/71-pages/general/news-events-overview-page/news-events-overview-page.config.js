@@ -18,7 +18,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -34,7 +34,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -50,7 +50,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -66,7 +66,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -82,7 +82,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -98,7 +98,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -114,7 +114,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -130,7 +130,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -146,7 +146,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -162,7 +162,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -178,7 +178,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -194,7 +194,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -210,7 +210,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -226,7 +226,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       },
@@ -242,7 +242,7 @@ module.exports = {
         teaser_datetime: '2019-01-07',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/650/400/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       }

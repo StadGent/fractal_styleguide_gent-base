@@ -19,7 +19,7 @@ module.exports = {
       label: 'Single',
       preview: '@preview',
       context: {
-        src: 'https://via.placeholder.com/704x440',
+        src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         alt: 'placeholder image alternative text',
         caption: 'image caption'
       }
@@ -31,12 +31,12 @@ module.exports = {
       context: {
         items: [
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text'
           }
         ]
@@ -49,17 +49,17 @@ module.exports = {
       context: {
         items: [
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text'
           }
         ]
@@ -72,22 +72,22 @@ module.exports = {
       context: {
         items: [
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text'
           }
         ]
@@ -100,27 +100,27 @@ module.exports = {
       context: {
         items: [
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text'
           }
         ]
@@ -133,37 +133,37 @@ module.exports = {
       context: {
         items: [
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text',
             caption: 'image caption'
           },
           {
-            src: 'https://via.placeholder.com/704x440',
+            src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
             alt: 'placeholder image alternative text'
           }
         ]
