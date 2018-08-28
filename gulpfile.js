@@ -221,7 +221,7 @@ gulp.task('styles:dist', () => {
 gulp.task('styles:build', () => {
   return _sassFiles()
     .pipe(_sassCompile())
-  // .pipe(cssnano())
+    .pipe(cssnano())
     .pipe(gulp.dest('build/css/'));
 });
 
