@@ -8,19 +8,30 @@
   // Give each direct child a specific width.
   // This is a fallback width given to all children of the detail layout.
   > * {
-    &:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-      margin-bottom: 2rem;
-    }
-
     @include desktop {
       @include set-layout('width-7', 'offset-2');
     }
   }
 
-  // All direct children of a detail layout should get default margins.
-  // Except heading tags and paragraphs.
-  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(.box-top):not(.box-left):not(.readspeaker-button) {
+  > div,
+  > section,
+  > aside,
+  > article {
     margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  // // All direct children of a detail layout should get default margins.
+  // // Except heading tags and paragraphs.
+  // > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(.box-top):not(.box-left):not(.readspeaker-button) {
+  // }
+
+  > ul {
+    padding-left: 2rem;
+
+    li {
+      font-size: inherit;
+    }
   }
 
   // Paragraphs are an exception to the above rule.
@@ -30,7 +41,7 @@
     }
   }
 
-  > .quote,
+  > .quote-wrapper,
   > .image-gallery--wrapper,
   > .help-block,
   > .search-block {
@@ -40,7 +51,8 @@
   }
 
   > .summary-box,
-  > .cta-block {
+  > .cta-block,
+  > .contact-details {
     @include desktop {
       @include set-layout('width-10', 'offset-1');
     }
@@ -62,21 +74,12 @@
     }
   }
 
-  > .quote {
-    // Spot image escapes the container by 2.5rem.
-    margin-top: 5.5rem;
-
-    @include desktop {
-      margin-top: 2rem;
-    }
-  }
-
   > .help-block,
   > .search-block {
     @include wide;
   }
 
-  > .timeline {
+  > .timeline-wrapper {
     @include set-layout();
     @include extra-wide;
   }
@@ -85,7 +88,7 @@
     display: block;
     width: auto;
     margin-top: -.4rem;
-    margin-bottom: .4rem;
+    margin-bottom: 2rem;
   }
 
   .summary-text {
@@ -157,7 +160,7 @@ aside.bottom {
     border-top: 0;
 
     @include desktop {
-      @include set-layout('width-9', 'offset-1');
+      @include set-layout('width-10', 'offset-1');
 
       padding-left: span(1 wide of 12);
     }

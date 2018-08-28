@@ -3,12 +3,14 @@
 .box-no-icon {
   border-radius: border-radius('radius-2');
 
-  input[type="checkbox"]:not([disabled]) + label::before,
-  input[type="radio"]:not([disabled]) + label::before,
-  input:not([disabled]):not([type="submit"]),
-  select:not([disabled]),
-  textarea:not([disabled]) {
-    @include theme('background-color', 'color-secondary', 'box-input-background-color');
+  .inner-box {
+    input[type="checkbox"]:not([disabled]) + label::before,
+    input[type="radio"]:not([disabled]) + label::before,
+    input:not([disabled]):not([type="submit"]),
+    select:not([disabled]),
+    textarea:not([disabled]) {
+      @include theme('background-color', 'color-secondary', 'box-input-background-color');
+    }
   }
 }
 
@@ -53,25 +55,23 @@
 }
 
 .box-top {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 4.5rem;
+  padding-top: 3rem;
+
+  @include tablet {
+    padding-top: 3.5rem;
+  }
 
   .inner-box {
     @include theme('background-color', 'color-primary--lighten-5', 'info-box-background');
 
-    display: flex;
     position: relative;
-    align-items: center;
     width: 100%;
     margin: 0 0 .5rem;
     padding: 4.5rem 2rem 2rem;
 
     @include tablet {
       margin: 0 0 .5rem;
-      padding: 2rem 10rem 2rem 2rem;
+      padding: 2rem;
     }
 
     &::before {

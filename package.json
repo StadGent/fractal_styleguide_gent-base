@@ -44,10 +44,12 @@
   "dependencies": {
     "baguettebox.js": "^1.10.0",
     "breakpoint-sass": "^2.7.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-real-favicon": "^0.3.0",
     "gulp-recolor-svg": "^1.0.3",
     "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.2",
+    "postcss-calc": "^6.0.1",
     "sassdoc": "^2.5.0",
     "sassdoc-theme-flippant": "^0.1.0",
     "susy": "^3.0.1"

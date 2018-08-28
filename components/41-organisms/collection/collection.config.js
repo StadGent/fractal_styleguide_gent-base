@@ -20,6 +20,12 @@ module.exports = {
       name: 'grid-4'
     },
     {
+      name: 'grid-5',
+      context: {
+        grid: 'grid-5'
+      }
+    },
+    {
       name: 'grid-3',
       context: {
         grid: 'grid-3'

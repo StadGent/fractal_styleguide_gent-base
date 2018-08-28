@@ -1,0 +1,25 @@
+.contact-details {
+  .inner-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    > h2 {
+      width: 100%;
+    }
+
+    &::before {
+      @include spot-image('book-light', 7rem);
+    }
+  }
+
+  &-column {
+    @include tablet {
+      width: span(6 of 12);
+      margin-right: $gutter-width;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

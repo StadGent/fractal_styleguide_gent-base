@@ -1,0 +1,80 @@
+{% include '@header' with {
+  "mijn_gent_block_items": [
+    "<a href='javascript:(void);'>Mijn profiel</a>",
+    "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+    "<a href='javascript:(void);'>Historiek</a>"
+  ],
+    "mijn_gent_block_auth": "true",
+    "header_search_id": "header-search",
+    "header_search_label": "Search",
+    "header_search_placeholder": "Search",
+    "header_search_text": "Search",
+    "breadcrumbs_items": [
+    "<a href='https://stad.gent'>Stad.gent</a>",
+    "<a href='#'>Overview</a>",
+    "<a href='#'>Theme</a>",
+    "<a href='#'>Subpage</a>",
+    "<span>Page title</span>"
+  ]
+} %}
+
+<main class="person-page">
+  <article class="detail-layout">
+    {% block person_page_article_content %}
+      {% include '@heading' with {
+        'type': 'h1',
+        'heading_text': 'Name and firstname'
+      } %}
+
+      {% include '@readspeaker-button' %}
+
+      {% include '@paragraph' with {
+        'text': 'Mayor - sp.a',
+        'modifier': 'summary-text'
+      } %}
+
+      {% include '@paragraph' with {
+        'text': 'Is member of <a href="#">local council</a> and <a href="#">college of mayor and aldermen</a>',
+      } %}
+
+      {% include '@contact-details' %}
+
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': 'Authorizations'
+      } %}
+
+      {% include '@list'
+        with {
+          'type': 'unordered',
+          "items": [
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+            'Aliquam tincidunt mauris eu risus.',
+            'Vestibulum auctor dapibus neque.',
+            'Nunc dignissim risus id metus.',
+            'Cras ornare tristique elit.',
+            'Vivamus vestibulum ntulla nec ante.',
+            'Praesent placerat risus quis eros.',
+            'Fusce pellentesque suscipit nibh.',
+            'Integer vitae libero ac risus egestas placerat.',
+            'Vestibulum commodo felis quis tortor.',
+            'Ut aliquam sollicitudin leo.'
+          ]
+        }
+      %}
+
+    {% endblock %}
+  </article>
+
+  <aside class="top">
+    {% include '@related-box' with {
+    'similar_articles': true,
+    tags: [
+    'Inner city',
+    'Another tag'
+    ]
+    } %}
+  </aside>
+</main>
+
+{% include '@footer' %}

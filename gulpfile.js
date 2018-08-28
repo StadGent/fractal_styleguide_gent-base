@@ -17,6 +17,8 @@ const sassLint = require('gulp-sass-lint');
 const sassdoc = require('sassdoc');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
+const postcss = require('gulp-postcss');
+const calc = require('postcss-calc');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const imagemin = require('gulp-imagemin');
@@ -201,11 +203,18 @@ gulp.task('styles:inject', () => {
  *  Autoprefixer
  */
 gulp.task('styles:dist', () => {
+  var plugins = [
+    calc()
+  ];
+
   return _sassFiles()
     .pipe(sourcemaps.init())
     .pipe(_sassCompile())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/css/'));
+    .pipe(gulp.dest('./public/css/'))
+    .pipe(gulp.src('public/css/main.css'))
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest('public/css'));
 });
 
 /**
@@ -220,7 +229,27 @@ gulp.task('styles:build', () => {
   return _sassFiles()
     .pipe(_sassCompile())
     .pipe(cssnano())
-    .pipe(gulp.dest('./build/css/'));
+    .pipe(gulp.dest('build/css/'));
+});
+
+gulp.task('styles:postcss:build', () => {
+  var plugins = [
+    calc()
+  ];
+
+  return gulp.src('build/css/main.css')
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('styles:postcss:dist', () => {
+  var plugins = [
+    calc()
+  ];
+
+  return gulp.src('public/css/main.css')
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest('public/css'));
 });
 
 /**
@@ -583,9 +612,9 @@ gulp.task('iconfont', () => {
       normalize: true,
       fontHeight: 1001,
       formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'], // default, 'woff2' and
-                                                       // 'svg' are available
+      // 'svg' are available
       timestamp: runTimestamp // recommended to get consistent builds when
-                              // watching files
+      // watching files
     }))
     .on('glyphs', function (glyphs, options) {
       // CSS templating, e.g.
@@ -788,6 +817,10 @@ gulp.task('compile', gulp.series(
     'js:dist',
     'images:minify'
   ),
+  gulp.series(
+    'styles:postcss:dist',
+    'styles:postcss:build'
+  ),
   'styles:extract'
 ), callback => callback());
 
@@ -803,7 +836,8 @@ gulp.task('compile:dev', gulp.series(
     'sassdoc',
     'js:dist',
     'images:minify'
-  )
+  ),
+  'styles:postcss:dist'
 ));
 
 /**
