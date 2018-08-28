@@ -701,6 +701,7 @@ gulp.task('favicon:build', (done) => {
             }
           },
           safariPinnedTab: {
+            masterPicture: './public/styleguide/img/favicon/favicon-blank.svg',
             pictureAspect: 'silhouette',
             themeColor: map[key].color
           }
