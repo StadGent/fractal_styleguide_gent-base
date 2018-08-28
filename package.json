@@ -44,6 +44,7 @@
   "dependencies": {
     "baguettebox.js": "^1.10.0",
     "breakpoint-sass": "^2.7.1",
+    "gulp-real-favicon": "^0.3.0",
     "gulp-recolor-svg": "^1.0.3",
     "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.2",

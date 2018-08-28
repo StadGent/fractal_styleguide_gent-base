@@ -2,93 +2,16 @@
   "title": "Styleguide",
   "status": "beta",
   "handle": "styleguide",
-  "default": "styleguide-default-cyan",
+  "default": "styleguide-cyan",
   "order": 1,
   "preview": "@preview",
-  "context": {
-    "label_optional": "Optional",
-    "primary": {
-      "cyan": "#009de0",
-      "cyan-wcag": "#007db3",
-      "dark-gray": "#23333a",
-      "white": "#fff"
-    },
-    "secondary": {
-      "blue": "#0340c7",
-      "teal": "#29cfc9",
-      "green": "#38ab30",
-      "lemon": "#ffda00",
-      "yellow": "#fab600",
-      "orange": "#f95706",
-      "red": "#f20f36",
-      "pink": "#f09",
-      "purple": "#5a0ec4"
-    },
-    "tints": {
-      "1": "10%",
-      "2": "25%",
-      "3": "50%",
-      "-1": "75%",
-      "-2": "50%",
-      "-3": "25%",
-      "-4": "10%",
-      "-5": "6%",
-      "-6": "2%"
-    },
-    "h1_text": "heading 1",
-    "h2_text": "heading 2",
-    "h3_text": "heading 3",
-    "h4_text": "heading 4",
-    "h5_text": "heading 5",
-    "icons": {
-      "arrow-down": "arrow-down",
-      "arrow-left": "arrow-left",
-      "arrow-right": "arrow-right",
-      "arrow-up": "arrow-up",
-      "chevron-down": "chevron-down",
-      "chevron-left": "chevron-left",
-      "chevron-right": "chevron-right",
-      "chevron-up": "chevron-up",
-      "clock": "clock",
-      "cross": "cross",
-      "digipolis": "digipolis",
-      "download": "download",
-      "envelope": "envelope",
-      "exclamation-circle": "exclamation-circle",
-      "exclamation": "exclamation",
-      "filter": "filter",
-      "heart": "heart",
-      "lightning": "lightning",
-      "lock-closed": "lock-closed",
-      "lock-open": "lock-open",
-      "share": "share",
-      "star-empty": "star-empty",
-      "star-full": "star-full",
-      "star-half": "star-half",
-      "facebook": "facebook",
-      "instagram": "instagram",
-      "youtube": "youtube",
-      "linkedin": "linkedin",
-      "favicon": "favicon",
-      "logo-nl": "logo-nl",
-      "logo-en": "logo-en",
-      "logo-fr": "logo-fr",
-      "logo-es": "logo-es"
-    }
-  },
   "variants": [
     {
-      "name": "styleguide-default-cyan",
-      "handle": "styleguide",
-      "context": {
-        "modifier": "cs--cyan"
-      }
+      "name": "styleguide-cyan"
     },
     {
       "name": "styleguide-orange",
-      "context": {
-        "modifier": "cs--orange"
-      }
+      "preview": "@preview-orange"
     }
   ]
 }
