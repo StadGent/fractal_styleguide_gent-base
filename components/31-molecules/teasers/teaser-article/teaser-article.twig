@@ -1,5 +1,4 @@
 <li class="teaser teaser-article">
-  
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__bottom">
@@ -17,11 +16,11 @@
       {% else %}
         <time class="published" datetime="{{ teaser_datetime }}" pubdate="pubdate">{{ teaser_published_date }}</time>
       {% endif %}
-      
+
       {% include '@paragraph' with {
         'text': teaser_paragraph_text
       } %}
-      
+
       {% include '@link' with {
         'text': teaser_link_text,
         'aria_labelledby': teaser_uid,
@@ -31,12 +30,11 @@
       } %}
     </div>
     <div class="content__top">
-      <div class="image-wrapper">
-        {% include '@figure' with {
-          "figure_image_src": teaser_image_src
-        } %}
-      </div>
-      
+      {% include '@figure' with {
+        "figure_image_src": teaser_image_src,
+        "figure_ratio": '8:5'
+      } %}
+
       {% include '@tag' with {
         "tag_text": teaser_tag,
         "type": 'span-tag'

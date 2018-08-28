@@ -17,11 +17,10 @@
 
     {% if teaser_image_src is not empty %}
       <div class="content__top">
-        <div class="image-wrapper">
-          {% include '@figure' with {
-            "figure_image_src": teaser_image_src
-          } %}
-        </div>
+        {% include '@figure' with {
+          "figure_image_src": teaser_image_src,
+          "figure_ratio": '8:5'
+        } %}
       </div>
     {% endif %}
   </article>
