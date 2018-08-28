@@ -57,6 +57,7 @@
     .checkbox-filter__content {
       flex: 1;
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
     }
 
     .checkbox-filter__filter {

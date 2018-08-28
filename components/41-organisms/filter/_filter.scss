@@ -18,6 +18,7 @@
       background-color: color('white');
       z-index: 200;
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
 
       .modal-actions {
         display: block;
