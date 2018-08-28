@@ -12,7 +12,7 @@ module.exports = {
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text'
       },
       {
@@ -21,7 +21,7 @@ module.exports = {
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text'
       },
       {
@@ -30,7 +30,7 @@ module.exports = {
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text'
       },
       {
@@ -39,7 +39,7 @@ module.exports = {
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text'
       },
       {
@@ -48,7 +48,7 @@ module.exports = {
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text'
       },
       {
@@ -57,7 +57,7 @@ module.exports = {
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text'
       },
       {
@@ -66,7 +66,7 @@ module.exports = {
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text'
       },
       {
@@ -75,7 +75,7 @@ module.exports = {
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text'
       },
       {
@@ -84,7 +84,7 @@ module.exports = {
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://loremflickr.com/1280/800/ghent',
+        teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text'
       }
     ]

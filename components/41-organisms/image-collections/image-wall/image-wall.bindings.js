@@ -11,6 +11,9 @@
   }
 
   const grid = document.querySelector('.image-wall');
+  if (!grid) {
+    return;
+  }
 
   const msnry = new Masonry(grid, { // eslint-disable-line no-undef
     columnWidth: 'li:not(.hidden)',

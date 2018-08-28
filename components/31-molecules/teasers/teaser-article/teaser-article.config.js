@@ -12,7 +12,7 @@ module.exports = {
     teaser_published_date: 'Gepost op Zaterdag 7 januari 2019',
     teaser_link_text: 'read more',
     teaser_link_link: '#',
-    teaser_image_src: 'https://via.placeholder.com/800x500',
+    teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
     teaser_image_alt_text: 'alt text',
     teaser_tag: 'Just some tag'
   },
@@ -31,7 +31,7 @@ module.exports = {
         },
         teaser_link_text: 'read more',
         teaser_link_link: '#',
-        teaser_image_src: 'https://via.placeholder.com/800x500',
+        teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         teaser_image_alt_text: 'alt text',
         teaser_tag: 'I\'m another tag'
       }

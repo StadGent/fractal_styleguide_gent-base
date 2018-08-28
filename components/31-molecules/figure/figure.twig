@@ -21,7 +21,8 @@
   {% endif %}
   {% include '@image' with {
     'src': figure_image_src,
-    'alt_text': figure_image_alt_text
+    'alt_text': figure_image_alt_text,
+    'ratio': figure_ratio
   } %}
   {% if figure_figcaption %}
     {% include '@figcaption' with {

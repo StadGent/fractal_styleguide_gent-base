@@ -1,6 +1,4 @@
-.teaser-person {
-  @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
-
+.teaser.teaser-person {
   .teaser-content {
     .person-image-wrapper {
       position: relative;

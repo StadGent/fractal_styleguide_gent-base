@@ -1,3 +1,6 @@
+{% if ratio %}
+  <div class="image-wrapper" data-ratio="{{ ratio }}">
+{% endif %}
 <img
   src="{{ src }}"
   alt="{{ alt_text }}"
@@ -5,3 +8,7 @@
     class="{{ modifier }}"
   {% endif %}
 />
+{% if ratio %}
+  </div>
+{% endif %}
+

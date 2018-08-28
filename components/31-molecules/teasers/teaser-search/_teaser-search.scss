@@ -1,14 +1,12 @@
-.teaser-search {
+.teaser.teaser-search {
   @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
-
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
+  padding-top: $gutter-width;
+  padding-bottom: $gutter-width;
   border-bottom: 2px solid;
 
   &:first-of-type {
     @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
-
-    margin-top: 1.2rem;
+    margin-top: $gutter-width;
     border-top: 2px solid;
   }
 }
