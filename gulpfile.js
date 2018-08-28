@@ -34,7 +34,7 @@ const gulpif = require('gulp-if');
 const babel = require('gulp-babel');
 const Color = require('color');
 const RecolorSvg = require('gulp-recolor-svg');
-const realFavicon = require ('gulp-real-favicon');
+const realFavicon = require('gulp-real-favicon');
 // require our configurated fractal module.
 const fractal = require('./fractal');
 
@@ -638,7 +638,7 @@ gulp.task('favicon:build', (done) => {
 
   let map = [{
     folder: 'cyan',
-    color: '#009DE0',
+    color: '#009DE0'
   }];
 
   for (const cs in colormap) {
@@ -712,7 +712,7 @@ gulp.task('favicon:build', (done) => {
           htmlCodeFile: false,
           usePathAsIs: false
         },
-        markupFile: './public/styleguide/img/favicon/build/buffer.json',
+        markupFile: './public/styleguide/img/favicon/build/buffer.json'
       }, () => {
         done();
       });
