@@ -18,7 +18,7 @@
       background-color: color('white');
       z-index: 200;
       overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
+      -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
 
       .modal-actions {
         display: block;
