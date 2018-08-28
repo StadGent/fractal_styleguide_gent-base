@@ -28,10 +28,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="cs--cyan">
+    <a href="#main-content" class="skiplink">
+      Overslaan en naar de inhoud gaan
+    </a>
     {% block content %}
       <div class="container">
         <div class="preview-container">
-          <div class="content-container">
+          <div class="content-container" id="main-content">
             {{ yield | raw }}
           </div>
         </div>
