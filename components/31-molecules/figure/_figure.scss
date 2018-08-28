@@ -166,6 +166,14 @@ figure {
       }
     }
 
+    .image-wrapper {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
     img {
       display: none;
 

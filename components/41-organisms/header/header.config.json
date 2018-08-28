@@ -20,7 +20,7 @@
       "<a href=\"#\">Subpage</a>",
       "<span>Page title</span>"
     ],
-    "hero_image_src": "https://via.placeholder.com/1600x420",
+    "hero_image_src": "https://via.placeholder.com/1600x400&text=4:1+(1600x400)",
     "hero_image_description": "Caption text comes here.",
     "hero_title": "ICT Supplier <span>Digipolis Gent</span>",
     "figure_logo_src_dark": "/styleguide/img/stock/digipolis-dark.svg",
