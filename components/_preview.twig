@@ -29,18 +29,19 @@
   </head>
   <body class="cs--cyan">
     <a href="#main-content" class="skiplink">
-      Overslaan en naar de inhoud gaan
+      Skip to main content
     </a>
-    {% block content %}
-      <div class="container">
-        <div class="preview-container">
-          <div class="content-container" id="main-content">
-            {{ yield | raw }}
+    <div id="main-content">
+      {% block content %}
+        <div class="container">
+          <div class="preview-container">
+            <div class="content-container">
+              {{ yield | raw }}
+            </div>
           </div>
         </div>
-      </div>
-    {% endblock %}
-
+      {% endblock %}
+    </div>
     <!-- hidden fields for screenreaders -->
     <span hidden id="image-gallery__open-gallery">open gallery</span>
 
