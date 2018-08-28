@@ -28,16 +28,18 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="cs--cyan">
-    {% block content %}
-      <div class="container">
-        <div class="preview-container">
-          <div class="content-container">
-            {{ yield | raw }}
+    {% include '@skiplink' %}
+    <div id="main-content">
+      {% block content %}
+        <div class="container">
+          <div class="preview-container">
+            <div class="content-container">
+              {{ yield | raw }}
+            </div>
           </div>
         </div>
-      </div>
-    {% endblock %}
-
+      {% endblock %}
+    </div>
     <!-- hidden fields for screenreaders -->
     <span hidden id="image-gallery__open-gallery">open gallery</span>
 

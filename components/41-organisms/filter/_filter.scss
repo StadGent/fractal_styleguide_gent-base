@@ -14,7 +14,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      padding: 1rem;
+      padding: 0 1rem 1rem;
       background-color: color('white');
       z-index: 200;
       overflow-y: scroll;
@@ -26,6 +26,7 @@
 
     .modal-actions {
       display: none;
+      padding-top: .2rem;
       text-align: right;
 
       button.close {

@@ -9,24 +9,22 @@
     position: fixed;
     top: 0;
     left: 0;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
-    padding: 1rem;
     background-color: color('white');
     box-shadow: $box-shadow-primary color('dark-gray', -4);
     z-index: 999;
-    overflow-y: auto;
 
     @include tablet {
       top: 10vh;
       left: 10vw;
       width: 80vw;
       height: 80vh;
-      padding: .5rem 2rem 2rem;
     }
 
     &.visible {
-      display: block;
+      display: flex;
 
       + .overlay {
         display: block;
@@ -39,12 +37,34 @@
       }
     }
 
+    > div {
+      padding: .5rem 1rem;
+
+      &.checkbox-filter__content {
+        padding-top: 0;
+      }
+
+      &.modal-actions {
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+      }
+
+      @include tablet {
+        padding: .5rem 2rem;
+      }
+    }
+
+    .checkbox-filter__content {
+      flex: 1;
+      overflow-y: scroll;
+    }
+
     .checkbox-filter__filter {
       margin-bottom: 1rem;
     }
 
     .checkbox-filter__checkboxes {
-      padding-bottom: 4rem;
+      flex: 1;
       columns: auto 320px;
 
       > * {
@@ -62,23 +82,9 @@
       @include theme('border-color', 'color-primary--lighten-4', 'checkbox-with-filter-action-border-bottom');
 
       display: flex;
-      position: fixed;
-      bottom: 0;
-      left: 0;
       align-items: center;
-      width: 100vw;
-      height: 3rem;
-      margin-top: -3rem;
-      padding-left: 1rem;
       border-top: 2px solid;
       background-color: color('white');
-
-      @include tablet {
-        top: 90vh;
-        left: 10vw;
-        width: 80vw;
-        padding-left: 2rem;
-      }
     }
   }
 

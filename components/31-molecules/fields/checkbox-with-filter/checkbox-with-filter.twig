@@ -18,38 +18,35 @@
         <div class="modal-actions">
           <button type="button" class="button icon-cross modal-close checkbox-filter__close"><span>Close</span><i class="icon-close" aria-hidden="true"></i></button>
         </div>
-
-        <header>
+        <div class="checkbox-filter__content">
           <h3>{{ label }}
             {% if label_optional %}
               <span class="label-optional">({{ label_optional }})</span>
             {% endif %}
           </h3>
-        </header>
-        <div class="form-item">
-          <label for="checkboxes__filter_id_{{ modifier }}">Filter the list below</label>
-          <input type="search" id="checkboxes__filter_id_{{ modifier }}"
-                 class="checkbox-filter__filter">
-          <div class="checkbox-filter__selected"></div>
+          <div class="form-item">
+            <label for="checkboxes__filter_id_{{ modifier }}">Filter the list below</label>
+            <input type="search" id="checkboxes__filter_id_{{ modifier }}"
+                   class="checkbox-filter__filter">
+            <div class="checkbox-filter__selected"></div>
+          </div>
+          <p>
+            <strong aria-live="polite" class="checkbox-filter__result-wrapper">There are <span class="checkbox-filter__result">#</span> results</strong>
+          </p>
+          <div class="checkbox-filter__checkboxes">
+            {% for option in options %}
+              {% include '@input-checkbox' with {
+              'checkbox_label': option.label_checkbox,
+              'checkbox_name': option.checkbox_name,
+              'checkbox_id': option.checkbox_id,
+              'checkbox_value': option.checkbox_value
+              } %}
+            {% endfor %}
+          </div>
         </div>
-        <p>
-          <strong aria-live="polite" class="checkbox-filter__result-wrapper">There are <span class="checkbox-filter__result">#</span> results</strong>
-        </p>
-        <div class="checkbox-filter__checkboxes">
-          {% for option in options %}
-            {% include '@input-checkbox' with {
-            'checkbox_label': option.label_checkbox,
-            'checkbox_name': option.checkbox_name,
-            'checkbox_id': option.checkbox_id,
-            'checkbox_value': option.checkbox_value
-            } %}
-          {% endfor %}
-        </div>
-
-        <footer class="checkbox-filter__actions">
+        <div class="checkbox-filter__actions">
           <button type="button" class="button button-primary button-small checkbox-filter__submit">Confirm selection</button>
-        </footer>
-
+        </div>
       </div>
       <div class="overlay checkbox-filter__close"></div>
       <p>
