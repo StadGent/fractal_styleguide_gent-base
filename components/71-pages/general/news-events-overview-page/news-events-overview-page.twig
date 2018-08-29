@@ -45,7 +45,8 @@
               "teaser_link_link": article.teaser_link_link,
               "teaser_image_src": article.teaser_image_src ~ '?random=' ~ key,
               "teaser_image_alt_text": article.teaser_image_alt_text,
-              "teaser_tag": article.teaser_tag
+              "teaser_tag": article.teaser_tag,
+              "teaser_label_text": article.teaser_label_text
             } %}
           {% else %}
           {% include '@teaser-article' with {

@@ -30,10 +30,10 @@
       } %}
     </div>
     <div class="content__top">
-      {% if teaser_event_date %}
+      {% if teaser_label_text %}
         <span class="teaser-label">
           <i class="icon-calendar"></i>
-          {{ 'Event' }}
+          {{ teaser_label_text }}
         </span>
       {% endif %}
       {% include '@figure' with {
