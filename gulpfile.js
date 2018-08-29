@@ -46,7 +46,7 @@ let build = false;
  * Get the sassFiles.
  */
 const _sassFiles = () => {
-  return gulp.src('components/**/*.s+(a|c)ss')
+  return gulp.src(['components/**/*.s+(a|c)ss', '!components/main_cli.scss'])
     .pipe(sassGlob());
 };
 
@@ -121,7 +121,6 @@ gulp.task('styles:inject', () => {
   const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
   const injectOrganismsFiles = gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
   const injectLayoutsFiles = gulp.src('components/61-layouts/**/*.s+(a|c)ss', {read: false});
-  const injectPagesFiles = gulp.src('components/71-pages/**/*.s+(a|c)ss', {read: false});
 
   const transformFilepath = (filepath) => `@import "${filepath}";`;
 
@@ -174,13 +173,6 @@ gulp.task('styles:inject', () => {
     addRootSlash: false,
     relative: true
   };
-  const injectPagesOptions = {
-    transform: transformFilepath,
-    starttag: '// inject:pages',
-    endtag: '// endinject',
-    addRootSlash: false,
-    relative: true
-  };
 
   return gulp.src('components/main_cli.scss', {allowEmpty: true})
     .pipe(inject(injectSettingsFiles, injectSettingsOptions))
@@ -190,8 +182,7 @@ gulp.task('styles:inject', () => {
     .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
     .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
     .pipe(inject(injectLayoutsFiles, injectLayoutsOptions))
-    .pipe(inject(injectPagesFiles, injectPagesOptions))
-    .pipe(gulp.dest('components/'));
+    .pipe(gulp.dest('build/styleguide/sass/'));
 });
 
 /**
@@ -203,18 +194,11 @@ gulp.task('styles:inject', () => {
  *  Autoprefixer
  */
 gulp.task('styles:dist', () => {
-  var plugins = [
-    calc()
-  ];
-
   return _sassFiles()
     .pipe(sourcemaps.init())
     .pipe(_sassCompile())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/css/'))
-    .pipe(gulp.src('public/css/main.css'))
-    .pipe(postcss(plugins))
-    .pipe(gulp.dest('public/css'));
+    .pipe(gulp.dest('./public/css/'));
 });
 
 /**
@@ -233,22 +217,14 @@ gulp.task('styles:build', () => {
 });
 
 gulp.task('styles:postcss:build', () => {
-  var plugins = [
-    calc()
-  ];
-
   return gulp.src('build/css/main.css')
-    .pipe(postcss(plugins))
+    .pipe(postcss([calc]))
     .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('styles:postcss:dist', () => {
-  var plugins = [
-    calc()
-  ];
-
   return gulp.src('public/css/main.css')
-    .pipe(postcss(plugins))
+    .pipe(postcss([calc]))
     .pipe(gulp.dest('public/css'));
 });
 
@@ -275,18 +251,18 @@ gulp.task('styles:validate', () => {
  *  Styles:dist
  */
 gulp.task('styles:watch', () => {
-  return gulp.watch('./components/**/*.scss', gulp.parallel(
+  return gulp.watch('./components/**/*.scss', gulp.series(gulp.parallel(
     'styles:validate',
     'styles:dist',
     'sassdoc'
-  ));
+  ), 'styles:postcss:dist'));
 });
 
 /**
  * Extract SCSS from the components folder.
  */
 gulp.task('styles:extract', () => {
-  return _sassFiles()
+  return gulp.src(['components/**/*.s+(a|c)ss', '!components/main_cli.scss', '!components/styleguide.scss'])
     .pipe(gulp.dest('./build/styleguide/sass/'));
 });
 
@@ -311,7 +287,7 @@ gulp.task('js:dist', () => {
  *  minify
  */
 gulp.task('js:build', gulp.parallel(
-  () => {
+  function jsExtractMinify() {
     return gulp.src(['components/**/*.js', '!components/**/*.config.js'])
       .pipe(rename({
         dirname: '',
@@ -323,7 +299,7 @@ gulp.task('js:build', gulp.parallel(
       .pipe(uglify())
       .pipe(gulp.dest('./build/styleguide/js/'));
   },
-  () => {
+  function jsExtract() {
     return gulp.src(['components/**/*.js', '!components/**/*.config.js'])
       .pipe(rename({
         dirname: ''
@@ -371,9 +347,9 @@ gulp.task('images:minify', () => {
 /**
  * Start the Fractal server
  *
- * In this example we are passing the option 'sync: true' which means that it will
- * use BrowserSync to watch for changes to the filesystem and refresh the browser automatically.
- * Obviously this is completely optional!
+ * In this example we are passing the option 'sync: true' which means that it
+ * will use BrowserSync to watch for changes to the filesystem and refresh the
+ * browser automatically. Obviously this is completely optional!
  *
  * This task will also log any errors to the console.
  */
@@ -618,7 +594,7 @@ gulp.task('iconfont', () => {
     }))
     .on('glyphs', function (glyphs, options) {
       // CSS templating, e.g.
-      console.log(glyphs, options);
+      // console.log(glyphs, options);
     })
     .pipe(gulp.dest('./public/styleguide/fonts/'));
 });
@@ -781,7 +757,8 @@ gulp.task('watch', gulp.parallel('default'));
  *
  * Helper task to build the sub themes favicons.
  *
- * TODO: Add this task to the compile commands when our build server supports the realfavicongenerator.net API.
+ * TODO: Add this task to the compile commands when our build server supports
+ * the realfavicongenerator.net API.
  */
 gulp.task('favicon', gulp.series('favicon:prebuild', 'favicon:build'));
 
@@ -812,17 +789,16 @@ gulp.task('compile', gulp.series(
   gulp.parallel(
     'styles:build',
     'styles:dist',
-    'styles:inject',
     'sassdoc',
     'js:build',
     'js:dist',
     'images:minify'
-  ),
-  gulp.series(
+  )
+  , gulp.parallel(
     'styles:postcss:dist',
-    'styles:postcss:build'
-  ),
-  'styles:extract'
+    'styles:postcss:build',
+    'styles:extract',
+    'styles:inject')
 ), callback => callback());
 
 gulp.task('compile:dev', gulp.series(
