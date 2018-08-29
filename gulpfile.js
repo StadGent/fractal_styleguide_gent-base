@@ -780,6 +780,8 @@ gulp.task('watch', gulp.parallel('default'));
  *   gulp favicon:build
  *
  * Helper task to build the sub themes favicons.
+ *
+ * TODO: Add this task to the compile commands when our build server supports the realfavicongenerator.net API.
  */
 gulp.task('favicon', gulp.series('favicon:prebuild', 'favicon:build'));
 
@@ -804,8 +806,7 @@ gulp.task('validate', gulp.parallel('styles:validate', 'js:validate', 'axe'), ca
 gulp.task('compile', gulp.series(
   gulp.parallel(
     'iconfont',
-    'spotimages',
-    'favicon'
+    'spotimages'
   ),
   'fractal:build',
   gulp.parallel(
@@ -827,8 +828,7 @@ gulp.task('compile', gulp.series(
 gulp.task('compile:dev', gulp.series(
   gulp.parallel(
     'iconfont',
-    'spotimages',
-    'favicon'
+    'spotimages'
   ),
   'fractal:build',
   gulp.parallel(
