@@ -46,7 +46,7 @@ let build = false;
  * Get the sassFiles.
  */
 const _sassFiles = () => {
-  return gulp.src('components/**/*.s+(a|c)ss')
+  return gulp.src(['components/**/*.s+(a|c)ss', '!components/main_cli.scss'])
     .pipe(sassGlob());
 };
 
@@ -182,7 +182,7 @@ gulp.task('styles:inject', () => {
     .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
     .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
     .pipe(inject(injectLayoutsFiles, injectLayoutsOptions))
-    .pipe(gulp.dest('components/'));
+    .pipe(gulp.dest('build/styleguide/sass/'));
 });
 
 /**
@@ -262,7 +262,7 @@ gulp.task('styles:watch', () => {
  * Extract SCSS from the components folder.
  */
 gulp.task('styles:extract', () => {
-  return gulp.src('components/**/*.s+(a|c)ss')
+  return gulp.src(['components/**/*.s+(a|c)ss', '!components/main_cli.scss', '!components/styleguide.scss'])
     .pipe(gulp.dest('./build/styleguide/sass/'));
 });
 
@@ -594,7 +594,7 @@ gulp.task('iconfont', () => {
     }))
     .on('glyphs', function (glyphs, options) {
       // CSS templating, e.g.
-      console.log(glyphs, options);
+      // console.log(glyphs, options);
     })
     .pipe(gulp.dest('./public/styleguide/fonts/'));
 });
@@ -789,15 +789,17 @@ gulp.task('compile', gulp.series(
   gulp.parallel(
     'styles:build',
     'styles:dist',
-    'styles:inject',
     'sassdoc',
     'js:build',
     'js:dist',
     'images:minify'
-  ),
-  'styles:postcss:dist',
-  'styles:postcss:build',
-  'styles:extract'), callback => callback());
+  )
+  , gulp.parallel(
+    'styles:postcss:dist',
+    'styles:postcss:build',
+    'styles:extract',
+    'styles:inject')
+), callback => callback());
 
 gulp.task('compile:dev', gulp.series(
   gulp.parallel(
