@@ -2,7 +2,7 @@
 
 const generateCheckboxes = (uid)=>{
   let result = [];
-  for (let i = 195; i--;) {
+  for (let i = 1095; i--;) {
     result.push({
       label_checkbox: `Checkbox option ${i}`,
       checkbox_name: 'checkboxgroup[]',

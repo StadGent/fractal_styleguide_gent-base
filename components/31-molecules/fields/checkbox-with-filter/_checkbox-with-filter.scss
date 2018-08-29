@@ -4,6 +4,13 @@
     margin: 0 .5rem .5rem 0;
   }
 
+  .checkbox-filter__count-wrapper,
+  .checkbox-filter__result-wrapper {
+    &.hidden {
+      @extend %visually-hidden
+    }
+  }
+
   .checkbox-filter__modal {
     display: none;
     position: fixed;
