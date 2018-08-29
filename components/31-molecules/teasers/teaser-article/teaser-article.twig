@@ -30,6 +30,12 @@
       } %}
     </div>
     <div class="content__top">
+      {% if teaser_event_date %}
+        <span class="teaser-label">
+          <i class="icon-calendar"></i>
+          {{ 'Event' }}
+        </span>
+      {% endif %}
       {% include '@figure' with {
         "figure_image_src": teaser_image_src,
         "figure_ratio": '8:5'
