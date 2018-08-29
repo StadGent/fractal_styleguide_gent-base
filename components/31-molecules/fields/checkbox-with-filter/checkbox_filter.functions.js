@@ -96,6 +96,22 @@
     );
 
     /**
+     * Container wrapping the resultspan.
+     * @type {Element}
+     */
+    const resultSpanWrapper = elem.querySelector(
+      options.resultSpanWrapper || '.checkbox-filter__result-wrapper'
+    );
+
+    /**
+     * Container wrapping the countspan.
+     * @type {Element}
+     */
+    const countSpanWrapper = elem.querySelector(
+      options.countSpanWrapper || '.checkbox-filter__count-wrapper'
+    );
+
+    /**
      * Container to display the number of selected values.
      * @type {Element}
      */
@@ -173,7 +189,7 @@
         checkboxContainer.style.display = '';
       }
 
-      resultSpan.innerText = count;
+      updateResult(count);
       tabTrap.setFocusables();
     };
 
@@ -218,12 +234,49 @@
     };
 
     /**
+     * Update the count display.
+     */
+    const updateCount = () => {
+      const selectedCount = selectedContainer.children.length;
+
+      if (countSpan) {
+        countSpan.innerText = selectedCount;
+      }
+      if (countSpanWrapper) {
+        if (selectedCount > 0) {
+          countSpanWrapper.classList.remove('hidden');
+        }
+        else {
+          countSpanWrapper.classList.add('hidden');
+        }
+      }
+    };
+
+    /**
+     * Update the result display.
+     * @param {number} resultCount The number of results after filter.
+     */
+    const updateResult = (resultCount) => {
+      if (resultSpan) {
+        resultSpan.innerText = resultCount;
+      }
+      if (resultSpanWrapper) {
+        if (filterfield.value === '') {
+          resultSpanWrapper.classList.add('hidden');
+        }
+        else {
+          resultSpanWrapper.classList.remove('hidden');
+        }
+      }
+    };
+
+    /**
      * Open or close the modal
      */
     const toggleModal = () => {
       // hide
       if (modal.classList.contains('visible')) {
-        countSpan.innerText = selectedContainer.children.length;
+        updateCount();
         openBtn.setAttribute('aria-expanded', 'false');
         modal.setAttribute('aria-hidden', 'true');
         modal.classList.remove('visible');
@@ -320,6 +373,8 @@
           selectedContainer.appendChild(makeTag(checkbox, label));
         }
       });
+
+      updateCount();
 
       filter(true);
     };

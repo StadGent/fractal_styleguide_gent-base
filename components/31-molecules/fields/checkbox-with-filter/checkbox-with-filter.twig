@@ -30,8 +30,8 @@
                    class="checkbox-filter__filter">
             <div class="checkbox-filter__selected"></div>
           </div>
-          <p>
-            <strong aria-live="polite" class="checkbox-filter__result-wrapper">There are <span class="checkbox-filter__result">#</span> results</strong>
+          <p class="checkbox-filter__result-wrapper">
+            <strong aria-live="polite">There are <span class="checkbox-filter__result">#</span> results</strong>
           </p>
           <div class="checkbox-filter__checkboxes">
             {% for option in options %}
@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="overlay checkbox-filter__close"></div>
-      <p>
+      <p class="checkbox-filter__count-wrapper hidden">
         <strong><span class="checkbox-filter__count">0</span> {{ label_count }} selected</strong>
       </p>
       <button type="button" class="button button-secondary button-small checkbox-filter__open">
