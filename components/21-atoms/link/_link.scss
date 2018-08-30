@@ -65,8 +65,8 @@ a {
 
   &::after {
     transition: margin .1s ease-in;
-    font-size: 1.8em;
-    line-height: .8em;
+    font-size: 1.5em;
+    line-height: 1em;
     // For IE purposes first set underline, then remove it.
     text-decoration: underline;
     vertical-align: text-bottom;
