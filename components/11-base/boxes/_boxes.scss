@@ -133,7 +133,7 @@
   @include theme('background-color', 'color-primary--lighten-5', 'feedback-form-background');
 
   position: relative;
-  padding: 2rem calc(#{$gutter-width} / 2);
+  padding: 2rem 1rem 1.6rem;
   border-radius: border-radius('radius-1');
 
   .inner-box {
