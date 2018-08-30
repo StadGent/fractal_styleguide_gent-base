@@ -26,7 +26,7 @@
   }
 
   > .quote-wrapper,
-  > .image-gallery--wrapper,
+  > .image-gallery--wrapper.multiple,
   > .help-block,
   > .search-block {
     @include desktop {
