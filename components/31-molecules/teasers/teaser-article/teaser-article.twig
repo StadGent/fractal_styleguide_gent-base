@@ -33,13 +33,18 @@
       {% if teaser_label_text %}
         <span class="teaser-label">
           <i class="icon-calendar"></i>
-          {{ teaser_label_text }}
+          <span>{{ teaser_label_text }}</span>
         </span>
       {% endif %}
-      {% include '@figure' with {
-        "figure_image_src": teaser_image_src,
-        "figure_ratio": '8:5'
-      } %}
+
+      <div class="figure-wrapper">
+        {% include '@figure' with {
+          "figure_image_src": teaser_image_src,
+          "figure_ratio": '8:5'
+        } %}
+
+        <div class="accolade-inverse bottom-left"></div>
+      </div>
 
       {% include '@tag' with {
         "tag_text": teaser_tag,

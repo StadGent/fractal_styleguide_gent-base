@@ -21,6 +21,10 @@
       order: 2;
     }
 
+    .figure-wrapper {
+      position: relative;
+    }
+
     h3 {
       margin-bottom: 0;
     }
@@ -60,7 +64,7 @@
       }
 
       &::before {
-        @include theme('background-color', 'color-primary--lighten-4', 'teaser-label-background-color');
+        @include theme('background-color', 'color-primary--lighten-5', 'teaser-label-background-color');
 
         z-index: 1;
       }
@@ -69,7 +73,7 @@
         @include theme('color', 'color-primary', 'teaser-label-icon-color');
 
         margin-right: .2em;
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
     }
 
