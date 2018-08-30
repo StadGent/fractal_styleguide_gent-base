@@ -68,6 +68,7 @@
     width: 100%;
     margin: 0 0 .5rem;
     padding: 4.5rem 2rem 2rem;
+    border-radius: border-radius('radius-2');
 
     @include tablet {
       margin: 0 0 .5rem;
@@ -92,6 +93,31 @@
         left: auto;
         width: 7rem;
         height: 7rem;
+      }
+    }
+
+    .accolade {
+      bottom: -1rem;
+      background-color: inherit;
+
+      &[class^='top'],
+      &[class*=' top'] {
+        top: -1rem;
+        bottom: auto;
+      }
+
+      &[class^='right'],
+      &[class*=' right'] {
+        top: 0;
+        right: -1rem;
+        bottom: auto;
+      }
+
+      &[class^='left'],
+      &[class*=' left'] {
+        top: 0;
+        bottom: auto;
+        left: -1rem;
       }
     }
   }
