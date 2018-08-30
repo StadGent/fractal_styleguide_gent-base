@@ -2,6 +2,7 @@
 .box-top,
 .box-no-icon {
   border-radius: border-radius('radius-2');
+  font-size: .9rem;
 
   .inner-box {
     input[type="checkbox"]:not([disabled]) + label::before,
@@ -55,6 +56,9 @@
 }
 
 .box-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 3rem;
 
   @include tablet {
