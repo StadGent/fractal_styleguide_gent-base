@@ -20,14 +20,30 @@
                 'text': contact.link_text,
                 'modifier': 'standalone-link contact-name'
               } %}
-              <p>
-                {{ contact.address }}
-              </p>
-              {% include '@link' with {
-                'link': 'mailto:' ~ contact.email,
-                'text': contact.email,
-                'modifier': 'contact-email'
-              } %}
+              <ul class="links">
+                <li>
+                  {{ contact.address }}
+                </li>
+                <li>
+                  {{ contact.address }}
+                </li>
+              </ul>
+              <ul class="links">
+                <li>
+                  {% include '@link' with {
+                    'link': 'mailto:' ~ contact.email,
+                    'text': contact.email,
+                    'modifier': 'contact-email'
+                  } %}
+                </li>
+                <li>
+                  {% include '@link' with {
+                    'link': 'mailto:' ~ contact.email,
+                    'text': contact.email,
+                    'modifier': 'contact-email'
+                  } %}
+                </li>
+              </ul>
             </address>
               {% if contact.opening_hours|length > 0 %}
                 <span class="opening-hours open">
@@ -71,9 +87,7 @@
         'heading_text': 'Location'
       } %}
 
-      {% include '@paragraph' with {
-      "text": "Map stub",
-      } %}
+      {%  include '@map' %}
 
       {% include '@heading' with {
         'type': 'h3',
