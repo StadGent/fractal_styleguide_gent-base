@@ -1,0 +1,95 @@
+.map-container {
+  position: relative;
+  border: 1px solid color('dark-gray', -3);
+  overflow: hidden;
+
+  .map-container__map {
+    width: 100%;
+  }
+
+  .ol-control {
+
+    button {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 0;
+      border: 1px solid color('dark-gray', -3);
+      border-bottom: 0;
+      color: color('dark-gray');
+
+      &:hover {
+        background: color('dark-gray', -1);
+      }
+    }
+  }
+
+  .ol-zoom {
+    top: .5rem;
+    right: .5rem;
+
+    button {
+      background: color('white');
+    }
+
+  }
+
+  .ol-zoom-out {
+    button {
+      background: color('white');
+    }
+  }
+
+  .ol-full-screen {
+    top: 5.5rem;
+    right: .5rem;
+
+    button {
+      border-bottom: 1px solid color('dark-gray', -2);
+      background: color('white');
+    }
+  }
+
+  .ol-base-layer-switcher {
+    right: .5rem;
+    bottom: .5rem;
+
+    button {
+      background-color: transparent;
+    }
+  }
+
+  .ol-scale-line {
+    background: rgba(255, 255, 255, .6);
+    color: color('white');
+    z-index:  400;
+
+    .ol-scale-line-inner {
+      border-color: color('dark-gray');
+      color: color('dark-gray');
+    }
+  }
+
+  .map-container__side-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15rem;
+    height: 100%;
+    padding: 1.75rem 1.9rem;
+    background: rgba(255, 255, 255, .8);
+    overflow: hidden;
+    z-index: 200;
+  }
+
+  .ol-data-layer-switcher {
+    position: relative;
+    width: auto;
+    border: 0;
+    background: transparent;
+  }
+
+}
+
+.ol-data-layer-switcher.ol-control:hover {
+  background: transparent;
+}
