@@ -4,10 +4,16 @@
     margin: 0 .5rem .5rem 0;
   }
 
-  .checkbox-filter__count-wrapper,
-  .checkbox-filter__result-wrapper {
+  .checkbox-filter__count-wrapper {
     &.hidden {
       @extend %visually-hidden
+    }
+  }
+
+  .checkbox-filter__result-placeholder,
+  .checkbox-filter__result-wrapper {
+    &.hidden {
+      display: none;
     }
   }
 
