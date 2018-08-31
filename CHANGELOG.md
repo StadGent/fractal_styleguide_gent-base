@@ -8,6 +8,12 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to this style guide are documented here.
 
+### 3.0.0-alpha.8
+
+* DTGB-509: Updated checkbox-with-filter template.
+
+### 3.0.0-alpha.7
+
 ### 3.0.0
 
 * DTGB-208: Added max-width fallback for text elements.
