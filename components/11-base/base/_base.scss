@@ -22,10 +22,6 @@ html {
 body {
   @include theme('color', 'color-tertiary', 'default-text-color');
   position: relative;
-}
-
-body,
-body * {
   font-size: .8rem;
 }
 

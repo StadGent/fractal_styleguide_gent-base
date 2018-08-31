@@ -12,4 +12,8 @@
       font-weight: 600;
     }
   }
+
+  .button {
+    @include button-large;
+  }
 }

@@ -21,28 +21,12 @@
     margin-bottom: 2rem;
   }
 
-  // // All direct children of a detail layout should get default margins.
-  // // Except heading tags and paragraphs.
-  // > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(.box-top):not(.box-left):not(.readspeaker-button) {
-  // }
-
   > ul {
     padding-left: 2rem;
-
-    li {
-      font-size: inherit;
-    }
-  }
-
-  // Paragraphs are an exception to the above rule.
-  > p {
-    strong {
-      font-size: inherit;
-    }
   }
 
   > .quote-wrapper,
-  > .image-gallery--wrapper,
+  > .image-gallery--wrapper.multiple,
   > .help-block,
   > .search-block {
     @include desktop {
@@ -72,11 +56,6 @@
     @include desktop {
       padding-left: span(1 wide of 12);
     }
-  }
-
-  > .help-block,
-  > .search-block {
-    @include wide;
   }
 
   > .timeline-wrapper {
@@ -153,7 +132,6 @@ aside.top {
 
 aside.bottom {
   .feedback-form {
-    @include wide;
 
     margin-bottom: 2rem;
     padding-top: 1.2rem;

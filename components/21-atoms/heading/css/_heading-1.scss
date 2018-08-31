@@ -3,5 +3,9 @@ h1,
 %h1 {
   @include theme('color', 'color-primary', 'heading-1-color');
 
-  font-size: 2.1rem;
+  font-size: 1.6rem;
+
+  @include tablet {
+    font-size: 2.1rem;
+  }
 }
