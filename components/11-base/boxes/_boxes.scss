@@ -23,7 +23,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 4.5rem;
-  padding: 0 calc(#{$gutter-width} / 2) 1.6rem;
+  padding: 0 1rem 1.6rem;
 
   @include tablet {
     flex-wrap: nowrap;
@@ -34,14 +34,18 @@
 
   &::before {
     @include spot-image('lightbulb-light', 6.2rem);
+    @include theme('color', 'color-primary', 'info-box-spot-shadow');
 
     margin: -3.1rem 0 1rem;
+    border-radius: 50%;
+    box-shadow: 0 10px 35px -25px;
 
     @include tablet {
       align-self: center;
       width: 8rem;
       height: 8rem;
       margin: 0 2.5rem 0 0;
+      box-shadow: none;
       justify-self: flex-start;
     }
   }
@@ -70,16 +74,17 @@
 
     position: relative;
     width: 100%;
-    margin: 0 0 .5rem;
-    padding: 4.5rem 2rem 2rem;
+    margin: 0 0 1.5rem;
+    padding: 4.5rem 1rem 1.6rem;
+    border-radius: border-radius('radius-2');
 
     @include tablet {
-      margin: 0 0 .5rem;
       padding: 2rem;
     }
 
     &::before {
       @include spot-image('lightbulb-light', 7rem);
+      @include theme('color', 'color-primary', 'info-box-spot-shadow');
 
       position:  absolute;
       top: -3rem;
@@ -88,6 +93,8 @@
       width: 6rem;
       height: 6rem;
       margin: auto;
+      border-radius: 50%;
+      box-shadow: 0 10px 35px -25px;
       z-index: 10;
 
       @include tablet {
@@ -98,6 +105,31 @@
         height: 7rem;
       }
     }
+
+    .accolade {
+      bottom: -1rem;
+      background-color: inherit;
+
+      &[class^='top'],
+      &[class*=' top'] {
+        top: -1rem;
+        bottom: auto;
+      }
+
+      &[class^='right'],
+      &[class*=' right'] {
+        top: 0;
+        right: -1rem;
+        bottom: auto;
+      }
+
+      &[class^='left'],
+      &[class*=' left'] {
+        top: 0;
+        bottom: auto;
+        left: -1rem;
+      }
+    }
   }
 }
 
@@ -105,7 +137,7 @@
   @include theme('background-color', 'color-primary--lighten-5', 'feedback-form-background');
 
   position: relative;
-  padding: 2rem calc(#{$gutter-width} / 2);
+  padding: 2rem 1rem 1.6rem;
   border-radius: border-radius('radius-1');
 
   .inner-box {

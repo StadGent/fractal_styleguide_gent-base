@@ -58,11 +58,6 @@
     }
   }
 
-  > .help-block,
-  > .search-block {
-    @include wide;
-  }
-
   > .timeline-wrapper {
     @include set-layout();
     @include extra-wide;
@@ -137,7 +132,6 @@ aside.top {
 
 aside.bottom {
   .feedback-form {
-    @include wide;
 
     margin-bottom: 2rem;
     padding-top: 1.2rem;
