@@ -45,19 +45,14 @@
     }
 
     > div {
-      padding: .5rem 1rem;
+      padding: .8rem $gutter-width;
 
       &.checkbox-filter__content {
         padding-top: 0;
       }
 
       &.modal-actions {
-        padding-top: .2rem;
-        padding-bottom: .2rem;
-      }
-
-      @include tablet {
-        padding: .5rem $gutter-width;
+        padding: 0;
       }
     }
 
