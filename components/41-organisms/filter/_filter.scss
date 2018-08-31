@@ -20,20 +20,20 @@
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
 
-      .modal-actions {
+      > .modal-actions {
         display: block;
       }
     }
 
-    .modal-actions {
+    > .modal-actions {
       display: none;
-      padding-top: .2rem;
       text-align: right;
+      margin-left: -1rem;
+      margin-right: -1rem;
+
     }
 
     form {
-      margin-bottom: 2rem;
-
       // style first level labels as headings
       > .form-item > label,
       > fieldset.form-item > legend {
@@ -51,7 +51,8 @@
     }
 
     .filter__submit {
-      margin-top: .6rem;
+      margin-top: .8rem;
+      margin-bottom: .8rem;
     }
   }
 

@@ -45,7 +45,7 @@
     }
 
     > div {
-      padding: .8rem $gutter-width;
+      padding: .8rem 1rem;
 
       &.checkbox-filter__content {
         padding-top: 0;
@@ -54,11 +54,15 @@
       &.modal-actions {
         padding: 0;
       }
+
+      @include tablet {
+        padding: .8rem $gutter-width;
+      }
     }
 
     .checkbox-filter__content {
       flex: 1;
-      margin-bottom: 3rem;
+      margin-bottom: 3.8rem;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
     }
@@ -91,8 +95,7 @@
       left: 0;
       align-items: center;
       width: 100%;
-      height: 3rem;
-      margin-top: -3rem;
+      margin-top: -3.8rem;
       border-top: 2px solid;
       background-color: color('white');
 
