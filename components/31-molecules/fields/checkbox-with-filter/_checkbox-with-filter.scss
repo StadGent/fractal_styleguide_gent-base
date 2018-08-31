@@ -57,7 +57,7 @@
       }
 
       @include tablet {
-        padding: .5rem 2rem;
+        padding: .5rem $gutter-width;
       }
     }
 

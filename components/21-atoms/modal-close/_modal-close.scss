@@ -1,6 +1,6 @@
 button[class*="icon-"].modal-close {
   min-height: 0;
-  padding: 0;
+  padding: 0 .4rem;
   border: 0;
   background: transparent;
   color: color('dark-gray');
@@ -11,5 +11,10 @@ button[class*="icon-"].modal-close {
     order: 0;
     margin: 0 .5rem 0 0;
     font-size: 1.4rem;
+  }
+
+  &:hover,
+  &:focus {
+    @include theme('background-color', 'color-primary--lighten-4', 'modal-close-hover-bg-color');
   }
 }

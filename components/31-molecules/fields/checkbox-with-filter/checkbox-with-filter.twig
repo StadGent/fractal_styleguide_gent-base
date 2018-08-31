@@ -14,9 +14,9 @@
       </div>
     <div class="form-item-column">
   {% endif %}
-      <div class="checkbox-filter__modal">
+      <div class="checkbox-filter__modal visible">
         <div class="modal-actions">
-          <button type="button" class="button icon-cross modal-close checkbox-filter__close"><span>Close</span><i class="icon-close" aria-hidden="true"></i></button>
+          {% include '@modal-close' %}
         </div>
         <div class="checkbox-filter__content">
           <h3>{{ label }}
