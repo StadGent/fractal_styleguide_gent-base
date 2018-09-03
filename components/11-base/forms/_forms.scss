@@ -269,7 +269,7 @@ $field-icon-padding: 2.5rem;
         + label {
           @include icon('checkmark', 'after');
 
-          font-weight: 700;
+          font-weight: 600;
 
           &::after {
             font-size: 1.2rem;
@@ -296,7 +296,7 @@ $field-icon-padding: 2.5rem;
       &:checked {
         // Show checkmark on checked.
         + label {
-          font-weight: 700;
+          font-weight: 600;
         }
 
         + label::before {
