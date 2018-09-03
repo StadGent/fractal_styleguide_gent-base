@@ -8,7 +8,7 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to this style guide are documented here.
 
-### 3.0.0-alpha.8
+### Unreleased
 
 * DTGB-509: Updated checkbox-with-filter template.
 
