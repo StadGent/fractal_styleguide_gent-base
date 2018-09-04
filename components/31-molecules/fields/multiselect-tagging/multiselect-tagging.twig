@@ -2,7 +2,7 @@
   <div class="form-label">
     {% include '@label' with {
       "label": label,
-      "for": for,
+      "for": for ~ "-" ~ modifier,
       "label_optional": label_optional
     } %}
   </div>
@@ -14,7 +14,7 @@
     </div>
     <div class="form-item-column">
       {% include '@input-multiselect-tagging' with {
-        "multiselect_id": multiselect_id,
+        "multiselect_id": multiselect_id ~ "-" ~ modifier,
         "multiselect_name": multiselect_name,
         "options": options
       } %}

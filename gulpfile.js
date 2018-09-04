@@ -522,7 +522,7 @@ gulp.task('axe', function (done) {
 
         let components = Object.assign({}, options);
         components.saveOutputIn = 'components.json';
-        components.urls = ['build/components/preview/!(input*|*page).html'];
+        components.urls = ['build/components/preview/!(input*|*page|teaser*|preview*).html'];
         components.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
         components.a11yCheckOptions.rules = {bypass: {enabled: false}};
 

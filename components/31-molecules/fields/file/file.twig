@@ -2,7 +2,7 @@
   <div class="form-label">
     {% include '@label' with {
       "label": label,
-      "for": for,
+      "for": for ~ "-" ~ modifier,
       "label_optional": label_optional
     } %}
   </div>
@@ -15,7 +15,7 @@
     <div class="form-item-column">
       {% include '@input-file'
         with {
-          "file_id": file_id,
+          "file_id": file_id ~ "-" ~ modifier,
           "file_name": file_name
         }
       %}
