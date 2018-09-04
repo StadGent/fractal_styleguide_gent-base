@@ -504,10 +504,11 @@ gulp.task('axe', function (done) {
     const axe = require('gulp-axe-webdriver');
     const options = {
       saveOutputIn: 'allHtml.json',
-      browser: 'phantomjs',
       urls: ['build/components/preview/*.html'],
       showOnlyViolations: true,
       verbose: false,
+      headless: true,
+      exclude: '.responsive-video > iframe',
       a11yCheckOptions: {
         runOnly: {
           type: 'tag',
@@ -550,14 +551,14 @@ gulp.task('axe', function (done) {
 
         let pages = Object.assign({}, options);
         pages.saveOutputIn = 'pages.json';
-        pages.urls = ['build/components/preview/*page.html'];
+        pages.urls = ['build/components/preview/*page*.html'];
         pages.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
 
         axe(pages, () => {resolve();});
       });
     };
 
-    return Promise.all([pages()]);
+    return Promise.all([pages(), input(), notInputNotPages()]);
   }
   catch (err) {
     console.log('Error catched', err); // eslint-disable-line no-console
