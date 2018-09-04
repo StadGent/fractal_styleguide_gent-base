@@ -11,7 +11,6 @@ module.exports = {
     return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
   context: {
-    type: 'unordered',
     items: [
       'item 1',
       'item 2'
@@ -31,6 +30,13 @@ module.exports = {
     ]
   },
   variants: [
+    {
+      name: 'unordered-list',
+      preview: '@preview',
+      context: {
+        type: 'unordered'
+      }
+    },
     {
       name: 'Ordered list',
       handle: 'ordered-list',
