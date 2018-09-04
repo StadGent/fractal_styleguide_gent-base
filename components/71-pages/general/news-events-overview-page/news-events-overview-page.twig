@@ -31,7 +31,7 @@
         {% for key, article in articles %}
           {% if article.teaser_event_date %}
             {% include '@teaser-article' with {
-              "teaser_uid": article.teaser_uid,
+              "teaser_uid": article.teaser_uid ~ loop.index,
               "teaser_paragraph_text": article.teaser_paragraph_text,
               "teaser_title": article.teaser_title,
               "teaser_event_date": {
@@ -50,7 +50,7 @@
             } %}
           {% else %}
           {% include '@teaser-article' with {
-            "teaser_uid": article.teaser_uid,
+            "teaser_uid": article.teaser_uid ~ loop.index,
             "teaser_paragraph_text": article.teaser_paragraph_text,
             "teaser_title": article.teaser_title,
             "teaser_published_date": article.teaser_published_date,
@@ -74,4 +74,6 @@
   </section>
 </main>
 
-{% include '@footer' %}
+<footer>
+  {% include '@footer' %}
+</footer>
