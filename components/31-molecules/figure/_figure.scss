@@ -92,6 +92,10 @@ figure {
         width: 100%;
         max-width: none;
         background-color: color('white');
+
+        @media (min-width: $bp-max-content) {
+          width: auto;
+        }
       }
 
       img {
@@ -204,7 +208,9 @@ figure {
         }
 
         @media (min-width: $bp-max-content) {
-          left: calc(#{$span} + 2rem + ((100% - #{$bp-max-content}) / 2));
+          right: calc((100% - #{$bp-max-content}) / 2);
+          left: calc(#{$span} + 2rem + (100% - #{$bp-max-content}) / 2);
+          padding-right: 0;
         }
       }
     }
