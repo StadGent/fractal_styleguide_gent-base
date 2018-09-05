@@ -561,7 +561,9 @@ gulp.task('axe', function (done) {
       });
     };
 
-    return Promise.all([input(), notInputNotPages(), pages()]);
+    Promise.all([input(), notInputNotPages(), pages()])
+      .then(done)
+      .catch(done);
   }
   catch (err) {
     console.log('Error catched', err); // eslint-disable-line no-console
