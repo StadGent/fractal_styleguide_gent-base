@@ -55,7 +55,7 @@
     "susy": "^3.0.1"
   },
   "optionalDependencies": {
-    "gulp-axe-webdriver": "^1.4.0"
+    "gulp-axe-webdriver": "^3.0.1"
   },
   "scripts": {
     "postinstall": "cd scripts; ./postinstall.sh"

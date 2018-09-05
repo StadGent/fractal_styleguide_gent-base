@@ -5,8 +5,11 @@
         <a href="{{ item.src }}" class="gallery-link"
           {% if item.caption %}
             aria-label="{{ item.caption }}"
+            aria-describedby="image-gallery__open-gallery"
+          {% else %}
+            aria-labelledby="image-gallery__open-gallery"
           {% endif %}
-           aria-describedby="image-gallery__open-gallery">
+          >
           {% include '@figure' with {
             "figure_figcaption": item.caption,
             "figure_image_src": item.src,

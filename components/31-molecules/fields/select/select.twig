@@ -2,7 +2,7 @@
   <div class="form-label">
     {% include '@label' with {
       "label": label,
-      "for": for,
+      "for": for ~ "-" ~ modifier,
       "label_optional": label_optional
     } %}
   </div>
@@ -14,7 +14,7 @@
     </div>
     <div class="form-item-column">
       {% include '@input-select' with {
-        "select_id": select_id,
+        "select_id": select_id ~ "-" ~ modifier,
         "select_name": select_name,
         "options": options
       } %}

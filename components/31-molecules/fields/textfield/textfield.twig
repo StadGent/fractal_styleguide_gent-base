@@ -2,7 +2,7 @@
   <div class="form-label">
     {% include '@label' with {
       "label": label,
-      "for": for,
+      "for": for ~ "-" ~ modifier,
       "label_optional": label_optional
     } %}
   </div>
@@ -15,7 +15,7 @@
     <div class="form-item-column">
       {% include '@input-text'
         with {
-          "textfield_id": textfield_id,
+          "textfield_id": textfield_id ~ "-" ~ modifier,
           "textfield_name": textfield_name
         }
       %}

@@ -1,9 +1,11 @@
 <div class="cta-block box-left {{ type }}">
   <div class="inner-box">
-    {% include '@heading' with {
-      'type': 'h2',
-      'heading_text': title
-    } %}
+    {%  if title %}
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': title
+      } %}
+    {% endif %}
 
     {% include '@paragraph' with {
       'text': description

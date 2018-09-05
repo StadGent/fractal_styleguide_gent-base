@@ -31,7 +31,7 @@
           {% include '@teaser-topic' with {
             "teaser_paragraph_text": topic.teaser_paragraph_text,
             "teaser_title": topic.teaser_title,
-            "teaser_uid":  topic.teaser_uid ~ i,
+            "teaser_uid":  topic.teaser_uid ~ loop.index,
             "teaser_link_text": topic.teaser_link_text,
             "teaser_link_link": topic.teaser_link_link,
             "teaser_image_src": topic.teaser_image_src ~ '?random=' ~ key,
@@ -44,4 +44,6 @@
   </section>
 </main>
 
-{% include '@footer' %}
+<footer>
+  {% include '@footer' %}
+</footer>

@@ -1,10 +1,12 @@
 <div class="image-gallery--wrapper single">
   <div class="image-gallery js-lightbox">
     <a href="{{ src }}"
-      {% if caption %}
-        aria-label="{{ caption }}"
+      {% if item.caption %}
+        aria-label="{{ item.caption }}"
+        aria-describedby="image-gallery__open-gallery"
+      {% else %}
+        aria-labelledby="image-gallery__open-gallery"
       {% endif %}
-       aria-describedby="image-gallery__open-gallery"
        class="gallery-link">
       {% include '@figure' with {
         "figure_figcaption": caption,
