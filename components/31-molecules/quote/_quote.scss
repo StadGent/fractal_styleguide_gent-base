@@ -19,7 +19,8 @@
 
   blockquote {
     position: relative;
-    flex: 1 1 100%;
+    flex: 1 1 auto;
+    width: 100%;
     max-width: 40rem;
 
     @include desktop {
