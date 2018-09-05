@@ -88,7 +88,9 @@ figure {
       }
 
       ~ figcaption {
+        left: 0;
         width: 100%;
+        max-width: none;
         background-color: color('white');
       }
 
