@@ -1,6 +1,5 @@
 ul.image-wall,
 ul.image-gallery {
-  margin: 0;
   list-style: none;
 
   figcaption {
@@ -23,4 +22,12 @@ ul.image-gallery {
       background-color: transparent;
     }
   }
+}
+
+ul.image-wall {
+  margin: 0;
+}
+
+ul.image-gallery {
+  margin: 0 calc(-1 * (#{$gutter-width} / 2));
 }

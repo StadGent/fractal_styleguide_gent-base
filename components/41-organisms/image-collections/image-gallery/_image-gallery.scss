@@ -2,7 +2,7 @@
   @include clearfix();
 
   position: relative;
-  margin: 0 calc(-1 * (#{$gutter-width} / 2));
+  margin: 0;
   padding: 0;
   text-align: center;
 
