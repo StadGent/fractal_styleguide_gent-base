@@ -506,14 +506,19 @@ gulp.task('axe', function (done) {
       saveOutputIn: 'allHtml.json',
       urls: ['build/components/preview/*.html'],
       showOnlyViolations: true,
-      verbose: false,
+      verbose: true,
       headless: true,
-      exclude: '.responsive-video > iframe',
       a11yCheckOptions: {
         runOnly: {
           type: 'tag',
           values: ['wcag2a', 'wcag2aa']
-        }
+        },
+        // Todo: remove after axe-core issue #262 fix.
+        rules: {
+          'definition-list': {enabled: false},
+          'dlitem': {enabled: false}
+        },
+        iframes: false
       }
     };
     // not input atoms and not pages
@@ -524,9 +529,9 @@ gulp.task('axe', function (done) {
         components.saveOutputIn = 'components.json';
         components.urls = ['build/components/preview/!(input*|*page|teaser*|preview*).html'];
         components.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
-        components.a11yCheckOptions.rules = {bypass: {enabled: false}};
+        components.a11yCheckOptions.rules.bypass = {enabled: false};
 
-        axe(components, () => {resolve();});
+        axe(components).then(resolve);
       });
     };
     // input atoms
@@ -537,12 +542,10 @@ gulp.task('axe', function (done) {
         input.saveOutputIn = 'inputAtoms.json';
         input.urls = ['build/components/preview/input*.html'];
         input.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
-        input.a11yCheckOptions.rules = {
-          label: {enabled: false},
-          bypass: {enabled: false}
-        };
+        input.a11yCheckOptions.rules.label = {enabled: false};
+        input.a11yCheckOptions.rules.bypass = {enabled: false};
 
-        axe(input, () => {resolve();});
+        axe(input).then(resolve);
       });
     };
     // pages
@@ -554,11 +557,11 @@ gulp.task('axe', function (done) {
         pages.urls = ['build/components/preview/*page*.html'];
         pages.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
 
-        axe(pages, () => {resolve();});
+        axe(pages).then(resolve);
       });
     };
 
-    return Promise.all([pages(), input(), notInputNotPages()]);
+    return Promise.all([input(),notInputNotPages(),pages()]);
   }
   catch (err) {
     console.log('Error catched', err); // eslint-disable-line no-console
