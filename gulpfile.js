@@ -531,7 +531,12 @@ gulp.task('axe', function (done) {
         components.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
         components.a11yCheckOptions.rules.bypass = {enabled: false};
 
-        axe(components).then(resolve).catch(resolve);
+        try {
+          axe(components).then(resolve);
+        }
+        catch (err) {
+          resolve();
+        }
       });
     };
     // input atoms
@@ -545,7 +550,12 @@ gulp.task('axe', function (done) {
         input.a11yCheckOptions.rules.label = {enabled: false};
         input.a11yCheckOptions.rules.bypass = {enabled: false};
 
-        axe(input).then(resolve).catch(resolve);
+        try {
+          axe(input).then(resolve);
+        }
+        catch (err) {
+          resolve();
+        }
       });
     };
     // pages
@@ -557,7 +567,12 @@ gulp.task('axe', function (done) {
         pages.urls = ['build/components/preview/*page*.html'];
         pages.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
 
-        axe(pages).then(resolve).catch(resolve);
+        try {
+          axe(pages).then(resolve);
+        }
+        catch (err) {
+          resolve();
+        }
       });
     };
 
