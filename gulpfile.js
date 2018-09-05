@@ -531,12 +531,7 @@ gulp.task('axe', function (done) {
         components.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
         components.a11yCheckOptions.rules.bypass = {enabled: false};
 
-        try {
-          axe(components).then(resolve);
-        }
-        catch (err) {
-          resolve();
-        }
+        axe(components).then(resolve).catch(reject);
       });
     };
     // input atoms
@@ -550,12 +545,7 @@ gulp.task('axe', function (done) {
         input.a11yCheckOptions.rules.label = {enabled: false};
         input.a11yCheckOptions.rules.bypass = {enabled: false};
 
-        try {
-          axe(input).then(resolve);
-        }
-        catch (err) {
-          resolve();
-        }
+        axe(input).then(resolve).catch(reject);
       });
     };
     // pages
@@ -567,18 +557,16 @@ gulp.task('axe', function (done) {
         pages.urls = ['build/components/preview/*page*.html'];
         pages.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
 
-        try {
-          axe(pages).then(resolve);
-        }
-        catch (err) {
-          resolve();
-        }
+        axe(pages).then(resolve).catch(reject);
       });
     };
 
     Promise.all([input(), notInputNotPages(), pages()])
       .then(()=>done())
-      .catch(err=>done());
+      .catch(err=>{
+        console.log('Error catched', err); // eslint-disable-line no-console
+        done();
+      });
   }
   catch (err) {
     console.log('Error catched', err); // eslint-disable-line no-console
@@ -790,7 +778,7 @@ gulp.task('favicon', gulp.series('favicon:prebuild', 'favicon:build'));
  *
  *  Used to only validate the SCSS and JS code.
  */
-gulp.task('validate', gulp.parallel('styles:validate', 'js:validate', 'axe'), callback => callback());
+gulp.task('validate', gulp.parallel('styles:validate', 'js:validate'), callback => callback());
 
 /**
  * Compile task:
