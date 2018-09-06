@@ -153,6 +153,10 @@
   line-height: 1.6;
   text-align: left;
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+    padding: .3em .8em 0 1.2em;
+  }
+
   &::before {
     order: 2;
     margin-left: .5rem;
