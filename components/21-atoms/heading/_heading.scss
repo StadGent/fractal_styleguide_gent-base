@@ -33,9 +33,4 @@ h5,
       font-size: inherit;
     }
   }
-
-  // Bypass the FOUT of typekit while loading asynchronously.
-  .wf-loading & {
-    visibility: hidden;
-  }
 }

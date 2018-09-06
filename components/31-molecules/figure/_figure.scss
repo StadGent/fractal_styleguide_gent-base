@@ -12,7 +12,10 @@ figure {
     @include tablet {
       position: relative;
       min-height: 1.6rem;
-      margin: .3rem -#{$gutter-width};
+      // Give the image 1px margin relative to the container
+      // so the accolade can overlap the edges
+      // IE error fix
+      margin: .3rem  calc(-1rem + 1px);
 
       @at-root hr + & {
         margin-top: -2rem;
@@ -257,9 +260,11 @@ figure {
       }
 
       @media (min-width: $bp-max-content) {
+        // Make sure it overlaps the image edges.
+        // IE error fix
+        right: -1px;
         left: calc(#{$span} + 2rem + ((100% - #{$bp-max-content}) / 2));
       }
     }
   }
 }
-
