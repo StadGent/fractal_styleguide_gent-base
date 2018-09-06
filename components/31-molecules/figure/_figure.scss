@@ -260,10 +260,10 @@ figure {
       }
 
       @media (min-width: $bp-max-content) {
-        left: calc(#{$span} + 2rem + ((100% - #{$bp-max-content}) / 2));
         // Make sure it overlaps the image edges.
         // IE error fix
         right: -1px;
+        left: calc(#{$span} + 2rem + ((100% - #{$bp-max-content}) / 2));
       }
     }
   }
