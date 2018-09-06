@@ -153,27 +153,19 @@ This includePaths path may vary depending on your setup!
 
 ### Fonts
 
-You need to make sure the Expressway font is included in your project somehow.
-This would be done by including the Typescript script in your project and
-requesting a license / Typekit kit from the web team at Digipolis.
-
-Example:
+Fonts are loaded directly in the sass files.
+To prevent FOUT, we advise using webfontLoader.
 
 ```javascript
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 <script>
-  (function(d) {
-    var config = {
-          kitId: 'kgt4wbp',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
+  WebFont.load({
+    google: {
+      families: ['Fira Sans:400,600,700']
+    }
+  });
 </script>
 ```
-
-So in this example you would need to change the `kitId` to the ID you got from
-the web team of Digipolis.
 
 ## Third party support
 
