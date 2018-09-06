@@ -15,67 +15,20 @@
   }
 }
 
+.box-top,
 .box-left {
-  @include theme('background-color', 'color-primary--lighten-5', 'search-block-background');
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4.5rem;
-  padding: 0 1rem 1.6rem;
-
-  @include tablet {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    margin-top: 0;
-    padding: 2rem 3.7rem 1.6rem ($gutter-width*2);
-  }
-
-  &::before {
-    @include spot-image('lightbulb-light', 6.2rem);
-    @include theme('color', 'color-primary', 'info-box-spot-shadow');
-
-    margin: -3.1rem 0 1rem;
-    border-radius: 50%;
-    box-shadow: 0 10px 35px -25px;
-
-    @include tablet {
-      align-self: center;
-      width: 8rem;
-      height: 8rem;
-      margin: 0 2.5rem 0 0;
-      box-shadow: none;
-      justify-self: flex-start;
-    }
-  }
-
-  .inner-box {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 100%;
-    max-width: 36rem;
-  }
-}
-
-.box-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3rem;
-
-  @include tablet {
-    padding-top: 3.5rem;
-  }
+  padding-top: 3.5rem;
 
   .inner-box {
     @include theme('background-color', 'color-primary--lighten-5', 'info-box-background');
 
     position: relative;
     width: 100%;
-    margin: 0 0 1.5rem;
-    padding: 4.5rem 1rem 1.6rem;
+    margin: 0;
+    padding: 5rem 1rem 1.6rem;
     border-radius: border-radius('radius-2');
 
     @include tablet {
@@ -87,22 +40,46 @@
       @include theme('color', 'color-primary', 'info-box-spot-shadow');
 
       position:  absolute;
-      top: -3rem;
+      top: -3.5rem;
       right: 0;
       left: 0;
-      width: 6rem;
-      height: 6rem;
       margin: auto;
       border-radius: 50%;
       box-shadow: 0 10px 35px -25px;
       z-index: 10;
+    }
+  }
+}
 
-      @include tablet {
+.box-left {
+  @include tablet {
+    padding-top: 0;
+  }
+
+  .inner-box {
+    @include tablet {
+      padding-left: 11rem;
+
+      &::before {
+        top: calc(50% - 4rem);
+        right: auto;
+        bottom: auto;
+        left: 2rem;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.box-top {
+  .inner-box {
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      &::before {
         top: -3.5rem;
         right: 2rem;
         left: auto;
-        width: 7rem;
-        height: 7rem;
       }
     }
 
