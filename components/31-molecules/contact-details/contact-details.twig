@@ -21,10 +21,12 @@
     </div>
 
     <div class="contact-details-column">
-      {% include '@image' with {
-        'src': 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
-        'alt_text': 'Person avatar',
-      } %}
+      <div class="image-wrapper" data-ratio="1:1">
+        {% include '@image' with {
+          'src': 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
+          'alt_text': 'Person avatar',
+        } %}
+      </div>
     </div>
   </div>
 </div>

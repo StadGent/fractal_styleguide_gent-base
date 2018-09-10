@@ -1,3 +1,5 @@
+$avatar-width: 14rem;
+
 .contact-details {
   .inner-box {
     display: flex;
@@ -18,12 +20,13 @@
       margin-right: $gutter-width;
 
       &:last-of-type {
+        max-width: $avatar-width;
         margin-right: 0;
       }
     }
 
     img {
-      max-width: 14rem;
+      max-width: $avatar-width;
     }
   }
 }
