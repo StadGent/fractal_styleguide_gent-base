@@ -15,6 +15,8 @@ $avatar-width: 14rem;
   }
 
   &-column {
+    width: 100%;
+
     @include tablet {
       width: span(6 of 12);
       margin-right: $gutter-width;
@@ -25,8 +27,12 @@ $avatar-width: 14rem;
       }
     }
 
-    img {
-      max-width: $avatar-width;
+    .image-wrapper {
+      img {
+        @include tablet {
+          max-width: $avatar-width;
+        }
+      }
     }
   }
 }
