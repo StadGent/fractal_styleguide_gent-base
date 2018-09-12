@@ -17,31 +17,21 @@
       padding: 0 1rem 1rem;
       background-color: color('white');
       z-index: 200;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
+      overflow-y: auto;
 
-      .modal-actions {
+      > .modal-actions {
         display: block;
       }
     }
 
-    .modal-actions {
+    > .modal-actions {
       display: none;
-      padding-top: .2rem;
+      margin-right: -1rem;
+      margin-left: -1rem;
       text-align: right;
-
-      button.close {
-        padding: 0;
-        border: 0;
-        background: transparent;
-        font-size: .8rem;
-        font-weight: 400;
-      }
     }
 
     form {
-      margin-bottom: 2rem;
-
       // style first level labels as headings
       > .form-item > label,
       > fieldset.form-item > legend {
@@ -59,7 +49,8 @@
     }
 
     .filter__submit {
-      margin-top: .6rem;
+      margin-top: .8rem;
+      margin-bottom: .8rem;
     }
   }
 

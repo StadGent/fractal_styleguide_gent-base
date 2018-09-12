@@ -12,6 +12,7 @@ module.exports = {
   variants: [
     {
       name: 'multiple',
+      preview: '@preview',
       hidden: true
     },
     {

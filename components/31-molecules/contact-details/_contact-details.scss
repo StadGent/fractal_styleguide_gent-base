@@ -1,3 +1,5 @@
+$avatar-width: 14rem;
+
 .contact-details {
   .inner-box {
     display: flex;
@@ -13,12 +15,23 @@
   }
 
   &-column {
+    width: 100%;
+
     @include tablet {
       width: span(6 of 12);
       margin-right: $gutter-width;
 
       &:last-of-type {
+        max-width: $avatar-width;
         margin-right: 0;
+      }
+    }
+
+    .image-wrapper {
+      img {
+        @include tablet {
+          max-width: $avatar-width;
+        }
       }
     }
   }

@@ -2,7 +2,7 @@
   <div class="form-label">
     {% include '@label' with {
       "label": label,
-      "for": for,
+      "for": for ~ "-" ~ modifier,
       "label_optional": label_optional
     } %}
   </div>
@@ -15,7 +15,7 @@
     <div class="form-item-column">
       {% include '@input-tel' with {
         "tel_name": tel_name,
-        "tel_id": tel_id
+        "tel_id": tel_id ~ "-" ~ modifier
       } %}
       {% if modifier == 'error' %}
         {% include '@field-message' with {

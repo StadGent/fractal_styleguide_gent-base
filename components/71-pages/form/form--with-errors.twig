@@ -33,13 +33,13 @@
       }%}
       {% include '@textfield' with {
         "label": "First name",
-        "for": "name_id",
+        "for": "firstname_id",
 
         "modifier": "error",
         "field_message": "Please fill in your first name",
 
-        "textfield_id": "name_id",
-        "textfield_name": "name_name"
+        "textfield_id": "firstname_id",
+        "textfield_name": "firstname_name"
       }%}
       {% include '@email'
       with {
@@ -114,27 +114,27 @@
       }%}
       {% include '@textfield' with {
         "label": "Label textfield",
-        "for": "textfield_id",
+        "for": "textfield_id--1",
 
-        "textfield_id": "textfield_id",
-        "textfield_name": "textfield_name"
+        "textfield_id": "textfield_id--1",
+        "textfield_name": "textfield_name--1"
       }%}
 
       <fieldset>
         <legend>Nested fieldset</legend>
         {% include '@textfield' with {
           "label": "Label textfield",
-          "for": "textfield_id",
+          "for": "textfield_id--2",
 
-          "textfield_id": "textfield_id",
-          "textfield_name": "textfield_name"
+          "textfield_id": "textfield_id--2",
+          "textfield_name": "textfield_name--2"
         }%}
         {% include '@textfield' with {
           "label": "Label textfield",
-          "for": "textfield_id",
+          "for": "textfield_id--3",
 
-          "textfield_id": "textfield_id",
-          "textfield_name": "textfield_name"
+          "textfield_id": "textfield_id--3",
+          "textfield_name": "textfield_name--3"
         }%}
       </fieldset>
     </fieldset>
@@ -159,5 +159,6 @@
   </form>
 </main>
 
-
-{% include '@footer' %}
+<footer>
+  {% include '@footer' %}
+</footer>

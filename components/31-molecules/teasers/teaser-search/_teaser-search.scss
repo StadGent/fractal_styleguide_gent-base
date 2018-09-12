@@ -9,4 +9,16 @@
     margin-top: $gutter-width;
     border-top: 2px solid;
   }
+
+  dl dd {
+    margin: 0;
+    padding-left: .5rem;
+  }
+
+  @include tablet {
+    dt,
+    dd {
+      display: inline;
+    }
+  }
 }

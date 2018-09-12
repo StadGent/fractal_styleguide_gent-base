@@ -31,7 +31,7 @@
       <ul class="grid-4">
         {% for key, person in people %}
           {% include '@teaser-person' with {
-            "teaser_uid": person.teaser_uid,
+            "teaser_uid": person.teaser_uid ~ loop.index,
             "teaser_paragraph_text": person.teaser_paragraph_text,
             "teaser_title": person.teaser_title,
             "teaser_link_text": person.teaser_link_text,
@@ -52,4 +52,6 @@
   </section>
 </main>
 
-{% include '@footer' %}
+<footer>
+  {% include '@footer' %}
+</footer>

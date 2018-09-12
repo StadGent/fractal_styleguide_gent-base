@@ -8,6 +8,15 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to this style guide are documented here.
 
+### Unreleased
+
+* DTGB-539: Refactored footer templates to sections.
+* DTGB-539: Refactored timeline item wrappers to role listitem.
+* DTBG-539: Refactored image-gallery template to also use labelledby.
+* DTGB-509: Updated checkbox-with-filter template.
+
+### 3.0.0-alpha.7
+
 ### 3.0.0
 
 * DTGB-208: Added max-width fallback for text elements.

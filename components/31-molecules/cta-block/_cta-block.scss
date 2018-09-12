@@ -1,9 +1,11 @@
 .cta-block {
-  &::before {
-    @include spot-image('download-light');
-  }
 
   .inner-box {
+
+    &::before {
+      @include spot-image('download-light', 7rem);
+    }
+
     p {
       margin: 0;
     }
