@@ -20,7 +20,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * DTGB-509: Updated checkbox-with-filter template.
 
-## [8.x-3.0-alpha.7]
+## [3.0.0-alpha.7]
 
 * DTGB-208: Added max-width fallback for text elements.
 * DTGB-416: Updated gulp build to fail on error.
@@ -350,11 +350,11 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
-[8.x-3.0-alpha.7]: https://github.com/digipolisgent/drupal_theme_gent-base/compare/8.x-3.0-alpha.6...8.x-3.0-alpha.7
-[8.x-3.0-alpha.6]: https://github.com/digipolisgent/drupal_theme_gent-base/compare/8.x-3.0-alpha.5...8.x-3.0-alpha.6
-[8.x-3.0-alpha.5]: https://github.com/digipolisgent/drupal_theme_gent-base/compare/8.x-3.0-alpha.4...8.x-3.0-alpha.5
-[8.x-3.0-alpha.4]: https://github.com/digipolisgent/drupal_theme_gent-base/compare/8.x-3.0-alpha.3...8.x-3.0-alpha.4
-[8.x-3.0-alpha.3]: https://github.com/digipolisgent/drupal_theme_gent-base/compare/8.x-3.0-alpha.2...8.x-3.0-alpha.3
-[8.x-3.0-alpha.2]: https://github.com/digipolisgent/drupal_theme_gent-base/compare/8.x-3.0-alpha.1...8.x-3.0-alpha.2
-[8.x-3.0-alpha.1]: https://github.com/digipolisgent/drupal_theme_gent-base/compare/8.x-2.10...8.x-3.0-alpha.1
-[Unreleased]: https://github.com/digipolisgent/drupal_theme_gent-base/compare/master...develop
+[3.0.0-alpha.7]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.6...3.0.0-alpha.7
+[3.0.0-alpha.6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.5...3.0.0-alpha.6
+[3.0.0-alpha.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.4...3.0.0-alpha.5
+[3.0.0-alpha.4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.3...3.0.0-alpha.4
+[3.0.0-alpha.3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.2...3.0.0-alpha.3
+[3.0.0-alpha.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.1...3.0.0-alpha.2
+[3.0.0-alpha.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/2.10.0...3.0.0-alpha.1
+[Unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/master...develop
