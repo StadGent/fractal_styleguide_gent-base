@@ -6,6 +6,10 @@
   min-height: 2rem;
   margin-bottom: 1rem;
 
+  @include phablet {
+    width: 100%;
+  }
+
   @include tablet {
     flex-wrap: nowrap;
     margin-bottom: 0;
@@ -19,9 +23,27 @@
     line-height: 1rem;
     text-align: center;
 
+    @include phablet {
+      margin-bottom: 0;
+    }
+
     @include tablet {
+      width: 100%;
       margin: 0 1.4rem 0 0;
       text-align: right;
+    }
+  }
+
+  > span {
+    @include phablet {
+      width: span(5 of 12);
+      text-align: right;
+    }
+  }
+
+  > div {
+    @include phablet {
+      width: span(7 of 12);
     }
   }
 }
