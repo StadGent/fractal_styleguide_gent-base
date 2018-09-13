@@ -10,6 +10,8 @@ All notable changes to this style guide are documented here.
 
 ### Unreleased
 
+### 3.0.0-alpha.8
+
 * DTGB-539: Refactored footer templates to sections.
 * DTGB-539: Refactored timeline item wrappers to role listitem.
 * DTBG-539: Refactored image-gallery template to also use labelledby.
