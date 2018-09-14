@@ -18,7 +18,7 @@ module.exports = {
   },
   variants: [
     {
-      name: 'contact-block-with-phone',
+      name: 'contact-block-with-phone'
     },
     {
       name: 'contact-block-with-email',
