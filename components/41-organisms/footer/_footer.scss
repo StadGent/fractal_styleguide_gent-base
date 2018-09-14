@@ -16,7 +16,7 @@
       margin-bottom: 1rem;
       padding: 0 $gutter-width 1.5rem;
 
-      @include tablet {
+      @include desktop {
         padding-top: 4rem;
         padding-bottom: 4rem;
       }
@@ -30,20 +30,25 @@
     .footer--column {
       width: 100%;
 
-      @include tablet {
+      @include phablet {
         flex: 1 0 auto;
         order: 1;
+        width: span(6 of 12);
+      }
+
+      @include desktop {
         width: span(2 of 12);
       }
 
       &:nth-of-type(3) {
         display: flex;
 
-        @include tablet {
-          justify-content: center;
+        @include phablet {
+          order: 2;
         }
 
         @include desktop {
+          justify-content: center;
           width: span(2 of 12);
         }
       }
@@ -51,13 +56,16 @@
       &:first-of-type {
         width: 100%;
 
-        @include tablet {
+        @include phablet {
           order: 3;
           width: span(6 of 12);
+          margin-top: 1.2rem;
+          margin-bottom: .4rem;
         }
 
         @include desktop {
           width: span(7 of 12);
+          margin-top: 0;
         }
       }
     }
@@ -70,7 +78,7 @@
     margin-bottom: .8rem;
     overflow: hidden;
 
-    @include tablet {
+    @include desktop {
       flex-wrap: nowrap;
     }
 
@@ -93,9 +101,14 @@
         order: 1;
         margin-bottom: 1.8rem;
 
+        @include phablet {
+          margin-bottom: 0;
+        }
+
         @include tablet {
           order: 2;
           width: span(8 of 12);
+          margin-bottom: 1.8rem;
         }
 
         @include desktop {
@@ -118,6 +131,10 @@
   .dg-blocks-social,
   .db-block-partnership {
     height: 2rem;
+
+    @include phablet {
+      margin-bottom: .4rem;
+    }
   }
 
   .db-block-partnership {

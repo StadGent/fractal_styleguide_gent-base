@@ -12,6 +12,9 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Changed
 
+### 3.0.0-alpha.8
+
+* DTGB-429: Temporarily replaced baguettebox.js with a Forked version.
 * DTGB-539: Refactored footer templates to sections.
 * DTGB-539: Refactored timeline item wrappers to role listitem.
 * DTBG-539: Refactored image-gallery template to also use labelledby.

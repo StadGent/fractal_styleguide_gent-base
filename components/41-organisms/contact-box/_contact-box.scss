@@ -1,7 +1,9 @@
 .contact-box {
   @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
 
+  display: flex;
   position: relative;
+  flex-wrap: wrap;
   margin-top: 5rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
@@ -11,25 +13,23 @@
     padding-top: 2rem;
   }
 
-  &--header {
-    display: flex;
-    flex-wrap: wrap;
+  h2 {
+    min-width: 100%;
+  }
 
-    address.contact-fiche {
-      margin-top: 2rem;
+  p {
+    margin: 0;
+  }
 
-      .contact-name {
-        margin-bottom: .5rem;
-      }
+  address.contact-fiche {
+    margin-top: .8rem;
 
-      p {
-        margin: 0;
-      }
+    ul.links a {
+      font-weight: normal;
+    }
 
-      .contact-email {
-        margin-top: 0;
-        font-weight: normal;
-      }
+    .contact-email {
+      margin-top: 0;
     }
   }
 
@@ -41,8 +41,6 @@
     }
 
     @include desktop {
-      flex: 1;
-
       &:first-of-type {
         width: span(4 of 12);
       }
@@ -51,6 +49,10 @@
         width: span(8 of 12);
       }
     }
+
+    .map {
+      margin-bottom: gutter();
+    }
   }
 
   .main-contacts {
@@ -58,6 +60,7 @@
 
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: gutter();
 
     li {
       width: 100%;
@@ -70,6 +73,7 @@
       &:first-of-type .contact-fiche {
         margin-top: 0;
       }
+
     }
   }
 

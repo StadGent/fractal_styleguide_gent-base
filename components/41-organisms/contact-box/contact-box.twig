@@ -1,17 +1,29 @@
-<div class="contact-box accordion">
-{% include '@heading' with {
-  'type': 'h2',
-  'heading_text': 'Contact'
-} %}
+<div class="contact-box">
+  {% include '@heading' with {
+    'type': 'h2',
+    'heading_text': 'Contact'
+  } %}
 
-  <div class="contact-box--header">
-    <div class="contact-box-column">
-      {% include '@heading' with {
-        'type': 'h3',
-        'heading_text': 'Contacts'
-      } %}
+  <div class="contact-box-column">
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': 'Contacts'
+    } %}
 
+    {% if contacts|length < 3 %}
       <ul class="main-contacts">
+        {% for contact_category in contact_categories %}
+          <li>
+            {% include '@link' with {
+              'link': contact_category.link,
+              'text': contact_category.name,
+              'modifier': 'standalone-link'
+            } %}
+            {% include '@paragraph' with {
+              'text': contact_category.description
+            } %}
+          </li>
+        {% endfor %}
         {% for contact in contacts %}
           <li>
             <address class="contact-fiche">
@@ -23,75 +35,81 @@
               <p>
                 {{ contact.address }}
               </p>
-              {% include '@link' with {
-                'link': 'mailto:' ~ contact.email,
-                'text': contact.email,
-                'modifier': 'contact-email'
-              } %}
+              <ul class="links">
+                <li>
+                  {% include '@link' with {
+                    'link': 'tel:' ~ contact.phone,
+                    'text': contact.phone,
+                    'modifier': 'contact-phone'
+                  } %}
+                </li>
+                <li>
+                  {% include '@link' with {
+                    'link': 'mailto:' ~ contact.email,
+                    'text': contact.email,
+                    'modifier': 'contact-email'
+                  } %}
+                </li>
+              </ul>
             </address>
-              {% if contact.opening_hours|length > 0 %}
-                <span class="opening-hours open">
-                  {{ 'Today open - ' }}<time>{{ contact.opening_hours }}</time>
-                </span>
-              {% else %}
+            {% if contact.opening_hours|length > 0 %}
+              <span class="opening-hours open">
+                             {{ 'Today open - ' }}<time>{{ contact.opening_hours }}</time>
+                             </span>
+            {% else %}
               <span class="opening-hours closed">
-                {{ 'Closed today' }}
-              </span>
-              {% endif %}
+                             {{ 'Closed today' }}
+                             </span>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
-      <h3>
-        <button class="accordion--button"
-                aria-expanded="false"
-                aria-controls="contact-box--content--contactbox-{{ unique_id }}">
-          {{ 'There are 5 other contacts available' }}
-        </button>
-      </h3>
-
-      <div class="accordion--content"
-        id="contact-box--content--contactbox-{{ unique_id }}">
-        <ul class="links">
-          {% for contact in other_contacts %}
-            <li>
-              {% include '@link' with {
-                'link': contact.link,
-                'text': contact.link_text,
-                'modifier': 'standalone-link'
-              } %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-
-    <div class="contact-box-column">
-      {% include '@heading' with {
-        'type': 'h3',
-        'heading_text': 'Location'
-      } %}
-
-      {% include '@paragraph' with {
-      "text": "Map stub",
-      } %}
-
-      {% include '@heading' with {
-        'type': 'h3',
-        'heading_text': 'Authorized persons'
-      } %}
-
-      <ul class="links">
-        {% for contact in other_contacts %}
+    {% else %}
+      <ul class="main-contacts">
+        {% for contact_category in contact_categories %}
           <li>
             {% include '@link' with {
-              'link': contact.link,
-              'text': contact.link_text,
+              'link': contact_category.link,
+              'text': contact_category.name,
               'modifier': 'standalone-link'
             } %}
           </li>
         {% endfor %}
+        {% for contact in contacts %}
+          <li>
+            {% include '@link' with {
+              'link': contact.link,
+              'text': contact.link_text,
+              'modifier': 'standalone-link contact-name'
+            } %}
+          </li>
+        {% endfor %}
       </ul>
+    {% endif %}
+  </div>
+  <div class="contact-box-column">
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': 'Location'
+    } %}
 
-    </div>
+    {%  include '@map' %}
+
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': 'Authorized persons'
+    } %}
+
+    <ul class="links">
+      {% for person in authorized_persons %}
+        <li>
+          {% include '@link' with {
+            'link': person.link,
+            'text': person.link_text,
+            'modifier': 'standalone-link'
+          } %}
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
