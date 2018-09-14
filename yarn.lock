@@ -1610,9 +1610,9 @@ backo2@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
 
-baguettebox.js@^1.10.0:
+"baguettebox.js@https://github.com/BartDelrue/baguetteBox.js.git":
   version "1.10.0"
-  resolved "https://registry.yarnpkg.com/baguettebox.js/-/baguettebox.js-1.10.0.tgz#f24500b2f02433f52338cf77016ecf00cfe7f974"
+  resolved "https://github.com/BartDelrue/baguetteBox.js.git#f059d86b29052922410c21129a58c40d61633161"
 
 balanced-match@^0.4.2:
   version "0.4.2"
