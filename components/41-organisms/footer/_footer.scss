@@ -132,7 +132,7 @@
   .db-block-partnership {
     height: 2rem;
 
-    @include phablet{
+    @include phablet {
       margin-bottom: .4rem;
     }
   }
