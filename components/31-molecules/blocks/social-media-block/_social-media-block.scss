@@ -3,12 +3,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   min-height: 2rem;
   margin-bottom: 1rem;
-
-  @include phablet {
-    width: 100%;
-  }
 
   @include tablet {
     flex-wrap: nowrap;
@@ -28,7 +25,6 @@
     }
 
     @include tablet {
-      width: 100%;
       margin: 0 1.4rem 0 0;
       text-align: right;
     }
