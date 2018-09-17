@@ -72,7 +72,8 @@ const icons = [
 /**
  * Helper to convert the list of icon names to a list of icon variants.
  *
- * @returns {Array}
+ * @return {Array}
+ *   The array of variant configurations.
  */
 function getIconVariants() {
   let variants = [];
