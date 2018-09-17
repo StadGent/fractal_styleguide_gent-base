@@ -99,9 +99,9 @@ module.exports = {
   status: 'ready',
   collated: true,
   collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<p>${markup} .icon-${item.name}</p>\n<!-- End: @${item.handle} -->\n`;
+    return `<!-- Start: @${item.handle} -->\n<dt>.icon-${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
-  preview: '@preview',
+  preview: '@preview-description-list',
   default: 'arrow-down',
   variants: getIconVariants()
 };
