@@ -102,6 +102,6 @@ module.exports = {
     return `<!-- Start: @${item.handle} -->\n<dt>.icon-${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
   preview: '@preview-description-list',
-  default: 'arrow-down',
+  default: icons[0],
   variants: getIconVariants()
 };
