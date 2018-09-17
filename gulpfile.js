@@ -241,7 +241,8 @@ gulp.task('styles:validate', () => {
       configFile: './.sass-lint.yml'
     }))
     .pipe(gulpif(build, sassLint.failOnError()))
-    .pipe(sassLint.format());
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
 });
 
 /**
