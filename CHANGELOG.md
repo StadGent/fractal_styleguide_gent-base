@@ -9,8 +9,11 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Added
 
 * DTGB-547: Added icon overview to the icon atom page.
+* DTGB-569: Added subscribe molecule (hidden).
 
 ### Changed
+
+* DTGB-569: Completely refactored theme footer.
 
 ### 3.0.0-alpha.8
 
