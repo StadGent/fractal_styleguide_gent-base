@@ -1,0 +1,16 @@
+<form class="form subscribe">
+
+  {% include '@label' with {
+  "label": label,
+  "for": id,
+  } %}
+
+  {% include '@input-email' with {
+  'email_id': id,
+  'email_name': id,
+  'required': true
+  } %}
+  {% include '@input-submit' with {
+  'value': text,
+  } %}
+</form>
