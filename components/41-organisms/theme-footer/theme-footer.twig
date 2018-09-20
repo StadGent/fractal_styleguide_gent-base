@@ -57,8 +57,6 @@
       {% endif %}
       {% if newsletter %}
         <div class="newsletter box-left">
-
-
           <div class="inner-box">
             {% include '@heading' with {
             'type': 'h3',
@@ -72,12 +70,11 @@
             {% include '@subscribe' with {
             label: 'Email address',
             text: 'Subscribe',
-            id: 'subscribe',
+            id: 'subscribe' ~ newsletter.uid,
             name: 'subscribe'
             } %}
           </div>
         </div>
-
       {% endif %}
       {% if social %}
         <div class="social">

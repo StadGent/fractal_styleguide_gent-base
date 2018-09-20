@@ -31,7 +31,9 @@ module.exports = {
             human: 'Contactform Ghent mobility'
           }
         },
-        newsletter: {},
+        newsletter: {
+          uid: 'theme-footer-1'
+        },
         social: {}
       }
     },
@@ -62,7 +64,9 @@ module.exports = {
       preview: '@preview',
       context: {
         theme: 'Ghent mobility',
-        newsletter: {}
+        newsletter: {
+          uid: 'theme-footer-2'
+        }
       }
     },
     {
@@ -93,7 +97,9 @@ module.exports = {
             human: 'Contactform Ghent mobility'
           }
         },
-        newsletter: {}
+        newsletter: {
+          uid: 'theme-footer-3'
+        }
       }
     },
     {
@@ -124,7 +130,9 @@ module.exports = {
       preview: '@preview',
       context: {
         theme: 'Ghent mobility',
-        newsletter: {},
+        newsletter: {
+          uid: 'theme-footer-4'
+        },
         social: {}
       }
     }
