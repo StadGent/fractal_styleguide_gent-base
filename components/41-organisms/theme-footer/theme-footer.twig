@@ -1,51 +1,93 @@
+{% set iconlist = [] %}
+{% if contact.address %}
+  {% set iconlist = iconlist|merge([
+  '<i class="icon-marker" aria-hidden="true"></i>' ~ '<strong>' ~ contact.address.name ~  ' — ' ~ '</strong>' ~ contact.address.address
+  ]) %}
+{% endif %}
+{% if contact.phone %}
+  {% set iconlist = iconlist|merge([
+  '<i class="icon-normalphone" aria-hidden="true"></i><a href="tel:'~ contact.phone.machine ~'">'~ contact.phone.human ~'</a>'
+  ]) %}
+{% endif %}
+{% if contact.email %}
+  {% set iconlist = iconlist|merge([
+  '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:' ~ contact.email ~ '">' ~ contact.email ~'</a>'
+  ]) %}
+{% endif %}
+{% if contact.form %}
+  {% set iconlist = iconlist|merge([
+  '<i class="icon-document" aria-hidden="true"></i><a href="' ~ contact.form.machine ~ '">' ~ contact.form.human ~'</a>'
+  ]) %}
+{% endif %}
+
 <section class="theme-footer">
   <h2 class="visually-hidden">{{ 'Theme footer' }}</h2>
   <div class="content-container">
-    <div class="box-no-icon">
-      <div class="inner-box">
-        <ul class="grid-2">
-          <li>
-            {% include '@heading' with {
-              'type': 'h3',
-              'heading_text': 'Contact us'
-            } %}
+    {% if contact and newsletter %}
+      <div class="top">
+        {% set contactshown = true %}
+        <div class="contact">
+          {% include '@heading' with {
+          'type': 'h3',
+          'heading_text': 'Contact'~ ' ' ~ theme
+          } %}
 
-            {% include '@list'
-              with {
-                'type': 'icon-list',
-                'icon_items': [
-                  '<i class="icon-phone" aria-hidden="true"></i><a href="tel:+32 9 210 10 10" alt="Gentinfo tel link">09 210 10 10</a>',
-                  '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:gentinfo@stad.gent" alt="Gentinfo mail link">Gentinfo@stad.gent</a>',
-                  '<i class="icon-document" aria-hidden="true"></i><a href="#">Contactformulier</a>'
-                ]
-              }
-            %}
-          </li>
-          <li>
-            {% include '@heading' with {
-              'type': 'h3',
-              'heading_text': 'Important links'
-            } %}
-
-            {% include '@list'
-              with {
-                'type': 'links',
-                'items': [
-                  '<a href="#" alt="Link alt text">This is a link</a>',
-                  '<a href="#" alt="Link alt text">This is a second link that is longer</a>',
-                  '<a href="#">This is a third link</a>'
-                ]
-              }
-            %}
-          </li>
-        </ul>
+          {% include '@list'
+          with {
+          'type': 'icon-list',
+          'icon_items': iconlist
+          } %}
+        </div>
       </div>
-      <div class="accolade bottom-center "></div>
+    {% endif %}
+    <div class="bottom">
+      {% if contact and contactshown|default(false) == false %}
+        <div class="contact">
+          {% include '@heading' with {
+          'type': 'h3',
+          'heading_text': 'Contact'~ ' ' ~ theme
+          } %}
+
+          {% include '@list'
+          with {
+          'type': 'icon-list',
+          'icon_items': iconlist
+          } %}
+        </div>
+      {% endif %}
+      {% if newsletter %}
+        <div class="newsletter box-left">
+
+
+          <div class="inner-box">
+            {% include '@heading' with {
+            'type': 'h3',
+            'heading_text': 'Subscribe to the newsletter of'~ ' ' ~ theme
+            } %}
+
+            {% include '@paragraph' with {
+            'text': 'Receive the most important mobility news in your mailbox.'
+            } %}
+
+            {% include '@subscribe' with {
+            label: 'Email address',
+            text: 'Subscribe',
+            id: 'subscribe',
+            name: 'subscribe'
+            } %}
+          </div>
+        </div>
+
+      {% endif %}
+      {% if social %}
+        <div class="social">
+          {% include '@heading' with {
+          'type': 'h3',
+          'heading_text': 'Follow this theme site on social media'
+          } %}
+          {% include '@social-list' %}
+        </div>
+      {% endif %}
     </div>
-    {% include '@heading' with {
-      'type': 'h3',
-      'heading_text': 'Follow this theme site on social media:'
-    } %}
-    {% include '@social-list' %}
   </div>
 </section>
