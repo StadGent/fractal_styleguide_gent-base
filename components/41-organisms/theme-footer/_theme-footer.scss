@@ -98,6 +98,7 @@
     }
 
     .subscribe {
+      // 5/12 of max content-container width
       max-width: calc(#{$bp-max-content} / 12 * 5);
     }
   }
