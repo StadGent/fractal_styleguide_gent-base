@@ -2,7 +2,7 @@
   @include theme('background-color', 'color-primary--lighten-5', 'theme-footer-background-color');
   @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
 
-  width: calc(100% + 2 * #{$gutter-width});
+  width: calc(100% + 2rem);
   margin-right: -1rem;
   margin-left: -1rem;
   padding: 0;
@@ -80,8 +80,6 @@
         content: none;
       }
 
-
-
       @include tablet {
         min-height: 7rem;
         padding-left: 9rem;
@@ -102,7 +100,6 @@
     .subscribe {
       max-width: calc(#{$bp-max-content} / 12 * 5);
     }
-
   }
 
   .contact,
