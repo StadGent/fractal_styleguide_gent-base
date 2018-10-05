@@ -12,6 +12,30 @@
     margin-top: 0;
   }
 
+  .contact,
+  .newsletter,
+  .social {
+    flex: 1;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+
+    @include tablet {
+      padding-top: 2.4rem;
+      padding-bottom: 2.4rem;
+    }
+  }
+
+  .contact,
+  .newsletter {
+    flex-basis: 100%;
+
+    @include desktop {
+      flex-basis: span(9 of 12);
+      flex-grow: 0;
+      padding-right: 2rem;
+    }
+  }
+
   .contact {
     .icon-list {
       margin: 0;
@@ -28,9 +52,11 @@
   }
 
   .social {
+    flex-basis: 100%;
     text-align: center;
 
     @include desktop {
+      flex: 1;
       text-align: left;
 
       &:only-child {
@@ -45,6 +71,7 @@
     .social-list {
       display: inline-block;
       width: auto;
+      max-width: 100%;
       margin: auto;
 
       ul {
@@ -100,30 +127,6 @@
     .subscribe {
       // 5/12 of max content-container width
       max-width: calc(#{$bp-max-content} / 12 * 5);
-    }
-  }
-
-  .contact,
-  .newsletter,
-  .social {
-    flex: 1;
-    padding-top: 1.4rem;
-    padding-bottom: 1.4rem;
-
-    @include tablet {
-      padding-top: 2.4rem;
-      padding-bottom: 2.4rem;
-    }
-  }
-
-  .contact,
-  .newsletter {
-    flex-basis: 100%;
-
-    @include desktop {
-      flex-basis: span(9 of 12);
-      flex-grow: 0;
-      padding-right: 2rem;
     }
   }
 
