@@ -1,0 +1,104 @@
+.teaser.teaser-search-wide {
+  @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
+
+  padding-top: $gutter-width;
+  padding-bottom: $gutter-width;
+  border-bottom: 2px solid;
+
+  .teaser-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    @include tablet {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .accolade-inverse.bottom-left {
+    display:  block;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .accolade-inverse.right-top {
+    display:  none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .content__left,
+  .content__right {
+    flex-basis: 100%;
+  }
+
+  .content__left {
+    order: 1;
+    margin-bottom: gutter();
+
+    @include tablet {
+      flex-basis: span(4 of 12);
+      margin-right: gutter();
+      margin-bottom: 0;
+    }
+  }
+
+  .content__right {
+    order: 2;
+
+    @include tablet {
+      flex-basis: span(8 of 12);
+    }
+
+    .location {
+      font-weight: 700;
+
+      i {
+        margin-right: .3rem;
+        font-size: 1.5em;
+        vertical-align: middle;
+      }
+    }
+
+    .links {
+      margin-bottom: .4rem;
+
+      li {
+        margin-right: 0;
+
+        &::after {
+          content: '—';
+          margin-right: .4rem;
+          margin-left: .4rem;
+        }
+
+        &:last-of-type::after {
+          content: '';
+        }
+      }
+    }
+  }
+
+
+  &:first-of-type {
+    @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
+    margin-top: $gutter-width;
+    border-top: 2px solid;
+  }
+
+  dl dd {
+    margin: 0;
+    padding-left: .5rem;
+  }
+
+  @include tablet {
+    dt,
+    dd {
+      display: inline;
+    }
+  }
+}
