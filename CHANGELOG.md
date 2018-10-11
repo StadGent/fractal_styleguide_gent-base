@@ -1,14 +1,19 @@
 # Changelog
 
-## Roadmap
-
-Refer to upcoming changes in our README.md under "Roadmap"
-
-## Changes
-
 All notable changes to this style guide are documented here.
 
-### Unreleased
+NOTE: Refer to upcoming changes in our README.md under "Roadmap"
+
+## [Unreleased]
+
+### Added
+
+* DTGB-547: Added icon overview to the icon atom page.
+* DTGB-569: Added subscribe molecule (hidden).
+
+### Changed
+
+* DTGB-569: Completely refactored theme footer.
 
 ### 3.0.0-alpha.8
 
@@ -16,11 +21,12 @@ All notable changes to this style guide are documented here.
 * DTGB-539: Refactored footer templates to sections.
 * DTGB-539: Refactored timeline item wrappers to role listitem.
 * DTBG-539: Refactored image-gallery template to also use labelledby.
+
+### Updated
+
 * DTGB-509: Updated checkbox-with-filter template.
 
-### 3.0.0-alpha.7
-
-### 3.0.0
+## [3.0.0-alpha.7]
 
 * DTGB-208: Added max-width fallback for text elements.
 * DTGB-416: Updated gulp build to fail on error.
@@ -28,28 +34,22 @@ All notable changes to this style guide are documented here.
 * DTGB-203: Refactored gulpfile to gulp ^4.0.0
 * DTGB-144: Added SassDoc generation for external developers.
 * DTGB-147: Redefined the color palletes and color schemes.
-
-> Refactored the way themify works. This removed the use of variables
-> to determine the themified variant of a component.
-<!-- -->
-> **Sections have changed into color schemes**
-> Sections have been changed into color schemes with the `cs--` prefix.
-> Colors are now defined in a `$colors` SASS map and accessed through the
-> `color()` function. See the documentation of colors for more information.
-<!-- -->
-> **Themify changes**
-> Refactored the way themify works. This removed the use of variables
-> to determine the themified variant of a component.
-<!-- -->
-> **Color scheme nesting removed**
-> Color scheme nesting has also been removed because they won't be used
-> anymore in the new style guide.
-<!-- -->
-> **Color panals introduced**
-> Color panels have been added to allow easier default styling of new
-> components and to allow easier overriding of the properties of these
-> components.
-
+  * Refactored the way themify works. This removed the use of variables
+    to determine the themified variant of a component.
+  * **Sections have changed into color schemes**
+    Sections have been changed into color schemes with the `cs--` prefix.
+    Colors are now defined in a `$colors` SASS map and accessed through the
+    `color()` function. See the documentation of colors for more information.
+  * **Themify changes**
+    Refactored the way themify works. This removed the use of variables
+    to determine the themified variant of a component.
+  * **Color scheme nesting removed**
+    Color scheme nesting has also been removed because they won't be used
+    anymore in the new style guide.
+  * **Color panals introduced**
+    Color panels have been added to allow easier default styling of new
+    components and to allow easier overriding of the properties of these
+    components.
 * STIJ-159: Added tag atom styling.
 * DTGB-174: Changed styling of status messages.
 * DTGB-214: Added new styling to buttons.
@@ -61,14 +61,11 @@ All notable changes to this style guide are documented here.
 * DTGB-180: Added gulp task to perform accessibility checks.
 * DTGB-209: Added new styling for basic input field atoms.
 * DTGB-431: Added video component.
-
-> We added styling for radio buttons and checkboxes. These were not styled in
-> previous versions of the style guide.
-<!-- -->
-> **Removed jQuery UI Datepicker support and integration!**
-> Did some refactoring to the SASS partials. Most of the input field styling
-> can now be found in the `_forms.scss` partial.
-
+  * We added styling for radio buttons and checkboxes. These were not styled in
+    previous versions of the style guide.
+  * **Removed jQuery UI Datepicker support and integration!**
+    Did some refactoring to the SASS partials. Most of the input field styling
+    can now be found in the `_forms.scss` partial.
 * DTGB-406: Added styling for the footer organism.
 * DTGB-407: Changed the default font size breakpoints.
 * DTGB-421: Added a feedback form component.
@@ -78,16 +75,14 @@ All notable changes to this style guide are documented here.
 * DTGB-148: Refactored heading organism.
 * DTGB-148: Added info-box organism.
 
-### 2.11.0
+## 2.11.0
 
 * DTGB-140: Removed some files from the NPM package.
 * DTGB-140: Fixed a bug where `npm install` breaks
   the install of the style guide.
 * DTGB-276: Fixed a bug where the breadcrumb alignment was not correct.
-
-  > **Some markup changes have been introduced so you might need some
-refactoring.**
-
+  * Some markup changes have been introduced so you might need some
+    refactoring.
 * DTGB-397: Changed the markup of radio buttons and checkboxes. They are
   now inside their own fieldset.
 * DTGB-401: Updated links to new public gent_base repository.
@@ -95,7 +90,7 @@ refactoring.**
 * DTGB-443: Added article teaser component.
 * DTGB-443: Added 'more articles' block.
 
-### 2.9.0
+## 2.9.0
 
 * STIJ-246: Added a mixin  and class `no-link-style` to make it possible
   to override the link styling of certain blocks with `text-decoration: none;`.
@@ -109,18 +104,18 @@ refactoring.**
 * STIJ-94: Updated the list atom documentation.
 * STIJ-250: Added small fix for empty teaser collection preview templates.
 
-### 2.8.1
+## 2.8.1
 
 * STIJ-244: Fixed critical gulp build bug. **IMPORTANT** Necessary fix for 2.8.0.
 
-### 2.8.0
+## 2.8.0
 
 * STIJ-198: Changed color-element-states() mixin to element-states() mixin.
 * STIJ-236: Fixed markup of breadcrumb + fixed an issue where the
   breadcrumb didn't wrap correctly.
 * STIJ-237: **IMPORTANT** Removed bootstrap grid styling for forms.
 
-### 2.7.8
+## 2.7.8
 
 * STIJ-200: Refactor status messages.
 * STIJ-229 Refactored Gulp-file to ECMA-6
@@ -130,25 +125,25 @@ refactoring.**
 * STIJ-229 Refactored ES-lint to accomodate node.js, ES-6, enforced
   'use strict'; on a function level instead of global.
 
-### 2.7.7
+## 2.7.7
 
 * STIJ-235: Refactor form actions.
 
-### 2.7.6
+## 2.7.6
 
 * STIJ-221: Removed header margin top again. We need to think of a better way to
   implement this.
 * STIJ-219: Added travis integration.
 * STIJ-223: Added codeclimate integration.
 
-### 2.7.5
+## 2.7.5
 
 * STIJ-216:
   * Added masonry-layout library.
   * Added organism for masonry layout.
 * STIJ-217: Added validation check to version_tag.sh script.
 
-### 2.7.4
+## 2.7.4
 
 * STIJ-197: Added margin top to headings and fixed the color of links inside
   headings.
@@ -158,17 +153,17 @@ refactoring.**
 * STIJ-211: Fixed newsletter block styling.
 * STIJ-214: Added preview template fixes after refactoring the heading atoms.
 
-### 2.7.3
+## 2.7.3
 
 Due to some issues with publishing to NPM we had to update to a new patch
 version without introducing new changes to the style guide.
 
-### 2.7.2
+## 2.7.2
 
 * STIJ-208: Removed console log and updated postinstall.sh script to generate
   main_cli.scss content.
 
-### 2.7.1
+## 2.7.1
 
 * STIJ-170: Fixed a bug where the search icon in the header did not work for FF
   and IE.
@@ -182,7 +177,7 @@ version without introducing new changes to the style guide.
   SASS globbing** to support Angular CLI.
 * STIJ-207: Added small fix for preview layouts.
 
-### 2.7.0
+## 2.7.0
 
 IMPORTANT: Class .text-center has been removed
 
@@ -215,7 +210,7 @@ IMPORTANT: Class .text-center has been removed
 * STIJ-188: Fixed issue in gulp command js:dist.
 * STIJ-189: Fixed some style guide specific issues.
 
-### 2.6.19
+## 2.6.19
 
 * STIJ-158: Changed datepicker date format to an English format.
 * STIJ-159: Removed button submit atom.
@@ -227,7 +222,7 @@ IMPORTANT: Class .text-center has been removed
 * STIJ-168: Changed style guide title to a versioned version.
 * STIJ-169: Integrate link in style guide to the GitHub CHANGELOG.
 
-### 2.6.18
+## 2.6.18
 
 * STIJ-50: Fixed label for attributes and changed a lot of the form examples in
   the style guide.
@@ -240,7 +235,7 @@ IMPORTANT: Class .text-center has been removed
 * STIJ-157: Changed the gulp file to also locally minify the JS files. This
   fixes local JS issues.
 
-### 2.6.17
+## 2.6.17
 
 IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   release will remove composer.json!
@@ -251,21 +246,21 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   Gallery (jQuery plugin).
   **Important: Check the bit about the commercial license!**
 
-### 2.6.16
+## 2.6.16
 
 * STIJ-155: Added small fixes to various form elements.
 
-### 2.6.15
+## 2.6.15
 
 * STIJ-45: Added custom styling to the jQuery UI datepicker component.
 * STIJ-148: Refactored hamburger-menu into a single component.
 
-### 2.6.14
+## 2.6.14
 
 * STIJ-148: Made hamburger-menu WCAG compliant.
 * STIJ-148: Created a global TabTrap object.
 
-### 2.6.13
+## 2.6.13
 
 * STIJ-112: Added footer documentation.
 * STIJ-149: The footer organism now has a different grid implementation. Through
@@ -274,22 +269,22 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
 * STIJ-150: Changed social media links block. This now displays the social media
   links of Stad Ghent correctly.
 
-### 2.6.12
+## 2.6.12
 
 * STIJ-147: Added changes to Chosen for multiselect fields. Chosen will now be
   disabled on iPad.
 
-### 2.6.11
+## 2.6.11
 
 * STIJ-146: Added at and code icons.
 * Optimised following icons: caret, pinned, paper, idea, smartphone, data,
   data-new.
 
-### 2.6.10
+## 2.6.10
 
 * STIJ-145: Added pinned icon.
 
-### 2.6.9
+## 2.6.9
 
 * STIJ-63: Made Fractal variants of paragraphs.
 * STIJ-63: Remove underlined text from paragraph examples,
@@ -298,11 +293,11 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
 * STIJ-25: Fixed status messages preview pages.
 * STIJ-140: Fixed themify issue on select input fields.
 
-### 2.6.8
+## 2.6.8
 
 * STIJ-25: Added themify to the status messages component.
 
-### 2.6.7
+## 2.6.7
 
 * Fixed select box appearance in IE.
 * STIJ-139: Added no-optional class to hide optional from field labels.
@@ -310,47 +305,47 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
 * STIJ-139: Added fieldset styling.
 * STIJ-139: Changed class of messages.
 
-### 2.6.6
+## 2.6.6
 
 * Fixed a bug in the postinstall.sh script.
 
-### 2.6.5
+## 2.6.5
 
 * STIJ-126: Removed CDN imports of external libraries and added them through
   yarn.
 
-### 2.6.4
+## 2.6.4
 
 * STIJ-125: Fixed close button for items inside multiselect.
 * STIJ-137: Changed preview template for Mijn Gent block.
 
-### 2.6.3
+## 2.6.3
 
 * STIJ-40: Fixed ugly styling on buttons and input fields for iOS.
 
-### 2.6.2
+## 2.6.2
 
 * STIJ-35: Added bindings and functions for the Gallery component.
 
-### 2.6.1
+## 2.6.1
 
 * STIJ-2:
   * Added default no-style styling to lists in the hamburger menu.
   * Fixed preview hamburger menu.
 * STIJ-34: Changed Gent info block title to h3.
 
-### 2.6.0
+## 2.6.0
 
 * STIJ-32: Refactored heading.
 * STIJ-95: Added more documentation.
 * STIJ-122: Minor validation fixes.
 * STIJ-123: Added form errors.
 
-### 2.5.1
+## 2.5.1
 
 * STIJ-116: Minor change to the styling of the Form Steps molecule.
 
-### 2.5.0
+## 2.5.0
 
 * STIJ-76:
   * Added bindings and functions layer to all Javascript files.
@@ -360,3 +355,12 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed markup for the Form Steps molecule.
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
+
+[3.0.0-alpha.7]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.6...3.0.0-alpha.7
+[3.0.0-alpha.6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.5...3.0.0-alpha.6
+[3.0.0-alpha.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.4...3.0.0-alpha.5
+[3.0.0-alpha.4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.3...3.0.0-alpha.4
+[3.0.0-alpha.3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.2...3.0.0-alpha.3
+[3.0.0-alpha.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.1...3.0.0-alpha.2
+[3.0.0-alpha.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/2.10.0...3.0.0-alpha.1
+[Unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/master...develop

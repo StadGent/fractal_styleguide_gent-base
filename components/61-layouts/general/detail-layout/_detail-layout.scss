@@ -40,7 +40,8 @@
 
   > .summary-box,
   > .cta-block,
-  > .contact-details {
+  > .contact-details,
+  > .contact-box {
     @include desktop {
       @include set-layout('width-10', 'offset-1');
     }
