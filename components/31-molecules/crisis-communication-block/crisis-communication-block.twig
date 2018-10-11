@@ -1,0 +1,34 @@
+<div class="crisis-communication-block box-left">
+    <div class="inner-box">
+        {% include '@heading' with {
+            'type': 'h2',
+            'heading_text': title
+        } %}
+
+        {% include '@readspeaker-button' %}
+
+        {% include '@paragraph' with {
+            'text': description
+        } %}
+
+        {% if list.length > 0 %}
+            {% include '@list' with {
+                'type': 'icon-list',
+                'icon_items': list
+            } %}
+        {% endif %}
+
+        {% if links.length > 0 %}
+            {% include '@heading' with {
+                'type': 'h3',
+                'heading_text': title
+            } %}
+
+            {% include '@list'
+                with {
+                'type': 'unordered',
+                "items": links
+            } %}
+        {% endif %}
+    </div>
+</div>
