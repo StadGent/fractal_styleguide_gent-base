@@ -32,7 +32,6 @@
 
       @include phablet {
         flex: 1 0 auto;
-        order: 1;
         width: span(6 of 12);
       }
 
@@ -42,10 +41,6 @@
 
       &:nth-of-type(3) {
         display: flex;
-
-        @include phablet {
-          order: 2;
-        }
 
         @include desktop {
           justify-content: center;
@@ -57,13 +52,13 @@
         width: 100%;
 
         @include phablet {
-          order: 3;
-          width: span(6 of 12);
+          width: span(12 of 12);
           margin-top: 1.2rem;
           margin-bottom: .4rem;
         }
 
         @include desktop {
+          order: 1;
           width: span(7 of 12);
           margin-top: 0;
         }
