@@ -17,8 +17,6 @@ const sassLint = require('gulp-sass-lint');
 const sassdoc = require('sassdoc');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
-const postcss = require('gulp-postcss');
-const calc = require('postcss-calc');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const imagemin = require('gulp-imagemin');
@@ -216,18 +214,6 @@ gulp.task('styles:build', () => {
     .pipe(gulp.dest('build/css/'));
 });
 
-gulp.task('styles:postcss:build', () => {
-  return gulp.src('build/css/main.css')
-    .pipe(postcss([calc]))
-    .pipe(gulp.dest('build/css'));
-});
-
-gulp.task('styles:postcss:dist', () => {
-  return gulp.src('public/css/main.css')
-    .pipe(postcss([calc]))
-    .pipe(gulp.dest('public/css'));
-});
-
 /**
  * Validate SCSS files.
  * Includes:
@@ -256,7 +242,7 @@ gulp.task('styles:watch', () => {
     'styles:validate',
     'styles:dist',
     'sassdoc'
-  ), 'styles:postcss:dist'));
+  )));
 });
 
 /**
@@ -805,8 +791,6 @@ gulp.task('compile', gulp.series(
     'images:minify'
   )
   , gulp.parallel(
-    'styles:postcss:dist',
-    'styles:postcss:build',
     'styles:extract',
     'styles:inject')
 ), callback => callback());
@@ -822,8 +806,7 @@ gulp.task('compile:dev', gulp.series(
     'sassdoc',
     'js:dist',
     'images:minify'
-  ),
-  'styles:postcss:dist'
+  )
 ));
 
 /**
