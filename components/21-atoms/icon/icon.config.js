@@ -42,7 +42,6 @@ const icons = [
   'image',
   'instagram',
   'lightning',
-  'link',
   'linkedin',
   'lock-closed',
   'lock-open',
@@ -65,6 +64,7 @@ const icons = [
   'twitter-outline',
   'twitter',
   'user',
+  'url',
   'vimeo',
   'youtube'
 ];
