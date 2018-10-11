@@ -17,7 +17,6 @@ const sassLint = require('gulp-sass-lint');
 const sassdoc = require('sassdoc');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
-const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const imagemin = require('gulp-imagemin');
