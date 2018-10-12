@@ -1,14 +1,5 @@
 .crisis-communication-block {
-  p {
-    margin: 0;
-    font-weight: 700;
-  }
-
-  .icon-list {
-    margin-top: .8rem;
-  }
-
-  ul:last-of-type {
+  *:last-of-type {
     margin-bottom: 0;
   }
 }
