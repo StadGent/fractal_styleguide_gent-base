@@ -111,8 +111,7 @@ a {
     }
 
     &::after {
-      display: inline-block;
-      margin-right: calc(-1em - .2rem - #{$link-padding});
+      position: absolute;
     }
   }
 
@@ -129,8 +128,7 @@ a {
     padding-right: calc(#{$link-padding} + 1.5em + .2rem);
 
     &::after {
-      display: inline-block;
-      margin-right: calc(-1em - .2rem - #{$link-padding});
+      position: absolute;
       text-decoration: none;
       overflow: hidden; // Hides text decoration underline.
     }
