@@ -73,6 +73,12 @@
             id: 'subscribe' ~ newsletter.uid,
             name: 'subscribe'
             } %}
+
+            {% include '@link' with {
+              'link': 'javascript:(void);',
+              'text': 'View the list and subscribe to one of our newsletters',
+              'modifier': 'standalone-link'
+            } %}
           </div>
         </div>
       {% endif %}

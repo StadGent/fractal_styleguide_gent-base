@@ -50,8 +50,8 @@ ul.grid-4 {
     }
 
     @include tablet {
-      flex-basis: calc(100% / 3);
-      max-width: calc(100% / 3);
+      flex-basis: 33.3333%;
+      max-width: 33.3333%;
     }
 
     @include desktop {
@@ -69,8 +69,8 @@ ul.grid-3 {
     }
 
     @include desktop {
-      flex-basis: calc(100% / 3);
-      max-width: calc(100% / 3);
+      flex-basis: 33.3333%;
+      max-width: 33.3333%;
     }
   }
 }
