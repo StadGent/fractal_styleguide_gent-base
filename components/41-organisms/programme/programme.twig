@@ -1,0 +1,49 @@
+<div class="programme-wrapper">
+  <h2 class="visually-hidden">Programme</h2>
+  <dl class="programme box-top">
+    <div class="inner-box">
+
+      {% for slot in slots %}
+      <div class="programme-slot" role="listitem">
+        <h3 class="programme-slot-title">{{ slot.title }}</h3>
+        <ul class="grid-3">
+
+          {% for item in slot.items %}
+          <li>
+            <!-- Programme Item -->
+            <article class="programme-item">
+              <!-- Content -->
+              <div class="programme-item__bottom">
+                <h3 id="uid_1">{{ item.title }}</h3>
+                <span class="programme-item-subtitle">{{ item.subtitle }}</span>
+
+                <a href="javascript:void(0);" class="read-more standalone-link" aria-labelledby="uid_1">read more</a>
+              </div>
+
+              <!-- Image -->
+              <div class="programme-item__top">
+                <div class="figure-wrapper">
+                  <figure>
+                    <div class="image-wrapper" data-ratio="8:5">
+                      <img src="{{ item.image }}" alt="">
+                    </div>
+                  </figure>
+                  <div class="accolade-inverse bottom-left"></div>
+                </div>
+
+              </div>
+
+              <!-- Overlay Link -->
+              <a href="javascript:void(0);" class="programme-item-overlay-link" tabindex="-1" aria-hidden="true">General article title text</a>
+            </article>
+            <!-- /Programme Item -->
+          </li>
+          {% endfor %}
+
+        </ul>
+      </div>
+      {% endfor %}
+
+    </div>
+  </dl>
+</div>

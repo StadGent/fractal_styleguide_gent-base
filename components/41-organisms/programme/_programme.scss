@@ -1,0 +1,74 @@
+.programme {
+  > .inner-box {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    &::before {
+      @include tablet {
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+
+  ///
+  /// Programme slot.
+  ///
+  &-slot {
+    &-title {
+      margin: 0 auto 1.6rem;
+      text-align: center;
+    }
+
+    > ul > li {
+      position: relative;
+    }
+    
+    & + & {
+      margin-top: 2.8rem;
+    }
+  }
+
+  ///
+  /// Programme item.
+  ///
+  &-item {
+    @include theme('background-color', 'color-secondary');
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+      position: relative;
+      order: 1;
+    }
+
+    &__bottom {
+      order: 2;
+      padding: .8rem;
+    }
+
+    &-overlay-link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      z-index: 1;
+
+      @at-root {
+        a#{&}:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &-subtitle {
+      display: block;
+      font-size: .8rem;
+    }
+  }
+}
