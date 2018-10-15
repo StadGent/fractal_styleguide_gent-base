@@ -22,12 +22,10 @@ module.exports = {
           },
           {
             title: 'General article title text',
-            subtitle: 'Ongoing animation',
-            image: 'https://via.placeholder.com/800x500&text=8:5+(800x500)'
+            subtitle: 'Ongoing animation'
           },
           {
             title: 'Lorem ipsum dolor sit amet',
-            subtitle: 'Ongoing animation',
             image: 'https://via.placeholder.com/800x500&text=8:5+(800x500)'
           }
         ]

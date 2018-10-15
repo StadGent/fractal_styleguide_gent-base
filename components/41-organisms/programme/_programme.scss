@@ -20,10 +20,6 @@
       text-align: center;
     }
 
-    > ul > li {
-      position: relative;
-    }
-    
     & + & {
       margin-top: 2.8rem;
     }
@@ -34,8 +30,8 @@
   ///
   &-item {
     @include theme('background-color', 'color-secondary');
-    position: relative;
     display: flex;
+    position: relative;
     flex-direction: column;
 
     &__top {
@@ -46,6 +42,10 @@
     &__bottom {
       order: 2;
       padding: .8rem;
+    }
+
+    &-wrapper {
+      position: relative;
     }
 
     &-overlay-link {
