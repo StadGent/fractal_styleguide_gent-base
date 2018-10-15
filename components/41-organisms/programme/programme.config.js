@@ -16,19 +16,19 @@ module.exports = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet vestibulum ex, id tincidunt nulla porttitor nec. Cras aliquam interdum felis, nec efficitur quam varius sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut nec gravida tellus, quis pulvinar enim. Proin ut lectus dui. Pellentesque maximus orci quis aliquet bibendum. Fusce vestibulum velit a tellus fermentum, in laoreet est pharetra.',
             images: [
               {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
+                src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+                alt: 'placeholder image alternative text',
+                caption: 'image caption'
               },
               {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
+                src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+                alt: 'placeholder image alternative text',
+                caption: 'image caption'
               },
               {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
+                src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+                alt: 'placeholder image alternative text',
+                caption: 'image caption'
               }
             ]
           },
@@ -37,9 +37,9 @@ module.exports = {
             subtitle: 'Ongoing animation',
             images: [
               {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
+                src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+                alt: 'placeholder image alternative text',
+                caption: 'image caption'
               }
             ]
           },
@@ -51,9 +51,9 @@ module.exports = {
             title: 'Lorem ipsum dolor sit amet',
             images: [
               {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
+                src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+                alt: 'placeholder image alternative text',
+                caption: 'image caption'
               }
             ]
           }
