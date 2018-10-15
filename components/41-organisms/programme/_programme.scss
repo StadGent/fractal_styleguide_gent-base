@@ -34,6 +34,7 @@
     position: relative;
     flex-direction: column;
 
+    // Children
     &__top {
       position: relative;
       order: 1;
@@ -60,7 +61,8 @@
       z-index: 1;
 
       @at-root {
-        a#{&}:hover {
+        a#{&}:hover,
+        a#{&}:focus {
           background-color: transparent;
         }
       }
@@ -69,6 +71,70 @@
     &-subtitle {
       display: block;
       font-size: .8rem;
+    }
+  }
+
+  ///
+  /// Programme detail
+  ///
+  &-detail {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    @include phablet {
+      padding: 2rem 6.6rem;
+    }
+
+    @include tablet {
+      top: 10vh;
+      width: 100/3 * 2%;
+      height: auto;
+      left: 100/6 * 1%;
+    }
+
+    padding: 1rem;
+    background-color: color('white');
+
+    z-index: 200;
+    overflow-y: auto;
+
+    // States
+    &.visible {
+      display: block;
+
+      + .programme-detail-overlay {
+        display: block;
+      }
+    }
+
+    // Children
+    &-overlay {
+      @include theme('background-color', 'color-primary--darken-3', 'checkbox-with-filter-overlay-background-color');
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      opacity: .7;
+      z-index: 199;
+
+      display: none;
+    }
+
+    > .modal-actions {
+      text-align: right;
+      margin-top: -.4rem;
+      margin-right: -.4rem;
+
+      @include tablet {
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+      }
     }
   }
 }

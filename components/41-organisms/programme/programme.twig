@@ -3,21 +3,34 @@
   <dl class="programme box-top">
     <div class="inner-box">
 
-      {% for slot in slots %}
+      {% for slotKey, slot in slots %}
       <div class="programme-slot" role="listitem">
         <h3 class="programme-slot-title">{{ slot.title }}</h3>
         <ul class="grid-3">
 
-          {% for item in slot.items %}
+          {% for itemKey, item in slot.items %}
+          {% set key = slotKey ~ itemKey %}
           <li class="programme-slot-wrapper">
+            <!-- Programme detail -->
+            <section id="programme-detail--{{ key }}" class="programme-detail modal" tabindex="-1">
+              <div class="modal-actions">
+                {% include '@modal-close' %}
+              </div>
+
+              <h2>{{ item.title }}</h2>
+              <h3>{{ item.subtitle }}</h3>
+            </section>
+            <div class="programme-detail-overlay"></div>
+            <!-- /Programme detail -->
+
             <!-- Programme Item -->
             <article class="programme-item">
               <!-- Content -->
               <div class="programme-item__bottom">
-                <h3 id="uid_1">{{ item.title }}</h3>
+                <h3 id="uid_{{ key }}">{{ item.title }}</h3>
                 <span class="programme-item-subtitle">{{ item.subtitle }}</span>
 
-                <a href="javascript:void(0);" class="read-more standalone-link" aria-labelledby="uid_1">read more</a>
+                <a href="javascript:void(0);" class="read-more standalone-link" aria-labelledby="uid_{{ key }}">read more</a>
               </div>
 
               <!-- Image -->
@@ -34,7 +47,11 @@
               </div>
 
               <!-- Overlay Link -->
-              <a href="javascript:void(0);" class="programme-item-overlay-link" tabindex="-1" aria-hidden="true">General article title text</a>
+              <a href="javascript:void(0);" class="programme-item-overlay-link modal-trigger"
+                 tabindex="-1"
+                 aria-hidden="true"
+                 aria-expanded="false"
+                 aria-controls="programme-detail--{{ key }}">{{ item.title }}</a>
             </article>
             <!-- /Programme Item -->
           </li>
