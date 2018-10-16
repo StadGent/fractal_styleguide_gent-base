@@ -1,4 +1,4 @@
-<div class="image-gallery--wrapper multiple">
+<div class="image-gallery--wrapper multiple{% if type %} image-gallery--{{ type }}{% endif %}">
   <ul class="image-gallery js-lightbox">
     {% for item in items %}
       <li>

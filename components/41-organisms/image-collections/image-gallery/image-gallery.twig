@@ -1,4 +1,4 @@
-<div class="image-gallery--wrapper single">
+<div class="image-gallery--wrapper single{% if type %} image-gallery--{{ type }}{% endif %}">
   <div class="image-gallery js-lightbox">
     <a href="{{ src }}"
       {% if item.caption %}
