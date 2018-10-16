@@ -1,0 +1,14 @@
+.contact-block {
+  .inner-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    &::before {
+      @include spot-image('download-light', 7rem);
+    }
+
+    li:last-of-type {
+      margin-top: 1rem;
+    }
+  }
+}
