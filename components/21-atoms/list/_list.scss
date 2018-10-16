@@ -78,6 +78,18 @@ ul {
       line-height: 1.6;
       overflow: hidden;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      ul {
+        margin: 0;
+
+        li {
+          margin-bottom: .2rem;
+        }
+      }
+
       a {
         line-height: 1;
 
