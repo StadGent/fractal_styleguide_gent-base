@@ -2,51 +2,158 @@
   @include theme('background-color', 'color-primary--lighten-5', 'theme-footer-background-color');
   @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
 
-  width: calc(100% + 2 * #{$gutter-width});
-  margin-top: 4rem;
-  margin-right: -$gutter-width;
-  margin-left: -$gutter-width;
-  padding: 2.7rem 0 2.1rem;
+  width: calc(100% + 2rem);
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding: 0;
   border-bottom: 2px solid;
 
   + .footer {
     margin-top: 0;
   }
 
-  .content-container {
-    display: flex;
-    flex-direction: column;
-    padding: 0 $gutter-width;
+  .contact,
+  .newsletter,
+  .social {
+    flex: 1;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+
+    @include tablet {
+      padding-top: 2.4rem;
+      padding-bottom: 2.4rem;
+    }
+  }
+
+  .contact,
+  .newsletter {
+    flex-basis: 100%;
 
     @include desktop {
-      padding: 0;
+      flex-basis: span(9 of 12);
+      flex-grow: 0;
+      padding-right: 2rem;
     }
+  }
 
-    h3 {
-      align-self: center;
-    }
+  .contact {
+    .icon-list {
+      margin: 0;
 
-    .social-list {
-      align-self: center;
-
-      @include tablet {
-        max-width: 50%;
+      li:last-of-type {
+        margin-bottom: 0;
       }
 
-      @include desktop {
-        max-width: 30%;
+      @include tablet {
+        column-gap: gutter();
+        column-count: 2;
       }
     }
   }
 
-  .box-no-icon {
-    @include theme('background-color', 'color-secondary', 'theme-footer-ineer-background-color');
+  .social {
+    flex-basis: 100%;
+    text-align: center;
 
-    margin-bottom: .6rem;
+    @include desktop {
+      flex: 1;
+      text-align: left;
 
-    .accolade::before,
-    .accolade::after {
-      @include theme('background-color', 'color-primary--lighten-5', 'theme-footer-background-color');
+      &:only-child {
+        text-align: center;
+      }
+    }
+
+    h3 {
+      max-width: 100%;
+    }
+
+    .social-list {
+      display: inline-block;
+      width: auto;
+      max-width: 100%;
+      margin: auto;
+
+      ul {
+        justify-content: flex-start;
+        width: calc(100% + 1rem);
+        margin: 0 -.5rem;
+
+        li {
+          padding: .5rem;
+        }
+
+        a {
+          &,
+          &[download]:not(.button),
+          &[href^="http://"]:not(.button),
+          &[href^="https://"]:not(.button) {
+            @include theme('background-color', 'color-secondary', 'theme-footer-social-media-icon-background');
+          }
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    border-radius: 0;
+    font-size: .8rem;
+
+    .inner-box {
+      padding: 0;
+      background-color: transparent;
+
+      &::before {
+        content: none;
+      }
+
+      @include tablet {
+        min-height: 7rem;
+        padding-left: 9rem;
+
+        &::before {
+          @include spot-image('letter-light', 7rem);
+        }
+
+        &::before {
+          top: 0;
+          right: auto;
+          bottom: auto;
+          left: 0;
+        }
+      }
+    }
+
+    .subscribe {
+      // 5/12 of max content-container width
+      max-width: calc(#{$bp-max-content} / 12 * 5);
+    }
+  }
+
+  .content-container {
+    padding: 0 $gutter-width;
+  }
+
+  .top {
+    @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
+    border-bottom: 2px solid;
+  }
+
+  .top,
+  .bottom {
+    display: flex;
+    flex-wrap: wrap;
+
+    .newsletter,
+    .contact {
+      &:not(:last-of-type) {
+        @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
+        border-bottom: 2px solid;
+
+        @include desktop {
+          border-bottom: 0;
+        }
+      }
     }
   }
 

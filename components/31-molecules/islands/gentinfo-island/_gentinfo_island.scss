@@ -10,7 +10,7 @@
   text-align: center;
   box-shadow: 0 8px 12px 0 rgba(0, 125, 179, .06);
 
-  @include tablet {
+  @include phablet {
     flex-wrap: nowrap;
     margin: 0;
     padding: 2.5rem;
@@ -22,11 +22,7 @@
     height: 10rem;
     margin: -6rem auto 0;
 
-    @include tablet {
-      display: none;
-    }
-
-    @include desktop {
+    @include phablet {
       display: block;
       align-self: center;
       margin: 0 2.4rem 0 0;
@@ -37,7 +33,7 @@
     width: 100%;
     text-align: left;
 
-    @include tablet {
+    @include phablet {
       width: span(5 of 7);
       max-width: 15rem;
     }
@@ -46,7 +42,7 @@
     p {
       text-align: center;
 
-      @include tablet {
+      @include phablet {
         text-align: left;
       }
     }
@@ -77,7 +73,7 @@
     width: calc(100% - 2.2rem);
     margin: auto;
 
-    @include tablet {
+    @include phablet {
       right: 1.5rem;
       left: auto;
       width: auto;

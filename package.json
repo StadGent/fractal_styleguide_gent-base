@@ -42,7 +42,7 @@
   ],
   "license": "GPL-2.0",
   "dependencies": {
-    "baguettebox.js": "^1.10.0",
+    "baguettebox.js": "https://github.com/BartDelrue/baguetteBox.js.git",
     "breakpoint-sass": "^2.7.1",
     "gulp-postcss": "^8.0.0",
     "gulp-real-favicon": "^0.3.0",

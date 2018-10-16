@@ -20,7 +20,6 @@ module.exports = {
         teaser_link_link: '#',
         teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
-        teaser_tag: 'Just some tag',
         teaser_label_text: 'Event'
       },
       {
@@ -53,8 +52,7 @@ module.exports = {
         teaser_link_text: 'read more',
         teaser_link_link: '#',
         teaser_image_src: 'https://loremflickr.com/800/500/ghent',
-        teaser_image_alt_text: 'alt text',
-        teaser_tag: 'Just some tag'
+        teaser_image_alt_text: 'alt text'
       },
       {
         teaser_uid: 'uid',
@@ -86,8 +84,7 @@ module.exports = {
         teaser_link_text: 'read more',
         teaser_link_link: '#',
         teaser_image_src: 'https://loremflickr.com/800/500/ghent',
-        teaser_image_alt_text: 'alt text',
-        teaser_tag: 'Just some tag'
+        teaser_image_alt_text: 'alt text'
       },
       {
         teaser_uid: 'uid',
@@ -119,7 +116,6 @@ module.exports = {
         teaser_link_link: '#',
         teaser_image_src: 'https://loremflickr.com/800/500/ghent',
         teaser_image_alt_text: 'alt text',
-        teaser_tag: 'Just some tag',
         teaser_label_text: 'Event'
       },
       {
@@ -152,8 +148,7 @@ module.exports = {
         teaser_link_text: 'read more',
         teaser_link_link: '#',
         teaser_image_src: 'https://loremflickr.com/800/500/ghent',
-        teaser_image_alt_text: 'alt text',
-        teaser_tag: 'Just some tag'
+        teaser_image_alt_text: 'alt text'
       },
       {
         teaser_uid: 'uid',

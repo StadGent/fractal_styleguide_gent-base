@@ -102,7 +102,9 @@ a {
   &.standalone-link {
     @include icon(arrow-right, after);
 
+    display: inline-block;
     margin-left: 0;
+    padding-right: calc(#{$link-padding} + 1.5em + .2rem);
     padding-left: 0;
     text-decoration: none;
 
@@ -111,6 +113,10 @@ a {
       @include theme('color', 'color-primary--darken-2', 'link-hover-color');
 
       background-color: transparent;
+    }
+
+    &::after {
+      position: absolute;
     }
   }
 
@@ -124,10 +130,11 @@ a {
   &[download]:not(.button),
   &[href^="http://"]:not(.button),
   &[href^="https://"]:not(.button) {
-    display: inline;
+    display: inline-block;
+    padding-right: calc(#{$link-padding} + 1.5em + .2rem);
 
     &::after {
-      display: inline-block;
+      position: absolute;
       text-decoration: none;
       overflow: hidden; // Hides text decoration underline.
     }
