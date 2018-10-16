@@ -26,9 +26,9 @@
   }
 
   ///
-  /// Programme item.
+  /// Programme teaser.
   ///
-  &-item {
+  &-teaser {
     @include theme('background-color', 'color-secondary');
     display: flex;
     position: relative;
@@ -43,10 +43,6 @@
     &__bottom {
       order: 2;
       padding: .8rem;
-    }
-
-    &-wrapper {
-      position: relative;
     }
 
     &-overlay-link {
