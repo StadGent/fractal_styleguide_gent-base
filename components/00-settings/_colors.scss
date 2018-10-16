@@ -69,6 +69,25 @@ $tints: (
 $box-shadow-primary: 0 2px 8px 0;
 
 ///
+/// A function to convert a rgba color to a rgb color.
+///
+/// @since 3.0.0
+/// @group colors
+/// @access public
+/// @author Jeroen Goossens
+/// @require $colors
+///
+/// @param {color} $base-color
+///   The key of the color in the $colors map.
+///
+/// @param {color} $background [#fff]
+///   The color to mix with.
+///
+@function rgba-to-rgb($base-color, $background: #fff) {
+  @return mix(rgb(red($base-color), green($base-color), blue($base-color)), $background, alpha($base-color) * 100%);
+};
+
+///
 /// A function to get a color from the $colors map.
 ///
 /// @since 3.0.0
@@ -83,23 +102,34 @@ $box-shadow-primary: 0 2px 8px 0;
 /// @param {int} $tint [0]
 ///   The tint to be applied to the base color.
 ///
+/// @param {boolean} $transparent [false]
+///   True when you need a RGBA color, otherwise HEX value will return.
+///
 /// @param {map} colors$ [$colors]
 ///   The colors array to use to calculate the correct color tint.
 ///
-@function color($base-color, $tint: 0, $colors: $colors) {
+@function color($base-color, $tint: 0, $transparent: false, $colors: $colors) {
+  @if not map-has-key($colors, $base-color) {
+    @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
+  }
+
+  $color: null;
   @if $tint != 0 {
     @if $tint > 0 {
-      @return shade($base-color, $tint, $colors);
+      $color: shade($base-color, $tint, $colors);
     }
     @if $tint < 0 {
-      @return tint($base-color, $tint, $colors);
+      $color: tint($base-color, $tint, $colors);
+    }
+
+    @if $transparent {
+      @return $color;
+    }
+    @else {
+      @return rgba-to-rgb($color);
     }
   }
   @if $tint == 0 {
-    @if not map-has-key($colors, $base-color) {
-      @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
-    }
-
     @return map-get($colors, $base-color);
   }
 };
@@ -124,19 +154,12 @@ $box-shadow-primary: 0 2px 8px 0;
 ///   The colors array to use to calculate the correct color tint.
 ///
 @function tint($base-color, $tint, $colors: $colors) {
-  $color-white: #fff;
-
-  @if not map-has-key($colors, $base-color) {
-    @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
-  }
-
   @if not map-has-key($tints, $tint) {
     @warn "`#{inspect($tint)}` doesn't seem to be a valid tint value.";
   }
 
   @return rgba(map-get($colors, $base-color), map-get($tints, $tint));
 };
-
 
 ///
 /// A function to darken a base color.
@@ -159,10 +182,6 @@ $box-shadow-primary: 0 2px 8px 0;
 ///
 @function shade($base-color, $tint, $colors: $colors) {
   $color-black: #000;
-
-  @if not map-has-key($colors, $base-color) {
-    @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
-  }
 
   @if not map-has-key($tints, $tint) {
     @warn "`#{inspect($tint)}` doesn't seem to be a valid tint value.";
