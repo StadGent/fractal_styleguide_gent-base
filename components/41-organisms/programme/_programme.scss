@@ -85,20 +85,6 @@
     width: 100vw;
     height: 100vh;
 
-    @include phablet {
-      padding: 2rem 6.6rem;
-    }
-
-    @include tablet {
-      top: 10vh;
-      left: 100/6 * 1%;
-      width: 100/3 * 2%;
-      height: auto;
-    }
-
-    padding: 1rem;
-    background-color: color('white');
-
     z-index: 200;
     overflow-y: auto;
 
@@ -125,7 +111,7 @@
       z-index: 199;
     }
 
-    > .modal-actions {
+    .modal-actions {
       margin-top: -.4rem;
       margin-right: -.4rem;
       text-align: right;
@@ -134,6 +120,58 @@
         position: absolute;
         top: 1.2rem;
         right: 1.2rem;
+      }
+    }
+
+    &-inner {
+      position: relative;
+      min-height: 100vh;
+      padding: 1rem;
+      background-color: color('white');
+
+      @include tablet {
+        left: 100/6 * 1%;
+        width: 100/3 * 2%;
+        height: auto;
+        min-height: 0;
+        margin: 10vh 0;
+        padding: 3rem 2rem;
+      }
+
+      @include desktop {
+        padding: 2rem 6.6rem;
+      }
+    }
+
+    .image-gallery--wrapper {
+      margin: 1rem 0;
+
+      .image-gallery,
+      .gallery-link {
+        max-width: none;
+      }
+
+      .gallery-link {
+        width: 100%;
+        margin: 0;
+      }
+
+      .show-more__content {
+        text-align: center;
+      }
+    }
+
+    .video {
+      margin-top: 1.6rem;
+
+      > .responsive-video {
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+
+        @include tablet {
+          width: 100%;
+          margin-left: 0;
+        }
       }
     }
   }

@@ -13,27 +13,40 @@
               <li class="programme-slot-wrapper">
                 <!-- Programme detail -->
                 <section id="programme-detail--{{ key }}" class="programme-detail modal" tabindex="-1">
-                  <div class="modal-actions">
-                    {% include '@modal-close' %}
-                  </div>
+                  <div class="programme-detail-inner">
+                    <div class="modal-actions">
+                      {% include '@modal-close' %}
+                    </div>
 
-                  <h2>{{ item.title }}</h2>
-                  <h3>{{ item.subtitle }}</h3>
+                    <h2>{{ item.title }}</h2>
+                    {% if item.subtitle %}
+                      <h3>{{ item.subtitle }}</h3>
+                    {% endif %}
 
-                  <div class="image-gallery-wrapper">
                     {% if item.images|length > 1 %}
                       {% include '@image-gallery--multiple' with {
-                        "items": item.images
+                        type: 'secondary',
+                        items: item.images
                       } %}
                     {% elseif item.images|length > 0  %}
-                      {% include '@image-gallery' with item.images|first %}
+                      {% include '@image-gallery' with {
+                        type: 'secondary',
+                        src: item.images|first.src,
+                        alt: item.images|first.alt,
+                        caption: item.images|first.caption
+                      } %}
+                    {% endif %}
+
+                    {% if item.description %}
+                      {% include '@paragraph' with {
+                        'text': item.description
+                      } %}
+                   {% endif %}
+
+                    {% if item.video %}
+                      {% include '@video' with item.video %}
                     {% endif %}
                   </div>
-
-                  {% include '@paragraph' with {
-                    'text': item.description
-                  } %}
-
                 </section>
                 <div class="programme-detail-overlay"></div>
                 <!-- /Programme detail -->
