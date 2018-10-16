@@ -8,5 +8,7 @@
   }
 
   let selected = document.querySelectorAll('.programme-detail');
-  Array.from(selected).forEach(item => new Modal(item));
+  for (let i = selected.length; i--;) {
+    new Modal(selected[i]);
+  }
 })();
