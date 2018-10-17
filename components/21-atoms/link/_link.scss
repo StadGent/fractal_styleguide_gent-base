@@ -109,14 +109,13 @@ a {
   &[download]:not(.button),
   &[href^="http://"]:not(.button),
   &[href^="https://"]:not(.button) {
-    position: relative;
     padding-right: calc(#{$link-padding} + 1.5em + .2rem);
 
     &::after {
       position: absolute;
+      transform: translateY(.15em);
       text-decoration: none;
       overflow: hidden; // Hides text decoration underline.
-      top: $link-padding / 3;
     }
   }
 
