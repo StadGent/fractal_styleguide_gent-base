@@ -113,7 +113,7 @@ a {
 
     &::after {
       position: absolute;
-      transform: translateY(.15em);
+      transform: translateY(.1em);
       text-decoration: none;
       overflow: hidden; // Hides text decoration underline.
     }
