@@ -93,8 +93,16 @@ ul {
       a {
         line-height: 1;
 
-        &::after {
-          content: '';
+        &[href^="mailto:"]:not(.button),
+        &[href^="tel:"]:not(.button),
+        &[download]:not(.button),
+        &[href^="http://"]:not(.button),
+        &[href^="https://"]:not(.button) {
+          padding-right: $link-padding;
+
+          &::after {
+            content: ''; // hide default link icons
+          }
         }
       }
 
