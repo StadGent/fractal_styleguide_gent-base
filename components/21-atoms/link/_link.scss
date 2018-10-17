@@ -102,8 +102,7 @@ a {
   &.standalone-link {
     @include icon(arrow-right, after);
 
-    display: inline-block;
-    margin-left: 0;
+    display: inline;
     padding-right: calc(#{$link-padding} + 1.5em + .2rem);
     padding-left: 0;
     text-decoration: none;
@@ -130,7 +129,7 @@ a {
   &[download]:not(.button),
   &[href^="http://"]:not(.button),
   &[href^="https://"]:not(.button) {
-    display: inline-block;
+    display: inline;
     padding-right: calc(#{$link-padding} + 1.5em + .2rem);
 
     &::after {
