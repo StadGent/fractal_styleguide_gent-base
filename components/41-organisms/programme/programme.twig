@@ -12,7 +12,7 @@
               {% set key = slotKey ~ itemKey %}
               <li>
                 <!-- Programme detail -->
-                <section id="programme-detail--{{ key }}" class="programme-detail modal" tabindex="-1">
+                <section id="{{ key }}" class="programme-detail modal" tabindex="-1">
                   <div class="programme-detail-inner">
                     <div class="modal-actions">
                       {% include '@modal-close' %}
@@ -78,7 +78,7 @@
                      tabindex="-1"
                      aria-hidden="true"
                      aria-expanded="false"
-                     aria-controls="programme-detail--{{ key }}">{{ item.title }}</a>
+                     aria-controls="{{ key }}">{{ item.title }}</a>
                 </article>
                 <!-- /Programme Teaser -->
               </li>
