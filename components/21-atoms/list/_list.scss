@@ -78,11 +78,31 @@ ul {
       line-height: 1.6;
       overflow: hidden;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      ul {
+        margin: 0;
+
+        li {
+          margin-bottom: .2rem;
+        }
+      }
+
       a {
         line-height: 1;
 
-        &::after {
-          content: '';
+        &[href^="mailto:"]:not(.button),
+        &[href^="tel:"]:not(.button),
+        &[download]:not(.button),
+        &[href^="http://"]:not(.button),
+        &[href^="https://"]:not(.button) {
+          padding-right: $link-padding;
+
+          &::after {
+            content: ''; // hide default link icons
+          }
         }
       }
 

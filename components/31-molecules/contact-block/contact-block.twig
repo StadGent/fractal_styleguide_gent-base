@@ -1,0 +1,45 @@
+<div class="contact-block box-left">
+  <div class="inner-box">
+    {%  if title %}
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': title
+      } %}
+    {% endif %}
+
+    {% include '@paragraph' with {
+      'text': description
+    } %}
+
+    <ul class="links">
+      {% if tel %}
+        <li>
+          {% include '@link' with {
+            'text': 'Call '~tel,
+            'link': 'tel:'~tel,
+            'modifier': 'button button-primary'
+          } %}
+        </li>
+      {% endif %}
+      {% if email %}
+        <li>
+          {% include '@link' with {
+            'text': 'Send an email to '~email,
+            'link': 'mailto:'~email,
+            'modifier': 'button button-primary'
+          } %}
+        </li>
+      {% endif %}
+      {% if link %}
+        <li>
+          {% include '@link' with {
+            'text': 'Check all contact details',
+            'link': '#',
+            'modifier': 'standalone-link'
+          } %}
+        </li>
+      {% endif %}
+    </ul>
+
+  </div>
+</div>

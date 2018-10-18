@@ -45,6 +45,11 @@ a {
       @include icon(envelope);
     }
 
+    &[href^="tel:"] {
+      @include button-icon;
+      @include icon(phone);
+    }
+
     &[download] {
       @include button-icon;
       @include icon(download);
@@ -77,29 +82,11 @@ a {
   }
 
   ///
-  /// Styling of:
-  ///   - standalone links
-  ///   - links with an icon class on them
-  ///   - links that go to an external source
-  ///
-  &.standalone-link,
-  &[download]:not(.button),
-  &[class^="icon-"],
-  &[href^="http://"],
-  &[href^="https://"] {
-    display: inline-flex;
-    align-items: center;
-  }
-
-  ///
   /// Stand alone links.
   ///
   &.standalone-link {
     @include icon(arrow-right, after);
 
-    display: inline-block;
-    margin-left: 0;
-    padding-right: calc(#{$link-padding} + 1.5em + .2rem);
     padding-left: 0;
     text-decoration: none;
 
@@ -109,28 +96,24 @@ a {
 
       background-color: transparent;
     }
-
-    &::after {
-      display: inline-block;
-      margin-right: calc(-1em - .2rem - #{$link-padding});
-    }
   }
 
-  &.standalone-link:not([href^="mailto:"]):not([download]):not([href^="http://"]):not([href^="https://"]),
-  &.button:not([href^="mailto:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]) {
+  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]),
+  &.button:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]) {
     @extend %a-bounce-animation;
   }
 
+  &.standalone-link:not(.button),
   &[href^="mailto:"]:not(.button),
+  &[href^="tel:"]:not(.button),
   &[download]:not(.button),
   &[href^="http://"]:not(.button),
   &[href^="https://"]:not(.button) {
-    display: inline-block;
     padding-right: calc(#{$link-padding} + 1.5em + .2rem);
 
     &::after {
-      display: inline-block;
-      margin-right: calc(-1em - .2rem - #{$link-padding});
+      position: absolute;
+      transform: translateY(.1em);
       text-decoration: none;
       overflow: hidden; // Hides text decoration underline.
     }
@@ -148,6 +131,13 @@ a {
   ///
   &[href^="mailto:"] {
     @include icon(envelope, after);
+  }
+
+  ///
+  /// Phone links.
+  ///
+  &[href^="tel:"] {
+    @include icon(phone, after);
   }
 
   ///
