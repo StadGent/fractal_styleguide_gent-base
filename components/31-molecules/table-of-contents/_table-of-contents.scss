@@ -1,9 +1,9 @@
-.filter--nav {
+.table-of-contents {
   ul > li {
     margin-right: 0;
 
     + li::before {
-      @include theme('color', 'color-primary--lighten-3', 'filter-nav-longdash-color')
+      @include theme('color', 'color-primary--lighten-3', 'filter-nav-longdash-color');
 
       display: inline-block;
       padding: 0 .2rem;
