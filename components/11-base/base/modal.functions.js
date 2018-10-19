@@ -30,6 +30,7 @@
 
     let triggers = [];
     let trigger;
+    let hash;
 
     /**
      * A Gent styleguide class to create a tabTrap.
@@ -65,7 +66,7 @@
         options.closeBtns || '.modal__close'
       );
       for (let i = closeBtns.length; i--;) {
-        closeBtns[i].addEventListener('click', close);
+        closeBtns[i].addEventListener('click', handleClose);
       }
 
       /*
@@ -76,12 +77,34 @@
         options.resizeEvent();
         addResizeEvent();
       }
+
+      /*
+        Possibility to alter the URL fragment when the modal opens/closes.
+       */
+      hash = window.location.hash;
+      if (options.changeHash) {
+        window.addEventListener('popstate', () => {
+          if (hash === `#${modal.id}`) {
+            close();
+          }
+        });
+
+        if (hash === `#${modal.id}`) { // show modal on page load when the hash corresponds
+          history.replaceState(null, null, window.location.href.split('#')[0]);
+          open();
+        }
+      }
     };
 
     /**
      * Open the modal.
      */
     const open = () => {
+      if (options.changeHash) { // change the url
+        history.pushState(null, null, `#${modal.id}`);
+        hash = `#${modal.id}`;
+      }
+
       modal.classList.add('visible');
       modal.setAttribute('aria-hidden', 'false');
       trigger.setAttribute('aria-expanded', 'true');
@@ -124,9 +147,23 @@
           break;
         case 27: // esc
           e.preventDefault();
-          close();
+          handleClose();
           break;
       }
+    };
+
+    /**
+     * Decision point on how the modal should be closed.
+     * When the URL changes, the `popstate` event should be triggered manually,
+     * otherwise we'll close the modal directly.
+     */
+    const handleClose = () => {
+      if (options.changeHash) {
+        history.back();
+        return;
+      }
+
+      close();
     };
 
     /**

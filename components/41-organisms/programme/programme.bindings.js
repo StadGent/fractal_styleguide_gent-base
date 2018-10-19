@@ -9,6 +9,8 @@
 
   let selected = document.querySelectorAll('.programme-detail');
   for (let i = selected.length; i--;) {
-    new Modal(selected[i]);
+    new Modal(selected[i], {
+      changeHash: true
+    });
   }
 })();
