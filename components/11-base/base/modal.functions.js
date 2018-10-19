@@ -41,7 +41,7 @@
      * Initialise the component.
      */
     const init = () => {
-      triggers = document.querySelectorAll(`[aria-controls=${modal.id}]`);
+      triggers = document.querySelectorAll(`[aria-controls="${modal.id}"]`);
 
       if (triggers.length === 0) {
         return;
