@@ -5,8 +5,9 @@
 
       {% for slotKey, slot in slots %}
         <div class="programme-slot" role="listitem">
-          <h3 class="programme-slot-title">{{ slot.title }}</h3>
-          <ul class="grid-3">
+          <dt class="programme-slot-title">{{ slot.title }}</dt>
+          <dd>
+            <ul class="grid-3">
 
             {% for itemKey, item in slot.items %}
               {% set key = slotKey ~ itemKey %}
@@ -85,6 +86,7 @@
             {% endfor %}
 
           </ul>
+          </dd>
         </div>
       {% endfor %}
 
