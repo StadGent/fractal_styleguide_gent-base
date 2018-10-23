@@ -90,6 +90,20 @@ module.exports = {
       }
     },
     {
+      name: 'List with icons inline',
+      handle: 'list-with-icons-inline',
+      preview: '@preview',
+      context: {
+        type: 'icon-list',
+        modifier: 'inline',
+        icon_items: [
+          '<i class="icon-home" aria-hidden="true"></i> item 1',
+          '<i class="icon-home" aria-hidden="true"></i> item 2',
+          '<i class="icon-external-link" aria-hidden="true"></i> <a href="https://stad.gent">item 2 - external link</a>'
+        ]
+      }
+    },
+    {
       name: 'Definition list',
       handle: 'definition-list',
       preview: '@preview',
