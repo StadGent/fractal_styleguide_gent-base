@@ -71,6 +71,19 @@ ul {
     margin: 0 0 2rem;
     list-style-type: none;
 
+    &.inline {
+      li {
+        display: flex;
+        margin-right: .7rem;
+        margin-bottom: 0;
+
+        i {
+          width: auto;
+          margin-right: 0;
+        }
+      }
+    }
+
     li {
       position: relative;
       margin-bottom: .8rem;
