@@ -59,12 +59,18 @@
         // Get the base-color from the color variant list.
         $base-color: nth($color-variant, 1);
 
+        // Transparent is default false.
+        $transparent: false;
+        @if length($color-variant) > 2 and nth($color-variant, 3) == 'transparent' {
+          $transparent: true;
+        }
+
         // If it's a light variant.
         @if nth($tint-variant, 1) == 'lighten' {
           // Get the negative tint strength.
           $tint: number(-#{nth($tint-variant, 2)});
 
-          @return color($base-color, $tint, $colors);
+          @return color($base-color, $tint, $transparent, $colors);
         }
 
         // If it's a dark variant.
@@ -72,7 +78,11 @@
           // Get the positive tint strength.
           $tint: number(nth($tint-variant, 2));
 
-          @return color($base-color, $tint, $colors);
+          @if $transparent {
+            @warn "Darker colors can not be transparent!";
+          }
+
+          @return color($base-color, $tint, false, $colors);
         }
       }
     }
@@ -83,7 +93,7 @@
       // Set the $base-color.
       $base-color: nth($color-variant, 1);
 
-      @return color($base-color, 0, $colors);
+      @return color($base-color, 0, false, $colors);
     }
   }
 

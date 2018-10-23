@@ -1,0 +1,10 @@
+<nav class="table-of-contents" aria-labelledby="table-of-contents">
+  <div class="content-container">
+    <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb' }}</h2>
+    {% include '@list' with {
+      'type': 'links',
+      'items': list,
+      'modifier': 'inline'
+    } %}
+  </div>
+</nav>

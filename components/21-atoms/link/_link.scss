@@ -82,11 +82,27 @@ a {
   }
 
   ///
+  /// Styling of:
+  ///   - standalone links
+  ///   - links with an icon class on them
+  ///   - links that go to an external source
+  ///
+  &.standalone-link,
+  &[download]:not(.button),
+  &[class^="icon-"],
+  &[href^="http://"],
+  &[href^="https://"] {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  ///
   /// Stand alone links.
   ///
   &.standalone-link {
     @include icon(arrow-right, after);
 
+    margin-left: 0;
     padding-left: 0;
     text-decoration: none;
 
@@ -103,17 +119,15 @@ a {
     @extend %a-bounce-animation;
   }
 
-  &.standalone-link:not(.button),
   &[href^="mailto:"]:not(.button),
   &[href^="tel:"]:not(.button),
   &[download]:not(.button),
   &[href^="http://"]:not(.button),
   &[href^="https://"]:not(.button) {
-    padding-right: calc(#{$link-padding} + 1.5em + .2rem);
+    display: inline;
 
     &::after {
-      position: absolute;
-      transform: translateY(.1em);
+      display: inline-block;
       text-decoration: none;
       overflow: hidden; // Hides text decoration underline.
     }

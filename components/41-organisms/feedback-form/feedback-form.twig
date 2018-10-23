@@ -27,7 +27,12 @@
         'heading_text': 'Do you have suggestions or comments concerning this page?'
       } %}
 
-      {% include '@textarea' with {} %}
+      {% include '@textarea' with {
+        textarea_id: "textarea_id",
+        for: "textarea_id",
+        textarea_name: "textarea_name",
+        label: 'Message'
+      } %}
 
       {% include '@button' with {
         'text': 'Send suggestion',
