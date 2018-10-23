@@ -1,4 +1,8 @@
 .programme {
+  width: calc(100% + 2 * #{$gutter-width});
+  margin-right: -$gutter-width;
+  margin-left: -$gutter-width;
+
   > .inner-box {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -21,9 +25,14 @@
     margin: 0 auto;
 
     &-title {
-      font-size: 1.3rem;
       margin: 0 auto 1.6rem;
+      font-size: 1.3rem;
       text-align: center;
+    }
+
+    > dd {
+      max-width: none;
+      padding: 0;
     }
 
     & + & {
