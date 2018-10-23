@@ -95,7 +95,8 @@
     overflow: hidden;
     z-index: 1;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
     }
   }
