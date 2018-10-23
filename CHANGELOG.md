@@ -10,7 +10,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * DTGB-547: Added icon overview to the icon atom page.
 * DTGB-569: Added subscribe molecule (hidden).
-* DTGB-547: Renamed `icon-link` to `icon-url`
+* DTGB-547: Renamed `icon-link` to `icon-url`.
+* DTGB-555: Added programme organism.
 
 ### Changed
 
