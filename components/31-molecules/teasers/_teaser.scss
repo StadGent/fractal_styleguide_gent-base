@@ -95,10 +95,7 @@
     overflow: hidden;
     z-index: 1;
 
-    &:hover,
-    &:focus {
-      background-color: transparent;
-    }
+    @include element-states(transparent, transparent, background-color)
   }
 }
 
