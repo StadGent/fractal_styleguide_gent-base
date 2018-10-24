@@ -12,6 +12,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-569: Added subscribe molecule (hidden).
 * DTGB-547: Renamed `icon-link` to `icon-url`.
 * DTGB-555: Added programme organism.
+* DTGB-555: Added modal molecule.
 
 ### Changed
 

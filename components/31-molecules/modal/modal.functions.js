@@ -65,7 +65,7 @@
        * @type {NodeList}
        */
       const closeBtns = modal.querySelectorAll(
-        options.closeBtns || '.modal__close'
+        options.closeBtns || '.modal-close'
       );
       for (let i = closeBtns.length; i--;) {
         closeBtns[i].addEventListener('click', handleClose);

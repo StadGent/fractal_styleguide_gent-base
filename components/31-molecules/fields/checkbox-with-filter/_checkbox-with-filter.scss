@@ -18,60 +18,6 @@
   }
 
   .checkbox-filter__modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    background-color: color('white');
-    box-shadow: $box-shadow-primary color('dark-gray', -4, true);
-    z-index: 999;
-
-    @include tablet {
-      top: 10vh;
-      left: 10vw;
-      width: 80vw;
-      height: 80vh;
-    }
-
-    &.visible {
-      display: flex;
-
-      + .overlay {
-        display: block;
-        cursor: pointer;
-      }
-
-      .modal-actions {
-        display: block;
-        text-align: right;
-      }
-    }
-
-    > div {
-      padding: .8rem 1rem;
-
-      &.checkbox-filter__content {
-        padding-top: 0;
-      }
-
-      &.modal-actions {
-        padding: 0;
-      }
-
-      @include tablet {
-        padding: .8rem $gutter-width;
-      }
-    }
-
-    .checkbox-filter__content {
-      flex: 1;
-      margin-bottom: 3.8rem;
-      overflow-y: auto;
-    }
-
     .checkbox-filter__filter {
       margin-bottom: 1rem;
     }
@@ -90,36 +36,5 @@
         display: none;
       }
     }
-
-    .checkbox-filter__actions {
-      @include theme('border-color', 'color-primary--lighten-4', 'checkbox-with-filter-action-border-bottom');
-
-      display: flex;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      align-items: center;
-      width: 100%;
-      margin-top: -3.8rem;
-      border-top: 2px solid;
-      background-color: color('white');
-
-      @include tablet {
-        position: relative;
-      }
-    }
-  }
-
-  .overlay {
-    @include theme('background-color', 'color-primary--darken-3', 'checkbox-with-filter-overlay-background-color');
-
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: .7;
-    z-index: 998;
   }
 }

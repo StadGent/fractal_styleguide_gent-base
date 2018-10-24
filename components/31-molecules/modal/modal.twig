@@ -1,0 +1,18 @@
+<section id="{{ id }}" class="modal{{ classes ? ' ' ~ classes }}" tabindex="-1">
+  <div class="modal-inner">
+    <div class="modal-header">
+      <button type="button" class="button close icon-cross modal-close">
+        <span>Close</span>
+      </button>
+    </div>
+    <div class="modal-content">
+      {{ content }}
+    </div>
+    {% if actions %}
+      <div class="modal-actions">
+        {{ actions }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="modal-overlay modal-close"></div>
+</section>

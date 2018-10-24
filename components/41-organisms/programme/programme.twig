@@ -11,48 +11,47 @@
 
             {% for itemKey, item in slot.items %}
               {% set key = slotKey ~ itemKey %}
+              {% set modalContent %}
+                <h3>{{ item.title }}</h3>
+                {% if item.subtitle %}
+                  <h4>{{ item.subtitle }}</h4>
+                {% endif %}
+
+                {% if item.images|length > 1 %}
+                  {% include '@image-gallery--multiple' with {
+                    type: 'secondary',
+                    items: item.images
+                  } %}
+                {% elseif item.images|length > 0  %}
+                  {% include '@image-gallery' with {
+                    type: 'secondary',
+                    src: item.images|first.src,
+                    alt: item.images|first.alt,
+                    caption: item.images|first.caption
+                  } %}
+                {% endif %}
+
+                {% if item.description %}
+                  {% include '@paragraph' with {
+                    'text': item.description
+                  } %}
+                {% endif %}
+
+                {% if item.video %}
+                  {% include '@video' with item.video %}
+                {% endif %}
+              {% endset %}
+
               <li>
-                <!-- Programme detail -->
-                <section id="{{ key }}" class="programme-detail modal" tabindex="-1">
-                  <div class="programme-detail-inner">
-                    <div class="modal-actions">
-                      {% include '@modal-close' %}
-                    </div>
+                <!-- Modal -->
+                {% include "@modal" with {
+                  id: key,
+                  content: modalContent,
+                  classes: 'programme-detail'
+                } %}
+                <!-- /Modal -->
 
-                    <h3>{{ item.title }}</h3>
-                    {% if item.subtitle %}
-                      <h4>{{ item.subtitle }}</h4>
-                    {% endif %}
-
-                    {% if item.images|length > 1 %}
-                      {% include '@image-gallery--multiple' with {
-                        type: 'secondary',
-                        items: item.images
-                      } %}
-                    {% elseif item.images|length > 0  %}
-                      {% include '@image-gallery' with {
-                        type: 'secondary',
-                        src: item.images|first.src,
-                        alt: item.images|first.alt,
-                        caption: item.images|first.caption
-                      } %}
-                    {% endif %}
-
-                    {% if item.description %}
-                      {% include '@paragraph' with {
-                        'text': item.description
-                      } %}
-                   {% endif %}
-
-                    {% if item.video %}
-                      {% include '@video' with item.video %}
-                    {% endif %}
-                  </div>
-                </section>
-                <div class="programme-detail-overlay"></div>
-                <!-- /Programme detail -->
-
-                <!-- Programme Teaser -->
+                <!-- Teaser -->
                 {% include '@teaser-programme' with {
                   teaser_uid: 'uid_' ~ key,
                   teaser_paragraph_text: item.subtitle,
@@ -62,7 +61,7 @@
                   teaser_image_src: (item.images|first.src)|default('data:image/gif;'),
                   teaser_image_alt_text: item.images|first.alt
                 } %}
-                <!-- /Programme Teaser -->
+                <!-- /Teaser -->
               </li>
             {% endfor %}
 
