@@ -53,34 +53,15 @@
                 <!-- /Programme detail -->
 
                 <!-- Programme Teaser -->
-                <article class="programme-teaser">
-                  <!-- Content -->
-                  <div class="programme-teaser__bottom">
-                    <h3 id="uid_{{ key }}">{{ item.title }}</h3>
-                    <span class="programme-teaser-subtitle">{{ item.subtitle }}</span>
-
-                    <a href="javascript:void(0);" class="read-more standalone-link" aria-labelledby="uid_{{ key }}">read more</a>
-                  </div>
-
-                  <!-- Image -->
-                  <div class="programme-teaser__top">
-                    <div class="figure-wrapper">
-                      <figure>
-                        <div class="image-wrapper" data-ratio="8:5">
-                          <img src="{{ item.images|first.src }}" alt="{{ item.images|first.alt }}">
-                        </div>
-                      </figure>
-                      <div class="accolade-inverse bottom-left"></div>
-                    </div>
-                  </div>
-
-                  <!-- Overlay Link -->
-                  <a href="javascript:void(0);" class="programme-teaser-overlay-link modal-trigger"
-                     tabindex="-1"
-                     aria-hidden="true"
-                     aria-expanded="false"
-                     aria-controls="{{ key }}">{{ item.title }}</a>
-                </article>
+                {% include '@teaser-programme' with {
+                  teaser_uid: 'uid_' ~ key,
+                  teaser_paragraph_text: item.subtitle,
+                  teaser_title: item.title,
+                  teaser_link_text: 'read more',
+                  teaser_link_link: '#' ~ key,
+                  teaser_image_src: (item.images|first.src)|default('data:image/gif;'),
+                  teaser_image_alt_text: item.images|first.alt
+                } %}
                 <!-- /Programme Teaser -->
               </li>
             {% endfor %}

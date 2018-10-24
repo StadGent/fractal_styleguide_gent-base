@@ -46,7 +46,7 @@
     const init = () => {
       triggers = document.querySelectorAll(`[aria-controls="${modal.id}"]`);
 
-      if (triggers.length === 0) {
+      if (!options.changeHash && triggers.length === 0) {
         return;
       }
 
@@ -102,9 +102,11 @@
 
       modal.classList.add('visible');
       modal.setAttribute('aria-hidden', 'false');
-      trigger.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
       document.addEventListener('keydown', handleKeyboardInput);
+      if (trigger) {
+        trigger.setAttribute('aria-expanded', 'true');
+      }
       modal.focus();
     };
 
@@ -114,10 +116,12 @@
     const close = () => {
       modal.classList.remove('visible');
       modal.setAttribute('aria-hidden', 'true');
-      trigger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
       document.removeEventListener('keydown', handleKeyboardInput);
-      trigger.focus();
+      if (trigger) {
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.focus();
+      }
     };
 
     /**

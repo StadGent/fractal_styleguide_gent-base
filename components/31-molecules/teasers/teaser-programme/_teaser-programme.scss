@@ -1,0 +1,15 @@
+.teaser-programme {
+  @include theme('background-color', 'color-secondary');
+
+  .content__top {
+    position: relative;
+
+    > * {
+      margin: 0;
+    }
+  }
+
+  .content__bottom {
+    padding: .8rem;
+  }
+}
