@@ -21,12 +21,12 @@
     .cs--#{$theme} & {
       background-image: url('#{$styleguide-dir}/img/svg/build/#{$image}--#{$theme}.svg');
     }
-
-    display: block;
-    width: $size;
-    height: $size;
-    background: no-repeat center center;
-    background-size: 100%;
-    content: '';
   }
+
+  display: block;
+  width: $size;
+  height: $size;
+  background: no-repeat center center;
+  background-size: 100%;
+  content: '';
 }

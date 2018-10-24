@@ -1,10 +1,10 @@
 <div class="programme-wrapper">
   <h2 class="visually-hidden">Programme</h2>
-  <dl class="programme box-top">
-    <div class="inner-box">
+  <div class="programme box-top">
+    <dl class="inner-box">
 
       {% for slotKey, slot in slots %}
-        <div class="programme-slot" role="listitem">
+        <div class="programme-slot">
           <dt class="programme-slot-title">{{ slot.title }}</dt>
           <dd>
             <ul class="grid-3">
@@ -19,9 +19,9 @@
                       {% include '@modal-close' %}
                     </div>
 
-                    <h2>{{ item.title }}</h2>
+                    <h3>{{ item.title }}</h3>
                     {% if item.subtitle %}
-                      <h3>{{ item.subtitle }}</h3>
+                      <h4>{{ item.subtitle }}</h4>
                     {% endif %}
 
                     {% if item.images|length > 1 %}
@@ -90,6 +90,6 @@
         </div>
       {% endfor %}
 
-    </div>
-  </dl>
+    </dl>
+  </div>
 </div>

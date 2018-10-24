@@ -213,7 +213,7 @@
       }
 
       li {
-        width: calc((100% / 1) - 2vw);
+        width: calc(100% - 2vw);
         margin: 1vw;
 
         .gallery-link {
@@ -237,11 +237,11 @@
 
       // Media Queries
       @include mobile {
-        max-width: 270px;
+        max-width: 13.5rem;
       }
 
       @include phablet {
-        max-width: calc(270px * 2 + 2vw);
+        max-width: calc(13.5rem * 2 + 2vw);
 
         li {
           &,

@@ -45,6 +45,7 @@
   ///
   &-teaser {
     @include theme('background-color', 'color-secondary');
+
     display: flex;
     position: relative;
     flex-direction: column;
@@ -116,8 +117,8 @@
     // Children
     &-overlay {
       @include theme('background-color', 'color-primary--darken-3', 'checkbox-with-filter-overlay-background-color');
-      display: none;
 
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -157,6 +158,14 @@
       @include desktop {
         padding: 2rem 6.6rem;
       }
+    }
+
+    h3 {
+      @extend %h2;
+    }
+
+    h4 {
+      @extend %h3;
     }
 
     .image-gallery--wrapper {

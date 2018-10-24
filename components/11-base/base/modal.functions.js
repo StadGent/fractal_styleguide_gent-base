@@ -28,6 +28,8 @@
       options = {};
     }
 
+    options.changeHash = options.changeHash || true;
+
     let triggers = [];
     let trigger;
     let hash;
@@ -83,24 +85,17 @@
        */
       hash = window.location.hash;
       if (options.changeHash) {
-        window.addEventListener('popstate', () => {
-          if (hash === `#${modal.id}`) {
-            close();
-          }
-        });
-
-        if (hash === `#${modal.id}`) { // show modal on page load when the hash corresponds
-          history.replaceState(null, null, window.location.href.split('#')[0]);
-          open();
-        }
+        addHashEvents();
       }
     };
 
     /**
      * Open the modal.
+     *
+     * @param {Boolean} changeHash  Whether or not to change the hash in the URI
      */
-    const open = () => {
-      if (options.changeHash) { // change the url
+    const open = (changeHash = true) => {
+      if (changeHash && options.changeHash) { // change the url
         history.pushState(null, null, `#${modal.id}`);
         hash = `#${modal.id}`;
       }
@@ -177,6 +172,30 @@
         resizeTimer = setTimeout(options.resizeEvent, 250);
       });
     };
+
+    /**
+     * Add events that handle hash changes
+     */
+    const addHashEvents = () => {
+      window.addEventListener('popstate', () => {
+        if (hash === `#${modal.id}`) {
+          close();
+        }
+      });
+
+      window.addEventListener('hashchange', () => {
+        hash = window.location.hash;
+        if (hash === `#${modal.id}`) {
+          open(false);
+        }
+      });
+
+      if (hash === `#${modal.id}`) { // show modal on page load when the hash corresponds
+        history.replaceState(null, null, window.location.href.split('#')[0]);
+        open();
+      }
+    };
+
 
     init();
 
