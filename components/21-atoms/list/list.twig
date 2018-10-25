@@ -62,3 +62,11 @@
       {% endfor %}
   </dl>
 {% endif %}
+
+{% if type == 'dash-separated-list' %}
+  <ul class="dash-separated-list {{ modifier }}">
+      {% for key, item in items %}
+        <li>{{ item }}</li>
+      {% endfor %}
+  </ul>
+{% endif %}

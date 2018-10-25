@@ -135,6 +135,19 @@ ul {
       }
     }
   }
+
+  &.dash-separated-list {
+    @extend %list-no-style;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    > li:not(:last-of-type)::after {
+      content: "\2014";
+      display: inline-block;
+      padding: 0 .2em;
+    }
+  }
 }
 
 dl {

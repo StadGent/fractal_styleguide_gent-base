@@ -110,6 +110,22 @@ module.exports = {
       context: {
         type: 'definition'
       }
+    },
+    {
+      name: 'Dash-separated list',
+      handle: 'dash-separated-list',
+      preview: '@preview',
+      context: {
+        type: 'dash-separated-list',
+        items: [
+          'item 1',
+          'item 2',
+          'item 3',
+          'item 4',
+          'item 5',
+          'item 6'
+        ]
+      }
     }
   ]
 };
