@@ -68,7 +68,9 @@
         options.closeBtns || '.modal-close'
       );
       for (let i = closeBtns.length; i--;) {
-        closeBtns[i].addEventListener('click', handleClose);
+        if (!closeBtns[i].dataset.target || closeBtns[i].dataset.target === modal.id) {
+          closeBtns[i].addEventListener('click', handleClose);
+        }
       }
 
       /*

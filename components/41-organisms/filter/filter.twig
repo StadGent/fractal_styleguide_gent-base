@@ -1,9 +1,5 @@
 <div class="sidebar-layout filter">
-  <section id="filter" class="filter-section sidebar modal" tabindex="-1">
-
-    <div class="modal-actions">
-      {#{% include '@modal-close' %}#}
-    </div>
+  {% set modalContent %}
     <h2>Filter the results</h2>
     <form action="#result">
       <div class="form-item">
@@ -52,7 +48,12 @@
       <button type="submit" class="button button-primary filter__submit">Show result</button>
 
     </form>
-  </section>
+  {% endset %}
+  {% include "@modal" with {
+    id: 'filter',
+    classes: 'sidebar filter-section',
+    content: modalContent
+  } %}
 
   <section class="content result-section" id="result">
     {% include '@heading' with {

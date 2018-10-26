@@ -43,7 +43,7 @@
       {% endset %}
 
       {% set modalActions %}
-        <a type="button" class="button button-primary checkbox-filter__submit">Confirm selection</a>
+        <a type="button" class="button button-primary checkbox-filter__submit" data-target="{{ 'modal' ~ modifier }}">Confirm selection</a>
       {% endset %}
 
       {% include "@modal" with {

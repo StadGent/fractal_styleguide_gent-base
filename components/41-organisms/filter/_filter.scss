@@ -1,34 +1,43 @@
 .filter {
   .filter-section {
-    display: none;
     padding-top: .7rem;
+    visibility: hidden;
 
     @include tablet {
-      display: block;
+      position: static;
+      box-shadow: none;
+      visibility: visible;
     }
 
     &.visible {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      padding: 0 1rem 1rem;
-      background-color: color('white');
-      z-index: 200;
-      overflow-y: auto;
+      padding: 0;
+      visibility: visible;
 
-      > .modal-actions {
+      > .modal-inner > .modal-header {
         display: block;
       }
     }
 
-    > .modal-actions {
-      display: none;
-      margin-right: -1rem;
-      margin-left: -1rem;
-      text-align: right;
+    > .modal-inner {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+
+      > .modal-header {
+        display: none;
+        margin-right: -1rem;
+        margin-left: -1rem;
+        text-align: right;
+      }
+
+      > .modal-content {
+        @include tablet {
+          padding: 0;
+        }
+      }
     }
 
     form {

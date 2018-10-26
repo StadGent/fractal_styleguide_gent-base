@@ -1,18 +1,18 @@
-
 .modal {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   box-shadow: $box-shadow-primary color('dark-gray', -4, true);
+  visibility: hidden;
   z-index: 997;
   overflow-y: auto;
 
   // states
   &.visible {
-    display: flex;
+    visibility: visible;
 
     .modal-overlay {
       display: block;
@@ -24,6 +24,8 @@
     display: flex;
     position: absolute;
     flex-direction: column;
+    width: 100%;
+    min-height: 100%;
     background-color: color('white');
     z-index: 999;
 
@@ -31,6 +33,7 @@
       top: 10vh;
       left: 10vw;
       width: 80vw;
+      height: auto;
       margin-bottom: $gutter-width;
     }
   }
