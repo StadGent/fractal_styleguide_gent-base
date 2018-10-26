@@ -14,8 +14,10 @@
   &.visible {
     visibility: visible;
 
-    .modal-overlay {
-      display: block;
+    @include tablet {
+      .modal-overlay {
+        display: block;
+      }
     }
   }
 
@@ -23,6 +25,8 @@
   &-inner {
     display: flex;
     position: absolute;
+    top: 0;
+    left: 0;
     flex-direction: column;
     width: 100%;
     min-height: 100%;
@@ -34,7 +38,22 @@
       left: 10vw;
       width: 80vw;
       height: auto;
+      min-height: 0;
       margin-bottom: $gutter-width;
+    }
+  }
+
+  // modifiers
+  &--fixed-height {
+    @include tablet {
+      > .modal-inner {
+        height: 80vh;
+        min-height: 0;
+
+        > .modal-content {
+          overflow-y: auto;
+        }
+      }
     }
   }
 
@@ -43,6 +62,7 @@
   ///
   &-header {
     display: block;
+    flex-shrink: 0;
     text-align: right;
   }
 
@@ -72,7 +92,6 @@
   /// Content
   ///
   &-content {
-    flex: 1;
     padding: 0 1rem .8rem;
 
     @include tablet {
@@ -90,6 +109,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
+    flex-shrink: 0;
     align-items: center;
     width: 100%;
     padding: .8rem 1rem;
@@ -109,8 +129,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     opacity: .7;
     z-index: 998;
 

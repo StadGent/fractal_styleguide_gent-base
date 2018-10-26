@@ -161,6 +161,7 @@
     const handleClose = () => {
       if (options.changeHash) {
         history.back();
+
         return;
       }
 
@@ -183,13 +184,11 @@
      * Add events that handle hash changes
      */
     const addHashEvents = () => {
-      window.addEventListener('popstate', () => {
+      window.addEventListener('hashchange', () => {
         if (hash === `#${modal.id}`) {
           close();
         }
-      });
 
-      window.addEventListener('hashchange', () => {
         hash = window.location.hash;
         if (hash === `#${modal.id}`) {
           open(false);
