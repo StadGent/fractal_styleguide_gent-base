@@ -35,11 +35,13 @@
 
     @include tablet {
       top: 10vh;
-      left: 10vw;
+      left: 50%;
       width: 80vw;
+      max-width: $bp-max-content * .8;
       height: auto;
       min-height: 0;
       margin-bottom: $gutter-width;
+      transform: translateX(-50%);
     }
   }
 
@@ -86,6 +88,10 @@
     &:focus {
       @include theme('background-color', 'color-primary--lighten-4', 'modal-close-hover-bg-color');
     }
+  }
+
+  &-close {
+    cursor: pointer;
   }
 
   ///
