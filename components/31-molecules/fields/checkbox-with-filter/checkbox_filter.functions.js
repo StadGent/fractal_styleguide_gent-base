@@ -283,24 +283,6 @@
     };
 
     /**
-     * Open or close the modal
-     */
-    const toggleModal = () => {
-      // hide
-      if (modal.classList.contains('visible')) {
-        updateCount();
-        filter(true);
-        document.removeEventListener('keydown', handleKeyboardInput);
-
-        history.back();
-      }
-      // show
-      else {
-        document.addEventListener('keydown', handleKeyboardInput);
-      }
-    };
-
-    /**
      * Loop over all checkboxes and execute a callback for each iteration.
      * @param {function} next The callback function.
      */
@@ -387,7 +369,6 @@
       if (openBtn) {
         openBtn.addEventListener('click', (e) => {
           selectedFilters = [];
-          window.location.hash = e.target.dataset.hash; // change the hash to open the modal
 
           checkboxLoop(({checkbox}) => {
             if (checkbox.checked) {
@@ -395,7 +376,7 @@
             }
           });
 
-          toggleModal();
+          document.addEventListener('keydown', handleKeyboardInput);
         });
       }
 
@@ -404,14 +385,15 @@
         for (let i = closeBtns.length; i--;) {
           closeBtns[i].addEventListener('click', () => {
             reset();
-            toggleModal();
+            updateCount();
+            document.removeEventListener('keydown', handleKeyboardInput);
           });
         }
       }
 
       // Update selectedFilters and close.
       if (submitBtn) {
-        submitBtn.addEventListener('click', toggleModal);
+        submitBtn.addEventListener('click', updateCount);
       }
     };
 
@@ -420,24 +402,12 @@
      * @param {object} e event
      */
     const handleKeyboardInput = e => {
-      if (!tabTrap || !tabTrap.hasFocusables || !e) {
-        return;
-      }
-
-      var keyCode = e.keyCode || e.which;
+      let keyCode = e.keyCode || e.which;
       switch (keyCode) {
-        case 9: // tab
-          if (e.shiftKey) {
-            tabTrap.back(e);
-          }
-          else {
-            tabTrap.next(e);
-          }
-          break;
         case 27: // esc
           e.preventDefault();
           reset();
-          toggleModal();
+          updateCount();
           break;
         case 13: // enter
           e.preventDefault(); // prevent form submit
