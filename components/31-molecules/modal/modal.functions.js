@@ -14,6 +14,29 @@
     }
   }
 })(this || window, function () {
+
+  // IE 9+ polyfill for Element.closest()
+  if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector ||
+      Element.prototype.webkitMatchesSelector;
+  }
+
+  if (!Element.prototype.closest) {
+    Element.prototype.closest = function (s) {
+      var el = this;
+      if (!document.documentElement.contains(el)) {
+        return null;
+      }
+      do {
+        if (el.matches(s)) {
+          return el;
+        }
+        el = el.parentElement || el.parentNode;
+      } while (el !== null && el.nodeType === 1);
+      return null;
+    };
+  }
+
   return function (modal, options) {
     if (typeof gent_styleguide === 'undefined') {
       console.error('You need to include base.js.'); // eslint-disable-line no-console
@@ -94,6 +117,21 @@
     };
 
     /**
+     * Toggle a scroll lock on a parent modal or on the body.
+     *
+     * @param {Boolean} release Place or remove the lock.
+     */
+    const scrollLockParent = (release) => {
+      const parentModal = modal.parentNode.closest('.modal');
+      if (parentModal) {
+        parentModal.style.overflow = release ? '' : 'hidden';
+      }
+      else {
+        document.body.style.overflow = release ? '' : 'hidden';
+      }
+    };
+
+    /**
      * Open the modal.
      *
      * @param {Boolean} changeHash  Whether or not to change the hash in the URI
@@ -106,7 +144,7 @@
 
       modal.classList.add('visible');
       modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+      scrollLockParent();
       document.addEventListener('keydown', handleKeyboardInput);
       if (trigger) {
         trigger.setAttribute('aria-expanded', 'true');
@@ -120,7 +158,7 @@
     const close = () => {
       modal.classList.remove('visible');
       modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
+      scrollLockParent(true);
       document.removeEventListener('keydown', handleKeyboardInput);
       if (trigger) {
         trigger.setAttribute('aria-expanded', 'false');
