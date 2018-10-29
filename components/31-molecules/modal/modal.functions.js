@@ -28,7 +28,9 @@
       options = {};
     }
 
-    options.changeHash = options.changeHash || true;
+    if (options.changeHash === undefined) {
+      options.changeHash = true;
+    }
 
     let triggers = [];
     let trigger;
@@ -56,7 +58,7 @@
       for (let i = triggers.length; i--;) {
         trigger = triggers[i];
         trigger.setAttribute('aria-expanded', 'false');
-        trigger.addEventListener('click', open);
+        trigger.addEventListener('click', ()=>{ open() });
       }
 
       /**
@@ -97,7 +99,7 @@
      * @param {Boolean} changeHash  Whether or not to change the hash in the URI
      */
     const open = (changeHash = true) => {
-      if (changeHash && options.changeHash) { // change the url
+      if (changeHash && options.changeHash !== false) { // change the url
         history.pushState(null, null, `#${modal.id}`);
         hash = `#${modal.id}`;
       }
@@ -200,7 +202,6 @@
         open();
       }
     };
-
 
     init();
 
