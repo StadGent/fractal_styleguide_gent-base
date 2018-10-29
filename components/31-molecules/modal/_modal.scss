@@ -47,14 +47,16 @@
 
   // modifiers
   &--fixed-height {
-    @include tablet {
-      > .modal-inner {
+    > .modal-inner {
+      height: 100%;
+
+      @include tablet {
         height: 80vh;
         min-height: 0;
+      }
 
-        > .modal-content {
-          overflow-y: auto;
-        }
+      > .modal-content {
+        overflow-y: auto;
       }
     }
   }
@@ -112,9 +114,6 @@
     @include theme('border-color', 'color-primary--lighten-4', 'checkbox-with-filter-action-border-bottom');
 
     display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     flex-shrink: 0;
     align-items: center;
     width: 100%;
