@@ -13,11 +13,13 @@
     }
 
     &.visible {
-      padding: 0;
-      visibility: visible;
+      @include desktop-and-below {
+        padding: 0;
+        visibility: visible;
 
-      > .modal-inner > .modal-header {
-        display: block;
+        > .modal-inner > .modal-header {
+          display: block;
+        }
       }
     }
 
