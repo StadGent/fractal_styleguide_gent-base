@@ -28,7 +28,9 @@
       options = {};
     }
 
-    options.changeHash = options.changeHash || true;
+    if (options.changeHash === undefined) {
+      options.changeHash = true;
+    }
 
     let triggers = [];
     let trigger;
