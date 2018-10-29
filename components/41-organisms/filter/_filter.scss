@@ -13,7 +13,7 @@
     }
 
     &.visible {
-      @include desktop-and-below {
+      @include breakpoint(max-width 768px) {
         padding: 0;
         visibility: visible;
 
