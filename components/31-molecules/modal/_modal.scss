@@ -51,8 +51,9 @@
       height: 100%;
 
       @include tablet {
-        height: 80vh;
+        height: auto;
         min-height: 0;
+        max-height: 80vh;
       }
 
       > .modal-content {
