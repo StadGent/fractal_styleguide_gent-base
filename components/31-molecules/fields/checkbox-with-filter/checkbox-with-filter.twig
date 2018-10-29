@@ -58,7 +58,7 @@
       <p class="checkbox-filter__count-wrapper hidden">
         <strong><span class="checkbox-filter__count">0</span> {{ label_count }} selected</strong>
       </p>
-      <button type="button" class="button button-secondary button-small checkbox-filter__open" data-hash="#modal{{ modifier }}">
+      <button type="button" aria-controls="{{ 'modal' ~ modifier }}" aria-expanded="false" class="button button-secondary button-small checkbox-filter__open" data-hash="#modal{{ modifier }}">
         Select ...
       </button>
 
