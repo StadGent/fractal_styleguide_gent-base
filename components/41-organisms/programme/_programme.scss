@@ -55,18 +55,20 @@
     .image-gallery--wrapper {
       margin: 1rem 0;
 
-      .image-gallery,
-      .gallery-link {
-        max-width: none;
-      }
-
-      .gallery-link {
-        width: 100%;
-        margin: 0;
-      }
-
       .show-more__content {
         text-align: center;
+      }
+
+      @include desktop-and-below {
+        .image-gallery,
+        .gallery-link {
+          max-width: none;
+        }
+
+        .gallery-link {
+          width: 100%;
+          margin: 0;
+        }
       }
     }
 
