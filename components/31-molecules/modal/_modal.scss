@@ -1,18 +1,18 @@
 .modal {
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  box-shadow: $box-shadow-primary color('dark-gray', -4, true);
   visibility: hidden;
-  z-index: 997;
-  overflow-y: auto;
 
   // states
   &.visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: $box-shadow-primary color('dark-gray', -4, true);
     visibility: visible;
+    z-index: 997;
+    overflow-y: auto;
 
     @include tablet {
       .modal-overlay {
