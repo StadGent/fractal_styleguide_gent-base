@@ -28,7 +28,7 @@
       options = {};
     }
 
-    if (options.changeHash === undefined) {
+    if (typeof options.changeHash === 'undefined') {
       options.changeHash = true;
     }
 
@@ -58,7 +58,7 @@
       for (let i = triggers.length; i--;) {
         trigger = triggers[i];
         trigger.setAttribute('aria-expanded', 'false');
-        trigger.addEventListener('click', ()=>{ open() });
+        trigger.addEventListener('click', ()=>{ open(); });
       }
 
       /**
