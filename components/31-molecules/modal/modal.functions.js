@@ -117,12 +117,12 @@
     };
 
     /**
-     * Toggle a scroll lock on a parent modal or on the body.
+     * Toggle a scroll lock on a visible parent modal or on the body.
      *
      * @param {Boolean} release Place or remove the lock.
      */
     const scrollLockParent = (release) => {
-      const parentModal = modal.parentNode.closest('.modal');
+      const parentModal = modal.parentNode.closest('.modal.visible');
       if (parentModal) {
         parentModal.style.overflow = release ? '' : 'hidden';
       }
