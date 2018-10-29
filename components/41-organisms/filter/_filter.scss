@@ -46,6 +46,10 @@
       }
     }
 
+    > .modal-overlay {
+      display: none;
+    }
+
     form {
       // style first level labels as headings
       > .form-item > label,
