@@ -47,7 +47,7 @@
 {% endif %}
 
 {% if type == 'icon-list' %}
-  <ul class="icon-list{{ modifier }}">
+  <ul class="icon-list {{ modifier }}">
       {% for item in icon_items %}
           <li>{{ item }}</li>
       {% endfor %}
@@ -61,4 +61,12 @@
           <dd>{{ definitions[key] }}</dd>
       {% endfor %}
   </dl>
+{% endif %}
+
+{% if type == 'dash-separated-list' %}
+  <ul class="dash-separated-list {{ modifier }}">
+      {% for key, item in items %}
+        <li>{{ item }}</li>
+      {% endfor %}
+  </ul>
 {% endif %}
