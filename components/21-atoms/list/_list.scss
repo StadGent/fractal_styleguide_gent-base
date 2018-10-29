@@ -71,6 +71,19 @@ ul {
     margin: 0 0 2rem;
     list-style-type: none;
 
+    &.inline {
+      li {
+        display: flex;
+        margin-right: .7rem;
+        margin-bottom: 0;
+
+        i {
+          width: auto;
+          margin-right: 0;
+        }
+      }
+    }
+
     li {
       position: relative;
       margin-bottom: .8rem;
@@ -120,6 +133,19 @@ ul {
           float: left;
         }
       }
+    }
+  }
+
+  &.dash-separated-list {
+    @extend %list-no-style;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    > li:not(:last-of-type)::after {
+      display: inline-block;
+      padding: 0 .2em;
+      content: "\2014";
     }
   }
 }

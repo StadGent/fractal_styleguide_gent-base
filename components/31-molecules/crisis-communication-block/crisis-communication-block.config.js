@@ -26,7 +26,7 @@ module.exports = {
         list: [
           '<i class="icon-twitter" aria-hidden="true"></i><span>Follow the news on Twitter via <a href="javascript:(void);" alt="Twitter">@StadGent</a></span>',
           '<i class="icon-phone" aria-hidden="true"></i><span>Emergency number <a href="javascript:(void);" alt="Emergency phone number">09 210 10 10</a></span>',
-          '<i class="icon-external-link" aria-hidden="true"></i><a href="javascript:(void);" alt="Online mourning register">Sign the online mourning register</a>'
+          '<i class="icon-external-link" aria-hidden="true"></i><span><a href="javascript:(void);" alt="Online mourning register">Sign the online mourning register</a></span>'
         ]
       }
     },

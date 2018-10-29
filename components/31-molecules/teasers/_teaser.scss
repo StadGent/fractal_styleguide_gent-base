@@ -60,8 +60,6 @@
 
       &::before {
         @include theme('background-color', 'color-primary--lighten-5', 'teaser-label-background-color');
-
-        z-index: 1;
       }
 
       i {
@@ -85,6 +83,8 @@
   }
 
   a.teaser-overlay-link {
+    @include element-states(transparent, transparent, background-color)
+
     position: absolute;
     top: 0;
     right: 0;
@@ -94,10 +94,6 @@
     white-space: nowrap;
     overflow: hidden;
     z-index: 1;
-
-    &:hover {
-      background-color: transparent;
-    }
   }
 }
 

@@ -1,0 +1,16 @@
+.display-switcher {
+  margin-bottom: 1.6rem;
+
+  @include phablet {
+    display: flex;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  > span {
+    display: block;
+    margin-right: .6rem;
+  }
+}
