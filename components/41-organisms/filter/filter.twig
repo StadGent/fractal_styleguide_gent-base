@@ -1,64 +1,59 @@
 <div class="sidebar-layout filter">
-  <section id="filter" class="sidebar filter-section" tabindex="-1">
-    <div class="modal-inner">
-      <div class="modal-header">
-        <button type="button" class="button close icon-cross modal-close" data-target="filter">
-          <span>Close</span>
-        </button>
+  {% set modalContent %}
+    <h2>Filter the results</h2>
+    <form action="#result">
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Name",
+          "for": "id_name",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input-text'
+          with {
+          "textfield_id": "id_name",
+          "textfield_name": "name"
+        } %}
       </div>
-      <div class="modal-content">
-        <h2>Filter the results</h2>
-        <form action="#result">
-          <div class="form-item">
-            {% include '@label' with {
-              "label": "Name",
-              "for": "id_name",
-              "label_optional": "Optional"
-            } %}
-            {% include '@input-text'
-              with {
-              "textfield_id": "id_name",
-              "textfield_name": "name"
-            } %}
-          </div>
-          <div class="form-item">
-            {% include '@label' with {
-              "label": "Category",
-              "for": "id_category",
-              "label_optional": "Optional"
-            } %}
-            {% include '@input-text'
-              with {
-              "textfield_id": "id_category",
-              "textfield_name": "category"
-            } %}
-          </div>
-          {% include '@checkbox-with-filter'
-            with {
-            "label": "Activities",
-            "label_optional": "Optional",
-            "label_count": "activity(ies)",
-            "options": checkboxes
-          } %}
-          <div class="form-item">
-            {% include '@label' with {
-              "label": "Type",
-              "for": "id_type",
-              "label_optional": "Optional"
-            } %}
-            {% include '@input-text'
-              with {
-              "textfield_id": "id_type",
-              "textfield_name": "type"
-            } %}
-          </div>
-          <button type="submit" class="button button-primary filter__submit">Show result</button>
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Category",
+          "for": "id_category",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input-text'
+          with {
+          "textfield_id": "id_category",
+          "textfield_name": "category"
+        } %}
+      </div>
+      {% include '@checkbox-with-filter'
+        with {
+        "label": "Activities",
+        "label_optional": "Optional",
+        "label_count": "activity(ies)",
+        "options": checkboxes
+      } %}
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Type",
+          "for": "id_type",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input-text'
+          with {
+          "textfield_id": "id_type",
+          "textfield_name": "type"
+        } %}
+      </div>
+      <button type="submit" class="button button-primary filter__submit">Show result</button>
 
-        </form>
-      </div>
-    </div>
-    <div class="modal-overlay modal-close" data-target="filter"></div>
-  </section>
+    </form>
+  {% endset %}
+  {% include "@modal" with {
+    id: 'filter',
+    classes: 'sidebar filter-section has-custom-binding',
+    content: modalContent
+  } %}
 
   <section class="content result-section" id="result">
     {% include '@heading' with {
