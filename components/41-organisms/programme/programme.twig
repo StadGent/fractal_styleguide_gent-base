@@ -60,7 +60,7 @@
                   teaser_title: item.title,
                   teaser_link_text: 'More information',
                   teaser_link_link: '#' ~ key,
-                  teaser_image_src: (item.images|first.src)|default('data:image/gif;'),
+                  teaser_image_src: item.images|first.src,
                   teaser_image_alt_text: item.images|first.alt
                 } %}
                 <!-- /Teaser -->

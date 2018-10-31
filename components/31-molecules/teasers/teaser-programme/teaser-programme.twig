@@ -15,15 +15,13 @@
       } %}
     </div>
 
-    {% if teaser_image_src is not empty %}
-      <div class="content__top">
-        {% include '@figure' with {
-          "figure_image_src": teaser_image_src,
-          "figure_ratio": '8:5'
-        } %}
-        <div class="accolade-inverse bottom-left"></div>
-      </div>
-    {% endif %}
+    <div class="content__top">
+      {% include '@figure' with {
+        "figure_image_src": teaser_image_src,
+        "figure_ratio": '8:5'
+      } %}
+      <div class="accolade-inverse bottom-left"></div>
+    </div>
   </article>
   <a href="{{ teaser_link_link }}" class="teaser-overlay-link" tabindex="-1"
      aria-hidden="true">{{ teaser_title }}</a>
