@@ -4,7 +4,7 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
-## [Unreleased]
+## [3.0.0-alpha.9]
 
 ### Added
 
@@ -19,7 +19,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * DTGB-569: Completely refactored theme footer.
 
-### 3.0.0-alpha.8
+## [3.0.0-alpha.8]
 
 * DTGB-429: Temporarily replaced baguettebox.js with a Forked version.
 * DTGB-539: Refactored footer templates to sections.
