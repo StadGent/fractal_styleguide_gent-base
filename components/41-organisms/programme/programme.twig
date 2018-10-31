@@ -13,8 +13,10 @@
               {% set key = slotKey ~ itemKey %}
               {% set modalContent %}
                 <h3>{{ item.title }}</h3>
+                <h4>{{ slot.title }}</h4>
+
                 {% if item.subtitle %}
-                  <h4>{{ item.subtitle }}</h4>
+                  <p>{{ item.subtitle }}</p>
                 {% endif %}
 
                 {% if item.images|length > 1 %}
@@ -56,7 +58,7 @@
                   teaser_uid: 'uid_' ~ key,
                   teaser_paragraph_text: item.subtitle,
                   teaser_title: item.title,
-                  teaser_link_text: 'read more',
+                  teaser_link_text: 'More information',
                   teaser_link_link: '#' ~ key,
                   teaser_image_src: (item.images|first.src)|default('data:image/gif;'),
                   teaser_image_alt_text: item.images|first.alt
