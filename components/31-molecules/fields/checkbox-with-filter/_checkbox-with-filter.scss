@@ -8,12 +8,23 @@
     &.hidden {
       @extend %visually-hidden
     }
+
+    em {
+      font-style: normal;
+    }
   }
 
   .checkbox-filter__result-placeholder,
   .checkbox-filter__result-wrapper {
     &.hidden {
       display: none;
+    }
+  }
+
+  .checkbox-filter__result-wrapper,
+  .checkbox-filter__count-wrapper {
+    em {
+      font-style: normal;
     }
   }
 
