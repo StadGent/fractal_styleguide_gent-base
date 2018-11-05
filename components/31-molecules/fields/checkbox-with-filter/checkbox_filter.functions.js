@@ -173,7 +173,7 @@
       checkboxLoop(({checkboxWrapper, checkbox, label}) => {
         if (
           !label ||
-          label.innerText
+          label.textContent
             .toUpperCase()
             .indexOf(filterfield.value.toUpperCase()) === -1
         ) {
@@ -204,7 +204,7 @@
     const makeTag = (checkbox, label) => {
       let tag = document.createElement('span');
       tag.className = 'tag filter';
-      tag.innerText = label.innerText;
+      tag.textContent = label.textContent;
       tag.setAttribute('data-value', checkbox.value);
 
       let button = document.createElement('button');
@@ -215,6 +215,10 @@
       button.addEventListener('click', () => {
         checkbox.checked = false;
         selectedContainer.removeChild(tag);
+
+        if (typeof options.onRemoveTag === 'function') {
+          options.onRemoveTag(checkbox, tag);
+        }
       });
 
       tag.appendChild(button);
@@ -242,7 +246,7 @@
       const selectedCount = selectedContainer.children.length;
 
       if (countSpan) {
-        countSpan.innerText = selectedCount;
+        countSpan.textContent = selectedCount;
       }
       if (countSpanWrapper) {
         if (selectedCount > 0) {
@@ -260,7 +264,7 @@
      */
     const updateResult = (resultCount) => {
       if (resultSpan) {
-        resultSpan.innerText = resultCount;
+        resultSpan.textContent = resultCount;
       }
 
       if (resultSpanWrapper) {
