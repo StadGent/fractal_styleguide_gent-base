@@ -166,7 +166,7 @@
 
       let count = 0;
 
-      Array.from(checkboxContainers).forEach(container => {
+      [].slice.call(checkboxContainers).forEach(container => {
         container.style.display = 'none';
       });
 
@@ -187,7 +187,7 @@
         }
       });
 
-      Array.from(checkboxContainers).forEach(container => {
+      [].slice.call(checkboxContainers).forEach(container => {
         let displayedCount = container.querySelectorAll(`${options.checkboxes || 'div.checkbox'}:not([hidden])`).length;
         if (displayedCount) {
           container.style.display = '';
