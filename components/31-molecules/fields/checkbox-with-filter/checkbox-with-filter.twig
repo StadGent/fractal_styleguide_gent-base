@@ -36,6 +36,9 @@
             <h4 class="checkbox-filter__category">{{ category.title }}</h4>
             {% include '@input-checkbox' with {
               checkbox_label: 'Show all',
+              checkbox_name: category.value,
+              checkbox_id: category.value,
+              checkbox_value: category.value,
               modifierWrapper: 'full-width'
             } %}
 
