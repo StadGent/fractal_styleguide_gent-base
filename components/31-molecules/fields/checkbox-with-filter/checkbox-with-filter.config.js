@@ -2,14 +2,25 @@
 
 const generateCheckboxes = (uid)=>{
   let result = [];
-  for (let i = 1095; i--;) {
+  for (let i = 10; i--;) {
+    var title = 'Category ' + (10 - i);
+    var items = [];
+
+    for (let j = 100; j--;) {
+      items.push({
+        label_checkbox: `Checkbox option ${i.toString() + j}`,
+        checkbox_name: 'checkboxgroup[]',
+        checkbox_id: `checkbox-${i.toString() + j}-${uid}`,
+        checkbox_value: i.toString() + j
+      });
+    }
+
     result.push({
-      label_checkbox: `Checkbox option ${i}`,
-      checkbox_name: 'checkboxgroup[]',
-      checkbox_id: `checkbox-${i}-${uid}`,
-      checkbox_value: i
+      title,
+      items
     });
   }
+
   return result;
 };
 

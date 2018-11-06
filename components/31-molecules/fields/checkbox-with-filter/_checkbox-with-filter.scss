@@ -34,17 +34,26 @@
     }
 
     .checkbox-filter__checkboxes {
+      display: flex;
       flex: 1;
-      columns: auto 320px;
+      flex-wrap: wrap;
 
-      > * {
-        display: inline-block;
-        width: 100%;
+      > .checkbox {
+        flex-basis: 320px;
         padding-right: 1rem;
+      }
+
+      > .checkbox.full-width,
+      > .checkbox-filter__category {
+        flex-basis: 100%;
       }
 
       > [hidden] {
         display: none;
+      }
+
+      & + .checkbox-filter__checkboxes {
+        margin-top: 1rem;
       }
     }
   }

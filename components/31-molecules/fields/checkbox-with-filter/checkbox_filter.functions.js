@@ -52,8 +52,8 @@
      * Container for the checkboxes.
      * @type {Element}
      */
-    const checkboxContainer = elem.querySelector(
-      options.checkboxContainer || '.checkbox-filter__checkboxes'
+    const checkboxContainers = elem.querySelectorAll(
+      options.checkboxContainers || '.checkbox-filter__checkboxes'
     );
 
     /**
@@ -166,9 +166,9 @@
 
       let count = 0;
 
-      if (checkboxContainer) {
-        checkboxContainer.style.display = 'none';
-      }
+      Array.from(checkboxContainers).forEach(container => {
+        container.style.display = 'none';
+      });
 
       checkboxLoop(({checkboxWrapper, checkbox, label}) => {
         if (
@@ -187,9 +187,12 @@
         }
       });
 
-      if (checkboxContainer) {
-        checkboxContainer.style.display = '';
-      }
+      Array.from(checkboxContainers).forEach(container => {
+        let displayedCount = container.querySelectorAll(`${options.checkboxes || 'div.checkbox'}:not([hidden])`).length;
+        if (displayedCount) {
+          container.style.display = '';
+        }
+      });
 
       updateResult(count);
       tabTrap.setFocusables();
@@ -327,7 +330,7 @@
       selectedFilters = [];
 
       checkboxLoop(({checkbox, label}) => {
-        if (checkbox.checked && makeTags) {
+        if (checkbox.checked && !checkbox.indeterminate && makeTags) {
           selectedContainer.appendChild(makeTag(checkbox, label));
         }
       });
