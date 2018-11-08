@@ -288,7 +288,8 @@
 
       @include tablet {
         // overrule image gallery
-        li:first-of-type:nth-last-of-type(-n+5) ~ .image-gallery__show-more {
+        li:first-of-type:nth-last-of-type(-n+5) ~ .image-gallery__show-more,
+        li:first-of-type:nth-last-of-type(-n+6) ~ .image-gallery__show-more {
           display: inline-block;
         }
 
