@@ -8,12 +8,12 @@ The Readspeaker button toggles the Readspeaker plugin to read the content on the
 
 The Readspeaker plugin and thus the Readspeaker button is only enabled on:
 
-* Desktop (not on tablet nor on mobile)
+* Desktop resolutions (not on tablet nor on mobile)
 * Detail pages (not on overview pages)
 
 ## Placement
 
-The Readspeaker button should be places just below the Heading 1 of the web page wher it is used.
+The Readspeaker button should be placed just below the Heading 1.
 
 ## More about Readspeaker
 
