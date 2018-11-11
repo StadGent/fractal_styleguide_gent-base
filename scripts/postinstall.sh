@@ -40,6 +40,7 @@ if [ -d "../public" ]; then
   cp -R ../node_modules/baguettebox.js ../public/styleguide/vendor/baguettebox;
   cp -R ../node_modules/masonry-layout ../public/styleguide/vendor/masonry-layout;
   cp -R ../node_modules/imagesloaded ../public/styleguide/vendor/imagesloaded;
+  cp -R ../node_modules/allietabs/dist ../public/styleguide/vendor/allietabs;
 fi
 
 #

@@ -1,0 +1,16 @@
+<div class="tabs {{ modifier }}" data-tabs>
+  <ul role="tablist">
+    {% for tab in tabs %}
+      <li role="presentation">
+        <a role="tab" href="#{{ modifier ~ tab.target }}" aria-controls="{{ modifier ~ tab.target }}">
+          {{ tab.label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% for tab in tabs %}
+    <div role="tabpanel" id="{{ modifier ~ tab.target }}">
+      {{ tab.content }}
+    </div>
+  {% endfor %}
+</div>

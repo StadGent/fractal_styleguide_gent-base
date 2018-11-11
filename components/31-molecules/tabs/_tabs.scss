@@ -1,0 +1,96 @@
+.tabs {
+
+  [role='tabpanel'] {
+    @include theme('background-color', 'color-primary--lighten-5', 'tab-background-color');
+
+    padding: 1rem;
+    border-radius: border-radius('radius-1');
+
+    &:first-of-type {
+      border-top-left-radius: 0;
+    }
+
+    &:target {
+      display: block;
+    }
+
+    &[aria-hidden] {
+
+      &[aria-hidden='true'] {
+        display: none;
+      }
+
+      &[aria-hidden='false'] {
+        display: block;
+      }
+    }
+  }
+
+  [role='tablist'] {
+
+    display: flex;
+    margin: 0;
+    list-style: none;
+
+    > li[role='presentation'] {
+      flex: 0 0 auto;
+
+      a,
+      a[href^="mailto:"],
+      a[download],
+      a[href^="http://"],
+      a[href^="https://"] {
+        @include theme('color', 'color-tertiary', 'default-text-color');
+        display: inline-block;
+        padding: .3rem .8rem;
+        border-top-left-radius: border-radius('radius-1');
+        border-top-right-radius: border-radius('radius-1');
+        font-weight: 400;
+        text-decoration: none;
+
+        &::after {
+          @include theme('color', 'color-primary', 'menu-hover-color');
+          display: block;
+          width: 0;
+          margin: 0 auto;
+          transition: width 100ms;
+          border-bottom: 2px solid;
+          content: '';
+          overflow: visible;
+        }
+
+        &[role='tab'][aria-selected='true'],
+        &:hover,
+        &:focus {
+          background: transparent;
+          font-weight: 600;
+
+          &::after {
+            width: 70%;
+          }
+        }
+
+        &[role='tab'][aria-selected='true']:focus::after {
+          width: 100%;
+        }
+      }
+
+      [role='tab'][aria-selected='true'] {
+        @include theme('background-color', 'color-primary--lighten-5', 'tab-background-color');
+
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &.light {
+    [role='tabpanel'] {
+      background-color: transparent;
+    }
+
+    [role='tablist'] {
+      @include theme('border-color', 'color-primary--lighten-5', 'tab-background-color');
+      border-bottom: 2px solid;
+    }
+  }
+}
