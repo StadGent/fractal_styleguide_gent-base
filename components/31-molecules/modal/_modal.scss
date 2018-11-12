@@ -34,14 +34,12 @@
     z-index: 999;
 
     @include tablet {
-      top: 10vh;
-      left: 50%;
+      right: 0;
       width: 80vw;
       max-width: $bp-max-content * .8;
       height: auto;
       min-height: 0;
-      margin-bottom: $gutter-width;
-      transform: translateX(-50%);
+      margin: 10vh auto $gutter-width
     }
   }
 
