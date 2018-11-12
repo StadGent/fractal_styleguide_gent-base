@@ -67,6 +67,9 @@ const ghentTheme = mandelbrot({
   scripts: [
     'default',
     '/js/search.js'
+  ],
+  panels: [
+    'notes', 'view', 'info', 'html', 'context', 'resources'
   ]
 });
 
