@@ -52,8 +52,8 @@
      * Container for the checkboxes.
      * @type {Element}
      */
-    const checkboxContainer = elem.querySelector(
-      options.checkboxContainer || '.checkbox-filter__checkboxes'
+    const checkboxContainers = elem.querySelectorAll(
+      options.checkboxContainers || '.checkbox-filter__checkboxes'
     );
 
     /**
@@ -166,14 +166,14 @@
 
       let count = 0;
 
-      if (checkboxContainer) {
-        checkboxContainer.style.display = 'none';
-      }
+      [].slice.call(checkboxContainers).forEach(container => {
+        container.style.display = 'none';
+      });
 
       checkboxLoop(({checkboxWrapper, checkbox, label}) => {
         if (
           !label ||
-          label.innerText
+          label.textContent
             .toUpperCase()
             .indexOf(filterfield.value.toUpperCase()) === -1
         ) {
@@ -187,9 +187,12 @@
         }
       });
 
-      if (checkboxContainer) {
-        checkboxContainer.style.display = '';
-      }
+      [].slice.call(checkboxContainers).forEach(container => {
+        let displayedCount = container.querySelectorAll(`${options.checkboxes || 'div.checkbox'}:not([hidden])`).length;
+        if (displayedCount) {
+          container.style.display = '';
+        }
+      });
 
       updateResult(count);
       tabTrap.setFocusables();
@@ -204,7 +207,7 @@
     const makeTag = (checkbox, label) => {
       let tag = document.createElement('span');
       tag.className = 'tag filter';
-      tag.innerText = label.innerText;
+      tag.textContent = label.textContent;
       tag.setAttribute('data-value', checkbox.value);
 
       let button = document.createElement('button');
@@ -215,6 +218,10 @@
       button.addEventListener('click', () => {
         checkbox.checked = false;
         selectedContainer.removeChild(tag);
+
+        if (typeof options.onRemoveTag === 'function') {
+          options.onRemoveTag(checkbox, tag);
+        }
       });
 
       tag.appendChild(button);
@@ -242,7 +249,7 @@
       const selectedCount = selectedContainer.children.length;
 
       if (countSpan) {
-        countSpan.innerText = selectedCount;
+        countSpan.textContent = selectedCount;
       }
       if (countSpanWrapper) {
         if (selectedCount > 0) {
@@ -260,7 +267,7 @@
      */
     const updateResult = (resultCount) => {
       if (resultSpan) {
-        resultSpan.innerText = resultCount;
+        resultSpan.textContent = resultCount;
       }
 
       if (resultSpanWrapper) {
@@ -323,7 +330,7 @@
       selectedFilters = [];
 
       checkboxLoop(({checkbox, label}) => {
-        if (checkbox.checked && makeTags) {
+        if (checkbox.checked && !checkbox.indeterminate && makeTags) {
           selectedContainer.appendChild(makeTag(checkbox, label));
         }
       });

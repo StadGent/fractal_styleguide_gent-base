@@ -30,16 +30,28 @@
           <strong class="checkbox-filter__result-placeholder">There is no filter applied.</strong>
           <strong aria-live="polite" class="checkbox-filter__result-wrapper"><span class="checkbox-filter__result">#</span> result(s) found:</strong>
         </p>
+
+        {% for category in options %}
         <div class="checkbox-filter__checkboxes">
-          {% for option in options %}
+            <h4 class="checkbox-filter__category">{{ category.title }}</h4>
             {% include '@input-checkbox' with {
-              'checkbox_label': option.label_checkbox,
-              'checkbox_name': option.checkbox_name,
-              'checkbox_id': option.checkbox_id,
-              'checkbox_value': option.checkbox_value
+              checkbox_label: 'Show all',
+              checkbox_name: category.value,
+              checkbox_id: category.value,
+              checkbox_value: category.value,
+              modifierWrapper: 'full-width'
             } %}
-          {% endfor %}
+
+            {% for item in category.items %}
+              {% include '@input-checkbox' with {
+                checkbox_label: item.label_checkbox,
+                checkbox_name: item.checkbox_name,
+                checkbox_id: item.checkbox_id,
+                checkbox_value: item.checkbox_value
+              } %}
+            {% endfor %}
         </div>
+        {% endfor %}
       {% endset %}
 
       {% set modalActions %}

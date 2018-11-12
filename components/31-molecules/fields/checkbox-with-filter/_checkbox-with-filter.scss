@@ -8,6 +8,10 @@
     &.hidden {
       @extend %visually-hidden
     }
+
+    em {
+      font-style: normal;
+    }
   }
 
   .checkbox-filter__result-placeholder,
@@ -17,23 +21,39 @@
     }
   }
 
+  .checkbox-filter__result-wrapper,
+  .checkbox-filter__count-wrapper {
+    em {
+      font-style: normal;
+    }
+  }
+
   .checkbox-filter__modal {
     .checkbox-filter__filter {
       margin-bottom: 1rem;
     }
 
     .checkbox-filter__checkboxes {
+      display: flex;
       flex: 1;
-      columns: auto 320px;
+      flex-wrap: wrap;
 
-      > * {
-        display: inline-block;
-        width: 100%;
+      > .checkbox {
+        flex-basis: 320px;
         padding-right: 1rem;
+      }
+
+      > .checkbox.full-width,
+      > .checkbox-filter__category {
+        flex-basis: 100%;
       }
 
       > [hidden] {
         display: none;
+      }
+
+      & + .checkbox-filter__checkboxes {
+        margin-top: 1rem;
       }
     }
   }
