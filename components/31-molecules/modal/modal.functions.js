@@ -99,20 +99,20 @@
       }
 
       /*
+        Possibility to alter the URL fragment when the modal opens/closes.
+       */
+      hash = window.location.hash;
+      if (options.changeHash) {
+        addHashEvents();
+      }
+
+      /*
       Custom event triggered on resize and on init.
       For instance for when the modal is not hidden on all screen sizes.
        */
       if (options.resizeEvent) {
         options.resizeEvent();
         addResizeEvent();
-      }
-
-      /*
-        Possibility to alter the URL fragment when the modal opens/closes.
-       */
-      hash = window.location.hash;
-      if (options.changeHash) {
-        addHashEvents();
       }
     };
 
