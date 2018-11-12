@@ -59,6 +59,6 @@
     "gulp-axe-webdriver": "^3.0.1"
   },
   "scripts": {
-    "postinstall": "cd scripts; ./postinstall.sh"
+    "postinstall": "./scripts/postinstall.sh"
   }
 }
