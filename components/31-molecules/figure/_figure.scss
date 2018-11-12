@@ -137,7 +137,6 @@ figure {
       }
 
       h1 {
-        @include theme('color', 'color-tertiary', 'default-text-color');
         order: 1;
         margin: 0;
         font-size: .9rem;
