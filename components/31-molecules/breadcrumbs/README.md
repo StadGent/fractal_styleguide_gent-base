@@ -27,3 +27,9 @@ Examples for the link to the homepage:
 
 * On the City of Ghent general website, including theme sites, the breadcrumbs starts with "Home" and links to the homepage of the City of Ghent general website.
 * On a separate website, the breadcrumbs also starts with "Home" and links to the corresponding homepage of that separate website.
+
+## Accessibility
+
+* Breadcrumbs must be contained in a nav region.
+* The nav region must include a visually hidden title 'breadcrumbs' (translatable) as first element.
+* The nav region must use the aria-labelledby attribute to reference the hidden title.```
