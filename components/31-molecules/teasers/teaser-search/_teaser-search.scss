@@ -16,16 +16,6 @@
     padding-left: .5rem;
   }
 
-  .location {
-    font-weight: 700;
-
-    i {
-      margin-right: .3rem;
-      font-size: 1.5em;
-      vertical-align: middle;
-    }
-  }
-
   @include tablet {
     dt,
     dd {
@@ -88,6 +78,16 @@
 
     @include tablet {
       flex-basis: span(7 of 9);
+    }
+
+    .location {
+      font-weight: 700;
+
+      i {
+        margin-right: .3rem;
+        font-size: 1.5em;
+        vertical-align: middle;
+      }
     }
 
     .links {
