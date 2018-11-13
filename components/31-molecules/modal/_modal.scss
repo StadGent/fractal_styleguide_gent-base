@@ -39,7 +39,7 @@
       max-width: $bp-max-content * .8;
       height: auto;
       min-height: 0;
-      margin: 10vh auto $gutter-width
+      margin: 10vh auto $gutter-width;
     }
   }
 
@@ -49,9 +49,7 @@
       height: 100%;
 
       @include tablet {
-        height: auto;
-        min-height: 0;
-        max-height: 80vh;
+        height: 80vh;
       }
 
       > .modal-content {
