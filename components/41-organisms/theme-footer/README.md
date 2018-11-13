@@ -28,6 +28,7 @@ Each of these 3 components in the theme footer must contain content that applies
 1. Contact information specific for the City of Ghent theme or separate website
 2. Newsletter subscription for specific newsletters for the City of Ghent theme or separate website
 3. Social media links to specific social media channels of the City of Ghent theme or separate website
+
 Each of these components can only *once* be present in the theme footer.
 
 The following - and no more - 7 combinations can be used:
