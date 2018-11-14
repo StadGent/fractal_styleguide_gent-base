@@ -1,9 +1,16 @@
 .calendar {
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+
+  @include tablet {
+    width: 100%;
+    margin-left: 0;
+  }
+
   // ===
-  // Opening hours
+  // Week view
   // ===
-  .openinghours {
-    // Hide unnecessary info
+  &[data-type*="week"] .openinghours {
     &--status,
     &--time-prefix {
       display: none;
@@ -30,11 +37,156 @@
     }
     
     &--details {
-      display: flex;
+      @include tablet {
+        display: flex;
+      }
     }
 
     &--date {
       flex-basis: 75%;
+    }
+  }
+
+  // ===
+  // Month view
+  // ===
+  &[data-type="month"] > .openinghours {
+    @include theme('border-color', 'color-primary--lighten-3', 'calendar-border');
+    display: inline-block;
+    padding-right: .8rem;
+    border-right: 2px solid;
+  }
+
+  &[data-type="month"] .openinghours {
+    $day-size: 2.4rem;
+
+    &--header,
+    &--days {
+      display: flex;
+      width: $day-size * 7;
+    }
+
+    // Header
+    // ===
+    &--header {
+      justify-content: space-between;
+
+      button {
+        @include theme('color', 'color-primary', 'calendar-color');
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $day-size;
+        height: $day-size / 2;
+        padding: 0;
+        border: 0;
+        font-size: 0;
+        background: transparent;
+        cursor: pointer;
+
+        &.openinghours--prev,
+        &.openinghours--next {
+          &::before {
+            font-size: 1.2rem;
+          }
+        }
+        &.openinghours--prev {
+          @include icon(arrow-left);
+        }
+
+        &.openinghours--next {
+          @include icon(arrow-right);
+        }
+      }
+
+      .openinghours--month {
+        font-weight: 600;
+        line-height: $day-size / 2;
+      }
+    }
+
+
+    &--day--day-of-week {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &--days {
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    &--day {
+      @extend %list-no-style;
+
+      &,
+      > span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: $day-size;
+        height: $day-size;
+        border-radius: 50%;
+      }
+    }
+
+    &--day-open,
+    &--day-closed {
+      cursor: pointer;
+
+      &[tabindex='0'] > span,
+      &:hover > span {
+        @include theme('border-color', 'color-primary', 'calendar-color');
+        border: 2px solid;
+      }
+
+      &[tabindex='0'] .openinghours--details {
+        @include tablet {
+          top: -$day-size / 2;
+          left: calc(100% + 1.6rem);
+        }
+
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: calc(100% - #{$gutter-width});
+      }
+    }
+
+    &--day-open > span::after {
+        @include theme('background-color', 'color-primary', 'calendar-color');
+        content: "";
+        display: block;
+        width: .2rem;
+        height: .2rem;
+        border-radius: 50%;
+        position: relative;
+        bottom: .2rem;
+    }
+
+    &--day-passed {
+      opacity: .5;
+    }
+
+    &--details {
+      display: none;
+      cursor: default;
+    }
+
+    &--date {
+      font-weight: 600;
+      margin-bottom: .8rem;
+    }
+
+    &--status {
+      text-transform: capitalize;
+    }
+
+    &--time {
+      display: inline;
     }
   }
 }

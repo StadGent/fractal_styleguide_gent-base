@@ -8,7 +8,12 @@
 {% endset %}
 
 {% set monthTab %}
-  MONTH
+  <div
+      class="calendar"
+      data-service="{{ serviceId }}"
+      data-channel="{{ channelId }}"
+      data-type="month"
+  ></div>
 {% endset %}
 
 {% include '@tabs' with {
