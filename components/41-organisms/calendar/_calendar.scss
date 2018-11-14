@@ -1,0 +1,40 @@
+.calendar {
+  // ===
+  // Opening hours
+  // ===
+  .openinghours {
+    // Hide unnecessary info
+    &--status,
+    &--time-prefix {
+      display: none;
+    }
+
+    &--time-separator {
+      font-size: 0;
+
+      &::before {
+        font-size: .8rem;
+        content: '-';
+      }
+    }
+
+    &--days {
+      @extend %list-no-style;
+    }
+
+    &--day {
+      padding: .3rem .8rem;
+      &:nth-child(even) {
+        @include theme('background', 'color-primary--lighten-4', 'calendar-even-background');
+      }
+    }
+    
+    &--details {
+      display: flex;
+    }
+
+    &--date {
+      flex-basis: 75%;
+    }
+  }
+}

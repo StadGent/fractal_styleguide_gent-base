@@ -1,0 +1,27 @@
+{% set weekTab %}
+  <div
+      class="calendar"
+      data-service="{{ serviceId }}"
+      data-channel="{{ channelId }}"
+      data-type="week-from-now"
+  ></div>
+{% endset %}
+
+{% set monthTab %}
+  MONTH
+{% endset %}
+
+{% include '@tabs' with {
+  tabs: [
+    {
+      label: 'This week',
+      target: 'week',
+      content: weekTab
+    },
+    {
+      label: 'This month',
+      target: 'month',
+      content: monthTab
+    }
+  ]
+} %}
