@@ -176,10 +176,10 @@
 
     const constructWidget = urls => {
       let html = '';
-      urls.forEach((url, i) => request(url, (xmlhttp,  data) => {
+      urls.forEach((url, i) => request(url, (xmlhttp, data) => {
         html += data;
 
-        if(i+1 === urls.length) {
+        if (i + 1 === urls.length) {
           print(html);
           addEvents();
         }

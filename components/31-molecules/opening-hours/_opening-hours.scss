@@ -220,8 +220,8 @@ $breakpoint-openinghours: '(min-width: 750px)';
     overflow: hidden;
 
     .openinghours {
-      background-color: color('green', -4);
       padding: .3rem .5rem 0 1.9rem;
+      background-color: color('green', -4);
       line-height: 1.4rem;
 
       &:first-of-type {
