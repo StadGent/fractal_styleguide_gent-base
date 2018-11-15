@@ -16,17 +16,19 @@
   ></div>
 {% endset %}
 
-{% include '@tabs' with {
-  tabs: [
-    {
-      label: 'This week',
-      target: 'week',
-      content: weekTab
-    },
-    {
-      label: 'This month',
-      target: 'month',
-      content: monthTab
-    }
-  ]
-} %}
+<div class="calendar-wrapper">
+  {% include '@tabs' with {
+    tabs: [
+      {
+        label: 'This week',
+        target: 'week',
+        content: weekTab
+      },
+      {
+        label: 'This month',
+        target: 'month',
+        content: monthTab
+      }
+    ]
+  } %}
+</div>

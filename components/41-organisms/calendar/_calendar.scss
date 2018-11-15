@@ -1,10 +1,9 @@
-.calendar {
-  width: calc(100% + 2rem);
-  margin-left: -1rem;
+$breakpoint-openinghours: '(min-width: 750px)';
 
-  @include tablet {
-    width: 100%;
-    margin-left: 0;
+.calendar {
+  @media (max-width: 360px) {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
   }
 
   // ===
@@ -37,7 +36,7 @@
     }
     
     &--details {
-      @include tablet {
+      @media #{$breakpoint-openinghours} {
         display: flex;
       }
     }
@@ -50,113 +49,116 @@
   // ===
   // Month view
   // ===
-  &[data-type="month"] > .openinghours {
-    @include theme('border-color', 'color-primary--lighten-3', 'calendar-border');
-    display: inline-block;
-    padding-right: .8rem;
-    border-right: 2px solid;
-  }
+  &[data-type="month"] {
+    $day-size: 2rem;
+    padding-bottom: 6rem;
 
-  &[data-type="month"] .openinghours {
-    $day-size: 2.4rem;
-
-    &--header,
-    &--days {
-      display: flex;
-      width: $day-size * 7;
+    @media #{$breakpoint-openinghours} {
+      padding-bottom: 0;
+      padding-right: $day-size * 7 - 1.6rem;
     }
 
-    // Header
-    // ===
-    &--header {
-      justify-content: space-between;
+    > .openinghours {
+      @include theme('border-color', 'color-primary--lighten-3', 'calendar-border');
+      display: inline-block;
+      padding-bottom: .8rem;
 
-      button {
-        @include theme('color', 'color-primary', 'calendar-color');
+      @media #{$breakpoint-openinghours} {
+        padding-bottom: 0;
+        padding-right: .8rem;
+        border-right: 2px solid;
+      }
+    }
+    .openinghours {
 
+      &--header,
+      &--days {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: $day-size;
-        height: $day-size / 2;
-        padding: 0;
-        border: 0;
-        font-size: 0;
-        background: transparent;
-        cursor: pointer;
+        width: $day-size * 7;
+      }
 
-        &.openinghours--prev,
-        &.openinghours--next {
-          &::before {
-            font-size: 1.2rem;
+      // Header
+      // ===
+      &--header {
+        justify-content: space-between;
+
+        button {
+          @include theme('color', 'color-primary', 'calendar-color');
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: $day-size;
+          height: $day-size / 2;
+          padding: 0;
+          border: 0;
+          font-size: 0;
+          background: transparent;
+          cursor: pointer;
+
+          &.openinghours--prev,
+          &.openinghours--next {
+            &::before {
+              font-size: 1.2rem;
+            }
+          }
+          &.openinghours--prev {
+            @include icon(arrow-left);
+          }
+
+          &.openinghours--next {
+            @include icon(arrow-right);
           }
         }
-        &.openinghours--prev {
-          @include icon(arrow-left);
-        }
 
-        &.openinghours--next {
-          @include icon(arrow-right);
+        .openinghours--month {
+          font-weight: 600;
+          line-height: $day-size / 2;
         }
       }
 
-      .openinghours--month {
+
+      &--day--day-of-week {
         font-weight: 600;
-        line-height: $day-size / 2;
-      }
-    }
-
-
-    &--day--day-of-week {
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    &--days {
-      margin: 0;
-      flex-wrap: wrap;
-    }
-
-    &--day {
-      @extend %list-no-style;
-
-      &,
-      > span {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: $day-size;
-        height: $day-size;
-        border-radius: 50%;
-      }
-    }
-
-    &--day-open,
-    &--day-closed {
-      cursor: pointer;
-
-      &[tabindex='0'] > span,
-      &:hover > span {
-        @include theme('border-color', 'color-primary', 'calendar-color');
-        border: 2px solid;
+        text-transform: uppercase;
       }
 
-      &[tabindex='0'] .openinghours--details {
-        @include tablet {
-          top: -$day-size / 2;
-          left: calc(100% + 1.6rem);
+      &--days {
+        margin: 0;
+        flex-wrap: wrap;
+      }
+
+      &--day {
+        @extend %list-no-style;
+
+        &,
+        > span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: $day-size;
+          height: $day-size;
+          border-radius: 50%;
+        }
+      }
+
+      &--day-open,
+      &--day-closed {
+        cursor: pointer;
+
+        &[tabindex='0'] > span,
+        &:hover > span {
+          @include theme('border-color', 'color-primary', 'calendar-color');
+          border: 2px solid;
         }
 
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: calc(100% - #{$gutter-width});
+        &[tabindex='0'] .openinghours--details {
+          display: block;
+        }
       }
-    }
 
-    &--day-open > span::after {
+      &--day-open > span::after {
         @include theme('background-color', 'color-primary', 'calendar-color');
         content: "";
         display: block;
@@ -165,28 +167,43 @@
         border-radius: 50%;
         position: relative;
         bottom: .2rem;
-    }
+      }
 
-    &--day-passed {
-      opacity: .5;
-    }
+      &--day-passed {
+        opacity: .5;
+      }
 
-    &--details {
-      display: none;
-      cursor: default;
-    }
+      &--details {
+        @include theme('border-color', 'color-primary--lighten-3', 'calendar-border');
+        display: none;
+        position: absolute;
+        top: calc(100% + .8rem);
+        left: .8rem;
+        width: calc(100% - 1.6rem);
+        cursor: default;
+        border-top: 2px solid;
+        padding-top: .8rem;
 
-    &--date {
-      font-weight: 600;
-      margin-bottom: .8rem;
-    }
+        @media #{$breakpoint-openinghours} {
+          top: -$day-size / 2;
+          left: calc(100% + 1.6rem);
+          border-top: none;
+          padding-top: 0;
+        }
+      }
 
-    &--status {
-      text-transform: capitalize;
-    }
+      &--date {
+        font-weight: 600;
+        margin-bottom: .8rem;
+      }
 
-    &--time {
-      display: inline;
+      &--status {
+        text-transform: capitalize;
+      }
+
+      &--time {
+        display: inline;
+      }
     }
   }
 }
