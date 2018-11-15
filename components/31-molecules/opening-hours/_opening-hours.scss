@@ -210,4 +210,63 @@ $breakpoint-openinghours: '(min-width: 750px)';
       }
     }
   }
+
+  // ===
+  // Day view
+  // ===
+  &[data-type="day"] {
+    display: inline-block;
+    border-radius: border-radius('radius-1');
+    overflow: hidden;
+
+    .openinghours {
+      background-color: color('green', -4);
+      padding: .3rem .5rem 0 1.9rem;
+      line-height: 1.4rem;
+
+      &:first-of-type {
+        @include icon(clock);
+        padding-left: .5rem;
+
+        &::before {
+          font-size: 1.5em;
+          vertical-align: -25%;
+        }
+      }
+
+      &:not(:first-of-type) {
+        padding-top: 0;
+      }
+
+      &:last-of-type {
+        padding-bottom: .3rem;
+      }
+
+      &--day-closed {
+        background-color: color('red', -4);
+      }
+
+      &--date,
+      &--content,
+      &--times,
+      &--time {
+        display: inline;
+      }
+
+      &--date,
+      &--status {
+        font-weight: bold;
+      }
+
+      &--special-day {
+        > span {
+          display: none;
+        }
+
+        > span:first-child {
+          display: inline;
+        }
+      }
+    }
+  }
 }
