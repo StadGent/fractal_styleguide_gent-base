@@ -167,9 +167,10 @@ $breakpoint-openinghours: '(min-width: 750px)';
         border-radius: 50%;
         position: relative;
         bottom: .2rem;
+        flex: 0 0 auto;
       }
 
-      &--day-passed {
+      &--day-passed > span {
         opacity: .5;
       }
 

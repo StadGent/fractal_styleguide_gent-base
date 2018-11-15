@@ -51,7 +51,7 @@
       let tmp = [];
       let items = location.search.substr(1).split('&');
 
-      for (var index = 0; index < items.length; index++) {
+      for (let index = 0; index < items.length; index++) {
         tmp = items[index].split('=');
         if (tmp[0] === key) {
           result = decodeURIComponent(tmp[1]);
@@ -145,6 +145,123 @@
 
     const constructWidget = (xmlhttp, data) => {
       print(data);
+      addEvents();
+    };
+
+    /**
+     * Handle keyboard input to move to other dates.
+     *
+     * @param e
+     *   The keydown event.
+     * @param element
+     *   The openinghours DOM element.
+     */
+    const handleKeyboardInput = function (e) {
+      let keyCode = e.keyCode || e.which;
+      let current = e.target;
+      let currentPosition = +current.getAttribute('aria-posinset');
+
+      let changeFocus = function(e, nextElem) {
+        e.preventDefault();
+        nextElem.click();
+      };
+
+      let next = function () {
+        let nextElem = elem.querySelector('[aria-posinset="' + ++currentPosition + '"]')
+          || elem.querySelector('[aria-posinset="' + 1 + '"]');
+        changeFocus(e, nextElem);
+      };
+
+      let previous = function() {
+        let nextElem = elem.querySelector('[aria-posinset="' + --currentPosition + '"]')
+          || elem.querySelector('[aria-posinset="' + 31 + '"]')
+          || elem.querySelector('[aria-posinset="' + 30 + '"]');
+        changeFocus(e, nextElem);
+      };
+
+      let up = function() {
+        let nextElem = elem.querySelector('[aria-posinset="' + (currentPosition - 7) + '"]')
+          || elem.querySelector('[aria-posinset="' + (currentPosition + 4 * 7) + '"]')
+          || elem.querySelector('[aria-posinset="' + (currentPosition + 3 * 7) + '"]');
+        changeFocus(e, nextElem);
+      };
+
+      let down = function() {
+        let nextElem = elem.querySelector('[aria-posinset="' + (currentPosition + 7) + '"]')
+          || elem.querySelector('[aria-posinset="' + (currentPosition - 4 * 7) + '"]')
+          || elem.querySelector('[aria-posinset="' + (currentPosition - 3 * 7) + '"]');
+        changeFocus(e, nextElem);
+      };
+
+      let home = function() {
+        let nextElem = elem.querySelector('[aria-posinset="1"]');
+        changeFocus(e, nextElem);
+      };
+
+      let end = function() {
+        let nextElem = elem.querySelector('[aria-posinset="31"]')
+          || elem.querySelector('[aria-posinset="30"]')
+          || elem.querySelector('[aria-posinset="29"]')
+          || elem.querySelector('[aria-posinset="28"]');
+        changeFocus(e, nextElem);
+      };
+
+      switch (keyCode) {
+        case 37:
+          previous();
+          break;
+        case 38:
+          up();
+          break;
+        case 40:
+          down();
+          break;
+        case 39:
+          next();
+          break;
+        case 36:
+          home();
+          break;
+        case 35:
+          end();
+          break;
+      }
+    };
+
+
+    const addEvents = () => {
+      if(elem.dataset.type === 'month') {
+        elem.querySelector('.openinghours--prev').addEventListener('click', function () {
+          let month = new Date(elem.dataset.date);
+          month.setMonth(month.getMonth() - 1, 5);
+          elem.dataset.date = formatDate(month);
+          new Calendar(elem, options);
+        });
+        elem.querySelector('.openinghours--next').addEventListener('click', function () {
+          let month = new Date(elem.dataset.date);
+          month.setMonth(month.getMonth() + 1, 5);
+          elem.dataset.date = formatDate(month);
+          new Calendar(elem, options);
+        });
+
+        let days = elem.querySelectorAll('.openinghours--day:not([aria-hidden])');
+        for (let i = 0; i < days.length; i++) {
+
+          days[i].addEventListener('keydown', handleKeyboardInput);
+
+          days[i].addEventListener('click', function (e) {
+            for (let x = 0; x < days.length; x++) {
+              days[x].setAttribute('tabindex', -1);
+              // IE fix: trigger repaint
+              days[x].classList.add("inactive");
+            }
+            this.setAttribute('tabindex', 0);
+            // IE fix: trigger repaint
+            this.classList.remove("inactive");
+            this.focus();
+          });
+        }
+      }
     };
 
     /**
