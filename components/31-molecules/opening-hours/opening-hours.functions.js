@@ -25,6 +25,8 @@
       options = {};
     }
 
+    let channels = [];
+
     const print = data => { elem.innerHTML = data; };
     const error = message => { print(`<span class="error">Error: ${message}</span>`); };
 
@@ -95,37 +97,67 @@
       return iso.slice(0, 10);
     };
 
-    const constructRequestUrl = () => {
-      let {service, channel, type, date} = elem.dataset;
-      let uri = `${options.endpoint}/services/${service}/channels/${channel}`;
+    const constructRequestUrls = callback => {
+      let {service, type, date} = elem.dataset;
+      let baseUri = `${options.endpoint}/services/${service}/channels`;
 
-      switch (type) {
-        case 'open-now': {
-          uri += '/open-now';
-          break;
-        }
+      if (!channels.length) {
+        request(baseUri, (xmlhttp, data) => {
+          channels = JSON.parse(data).reduce((accumulator, channel) => {
+            accumulator.push(channel.id);
+            return accumulator;
+          }, []);
 
-        case 'day':
-        case 'week':
-        case 'month':
-        case 'year': {
-          uri += `/openinghours/${type}?date=${formatDate(date)}`;
-          break;
-        }
+          constructRequestUrls(callback);
+        }, {headers: {Accept: 'application/json'}});
 
-        case 'week-from-now':
-        default: {
-          let until = new Date(date);
-          until.setDate(until.getDate() + 6);
-          uri += '/openinghours?from=' + formatDate(date) + '&until=' + formatDate(until);
-          break;
-        }
+        return;
       }
 
-      return `${uri}&language=${options.language}`;
+      if (typeof callback === 'function') {
+        callback(
+          channels.map(channel => {
+            let uri = `${baseUri}/${channel}`;
+
+            switch (type) {
+              case 'open-now': {
+                uri += '/open-now';
+                break;
+              }
+
+              case 'day':
+              case 'week':
+              case 'month':
+              case 'year': {
+                uri += `/openinghours/${type}?date=${formatDate(date)}`;
+                break;
+              }
+
+              case 'week-from-now':
+              default: {
+                let until = new Date(date);
+                until.setDate(until.getDate() + 6);
+                uri += '/openinghours?from=' + formatDate(date) + '&until=' + formatDate(until);
+                break;
+              }
+            }
+
+            return (`${uri}&language=${options.language}`);
+          })
+        );
+      }
     };
 
-    const request = (url, callback) => {
+    const request = (url, callback, {
+      headers = {}
+    } = {}) => {
+      let defaultHeaders = {
+        'Accept': 'text/html',
+        'Accept-Language': options.language
+      };
+
+      headers = Object.assign(defaultHeaders, headers);
+
       let xmlhttp;
       xmlhttp = new XMLHttpRequest();
       xmlhttp.options = options;
@@ -138,14 +170,20 @@
         }
       };
       xmlhttp.open('GET', url, true);
-      xmlhttp.setRequestHeader('Accept', 'text/html');
-      xmlhttp.setRequestHeader('Accept-Language', options.language);
+      Object.keys(headers).forEach(key => { xmlhttp.setRequestHeader(key, headers[key]); });
       xmlhttp.send();
     };
 
-    const constructWidget = (xmlhttp, data) => {
-      print(data);
-      addEvents();
+    const constructWidget = urls => {
+      let html = '';
+      urls.forEach((url, i) => request(url, (xmlhttp,  data) => {
+        html += data;
+
+        if(i+1 === urls.length) {
+          print(html);
+          addEvents();
+        }
+      }));
     };
 
     /**
@@ -279,24 +317,23 @@
         return;
       }
 
-      if (isNaN(elem.dataset.service) || isNaN(elem.dataset.channel)) {
-        error('Please provide a service and channel.');
+      if (isNaN(elem.dataset.service)) {
+        error('Please provide a service.');
         return;
       }
 
-      if (options.requestDate) {
-        elem.dataset.date = this.settings.requestDate;
+      if (elem.dataset.channels) {
+        channels = elem.dataset.channels.split(',');
       }
-      else if (typeof elem.dataset.date === 'undefined') {
-        elem.dataset.date = new Date().toISOString().slice(0, 10);
-      }
+      elem.dataset.date = options.requestDate || new Date().toISOString().slice(0, 10);
 
       // Load data from API
-      request(constructRequestUrl(), constructWidget);
+      constructRequestUrls(constructWidget);
+
     };
 
     init();
 
-    return {};
+    return {init};
   };
 });
