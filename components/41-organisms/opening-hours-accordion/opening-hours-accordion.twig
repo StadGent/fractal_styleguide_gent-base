@@ -1,0 +1,22 @@
+<div
+    class="opening-hours-accordion"
+    data-service="{{ serviceId }}"
+>
+  <h3>%channel%</h3>
+   {% include '@opening-hours' with {
+     serviceId: serviceId,
+     type: 'day'
+   } %}
+
+  {% set openingHoursMonth %}
+    {% include '@opening-hours' with {
+      serviceId: serviceId,
+      type: 'week-month'
+    } %}
+  {% endset %}
+
+  {% include '@accordion' with {
+    buttonText: 'All opening hours',
+    content: openingHoursMonth
+  } %}
+</div>
