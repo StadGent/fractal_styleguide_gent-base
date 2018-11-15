@@ -10,7 +10,7 @@
       module.exports = factory();
     }
     else {
-      root.Calendar = factory();
+      root.OpeningHours = factory();
     }
   }
 })(this || window, function () {
@@ -233,13 +233,13 @@
           let month = new Date(elem.dataset.date);
           month.setMonth(month.getMonth() - 1, 5);
           elem.dataset.date = formatDate(month);
-          new Calendar(elem, options); // eslint-disable-line no-undef
+          new OpeningHours(elem, options); // eslint-disable-line no-undef
         });
         elem.querySelector('.openinghours--next').addEventListener('click', function () {
           let month = new Date(elem.dataset.date);
           month.setMonth(month.getMonth() + 1, 5);
           elem.dataset.date = formatDate(month);
-          new Calendar(elem, options); // eslint-disable-line no-undef
+          new OpeningHours(elem, options); // eslint-disable-line no-undef
         });
 
         let days = elem.querySelectorAll('.openinghours--day:not([aria-hidden])');

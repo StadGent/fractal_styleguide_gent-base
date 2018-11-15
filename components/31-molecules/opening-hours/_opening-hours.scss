@@ -1,6 +1,6 @@
 $breakpoint-openinghours: '(min-width: 750px)';
 
-.calendar {
+.opening-hours-wrapper {
   @media (max-width: 360px) {
     width: calc(100% + 2rem);
     margin-left: -1rem;
@@ -32,7 +32,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
       padding: .3rem .8rem;
 
       &:nth-child(even) {
-        @include theme('background', 'color-primary--lighten-4', 'calendar-even-background');
+        @include theme('background', 'color-primary--lighten-4', 'opening-hours-even-background');
       }
     }
 
@@ -60,7 +60,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
     }
 
     > .openinghours {
-      @include theme('border-color', 'color-primary--lighten-3', 'calendar-border');
+      @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
       display: inline-block;
       padding-bottom: .8rem;
 
@@ -85,7 +85,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
         justify-content: space-between;
 
         button {
-          @include theme('color', 'color-primary', 'calendar-color');
+          @include theme('color', 'color-primary', 'opening-hours-color');
 
           display: flex;
           align-items: center;
@@ -152,7 +152,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
 
         &[tabindex='0'] > span,
         &:hover > span {
-          @include theme('border-color', 'color-primary', 'calendar-color');
+          @include theme('border-color', 'color-primary', 'opening-hours-color');
           border: 2px solid;
         }
 
@@ -162,7 +162,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
       }
 
       &--day-open > span::after {
-        @include theme('background-color', 'color-primary', 'calendar-color');
+        @include theme('background-color', 'color-primary', 'opening-hours-color');
         display: block;
         position: relative;
         bottom: .2rem;
@@ -178,7 +178,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
       }
 
       &--details {
-        @include theme('border-color', 'color-primary--lighten-3', 'calendar-border');
+        @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
         display: none;
         position: absolute;
         top: calc(100% + .8rem);

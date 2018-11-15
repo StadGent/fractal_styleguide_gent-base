@@ -1,0 +1,32 @@
+{% set weekTab %}
+  <div
+      class="opening-hours-wrapper"
+      data-service="{{ serviceId }}"
+      data-channel="{{ channelId }}"
+      data-type="week-from-now"
+  ></div>
+{% endset %}
+
+{% set monthTab %}
+  <div
+      class="opening-hours-wrapper"
+      data-service="{{ serviceId }}"
+      data-channel="{{ channelId }}"
+      data-type="month"
+  ></div>
+{% endset %}
+
+{% include '@tabs' with {
+  tabs: [
+    {
+      label: 'This week',
+      target: 'week',
+      content: weekTab
+    },
+    {
+      label: 'This month',
+      target: 'month',
+      content: monthTab
+    }
+  ]
+} %}

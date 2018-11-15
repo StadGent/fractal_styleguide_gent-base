@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Calendar',
+  name: 'Opening Hours',
   status: 'alpha',
   context: {
     serviceId: '2690',
