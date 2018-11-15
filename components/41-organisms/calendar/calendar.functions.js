@@ -151,17 +151,15 @@
     /**
      * Handle keyboard input to move to other dates.
      *
-     * @param e
+     * @param {Event} e
      *   The keydown event.
-     * @param element
-     *   The openinghours DOM element.
      */
     const handleKeyboardInput = function (e) {
       let keyCode = e.keyCode || e.which;
       let current = e.target;
       let currentPosition = +current.getAttribute('aria-posinset');
 
-      let changeFocus = function(e, nextElem) {
+      let changeFocus = function (e, nextElem) {
         e.preventDefault();
         nextElem.click();
       };
@@ -172,33 +170,33 @@
         changeFocus(e, nextElem);
       };
 
-      let previous = function() {
+      let previous = function () {
         let nextElem = elem.querySelector('[aria-posinset="' + --currentPosition + '"]')
           || elem.querySelector('[aria-posinset="' + 31 + '"]')
           || elem.querySelector('[aria-posinset="' + 30 + '"]');
         changeFocus(e, nextElem);
       };
 
-      let up = function() {
+      let up = function () {
         let nextElem = elem.querySelector('[aria-posinset="' + (currentPosition - 7) + '"]')
           || elem.querySelector('[aria-posinset="' + (currentPosition + 4 * 7) + '"]')
           || elem.querySelector('[aria-posinset="' + (currentPosition + 3 * 7) + '"]');
         changeFocus(e, nextElem);
       };
 
-      let down = function() {
+      let down = function () {
         let nextElem = elem.querySelector('[aria-posinset="' + (currentPosition + 7) + '"]')
           || elem.querySelector('[aria-posinset="' + (currentPosition - 4 * 7) + '"]')
           || elem.querySelector('[aria-posinset="' + (currentPosition - 3 * 7) + '"]');
         changeFocus(e, nextElem);
       };
 
-      let home = function() {
+      let home = function () {
         let nextElem = elem.querySelector('[aria-posinset="1"]');
         changeFocus(e, nextElem);
       };
 
-      let end = function() {
+      let end = function () {
         let nextElem = elem.querySelector('[aria-posinset="31"]')
           || elem.querySelector('[aria-posinset="30"]')
           || elem.querySelector('[aria-posinset="29"]')
@@ -230,18 +228,18 @@
 
 
     const addEvents = () => {
-      if(elem.dataset.type === 'month') {
+      if (elem.dataset.type === 'month') {
         elem.querySelector('.openinghours--prev').addEventListener('click', function () {
           let month = new Date(elem.dataset.date);
           month.setMonth(month.getMonth() - 1, 5);
           elem.dataset.date = formatDate(month);
-          new Calendar(elem, options);
+          new Calendar(elem, options); // eslint-disable-line no-undef
         });
         elem.querySelector('.openinghours--next').addEventListener('click', function () {
           let month = new Date(elem.dataset.date);
           month.setMonth(month.getMonth() + 1, 5);
           elem.dataset.date = formatDate(month);
-          new Calendar(elem, options);
+          new Calendar(elem, options); // eslint-disable-line no-undef
         });
 
         let days = elem.querySelectorAll('.openinghours--day:not([aria-hidden])');
@@ -253,11 +251,11 @@
             for (let x = 0; x < days.length; x++) {
               days[x].setAttribute('tabindex', -1);
               // IE fix: trigger repaint
-              days[x].classList.add("inactive");
+              days[x].classList.add('inactive');
             }
             this.setAttribute('tabindex', 0);
             // IE fix: trigger repaint
-            this.classList.remove("inactive");
+            this.classList.remove('inactive');
             this.focus();
           });
         }

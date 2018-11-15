@@ -30,11 +30,12 @@ $breakpoint-openinghours: '(min-width: 750px)';
 
     &--day {
       padding: .3rem .8rem;
+
       &:nth-child(even) {
         @include theme('background', 'color-primary--lighten-4', 'calendar-even-background');
       }
     }
-    
+
     &--details {
       @media #{$breakpoint-openinghours} {
         display: flex;
@@ -54,8 +55,8 @@ $breakpoint-openinghours: '(min-width: 750px)';
     padding-bottom: 6rem;
 
     @media #{$breakpoint-openinghours} {
-      padding-bottom: 0;
       padding-right: $day-size * 7 - 1.6rem;
+      padding-bottom: 0;
     }
 
     > .openinghours {
@@ -64,11 +65,12 @@ $breakpoint-openinghours: '(min-width: 750px)';
       padding-bottom: .8rem;
 
       @media #{$breakpoint-openinghours} {
-        padding-bottom: 0;
         padding-right: .8rem;
+        padding-bottom: 0;
         border-right: 2px solid;
       }
     }
+
     .openinghours {
 
       &--header,
@@ -92,8 +94,8 @@ $breakpoint-openinghours: '(min-width: 750px)';
           height: $day-size / 2;
           padding: 0;
           border: 0;
-          font-size: 0;
           background: transparent;
+          font-size: 0;
           cursor: pointer;
 
           &.openinghours--prev,
@@ -102,6 +104,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
               font-size: 1.2rem;
             }
           }
+
           &.openinghours--prev {
             @include icon(arrow-left);
           }
@@ -124,8 +127,8 @@ $breakpoint-openinghours: '(min-width: 750px)';
       }
 
       &--days {
-        margin: 0;
         flex-wrap: wrap;
+        margin: 0;
       }
 
       &--day {
@@ -160,14 +163,14 @@ $breakpoint-openinghours: '(min-width: 750px)';
 
       &--day-open > span::after {
         @include theme('background-color', 'color-primary', 'calendar-color');
-        content: "";
         display: block;
-        width: .2rem;
-        height: .2rem;
-        border-radius: 50%;
         position: relative;
         bottom: .2rem;
         flex: 0 0 auto;
+        width: .2rem;
+        height: .2rem;
+        border-radius: 50%;
+        content: "";
       }
 
       &--day-passed > span {
@@ -181,21 +184,21 @@ $breakpoint-openinghours: '(min-width: 750px)';
         top: calc(100% + .8rem);
         left: .8rem;
         width: calc(100% - 1.6rem);
-        cursor: default;
-        border-top: 2px solid;
         padding-top: .8rem;
+        border-top: 2px solid;
+        cursor: default;
 
         @media #{$breakpoint-openinghours} {
           top: -$day-size / 2;
           left: calc(100% + 1.6rem);
-          border-top: none;
           padding-top: 0;
+          border-top: 0;
         }
       }
 
       &--date {
-        font-weight: 600;
         margin-bottom: .8rem;
+        font-weight: 600;
       }
 
       &--status {
