@@ -299,7 +299,10 @@
       if (elem.dataset.channels) {
         channels = elem.dataset.channels.split(',');
       }
-      elem.dataset.date = options.requestDate || new Date().toISOString().slice(0, 10);
+
+      if (!elem.dataset.date) {
+        elem.dataset.date = options.requestDate || new Date().toISOString().slice(0, 10);
+      }
 
       // Load data from API
       constructRequestUrls(constructWidget);
