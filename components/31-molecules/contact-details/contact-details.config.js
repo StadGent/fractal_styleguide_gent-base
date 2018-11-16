@@ -3,5 +3,16 @@
 module.exports = {
   title: 'Contact details',
   status: 'alpha',
-  handle: 'contact-details'
+  handle: 'contact-details',
+  variants: [
+    {
+      name: 'default'
+    },
+    {
+      name: 'inverted',
+      context: {
+        modifier: 'contact-details-inverted'
+      }
+    }
+  ]
 };
