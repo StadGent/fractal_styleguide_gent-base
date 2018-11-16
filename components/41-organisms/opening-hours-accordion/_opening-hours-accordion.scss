@@ -1,0 +1,29 @@
+.opening-hours-accordion {
+  display: none;
+
+  // states
+  &.is-loaded {
+    display: block;
+  }
+
+  // children
+  //&__item {
+  //  & + & {
+  //    margin-top: 1.2rem;
+  //  }
+  //}
+  //
+  //.opening-hours-wrapper {
+  //  margin-bottom: .5rem;
+  //}
+  //
+  //.accordion {
+  //  &--content {
+  //    margin-bottom: 1.2rem;
+  //  }
+  //
+  //  &--button {
+  //    font-size: .9rem;
+  //  }
+  //}
+}

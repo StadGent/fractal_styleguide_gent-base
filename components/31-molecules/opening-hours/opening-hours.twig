@@ -3,7 +3,7 @@
     <div
         class="opening-hours-wrapper"
         data-service="{{ serviceId }}"
-        data-channels="{{ channels|join(',') }}"
+        data-channels="{{ channels }}"
         data-type="week-from-now"
     ></div>
   {% endset %}
@@ -12,7 +12,7 @@
     <div
         class="opening-hours-wrapper"
         data-service="{{ serviceId }}"
-        data-channels="{{ channels|join(',') }}"
+        data-channels="{{ channels }}"
         data-type="month"
     ></div>
   {% endset %}
@@ -35,7 +35,7 @@
   <div
       class="opening-hours-wrapper"
       data-service="{{ serviceId }}"
-      data-channels="{{ channels|join(',') }}"
+      data-channels="{{ channels }}"
       data-type="{{ type }}"
   ></div>
 {% endif %}

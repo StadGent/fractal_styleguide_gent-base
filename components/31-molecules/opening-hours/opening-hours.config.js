@@ -11,7 +11,7 @@ module.exports = {
   },
   context: {
     serviceId: '2690',
-    channels: ['2102']
+    channels: '2102'
   },
 
   variants: [

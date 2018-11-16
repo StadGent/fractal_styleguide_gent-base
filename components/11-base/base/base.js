@@ -61,7 +61,37 @@ window.gent_styleguide = (function () {
     this.hasFocusables = focusables && focusables.length > 0;
   }
 
+  const request = (url, callback, {
+    headers = {},
+    options = {
+      language: 'en'
+    }
+  } = {}) => {
+    let defaultHeaders = {
+      'Accept': 'text/html',
+      'Accept-Language': options.language
+    };
+
+    headers = Object.assign(defaultHeaders, headers);
+
+    let xmlhttp;
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.options = options;
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+        callback(xmlhttp, xmlhttp.responseText);
+      }
+      else if (typeof xmlhttp.options.error === 'function' && xmlhttp.readyState === 4 && xmlhttp.status !== 200) {
+        xmlhttp.options.error(xmlhttp);
+      }
+    };
+    xmlhttp.open('GET', url, true);
+    Object.keys(headers).forEach(key => { xmlhttp.setRequestHeader(key, headers[key]); });
+    xmlhttp.send();
+  };
+
   return {
-    TabTrap: TabTrap
+    request,
+    TabTrap
   };
 })();

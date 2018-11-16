@@ -1,6 +1,6 @@
 'use strict';
 
-/* global define, module */
+/* global define, module, gent_styleguide */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(factory);
@@ -102,14 +102,14 @@
       let baseUri = `${options.endpoint}/services/${service}/channels`;
 
       if (!channels.length) {
-        request(baseUri, (xmlhttp, data) => {
+        gent_styleguide.request(baseUri, (xmlhttp, data) => {
           channels = JSON.parse(data).reduce((accumulator, channel) => {
             accumulator.push(channel.id);
             return accumulator;
           }, []);
 
           constructRequestUrls(callback);
-        }, {headers: {Accept: 'application/json'}});
+        }, {headers: {Accept: 'application/json'}, options});
 
         return;
       }
@@ -148,42 +148,16 @@
       }
     };
 
-    const request = (url, callback, {
-      headers = {}
-    } = {}) => {
-      let defaultHeaders = {
-        'Accept': 'text/html',
-        'Accept-Language': options.language
-      };
-
-      headers = Object.assign(defaultHeaders, headers);
-
-      let xmlhttp;
-      xmlhttp = new XMLHttpRequest();
-      xmlhttp.options = options;
-      xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-          callback(xmlhttp, xmlhttp.responseText);
-        }
-        else if (typeof xmlhttp.options.error === 'function' && xmlhttp.readyState === 4 && xmlhttp.status !== 200) {
-          xmlhttp.options.error(xmlhttp);
-        }
-      };
-      xmlhttp.open('GET', url, true);
-      Object.keys(headers).forEach(key => { xmlhttp.setRequestHeader(key, headers[key]); });
-      xmlhttp.send();
-    };
-
     const constructWidget = urls => {
       let html = '';
-      urls.forEach((url, i) => request(url, (xmlhttp, data) => {
+      urls.forEach((url, i) => gent_styleguide.request(url, (xmlhttp, data) => {
         html += data;
 
         if (i + 1 === urls.length) {
           print(html);
           addEvents();
         }
-      }));
+      }, {options}));
     };
 
     /**
