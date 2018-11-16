@@ -156,6 +156,9 @@
         if (i + 1 === urls.length) {
           print(html);
           addEvents();
+          if (typeof options.callback === 'function') {
+            options.callback();
+          }
         }
       }, {options}));
     };

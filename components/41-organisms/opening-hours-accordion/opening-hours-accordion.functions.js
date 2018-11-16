@@ -77,12 +77,15 @@
       let openingHours = elem.querySelectorAll('.opening-hours-wrapper');
       let tabs = elem.querySelectorAll('.tabs');
 
-      for (let i = accordions.length; i--;) {
-        new Accordion(accordions[i]);
-      }
-
       for (let i = tabs.length; i--;) {
         allieTabs.init(tabs[i]);
+      }
+
+      for (let i = accordions.length; i--;) {
+        let accordion = new Accordion(accordions[i]);
+        if (accordions.length === 1) {
+          options.callback = accordion.openAll;
+        }
       }
 
       for (let i = openingHours.length; i--;) {
