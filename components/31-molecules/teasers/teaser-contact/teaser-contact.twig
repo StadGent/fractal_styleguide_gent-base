@@ -1,0 +1,35 @@
+<li class="teaser teaser-contact">
+  <article class="teaser-content">
+    <div class="content__bottom">
+      <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
+
+      {% include '@paragraph' with {
+        'text': teaser_paragraph_text
+      } %}
+
+      <div class="teaser-contact-info">
+        {% include '@link' with {
+          'text': teaser_telephone,
+          'aria_labelledby': teaser_uid,
+          'link': 'tel:'~teaser_telephone,
+          'modifier': 'read-more standalone-link'
+        } %}
+      </div>
+
+      {% include '@opening-hours' with {
+        type: 'day',
+        serviceId: teaser_opening_hours_service
+      } %}
+
+      {% include '@link' with {
+          'text': teaser_link_text,
+          'aria_labelledby': teaser_uid,
+          'link': teaser_link_link,
+          'modifier': 'read-more standalone-link'
+        } %}
+    </div>
+  </article>
+  <a href="{{ teaser_link_link }}" class="teaser-overlay-link" tabindex="-1"
+     aria-hidden="true">{{ teaser_title }}</a>
+</li>
+

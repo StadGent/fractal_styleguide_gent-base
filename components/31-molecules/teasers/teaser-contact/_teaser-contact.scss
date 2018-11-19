@@ -1,0 +1,31 @@
+.teaser-contact {
+  @include theme('border-color', 'color-primary--lighten-3', 'teaser-contact-border');
+  padding-bottom: .7rem;
+  border-bottom: 2px solid;
+
+  .ol-popup & {
+    padding-bottom: 0;
+    border-bottom: 0; 
+  }
+
+  .content__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &-info {
+    margin-bottom: .4rem;
+  }
+
+  .read-more {
+    margin-top: auto;
+  }
+
+  .grid-3 & {
+    &,
+    .content__bottom {
+      height: 100%;
+    }
+  }
+}
