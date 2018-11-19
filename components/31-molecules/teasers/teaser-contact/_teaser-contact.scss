@@ -16,6 +16,10 @@
 
   &-info {
     margin-bottom: .4rem;
+
+    > .no-icon {
+      font-weight: normal;
+    }
   }
 
   .read-more {

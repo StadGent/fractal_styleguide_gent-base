@@ -29,28 +29,28 @@ a {
     padding-top: .6em;
     text-decoration: none;
 
-    &:not([class*="icon-"]) {
+    &:not([class*="icon-"]):not(.no-icon) {
       @include button-icon;
       @include icon(arrow-right);
     }
 
-    &[href^="http://"],
-    &[href^="https://"] {
+    &[href^="http://"]:not(.no-icon),
+    &[href^="https://"]:not(.no-icon) {
       @include button-icon;
       @include icon(external-link);
     }
 
-    &[href^="mailto:"] {
+    &[href^="mailto:"]:not(.no-icon) {
       @include button-icon;
       @include icon(envelope);
     }
 
-    &[href^="tel:"] {
+    &[href^="tel:"]:not(.no-icon) {
       @include button-icon;
       @include icon(phone);
     }
 
-    &[download] {
+    &[download]:not(.no-icon) {
       @include button-icon;
       @include icon(download);
     }
@@ -99,7 +99,7 @@ a {
   ///
   /// Stand alone links.
   ///
-  &.standalone-link {
+  &.standalone-link:not(.no-icon) {
     @include icon(arrow-right, after);
 
     margin-left: 0;
@@ -136,32 +136,32 @@ a {
   ///
   /// Download links.
   ///
-  &[download] {
+  &[download]:not(.no-icon) {
     @include icon(download, after);
   }
 
   ///
   /// Mail links.
   ///
-  &[href^="mailto:"] {
+  &[href^="mailto:"]:not(.no-icon) {
     @include icon(envelope, after);
   }
 
   ///
   /// Phone links.
   ///
-  &[href^="tel:"] {
+  &[href^="tel:"]:not(.no-icon) {
     @include icon(phone, after);
   }
 
   ///
   /// External links get an indicator.
   ///
-  &[href^="http://"],
-  &[href^="https://"] {
+  &[href^="http://"]:not(.no-icon),
+  &[href^="https://"]:not(.no-icon) {
     @include icon(external-link, after);
 
-    &[download]:not(.button) {
+    &[download]:not(.button):not(.no-icon) {
       @include icon(download, after);
     }
   }
@@ -257,7 +257,7 @@ a {
       ///
       /// Stand alone links.
       ///
-      &.standalone-link {
+      &.standalone-link:not(.no-icon) {
         @extend %a-bounce-animation;
         @include icon(arrow-right, after);
       }
@@ -265,9 +265,9 @@ a {
   }
 
   &.button {
-    &[href^="http://"],
-    &[href^="https://"] {
-      &[href*="stad.gent"] {
+    &[href^="http://"]:not(.no-icon),
+    &[href^="https://"]:not(.no-icon) {
+      &[href*="stad.gent"]:not(.no-icon) {
         @extend %a-bounce-animation;
         @include icon(arrow-right);
 
