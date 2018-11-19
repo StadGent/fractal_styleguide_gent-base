@@ -11,6 +11,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-574: tabs
 * DTGB-633: inverted variant of contact-details
 
+### Updated
+
+* DTGB-634: cta block variants
+
 ## [3.0.0-alpha.9]
 
 ### Added
