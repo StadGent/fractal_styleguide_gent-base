@@ -29,7 +29,7 @@ a {
     padding-top: .6em;
     text-decoration: none;
 
-    &:not([class*="icon-"]):not(.no-icon) {
+    &:not([class*="icon"]) {
       @include button-icon;
       @include icon(arrow-right);
     }
