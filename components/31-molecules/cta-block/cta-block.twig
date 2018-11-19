@@ -1,25 +1,27 @@
 <div class="cta-block box-left {{ type }}">
   <div class="inner-box">
-    {%  if title %}
+    {% if title %}
       {% include '@heading' with {
-        'type': 'h2',
-        'heading_text': title
+      'type': 'h2',
+      'heading_text': title
       } %}
     {% endif %}
 
-    {% include '@paragraph' with {
+    {% if description %}
+      {% include '@paragraph' with {
       'text': description
-    } %}
+      } %}
+    {% endif %}
 
-  {% if links|length > 1 %}
-    <ul class="links">
-      <li>
-        {% include '@link' with {
+    {% if links|length > 1 %}
+      <ul class="links">
+        <li>
+          {% include '@link' with {
           'link': links[0].url,
           'text': links[0].text,
           'modifier':  'button button-primary',
-          'download': 'download'
-        } %}
+          'download': links[0].document|length
+          } %}
           {% if links[0].document|length %}
             <span class="file-type">
               PDF
@@ -30,33 +32,45 @@
               {% endif %}
             </span>
           {% endif %}
-      </li>
-      <li>
-        {% include '@link' with {
+        </li>
+        <li>
+          {% include '@link' with {
           'link': links[1].url,
           'text': links[1].text,
-          'modifier': 'standalone-link'
-        } %}
-        {% if links[1].document|length %}
-          <span class="file-type">
+          'modifier': 'standalone-link',
+          'download': links[0].document|length
+          } %}
+          {% if links[1].document|length %}
+            <span class="file-type">
             PDF
-            {% if links[1].size|length %}
-              <span class="file-size">
+              {% if links[1].size|length %}
+                <span class="file-size">
                 (753.77 KB)
               </span>
-            {% endif %}
+              {% endif %}
           </span>
-        {% endif %}
-      </li>
-    </ul>
-  {% else %}
-    {% for link in links %}
-      {% include '@link' with {
+          {% endif %}
+        </li>
+      </ul>
+    {% else %}
+      {% for link in links %}
+        {% include '@link' with {
         'link': links[0].url,
         'text': links[0].text,
-        'modifier': 'standalone-link'
-      } %}
-    {% endfor %}
-  {% endif %}
+        'modifier': 'button button-primary',
+        'download': links[0].document|length
+        } %}
+        {% if links[0].document|length %}
+          <span class="file-type">
+              PDF
+            {% if links[0].size|length %}
+              <span class="file-size">
+                  (753.77 KB)
+                </span>
+            {% endif %}
+            </span>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
   </div>
 </div>

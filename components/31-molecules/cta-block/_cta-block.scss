@@ -1,13 +1,19 @@
 .cta-block {
 
+  &.link .inner-box::before {
+    @include spot-image('link-light', 7rem);
+  }
+
+  &.download .inner-box::before {
+    @include spot-image('download-light', 7rem);
+  }
+
   .inner-box {
 
-    &::before {
-      @include spot-image('download-light', 7rem);
-    }
+    min-height: 11rem;
 
-    p {
-      margin: 0;
+    a[download] {
+      margin-right: 1rem;
     }
 
     li {
@@ -25,11 +31,6 @@
 
         padding-top: .8rem;
         border-top: 2px solid;
-      }
-
-      > a {
-        margin-right: 1rem;
-
       }
     }
   }
