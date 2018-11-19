@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Added
 
 * DTGB-574: tabs
+* DTGB-633: inverted variant of contact-details
 
 ## [3.0.0-alpha.9]
 
