@@ -81,7 +81,7 @@ window.gent_styleguide = (function () {
   };
 
   return {
-    TabTrap: TabTrap,
-    toggleScrollLockParent: toggleScrollLockParent
+    TabTrap,
+    toggleScrollLockParent
   };
 })();
