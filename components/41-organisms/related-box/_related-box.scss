@@ -6,15 +6,17 @@
 
     > h2 {
       flex-basis: 100%;
+      max-width: none;
     }
 
     &-column {
-      width: span(12 of 12);
       margin-bottom: 1.6rem;
       padding-right: 2rem;
 
-      @include tablet {
-        width: span(4 of 8);
+      & + & {
+        @include tablet {
+          flex-basis: span(4 of 8);
+        }
       }
 
       @include desktop {
