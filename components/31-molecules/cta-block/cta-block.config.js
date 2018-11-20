@@ -49,8 +49,8 @@ module.exports = {
       context: {
         links: [
           {
-            text: 'When the weather is hot',
-            url: '#'
+            text: 'An external link',
+            url: 'https://stad.gent'
           }
         ]
       }
