@@ -12,8 +12,32 @@
 
     {% if contacts|length < 3 %}
       <ul class="main-contacts">
-        {% for contact_category in contact_categories %}
-          <li>
+        {% set itemCount = contact_categories|length + contacts|length %}
+
+        {% if itemCount > 3 %}
+          {# Categories #}
+          {% for contact_category in contact_categories %}
+            <li>
+              {% include '@link' with {
+                'link': contact_category.link,
+                'text': contact_category.name
+              } %}
+            </li>
+          {% endfor %}
+
+          {# Contacts #}
+          {% for contact in contacts %}
+            <li>
+              {% include '@link' with {
+                'link': contact.link,
+                'text': contact.link_text
+              } %}
+            </li>
+          {% endfor %}
+
+        {% else %}
+          {# Categories #}
+          {% for contact_category in contact_categories %}
             {% include '@teaser-contact' with {
               teaser_uid: contact_category.name,
               teaser_title: contact_category.name,
@@ -21,19 +45,21 @@
               teaser_paragraph_text: contact_category.description,
               header_level: 'h4'
             } %}
-          </li>
-        {% endfor %}
-        {% for contact in contacts %}
-          {% include '@teaser-contact' with {
-            teaser_uid: contact.email,
-            teaser_title: contact.link_text,
-            teaser_title_link: contact.link,
-            teaser_paragraph_text: contact.address,
-            teaser_telephone: contact.phone,
-            teaser_email: contact.email,
-            header_level: 'h4'
-          } %}
-        {% endfor %}
+          {% endfor %}
+
+          {# Contacts #}
+          {% for contact in contacts %}
+            {% include '@teaser-contact' with {
+              teaser_uid: contact.email,
+              teaser_title: contact.link_text,
+              teaser_title_link: contact.link,
+              teaser_paragraph_text: contact.address,
+              teaser_telephone: contact.phone,
+              teaser_email: contact.email,
+              header_level: 'h4'
+            } %}
+          {% endfor %}
+        {% endif %}
       </ul>
     {% else %}
       <ul class="main-contacts">
