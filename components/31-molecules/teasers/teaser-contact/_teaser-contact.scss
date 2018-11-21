@@ -3,6 +3,10 @@
   padding-bottom: .7rem;
   border-bottom: 2px solid;
 
+  & + & {
+    margin-top: 1.2rem;
+  }
+
   .ol-popup & {
     padding-bottom: 0;
     border-bottom: 0; 
@@ -15,11 +19,17 @@
   }
 
   &-info {
+    @extend %list-no-style;
     margin-bottom: .4rem;
+    margin-top: -$link-padding;
 
-    > .no-icon {
+    li > .no-icon {
       font-weight: normal;
     }
+  }
+
+  .teaser-title-link {
+    font-size: .8rem;
   }
 
   .read-more {

@@ -14,54 +14,25 @@
       <ul class="main-contacts">
         {% for contact_category in contact_categories %}
           <li>
-            {% include '@link' with {
-              'link': contact_category.link,
-              'text': contact_category.name,
-              'modifier': 'standalone-link'
-            } %}
-            {% include '@paragraph' with {
-              'text': contact_category.description
+            {% include '@teaser-contact' with {
+              teaser_uid: contact_category.name,
+              teaser_title: contact_category.name,
+              teaser_title_link: contact_category.link,
+              teaser_paragraph_text: contact_category.description,
+              header_level: 'h4'
             } %}
           </li>
         {% endfor %}
         {% for contact in contacts %}
-          <li>
-            <address class="contact-fiche">
-              {% include '@link' with {
-                'link': contact.link,
-                'text': contact.link_text,
-                'modifier': 'standalone-link contact-name'
-              } %}
-              <p>
-                {{ contact.address }}
-              </p>
-              <ul class="links">
-                <li>
-                  {% include '@link' with {
-                    'link': 'tel:' ~ contact.phone,
-                    'text': contact.phone,
-                    'modifier': 'contact-phone'
-                  } %}
-                </li>
-                <li>
-                  {% include '@link' with {
-                    'link': 'mailto:' ~ contact.email,
-                    'text': contact.email,
-                    'modifier': 'contact-email'
-                  } %}
-                </li>
-              </ul>
-            </address>
-            {% if contact.opening_hours|length > 0 %}
-              <span class="opening-hours open">
-                             {{ 'Today open - ' }}<time>{{ contact.opening_hours }}</time>
-                             </span>
-            {% else %}
-              <span class="opening-hours closed">
-                             {{ 'Closed today' }}
-                             </span>
-            {% endif %}
-          </li>
+          {% include '@teaser-contact' with {
+            teaser_uid: contact.email,
+            teaser_title: contact.link_text,
+            teaser_title_link: contact.link,
+            teaser_paragraph_text: contact.address,
+            teaser_telephone: contact.phone,
+            teaser_email: contact.email,
+            header_level: 'h4'
+          } %}
         {% endfor %}
       </ul>
     {% else %}
@@ -93,7 +64,7 @@
       'heading_text': 'Location'
     } %}
 
-    {%  include '@map' %}
+    {% include '@map' %}
 
     {% include '@heading' with {
       'type': 'h3',

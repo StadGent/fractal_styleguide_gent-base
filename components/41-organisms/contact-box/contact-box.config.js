@@ -16,7 +16,7 @@ module.exports = {
       {
         link: '#',
         link_text: 'Thomas Vandersteen',
-        address: 'Kasteelwegel 23<br />9000 Gent',
+        address: 'Kasteelwegel 23, 9000 Gent',
         phone: '09 123 45 67',
         email: 'thomas.vandersteen@stad.gent',
         opening_hours: 'From 10:00 till 18:00'
@@ -24,7 +24,7 @@ module.exports = {
       {
         link: '#',
         link_text: 'Thomas Vandersteen',
-        address: 'Kasteelwegel 23<br />9000 Gent',
+        address: 'Kasteelwegel 23, 9000 Gent',
         phone: '09 123 45 67',
         email: 'thomas.vandersteen@stad.gent',
         opening_hours: 'From 10:00 till 18:00'
