@@ -71,12 +71,9 @@ module.exports = {
 
         // Duplicate contacts so we have twice as much contacts
         dataCopy.contacts = dataCopy.contacts
-          .map(function (item) {
-            return [item, item];
-          })
-          .reduce(function (a, b) {
-            return a.concat(b);
-          });
+          .reduce((res, current) => {
+            return res.concat(Array(2).fill(current));
+          }, []);
 
         dataCopy.authorized_persons = [];
         dataCopy.map = false;

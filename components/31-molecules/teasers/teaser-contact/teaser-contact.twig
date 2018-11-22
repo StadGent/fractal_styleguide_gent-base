@@ -6,7 +6,7 @@
           <a href="{{ teaser_title_link }}" class="standalone-link">{{ teaser_title }}</a>
         </{{ header_level|default('h3') }}>
       {% else %}
-        <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
+        <{{ header_level|default('h3') }} id="{{ teaser_uid }}">{{ teaser_title }}</{{ header_level|default('h3') }}>
       {% endif %}
 
       {% if teaser_paragraph_text %}
