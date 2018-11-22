@@ -1,16 +1,15 @@
 <div class="contact-box">
   {% include '@heading' with {
     'type': 'h2',
-    'heading_text': 'Contact'
+    'heading_text': 'Additional information'
   } %}
 
   <div class="contact-box-column">
-    {% include '@heading' with {
-      'type': 'h3',
-      'heading_text': 'Contacts'
-    } %}
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Contacts'
+      } %}
 
-    {% if contacts|length < 3 %}
       <ul class="main-contacts">
         {% set itemCount = contact_categories|length + contacts|length %}
 
@@ -19,8 +18,9 @@
           {% for contact_category in contact_categories %}
             <li>
               {% include '@link' with {
-                'link': contact_category.link,
-                'text': contact_category.name
+                link: contact_category.link,
+                text: contact_category.name,
+                modifier: 'standalone-link'
               } %}
             </li>
           {% endfor %}
@@ -29,8 +29,9 @@
           {% for contact in contacts %}
             <li>
               {% include '@link' with {
-                'link': contact.link,
-                'text': contact.link_text
+                link: contact.link,
+                text: contact.link_text,
+                modifier: 'standalone-link'
               } %}
             </li>
           {% endfor %}
@@ -42,7 +43,6 @@
               teaser_uid: contact_category.name,
               teaser_title: contact_category.name,
               teaser_title_link: contact_category.link,
-              teaser_paragraph_text: contact_category.description,
               header_level: 'h4'
             } %}
           {% endfor %}
@@ -61,52 +61,34 @@
           {% endfor %}
         {% endif %}
       </ul>
-    {% else %}
-      <ul class="main-contacts">
-        {% for contact_category in contact_categories %}
+  </div>
+  <div class="contact-box-column">
+    {% if map %}
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Location'
+      } %}
+
+      {% include '@map' %}
+    {% endif %}
+
+    {% if authorized_persons|length > 0 %}
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Authorized persons'
+      } %}
+
+      <ul class="links">
+        {% for person in authorized_persons %}
           <li>
             {% include '@link' with {
-              'link': contact_category.link,
-              'text': contact_category.name,
+              'link': person.link,
+              'text': person.link_text,
               'modifier': 'standalone-link'
-            } %}
-          </li>
-        {% endfor %}
-        {% for contact in contacts %}
-          <li>
-            {% include '@link' with {
-              'link': contact.link,
-              'text': contact.link_text,
-              'modifier': 'standalone-link contact-name'
             } %}
           </li>
         {% endfor %}
       </ul>
     {% endif %}
-  </div>
-  <div class="contact-box-column">
-    {% include '@heading' with {
-      'type': 'h3',
-      'heading_text': 'Location'
-    } %}
-
-    {% include '@map' %}
-
-    {% include '@heading' with {
-      'type': 'h3',
-      'heading_text': 'Authorized persons'
-    } %}
-
-    <ul class="links">
-      {% for person in authorized_persons %}
-        <li>
-          {% include '@link' with {
-            'link': person.link,
-            'text': person.link_text,
-            'modifier': 'standalone-link'
-          } %}
-        </li>
-      {% endfor %}
-    </ul>
   </div>
 </div>

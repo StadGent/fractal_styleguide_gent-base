@@ -16,12 +16,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &-info {
     @extend %list-no-style;
-    margin-bottom: .4rem;
     margin-top: -$link-padding;
+    margin-bottom: .4rem;
 
     li > .no-icon {
       font-weight: normal;

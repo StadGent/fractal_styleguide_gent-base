@@ -9,9 +9,11 @@
         <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
       {% endif %}
 
-      {% include '@paragraph' with {
-        'text': teaser_paragraph_text
-      } %}
+      {% if teaser_paragraph_text %}
+        {% include '@paragraph' with {
+          'text': teaser_paragraph_text
+        } %}
+      {% endif %}
 
       {% if teaser_telephone or teaser_email %}
       <ul class="teaser-contact-info">
