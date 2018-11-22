@@ -21,23 +21,17 @@
     margin: 0;
   }
 
-  address.contact-fiche {
-    margin-top: .8rem;
-
-    ul.links a {
-      font-weight: normal;
-    }
-
-    .contact-email {
-      margin-top: 0;
-    }
-  }
-
   &-column {
     width: 100%;
 
     @include tablet {
       width: span(6 of 12);
+      padding: gutter() / 2;
+
+      &:first-of-type {
+        width: calc(#{span(6 of 12)} + #{gutter() / 2});
+        margin-left: -#{gutter() / 2};
+      }
     }
 
     @include desktop {
@@ -65,41 +59,10 @@
     li {
       width: 100%;
 
-      @include desktop {
-        width: 50%;
-        min-width: 20rem;
-      }
-
       &:first-of-type .contact-fiche {
         margin-top: 0;
       }
 
-    }
-  }
-
-  .opening-hours {
-    @include icon(clock);
-
-    display: inline-block;
-    padding: 0 .5rem;
-    font-weight: 700;
-    line-height: 1.8;
-
-    &::before {
-      font-size: 1.5em;
-      vertical-align: -13%;
-    }
-
-    time {
-      font-weight: normal;
-    }
-
-    &.open {
-      background-color: color('green', -4);
-    }
-
-    &.closed {
-      background-color: color('red', -4);
     }
   }
 
@@ -109,5 +72,9 @@
 
   button {
     margin-top: 2.3rem;
+  }
+
+  .teaser-contact:last-of-type {
+    border-bottom: 0;
   }
 }
