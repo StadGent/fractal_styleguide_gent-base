@@ -22,8 +22,8 @@
   }
 
   &-column {
-    width: 100%;
     flex: 1 0 auto;
+    width: 100%;
 
     @include tablet {
       width: span(6 of 12);
