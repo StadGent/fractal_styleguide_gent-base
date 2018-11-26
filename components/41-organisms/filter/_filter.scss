@@ -80,8 +80,6 @@
     }
 
     .result__show-filters {
-      margin-bottom: 2rem;
-
       @include tablet {
         display: none;
       }
@@ -96,6 +94,21 @@
 
       a {
         white-space: nowrap;
+      }
+    }
+
+    .filter__result-count {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.2rem;
+
+      > * {
+        margin: 0;
+      }
+
+      > * + * {
+        margin-left: gutter() / 2;
       }
     }
 
