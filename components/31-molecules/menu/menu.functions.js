@@ -47,6 +47,9 @@
         openbtn.setAttribute('aria-expanded', false);
       }
 
+      // eslint-disable-next-line no-undef
+      gent_styleguide.toggleScrollLockParent(true, drawer);
+
       // remove the menu from the tabindex
       setTimeout(function () {
         drawer.style.display = 'none';
@@ -59,7 +62,9 @@
      * @param {event} e onclick
      */
     const open = (e) => {
-      e.preventDefault();
+      if (e) {
+        e.preventDefault();
+      }
 
       // add the menu to the tabindex
       drawer.style.display = 'block';
@@ -78,8 +83,10 @@
 
       // handle keyboard input
       document.addEventListener('keydown', handleKeyboardInput);
-    };
 
+      // eslint-disable-next-line no-undef
+      gent_styleguide.toggleScrollLockParent(false, drawer);
+    };
 
     /**
      * Handle keyboard input
@@ -131,5 +138,9 @@
     openbtn.addEventListener('click', open);
     closebtn.addEventListener('click', close);
     overlay.addEventListener('click', close);
+
+    return {
+      open, close
+    };
   };
 }));

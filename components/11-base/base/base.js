@@ -61,7 +61,27 @@ window.gent_styleguide = (function () {
     this.hasFocusables = focusables && focusables.length > 0;
   }
 
+  /**
+   * Toggle a scroll lock on a visible parent modal or on the body.
+   *
+   * @param {boolean} release or lock parent.
+   * @param {object} elem DOM element.
+   * @param {string} parentSelector Queryselectorstring.
+   */
+  const toggleScrollLockParent = (release, elem, parentSelector) => {
+    parentSelector = parentSelector || '.modal.visible';
+
+    const parentModal = elem.parentNode.closest(parentSelector);
+    if (parentModal) {
+      parentModal.style.overflow = release ? '' : 'hidden';
+    }
+    else {
+      document.body.style.overflow = release ? '' : 'hidden';
+    }
+  };
+
   return {
-    TabTrap: TabTrap
+    TabTrap,
+    toggleScrollLockParent
   };
 })();
