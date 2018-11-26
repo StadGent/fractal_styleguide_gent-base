@@ -14,7 +14,9 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * DTGB-634: cta block variants
-* DTGB-641: display filter button next to result instead of above it
+
+### Changed
+* DTGB-641: Refactored filter template to display filter button next to result instead of above it
 
 ### Fixed
 
