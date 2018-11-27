@@ -32,4 +32,4 @@ Examples for the link to the homepage:
 
 * Breadcrumbs must be contained in a nav region.
 * The nav region must include a visually hidden title 'breadcrumbs' (translatable) as first element.
-* The nav region must use the aria-labelledby attribute to reference the hidden title.```
+* The nav region must use the aria-labelledby attribute to reference the hidden title.
