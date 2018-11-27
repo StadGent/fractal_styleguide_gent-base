@@ -2,9 +2,7 @@
   <article class="teaser-content">
     <div class="content__bottom">
       {% if teaser_title_link %}
-        <{{ header_level|default('h3') }} id="{{ teaser_uid }}" class="teaser-title-link">
-          <a href="{{ teaser_title_link }}" class="standalone-link">{{ teaser_title }}</a>
-        </{{ header_level|default('h3') }}>
+          <a href="{{ teaser_title_link }}" class="teaser-title-link standalone-link">{{ teaser_title }}</a>
       {% else %}
         <{{ header_level|default('h3') }} id="{{ teaser_uid }}">{{ teaser_title }}</{{ header_level|default('h3') }}>
       {% endif %}
