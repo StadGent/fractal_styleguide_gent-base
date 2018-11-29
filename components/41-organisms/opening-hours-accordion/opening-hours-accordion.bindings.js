@@ -6,9 +6,9 @@
     return;
   }
 
-  const selected = document.querySelectorAll('.opening-hours-accordion');
-  for (let i = selected.length; i--;) {
-    new OpeningHoursAccordion(selected[i]); // eslint-disable-line no-undef
-  }
+  // const selected = document.querySelectorAll('.opening-hours-accordion');
+  // for (let i = selected.length; i--;) {
+  //   new OpeningHoursAccordion(selected[i]); // eslint-disable-line no-undef
+  // }
 
 })();

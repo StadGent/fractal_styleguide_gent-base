@@ -1,26 +1,28 @@
-<div
-    class="opening-hours-accordion"
-    data-service="{{ serviceId }}"
->
-  <div class="opening-hours-accordion__item">
-    <h3>%label%</h3>
-     {% include '@opening-hours' with {
-       serviceId: '%service%',
-       channels: '%channel%',
-       type: 'day'
-     } %}
+{#<div#}
+    {#class="opening-hours-accordion"#}
+    {#data-service="{{ serviceId }}"#}
+{#>#}
+  {#<div class="opening-hours-accordion__item">#}
+    {#<h3>%label%</h3>#}
+     {#{% include '@opening-hours' with {#}
+       {#serviceId: '%service%',#}
+       {#channels: '%channel%',#}
+       {#type: 'day'#}
+     {#} %}#}
 
-    {% set openingHoursMonth %}
-      {% include '@opening-hours' with {
-        serviceId: '%service%',
-        channels: '%channel%',
-        type: 'week-month'
-      } %}
-    {% endset %}
+    {#{% set openingHoursMonth %}#}
+      {#{% include '@opening-hours' with {#}
+        {#serviceId: '%service%',#}
+        {#channels: '%channel%',#}
+        {#type: 'week-month'#}
+      {#} %}#}
+    {#{% endset %}#}
 
-    {% include '@accordion' with {
-      buttonText: 'All opening hours',
-      content: openingHoursMonth
-    } %}
-  </div>
-</div>
+    {#{% include '@accordion' with {#}
+      {#buttonText: 'All opening hours',#}
+      {#content: openingHoursMonth#}
+    {#} %}#}
+  {#</div>#}
+{#</div>#}
+
+RE-DO THIS....
