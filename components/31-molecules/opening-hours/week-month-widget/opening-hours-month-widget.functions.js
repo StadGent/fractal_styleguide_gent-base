@@ -51,69 +51,39 @@
       let current = e.target;
       let currentPosition = +current.getAttribute('aria-posinset');
 
-      let changeFocus = function (e, nextElem) {
-        e.preventDefault();
-        nextElem.click();
-      };
+      const changeFocus = function () {
+        let nextElem;
+        let i = 0;
 
-      let next = function () {
-        let nextElem = elem.querySelector('[aria-posinset="' + ++currentPosition + '"]')
-          || elem.querySelector('[aria-posinset="' + 1 + '"]');
-        changeFocus(e, nextElem);
-      };
+        while (!nextElem && i < arguments.length) {
+          nextElem = elem.querySelector('[aria-posinset="' + arguments[i] + '"]');
+          i++;
+        }
 
-      let previous = function () {
-        let nextElem = elem.querySelector('[aria-posinset="' + --currentPosition + '"]')
-          || elem.querySelector('[aria-posinset="' + 31 + '"]')
-          || elem.querySelector('[aria-posinset="' + 30 + '"]');
-        changeFocus(e, nextElem);
-      };
-
-      let up = function () {
-        let nextElem = elem.querySelector('[aria-posinset="' + (currentPosition - 7) + '"]')
-          || elem.querySelector('[aria-posinset="' + (currentPosition + 4 * 7) + '"]')
-          || elem.querySelector('[aria-posinset="' + (currentPosition + 3 * 7) + '"]');
-        changeFocus(e, nextElem);
-      };
-
-      let down = function () {
-        let nextElem = elem.querySelector('[aria-posinset="' + (currentPosition + 7) + '"]')
-          || elem.querySelector('[aria-posinset="' + (currentPosition - 4 * 7) + '"]')
-          || elem.querySelector('[aria-posinset="' + (currentPosition - 3 * 7) + '"]');
-        changeFocus(e, nextElem);
-      };
-
-      let home = function () {
-        let nextElem = elem.querySelector('[aria-posinset="1"]');
-        changeFocus(e, nextElem);
-      };
-
-      let end = function () {
-        let nextElem = elem.querySelector('[aria-posinset="31"]')
-          || elem.querySelector('[aria-posinset="30"]')
-          || elem.querySelector('[aria-posinset="29"]')
-          || elem.querySelector('[aria-posinset="28"]');
-        changeFocus(e, nextElem);
+        if (nextElem) {
+          e.preventDefault();
+          nextElem.click();
+        }
       };
 
       switch (keyCode) {
-        case 37:
-          previous();
+        case 37: // previous (left arrow)
+          changeFocus(--currentPosition, 31, 30);
           break;
-        case 38:
-          up();
+        case 38: // up (up arrow)
+          changeFocus(currentPosition - 7, currentPosition + 4 * 7, currentPosition + 3 * 7);
           break;
-        case 40:
-          down();
+        case 40: // down (down arrow)
+          changeFocus(currentPosition + 7, currentPosition - 4 * 7, currentPosition - 3 * 7);
           break;
-        case 39:
-          next();
+        case 39: // next (right arrow)
+          changeFocus(++currentPosition, 1);
           break;
-        case 36:
-          home();
+        case 36: // home
+          changeFocus(1);
           break;
-        case 35:
-          end();
+        case 35: // end
+          changeFocus(31, 30, 29, 28);
           break;
       }
     };
