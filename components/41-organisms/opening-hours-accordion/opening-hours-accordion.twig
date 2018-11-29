@@ -1,28 +1,17 @@
-{#<div#}
-    {#class="opening-hours-accordion"#}
-    {#data-service="{{ serviceId }}"#}
-{#>#}
-  {#<div class="opening-hours-accordion__item">#}
-    {#<h3>%label%</h3>#}
-     {#{% include '@opening-hours' with {#}
-       {#serviceId: '%service%',#}
-       {#channels: '%channel%',#}
-       {#type: 'day'#}
-     {#} %}#}
+<div class="opening-hours-accordion">
+  <div class="opening-hours-accordion__item">
+    <h3>Appointments</h3>
+    {% include '@day-widget' with {
+      open: true
+    } %}
 
-    {#{% set openingHoursMonth %}#}
-      {#{% include '@opening-hours' with {#}
-        {#serviceId: '%service%',#}
-        {#channels: '%channel%',#}
-        {#type: 'week-month'#}
-      {#} %}#}
-    {#{% endset %}#}
+    {% set openingHoursMonth %}
+      {% include '@week-month-widget' %}
+    {% endset %}
 
-    {#{% include '@accordion' with {#}
-      {#buttonText: 'All opening hours',#}
-      {#content: openingHoursMonth#}
-    {#} %}#}
-  {#</div>#}
-{#</div>#}
-
-RE-DO THIS....
+    {% include '@accordion' with {
+      buttonText: 'All opening hours',
+      content: openingHoursMonth
+    } %}
+  </div>
+</div>

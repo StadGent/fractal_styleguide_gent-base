@@ -1,6 +1,6 @@
 <div class="opening-hours-wrapper" data-type="day">
-  <div class="openinghours openinghours--details {{ open ? 'openinghours--day-open' : 'openinghours--day-closed' }}" property="openingHoursSpecification"
-       typeof="OpeningHoursSpecification">
+  <div class="openinghours openinghours--details {{ open ? 'openinghours--day-open' : 'openinghours--day-closed' }}"
+       property="openingHoursSpecification" typeof="OpeningHoursSpecification">
     <div class="openinghours--date openinghours--special-day" property="validFrom validThrough" datetime="2018-11-29">
       <span class="openinghours--date-special-day">Today</span>
       <span class="openinghours--date-between">, </span>
@@ -16,18 +16,18 @@
           {{ open ? 'open' : 'closed' }}
         </span>
         {% if open %}
-        <div class="openinghours--time">
-          <span class="openinghours--time-prefix">from</span>
-          <time property="opens" datetime="09:00" aria-label="09:00">
-            09:00 h
-          </time>
-          <span class="openinghours--time-separator">to</span>
-          <time property="closes" datetime="17:00" aria-label="17:00">
-            17:00 h
-          </time>
-        </div>
+          <div class="openinghours--time">
+            <span class="openinghours--time-prefix">from</span>
+            <time property="opens" datetime="09:00" aria-label="09:00">
+              09:00 h
+            </time>
+            <span class="openinghours--time-separator">to</span>
+            <time property="closes" datetime="17:00" aria-label="17:00">
+              17:00 h
+            </time>
+          </div>
+        {% endif %}
       </div>
-      {% endif %}
     </div>
   </div>
   {% if channels > 1 %}

@@ -1,11 +1,4 @@
 .opening-hours-accordion {
-  display: none;
-
-  // states
-  &.is-loaded {
-    display: block;
-  }
-
   // children
   &__item {
     & + & {
