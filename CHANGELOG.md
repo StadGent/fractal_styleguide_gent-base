@@ -9,6 +9,18 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Added
 
 * DTGB-574: tabs
+* DTGB-633: inverted variant of contact-details
+
+### Updated
+
+* DTGB-634: cta block variants
+
+### Changed
+* DTGB-641: Refactored filter template to display filter button next to result instead of above it
+
+### Fixed
+
+* DTGB-635: Fixed missing scroll lock on mobile menu.
 
 ## [3.0.0-alpha.9]
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const generateCheckboxes = (uid)=>{
+const generateCheckboxes = (uid) =>{
   let result = [];
   for (let i = 10; i--;) {
     var title = 'Category ' + (10 - i);

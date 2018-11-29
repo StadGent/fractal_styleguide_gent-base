@@ -1,0 +1,55 @@
+<li class="teaser teaser-contact">
+  <article class="teaser-content">
+    <div class="content__bottom">
+      {% if teaser_title_link %}
+          <a href="{{ teaser_title_link }}" class="teaser-title-link standalone-link">{{ teaser_title }}</a>
+      {% else %}
+        <{{ header_level|default('h3') }} id="{{ teaser_uid }}">{{ teaser_title }}</{{ header_level|default('h3') }}>
+      {% endif %}
+
+      {% if teaser_paragraph_text %}
+        {% include '@paragraph' with {
+          'text': teaser_paragraph_text
+        } %}
+      {% endif %}
+
+      {% if teaser_telephone or teaser_email %}
+      <ul class="teaser-contact-info">
+        {% if teaser_telephone %}
+          <li>
+          {% include '@link' with {
+            'text': teaser_telephone,
+            'aria_labelledby': teaser_uid,
+            'link': 'tel:'~teaser_telephone,
+            'modifier': 'no-icon'
+          } %}
+          </li>
+        {% endif %}
+        {% if teaser_email %}
+        <li>
+          {% include '@link' with {
+            'text': teaser_email,
+            'aria_labelledby': teaser_uid,
+            'link': 'mailto:'~teaser_email,
+            'modifier': 'no-icon'
+          } %}
+        </li>
+        {% endif %}
+      </ul>
+      {% endif %}
+
+
+      {% if teaser_link_text is not empty and teaser_link_link is not empty %}
+        {% include '@link' with {
+            'text': teaser_link_text,
+            'aria_labelledby': teaser_uid,
+            'link': teaser_link_link,
+            'modifier': 'read-more standalone-link'
+          } %}
+      {% endif %}
+    </div>
+  </article>
+  <a href="{{ teaser_link_link }}" class="teaser-overlay-link" tabindex="-1"
+     aria-hidden="true">{{ teaser_title }}</a>
+</li>
+
