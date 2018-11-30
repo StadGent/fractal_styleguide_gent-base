@@ -19,7 +19,6 @@
           <li>
           {% include '@link' with {
             'text': teaser_telephone,
-            'aria_labelledby': teaser_uid,
             'link': 'tel:'~teaser_telephone,
             'modifier': 'no-icon'
           } %}
@@ -29,7 +28,6 @@
         <li>
           {% include '@link' with {
             'text': teaser_email,
-            'aria_labelledby': teaser_uid,
             'link': 'mailto:'~teaser_email,
             'modifier': 'no-icon'
           } %}
@@ -42,7 +40,6 @@
       {% if teaser_link_text is not empty and teaser_link_link is not empty %}
         {% include '@link' with {
             'text': teaser_link_text,
-            'aria_labelledby': teaser_uid,
             'link': teaser_link_link,
             'modifier': 'read-more standalone-link'
           } %}
