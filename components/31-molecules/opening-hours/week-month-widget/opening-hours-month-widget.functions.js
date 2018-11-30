@@ -68,7 +68,7 @@
 
       switch (keyCode) {
         case 37: // previous (left arrow)
-          changeFocus(--currentPosition, 31, 30);
+          changeFocus(--currentPosition, 31, 30, 29, 28);
           break;
         case 38: // up (up arrow)
           changeFocus(currentPosition - 7, currentPosition + 4 * 7, currentPosition + 3 * 7);
