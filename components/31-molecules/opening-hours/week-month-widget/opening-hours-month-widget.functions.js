@@ -15,12 +15,6 @@
   }
 })(this || window, function () {
   return function (elem, options) {
-    if (typeof gent_styleguide === 'undefined') {
-      // eslint-disable-next-line no-console
-      console.error('You need to include base.js.');
-      return;
-    }
-
     /**
      * Override default options with options param.
      */
