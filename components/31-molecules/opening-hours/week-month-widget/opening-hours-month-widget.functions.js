@@ -1,6 +1,6 @@
 'use strict';
 
-/* global define, module, gent_styleguide */
+/* global define, module */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(factory);
@@ -15,6 +15,7 @@
   }
 })(this || window, function () {
   return function (elem, options) {
+
     /**
      * Override default options with options param.
      */
