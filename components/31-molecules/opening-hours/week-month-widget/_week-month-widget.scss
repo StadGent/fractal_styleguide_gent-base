@@ -10,7 +10,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
   // Week view
   // ===
   &[data-type*="week"] .openinghours {
-    &--status,
+    &--day-open .openinghours--status,
     &--time-prefix {
       display: none;
     }
@@ -44,6 +44,10 @@ $breakpoint-openinghours: '(min-width: 750px)';
 
     &--date {
       flex-basis: 75%;
+    }
+
+    &--status {
+      text-transform: capitalize;
     }
   }
 

@@ -3,29 +3,55 @@ $breakpoint-openinghours: '(min-width: 750px)';
 // ===
 // Day view
 // ===
-.opening-hours-wrapper {
+.openinghours-widget {
   &[data-type="day"] {
     display: inline-block;
     border-radius: border-radius('radius-1');
     overflow: hidden;
 
-    .openinghours {
-      padding: .3rem .5rem 0 1.9rem;
-      background-color: color('green', -4);
+    > * {
+
       line-height: 1.4rem;
+    }
 
-      &:first-of-type {
-        @include icon(clock);
-        padding-left: .5rem;
+    .channel-label {
+      float: left;
+      font-size: 0;
+      font-weight: bold;
 
-        &::before {
-          font-size: 1.5em;
-          vertical-align: -25%;
-        }
+      &::after {
+        display: inline-block;
+        content: " ";
       }
 
-      &:not(:first-of-type) {
-        padding-top: 0;
+      &:nth-of-type(n + 2) {
+        padding-left: 1.9rem;
+        font-size: .8rem;
+
+        + .openinghours {
+          padding-top: 0;
+
+          &::before {
+            display: none;
+          }
+
+          .openinghours--date,
+          .openinghours--status {
+            display: none;
+          }
+
+        }
+      }
+    }
+
+    .openinghours {
+      @include icon(clock);
+      padding: .3rem .5rem 0;
+      background-color: color('green', -4);
+
+      &::before {
+        font-size: 1.5em;
+        vertical-align: -25%;
       }
 
       &:last-of-type {

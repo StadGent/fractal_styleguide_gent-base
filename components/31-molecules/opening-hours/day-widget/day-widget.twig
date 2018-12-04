@@ -1,60 +1,82 @@
-<div class="opening-hours-wrapper" data-type="day">
-  <div class="openinghours openinghours--details {{ open ? 'openinghours--day-open' : 'openinghours--day-closed' }}"
-       property="openingHoursSpecification" typeof="OpeningHoursSpecification">
-    <div class="openinghours--date openinghours--special-day" property="validFrom validThrough" datetime="2018-11-29">
-      <span class="openinghours--date-special-day">Today</span>
-      <span class="openinghours--date-between">, </span>
-      <span class="openinghours--date-day-of-week">
-            <link property="dayOfWeek" href="http://schema.org/Thursday">Thursday
-        </span>
-      <span class="openinghours--date-day">29</span>
-      <span class="openinghours--date-month">November</span>
+<div class="openinghours-widget" data-type="day">
+  {% if channels > 1 %}
+    <div class="channel-label">
+      Algemeen
     </div>
-    <div class="openinghours--content">
-      <div class="openinghours--times">
-        <span class="openinghours--status">
-          {{ open ? 'open' : 'closed' }}
-        </span>
-        {% if open %}
+
+    <div class="openinghours openinghours--details openinghours--day-open" property="openingHoursSpecification" typeof="OpeningHoursSpecification">
+      <div class="openinghours--date openinghours--special-day" property="validFrom validThrough" datetime="2018-12-04">
+        <span class="openinghours--date-special-day">Today</span><span class="openinghours--date-between">, </span>
+        <span class="openinghours--date-day-of-week"><link property="dayOfWeek" href="http://schema.org/Tuesday">Tuesday</span>
+        <span class="openinghours--date-day">4</span>
+        <span class="openinghours--date-month">December</span>
+      </div>
+      <div class="openinghours--content">
+        <div class="openinghours--times">
+          <span class="openinghours--status">open</span>
           <div class="openinghours--time">
             <span class="openinghours--time-prefix">from</span>
-            <time property="opens" datetime="09:00" aria-label="09:00">
-              09:00 h
-            </time>
+            <time property="opens" datetime="10:00" aria-label="10:00">10:00</time>
             <span class="openinghours--time-separator">to</span>
-            <time property="closes" datetime="17:00" aria-label="17:00">
-              17:00 h
-            </time>
+            <time property="closes" datetime="19:00" aria-label="19:00">19:00</time>
           </div>
-        {% endif %}
+        </div>
       </div>
     </div>
-  </div>
-  {% if channels > 1 %}
-    <div class="openinghours openinghours--details openinghours--day-open" property="openingHoursSpecification"
-         typeof="OpeningHoursSpecification">
+    <div class="channel-label">
+      Telefonisch
+    </div>
+
+    <div class="openinghours openinghours--details openinghours--day-open" property="openingHoursSpecification" typeof="OpeningHoursSpecification">
+      <div class="openinghours--date openinghours--special-day" property="validFrom validThrough" datetime="2018-12-04">
+        <span class="openinghours--date-special-day">Today</span><span class="openinghours--date-between">, </span>
+        <span class="openinghours--date-day-of-week"><link property="dayOfWeek" href="http://schema.org/Tuesday">Tuesday</span>
+        <span class="openinghours--date-day">4</span>
+        <span class="openinghours--date-month">December</span>
+      </div>
+      <div class="openinghours--content">
+        <div class="openinghours--times">
+          <span class="openinghours--status">open</span>
+          <div class="openinghours--time">
+            <span class="openinghours--time-prefix">from</span>
+            <time property="opens" datetime="09:00" aria-label="09:00">09:00</time>
+            <span class="openinghours--time-separator">to</span>
+            <time property="closes" datetime="16:00" aria-label="16:00">16:00</time>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {% else %}
+
+    <div class="openinghours openinghours--details {{ open ? 'openinghours--day-open' : 'openinghours--day-closed' }}"
+         property="openingHoursSpecification" typeof="OpeningHoursSpecification">
       <div class="openinghours--date openinghours--special-day" property="validFrom validThrough" datetime="2018-11-29">
         <span class="openinghours--date-special-day">Today</span>
         <span class="openinghours--date-between">, </span>
         <span class="openinghours--date-day-of-week">
-              <link property="dayOfWeek" href="http://schema.org/Thursday">Thursday
-          </span>
+            <link property="dayOfWeek" href="http://schema.org/Thursday">Thursday
+        </span>
         <span class="openinghours--date-day">29</span>
         <span class="openinghours--date-month">November</span>
       </div>
       <div class="openinghours--content">
         <div class="openinghours--times">
-          <span class="openinghours--status">by appointment</span>
-          <div class="openinghours--time">
-            <span class="openinghours--time-prefix">from</span>
-            <time property="opens" datetime="09:00" aria-label="09:00">
-              09:00 h
-            </time>
-            <span class="openinghours--time-separator">to</span>
-            <time property="closes" datetime="17:00" aria-label="17:00">
-              17:00 h
-            </time>
-          </div>
+        <span class="openinghours--status">
+          {{ open ? 'open' : 'closed' }}
+        </span>
+          {% if open %}
+            <div class="openinghours--time">
+              <span class="openinghours--time-prefix">from</span>
+              <time property="opens" datetime="09:00" aria-label="09:00">
+                09:00 h
+              </time>
+              <span class="openinghours--time-separator">to</span>
+              <time property="closes" datetime="17:00" aria-label="17:00">
+                17:00 h
+              </time>
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
