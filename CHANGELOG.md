@@ -8,6 +8,12 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Added
 
+* DTGB-649: contact block variants
+
+## [3.0.0-alpha.10]
+
+### Added
+
 * DTGB-574: tabs
 * DTGB-633: inverted variant of contact-details
 

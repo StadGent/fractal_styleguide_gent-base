@@ -1,5 +1,5 @@
 .contact-box {
-  @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+  @include theme('border-color', 'color-primary--lighten-4', 'contact-box-border-color');
 
   display: flex;
   position: relative;
@@ -22,7 +22,6 @@
   }
 
   &-column {
-    flex: 1 0 auto;
     width: 100%;
 
     @include tablet {
@@ -32,16 +31,6 @@
       &:first-of-type {
         width: calc(#{span(6 of 12)} + #{gutter() / 2});
         margin-left: -#{gutter() / 2};
-      }
-    }
-
-    @include desktop {
-      &:first-of-type {
-        width: span(4 of 12);
-      }
-
-      &:last-of-type {
-        width: span(8 of 12);
       }
     }
 
@@ -65,10 +54,6 @@
       }
 
     }
-  }
-
-  h3 {
-    @extend %h4;
   }
 
   button {
