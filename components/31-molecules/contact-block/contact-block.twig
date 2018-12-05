@@ -1,4 +1,4 @@
-<div class="contact-block box-left">
+<div class="contact-block box-left {% if tel %}tel{% endif %}{% if email %}mail{% endif %}">
   <div class="inner-box">
     {%  if title %}
       {% include '@heading' with {
@@ -7,9 +7,11 @@
       } %}
     {% endif %}
 
-    {% include '@paragraph' with {
-      'text': description
-    } %}
+    {% if description %}
+      {% include '@paragraph' with {
+        'text': description
+      } %}
+    {% endif %}
 
     <ul class="links">
       {% if tel %}
@@ -34,8 +36,7 @@
         <li>
           {% include '@link' with {
             'text': 'Check all contact details',
-            'link': '#',
-            'modifier': 'standalone-link'
+            'link': '#'
           } %}
         </li>
       {% endif %}

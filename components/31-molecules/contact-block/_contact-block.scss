@@ -1,10 +1,19 @@
 .contact-block {
+
+  &.tel .inner-box::before {
+    @include spot-image('phone-light', 7rem);
+  }
+
+  &.mail .inner-box::before {
+    @include spot-image('mail-light', 7rem);
+  }
+
   .inner-box {
     display: flex;
     flex-wrap: wrap;
 
-    &::before {
-      @include spot-image('download-light', 7rem);
+    h2 {
+      width: 100%;
     }
 
     li:last-of-type {
