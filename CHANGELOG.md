@@ -7,6 +7,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ## [Unreleased]
 
 ### Added
+
 * DTGB-649: contact block variants
 
 ## [3.0.0-alpha.10]
