@@ -1,4 +1,4 @@
-<div class="cta-block box-left {{ type }}">
+<div class="cta-block box-{{ top ? 'top' : 'left' }} {{ type }}">
   <div class="inner-box">
     {% if title %}
       {% include '@heading' with {
