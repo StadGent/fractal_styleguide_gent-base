@@ -56,6 +56,10 @@
       max-width: calc(100% - 2rem);
       margin-right: 1rem;
       margin-left: 1rem;
+
+      .inner-box {
+        height: 100%;
+      }
     }
   }
 }
