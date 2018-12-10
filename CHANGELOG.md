@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Added
 
 * DTGB-649: contact block variants
+* DTGB-650: multiple cta-block wrapper
 
 ## [3.0.0-alpha.10]
 
