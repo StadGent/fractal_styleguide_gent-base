@@ -37,9 +37,29 @@
 
   .file-type {
     text-transform: uppercase;
+    white-space: nowrap;
 
     .file-size {
       text-transform: lowercase;
+    }
+  }
+
+  &--multiple {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -1rem;
+    margin-left: -1rem;
+
+    > .cta-block {
+      flex: 1 0 20rem;
+      max-width: calc(100% - 2rem);
+      margin-right: 1rem;
+      margin-left: 1rem;
+
+      .inner-box {
+        height: 100%;
+      }
     }
   }
 }
