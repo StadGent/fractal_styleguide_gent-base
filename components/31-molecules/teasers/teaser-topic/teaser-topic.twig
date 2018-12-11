@@ -7,6 +7,18 @@
         'text': teaser_paragraph_text
       } %}
 
+      <ul class="links teaser-topic-links">
+        {% for link in teaser_topic_links %}
+          <li>
+            {% include '@link' with {
+              'text': link.text,
+              'aria_labelledby': link.uid,
+              'link': link.link
+            } %}
+          </li>
+        {% endfor %}
+      </ul>
+
       {% include '@link' with {
         'text': teaser_link_text,
         'aria_labelledby': teaser_uid,
