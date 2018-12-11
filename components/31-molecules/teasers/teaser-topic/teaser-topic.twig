@@ -18,12 +18,14 @@
         {% endfor %}
       </ul>
 
-      {% include '@link' with {
-        'text': teaser_link_text,
-        'aria_labelledby': teaser_uid,
-        'link': teaser_link_link,
-        'modifier': 'read-more standalone-link'
-      } %}
+      {% if teaser_link_text is not empty %}
+        {% include '@link' with {
+          'text': teaser_link_text,
+          'aria_labelledby': teaser_uid,
+          'link': teaser_link_link,
+          'modifier': 'read-more standalone-link'
+        } %}
+      {% endif %}
     </div>
 
     {% if teaser_image_src is not empty %}
