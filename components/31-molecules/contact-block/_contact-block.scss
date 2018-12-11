@@ -9,14 +9,6 @@
   }
 
   .inner-box {
-    display: flex;
-    flex-wrap: wrap;
-
-    h2,
-    p {
-      width: 100%;
-    }
-
     li:last-of-type {
       margin-top: 1rem;
     }
