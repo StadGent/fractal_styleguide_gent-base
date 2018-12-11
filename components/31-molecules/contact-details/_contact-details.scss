@@ -28,13 +28,14 @@ $avatar-width: 14rem;
   }
 
   &-column {
+    flex-grow: 1;
     width: 100%;
 
     @include tablet {
       width: span(6 of 12);
       margin-right: $gutter-width;
 
-      &:last-of-type {
+      &:last-of-type:not(:first-of-type) {
         max-width: $avatar-width;
         margin-right: 0;
       }
