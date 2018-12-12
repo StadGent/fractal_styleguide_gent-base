@@ -12,7 +12,11 @@
 
   &,
   .detail-layout > & {
-    margin: 3.5rem 0 0;
+    margin-top: 3.5rem;
+
+    @include desktop {
+      margin-top: 2rem;
+    }
   }
 
   @include desktop {
