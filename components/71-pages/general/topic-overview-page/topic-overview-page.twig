@@ -29,9 +29,9 @@
       <ul class="grid-3">
         {% for topic in topics %}
           {% include '@teaser' with {
-            "teaser_type": 'teaser-underlined',
-            "teaser_paragraph_text": topic.teaser_paragraph_text,
-            "teaser_title": topic.teaser_title,
+            "type": 'teaser-underlined',
+            "paragraph_text": topic.paragraph_text,
+            "title": topic.title,
             "teaser_uid":  topic.teaser_uid ~ loop.index,
             "teaser_topic_links": topic.teaser_topic_links
           } %}

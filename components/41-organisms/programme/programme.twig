@@ -57,15 +57,15 @@
 
                 <!-- Teaser -->
                 {% include '@teaser' with {
-                  teaser_type: 'teaser-programme',
+                  type: 'teaser-programme',
                   modifier: 'teaser--inverted',
                   teaser_uid: 'uid_' ~ key,
-                  teaser_paragraph_text: item.subtitle,
-                  teaser_title: item.title,
-                  teaser_link_text: 'More information',
-                  teaser_link_link: '#' ~ key,
-                  teaser_image_src: item.images|first.src,
-                  teaser_image_alt_text: item.images|first.alt
+                  paragraph_text: item.subtitle,
+                  title: item.title,
+                  link_text: 'More information',
+                  link: '#' ~ key,
+                  image_src: item.images|first.src,
+                  image_alt_text: item.images|first.alt
                 } %}
                 <!-- /Teaser -->
             {% endfor %}

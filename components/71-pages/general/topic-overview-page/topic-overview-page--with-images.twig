@@ -29,12 +29,12 @@
       <ul class="grid-3">
         {% for key, topic in topics %}
           {% include '@teaser' with {
-            "teaser_type": 'teaser-underlined',
-            "teaser_paragraph_text": topic.teaser_paragraph_text,
-            "teaser_title": topic.teaser_title,
+            "type": 'teaser-underlined',
+            "paragraph_text": topic.paragraph_text,
+            "title": topic.title,
             "teaser_uid":  topic.teaser_uid ~ loop.index,
-            "teaser_image_src": topic.teaser_image_src ~ '?random=' ~ key,
-            "teaser_image_alt_text": topic.teaser_image_alt_text,
+            "image_src": topic.image_src ~ '?random=' ~ key,
+            "image_alt_text": topic.image_alt_text,
             "teaser_topic_links": topic.teaser_topic_links
           } %}
         {% endfor %}

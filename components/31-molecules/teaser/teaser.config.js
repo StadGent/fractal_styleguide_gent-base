@@ -27,14 +27,14 @@ module.exports = {
       name: 'article',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-article',
-        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
-        teaser_title: 'General article title text',
+        type: 'teaser-article',
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+        title: 'General article title text',
         teaser_published_date: 'Gepost op Zaterdag 7 januari 2019',
-        teaser_link_text: 'read more',
-        teaser_link_link: '#',
-        teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        teaser_image_alt_text: 'alt text',
+        link_text: 'read more',
+        link: '#',
+        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+        image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       }
     },
@@ -42,19 +42,19 @@ module.exports = {
       name: 'event',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-news',
-        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
-        teaser_title: 'Event title text',
+        type: 'teaser-news',
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+        title: 'Event title text',
         teaser_event_date: {
           text_1: 'From the 7th',
           datetime_1: '2019-01-07',
           text_2: 'untill the 13th of January 2019',
           datetime_2: '2019-01-13'
         },
-        teaser_link_text: 'read more',
-        teaser_link_link: '#',
-        teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        teaser_image_alt_text: 'alt text',
+        link_text: 'read more',
+        link: '#',
+        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+        image_alt_text: 'alt text',
         teaser_tag: 'I\'m another tag',
         teaser_label_text: 'Event'
       }
@@ -63,27 +63,27 @@ module.exports = {
       name: 'teaser-contact',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-contact',
-        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        teaser_title: 'Title text',
-        teaser_link_text: 'more info and opening hours',
-        teaser_link_link: '#',
-        teaser_telephone: '0123456789',
-        teaser_opening_hours_service: '2690'
+        type: 'teaser-contact',
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
+        title: 'Title text',
+        link_text: 'more info and opening hours',
+        link: '#',
+        telephone: '0123456789',
+        opening_hours_service: '2690'
       }
     },
     {
       name: 'teaser-person',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-person',
-        teaser_paragraph_text: 'Function or job description comes here',
-        teaser_title: 'Name and first name',
-        teaser_link_text: 'read more',
-        teaser_link_link: '#',
+        type: 'teaser-person',
+        paragraph_text: 'Function or job description comes here',
+        title: 'Name and first name',
+        link_text: 'read more',
+        link: '#',
         teaser_image_ratio: '1:1',
-        teaser_image_src: 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
-        teaser_image_alt_text: 'alt text',
+        image_src: 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
+        image_alt_text: 'alt text',
         teaser_tag: 'Just some tag'
       }
     },
@@ -91,36 +91,36 @@ module.exports = {
       name: 'teaser-programme',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-programme',
+        type: 'teaser-programme',
         modifier: 'teaser--inverted',
-        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        teaser_title: 'Title text',
-        teaser_link_text: 'read more',
-        teaser_link_link: '#',
-        teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        teaser_image_alt_text: 'alt text'
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
+        title: 'Title text',
+        link_text: 'read more',
+        link: '#',
+        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+        image_alt_text: 'alt text'
       }
     },
     {
       name: 'teaser-underlined',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-underlined',
-        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        teaser_title: 'Title text',
-        teaser_link_text: 'read more',
-        teaser_link_link: '#'
+        type: 'teaser-underlined',
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
+        title: 'Title text',
+        link_text: 'read more',
+        link: '#'
       }
     },
     {
       name: 'teaser-underlined-with-links',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-underlined',
-        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        teaser_title: 'Title text',
-        teaser_link_text: 'read more',
-        teaser_link_link: '#',
+        type: 'teaser-underlined',
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
+        title: 'Title text',
+        link_text: 'read more',
+        link: '#',
         teaser_topic_links: [
           {
             text: 'Subtopic link 1',
@@ -153,24 +153,24 @@ module.exports = {
       name: 'teaser-underlined-with-images',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-underlined',
-        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        teaser_title: 'Title text',
-        teaser_link_text: 'read more',
-        teaser_link_link: '#',
-        teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        teaser_image_alt_text: 'alt text'
+        type: 'teaser-underlined',
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
+        title: 'Title text',
+        link_text: 'read more',
+        link: '#',
+        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+        image_alt_text: 'alt text'
       }
     },
     {
       name: 'teaser-wide',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-wide',
-        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
-        teaser_title: 'General article title text',
-        teaser_link_text: 'read more',
-        teaser_link_link: '#',
+        type: 'teaser-wide',
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+        title: 'General article title text',
+        link_text: 'read more',
+        link: '#',
         teaser_tag: 'Just some tag'
       }
     },
@@ -178,11 +178,11 @@ module.exports = {
       name: 'teaser-wide-with-address',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-wide',
-        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
-        teaser_title: 'General article title text',
-        teaser_link_text: 'read more',
-        teaser_link_link: '#',
+        type: 'teaser-wide',
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+        title: 'General article title text',
+        link_text: 'read more',
+        link: '#',
         teaser_tag: 'Just some tag',
         teaser_address_location: 'Lakenhalle',
         teaser_address: 'Botermarkt 18A, 9000 Gent'
@@ -192,12 +192,12 @@ module.exports = {
       name: 'teaser-wide-with-image',
       context: {
         preview: '@preview',
-        teaser_type: 'teaser-wide',
-        teaser_title: 'General article title text',
-        teaser_link_text: 'read more',
-        teaser_link_link: '#',
-        teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        teaser_image_alt_text: 'alt text',
+        type: 'teaser-wide',
+        title: 'General article title text',
+        link_text: 'read more',
+        link: '#',
+        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+        image_alt_text: 'alt text',
         teaser_location: 'Gent',
         teaser_list: [
           'Nature',

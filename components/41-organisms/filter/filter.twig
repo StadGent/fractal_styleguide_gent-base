@@ -87,12 +87,12 @@
     <ul class="filter__results">
       {% for key, result in results %}
         {% include '@teaser' with {
-          "teaser_type": 'teaser-search',
+          "type": 'teaser-search',
           "teaser_uid": result.teaser_uid,
-          "teaser_paragraph_text": result.teaser_paragraph_text,
-          "teaser_title": result.teaser_title,
-          "teaser_link_text": result.teaser_link_text,
-          "teaser_link_link": result.teaser_link_link,
+          "paragraph_text": result.paragraph_text,
+          "title": result.title,
+          "link_text": result.link_text,
+          "link": result.link,
           "teaser_tag": result.teaser_tag
         } %}
       {% endfor %}

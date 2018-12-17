@@ -1,14 +1,14 @@
 <ul class="{{ grid }}">
   {% for i in 0..6 %}
     {% include '@teaser' with {
-      "teaser_type": 'teaser-underlined',
-      "teaser_paragraph_text": teaser_paragraph_text,
-      "teaser_title": teaser_title,
+      "type": 'teaser-underlined',
+      "paragraph_text": paragraph_text,
+      "title": title,
       "teaser_uid":  teaser_uid ~ i,
-      "teaser_link_text": teaser_link_text,
-      "teaser_link_link": teaser_link_link,
-      "teaser_image_src": teaser_image_src,
-      "teaser_image_alt_text": teaser_image_alt_text
+      "link_text": link_text,
+      "link": link,
+      "image_src": image_src,
+      "image_alt_text": image_alt_text
     } %}
   {% endfor %}
 </ul>

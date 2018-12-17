@@ -1,8 +1,8 @@
-<li class="teaser {{ teaser_type }} {{ modifier }}">
+<li class="teaser {{ type }} {{ modifier }}">
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__bottom content__second">
-      <{{ header_level|default('h3') }}>{{ teaser_title }}</{{ header_level|default('h3') }}>
+      <{{ header_level|default('h3') }}>{{ title }}</{{ header_level|default('h3') }}>
 
       {% if teaser_event_date or teaser_published_date %}
         {% if teaser_event_date %}
@@ -22,7 +22,7 @@
 
       {% if teaser_topic_links is empty %}
         {% include '@paragraph' with {
-          'text': teaser_paragraph_text
+          'text': paragraph_text
         } %}
       {% endif %}
 
@@ -39,13 +39,13 @@
         </ul>
 
 
-        {% if teaser_telephone or teaser_email %}
+        {% if telephone or teaser_email %}
           <ul class="teaser-contact-info">
-            {% if teaser_telephone %}
+            {% if telephone %}
               <li>
                 {% include '@link' with {
-                  'text': teaser_telephone,
-                  'link': 'tel:'~teaser_telephone,
+                  'text': telephone,
+                  'link': 'tel:'~telephone,
                   'modifier': 'no-icon'
                 } %}
               </li>
@@ -65,17 +65,17 @@
         {% if teaser_topic_links|length > max_links|default(5) %}
           {% include '@link' with {
             'text': 'show more',
-            'link': teaser_link_link,
+            'link': link,
             'modifier': 'read-more standalone-link',
-            'labeled_by': teaser_title
+            'labeled_by': title
           } %}
         {% endif %}
       {% else %}
         {% include '@link' with {
           'text': 'read more',
-          'link': teaser_link_link,
+          'link': link,
           'modifier': 'read-more standalone-link',
-          'labeled_by': teaser_title
+          'labeled_by': title
         } %}
       {% endif %}
     </div>
@@ -87,10 +87,10 @@
         </span>
       {% endif %}
 
-      {% if teaser_image_src is defined %}
+      {% if image_src is defined %}
         <div class="figure-wrapper">
           {% include '@figure' with {
-            "figure_image_src": teaser_image_src,
+            "figure_image_src": image_src,
             "figure_ratio": teaser_image_ratio
           } %}
 
@@ -106,5 +106,5 @@
       {% endif %}
     </div>
   </article>
-  <a href="{{ teaser_link_link }}" class="teaser-overlay-link" tabindex="-1" aria-hidden="true">{{ teaser_title }}</a>
+  <a href="{{ link }}" class="teaser-overlay-link" tabindex="-1" aria-hidden="true">{{ title }}</a>
 </li>

@@ -1,8 +1,8 @@
-<li class="teaser {{ teaser_type }}">
+<li class="teaser {{ type }}">
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__right content__second">
-      <{{ header_level|default('h3') }}>{{ teaser_title }}</{{ header_level|default('h3') }}>
+      <{{ header_level|default('h3') }}>{{ title }}</{{ header_level|default('h3') }}>
 
       {% if teaser_tag %}
         {% include '@tag' with {
@@ -33,26 +33,26 @@
         } %}
       {% endif %}
 
-      {% if teaser_paragraph_text %}
+      {% if paragraph_text %}
         {% include '@paragraph' with {
-          'text': teaser_paragraph_text
+          'text': paragraph_text
         } %}
       {% endif %}
 
       {% include '@link' with {
-        'text': teaser_link_text,
-        'link': teaser_link_link,
+        'text': link_text,
+        'link': link,
         'modifier': 'read-more standalone-link',
         'title': null,
-        'labeled_by': teaser_title
+        'labeled_by': title
       } %}
     </div>
 
-    {% if teaser_image_src %}
+    {% if image_src %}
       <div class="content__left content__first">
         <div class="figure-wrapper">
           {% include '@figure' with {
-            "figure_image_src": teaser_image_src,
+            "figure_image_src": image_src,
             "figure_ratio": '8:5'
           } %}
           <div class="accolade-inverse right-top"></div>
@@ -61,6 +61,6 @@
       </div>
     {% endif %}
   </article>
-  <a href="{{ teaser_link_link }}" class="teaser-overlay-link" tabindex="-1"
-     aria-hidden="true">{{ teaser_title }}</a>
+  <a href="{{ link }}" class="teaser-overlay-link" tabindex="-1"
+     aria-hidden="true">{{ title }}</a>
 </li>
