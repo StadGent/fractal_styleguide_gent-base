@@ -114,7 +114,7 @@ a {
     }
   }
 
-  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]),
+  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back),
   &.button:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]) {
     @extend %a-bounce-animation;
   }
@@ -163,6 +163,20 @@ a {
 
     &[download]:not(.button):not(.no-icon) {
       @include icon(download, after);
+    }
+  }
+
+  &.back:not(.no-icon) {
+    @extend %a-bounce-animation--left;
+    @include icon(fancyback, after);
+
+    flex-direction: row-reverse;
+    padding-left: 0;
+
+    &::after {
+      margin-left: -.2rem;
+      padding-right: .2rem;
+      padding-left: .4rem;
     }
   }
 }
