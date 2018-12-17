@@ -30,7 +30,8 @@
       <ul class="grid-3">
         {% for key, article in articles %}
           {% if article.teaser_event_date %}
-            {% include '@teaser-article' with {
+            {% include '@teaser' with {
+              "teaser_type": 'teaser-article',
               "teaser_uid": article.teaser_uid ~ loop.index,
               "teaser_paragraph_text": article.teaser_paragraph_text,
               "teaser_title": article.teaser_title,
@@ -49,7 +50,8 @@
               "teaser_label_text": article.teaser_label_text
             } %}
           {% else %}
-          {% include '@teaser-article' with {
+          {% include '@teaser' with {
+            "teaser_type": 'teaser-article',
             "teaser_uid": article.teaser_uid ~ loop.index,
             "teaser_paragraph_text": article.teaser_paragraph_text,
             "teaser_title": article.teaser_title,

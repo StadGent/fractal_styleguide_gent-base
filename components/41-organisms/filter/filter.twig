@@ -86,7 +86,8 @@
 
     <ul class="filter__results">
       {% for key, result in results %}
-        {% include '@teaser-search' with {
+        {% include '@teaser' with {
+          "teaser_type": 'teaser-search',
           "teaser_uid": result.teaser_uid,
           "teaser_paragraph_text": result.teaser_paragraph_text,
           "teaser_title": result.teaser_title,

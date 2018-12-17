@@ -7,8 +7,9 @@
     } %}
 
     <ul>
-      {% include '@teaser-article' with {
+      {% include '@teaser' with {
       "teaser_uid": "uid",
+      "teaser_type": 'teaser-article',
       "teaser_paragraph_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?",
       "teaser_title": "Event title text",
       "teaser_event_date": {
@@ -24,8 +25,9 @@
       "teaser_tag": "Just some tag"
       } %}
 
-      {% include '@teaser-article' with {
+      {% include '@teaser' with {
       "teaser_uid": "uid_1",
+      "teaser_type": 'teaser-article',
       "teaser_paragraph_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias nihil quisquam ratione. Ab deserunt omnis quam quisquam quo repudiandae temporibus totam voluptates.",
       "teaser_title": "General article title text",
       "teaser_event_date": null,

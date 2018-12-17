@@ -1,4 +1,4 @@
-<li class="teaser {{ teaser_type }}">
+<li class="teaser {{ teaser_type }} {{ modifier }}">
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__bottom">
@@ -87,7 +87,7 @@
         </span>
       {% endif %}
 
-      {% if teaser_image_src %}
+      {% if teaser_image_src is defined %}
         <div class="figure-wrapper">
           {% include '@figure' with {
             "figure_image_src": teaser_image_src,

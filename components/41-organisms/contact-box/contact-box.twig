@@ -39,7 +39,8 @@
         {% else %}
           {# Categories #}
           {% for contact_category in contact_categories %}
-            {% include '@teaser-contact' with {
+            {% include '@teaser' with {
+              teaser_type: 'teaser-contact',
               teaser_uid: contact_category.name,
               teaser_title: contact_category.name,
               teaser_title_link: contact_category.link
@@ -48,7 +49,8 @@
 
           {# Contacts #}
           {% for contact in contacts %}
-            {% include '@teaser-contact' with {
+            {% include '@teaser' with {
+              teaser_type: 'teaser-contact',
               teaser_uid: contact.email,
               teaser_title: contact.link_text,
               teaser_title_link: contact.link,

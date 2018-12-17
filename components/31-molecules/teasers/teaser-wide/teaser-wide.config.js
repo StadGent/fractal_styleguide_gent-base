@@ -34,7 +34,7 @@ module.exports = {
         teaser_link_link: '#',
         teaser_tag: 'Just some tag',
         teaser_address_location: 'Lakenhalle',
-        teaser_address: 'Botermarkt 18A, 9000 Gent',
+        teaser_address: 'Botermarkt 18A, 9000 Gent'
       }
     },
     {

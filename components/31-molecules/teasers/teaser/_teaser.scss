@@ -2,7 +2,21 @@
 // Basic teaser theming.
 //
 .teaser {
-  @include theme('background-color', 'color-secondary');
+  &.teaser--inverted {
+    .teaser-content {
+      @include theme('background-color', 'color-secondary');
+    }
+
+    .content__top {
+      > * {
+        margin: 0;
+      }
+    }
+
+    .content__bottom {
+      padding: .8rem;
+    }
+  }
 
   position: relative;
   list-style: none;
@@ -189,21 +203,6 @@
     .content__bottom {
       height: 100%;
     }
-  }
-}
-
-//
-// Programme teaser variant.
-//
-teaser.teaser-programme {
-  .content__top {
-    > * {
-      margin: 0;
-    }
-  }
-
-  .content__bottom {
-    padding: .8rem;
   }
 }
 

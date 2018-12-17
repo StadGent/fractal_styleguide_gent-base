@@ -82,6 +82,7 @@ module.exports = {
       context: {
         teaser_uid: 'uid',
         teaser_type: 'teaser-programme',
+        modifier: 'teaser--inverted',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
