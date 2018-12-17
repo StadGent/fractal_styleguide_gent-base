@@ -29,7 +29,7 @@
       <ul class="grid-3">
         {% for key, topic in topics %}
           {% include '@teaser' with {
-            "teaser_type": 'teaser-topic',
+            "teaser_type": 'teaser-underlined',
             "teaser_paragraph_text": topic.teaser_paragraph_text,
             "teaser_title": topic.teaser_title,
             "teaser_uid":  topic.teaser_uid ~ loop.index,

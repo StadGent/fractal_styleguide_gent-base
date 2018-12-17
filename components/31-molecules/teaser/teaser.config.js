@@ -5,9 +5,19 @@ module.exports = {
   status: 'ready',
   name: 'teaser',
   default: 'article',
+  preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd style="max-width: 100%;"><ul class="grid-3" style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
+    if (
+      item.handle === 'teaser--teaser-wide' ||
+      item.handle === 'teaser--teaser-wide-with-address' ||
+      item.handle === 'teaser--teaser-wide-with-image'
+    ) {
+      return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd style="max-width: 100%;"><ul style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
+    }
+    else {
+      return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd style="max-width: 100%;"><ul class="grid-3" style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
+    }
   },
   context: {
     teaser_image_ratio: '8:5'
@@ -16,6 +26,7 @@ module.exports = {
     {
       name: 'article',
       context: {
+        preview: '@preview',
         teaser_uid: 'uid',
         teaser_type: 'teaser-article',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
@@ -31,6 +42,7 @@ module.exports = {
     {
       name: 'event',
       context: {
+        preview: '@preview',
         teaser_uid: 'uid',
         teaser_type: 'teaser-news',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
@@ -52,6 +64,7 @@ module.exports = {
     {
       name: 'teaser-contact',
       context: {
+        preview: '@preview',
         teaser_uid: 'uid',
         teaser_type: 'teaser-contact',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
@@ -65,6 +78,7 @@ module.exports = {
     {
       name: 'teaser-person',
       context: {
+        preview: '@preview',
         teaser_uid: 'uid',
         teaser_type: 'teaser-person',
         teaser_paragraph_text: 'Function or job description comes here',
@@ -80,6 +94,7 @@ module.exports = {
     {
       name: 'teaser-programme',
       context: {
+        preview: '@preview',
         teaser_uid: 'uid',
         teaser_type: 'teaser-programme',
         modifier: 'teaser--inverted',
@@ -92,10 +107,11 @@ module.exports = {
       }
     },
     {
-      name: 'teaser-topic',
+      name: 'teaser-underlined',
       context: {
+        preview: '@preview',
         teaser_uid: 'uid',
-        teaser_type: 'teaser-topic',
+        teaser_type: 'teaser-underlined',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
@@ -103,10 +119,11 @@ module.exports = {
       }
     },
     {
-      name: 'teaser-topic-with-links',
+      name: 'teaser-underlined-with-links',
       context: {
+        preview: '@preview',
         teaser_uid: 'uid',
-        teaser_type: 'teaser-topic',
+        teaser_type: 'teaser-underlined',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
@@ -140,16 +157,65 @@ module.exports = {
       }
     },
     {
-      name: 'teaser-topic-with-images',
+      name: 'teaser-underlined-with-images',
       context: {
+        preview: '@preview',
         teaser_uid: 'uid',
-        teaser_type: 'teaser-topic',
+        teaser_type: 'teaser-underlined',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         teaser_title: 'Title text',
         teaser_link_text: 'read more',
         teaser_link_link: '#',
         teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         teaser_image_alt_text: 'alt text'
+      }
+    },
+    {
+      name: 'teaser-wide',
+      context: {
+        preview: '@preview',
+        teaser_uid: 'uid',
+        teaser_type: 'teaser-wide',
+        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+        teaser_title: 'General article title text',
+        teaser_link_text: 'read more',
+        teaser_link_link: '#',
+        teaser_tag: 'Just some tag'
+      }
+    },
+    {
+      name: 'teaser-wide-with-address',
+      context: {
+        preview: '@preview',
+        teaser_uid: 'uid',
+        teaser_type: 'teaser-wide',
+        teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+        teaser_title: 'General article title text',
+        teaser_link_text: 'read more',
+        teaser_link_link: '#',
+        teaser_tag: 'Just some tag',
+        teaser_address_location: 'Lakenhalle',
+        teaser_address: 'Botermarkt 18A, 9000 Gent'
+      }
+    },
+    {
+      name: 'teaser-wide-with-image',
+      context: {
+        preview: '@preview',
+        teaser_uid: 'uid',
+        teaser_type: 'teaser-wide',
+        teaser_title: 'General article title text',
+        teaser_link_text: 'read more',
+        teaser_link_link: '#',
+        teaser_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+        teaser_image_alt_text: 'alt text',
+        teaser_location: 'Gent',
+        teaser_list: [
+          'Nature',
+          'Green with historical value',
+          'Barbeque zone',
+          'Street'
+        ]
       }
     }
   ]
