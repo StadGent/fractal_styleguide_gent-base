@@ -1,6 +1,6 @@
 # Folder structure
 
-:information_source: All components defined within this styleguide are categorized following the [atomic design](http://atomicdesign.bradfrost.com/table-of-contents/) pattern by Brad Frost.   
+ⓘ All components defined within this styleguide are categorized following the [atomic design](http://atomicdesign.bradfrost.com/table-of-contents/) pattern by Brad Frost.   
 
 ## Component categorization
 Components are always defined as one of these
@@ -24,7 +24,7 @@ When you bump into a situation like that, do this:
     - is configurable.
     - is hidden in the UI.
         
-> :question: **But hey! shouldn't variants be defined into the same comonent?**  
+> **But hey! shouldn't variants be defined into the same comonent?**  
 > Good point... We're making the distinction between _functional_ and _technical_ variants. _Functional_ variants should be defined as a real/visible variant for your component. _Technical_ variants just share code and can therefore be separate components. 
 
 - Define **multiple** _variant_ components that:
