@@ -11,6 +11,7 @@
   .teaser-content {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     .content__top {
       order: 1;
