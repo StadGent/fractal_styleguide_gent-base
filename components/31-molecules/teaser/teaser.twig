@@ -1,7 +1,7 @@
 <li class="teaser {{ type }} {{ modifier }}">
   <article class="teaser-content">
     {# title must be the first element in markup #}
-    <div class="content__bottom content__second">
+    <div class="content__second">
       <{{ header_level|default('h3') }}>{{ title }}</{{ header_level|default('h3') }}>
 
       {% if teaser_event_date or teaser_published_date %}
@@ -79,7 +79,7 @@
         } %}
       {% endif %}
     </div>
-    <div class="content__top content__first">
+    <div class="content__first">
       {% if teaser_label_text %}
         <span class="teaser-label">
           <i class="icon-calendar"></i>

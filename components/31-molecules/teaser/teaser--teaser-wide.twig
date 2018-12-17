@@ -1,7 +1,7 @@
 <li class="teaser {{ type }}">
   <article class="teaser-content">
     {# title must be the first element in markup #}
-    <div class="content__right content__second">
+    <div class="content__second">
       <{{ header_level|default('h3') }}>{{ title }}</{{ header_level|default('h3') }}>
 
       {% if teaser_tag %}
@@ -49,7 +49,7 @@
     </div>
 
     {% if image_src %}
-      <div class="content__left content__first">
+      <div class="content__first">
         <div class="figure-wrapper">
           {% include '@figure' with {
             "figure_image_src": image_src,
