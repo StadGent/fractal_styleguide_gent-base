@@ -13,7 +13,7 @@ const createItems = (amount) => {
         link: '#',
         image_src: 'https://loremflickr.com/280/280/person?random=' + i,
         image_alt_text: 'alt text',
-        teaser_tag: 'Just some tag'
+        tag: 'Just some tag'
       });
   }
 

@@ -39,7 +39,7 @@ module.exports = {
         title: 'Title text',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
-        teaser_topic_links: topic_links.slice(0, 2)
+        topic_links: topic_links.slice(0, 2)
       },
       {
         teaser_uid: 'uid',
@@ -48,7 +48,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
-        teaser_topic_links: topic_links
+        topic_links: topic_links
       },
       {
         teaser_uid: 'uid',
@@ -65,7 +65,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
-        teaser_topic_links: topic_links
+        topic_links: topic_links
       },
       {
         teaser_uid: 'uid',
@@ -74,7 +74,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
-        teaser_topic_links: topic_links
+        topic_links: topic_links
       },
       {
         teaser_uid: 'uid',
@@ -83,7 +83,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
-        teaser_topic_links: topic_links
+        topic_links: topic_links
       },
       {
         teaser_uid: 'uid',
@@ -92,7 +92,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
-        teaser_topic_links: topic_links
+        topic_links: topic_links
       },
       {
         teaser_uid: 'uid',
@@ -101,7 +101,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
-        teaser_topic_links: topic_links
+        topic_links: topic_links
       },
       {
         teaser_uid: 'uid',
@@ -110,7 +110,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
-        teaser_topic_links: topic_links
+        topic_links: topic_links
       }
     ]
   }

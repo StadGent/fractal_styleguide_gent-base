@@ -29,13 +29,13 @@
       <h2 class="visually-hidden">Overview</h2>
       <ul class="grid-3">
         {% for key, article in articles %}
-          {% if article.teaser_event_date %}
+          {% if article.event_date %}
             {% include '@teaser' with {
               "type": 'teaser-article',
               "teaser_uid": article.teaser_uid ~ loop.index,
               "paragraph_text": article.paragraph_text,
               "title": article.title,
-              "teaser_event_date": {
+              "event_date": {
                 "text_1": article.text_1,
                 "datetime_1": article.datetime_1,
                 "text_2": article.text_2,
@@ -46,8 +46,8 @@
               "link": article.link,
               "image_src": article.image_src ~ '?random=' ~ key,
               "image_alt_text": article.image_alt_text,
-              "teaser_tag": article.teaser_tag,
-              "teaser_label_text": article.teaser_label_text
+              "tag": article.tag,
+              "label_text": article.label_text
             } %}
           {% else %}
           {% include '@teaser' with {
@@ -55,13 +55,13 @@
             "teaser_uid": article.teaser_uid ~ loop.index,
             "paragraph_text": article.paragraph_text,
             "title": article.title,
-            "teaser_published_date": article.teaser_published_date,
+            "published_date": article.published_date,
             "teaser_datetime": article.teaser_datetime,
             "link_text": article.link_text,
             "link": article.link,
             "image_src": article.image_src ~ '?random=' ~ key,
             "image_alt_text": article.image_alt_text,
-            "teaser_tag": article.teaser_tag
+            "tag": article.tag
           } %}
           {% endif %}
         {% endfor %}

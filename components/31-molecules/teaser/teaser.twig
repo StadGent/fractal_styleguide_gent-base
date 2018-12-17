@@ -4,31 +4,31 @@
     <div class="content__second">
       <{{ header_level|default('h3') }}>{{ title }}</{{ header_level|default('h3') }}>
 
-      {% if teaser_event_date or teaser_published_date %}
-        {% if teaser_event_date %}
+      {% if event_date or published_date %}
+        {% if event_date %}
           {# Events can consist of two timestamps, so we wrap it in a span. #}
           <div class="event">
             <span>
-              <time datetime="{{ teaser_event_date.datetime_1 }}">{{ teaser_event_date.text_1  }}</time>
-              {% if teaser_event_date.datetime_2 and teaser_event_date.text_2 %}
-                &nbsp;<time datetime="{{ teaser_event_date.datetime_2 }}">{{ teaser_event_date.text_2  }}</time>
+              <time datetime="{{ event_date.datetime_1 }}">{{ event_date.text_1  }}</time>
+              {% if event_date.datetime_2 and event_date.text_2 %}
+                &nbsp;<time datetime="{{ event_date.datetime_2 }}">{{ event_date.text_2  }}</time>
               {% endif %}
             </span>
           </div>
         {% else %}
-          <time class="published" datetime="{{ teaser_datetime }}" pubdate="pubdate">{{ teaser_published_date }}</time>
+          <time class="published" datetime="{{ teaser_datetime }}" pubdate="pubdate">{{ published_date }}</time>
         {% endif %}
       {% endif %}
 
-      {% if teaser_topic_links is empty %}
+      {% if topic_links is empty %}
         {% include '@paragraph' with {
           'text': paragraph_text
         } %}
       {% endif %}
 
-      {% if teaser_topic_links is not empty %}
+      {% if topic_links is not empty %}
         <ul class="links teaser-underlined-links">
-          {% for link in teaser_topic_links|slice(0, max_links|default(5)) %}
+          {% for link in topic_links|slice(0, max_links|default(5)) %}
             <li>
               {% include '@link' with {
                 'text': link.text,
@@ -62,7 +62,7 @@
           </ul>
         {% endif %}
 
-        {% if teaser_topic_links|length > max_links|default(5) %}
+        {% if topic_links|length > max_links|default(5) %}
           {% include '@link' with {
             'text': 'show more',
             'link': link,
@@ -80,10 +80,10 @@
       {% endif %}
     </div>
     <div class="content__first">
-      {% if teaser_label_text %}
+      {% if label_text %}
         <span class="teaser-label">
           <i class="icon-calendar"></i>
-          <span>{{ teaser_label_text }}</span>
+          <span>{{ label_text }}</span>
         </span>
       {% endif %}
 
@@ -91,16 +91,16 @@
         <div class="figure-wrapper">
           {% include '@figure' with {
             "figure_image_src": image_src,
-            "figure_ratio": teaser_image_ratio
+            "figure_ratio": image_ratio
           } %}
 
           <div class="accolade-inverse bottom-left"></div>
         </div>
       {% endif %}
 
-      {% if teaser_tag %}
+      {% if tag %}
         {% include '@tag' with {
-          "tag_text": teaser_tag,
+          "tag_text": tag,
           "type": 'span-tag'
         } %}
       {% endif %}

@@ -4,32 +4,32 @@
     <div class="content__second">
       <{{ header_level|default('h3') }}>{{ title }}</{{ header_level|default('h3') }}>
 
-      {% if teaser_tag %}
+      {% if tag %}
         {% include '@tag' with {
-          "tag_text": teaser_tag,
+          "tag_text": tag,
           "type": 'span-tag'
         } %}
       {% endif %}
 
-      {% if teaser_address %}
+      {% if address %}
         <ul class="icon-list">
           <li>
-            <i class='icon-marker'></i><span><strong> {{ teaser_address_location }} </strong> &mdash; {{ teaser_address }}</span>,
+            <i class='icon-marker'></i><span><strong> {{ address_location }} </strong> &mdash; {{ address }}</span>,
           </li>
         </ul>
       {% endif %}
 
-      {% if teaser_location %}
+      {% if location %}
         <div class="location">
-          <i class="icon-marker" aria-hidden="true"></i><span>{{ teaser_location}}</span>
+          <i class="icon-marker" aria-hidden="true"></i><span>{{ location}}</span>
         </div>
       {% endif %}
 
-      {% if teaser_list %}
+      {% if list %}
         {% include '@list' with {
           'type': 'icon-list',
           'modifier': 'links inline',
-          'icon_items': teaser_list
+          'icon_items': list
         } %}
       {% endif %}
 

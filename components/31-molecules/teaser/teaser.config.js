@@ -20,7 +20,7 @@ module.exports = {
     }
   },
   context: {
-    teaser_image_ratio: '8:5'
+    image_ratio: '8:5'
   },
   variants: [
     {
@@ -30,12 +30,12 @@ module.exports = {
         type: 'teaser-article',
         paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
         title: 'General article title text',
-        teaser_published_date: 'Gepost op Zaterdag 7 januari 2019',
+        published_date: 'Gepost op Zaterdag 7 januari 2019',
         link_text: 'read more',
         link: '#',
         image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         image_alt_text: 'alt text',
-        teaser_tag: 'Just some tag'
+        tag: 'Just some tag'
       }
     },
     {
@@ -45,7 +45,7 @@ module.exports = {
         type: 'teaser-news',
         paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
         title: 'Event title text',
-        teaser_event_date: {
+        event_date: {
           text_1: 'From the 7th',
           datetime_1: '2019-01-07',
           text_2: 'untill the 13th of January 2019',
@@ -55,8 +55,8 @@ module.exports = {
         link: '#',
         image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         image_alt_text: 'alt text',
-        teaser_tag: 'I\'m another tag',
-        teaser_label_text: 'Event'
+        tag: 'I\'m another tag',
+        label_text: 'Event'
       }
     },
     {
@@ -81,10 +81,10 @@ module.exports = {
         title: 'Name and first name',
         link_text: 'read more',
         link: '#',
-        teaser_image_ratio: '1:1',
+        image_ratio: '1:1',
         image_src: 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
         image_alt_text: 'alt text',
-        teaser_tag: 'Just some tag'
+        tag: 'Just some tag'
       }
     },
     {
@@ -121,7 +121,7 @@ module.exports = {
         title: 'Title text',
         link_text: 'read more',
         link: '#',
-        teaser_topic_links: [
+        topic_links: [
           {
             text: 'Subtopic link 1',
             link: 'www.google.com'
@@ -171,7 +171,7 @@ module.exports = {
         title: 'General article title text',
         link_text: 'read more',
         link: '#',
-        teaser_tag: 'Just some tag'
+        tag: 'Just some tag'
       }
     },
     {
@@ -183,9 +183,9 @@ module.exports = {
         title: 'General article title text',
         link_text: 'read more',
         link: '#',
-        teaser_tag: 'Just some tag',
-        teaser_address_location: 'Lakenhalle',
-        teaser_address: 'Botermarkt 18A, 9000 Gent'
+        tag: 'Just some tag',
+        address_location: 'Lakenhalle',
+        address: 'Botermarkt 18A, 9000 Gent'
       }
     },
     {
@@ -198,8 +198,8 @@ module.exports = {
         link: '#',
         image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         image_alt_text: 'alt text',
-        teaser_location: 'Gent',
-        teaser_list: [
+        location: 'Gent',
+        list: [
           'Nature',
           'Green with historical value',
           'Barbeque zone',

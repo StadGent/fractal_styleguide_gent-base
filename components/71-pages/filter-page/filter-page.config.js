@@ -22,7 +22,7 @@ const generateTeasers = (uid)=>{
       title: 'Search result',
       link: '#',
       link_text: 'read more',
-      teaser_tag: 'some tag'
+      tag: 'some tag'
     });
   }
   return result;
