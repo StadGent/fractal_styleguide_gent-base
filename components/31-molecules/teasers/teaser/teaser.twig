@@ -3,18 +3,21 @@
     {# title must be the first element in markup #}
     <div class="content__bottom">
       <{{ header_level|default('h3') }} id="{{ teaser_uid }}">{{ teaser_title }}</{{ header_level|default('h3') }}>
-    {% if teaser_event_date %}
-      {# Events can consist of two timestamps, so we wrap it in a span. #}
-      <div class="event">
-        <span>
-          <time datetime="{{ teaser_event_date.datetime_1 }}">{{ teaser_event_date.text_1  }}</time>
-          {% if teaser_event_date.datetime_2 and teaser_event_date.text_2 %}
-            &nbsp;<time datetime="{{ teaser_event_date.datetime_2 }}">{{ teaser_event_date.text_2  }}</time>
-          {% endif %}
-        </span>
-      </div>
-    {% else %}
-      <time class="published" datetime="{{ teaser_datetime }}" pubdate="pubdate">{{ teaser_published_date }}</time>
+
+    {% if teaser_event_date or teaser_published_date %}
+      {% if teaser_event_date %}
+        {# Events can consist of two timestamps, so we wrap it in a span. #}
+        <div class="event">
+          <span>
+            <time datetime="{{ teaser_event_date.datetime_1 }}">{{ teaser_event_date.text_1  }}</time>
+            {% if teaser_event_date.datetime_2 and teaser_event_date.text_2 %}
+              &nbsp;<time datetime="{{ teaser_event_date.datetime_2 }}">{{ teaser_event_date.text_2  }}</time>
+            {% endif %}
+          </span>
+        </div>
+      {% else %}
+        <time class="published" datetime="{{ teaser_datetime }}" pubdate="pubdate">{{ teaser_published_date }}</time>
+      {% endif %}
     {% endif %}
 
     {% if teaser_topic_links is empty %}

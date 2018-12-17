@@ -142,6 +142,7 @@ module.exports = {
       name: 'teaser-topic-with-images',
       context: {
         teaser_uid: 'uid',
+        teaser_type: 'teaser-topic',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         teaser_title: 'Title text',
         teaser_link_text: 'read more',

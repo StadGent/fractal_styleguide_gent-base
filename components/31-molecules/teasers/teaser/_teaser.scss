@@ -1,3 +1,6 @@
+//
+// Basic teaser theming.
+//
 .teaser {
   @include theme('background-color', 'color-secondary');
 
@@ -123,18 +126,27 @@
     overflow: hidden;
     z-index: 1;
   }
+
+  a.read-more {
+    font-weight: 700;
+  }
 }
 
-.teaser-contact {
+//
+// Contact teaser variant.
+//
+.teaser.teaser-contact {
   @include theme('border-color', 'color-primary--lighten-4', 'teaser-contact-border');
 
   padding-bottom: .7rem;
   border-bottom: 2px solid;
 
+  &,
   & + & {
     margin-top: 1.2rem;
   }
 
+  // @TODO: Move to other layer.
   .ol-popup & {
     padding-bottom: 0;
     border-bottom: 0;
@@ -171,6 +183,7 @@
     margin-top: auto;
   }
 
+  // @TODO: Move to other layer.
   .grid-3 & {
     &,
     .content__bottom {
@@ -179,7 +192,10 @@
   }
 }
 
-.teaser-programme {
+//
+// Programme teaser variant.
+//
+teaser.teaser-programme {
   .content__top {
     > * {
       margin: 0;
@@ -191,15 +207,21 @@
   }
 }
 
+//
+//
+//
 .teaser.teaser-search,
+.teaser.teaser-wide,
 .teaser.teaser-search-wide {
   @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
+
   padding-top: $gutter-width;
   padding-bottom: $gutter-width;
   border-bottom: 2px solid;
 
   &:first-of-type {
     @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
+
     margin-top: $gutter-width;
     border-top: 2px solid;
   }
@@ -215,15 +237,14 @@
       display: inline;
     }
   }
-}
 
-.teaser.teaser-search {
   .tag,
   .icon-list {
     margin-bottom: .4rem;
   }
 }
 
+.teaser.teaser-wide,
 .teaser.teaser-search-wide {
   .teaser-content {
     display: flex;
@@ -304,9 +325,13 @@
   }
 }
 
+//
+// Topic teaser variant.
+//
 .teaser.teaser-topic {
   .teaser-content {
     @include theme('border-color', 'color-primary--lighten-4', 'teaser-contact-border');
+
     height: 100%;
     padding-bottom: .7rem;
     border-bottom: 2px solid;
