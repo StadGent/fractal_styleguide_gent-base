@@ -2,7 +2,7 @@
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__right content__second">
-      <{{ header_level|default('h3') }} id="{{ teaser_uid }}">{{ teaser_title }}</{{ header_level|default('h3') }}>
+      <{{ header_level|default('h3') }}>{{ teaser_title }}</{{ header_level|default('h3') }}>
 
       {% if teaser_tag %}
         {% include '@tag' with {
@@ -41,10 +41,10 @@
 
       {% include '@link' with {
         'text': teaser_link_text,
-        'aria_labelledby': teaser_uid,
         'link': teaser_link_link,
         'modifier': 'read-more standalone-link',
-        'title': null
+        'title': null,
+        'labeled_by': teaser_title
       } %}
     </div>
 

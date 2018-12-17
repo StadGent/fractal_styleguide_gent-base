@@ -12,13 +12,12 @@
   {% if download %}
       download
   {% endif %}
-   {% if aria_labelledby %}
-       aria-labelledby="{{ aria_labelledby }}"
-   {% endif %}
   {% if title %}
    title="{{ title }}"
   {% endif %} >
-
+  <span class="visually-hidden">
+    {{ labeled_by }}
+  </span>
   {% spaceless %}
       {{ text }}
   {% endspaceless %}

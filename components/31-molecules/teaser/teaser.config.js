@@ -27,7 +27,6 @@ module.exports = {
       name: 'article',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-article',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
         teaser_title: 'General article title text',
@@ -43,7 +42,6 @@ module.exports = {
       name: 'event',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-news',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
         teaser_title: 'Event title text',
@@ -65,7 +63,6 @@ module.exports = {
       name: 'teaser-contact',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-contact',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         teaser_title: 'Title text',
@@ -79,7 +76,6 @@ module.exports = {
       name: 'teaser-person',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-person',
         teaser_paragraph_text: 'Function or job description comes here',
         teaser_title: 'Name and first name',
@@ -95,7 +91,6 @@ module.exports = {
       name: 'teaser-programme',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-programme',
         modifier: 'teaser--inverted',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
@@ -110,7 +105,6 @@ module.exports = {
       name: 'teaser-underlined',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-underlined',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         teaser_title: 'Title text',
@@ -122,7 +116,6 @@ module.exports = {
       name: 'teaser-underlined-with-links',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-underlined',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         teaser_title: 'Title text',
@@ -160,7 +153,6 @@ module.exports = {
       name: 'teaser-underlined-with-images',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-underlined',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         teaser_title: 'Title text',
@@ -174,7 +166,6 @@ module.exports = {
       name: 'teaser-wide',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-wide',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
         teaser_title: 'General article title text',
@@ -187,7 +178,6 @@ module.exports = {
       name: 'teaser-wide-with-address',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-wide',
         teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
         teaser_title: 'General article title text',
@@ -202,7 +192,6 @@ module.exports = {
       name: 'teaser-wide-with-image',
       context: {
         preview: '@preview',
-        teaser_uid: 'uid',
         teaser_type: 'teaser-wide',
         teaser_title: 'General article title text',
         teaser_link_text: 'read more',

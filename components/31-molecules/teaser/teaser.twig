@@ -2,7 +2,7 @@
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__bottom content__second">
-      <{{ header_level|default('h3') }} id="{{ teaser_uid }}">{{ teaser_title }}</{{ header_level|default('h3') }}>
+      <{{ header_level|default('h3') }}>{{ teaser_title }}</{{ header_level|default('h3') }}>
 
       {% if teaser_event_date or teaser_published_date %}
         {% if teaser_event_date %}
@@ -65,17 +65,17 @@
         {% if teaser_topic_links|length > max_links|default(5) %}
           {% include '@link' with {
             'text': 'show more',
-            'aria_labelledby': teaser_uid,
             'link': teaser_link_link,
-            'modifier': 'read-more standalone-link'
+            'modifier': 'read-more standalone-link',
+            'labeled_by': teaser_title
           } %}
         {% endif %}
       {% else %}
         {% include '@link' with {
           'text': 'read more',
-          'aria_labelledby': teaser_uid,
           'link': teaser_link_link,
-          'modifier': 'read-more standalone-link'
+          'modifier': 'read-more standalone-link',
+          'labeled_by': teaser_title
         } %}
       {% endif %}
     </div>

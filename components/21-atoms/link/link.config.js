@@ -14,8 +14,7 @@ module.exports = {
   context: {
     link: '#',
     text: 'Link text',
-    aria_label: null,
-    aria_labelledby: null
+    aria_label: null
   },
   variants: [
     {
