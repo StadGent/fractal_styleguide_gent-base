@@ -143,6 +143,47 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      name: 'double',
+      preview: '@preview',
+      context: {
+        double: true,
+        items: [
+          {
+            type: 'download',
+            links: [
+              {
+                text: 'In the summertime',
+                url: '#',
+                document: 'document',
+                size: '102kb'
+              },
+              {
+                text: 'When the weather is hot',
+                url: '#',
+                document: 'document',
+                size: '102kb'
+              }
+            ]
+          },
+          {
+            links: [
+              {
+                text: 'In the summertime',
+                url: '#'
+              },
+              {
+                text: 'When the weather is hot',
+                url: '#',
+                document: 'document',
+                size: '102kb'
+              }
+            ]
+          }
+        ]
+
+      }
     }
   ]
 };

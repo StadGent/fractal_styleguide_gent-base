@@ -1,3 +1,12 @@
 .teaser.teaser-topic {
-  padding-bottom: 1rem;
+  .teaser-content {
+    @include theme('border-color', 'color-primary--lighten-4', 'teaser-contact-border');
+    height: 100%;
+    padding-bottom: .7rem;
+    border-bottom: 2px solid;
+  }
+
+  .teaser-topic-links a {
+    font-weight: normal;
+  }
 }

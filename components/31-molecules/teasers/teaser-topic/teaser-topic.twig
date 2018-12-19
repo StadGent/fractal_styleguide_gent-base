@@ -3,16 +3,40 @@
     <div class="content__bottom">
       <h3 id="{{ teaser_uid }}">{{ teaser_title }}</h3>
 
-      {% include '@paragraph' with {
-        'text': teaser_paragraph_text
-      } %}
+      {% if teaser_topic_links is empty %}
+        {% include '@paragraph' with {
+          'text': teaser_paragraph_text
+        } %}
+      {% endif %}
 
-      {% include '@link' with {
-        'text': teaser_link_text,
-        'aria_labelledby': teaser_uid,
-        'link': teaser_link_link,
-        'modifier': 'read-more standalone-link'
-      } %}
+      {% if teaser_topic_links is not empty %}
+        <ul class="links teaser-topic-links">
+          {% for link in teaser_topic_links|slice(0, max_links|default(5)) %}
+            <li>
+              {% include '@link' with {
+                'text': link.text,
+                'link': link.link
+              } %}
+            </li>
+          {% endfor %}
+        </ul>
+
+        {% if teaser_topic_links|length > max_links|default(5) %}
+          {% include '@link' with {
+            'text': 'show more',
+            'aria_labelledby': teaser_uid,
+            'link': teaser_link_link,
+            'modifier': 'read-more standalone-link'
+          } %}
+        {% endif %}
+      {% else %}
+        {% include '@link' with {
+          'text': 'read more',
+          'aria_labelledby': teaser_uid,
+          'link': teaser_link_link,
+          'modifier': 'read-more standalone-link'
+        } %}
+      {% endif %}
     </div>
 
     {% if teaser_image_src is not empty %}
