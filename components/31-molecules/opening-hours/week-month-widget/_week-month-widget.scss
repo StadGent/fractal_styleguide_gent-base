@@ -11,7 +11,8 @@ $breakpoint-openinghours: '(min-width: 750px)';
   // ===
   &[data-type*="week"] .openinghours {
     &--day-open .openinghours--status,
-    &--time-prefix {
+    &--time-prefix,
+    &--times-between {
       display: none;
     }
 
