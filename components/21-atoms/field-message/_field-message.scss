@@ -13,8 +13,8 @@
   position: relative;
   align-items: center;
   max-width: 40rem;
-  min-height: 4rem;
-  padding: 2rem 1.2rem 1rem 1.2rem;
+  min-height: 2.5rem;
+  padding: 1.7rem 1.2rem 0.7rem 1.2rem;
   border-radius: border-radius("radius-1");
   font-size: 0.7rem;
   line-height: 1.43;
@@ -24,7 +24,7 @@
     position: absolute;
     top: 1rem;
     bottom: 0;
-    left: 1.4rem;
+    left: 1.2rem;
     width: $field-message-icon-size;
     height: $field-message-icon-size;
     margin: auto $field-message-icon-margin auto auto;
@@ -40,33 +40,28 @@
     transform: rotate(180deg);
 
     &::before {
-      width: calc(100% - 2.1rem - 2px);
+      left: -1px;
+      width: calc(100% - 1.9rem + 1px);
     }
 
     &::after {
-      width: calc(2.1rem);
+      right: -1px;
+      width: calc(1.9rem + 1px);
     }
   }
 
   &.success {
     @include icon("checkmark");
 
-    padding-left: 4.4rem;
+    padding-left: 3.9rem;
     background-color: color("green", -4);
-
-    &::before {
-      color: color("green");
-    }
   }
+
   &.error {
     @include icon("cross");
 
-    padding-left: 4.4rem;
+    padding-left: 3.9rem;
     background-color: color("red", -4);
-
-    &::before {
-      color: color("red");
-    }
   }
 
   a {
