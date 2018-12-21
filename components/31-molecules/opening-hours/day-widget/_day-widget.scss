@@ -44,14 +44,19 @@ $breakpoint-openinghours: '(min-width: 750px)';
     }
 
     .openinghours {
-      @include icon(clock);
-      padding: .3rem .5rem 0 calc(.5rem + 1.5em);
+
+      padding: 0 .5rem 0 calc(.5rem + 1.5em);
       background-color: color('green', -4);
 
       &::before {
-        margin-left: -1em;
+        margin: 0 0 0 -1.2em;
         font-size: 1.5em;
         vertical-align: -25%;
+      }
+
+      &:first-of-type {
+        @include icon(clock);
+        padding-top: .3rem;
       }
 
       &:last-of-type {
