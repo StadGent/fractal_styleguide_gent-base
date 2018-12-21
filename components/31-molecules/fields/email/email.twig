@@ -8,15 +8,6 @@
   </div>
   <div class="form-columns">
     <div class="form-item-column">
-      {% include '@field-description' with {
-        "field_description": field_description
-      } %}
-    </div>
-    <div class="form-item-column">
-      {% include '@input-email' with {
-        "email_id": email_id ~ "-" ~ modifier,
-        "email_name": email_name
-      } %}
       {% if modifier == 'error' %}
         {% include '@field-message' with {
           "modifier": "error"
@@ -27,6 +18,15 @@
           "modifier": "success"
         } %}
       {% endif %}
+    </div>
+    <div class="form-item-column">
+      {% include '@field-description' with {
+        "field_description": field_description
+      } %}
+       {% include '@input-email' with {
+        "email_id": email_id ~ "-" ~ modifier,
+        "email_name": email_name
+      } %}
     </div>
   </div>
 </div>
