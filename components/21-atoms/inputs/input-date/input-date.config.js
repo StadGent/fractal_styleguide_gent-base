@@ -5,8 +5,8 @@ module.exports = {
   status: 'beta',
   handle: 'input-date',
   context: {
-    date_name: 'date_name',
-    date_id: 'date_id'
+    name: 'date_name',
+    id: 'date_id'
   },
   variants: [
     {

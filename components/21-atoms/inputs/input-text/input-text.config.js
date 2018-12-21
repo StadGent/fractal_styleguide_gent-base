@@ -5,8 +5,8 @@ module.exports = {
   status: 'beta',
   handle: 'input-text',
   context: {
-    textfield_id: 'textfield_id',
-    textfield_name: 'textfield_name'
+    id: 'textfield_id',
+    name: 'textfield_name'
   },
   variants: [
     {

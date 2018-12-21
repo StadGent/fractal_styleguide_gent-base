@@ -1,7 +1,7 @@
 <div class="form-item {{ modifier }}">
   {% include '@label' with {
-    "label": label,
-    "for": for ~ "-" ~ modifier,
+    "label": input_component,
+    "for": input_component ~ "-" ~ modifier,
     "label_optional": label_optional
   } %}
   {% include '@field-message' with {
@@ -10,10 +10,9 @@
   } %}
   <div class="form-columns">
     <div class="form-item-column">
-      {% include '@input-date' with {
-        "date_id": date_id ~ "-" ~ modifier,
-        "date_name": date_name
-      } %}
+      {% include '@'~input_component with {
+        "id": input_component ~ "-" ~ modifier
+      }%}
     </div>
     <div class="form-item-column">
       {% if modifier == 'error' %}
