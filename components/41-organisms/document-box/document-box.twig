@@ -7,15 +7,14 @@
     {% for document in documents %}
       <li>
         {% block link %}
-          {% include '@link' with {
-            'link': 'javascript:(void);',
-            'text': document.text,
-            'download': true,
-            'modifier': 'standalone-link'
+          {% include '@file-download' with {
+            link: 'javascript:(void);',
+            text: document.text,
+            file: {
+              type: document.type,
+              size: document.size
+            }
           } %}
-          <span class="file-type">
-            {{ document.type }}<span class="file-size">({{ document.size }})</span>
-          </span>
         {% endblock %}
       </li>
     {% endfor %}
@@ -34,15 +33,14 @@
     <ul class="links">
       {% for document in other_documents %}
         <li>
-          {% include '@link' with {
-            'link': 'javascript:(void);',
-            'text': document.text,
-            'download': true,
-            'modifier': 'standalone-link'
+          {% include '@file-download' with {
+            link: 'javascript:(void);',
+            text: document.text,
+            file: {
+              type: document.type,
+              size: document.size
+            }
           } %}
-          <span class="file-type">
-            {{ document.type }}<span class="file-size">({{ document.size }})</span>
-          </span>
         </li>
       {% endfor %}
     </ul>
