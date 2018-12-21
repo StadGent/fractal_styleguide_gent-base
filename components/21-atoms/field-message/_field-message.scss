@@ -23,9 +23,8 @@
   &::before {
     display: block;
     position: absolute;
-    top: 1rem;
-    bottom: 0;
-    left: 1.2rem;
+    top: 1.5rem;
+    left: .7rem;
     width: $field-message-icon-size;
     height: $field-message-icon-size;
     margin: auto $field-message-icon-margin auto auto;
@@ -42,26 +41,26 @@
 
     &::before {
       left: -1px;
-      width: calc(100% - 1.9rem + 1px);
+      width: calc(100% - 1.5rem + 1px);
     }
 
     &::after {
       right: -1px;
-      width: calc(1.9rem + 1px);
+      width: calc(1.5rem + 1px);
     }
   }
 
   &.success {
     @include icon("checkmark");
 
-    padding-left: 3.9rem;
+    padding-left: 2.9rem;
     background-color: color("green", -4);
   }
 
   &.error {
     @include icon("cross");
 
-    padding-left: 3.9rem;
+    padding-left: 2.9rem;
     background-color: color("red", -4);
   }
 
