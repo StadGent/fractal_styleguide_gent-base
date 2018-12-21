@@ -425,60 +425,69 @@ $field-icon-padding: 2.5rem;
 .form-item {
   margin-bottom: 1rem;
 
+  .field-message {
+    margin-top: 0.2rem;
+  }
+
   .form-columns {
+    .form-item-column {
+      &:first-child {
+        > *:last-child {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  &:not(.column) {
     @include desktop {
-      display: flex;
+      .form-columns {
+        display: flex;
 
-      .form-item-column {
-        width: span(6 of 12);
-        margin-right: gutter();
+        .form-item-column {
+          width: span(6 of 12);
+          margin-right: gutter();
 
-        &:last-child {
-          display: flex;
-          align-items: flex-end;
-          margin-right: 0;
+          &:last-child {
+            display: flex;
+            align-items: flex-end;
+            margin-right: 0;
 
-          .field-message {
-            padding: 0.7rem 1.2rem 0.7rem 3.9rem;
-
-            &::before {
-              left: 1.7rem;
-              // bottom:
-            }
-
-            .accolade {
-              right: auto;
-              bottom: 0;
-              left: 0;
-              width: 1rem;
-              height: 100%;
-              transform: rotate(0deg);
+            .field-message {
+              padding: 0.7rem 1.2rem 0.7rem 3.9rem;
 
               &::before {
-                top: 0;
-                bottom: 1.2rem;
-                width: 1rem;
-                height: auto;
-                border-radius: 0;
-                border-bottom-right-radius: border-radius("radius-4");
+                left: 1.7rem;
               }
 
-              &::after {
-                top: auto;
-                right: 0;
+              .accolade {
+                right: auto;
                 bottom: 0;
+                left: 0;
                 width: 1rem;
-                height: 1.2rem;
-                border-radius: 0;
-                border-top-right-radius: border-radius("radius-4");
+                height: 100%;
+                transform: rotate(0deg);
+
+                &::before {
+                  top: 0;
+                  bottom: 1.2rem;
+                  width: 1rem;
+                  height: auto;
+                  border-radius: 0;
+                  border-bottom-right-radius: border-radius("radius-4");
+                }
+
+                &::after {
+                  top: auto;
+                  right: 0;
+                  bottom: 0;
+                  width: 1rem;
+                  height: 1.2rem;
+                  border-radius: 0;
+                  border-top-right-radius: border-radius("radius-4");
+                }
               }
             }
-          }
-        }
-
-        &:first-child {
-          > *:last-child {
-            margin-top: 1rem;
           }
         }
       }
