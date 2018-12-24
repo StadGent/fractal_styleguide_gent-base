@@ -29,8 +29,23 @@
   }
 
   .checkbox-filter__modal {
+    .checkbox-filter__filter__search-wrapper {
+      @include desktop {
+        display: flex;
+      }
+    }
+
     .checkbox-filter__filter {
       margin-bottom: 1rem;
+      max-width: 22rem;
+    }
+
+    .checkbox-filter__result-wrapper {
+      @include desktop {
+        margin-left: 1rem;
+        line-height: 2.4rem;
+        white-space: nowrap;
+      }
     }
 
     .checkbox-filter__checkboxes {

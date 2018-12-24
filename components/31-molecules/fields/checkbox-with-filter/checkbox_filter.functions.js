@@ -96,14 +96,6 @@
     );
 
     /**
-     * Container to display the placeholder result text prior to filtering.
-     * @type {Element}
-     */
-    const resultSpanPlaceholder = elem.querySelector(
-      options.resultSpanPlaceholder || '.checkbox-filter__result-placeholder'
-    );
-
-    /**
      * Container wrapping the resultspan.
      * @type {Element}
      */
@@ -276,15 +268,6 @@
         }
         else {
           resultSpanWrapper.classList.remove('hidden');
-        }
-      }
-
-      if (resultSpanPlaceholder) {
-        if (filterfield.value === '') {
-          resultSpanPlaceholder.classList.remove('hidden');
-        }
-        else {
-          resultSpanPlaceholder.classList.add('hidden');
         }
       }
     };
