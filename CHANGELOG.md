@@ -11,6 +11,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-649: contact block variants
 * DTGB-650: multiple cta-block wrapper
 * DTGB-651: Links on topic overview page
+* DTGB-654: File download molecule
 
 ### Updated
 
