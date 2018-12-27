@@ -1,7 +1,7 @@
 .filter-placeholder {
-  text-align: center;
-  font-size: .8rem;
   max-width: 40rem;
+  font-size: .8rem;
+  text-align: center;
 
   .spotimage {
     @include spot-image('loupe-light', 7rem);
