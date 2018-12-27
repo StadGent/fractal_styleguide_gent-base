@@ -43,13 +43,19 @@ module.exports = {
   title: 'Contact box',
   status: 'alpha',
   context: data,
-
+  preview: '@preview-description-list',
+  collated: true,
+  collator: function (markup, item) {
+    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 100%">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+  },
   variants: [
     {
+      preview: '@preview',
       name: 'default'
     },
 
     {
+      preview: '@preview',
       name: 'no-map',
       context: Object.assign({}, data, {
         map: false
@@ -57,6 +63,7 @@ module.exports = {
     },
 
     {
+      preview: '@preview',
       name: 'contacts-only',
       context: Object.assign({}, data, {
         authorized_persons: [],
@@ -65,6 +72,7 @@ module.exports = {
     },
 
     {
+      preview: '@preview',
       name: 'compact',
       context: (function () {
         let dataCopy = Object.assign({}, data);

@@ -2,7 +2,7 @@
 
 const generateCheckboxes = (uid)=>{
   let result = [];
-  for (let i = 195; i--;) {
+  for (let i = 100; i--;) {
     result.push({
       label_checkbox: `Checkbox option ${i}`,
       checkbox_name: 'checkboxgroup[]',
@@ -10,7 +10,7 @@ const generateCheckboxes = (uid)=>{
       checkbox_value: i
     });
   }
-  return result;
+  return [{items: result}];
 };
 
 const generateTeasers = (uid)=>{

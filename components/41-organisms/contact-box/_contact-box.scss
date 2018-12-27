@@ -1,5 +1,5 @@
 .contact-box {
-  @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
+  @include theme('border-color', 'color-primary--lighten-4', 'contact-box-border-color');
 
   display: flex;
   position: relative;
@@ -34,16 +34,6 @@
       }
     }
 
-    @include desktop {
-      &:first-of-type {
-        width: span(4 of 12);
-      }
-
-      &:last-of-type {
-        width: span(8 of 12);
-      }
-    }
-
     .map {
       margin-bottom: gutter();
     }
@@ -64,10 +54,6 @@
       }
 
     }
-  }
-
-  h3 {
-    @extend %h4;
   }
 
   button {

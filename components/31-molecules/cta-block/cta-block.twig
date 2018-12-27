@@ -1,4 +1,4 @@
-<div class="cta-block box-left {{ type }}">
+<div class="cta-block box-{{ top ? 'top' : 'left' }} {{ type }}">
   <div class="inner-box">
     {% if title %}
       {% include '@heading' with {
@@ -14,63 +14,35 @@
     {% endif %}
 
     {% if links|length > 1 %}
-      <ul class="links">
-        <li>
-          {% include '@link' with {
-          'link': links[0].url,
-          'text': links[0].text,
-          'modifier':  'button button-primary',
-          'download': links[0].document|length
-          } %}
-          {% if links[0].document|length %}
-            <span class="file-type">
-              PDF
-              {% if links[0].size|length %}
-                <span class="file-size">
-                  (753.77 KB)
-                </span>
-              {% endif %}
-            </span>
-          {% endif %}
-        </li>
-        <li>
-          {% include '@link' with {
-          'link': links[1].url,
-          'text': links[1].text,
-          'modifier': 'standalone-link',
-          'download': links[1].document|length
-          } %}
-          {% if links[1].document|length %}
-            <span class="file-type">
-            PDF
-              {% if links[1].size|length %}
-                <span class="file-size">
-                (753.77 KB)
-              </span>
-              {% endif %}
-          </span>
-          {% endif %}
-        </li>
-      </ul>
-    {% else %}
+    <ul class="links">
+    {% endif %}
       {% for link in links %}
-        {% include '@link' with {
-        'link': links[0].url,
-        'text': links[0].text,
-        'modifier': 'button button-primary',
-        'download': links[0].document|length
+        {% set options = {
+          link: link.url,
+          text: link.text,
+          modifier: loop.first ? 'button button-primary' : 'standalone-link'
         } %}
-        {% if links[0].document|length %}
-          <span class="file-type">
-              PDF
-            {% if links[0].size|length %}
-              <span class="file-size">
-                  (753.77 KB)
-                </span>
-            {% endif %}
-            </span>
+
+        {% if link.size|length %}
+          {% set options = options|merge({
+            file: {
+              size: link.size,
+              type: 'pdf'
+            }
+          }) %}
+        {% endif %}
+
+        {% if links|length > 1 %}
+        <li>
+        {% endif %}
+          {% include '@file-download' with options %}
+        {% if links|length > 1 %}
+        </li>
         {% endif %}
       {% endfor %}
-    {% endif %}
+
+      {% if links|length > 1 %}
+      </ul>
+      {% endif %}
   </div>
 </div>

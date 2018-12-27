@@ -15,6 +15,13 @@
 
   h1 {
     width: 100%;
+
+    + .tag {
+      display: inline-block;
+      width: auto;
+      margin-top: -.4rem;
+      margin-bottom: 2rem;
+    }
   }
 
   > div,
@@ -41,6 +48,7 @@
   > .box-top,
   > .summary-box,
   > .cta-block,
+  > .contact-block,
   > .contact-details,
   > .contact-box {
     @include desktop {

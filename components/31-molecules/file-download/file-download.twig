@@ -1,0 +1,17 @@
+{% include '@link' with {
+  'link': link,
+  'text': text,
+  'modifier': modifier|default('standalone-link'),
+  'download': file is defined
+} %}
+
+{% if file is defined %}
+  <span class="file-type">
+    {{ file.type }}
+    {% if file.size is defined %}
+      <span class="file-size">
+        ({{ file.size }})
+      </span>
+    {% endif %}
+  </span>
+{% endif %}

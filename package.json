@@ -1,17 +1,17 @@
 {
   "name": "gent_styleguide",
-  "version": "3.0.0-alpha.9",
+  "version": "3.0.0-alpha.10",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
     "@frctl/fractal": "^1.1.7",
-    "@frctl/twig": "git+https://github.com/tnottu/fractal-twig-adapter.git",
+    "@frctl/twig": "https://github.com/tnottu/fractal-twig-adapter.git",
     "allietabs": "^1.0.2",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
-    "event-stream": "^3.3.4",
+    "fs-extra": "^7.0.1",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.1",
@@ -20,11 +20,11 @@
     "gulp-contrib-copy": "^0.1.3",
     "gulp-cssnano": "^2.1.2",
     "gulp-eslint": "^4.0.0",
-    "gulp-iconfont": "^9.1.0",
+    "gulp-iconfont": "^10.0.2",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.3.0",
-    "gulp-inject": "^4.3.0",
+    "gulp-inject": "^5.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
@@ -59,6 +59,6 @@
     "gulp-axe-webdriver": "^3.0.1"
   },
   "scripts": {
-    "postinstall": "bash scripts/postinstall.sh"
+    "postinstall": "node ./scripts/postinstall.js"
   }
 }

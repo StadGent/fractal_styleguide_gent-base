@@ -38,7 +38,7 @@
             {% include '@input-checkbox' with {
               checkbox_label: 'Show all',
               checkbox_name: category.value,
-              checkbox_id: category.value,
+              checkbox_id: category.value~"-"~modifier,
               checkbox_value: category.value,
               modifierWrapper: 'full-width'
             } %}

@@ -2,9 +2,7 @@
   <article class="teaser-content">
     <div class="content__bottom">
       {% if teaser_title_link %}
-        <{{ header_level|default('h3') }} id="{{ teaser_uid }}" class="teaser-title-link">
-          <a href="{{ teaser_title_link }}" class="standalone-link">{{ teaser_title }}</a>
-        </{{ header_level|default('h3') }}>
+          <a href="{{ teaser_title_link }}" class="teaser-title-link standalone-link">{{ teaser_title }}</a>
       {% else %}
         <{{ header_level|default('h3') }} id="{{ teaser_uid }}">{{ teaser_title }}</{{ header_level|default('h3') }}>
       {% endif %}
@@ -21,7 +19,6 @@
           <li>
           {% include '@link' with {
             'text': teaser_telephone,
-            'aria_labelledby': teaser_uid,
             'link': 'tel:'~teaser_telephone,
             'modifier': 'no-icon'
           } %}
@@ -31,7 +28,6 @@
         <li>
           {% include '@link' with {
             'text': teaser_email,
-            'aria_labelledby': teaser_uid,
             'link': 'mailto:'~teaser_email,
             'modifier': 'no-icon'
           } %}
@@ -44,7 +40,6 @@
       {% if teaser_link_text is not empty and teaser_link_link is not empty %}
         {% include '@link' with {
             'text': teaser_link_text,
-            'aria_labelledby': teaser_uid,
             'link': teaser_link_link,
             'modifier': 'read-more standalone-link'
           } %}

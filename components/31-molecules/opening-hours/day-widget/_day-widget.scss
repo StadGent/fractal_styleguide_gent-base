@@ -1,0 +1,105 @@
+$breakpoint-openinghours: '(min-width: 750px)';
+
+// ===
+// Day view
+// ===
+.openinghours-widget {
+  &[data-type="day"] {
+    display: inline-block;
+    border-radius: border-radius('radius-1');
+    overflow: hidden;
+
+    > * {
+      line-height: 1.4rem;
+    }
+
+    .channel-label {
+      float: left;
+      font-size: 0;
+      font-weight: bold;
+
+      &::after {
+        display: inline-block;
+        content: " ";
+      }
+
+      &:nth-of-type(n + 2) {
+        padding-left: 1.9rem;
+        font-size: .8rem;
+
+        + .openinghours {
+          padding-top: 0;
+
+          &::before {
+            display: none;
+          }
+
+          .openinghours--date,
+          .openinghours--status {
+            display: none;
+          }
+
+        }
+      }
+    }
+
+    .openinghours {
+
+      padding: 0 .5rem 0 calc(.5rem + 1.5em);
+      background-color: color('green', -4);
+
+      &::before {
+        margin: 0 0 0 -1.2em;
+        font-size: 1.5em;
+        vertical-align: -25%;
+      }
+
+      &:first-of-type {
+        @include icon(clock);
+        padding-top: .3rem;
+      }
+
+      &:last-of-type {
+        padding-bottom: .3rem;
+      }
+
+      &--day-closed {
+        background-color: color('red', -4);
+      }
+
+      &--date,
+      &--content,
+      &--times,
+      &--times-between,
+      &--time {
+        display: inline;
+      }
+
+      &--time time:last-of-type {
+        &::before {
+          content: "-";
+        }
+      }
+
+      &--date,
+      &--status {
+        font-weight: bold;
+      }
+
+      &--special-day {
+        > span {
+          display: none;
+        }
+
+        > span:first-child {
+          display: inline;
+        }
+      }
+
+      &--time-prefix,
+      &--time-separator {
+        display: none;
+      }
+    }
+  }
+}

@@ -158,6 +158,14 @@ h3.styleguide-title {
   overflow: hidden;
 }
 
-dt.styleguide {
-  margin-bottom: 1rem;
+dl.styleguide {
+  dt,
+  dd {
+    max-width: 100%;
+  }
+
+  dd {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
 }

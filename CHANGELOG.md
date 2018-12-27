@@ -8,12 +8,28 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Added
 
+* DTGB-649: contact block variants
+* DTGB-650: multiple cta-block wrapper
+* DTGB-651: Links on topic overview page
+* DTGB-654: File download molecule
+
+### Updated
+
+* DTGB-651: Topic teaser styling
+
+## [3.0.0-alpha.10]
+
+### Added
+
 * DTGB-574: tabs
 * DTGB-633: inverted variant of contact-details
 
 ### Updated
 
 * DTGB-634: cta block variants
+
+### Changed
+* DTGB-641: Refactored filter template to display filter button next to result instead of above it
 
 ### Fixed
 

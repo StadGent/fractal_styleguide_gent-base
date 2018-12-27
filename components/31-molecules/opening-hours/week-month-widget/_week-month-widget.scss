@@ -1,0 +1,218 @@
+$breakpoint-openinghours: '(min-width: 750px)';
+
+.openinghours-widget {
+  @media (max-width: 360px) {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+  }
+
+  // ===
+  // Week view
+  // ===
+  &[data-type*="week"] .openinghours {
+    &--day-open .openinghours--status,
+    &--time-prefix,
+    &--times-between {
+      display: none;
+    }
+
+    &--time-separator {
+      font-size: 0;
+
+      &::before {
+        font-size: .8rem;
+        content: '-';
+      }
+    }
+
+    &--days {
+      @extend %list-no-style;
+    }
+
+    &--day {
+      padding: .3rem .8rem;
+
+      &:nth-child(even) {
+        @include theme('background', 'color-primary--lighten-4', 'opening-hours-even-background');
+      }
+    }
+
+    &--details {
+      @media #{$breakpoint-openinghours} {
+        display: flex;
+      }
+    }
+
+    &--date {
+      flex-basis: 75%;
+    }
+
+    &--status {
+      text-transform: capitalize;
+    }
+  }
+
+  // ===
+  // Month view
+  // ===
+  &[data-type="month"] {
+    $day-size: 2rem;
+    padding-bottom: 6rem;
+
+    @media #{$breakpoint-openinghours} {
+      padding-right: $day-size * 7 - 1.6rem;
+      padding-bottom: 0;
+    }
+
+    > .openinghours {
+      @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
+      display: inline-block;
+      padding-bottom: .8rem;
+
+      @media #{$breakpoint-openinghours} {
+        padding-right: .8rem;
+        padding-bottom: 0;
+        border-right: 2px solid;
+      }
+    }
+
+    .openinghours {
+
+      &--header,
+      &--days {
+        display: flex;
+        width: $day-size * 7;
+      }
+
+      // Header
+      // ===
+      &--header {
+        justify-content: space-between;
+
+        button {
+          @include theme('color', 'color-primary', 'opening-hours-color');
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: $day-size;
+          height: $day-size / 2;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          font-size: 0;
+          cursor: pointer;
+
+          &.openinghours--prev,
+          &.openinghours--next {
+            &::before {
+              font-size: 1.2rem;
+            }
+          }
+
+          &.openinghours--prev {
+            @include icon(arrow-left);
+          }
+
+          &.openinghours--next {
+            @include icon(arrow-right);
+          }
+        }
+
+        .openinghours--month {
+          font-weight: 600;
+          line-height: $day-size / 2;
+        }
+      }
+
+
+      &--day--day-of-week {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      &--days {
+        flex-wrap: wrap;
+        margin: 0;
+      }
+
+      &--day {
+        @extend %list-no-style;
+
+        &,
+        > span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: $day-size;
+          height: $day-size;
+          border-radius: 50%;
+        }
+      }
+
+      &--day-open,
+      &--day-closed {
+        cursor: pointer;
+
+        &[tabindex='0'] > span,
+        &:hover > span {
+          @include theme('border-color', 'color-primary', 'opening-hours-color');
+          border: 2px solid;
+        }
+
+        &[tabindex='0'] .openinghours--details {
+          display: block;
+        }
+      }
+
+      &--day-open > span::after {
+        @include theme('background-color', 'color-primary', 'opening-hours-color');
+        display: block;
+        position: relative;
+        bottom: .2rem;
+        flex: 0 0 auto;
+        width: .2rem;
+        height: .2rem;
+        border-radius: 50%;
+        content: "";
+      }
+
+      &--day-passed > span {
+        opacity: .5;
+      }
+
+      &--details {
+        @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
+        display: none;
+        position: absolute;
+        top: calc(100% + .8rem);
+        left: .8rem;
+        width: calc(100% - 1.6rem);
+        padding-top: .8rem;
+        border-top: 2px solid;
+        cursor: default;
+
+        @media #{$breakpoint-openinghours} {
+          top: -$day-size / 2;
+          left: calc(100% + 1.6rem);
+          padding-top: 0;
+          border-top: 0;
+        }
+      }
+
+      &--date {
+        margin-bottom: .8rem;
+        font-weight: 600;
+      }
+
+      &--status {
+        text-transform: capitalize;
+      }
+
+      &--time {
+        display: inline;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .teaser-contact {
-  @include theme('border-color', 'color-primary--lighten-3', 'teaser-contact-border');
+  @include theme('border-color', 'color-primary--lighten-4', 'teaser-contact-border');
   padding-bottom: .7rem;
   border-bottom: 2px solid;
 
@@ -33,7 +33,9 @@
   }
 
   .teaser-title-link {
+    margin-bottom: .8rem;
     font-size: .8rem;
+    line-height: 1.2rem;
   }
 
   .read-more {
