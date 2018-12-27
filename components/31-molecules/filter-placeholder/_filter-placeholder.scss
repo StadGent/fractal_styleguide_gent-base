@@ -1,0 +1,13 @@
+.filter-placeholder {
+  text-align: center;
+  font-size: .8rem;
+  max-width: 40rem;
+
+  .spotimage {
+    @include spot-image('loupe-light', 7rem);
+
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0 10px 35px -25px;
+  }
+}
