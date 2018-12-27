@@ -30,6 +30,8 @@
 
   .checkbox-filter__modal {
     .checkbox-filter__filter__search-wrapper {
+      max-width: 30rem;
+
       @include desktop {
         display: flex;
       }
@@ -37,7 +39,6 @@
 
     .checkbox-filter__filter {
       margin-bottom: 1rem;
-      max-width: 22rem;
     }
 
     .checkbox-filter__result-wrapper {
@@ -70,6 +71,10 @@
       & + .checkbox-filter__checkboxes {
         margin-top: 1rem;
       }
+    }
+
+    .checkbox-filter__selected {
+      margin-bottom: .7rem;
     }
   }
 }

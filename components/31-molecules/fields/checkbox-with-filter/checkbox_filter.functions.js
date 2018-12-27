@@ -96,14 +96,6 @@
     );
 
     /**
-     * Container wrapping the resultspan.
-     * @type {Element}
-     */
-    const resultSpanWrapper = elem.querySelector(
-      options.resultSpanWrapper || '.checkbox-filter__result-wrapper'
-    );
-
-    /**
      * Container wrapping the countspan.
      * @type {Element}
      */
@@ -260,15 +252,6 @@
     const updateResult = (resultCount) => {
       if (resultSpan) {
         resultSpan.textContent = resultCount;
-      }
-
-      if (resultSpanWrapper) {
-        if (filterfield.value === '') {
-          resultSpanWrapper.classList.add('hidden');
-        }
-        else {
-          resultSpanWrapper.classList.remove('hidden');
-        }
       }
     };
 
