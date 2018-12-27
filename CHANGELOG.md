@@ -16,6 +16,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * DTGB-651: Topic teaser styling
+* DTGB-655: Updated copy in checkbox-with-filter popup
 
 ## [3.0.0-alpha.10]
 
