@@ -12,10 +12,12 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-650: multiple cta-block wrapper
 * DTGB-651: Links on topic overview page
 * DTGB-654: File download molecule
+* DTGB-656: Frequently visited molecule
 
 ### Updated
 
 * DTGB-651: Topic teaser styling
+* DTGB-656: Border-width of tag 
 
 ## [3.0.0-alpha.10]
 
