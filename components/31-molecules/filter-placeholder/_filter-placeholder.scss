@@ -6,7 +6,7 @@
   padding-bottom: 6rem;
 
   .spotimage {
-    @include spot-image('loupe-light', 7rem);
+    @include spot-image('lightbulb-light', 7rem);
 
     display: inline-block;
     border-radius: 50%;
