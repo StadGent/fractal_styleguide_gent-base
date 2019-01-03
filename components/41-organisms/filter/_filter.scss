@@ -1,4 +1,9 @@
 .filter {
+  .help-text {
+    @include theme('color', 'color-tertiary--lighten-1', 'filter-help-text-color');
+    font-size: .6rem;
+  }
+
   .filter-section {
     padding-top: .7rem;
     visibility: hidden;
