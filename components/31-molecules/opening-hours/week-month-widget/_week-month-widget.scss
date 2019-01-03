@@ -210,7 +210,8 @@ $breakpoint-openinghours: '(min-width: 750px)';
         text-transform: capitalize;
       }
 
-      &--time {
+      &--time,
+      &--times-between {
         display: inline;
       }
     }
