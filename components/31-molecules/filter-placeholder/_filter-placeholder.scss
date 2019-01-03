@@ -2,6 +2,8 @@
   max-width: 40rem;
   font-size: .8rem;
   text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 
   .spotimage {
     @include spot-image('loupe-light', 7rem);
