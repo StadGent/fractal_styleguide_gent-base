@@ -1,9 +1,9 @@
 .filter-placeholder {
   max-width: 40rem;
-  font-size: .8rem;
-  text-align: center;
   padding-top: 6rem;
   padding-bottom: 6rem;
+  font-size: .8rem;
+  text-align: center;
 
   .spotimage {
     @include spot-image('lightbulb-light', 7rem);
