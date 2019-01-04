@@ -17,4 +17,9 @@
 .overview-layout {
   @extend %content-container;
   margin-bottom: 4rem;
+
+  .intro {
+    font-size: .9rem;
+    margin-bottom: 2rem;
+  }
 }
