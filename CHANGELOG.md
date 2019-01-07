@@ -17,7 +17,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * DTGB-651: Topic teaser styling
-* DTGB-656: Border-width of tag 
+* DTGB-656: Border-width of tag
 
 ## [3.0.0-alpha.10]
 
