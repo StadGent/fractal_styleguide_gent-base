@@ -1,0 +1,14 @@
+.frequently-visited {
+  .inner-box::before {
+    @include spot-image('loupe-light', 7rem);
+  }
+
+  .inline {
+    max-width: 40rem;
+
+    > li {
+      margin-right: .8rem;
+      margin-bottom: .4rem;
+    }
+  }
+}
