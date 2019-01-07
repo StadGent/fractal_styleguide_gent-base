@@ -5,8 +5,8 @@ module.exports = {
   status: 'beta',
   handle: 'input-password',
   context: {
-    password_name: 'password_name',
-    password_id: 'password_id'
+    name: 'password_name',
+    id: 'password_id'
   },
   variants: [
     {

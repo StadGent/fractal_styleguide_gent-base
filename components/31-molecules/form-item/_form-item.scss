@@ -1,0 +1,71 @@
+.form-item {
+  margin-bottom: 1rem;
+
+  @include desktop {
+    > .field-message {
+      max-width: span(6 of 12);
+    }
+  }
+
+  .form-columns {
+    margin-bottom: 1.2rem;
+
+    .form-item-column {
+      >:first-child {
+        margin-top: .4rem;
+      }
+    }
+
+    @include desktop {
+      display: flex;
+
+      .form-item-column {
+        width: span(6 of 12);
+
+        &:last-child {
+          display: flex;
+          align-items: flex-end;
+
+          .field-message {
+            padding: .7rem 1.2rem .7rem 3.9rem;
+
+            &::before {
+              top: .5rem;
+              left: 1.7rem;
+            }
+
+            .accolade {
+              right: auto;
+              bottom: 0;
+              left: 0;
+              width: 1rem;
+              height: 100%;
+              transform: rotate(0deg);
+
+              &::before,
+              &::after {
+                width: 1rem;
+                border: 0;
+              }
+
+              &::before {
+                top: 0;
+                bottom: 1.2rem;
+                height: 1.2rem;
+                border-radius: 0 0 border-radius("radius-4");
+              }
+
+              &::after {
+                top: 1.2rem;
+                right: 0;
+                bottom: -1px;
+                height: auto;
+                border-radius: 0 border-radius("radius-4") 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

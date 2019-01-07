@@ -1,11 +1,11 @@
 <div class="radio">
   <input type="radio"
-        id="{{ radio_id }}"
-        name="{{ radio_name }}"
+        id="{{ id }}"
+        name="{{ name }}"
         class="radio {% if modifier %}{{ modifier }}{% endif %}"
         {% if disabled %}
           disabled="disabled"
         {% endif %}
   />
-  <label for="{{ radio_id }}">{{ radio_label }}</label>
+  <label for="{{ id }}">{{ label }}</label>
 </div>

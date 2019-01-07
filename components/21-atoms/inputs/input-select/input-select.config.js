@@ -5,8 +5,8 @@ module.exports = {
   status: 'beta',
   handle: 'input-select',
   context: {
-    select_name: 'select_name',
-    select_id: 'select_id',
+    name: 'select_name',
+    id: 'select_id',
     label: 'Input Select',
     options: [
       {

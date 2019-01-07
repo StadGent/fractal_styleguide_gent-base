@@ -6,8 +6,8 @@ module.exports = {
   handle: 'input-multiselect',
   context: {
     label: 'Multiselect',
-    multiselect_name: 'multiselect_name',
-    multiselect_id: 'multiselect_id',
+    name: 'multiselect_name',
+    id: 'multiselect_id',
     options: [
       {
         label: 'Option 1'

@@ -5,9 +5,9 @@ module.exports = {
   status: 'beta',
   handle: 'input-radio',
   context: {
-    radio_id: 'radio_id',
-    radio_name: 'radio_name',
-    radio_label: 'radio label'
+    id: 'radio_id',
+    name: 'radio_name',
+    label: 'radio label'
   },
   variants: [
     {

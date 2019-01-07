@@ -5,8 +5,8 @@ module.exports = {
   status: 'beta',
   handle: 'input-email',
   context: {
-    email_name: 'email_name',
-    email_id: 'email_id'
+    name: 'email_name',
+    id: 'email_id'
   },
   variants: [
     {

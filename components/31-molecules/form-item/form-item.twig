@@ -1,7 +1,7 @@
 <div class="form-item {{ modifier }}">
   {% include '@label' with {
-    "label": input_component,
-    "for": input_component ~ "-" ~ modifier,
+    "label": label,
+    "for": input_component ~ "-" ~ id ~ "-" ~ modifier,
     "label_optional": label_optional
   } %}
   {% include '@field-message' with {
@@ -11,7 +11,7 @@
   <div class="form-columns">
     <div class="form-item-column">
       {% include '@'~input_component with {
-        "id": input_component ~ "-" ~ modifier
+        "id": input_component ~ "-" ~ id ~ "-" ~ modifier
       }%}
     </div>
     <div class="form-item-column">

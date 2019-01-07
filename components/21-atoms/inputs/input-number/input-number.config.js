@@ -5,8 +5,8 @@ module.exports = {
   status: 'beta',
   handle: 'input-number',
   context: {
-    number_name: 'number_name',
-    number_id: 'number_id'
+    name: 'number_name',
+    id: 'number_id'
   },
   variants: [
     {

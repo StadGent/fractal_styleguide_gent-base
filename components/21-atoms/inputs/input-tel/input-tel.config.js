@@ -5,8 +5,8 @@ module.exports = {
   status: 'beta',
   handle: 'input-tel',
   context: {
-    tel_id: 'tel_id',
-    tel_name: 'tel_name'
+    id: 'tel_id',
+    name: 'tel_name'
   },
   variants: [
     {

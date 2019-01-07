@@ -24,186 +24,158 @@
       This is a fieldset title.
     </legend>
     <div class="fieldset-wrapper">
-        {% include '@textfield' with {
+        {% include '@form-item' with {
           "label": "Label textfield",
           "for": "textfield_id",
           "label_optional": "Optional",
-
+          "input_component": "input-text",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description textfield.",
-
-          "textfield_id": "textfield_id",
-          "textfield_name": "textfield_name"
+          "id": "textfield_id",
+          "name": "textfield_name"
         }%}
-        {% include '@telephone-field'
+        {% include '@form-item'
         with {
           "label": "Label telephone field",
           "for": "tel_id",
           "label_optional": "Optional",
-
+          "input_component": "input-tel",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description telephone field.",
-
-          "tel_id": "tel_id",
-          "tel_name": "tel_name"
+          "id": "tel_id",
+          "name": "tel_name"
         }
         %}
-        {% include '@password' with {
+        {% include '@form-item' with {
           "label": "Label password",
           "for": "password_id",
           "label_optional": "Optional",
-
+          "input_component": "input-password",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description textfield.",
-
-          "password_id": "password_id",
-          "password_name": "password_name"
+          "id": "password_id",
+          "name": "password_name"
         } %}
-        {% include '@number'
+        {% include '@form-item'
         with {
           "label": "Label number",
           "for": "number_id",
           "label_optional": "Optional",
-
+          "input_component": "input-number",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description number.",
-
-          "number_id": "number_id",
-          "number_name": "number_name"
+          "id": "number_id",
+          "name": "number_name"
         }
         %}
-        {% include '@date'
+        {% include '@form-item'
         with {
           "label": "Label date",
           "for": "date_id",
           "label_optional": "Optional",
-
+          "input_component": "input-date",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description date field.",
-
-          "date_id": "date_id",
-          "date_name": "date_name"
+          "id": "date_id",
+          "name": "date_name"
         }
         %}
-        {% include '@website'
+        {% include '@form-item'
         with {
           "label": "Label website",
           "for": "url_id",
           "label_optional": "Optional",
-
+          "input_component": "input-url",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description website field.",
-
-          "url_id": "url_id",
-          "url_name": "url_name"
+          "id": "url_id",
+          "name": "url_name"
         }
         %}
-        {% include '@email'
+        {% include '@form-item'
         with {
           "label": "Label email",
           "for": "email_id",
           "label_optional": "Optional",
-
+          "input_component": "input-email",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description email.",
-
-          "email_id": "email_id",
-          "email_name": "email_name"
+          "id": "email_id",
+          "name": "email_name"
         }
         %}
-        {% include '@file'
+        {% include '@form-item'
         with {
           "label": "Label file",
           "for": "file_id",
           "label_optional": "Optional",
-
+          "input_component": "input-file",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description file.",
-
-          "file_id": "file_id",
-          "file_name": "file_name"
+          "id": "file_id",
+          "name": "file_name"
         }
         %}
-        {% include '@textarea'
+        {% include '@form-item'
         with {
           "label": "Label textarea",
           "for": "textarea_id",
           "label_optional": "Optional",
-
+          "input_component": "input-textarea",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description textarea.",
-
-          "textarea_id": "textarea_id",
-          "textarea_name": "textarea_name"
+          "id": "textarea_id",
+          "name": "textarea_name"
         }
         %}
-        {% include '@checkbox'
+        {% include '@form-item--checkbox'
         with {
           "label": "Date",
+          "input_component": "input-checkbox",
           "options": [
             {
-              "label_checkbox": "Wednesday 6 june 2018",
-              "checkbox_name": "checkboxgroup",
-              "checkbox_id": "checkbox-1"
+              "label": "Wednesday 6 june 2018",
+              "name": "checkboxgroup",
+              "id": "checkbox-1"
             },
             {
-              "label_checkbox": "Thursday 7 june 2018",
-              "checkbox_name": "checkboxgroup",
-              "checkbox_id": "checkbox-2"
+              "label": "Thursday 7 june 2018",
+              "name": "checkboxgroup",
+              "id": "checkbox-2"
             },
             {
-              "label_checkbox": "Friday 8 june 2018",
-              "checkbox_name": "checkboxgroup",
-              "checkbox_id": "checkbox-3"
+              "label": "Friday 8 june 2018",
+              "name": "checkboxgroup",
+              "id": "checkbox-3"
             }
           ],
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
         }
         %}
-        {% include '@radio'
+        {% include '@form-item--radio'
         with {
           "label": "Date",
+          "input_component": "input-radio",
           "options": [
             {
-              "label_radio": "Wednesday 6 june 2018",
-              "radio_name": "radiogroup",
-              "radio_id": "radio-1"
+              "label": "Wednesday 6 june 2018",
+              "name": "radiogroup",
+              "id": "radio-1"
             },
             {
-              "label_radio": "Thursday 7 june 2018",
-              "radio_name": "radiogroup",
-              "radio_id": "radio-2"
+              "label": "Thursday 7 june 2018",
+              "name": "radiogroup",
+              "id": "radio-2"
             },
             {
-              "label_radio": "Friday 8 june 2018",
-              "radio_name": "radiogroup",
-              "radio_id": "radio-3"
+              "label": "Friday 8 june 2018",
+              "name": "radiogroup",
+              "id": "radio-3"
             }
           ],
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
         }
         %}
-        {% include '@select'
+        {% include '@form-item'
         with {
           "label": "Label select",
           "for": "select_id",
           "label_optional": "Optional",
-
+          "input_component": "input-select",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description select.",
-
-          "select_id": "select_id",
-          "select_name": "select_name",
+          "id": "select_id",
+          "name": "select_name",
           "options": [
             {
             "label": "Option 1"
@@ -226,18 +198,15 @@
           ]
         }
         %}
-        {% include '@multiselect'
+        {% include '@form-item'
         with {
           "label": "Label multiselect",
           "for": "multiselect_id",
           "label_optional": "Optional",
-
+          "input_component": "input-multiselect",
           "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.",
-          "field_error": "",
-          "description": "Description multiselect.",
-
-          "multiselect_id": "multiselect_id",
-          "multiselect_name": "multiselect_name",
+          "id": "multiselect_id",
+          "name": "multiselect_name",
           "options": [
             {
             "label": "Option 1"
@@ -256,8 +225,6 @@
         %}
       </div>
     </fieldset>
-
-    {% include '@address' %}
 
     {% include '@form-actions--editor' %}
   </form>

@@ -5,7 +5,7 @@ module.exports = {
   status: 'alpha',
   handle: 'input-file',
   context: {
-    file_name: 'file_name',
-    file_id: 'file_id'
+    name: 'file_name',
+    id: 'file_id'
   }
 };

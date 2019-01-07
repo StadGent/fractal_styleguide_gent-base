@@ -6,9 +6,9 @@ module.exports = {
   status: 'beta',
   handle: 'input-checkbox',
   context: {
-    checkbox_id: 'checkbox_id',
-    checkbox_name: 'checkbox_name',
-    checkbox_label: 'Checkbox label'
+    id: 'checkbox_id',
+    name: 'checkbox_name',
+    label: 'Checkbox label'
   },
   variants: [
     {

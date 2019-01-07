@@ -5,8 +5,8 @@ module.exports = {
   status: 'beta',
   handle: 'input-textarea',
   context: {
-    textarea_id: 'textarea_id',
-    textarea_name: 'textarea_name'
+    id: 'textarea_id',
+    name: 'textarea_name'
   },
   variants: [
     {

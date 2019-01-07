@@ -5,22 +5,21 @@
       <span class="label-optional">({{ label_optional }})</span>
     {% endif %}
   </legend>
+  {% include '@field-message' with {
+    "field_message": field_description,
+    "modifier": null
+  } %}
   <div class="form-columns">
     <div class="form-item-column">
-      {% include '@field-description' with {
-        "field_description": field_description
-      } %}
+      {% for option in options %}
+        {% include '@'~input_component with {
+          "id": input_component ~ "-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+          "name": option.name,
+          "label": option.label
+        } %}
+      {% endfor %}
     </div>
     <div class="form-item-column">
-
-    {% for option in options %}
-      {% include '@input-checkbox' with {
-        'checkbox_label': option.label_checkbox,
-        'checkbox_name': option.checkbox_name,
-        'checkbox_id': option.checkbox_id
-      } %}
-    {% endfor %}
-
       {% if modifier == 'error' %}
         {% include '@field-message' with {
           "modifier": "error"
