@@ -20,16 +20,17 @@
             <span class="label-optional">({{ label_optional }})</span>
           {% endif %}
         </h3>
+        <div class="checkbox-filter__selected"></div>
         <div class="form-item">
           <label for="checkboxes__filter_id_{{ modifier }}">Filter the list below</label>
-          <input type="search" id="checkboxes__filter_id_{{ modifier }}"
-                 class="checkbox-filter__filter">
-          <div class="checkbox-filter__selected"></div>
+          <div class="form-item checkbox-filter__filter__search-wrapper">
+            <input type="search" id="checkboxes__filter_id_{{ modifier }}" class="checkbox-filter__filter">
+
+            <p aria-live="polite" aria-atomic="true" class="checkbox-filter__result-wrapper">
+              <span class="checkbox-filter__result">#</span> filter(s) found
+            </p>
+          </div>
         </div>
-        <p>
-          <strong class="checkbox-filter__result-placeholder">There is no filter applied.</strong>
-          <strong aria-live="polite" class="checkbox-filter__result-wrapper"><span class="checkbox-filter__result">#</span> result(s) found:</strong>
-        </p>
 
         {% for category in options %}
         <div class="checkbox-filter__checkboxes">

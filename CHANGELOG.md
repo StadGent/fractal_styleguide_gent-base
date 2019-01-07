@@ -12,10 +12,12 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-650: multiple cta-block wrapper
 * DTGB-651: Links on topic overview page
 * DTGB-654: File download molecule
+* DTGB-658: Filter placeholder
 
 ### Updated
 
 * DTGB-651: Topic teaser styling
+* DTGB-655: Updated copy in checkbox-with-filter popup
 
 ## [3.0.0-alpha.10]
 
