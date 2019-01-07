@@ -13,11 +13,13 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-651: Links on topic overview page
 * DTGB-654: File download molecule
 * DTGB-656: Frequently visited molecule
+* DTGB-658: Filter placeholder
 
 ### Updated
 
 * DTGB-651: Topic teaser styling
 * DTGB-656: Border-width of tag
+* DTGB-655: Updated copy in checkbox-with-filter popup
 
 ## [3.0.0-alpha.10]
 
