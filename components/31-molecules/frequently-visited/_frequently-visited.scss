@@ -1,6 +1,12 @@
 .frequently-visited {
-  .inner-box::before {
-    @include spot-image('loupe-light', 7rem);
+  font-size: .8rem;
+
+  .inner-box {
+    padding-top: 2rem;
+
+    &::before {
+      @include spot-image('loupe-light', 7rem);
+    }
   }
 
   .inline {
