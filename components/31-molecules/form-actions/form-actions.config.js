@@ -12,11 +12,11 @@ module.exports = {
   variants: [
     {
       name: 'default',
-      preview: '@preview',
+      preview: '@preview'
     },
     {
       name: 'editor',
-      preview: '@preview',
+      preview: '@preview'
     }
   ]
 };
