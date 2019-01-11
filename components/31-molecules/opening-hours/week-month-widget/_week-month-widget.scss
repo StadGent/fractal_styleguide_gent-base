@@ -1,3 +1,4 @@
+$month-day-size-mobile: 2rem;
 $month-day-size: 2.4rem;
 $week-breakpoint: '(min-width: 750px)';
 
@@ -65,6 +66,7 @@ $week-breakpoint: '(min-width: 750px)';
   &[data-type="month"] {
     @include month-widget-mobile;
 
+
     @include tablet {
       @include month-widget-desktop;
     }
@@ -79,7 +81,11 @@ $week-breakpoint: '(min-width: 750px)';
       &--header,
       &--days {
         display: flex;
-        width: $month-day-size * 7;
+        width: $month-day-size-mobile * 7;
+
+        @include phablet {
+          width: $month-day-size * 7;
+        }
       }
 
       // Header
@@ -93,13 +99,18 @@ $week-breakpoint: '(min-width: 750px)';
           display: flex;
           align-items: center;
           justify-content: center;
-          width: $month-day-size;
-          height: $month-day-size / 2;
+          width: $month-day-size-mobile;
+          height: $month-day-size-mobile / 2;
           padding: 0;
           border: 0;
           background: transparent;
           font-size: 0;
           cursor: pointer;
+
+          @include phablet {
+            width: $month-day-size;
+            height: $month-day-size / 2;
+          }
 
           &.openinghours--prev,
           &.openinghours--next {
@@ -119,7 +130,11 @@ $week-breakpoint: '(min-width: 750px)';
 
         .openinghours--month {
           font-weight: 600;
-          line-height: $month-day-size / 2;
+          line-height: $month-day-size-mobile / 2;
+
+          @include phablet {
+            line-height: $month-day-size / 2;
+          }
         }
       }
 
@@ -143,9 +158,14 @@ $week-breakpoint: '(min-width: 750px)';
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          width: $month-day-size;
-          height: $month-day-size;
+          width: $month-day-size-mobile;
+          height: $month-day-size-mobile;
           border-radius: 50%;
+
+          @include phablet {
+            width: $month-day-size;
+            height: $month-day-size;
+          }
         }
       }
 
@@ -187,8 +207,12 @@ $week-breakpoint: '(min-width: 750px)';
       &--details {
         display: none;
         position: absolute;
-        width: calc(100% - #{$month-day-size / 2});
+        width: calc(100% - #{$month-day-size-mobile / 2});
         cursor: default;
+
+        @include phablet {
+          width: calc(100% - #{$month-day-size / 2});
+        }
       }
 
       &--date {

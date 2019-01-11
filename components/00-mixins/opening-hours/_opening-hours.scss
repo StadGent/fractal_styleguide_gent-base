@@ -7,16 +7,16 @@
 
   > .openinghours {
     padding-right: 0;
-    padding-bottom: $month-day-size / 2;
+    padding-bottom: $month-day-size-mobile / 2;
     border: 0;
   }
 
   .openinghours--details {
     @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
 
-    top: calc(100% + #{$month-day-size / 2});
-    left: $month-day-size / 4;
-    padding-top: $month-day-size / 2;
+    top: calc(100% + #{$month-day-size-mobile / 2});
+    left: $month-day-size-mobile / 4;
+    padding-top: $month-day-size-mobile / 2;
     border-top: 2px solid;
   }
 }
