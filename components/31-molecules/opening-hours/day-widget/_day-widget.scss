@@ -44,10 +44,9 @@ $breakpoint-openinghours: '(min-width: 750px)';
     }
 
     .openinghours {
-
+      margin-top: -.6rem;
       padding: .3rem .5rem .3rem calc(.5rem + 1.5em);
       background-color: color('green', -4);
-      margin-top: -.6rem;
 
       &::before {
         margin: 0 0 0 -1.2em;
