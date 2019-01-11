@@ -41,13 +41,17 @@ $week-breakpoint: '(min-width: 750px)';
     }
 
     &--details {
-      @media #{$week-breakpoint} {
-        display: flex;
-      }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     &--date {
-      flex-basis: 75%;
+      min-width: $bp-mobile;
+    }
+
+    &--times {
+      min-width: 150px;
     }
 
     &--status {
