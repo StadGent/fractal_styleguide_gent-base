@@ -45,8 +45,9 @@ $breakpoint-openinghours: '(min-width: 750px)';
 
     .openinghours {
 
-      padding: 0 .5rem 0 calc(.5rem + 1.5em);
+      padding: .3rem .5rem .3rem calc(.5rem + 1.5em);
       background-color: color('green', -4);
+      margin-top: -.6rem;
 
       &::before {
         margin: 0 0 0 -1.2em;
@@ -56,15 +57,15 @@ $breakpoint-openinghours: '(min-width: 750px)';
 
       &:first-of-type {
         @include icon(clock);
-        padding-top: .3rem;
-      }
-
-      &:last-of-type {
-        padding-bottom: .3rem;
+        margin-top: 0;
       }
 
       &--day-closed {
         background-color: color('red', -4);
+      }
+
+      & + .openinghours--day-closed {
+        display: none;
       }
 
       &--date,
