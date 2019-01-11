@@ -1,6 +1,9 @@
-$breakpoint-openinghours: '(min-width: 750px)';
+$month-day-size: 2.4rem;
+$week-breakpoint: '(min-width: 750px)';
 
 .openinghours-widget {
+  font-size: .8rem;
+
   @media (max-width: 360px) {
     width: calc(100% + 2rem);
     margin-left: -1rem;
@@ -38,7 +41,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
     }
 
     &--details {
-      @media #{$breakpoint-openinghours} {
+      @media #{$week-breakpoint} {
         display: flex;
       }
     }
@@ -56,24 +59,15 @@ $breakpoint-openinghours: '(min-width: 750px)';
   // Month view
   // ===
   &[data-type="month"] {
-    $day-size: 2rem;
-    padding-bottom: 6rem;
+    @include month-widget-mobile;
 
-    @media #{$breakpoint-openinghours} {
-      padding-right: $day-size * 7 - 1.6rem;
-      padding-bottom: 0;
+    @include tablet {
+      @include month-widget-desktop;
     }
 
     > .openinghours {
       @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
       display: inline-block;
-      padding-bottom: .8rem;
-
-      @media #{$breakpoint-openinghours} {
-        padding-right: .8rem;
-        padding-bottom: 0;
-        border-right: 2px solid;
-      }
     }
 
     .openinghours {
@@ -81,7 +75,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
       &--header,
       &--days {
         display: flex;
-        width: $day-size * 7;
+        width: $month-day-size * 7;
       }
 
       // Header
@@ -90,13 +84,13 @@ $breakpoint-openinghours: '(min-width: 750px)';
         justify-content: space-between;
 
         button {
-          @include theme('color', 'color-primary', 'opening-hours-color');
+          @include theme('color', 'color-primary--darken-2', 'opening-hours-color');
 
           display: flex;
           align-items: center;
           justify-content: center;
-          width: $day-size;
-          height: $day-size / 2;
+          width: $month-day-size;
+          height: $month-day-size / 2;
           padding: 0;
           border: 0;
           background: transparent;
@@ -121,7 +115,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
 
         .openinghours--month {
           font-weight: 600;
-          line-height: $day-size / 2;
+          line-height: $month-day-size / 2;
         }
       }
 
@@ -145,8 +139,8 @@ $breakpoint-openinghours: '(min-width: 750px)';
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          width: $day-size;
-          height: $day-size;
+          width: $month-day-size;
+          height: $month-day-size;
           border-radius: 50%;
         }
       }
@@ -157,8 +151,12 @@ $breakpoint-openinghours: '(min-width: 750px)';
 
         &[tabindex='0'] > span,
         &:hover > span {
-          @include theme('border-color', 'color-primary', 'opening-hours-color');
+          @include theme('border-color', 'color-primary--darken-2', 'opening-hours-color');
           border: 2px solid;
+        }
+
+        &[tabindex='0'] > span {
+          font-weight: bold;
         }
 
         &[tabindex='0'] .openinghours--details {
@@ -167,7 +165,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
       }
 
       &--day-open > span::after {
-        @include theme('background-color', 'color-primary', 'opening-hours-color');
+        @include theme('background-color', 'color-primary--darken-2', 'opening-hours-color');
         display: block;
         position: relative;
         bottom: .2rem;
@@ -183,22 +181,10 @@ $breakpoint-openinghours: '(min-width: 750px)';
       }
 
       &--details {
-        @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
         display: none;
         position: absolute;
-        top: calc(100% + .8rem);
-        left: .8rem;
-        width: calc(100% - 1.6rem);
-        padding-top: .8rem;
-        border-top: 2px solid;
+        width: calc(100% - #{$month-day-size / 2});
         cursor: default;
-
-        @media #{$breakpoint-openinghours} {
-          top: -$day-size / 2;
-          left: calc(100% + 1.6rem);
-          padding-top: 0;
-          border-top: 0;
-        }
       }
 
       &--date {
