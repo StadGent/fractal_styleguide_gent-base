@@ -1,10 +1,24 @@
 # Contact box
 
-## Usage
+## When to use this component
 
-The contact box is used on info pages to show contact information related to the content of that specific info page.
+The contact box is used to show contact information on a page related to the content of that specific page.
 
-## Components and behavior
+## When not to use this component
+
+## How to use this component
+
+The contact box should be placed just after the page contents.
+
+If there is also a <a href="{{path './document-box.html'}}">document box</a> and/or a <a href="{{path './related-box.html'}}">related box</a> on the page, the order of the boxes should be the following:
+
+1. Contact box
+2. Document box
+3. Related box
+
+If the page is a news article page with related articles, the <a href="{{path './extra-articles.html'}}">extra articles</a> component should be following right after.
+
+## Composition and behavior of this component
 
 The contact box consists of the following 3 components:
 
