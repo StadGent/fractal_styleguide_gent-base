@@ -8,6 +8,22 @@ input[type="url"] {
   @include field-base;
 }
 
+input[type="password"] {
+  [class*="cs--"] & {
+    &,
+    &:focus {
+      padding-right: $field-icon-padding;
+      background-image: svg-as-background('lock-closed', color('dark-gray'), 30, 26);
+      background-repeat: no-repeat;
+      background-position: right .75rem center;
+
+      &:disabled {
+        background-image: svg-as-background('lock-closed', color('dark-gray', -2), 30, 26);
+      }
+    }
+  }
+}
+
 .radio {
   @include choices-field-base('radio');
 

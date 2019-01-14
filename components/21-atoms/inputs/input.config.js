@@ -1,15 +1,16 @@
 'use strict';
 
-function makeVariants(types, modifier) {
+function makeVariants(types, modifier, disabled) {
   return types.map(function (type) {
     return {
-      name: `${type}${modifier ? '--' + modifier : ''}`,
+      name: `${type}${modifier ? '--' + modifier : ''}${disabled ? '--disabled-' + disabled : ''}`,
       preview: '@preview',
       context: {
         type: type,
         label: `input type ${type}`,
         id: `${type}${modifier ? '--' + modifier : ''}`,
-        modifier: modifier
+        modifier: modifier,
+        disabled: disabled
       }
     };
   });
@@ -71,6 +72,16 @@ module.exports = {
       'url',
       'radio',
       'checkbox'
-    ], 'success')
+    ], 'success'),
+    ...makeVariants([
+      'text',
+      'email',
+      'password',
+      'number',
+      'tel',
+      'url',
+      'radio',
+      'checkbox'
+    ], null, true)
   ]
 };
