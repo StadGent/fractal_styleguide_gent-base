@@ -82,6 +82,16 @@ module.exports = {
       }
     },
     {
+      name: 'standalone-back',
+      preview: '@preview',
+      handle: 'link',
+      context: {
+        link: '#',
+        text: 'back',
+        modifier: 'standalone-link back'
+      }
+    },
+    {
       name: 'button',
       preview: '@preview',
       context: {

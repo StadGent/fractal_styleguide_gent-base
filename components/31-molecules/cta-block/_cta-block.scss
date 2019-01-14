@@ -12,10 +12,6 @@
 
     min-height: 11rem;
 
-    a[download] {
-      margin-right: 1rem;
-    }
-
     li {
       width: 100%;
       margin-top: .8rem;
@@ -32,15 +28,6 @@
         padding-top: .8rem;
         border-top: 2px solid;
       }
-    }
-  }
-
-  .file-type {
-    text-transform: uppercase;
-    white-space: nowrap;
-
-    .file-size {
-      text-transform: lowercase;
     }
   }
 

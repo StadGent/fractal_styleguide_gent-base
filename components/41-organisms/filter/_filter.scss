@@ -75,8 +75,11 @@
 
   .result-section {
 
-    h2 {
-      font-size: .8rem;
+    .selected-filters,
+    .filter__result-count {
+      h2 {
+        font-size: .8rem;
+      }
     }
 
     .result__show-filters {

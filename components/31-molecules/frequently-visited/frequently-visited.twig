@@ -1,0 +1,17 @@
+<div class="frequently-visited box box-top">
+  <div class="inner-box">
+    <h2>{{ title }}</h2>
+    <p>{{ description }}</p>
+
+    {% if tags is not empty %}
+      <h3>{{ subtitle }}</h3>
+      <ul class="inline">
+      {% for tag in tags %}
+        <li>
+          <a href="#" class="tag">{{ tag }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
