@@ -25,6 +25,7 @@ module.exports = {
     {
       name: 'with-error',
       context: {
+        id: 'input_text--error',
         label: 'input-text',
         modifier: 'error',
         field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
@@ -33,6 +34,7 @@ module.exports = {
     {
       name: 'with-success',
       context: {
+        id: 'input-text--success',
         label: 'input-text',
         modifier: 'success',
         field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
@@ -41,6 +43,7 @@ module.exports = {
     {
       name: 'textarea',
       context: {
+        id: 'input-textarea',
         label: 'input-textarea',
         input_component: 'input-textarea'
       }
@@ -48,6 +51,7 @@ module.exports = {
     {
       name: 'date',
       context: {
+        id: 'input-date',
         label: 'input-date',
         input_component: 'input',
         type: 'date'
@@ -56,6 +60,7 @@ module.exports = {
     {
       name: 'email',
       context: {
+        id: 'input-email',
         label: 'input-email',
         input_component: 'input',
         type: 'email'
@@ -64,6 +69,7 @@ module.exports = {
     {
       name: 'number',
       context: {
+        id: 'input-number',
         label: 'input-number',
         input_component: 'input',
         type: 'number'
@@ -72,6 +78,7 @@ module.exports = {
     {
       name: 'password',
       context: {
+        id: 'input-password',
         label: 'input-password',
         input_component: 'input',
         type: 'password'
@@ -80,6 +87,7 @@ module.exports = {
     {
       name: 'tel',
       context: {
+        id: 'input-tel',
         label: 'input-tel',
         input_component: 'input',
         type: 'tel'
@@ -88,6 +96,7 @@ module.exports = {
     {
       name: 'select',
       context: {
+        id: 'input-select',
         label: 'select',
         input_component: 'input-select',
         options: [
@@ -115,6 +124,7 @@ module.exports = {
     {
       name: 'multiselect',
       context: {
+        id: 'input-multiselect',
         label: 'multiselect',
         input_component: 'input-multiselect',
         options: [
@@ -142,6 +152,7 @@ module.exports = {
     {
       name: 'file',
       context: {
+        id: 'input-file',
         label: 'input--file',
         input_component: 'input',
         type: 'file'
@@ -150,6 +161,7 @@ module.exports = {
     {
       name: 'radio',
       context: {
+        id: 'input-radio',
         label: 'radio buttons',
         input_component: 'input',
         type: 'radio',
@@ -170,6 +182,7 @@ module.exports = {
     {
       name: 'checkbox',
       context: {
+        id: 'input-checkbox',
         input_component: 'input',
         type: 'checkbox',
         label: 'Checkboxes',

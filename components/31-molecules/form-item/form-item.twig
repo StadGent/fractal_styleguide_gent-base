@@ -1,26 +1,26 @@
 {% set describedBy = null %}
 {% if field_description %}
-  {% set describedBy = input_component ~ "-" ~ id ~ "-" ~ modifier ~ "description" %}
+  {% set describedBy = id ~ "-description" %}
 {% endif %}
 {% if field_message %}
-  {% set describedBy = input_component ~ "-" ~ id ~ "-" ~ modifier ~ "message" %}
+  {% set describedBy = id ~ "-message" %}
 {% endif %}
 
 <div class="form-item {{ modifier }}">
   {% include '@label' with {
     "label": label,
-    "for": input_component ~ "-" ~ id ~ "-" ~ modifier,
+    "for": id,
     "label_optional": label_optional
   } %}
   {% include '@field-message' with {
     "field_message": field_description,
     "modifier": null,
-    "id": describedBy
+    "id": id ~ "-description"
   } %}
   <div class="form-columns">
     <div class="form-item-column">
       {% include '@'~input_component with {
-        "id": input_component ~ "-" ~ id ~ "-" ~ modifier,
+        "id": id,
         "ariaDescribedBy": describedBy,
         "type": type
       }%}
@@ -29,7 +29,7 @@
       {% if field_message %}
         {% include '@field-message' with {
           "modifier": modifier,
-          "id": describedBy
+          "id": id ~ "-message"
         } %}
       {% endif %}
     </div>
