@@ -1,14 +1,13 @@
 <form class="form subscribe">
-
   {% include '@label' with {
   "label": label,
   "for": id,
   } %}
-
-  {% include '@input-email' with {
-  'id': id,
-  'name': id,
-  'required': true
+  {% include '@input' with {
+    'id': id,
+    'type': 'email',
+    'name': id,
+    'required': true
   } %}
   {% include '@input-submit' with {
   'value': text,

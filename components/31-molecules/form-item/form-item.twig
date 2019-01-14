@@ -1,13 +1,10 @@
 {% set describedBy = null %}
-{{ describedBy }}
 {% if field_description %}
   {% set describedBy = input_component ~ "-" ~ id ~ "-" ~ modifier ~ "description" %}
 {% endif %}
-{{ describedBy }}
 {% if field_message %}
   {% set describedBy = input_component ~ "-" ~ id ~ "-" ~ modifier ~ "message" %}
 {% endif %}
-{{ describedBy }}
 
 <div class="form-item {{ modifier }}">
   {% include '@label' with {
@@ -24,7 +21,8 @@
     <div class="form-item-column">
       {% include '@'~input_component with {
         "id": input_component ~ "-" ~ id ~ "-" ~ modifier,
-        "ariaDescribedBy": describedBy
+        "ariaDescribedBy": describedBy,
+        "type": type
       }%}
     </div>
     <div class="form-item-column">

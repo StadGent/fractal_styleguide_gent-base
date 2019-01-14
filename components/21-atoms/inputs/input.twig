@@ -1,5 +1,5 @@
-<div class="{{ type ~ (modifierWrapper ? ' ' ~ modifierWrapper : '') }}">
-  {% if type == 'radio' or type == 'checkbox' %}
+{% if type == 'radio' or type == 'checkbox' %}
+  <div class="{{ type ~ (modifierWrapper ? ' ' ~ modifierWrapper : '') }}">
     <input type="{{ type }}" id="{{ id }}"
       {% if ariaDescribedBy %}
         aria-describedby="{{ ariaDescribedBy }}"
@@ -8,10 +8,10 @@
         name="{{ name }}"
       {% endif %}
       {% if value %}
-          value="{{ value }}"
+        value="{{ value }}"
       {% endif %}
       {% if type %}
-        class="{{ type ~ (modifier ? ' ' ~ modifier : '')  }}"
+        class="{{ type ~ (modifier ? ' ' ~ modifier : '') }}"
       {% endif %}
       {% if disabled %}
         disabled="disabled"
@@ -19,28 +19,33 @@
       {% if placeholder %}
         placeholder="{{ placeholder }}"
       {% endif %}
-    />
-    <label for="{{ id }}">{{ label }}</label>
-  {% else %}
-    <label for="{{ id }}">{{ label }}</label>
-    <input type="{{ type }}" id="{{ id }}"
-      {% if ariaDescribedBy %}
-        aria-describedby="{{ ariaDescribedBy }}"
-      {% endif %}
-      {% if name %}
-        name="{{ name }}"
-      {% endif %}
-      {% if type %}
-          class="{{ type ~ (modifier ? ' ' ~ modifier : '')  }}"
-      {% endif %}
-      {% if disabled %}
-        disabled="disabled"
-      {% endif %}
-      {% if placeholder %}
-        placeholder="{{ placeholder }}"
+      {% if required %}
+        required="{{ required }}"
       {% endif %}
     />
-  {% endif %}
-</div>
+    <label for="{{ id }}">{{ label }}</label>
+  </div>
+{% else %}
+  <input type="{{ type }}" id="{{ id }}"
+    {% if ariaDescribedBy %}
+      aria-describedby="{{ ariaDescribedBy }}"
+    {% endif %}
+    {% if name %}
+      name="{{ name }}"
+    {% endif %}
+    {% if type %}
+      class="{{ type ~ (modifier ? ' ' ~ modifier : '') }}"
+    {% endif %}
+    {% if disabled %}
+      disabled="disabled"
+    {% endif %}
+    {% if placeholder %}
+      placeholder="{{ placeholder }}"
+    {% endif %}
+    {% if required %}
+      required="{{ required }}"
+    {% endif %}
+  />
+{% endif %}
 
 

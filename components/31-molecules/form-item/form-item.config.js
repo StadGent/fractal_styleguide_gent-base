@@ -12,7 +12,8 @@ module.exports = {
     label_optional: 'Optional',
     field_description: null,
     field_message: null,
-    input_component: 'input-text'
+    input_component: 'input',
+    type: 'text'
   },
   variants: [
     {
@@ -48,35 +49,40 @@ module.exports = {
       name: 'date',
       context: {
         label: 'input-date',
-        input_component: 'input-date'
+        input_component: 'input',
+        type: 'date'
       }
     },
     {
       name: 'email',
       context: {
         label: 'input-email',
-        input_component: 'input-email'
+        input_component: 'input',
+        type: 'email'
       }
     },
     {
       name: 'number',
       context: {
         label: 'input-number',
-        input_component: 'input-number'
+        input_component: 'input',
+        type: 'number'
       }
     },
     {
       name: 'password',
       context: {
         label: 'input-password',
-        input_component: 'input-password'
+        input_component: 'input',
+        type: 'password'
       }
     },
     {
       name: 'tel',
       context: {
         label: 'input-tel',
-        input_component: 'input-tel'
+        input_component: 'input',
+        type: 'tel'
       }
     },
     {
@@ -136,15 +142,17 @@ module.exports = {
     {
       name: 'file',
       context: {
-        label: 'input-file',
-        input_component: 'input-file'
+        label: 'input--file',
+        input_component: 'input',
+        type: 'file'
       }
     },
     {
       name: 'radio',
       context: {
         label: 'radio buttons',
-        input_component: 'input-radio',
+        input_component: 'input',
+        type: 'radio',
         options: [
           {
             label: 'Radio option 1',
@@ -162,7 +170,8 @@ module.exports = {
     {
       name: 'checkbox',
       context: {
-        input_component: 'input-checkbox',
+        input_component: 'input',
+        type: 'checkbox',
         label: 'Checkboxes',
         options: [
           {

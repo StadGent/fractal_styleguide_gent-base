@@ -14,6 +14,7 @@
       {% for option in options %}
         {% include '@'~input_component with {
           "id": input_component ~ "-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+          "type": type,
           "name": option.name,
           "label": option.label
         } %}
