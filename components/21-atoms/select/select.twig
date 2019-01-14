@@ -3,6 +3,9 @@
         {% if modifier %}
           class="{{ modifier }}"
         {% endif  %}
+        {% if disabled %}
+          disabled="{{ disabled }}"
+        {% endif  %}
 >
   {% for option in options %}
 

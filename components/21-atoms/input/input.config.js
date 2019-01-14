@@ -8,7 +8,7 @@ function makeVariants(types, modifier, disabled) {
       context: {
         type: type,
         label: `input type ${type}`,
-        id: `${type}${modifier ? '--' + modifier : ''}`,
+        id: `${type}${modifier ? '--' + modifier : ''}${disabled ? '--disabled-' + disabled : ''}`,
         modifier: modifier,
         disabled: disabled
       }

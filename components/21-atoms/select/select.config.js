@@ -4,6 +4,11 @@ module.exports = {
   title: 'Input Select',
   status: 'beta',
   handle: 'input-select',
+  preview: '@preview-description-list',
+  collated: true,
+  collator: function (markup, item) {
+    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+  },
   context: {
     name: 'select_name',
     id: 'select_id',
@@ -32,26 +37,30 @@ module.exports = {
   variants: [
     {
       name: 'default',
+      preview: '@preview',
       handle: 'input-text'
     },
     {
       name: 'success',
-      hidden: 'hidden',
+      preview: '@preview',
       context: {
+        id: 'select_id--success',
         modifier: 'success'
       }
     },
     {
       name: 'error',
-      hidden: 'hidden',
+      preview: '@preview',
       context: {
+        id: 'select_id--error',
         modifier: 'error'
       }
     },
     {
       name: 'disabled',
-      hidden: 'hidden',
+      preview: '@preview',
       context: {
+        id: 'select_id--disabled',
         disabled: true
       }
     }

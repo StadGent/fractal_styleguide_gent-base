@@ -4,6 +4,11 @@ module.exports = {
   title: 'Input Multiselect',
   status: 'beta',
   handle: 'input-multiselect',
+  preview: '@preview-description-list',
+  collated: true,
+  collator: function (markup, item) {
+    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+  },
   context: {
     label: 'Multiselect',
     name: 'multiselect_name',
@@ -32,26 +37,30 @@ module.exports = {
   variants: [
     {
       name: 'default',
+      preview: '@preview',
       handle: 'input-multiselect'
     },
     {
       name: 'success',
-      hidden: 'hidden',
+      preview: '@preview',
       context: {
+        id: 'multiselect_id--success',
         modifier: 'success'
       }
     },
     {
       name: 'error',
-      hidden: 'hidden',
+      preview: '@preview',
       context: {
+        id: 'multiselect_id--error',
         modifier: 'error'
       }
     },
     {
       name: 'disabled',
-      hidden: 'hidden',
+      preview: '@preview',
       context: {
+        id: 'multiselect_id--disabled',
         disabled: true
       }
     }
