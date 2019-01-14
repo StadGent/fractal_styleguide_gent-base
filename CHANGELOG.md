@@ -20,6 +20,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-651: Topic teaser styling
 * DTGB-656: Border-width of tag
 * DTGB-655: Updated copy in checkbox-with-filter popup
+* DTGB-604: removed font-size increase on +1920px screens
 
 ## [3.0.0-alpha.10]
 
