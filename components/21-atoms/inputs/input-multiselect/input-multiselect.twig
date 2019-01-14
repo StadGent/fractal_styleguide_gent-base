@@ -7,6 +7,9 @@
         {% if disabled %}
           disabled="disabled"
         {% endif %}
+        {% if ariaDescribedBy %}
+            aria-describedby="{{ ariaDescribedBy }}"
+        {% endif %}
 >
 {% for option in options %}
 

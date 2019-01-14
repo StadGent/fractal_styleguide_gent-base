@@ -32,25 +32,26 @@
         </p>
 
         {% for category in options %}
-        <div class="checkbox-filter__checkboxes">
+          <div class="checkbox-filter__checkboxes">
             <h4 class="checkbox-filter__category">{{ category.title }}</h4>
-            {% include '@input-checkbox' with {
-              checkbox_label: 'Show all',
-              checkbox_name: category.value,
-              checkbox_id: category.value~"-"~modifier,
-              checkbox_value: category.value,
+            {% include '@input' with {
+              type: 'checkbox',
+              id: category.value~"-"~modifier,
+              label: 'Show all',
+              value: category.value,
               modifierWrapper: 'full-width'
             } %}
 
             {% for item in category.items %}
-              {% include '@input-checkbox' with {
-                checkbox_label: item.label_checkbox,
-                checkbox_name: item.checkbox_name,
-                checkbox_id: item.checkbox_id,
-                checkbox_value: item.checkbox_value
+              {% include '@input' with {
+                type: 'checkbox',
+                label: item.label_checkbox,
+                name: item.checkbox_name,
+                id: item.checkbox_id,
+                value: item.checkbox_value
               } %}
             {% endfor %}
-        </div>
+          </div>
         {% endfor %}
       {% endset %}
 

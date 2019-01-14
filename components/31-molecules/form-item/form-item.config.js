@@ -4,14 +4,14 @@ module.exports = {
   title: 'Form item',
   status: 'beta',
   handle: 'form-item',
-  preview: '@preview',
+  preview: '@preview-form-item',
   collated: 'true',
   context: {
     label: 'input-text',
     id: 'input_id',
     label_optional: 'Optional',
     field_description: null,
-    field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.',
+    field_message: null,
     input_component: 'input-text'
   },
   variants: [
@@ -25,14 +25,16 @@ module.exports = {
       name: 'with-error',
       context: {
         label: 'input-text',
-        modifier: 'error'
+        modifier: 'error',
+        field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
       }
     },
     {
       name: 'with-success',
       context: {
         label: 'input-text',
-        modifier: 'success'
+        modifier: 'success',
+        field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
       }
     },
     {

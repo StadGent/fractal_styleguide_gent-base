@@ -1,4 +1,7 @@
 <input type="text"
+        {% if ariaDescribedBy %}
+          aria-describedby="{{ ariaDescribedBy }}"
+        {% endif %}
        name="{{ name }}"
        id="{{ id }}"
         {% if modifier %}
