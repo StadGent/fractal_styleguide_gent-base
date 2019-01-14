@@ -3,7 +3,8 @@ input[type="number"],
 input[type="password"],
 input[type="search"],
 input[type="tel"],
-input[type="email"] {
+input[type="email"],
+input[type="url"] {
   @include field-base;
 }
 

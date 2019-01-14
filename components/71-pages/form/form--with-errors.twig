@@ -24,14 +24,16 @@
       {% include '@form-item' with {
         "label": "Name",
         "id": "name_id",
-        "input_component": "input-text",
+        "input_component": "input",
+        "type": "text",
         "modifier": "error",
         "field_message": "Please fill in your name",
         "name": "name_name"
       } %}
       {% include '@form-item' with {
         "label": "First name",
-        "input_component": "input-text",
+        "input_component": "input",
+        "type": "text",
         "modifier": "error",
         "field_message": "Please fill in your first name",
         "id": "firstname_id",
@@ -41,7 +43,8 @@
         with {
         "label": "E-mail address",
         "for": "email_id",
-        "input_component": "input-email",
+        "input_component": "input",
+        "type": "email",
         "modifier": "error",
         "field_message": "Please fill in your email",
         "id": "email_id",
@@ -51,7 +54,8 @@
         with {
         "label": "Phone number",
         "for": "tel_id",
-        "input_component": "input-tel",
+        "input_component": "input",
+        "type": "tel",
         "modifier": "error",
         "field_message": "Please fill in a valid telephone number",
         "id": "tel_id",
@@ -61,7 +65,8 @@
 
     {% include '@form-item--radio'
       with {
-      "input_component": "input-radio",
+      "input_component": "input",
+      "type": "radio",
       "label": "Date",
       "options": [
         {
@@ -90,7 +95,8 @@
         "label": "Label textfield",
         "for": "textfield_id",
         "label_optional": "Optional",
-        "input_component": "input-text",
+        "input_component": "input",
+        "type": "text",
         "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
         "field_error": "",
         "description": "Description textfield.",
@@ -104,7 +110,8 @@
       {% include '@form-item' with {
         "label": "Label textfield",
         "for": "textfield_id--1",
-        "input_component": "input-text",
+        "input_component": "input",
+        "type": "text",
         "id": "textfield_id--1",
         "name": "textfield_name--1"
       } %}
@@ -114,14 +121,16 @@
         {% include '@form-item' with {
           "label": "Label textfield",
           "for": "textfield_id--2",
-          "input_component": "input-text",
+          "input_component": "input",
+          "type": "text",
           "id": "textfield_id--2",
           "name": "textfield_name--2"
         } %}
         {% include '@form-item' with {
           "label": "Label textfield",
           "for": "textfield_id--3",
-          "input_component": "input-text",
+          "input_component": "input",
+          "type": "text",
           "id": "textfield_id--3",
           "name": "textfield_name--3"
         } %}
@@ -130,7 +139,8 @@
 
     {% include '@form-item--checkbox'
       with {
-      "input_component": "input-checkbox",
+      "input_component": "input",
+      "type": "checkbox",
       "label": "Newsletter",
       "id": "newsletter_id",
       "options": [
