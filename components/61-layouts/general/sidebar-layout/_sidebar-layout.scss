@@ -22,11 +22,11 @@
     width: 100%;
 
     @include tablet {
-      width: span(8 of 12);
+      width: span(8 wide of 12);
     }
 
     @include desktop {
-      width: span(9 of 12);
+      width: span(9 wide of 12);
     }
   }
 }
