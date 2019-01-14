@@ -88,6 +88,16 @@
   .summary-text {
     font-weight: 600;
   }
+
+  .openinghours-widget[data-type="month"] {
+    @include desktop {
+      @include month-widget-mobile;
+    }
+
+    @include breakpoint(1200px) {
+      @include month-widget-desktop;
+    }
+  }
 }
 
 $bulb-image-width: 6rem;
