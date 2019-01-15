@@ -3,44 +3,82 @@ $breakpoint-openinghours: '(min-width: 750px)';
 // ===
 // Day view
 // ===
-.opening-hours-wrapper {
+.openinghours-widget {
   &[data-type="day"] {
     display: inline-block;
     border-radius: border-radius('radius-1');
     overflow: hidden;
 
-    .openinghours {
-      padding: .3rem .5rem 0 1.9rem;
-      background-color: color('green', -4);
+    > * {
       line-height: 1.4rem;
+    }
+
+    .channel-label {
+      float: left;
+      font-size: 0;
+      font-weight: bold;
+
+      &::after {
+        display: inline-block;
+        content: " ";
+      }
+
+      &:nth-of-type(n + 2) {
+        padding-left: 1.9rem;
+        font-size: .8rem;
+
+        + .openinghours {
+          padding-top: 0;
+
+          &::before {
+            display: none;
+          }
+
+          .openinghours--date,
+          .openinghours--status {
+            display: none;
+          }
+
+        }
+      }
+    }
+
+    .openinghours {
+      margin-top: -.6rem;
+      padding: .3rem .5rem .3rem calc(.5rem + 1.5em);
+      background-color: color('green', -4);
+
+      &::before {
+        margin: 0 0 0 -1.2em;
+        font-size: 1.5em;
+        vertical-align: -25%;
+      }
 
       &:first-of-type {
         @include icon(clock);
-        padding-left: .5rem;
-
-        &::before {
-          font-size: 1.5em;
-          vertical-align: -25%;
-        }
-      }
-
-      &:not(:first-of-type) {
-        padding-top: 0;
-      }
-
-      &:last-of-type {
-        padding-bottom: .3rem;
+        margin-top: 0;
       }
 
       &--day-closed {
         background-color: color('red', -4);
       }
 
+      & + .openinghours--day-closed {
+        display: none;
+      }
+
       &--date,
       &--content,
       &--times,
+      &--times-between,
       &--time {
         display: inline;
+      }
+
+      &--time time:last-of-type {
+        &::before {
+          content: "-";
+        }
       }
 
       &--date,
@@ -56,6 +94,11 @@ $breakpoint-openinghours: '(min-width: 750px)';
         > span:first-child {
           display: inline;
         }
+      }
+
+      &--time-prefix,
+      &--time-separator {
+        display: none;
       }
     }
   }

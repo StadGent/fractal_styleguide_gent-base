@@ -1,0 +1,12 @@
+.file-type {
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  .file-size {
+    text-transform: lowercase;
+  }
+
+  a + & {
+    margin-left: 1rem;
+  }
+}

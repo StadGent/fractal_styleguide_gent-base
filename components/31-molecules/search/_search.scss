@@ -13,20 +13,28 @@
 
   input {
     margin-bottom: .5rem;
+
+    &:not([type="submit"]) {
+      flex: 1 1 $bp-mobile;
+      margin-right: .4rem;
+    }
   }
 
   input[type="search"] {
-    flex: 1 1 $bp-mobile;
-    margin-right: .4rem;
-    padding-left: 2.4rem;
-    background: svg-as-background('search', color('dark-gray'), 32, 32) no-repeat left .4rem center;
-
-    &:focus {
-      background: svg-as-background('search', color('dark-gray'), 32, 32) no-repeat left .4rem center;
-    }
+    @extend %search-input;
   }
 
   input[type="submit"] {
     @include button-large;
+    margin-right: 0;
+  }
+}
+
+%search-input {
+  padding-left: 2.4rem;
+  background: svg-as-background('search', color('dark-gray'), 32, 32) no-repeat left .4rem center;
+
+  &:focus {
+    background: svg-as-background('search', color('dark-gray'), 32, 32) no-repeat left .4rem center;
   }
 }

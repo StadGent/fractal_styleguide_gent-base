@@ -12,10 +12,6 @@
 
     min-height: 11rem;
 
-    a[download] {
-      margin-right: 1rem;
-    }
-
     li {
       width: 100%;
       margin-top: .8rem;
@@ -35,11 +31,22 @@
     }
   }
 
-  .file-type {
-    text-transform: uppercase;
+  &--multiple {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -1rem;
+    margin-left: -1rem;
 
-    .file-size {
-      text-transform: lowercase;
+    > .cta-block {
+      flex: 1 0 20rem;
+      max-width: calc(100% - 2rem);
+      margin-right: 1rem;
+      margin-left: 1rem;
+
+      .inner-box {
+        height: 100%;
+      }
     }
   }
 }

@@ -15,6 +15,13 @@
 
   h1 {
     width: 100%;
+
+    + .tag {
+      display: inline-block;
+      width: auto;
+      margin-top: -.4rem;
+      margin-bottom: 2rem;
+    }
   }
 
   > div,
@@ -80,6 +87,16 @@
 
   .summary-text {
     font-weight: 600;
+  }
+
+  .openinghours-widget[data-type="month"] {
+    @include desktop {
+      @include month-widget-mobile;
+    }
+
+    @include breakpoint(1200px) {
+      @include month-widget-desktop;
+    }
   }
 }
 
