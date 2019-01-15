@@ -68,6 +68,7 @@ module.exports = {
       name: 'multiple--default',
       preview: '@preview',
       context: {
+        id: 'select_id--multiple',
         multiple: true
       }
     },
@@ -75,7 +76,7 @@ module.exports = {
       name: 'multiple--success',
       preview: '@preview',
       context: {
-        id: 'select_id--success',
+        id: 'select_id--multiple--success',
         modifier: 'success',
         multiple: true
       }
@@ -84,7 +85,7 @@ module.exports = {
       name: 'multiple--error',
       preview: '@preview',
       context: {
-        id: 'select_id--error',
+        id: 'select_id--multiple--error',
         modifier: 'error',
         multiple: true
       }
@@ -93,7 +94,7 @@ module.exports = {
       name: 'multiple--disabled',
       preview: '@preview',
       context: {
-        id: 'select_id--disabled',
+        id: 'select_id--multiple--disabled',
         disabled: true,
         multiple: true
       }
