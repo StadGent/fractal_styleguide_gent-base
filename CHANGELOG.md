@@ -29,6 +29,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * DTGB-635: Fixed missing scroll lock on mobile menu.
 
+### Removed
+
+* DTGB-635: Field description (replaced by variant of field message)
+
 ## [3.0.0-alpha.9]
 
 ### Added
