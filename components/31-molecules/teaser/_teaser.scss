@@ -2,6 +2,9 @@
 // Basic teaser theming.
 //
 .teaser {
+  position: relative;
+  list-style: none;
+
   &.teaser--inverted {
     .teaser-content {
       @include theme('background-color', 'color-secondary');
@@ -20,12 +23,93 @@
     }
   }
 
-  position: relative;
-  list-style: none;
+  &.teaser--underlined {
+    .teaser-content {
+      @include theme('border-color', 'color-primary--lighten-4', 'teaser-contact-border');
+
+      height: 100%;
+      padding-bottom: .7rem;
+      border-bottom: 2px solid;
+    }
+
+    //&,
+    //& + & {
+    //  margin-top: 1.2rem;
+    //}
+
+    // @TODO: Move to other layer.
+    .ol-popup & {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .content__bottom, // Deprecated
+    .content__second {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .teaser-title-link {
+      margin-bottom: .8rem;
+      font-size: .8rem;
+      line-height: 1.2rem;
+    }
+
+    .read-more {
+      margin-top: auto;
+    }
+
+    // @TODO: Move to other layer.
+    .grid-3 & {
+      &,
+      .content__bottom {
+        height: 100%;
+      }
+    }
+  }
 
   figure {
     figcaption {
       display: none;
+    }
+  }
+
+  .links a {
+    font-weight: normal;
+  }
+
+  a.teaser-overlay-link {
+    @include element-states(transparent, transparent, background-color);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  a.read-more {
+    font-weight: 700;
+  }
+
+
+  .teaser-contact-info {
+    @extend %list-no-style;
+
+    margin-top: -$link-padding;
+    margin-bottom: .4rem;
+
+    li > .no-icon {
+      font-weight: normal;
     }
   }
 
@@ -131,93 +215,19 @@
       margin-bottom: .8rem;
     }
   }
-
-  a.teaser-overlay-link {
-    @include element-states(transparent, transparent, background-color);
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-indent: 200%;
-    white-space: nowrap;
-    overflow: hidden;
-    z-index: 1;
-  }
-
-  a.read-more {
-    font-weight: 700;
-  }
-}
-
-//
-// Contact teaser variant.
-//
-.teaser.teaser-contact {
-  @include theme('border-color', 'color-primary--lighten-4', 'teaser-contact-border');
-
-  padding-bottom: .7rem;
-  border-bottom: 2px solid;
-
-  &,
-  & + & {
-    margin-top: 1.2rem;
-  }
-
-  // @TODO: Move to other layer.
-  .ol-popup & {
-    padding-bottom: 0;
-    border-bottom: 0;
-  }
-
-  .content__bottom, // Deprecated
-  .content__second {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    > *:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &-info {
-    @extend %list-no-style;
-
-    margin-top: -$link-padding;
-    margin-bottom: .4rem;
-
-    li > .no-icon {
-      font-weight: normal;
-    }
-  }
-
-  .teaser-title-link {
-    margin-bottom: .8rem;
-    font-size: .8rem;
-    line-height: 1.2rem;
-  }
-
-  .read-more {
-    margin-top: auto;
-  }
-
-  // @TODO: Move to other layer.
-  .grid-3 & {
-    &,
-    .content__bottom {
-      height: 100%;
-    }
-  }
 }
 
 //
 // Teaser wide variant.
 //
-.teaser.teaser-search,
-.teaser.teaser-wide,
-.teaser.teaser-search-wide {
+.teaser.teaser--wide {
+  @include tablet {
+    dt,
+    dd {
+      display: inline;
+    }
+  }
+
   @include theme('border-color', 'color-primary--lighten-4', 'view-heading-2-border-color');
 
   padding-top: $gutter-width;
@@ -236,21 +246,11 @@
     padding-left: .5rem;
   }
 
-  @include tablet {
-    dt,
-    dd {
-      display: inline;
-    }
-  }
-
   .tag,
   .icon-list {
     margin-bottom: .4rem;
   }
-}
 
-.teaser.teaser-wide,
-.teaser.teaser-search-wide {
   .teaser-content {
     display: flex;
     flex-direction: row;
@@ -331,22 +331,5 @@
         }
       }
     }
-  }
-}
-
-//
-// Topic teaser variant.
-//
-.teaser.teaser-underlined {
-  .teaser-content {
-    @include theme('border-color', 'color-primary--lighten-4', 'teaser-contact-border');
-
-    height: 100%;
-    padding-bottom: .7rem;
-    border-bottom: 2px solid;
-  }
-
-  .teaser-underlined-links a {
-    font-weight: normal;
   }
 }

@@ -1,4 +1,4 @@
-<li class="teaser {{ type }}">
+<li class="teaser {% if type %} {{ type }} {% endif %} {% if modifier %} {{ modifier }} {% endif %}">
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__second">
@@ -14,7 +14,7 @@
       {% if address %}
         <ul class="icon-list">
           <li>
-            <i class='icon-marker'></i><span><strong> {{ address_location }} </strong> &mdash; {{ address }}</span>,
+            <i class='icon-marker'></i><span><strong> {{ address_location }} </strong> &mdash; {{ address }}</span>
           </li>
         </ul>
       {% endif %}

@@ -4,16 +4,16 @@ module.exports = {
   title: 'Teaser',
   status: 'ready',
   name: 'teaser',
-  default: 'article',
+  default: 'teaser',
   preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
-    if (
-      item.handle === 'teaser--teaser-wide' ||
-      item.handle === 'teaser--teaser-wide-with-address' ||
-      item.handle === 'teaser--teaser-wide-with-image'
-    ) {
+    if (item.handle === 'teaser--teaser--wide') {
       return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd style="max-width: 100%;"><ul style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
+    }
+    else if (item.handle === 'teaser--teaser--inverted' || item.handle === 'teaser--teaser--inverted--variant'
+    ) {
+      return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd style="max-width: 100%; background-color: #f0f9fd; padding: 1.2rem 1.2rem 0;" class="container"><ul class="grid-3">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
     }
     else {
       return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd style="max-width: 100%;"><ul class="grid-3" style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
@@ -24,74 +24,53 @@ module.exports = {
   },
   variants: [
     {
-      name: 'article',
+      name: 'teaser',
       context: {
         preview: '@preview',
-        type: 'teaser-article',
         paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
-        title: 'General article title text',
+        title: 'Teaser title text comes here.',
         published_date: 'Gepost op Zaterdag 7 januari 2019',
         link_text: 'read more',
         link: '#',
         image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         image_alt_text: 'alt text',
-        tag: 'Just some tag'
-      }
-    },
-    {
-      name: 'event',
-      context: {
-        preview: '@preview',
-        type: 'teaser-news',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
-        title: 'Event title text',
+        tag: 'Optional tag',
+        tag2: 'Optional tag 2',
         event_date: {
           text_1: 'From the 7th',
           datetime_1: '2019-01-07',
           text_2: 'untill the 13th of January 2019',
           datetime_2: '2019-01-13'
         },
-        link_text: 'read more',
-        link: '#',
-        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        image_alt_text: 'alt text',
-        tag: 'I\'m another tag',
-        label_text: 'Event'
-      }
-    },
-    {
-      name: 'teaser-contact',
-      context: {
-        preview: '@preview',
-        type: 'teaser-contact',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        title: 'Title text',
-        link_text: 'more info and opening hours',
-        link: '#',
+        label_text: 'Optional label',
         telephone: '0123456789',
         opening_hours_service: '2690'
       }
     },
     {
-      name: 'teaser-person',
+      name: 'teaser--example',
       context: {
         preview: '@preview',
-        type: 'teaser-person',
-        paragraph_text: 'Function or job description comes here',
-        title: 'Name and first name',
-        link_text: 'read more',
-        link: '#',
+        modifier: 'teaser--underlined',
         image_ratio: '1:1',
         image_src: 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
         image_alt_text: 'alt text',
-        tag: 'Just some tag'
+        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+        title: 'Teaser title text comes here.',
+        published_date: 'Gepost op Zaterdag 7 januari 2019',
+        link_text: 'read more',
+        link: '#',
+        tag: 'Optional tag',
+        tag2: 'Optional tag 2',
+        label_text: 'Optional label',
+        telephone: '0123456789',
+        opening_hours_service: '2690'
       }
     },
     {
-      name: 'teaser-programme',
+      name: 'teaser--inverted',
       context: {
         preview: '@preview',
-        type: 'teaser-programme',
         modifier: 'teaser--inverted',
         paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
         title: 'Title text',
@@ -102,103 +81,19 @@ module.exports = {
       }
     },
     {
-      name: 'teaser-underlined',
+      name: 'teaser--wide',
       context: {
         preview: '@preview',
-        type: 'teaser-underlined',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        title: 'Title text',
-        link_text: 'read more',
-        link: '#'
-      }
-    },
-    {
-      name: 'teaser-underlined-with-links',
-      context: {
-        preview: '@preview',
-        type: 'teaser-underlined',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        title: 'Title text',
-        link_text: 'read more',
-        link: '#',
-        topic_links: [
-          {
-            text: 'Subtopic link 1',
-            link: 'www.google.com'
-          },
-          {
-            text: 'Subtopic link 2',
-            link: 'www.google.com'
-          },
-          {
-            text: 'Subtopic link 3',
-            link: 'www.google.com'
-          },
-          {
-            text: 'Subtopic link 4',
-            link: 'www.google.com'
-          },
-          {
-            text: 'Subtopic link 5',
-            link: 'www.google.com'
-          },
-          {
-            text: 'Subtopic link 6',
-            link: 'www.google.com'
-          }
-        ]
-      }
-    },
-    {
-      name: 'teaser-underlined-with-images',
-      context: {
-        preview: '@preview',
-        type: 'teaser-underlined',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        title: 'Title text',
-        link_text: 'read more',
-        link: '#',
         image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        image_alt_text: 'alt text'
-      }
-    },
-    {
-      name: 'teaser-wide',
-      context: {
-        preview: '@preview',
-        type: 'teaser-wide',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
-        title: 'General article title text',
-        link_text: 'read more',
-        link: '#',
-        tag: 'Just some tag'
-      }
-    },
-    {
-      name: 'teaser-wide-with-address',
-      context: {
-        preview: '@preview',
-        type: 'teaser-wide',
+        image_alt_text: 'alt text',
+        type: 'teaser--wide',
         paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
         title: 'General article title text',
         link_text: 'read more',
         link: '#',
         tag: 'Just some tag',
         address_location: 'Lakenhalle',
-        address: 'Botermarkt 18A, 9000 Gent'
-      }
-    },
-    {
-      name: 'teaser-wide-with-image',
-      context: {
-        preview: '@preview',
-        type: 'teaser-wide',
-        title: 'General article title text',
-        link_text: 'read more',
-        link: '#',
-        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        image_alt_text: 'alt text',
-        location: 'Gent',
+        address: 'Botermarkt 18A, 9000 Gent',
         list: [
           'Nature',
           'Green with historical value',

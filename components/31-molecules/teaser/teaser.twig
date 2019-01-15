@@ -1,4 +1,4 @@
-<li class="teaser {{ type }} {{ modifier }}">
+<li class="teaser {% if type %} {{ type }} {% endif %} {% if modifier %} {{ modifier }} {% endif %}">
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__second">
@@ -26,8 +26,31 @@
         } %}
       {% endif %}
 
+      {% if telephone or teaser_email %}
+        <ul class="teaser-contact-info">
+          {% if telephone %}
+            <li>
+              {% include '@link' with {
+                'text': telephone,
+                'link': 'tel:'~telephone,
+                'modifier': 'no-icon'
+              } %}
+            </li>
+          {% endif %}
+          {% if teaser_email %}
+            <li>
+              {% include '@link' with {
+                'text': teaser_email,
+                'link': 'mailto:'~teaser_email,
+                'modifier': 'no-icon'
+              } %}
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+
       {% if topic_links is not empty %}
-        <ul class="links teaser-underlined-links">
+        <ul class="links">
           {% for link in topic_links|slice(0, max_links|default(5)) %}
             <li>
               {% include '@link' with {
@@ -37,30 +60,6 @@
             </li>
           {% endfor %}
         </ul>
-
-
-        {% if telephone or teaser_email %}
-          <ul class="teaser-contact-info">
-            {% if telephone %}
-              <li>
-                {% include '@link' with {
-                  'text': telephone,
-                  'link': 'tel:'~telephone,
-                  'modifier': 'no-icon'
-                } %}
-              </li>
-            {% endif %}
-            {% if teaser_email %}
-              <li>
-                {% include '@link' with {
-                  'text': teaser_email,
-                  'link': 'mailto:'~teaser_email,
-                  'modifier': 'no-icon'
-                } %}
-              </li>
-            {% endif %}
-          </ul>
-        {% endif %}
 
         {% if topic_links|length > max_links|default(5) %}
           {% include '@link' with {
@@ -101,6 +100,12 @@
       {% if tag %}
         {% include '@tag' with {
           "tag_text": tag,
+          "type": 'span-tag'
+        } %}
+      {% endif %}
+      {% if tag2 %}
+        {% include '@tag' with {
+          "tag_text": tag2,
           "type": 'span-tag'
         } %}
       {% endif %}
