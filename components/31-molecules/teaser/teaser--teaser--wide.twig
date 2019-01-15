@@ -10,6 +10,12 @@
           "type": 'span-tag'
         } %}
       {% endif %}
+      {% if tag2 %}
+        {% include '@tag' with {
+          "tag_text": tag2,
+          "type": 'span-tag'
+        } %}
+      {% endif %}
 
       {% if address %}
         <ul class="icon-list">

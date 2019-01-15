@@ -27,7 +27,7 @@ module.exports = {
       name: 'teaser',
       context: {
         preview: '@preview',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
+        paragraph_text: 'This is an example teaser. Other teasers are also possible but with fewer content for example. Have a look at teaser--example for instance.',
         title: 'Teaser title text comes here.',
         published_date: 'Gepost op Zaterdag 7 januari 2019',
         link_text: 'read more',
@@ -52,11 +52,10 @@ module.exports = {
       context: {
         preview: '@preview',
         modifier: 'teaser--underlined',
-        image_ratio: '1:1',
-        image_src: 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
+        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         image_alt_text: 'alt text',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
-        title: 'Teaser title text comes here.',
+        paragraph_text: 'This is another example teaser. Other teasers are also possible but with more or fewer content for example.',
+        title: 'Teasers can also be underlined',
         published_date: 'Gepost op Zaterdag 7 januari 2019',
         link_text: 'read more',
         link: '#',
@@ -72,8 +71,8 @@ module.exports = {
       context: {
         preview: '@preview',
         modifier: 'teaser--inverted',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-        title: 'Title text',
+        paragraph_text: 'This is an example teaser but on a background. These kind of teasers need some padding on their content otherwise the content would visually stick to the sides.',
+        title: 'Teaser with inverted styling',
         link_text: 'read more',
         link: '#',
         image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
@@ -87,18 +86,19 @@ module.exports = {
         image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         image_alt_text: 'alt text',
         type: 'teaser--wide',
-        paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?',
-        title: 'General article title text',
+        paragraph_text: 'This is a wide teaser, usually used with the sidebar layout. It can contain multiple components and has an optional image.',
+        title: 'This is a wide teaser, usually used with the sidebar layout',
         link_text: 'read more',
         link: '#',
-        tag: 'Just some tag',
+        tag: 'Optional tag',
+        tag2: 'More optional tags',
         address_location: 'Lakenhalle',
         address: 'Botermarkt 18A, 9000 Gent',
         list: [
-          'Nature',
-          'Green with historical value',
-          'Barbeque zone',
-          'Street'
+          'List item 1',
+          'List item 2 is a bit longer',
+          'List item 3',
+          'List item 4',
         ]
       }
     }
