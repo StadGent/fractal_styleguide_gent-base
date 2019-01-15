@@ -16,6 +16,18 @@ function makeVariants(types, modifier, disabled) {
   });
 }
 
+const types = [
+  'text',
+  'email',
+  'password',
+  'number',
+  'date',
+  'tel',
+  'url',
+  'radio',
+  'checkbox'
+];
+
 module.exports = {
   title: 'Input',
   name: 'Input',
@@ -33,16 +45,7 @@ module.exports = {
     label: 'input type text'
   },
   variants: [
-    ...makeVariants([
-      'text',
-      'email',
-      'password',
-      'number',
-      'tel',
-      'url',
-      'radio',
-      'checkbox'
-    ]),
+    ...makeVariants(types),
     {
       name: 'search',
       preview: '@preview',
@@ -53,35 +56,8 @@ module.exports = {
         label: 'input type search'
       }
     },
-    ...makeVariants([
-      'text',
-      'email',
-      'password',
-      'number',
-      'tel',
-      'url',
-      'radio',
-      'checkbox'
-    ], 'error'),
-    ...makeVariants([
-      'text',
-      'email',
-      'password',
-      'number',
-      'tel',
-      'url',
-      'radio',
-      'checkbox'
-    ], 'success'),
-    ...makeVariants([
-      'text',
-      'email',
-      'password',
-      'number',
-      'tel',
-      'url',
-      'radio',
-      'checkbox'
-    ], null, true)
+    ...makeVariants(types, 'error'),
+    ...makeVariants(types, 'success'),
+    ...makeVariants(types, null, true)
   ]
 };
