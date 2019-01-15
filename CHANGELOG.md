@@ -23,6 +23,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Changed
 * DTGB-641: Refactored filter template to display filter button next to result instead of above it
+* DTGB-648: Refactored form fields
 
 ### Fixed
 
