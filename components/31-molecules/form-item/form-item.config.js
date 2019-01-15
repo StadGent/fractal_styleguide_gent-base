@@ -4,7 +4,7 @@ module.exports = {
   title: 'Form item',
   status: 'beta',
   handle: 'form-item',
-  preview: '@preview-form-item',
+  preview: '@preview',
   collated: 'true',
   context: {
     label: 'input-text',
@@ -19,7 +19,7 @@ module.exports = {
     {
       name: 'default',
       context: {
-        field_description: 'Optional field description.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium. Vivamus tellus metus, pretium eu nibh vitae, eleifend luctus dolor. Morbi feugiat tristique ante eu egestas. Nunc ligula magna, fringilla sed consequat id, pellentesque at risus. Nunc ex elit, tincidunt at lorem vel, mattis gravida nisl. Praesent sodales nibh massa, id ultrices metus viverra id.'
+        field_description: 'Optional field description.<br> --- <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur eveniet illo porro quis sint.'
       }
     },
     {
@@ -124,9 +124,10 @@ module.exports = {
     {
       name: 'multiselect',
       context: {
-        id: 'input-multiselect',
+        id: 'input-select',
         label: 'multiselect',
         input_component: 'input-multiselect',
+        multiple: true,
         options: [
           {
             label: 'Option 1'

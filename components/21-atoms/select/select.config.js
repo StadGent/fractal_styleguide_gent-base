@@ -63,6 +63,40 @@ module.exports = {
         id: 'select_id--disabled',
         disabled: true
       }
+    },
+    {
+      name: 'multiple--default',
+      preview: '@preview',
+      context: {
+        multiple: true
+      }
+    },
+    {
+      name: 'multiple--success',
+      preview: '@preview',
+      context: {
+        id: 'select_id--success',
+        modifier: 'success',
+        multiple: true
+      }
+    },
+    {
+      name: 'multiple--error',
+      preview: '@preview',
+      context: {
+        id: 'select_id--error',
+        modifier: 'error',
+        multiple: true
+      }
+    },
+    {
+      name: 'multiple--disabled',
+      preview: '@preview',
+      context: {
+        id: 'select_id--disabled',
+        disabled: true,
+        multiple: true
+      }
     }
   ]
 };

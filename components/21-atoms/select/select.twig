@@ -6,6 +6,9 @@
         {% if disabled %}
           disabled="{{ disabled }}"
         {% endif  %}
+        {% if multiple %}
+          multiple
+        {% endif  %}
 >
   {% for option in options %}
 
