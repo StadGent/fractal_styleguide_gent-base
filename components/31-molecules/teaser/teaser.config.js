@@ -48,20 +48,15 @@ module.exports = {
       }
     },
     {
-      name: 'teaser--example',
+      name: 'teaser--underlined',
       context: {
         preview: '@preview',
         modifier: 'teaser--underlined',
-        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        image_alt_text: 'alt text',
         paragraph_text: 'This is another example teaser. Other teasers are also possible but with more or fewer content for example.',
         title: 'Teasers can also be underlined',
         published_date: 'Gepost op Zaterdag 7 januari 2019',
         link_text: 'read more',
         link: '#',
-        tag: 'Optional tag',
-        tag2: 'Optional tag 2',
-        label_text: 'Optional label',
         telephone: '0123456789',
         opening_hours_service: '2690'
       }
