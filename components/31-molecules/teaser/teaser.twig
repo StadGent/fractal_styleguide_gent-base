@@ -20,6 +20,12 @@
         {% endif %}
       {% endif %}
 
+      {% if paragraph_text %}
+        {% include '@paragraph' with {
+          'text': paragraph_text
+        } %}
+      {% endif %}
+
       {% if telephone or teaser_email %}
         <ul class="teaser-contact-info">
           {% if telephone %}
