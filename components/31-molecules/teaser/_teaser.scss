@@ -32,11 +32,6 @@
       border-bottom: 2px solid;
     }
 
-    //&,
-    //& + & {
-    //  margin-top: 1.2rem;
-    //}
-
     // @TODO: Move to other layer.
     .ol-popup & {
       padding-bottom: 0;
@@ -101,21 +96,17 @@
     font-weight: 700;
   }
 
-
-  .teaser-contact-info {
+  .teaser-content {
     @extend %list-no-style;
 
+    display: flex;
+    flex-direction: column;
     margin-top: -$link-padding;
     margin-bottom: .4rem;
 
     li > .no-icon {
       font-weight: normal;
     }
-  }
-
-  .teaser-content {
-    display: flex;
-    flex-direction: column;
 
     .content__top, // Deprecated
     .content__first {

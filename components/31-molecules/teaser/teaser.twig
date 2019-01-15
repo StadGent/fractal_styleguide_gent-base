@@ -20,12 +20,6 @@
         {% endif %}
       {% endif %}
 
-      {% if topic_links is empty %}
-        {% include '@paragraph' with {
-          'text': paragraph_text
-        } %}
-      {% endif %}
-
       {% if telephone or teaser_email %}
         <ul class="teaser-contact-info">
           {% if telephone %}
@@ -49,27 +43,7 @@
         </ul>
       {% endif %}
 
-      {% if topic_links is not empty %}
-        <ul class="links">
-          {% for link in topic_links|slice(0, max_links|default(5)) %}
-            <li>
-              {% include '@link' with {
-                'text': link.text,
-                'link': link.link
-              } %}
-            </li>
-          {% endfor %}
-        </ul>
-
-        {% if topic_links|length > max_links|default(5) %}
-          {% include '@link' with {
-            'text': 'show more',
-            'link': link,
-            'modifier': 'read-more standalone-link',
-            'labeled_by': title
-          } %}
-        {% endif %}
-      {% else %}
+      {% if link %}
         {% include '@link' with {
           'text': 'read more',
           'link': link,

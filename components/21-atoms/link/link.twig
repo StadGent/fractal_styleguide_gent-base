@@ -15,9 +15,11 @@
   {% if title %}
    title="{{ title }}"
   {% endif %} >
-  <span class="visually-hidden">
-    {{ labeled_by }}
-  </span>
+  {% if labeled_by %}
+    <span class="visually-hidden">
+      {{ labeled_by }}
+    </span>
+  {% endif %}
   {% spaceless %}
       {{ text }}
   {% endspaceless %}

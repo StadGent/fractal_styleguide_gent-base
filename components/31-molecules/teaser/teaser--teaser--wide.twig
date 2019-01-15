@@ -54,7 +54,7 @@
       } %}
     </div>
 
-    {% if image_src %}
+    {% if image_src is defined %}
       <div class="content__first">
         <div class="figure-wrapper">
           {% include '@figure' with {
