@@ -126,7 +126,7 @@ module.exports = {
       context: {
         id: 'input-select',
         label: 'multiselect',
-        input_component: 'input-multiselect',
+        input_component: 'input-select',
         multiple: true,
         options: [
           {
