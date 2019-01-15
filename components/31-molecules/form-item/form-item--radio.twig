@@ -1,36 +1,12 @@
-<fieldset class="form-item {{ modifier }}">
-  <legend>
-    {{ label }}
-    {% if label_optional %}
-      <span class="label-optional">({{ label_optional }})</span>
-    {% endif %}
-  </legend>
-  {% include '@field-message' with {
-    "field_message": field_description,
-    "modifier": null
-  } %}
-  <div class="form-columns">
-    <div class="form-item-column">
-      {% for option in options %}
-        {% include '@'~input_component with {
-          "id": input_component ~ "-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
-          "type": type,
-          "name": option.name,
-          "label": option.label
-        } %}
-      {% endfor %}
-    </div>
-    <div class="form-item-column">
-      {% if modifier == 'error' %}
-        {% include '@field-message' with {
-          "modifier": "error"
-        } %}
-      {% endif %}
-      {% if modifier == 'success' %}
-        {% include '@field-message' with {
-          "modifier": "success"
-        } %}
-      {% endif %}
-    </div>
-  </div>
-</fieldset>
+{% extends "_form-item--fieldset.template.twig" %}
+
+{% block options %}
+  {% for option in options %}
+    {% include '@'~input_component with {
+      "id": input_component ~ "-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+      "type": type,
+      "name": option.name,
+      "label": option.label
+    } %}
+  {% endfor %}
+{% endblock %}
