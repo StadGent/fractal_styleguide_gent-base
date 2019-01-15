@@ -7,14 +7,12 @@
     }
   }
 
+  .field-message:not(.error):not(.success) {
+    margin-bottom: .4rem;
+  }
+
   .form-columns {
     margin-bottom: 1.2rem;
-
-    .form-item-column {
-      >:first-child {
-        margin-top: .4rem;
-      }
-    }
 
     @include desktop {
       display: flex;
