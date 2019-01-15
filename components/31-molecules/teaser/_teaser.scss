@@ -74,10 +74,6 @@
     }
   }
 
-  .links a {
-    font-weight: normal;
-  }
-
   a.teaser-overlay-link {
     @include element-states(transparent, transparent, background-color);
 
@@ -97,15 +93,18 @@
   }
 
   .teaser-content {
-    @extend %list-no-style;
-
     display: flex;
     flex-direction: column;
-    margin-top: -$link-padding;
-    margin-bottom: .4rem;
 
-    li > .no-icon {
-      font-weight: normal;
+    .teaser-contact-info {
+      @extend %list-no-style;
+
+      margin-top: -$link-padding;
+      margin-bottom: .4rem;
+
+      li > .no-icon {
+        font-weight: normal;
+      }
     }
 
     .content__top, // Deprecated
