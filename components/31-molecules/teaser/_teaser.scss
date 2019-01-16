@@ -210,6 +210,8 @@
 //
 // Teaser wide variant.
 //
+.teaser.teaser-search, // Deprecated
+.teaser.teaser-search-wide, // Deprecated
 .teaser.teaser--wide {
   @include tablet {
     dt,
