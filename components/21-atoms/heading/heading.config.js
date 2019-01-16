@@ -6,7 +6,7 @@ module.exports = {
   name: 'heading',
   collated: true,
   collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 100%">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+    return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd style="max-width: 100%">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
   preview: '@preview-description-list',
   default: 'heading-1',

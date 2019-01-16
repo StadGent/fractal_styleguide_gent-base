@@ -1,23 +1,12 @@
 'use strict';
 
 module.exports = {
-  title: 'Contact details',
+  title: 'Display switcher',
   status: 'alpha',
-  handle: 'contact-details',
+  name: 'display-switcher',
   preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
-  variants: [
-    {
-      name: 'default'
-    },
-    {
-      name: 'inverted',
-      context: {
-        modifier: 'contact-details-inverted'
-      }
-    }
-  ]
+  }
 };

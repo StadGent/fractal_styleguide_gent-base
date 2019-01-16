@@ -5,6 +5,11 @@ module.exports = {
   status: 'alpha',
   handle: 'collection',
   default: 'grid-4',
+  preview: '@preview-description-list',
+  collated: true,
+  collator: function (markup, item) {
+    return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+  },
   context: {
     image_src: 'https://via.placeholder.com/528x330&text=16:10+(528x330)',
     image_alt_text: 'alt text',
