@@ -4,7 +4,7 @@ const generateCheckboxes = (uid) =>{
   let result = [];
   for (let i = 5; i--;) {
     var title = 'Category ' + (5 - i);
-    var value = 'category_ ' + (5 - i);
+    var value = 'category_' + (5 - i);
     var items = [];
 
     for (let j = 20; j--;) {
