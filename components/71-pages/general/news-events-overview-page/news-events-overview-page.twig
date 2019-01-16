@@ -29,37 +29,39 @@
       <h2 class="visually-hidden">Overview</h2>
       <ul class="grid-3">
         {% for key, article in articles %}
-          {% if article.teaser_event_date %}
-            {% include '@teaser-article' with {
+          {% if article.event_date %}
+            {% include '@teaser' with {
+              "type": 'teaser-article',
               "teaser_uid": article.teaser_uid ~ loop.index,
-              "teaser_paragraph_text": article.teaser_paragraph_text,
-              "teaser_title": article.teaser_title,
-              "teaser_event_date": {
+              "paragraph_text": article.paragraph_text,
+              "title": article.title,
+              "event_date": {
                 "text_1": article.text_1,
                 "datetime_1": article.datetime_1,
                 "text_2": article.text_2,
                 "datetime_2": article.datetime_2
               },
               "teaser_datetime": article.teaser_datetime,
-              "teaser_link_text": article.teaser_link_text,
-              "teaser_link_link": article.teaser_link_link,
-              "teaser_image_src": article.teaser_image_src ~ '?random=' ~ key,
-              "teaser_image_alt_text": article.teaser_image_alt_text,
-              "teaser_tag": article.teaser_tag,
-              "teaser_label_text": article.teaser_label_text
+              "link_text": article.link_text,
+              "link": article.link,
+              "image_src": article.image_src ~ '?random=' ~ key,
+              "image_alt_text": article.image_alt_text,
+              "tag": article.tag,
+              "label_text": article.label_text
             } %}
           {% else %}
-          {% include '@teaser-article' with {
+          {% include '@teaser' with {
+            "type": 'teaser-article',
             "teaser_uid": article.teaser_uid ~ loop.index,
-            "teaser_paragraph_text": article.teaser_paragraph_text,
-            "teaser_title": article.teaser_title,
-            "teaser_published_date": article.teaser_published_date,
+            "paragraph_text": article.paragraph_text,
+            "title": article.title,
+            "published_date": article.published_date,
             "teaser_datetime": article.teaser_datetime,
-            "teaser_link_text": article.teaser_link_text,
-            "teaser_link_link": article.teaser_link_link,
-            "teaser_image_src": article.teaser_image_src ~ '?random=' ~ key,
-            "teaser_image_alt_text": article.teaser_image_alt_text,
-            "teaser_tag": article.teaser_tag
+            "link_text": article.link_text,
+            "link": article.link,
+            "image_src": article.image_src ~ '?random=' ~ key,
+            "image_alt_text": article.image_alt_text,
+            "tag": article.tag
           } %}
           {% endif %}
         {% endfor %}

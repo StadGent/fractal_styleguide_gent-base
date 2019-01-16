@@ -39,21 +39,23 @@
         {% else %}
           {# Categories #}
           {% for contact_category in contact_categories %}
-            {% include '@teaser-contact' with {
+            {% include '@teaser' with {
+              type: 'teaser-contact',
               teaser_uid: contact_category.name,
-              teaser_title: contact_category.name,
-              teaser_title_link: contact_category.link
+              title: contact_category.name,
+              title_link: contact_category.link
             } %}
           {% endfor %}
 
           {# Contacts #}
           {% for contact in contacts %}
-            {% include '@teaser-contact' with {
+            {% include '@teaser' with {
+              type: 'teaser-contact',
               teaser_uid: contact.email,
-              teaser_title: contact.link_text,
-              teaser_title_link: contact.link,
-              teaser_paragraph_text: contact.address,
-              teaser_telephone: contact.phone,
+              title: contact.link_text,
+              title_link: contact.link,
+              paragraph_text: contact.address,
+              telephone: contact.phone,
               teaser_email: contact.email
             } %}
           {% endfor %}

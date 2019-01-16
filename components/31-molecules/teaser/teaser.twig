@@ -1,0 +1,96 @@
+<li class="teaser {% if type %} {{ type }} {% endif %} {% if modifier %} {{ modifier }} {% endif %}">
+  <article class="teaser-content">
+    {# title must be the first element in markup #}
+    <div class="content__second">
+      <h3>{{ title }}</h3>
+
+      {% if event_date or published_date %}
+        {% if event_date %}
+          {# Events can consist of two timestamps, so we wrap it in a span. #}
+          <div class="event">
+            <span>
+              <time datetime="{{ event_date.datetime_1 }}">{{ event_date.text_1  }}</time>
+              {% if event_date.datetime_2 and event_date.text_2 %}
+                &nbsp;<time datetime="{{ event_date.datetime_2 }}">{{ event_date.text_2  }}</time>
+              {% endif %}
+            </span>
+          </div>
+        {% else %}
+          <time class="published" datetime="{{ teaser_datetime }}" pubdate="pubdate">{{ published_date }}</time>
+        {% endif %}
+      {% endif %}
+
+      {% if paragraph_text %}
+        {% include '@paragraph' with {
+          'text': paragraph_text
+        } %}
+      {% endif %}
+
+      {% if telephone or teaser_email %}
+        <ul class="teaser-links">
+          {% if telephone %}
+            <li>
+              {% include '@link' with {
+                'text': telephone,
+                'link': 'tel:'~telephone,
+                'modifier': 'no-icon'
+              } %}
+            </li>
+          {% endif %}
+          {% if teaser_email %}
+            <li>
+              {% include '@link' with {
+                'text': teaser_email,
+                'link': 'mailto:'~teaser_email,
+                'modifier': 'no-icon'
+              } %}
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+
+      {% if link %}
+        {% include '@link' with {
+          'text': 'read more',
+          'link': link,
+          'modifier': 'read-more standalone-link',
+          'labeled_by': title
+        } %}
+      {% endif %}
+    </div>
+    <div class="content__first">
+      {% if label_text %}
+        <span class="teaser-label">
+          <i class="icon-calendar"></i>
+          <span>{{ label_text }}</span>
+        </span>
+      {% endif %}
+
+      {% if image_src or image_placeholders %}
+        <div class="figure-wrapper">
+          {% include '@figure' with {
+            figure_image_src: image_src,
+            figure_image_alt_text: image_alt_text,
+            figure_ratio: image_ratio
+          } %}
+
+          <div class="accolade-inverse bottom-left"></div>
+        </div>
+      {% endif %}
+
+      {% if tag %}
+        {% include '@tag' with {
+          "tag_text": tag,
+          "type": 'span-tag'
+        } %}
+      {% endif %}
+      {% if tag2 %}
+        {% include '@tag' with {
+          "tag_text": tag2,
+          "type": 'span-tag'
+        } %}
+      {% endif %}
+    </div>
+  </article>
+  <a href="{{ link }}" class="teaser-overlay-link" tabindex="-1" aria-hidden="true">{{ title }}</a>
+</li>

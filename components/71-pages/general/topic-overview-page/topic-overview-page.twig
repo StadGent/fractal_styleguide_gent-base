@@ -32,11 +32,12 @@
       <h2 class="visually-hidden">Overview</h2>
       <ul class="grid-3">
         {% for topic in topics %}
-          {% include '@teaser-topic' with {
-            "teaser_paragraph_text": topic.teaser_paragraph_text,
-            "teaser_title": topic.teaser_title,
+          {% include '@teaser' with {
+            "type": 'teaser-underlined',
+            "paragraph_text": topic.paragraph_text,
+            "title": topic.title,
             "teaser_uid":  topic.teaser_uid ~ loop.index,
-            "teaser_topic_links": topic.teaser_topic_links
+            "topic_links": topic.topic_links
           } %}
         {% endfor %}
       </ul>
