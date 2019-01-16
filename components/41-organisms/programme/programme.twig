@@ -7,23 +7,22 @@
         <div class="programme-slot">
           <dt class="programme-slot-title">{{ slot.title }}</dt>
           <dd>
-            <ul class="grid-3">
-
             {% for itemKey, item in slot.items %}
               {% set key = slotKey ~ itemKey %}
               {% set modalContent %}
-                <h3>{{ item.title }}</h3>
-                <h4>{{ slot.title }}</h4>
 
-                {% if item.subtitle %}
-                  <p>{{ item.subtitle }}</p>
-                {% endif %}
+              <h3>{{ item.title }}</h3>
+              <h4>{{ slot.title }}</h4>
 
-                {% if item.images|length > 1 %}
-                  {% include '@image-gallery--multiple' with {
-                    type: 'secondary',
-                    items: item.images
-                  } %}
+              {% if item.subtitle %}
+                <p>{{ item.subtitle }}</p>
+              {% endif %}
+
+              {% if item.images|length > 1 %}
+                {% include '@image-gallery--multiple' with {
+                  type: 'secondary',
+                  items: item.images
+                } %}
                 {% elseif item.images|length > 0  %}
                   {% include '@image-gallery' with {
                     type: 'secondary',
@@ -44,27 +43,33 @@
                 {% endif %}
               {% endset %}
 
-              <li>
-                <!-- Modal -->
-                {% include "@modal" with {
-                  id: key,
-                  content: modalContent,
-                  classes: 'programme-detail'
-                } %}
-                <!-- /Modal -->
+              <!-- Modal -->
+              {% include "@modal" with {
+                id: key,
+                content: modalContent,
+                classes: 'programme-detail'
+              } %}
+            {% endfor %}
+            <!-- /Modal -->
+            <ul class="grid-3">
+            {% for itemKey, item in slot.items %}
+              {% set key = slotKey ~ itemKey %}
 
                 <!-- Teaser -->
-                {% include '@teaser-programme' with {
+                {% include '@teaser' with {
+                  type: 'teaser-programme',
+                  modifier: 'teaser--inverted',
                   teaser_uid: 'uid_' ~ key,
-                  teaser_paragraph_text: item.subtitle,
-                  teaser_title: item.title,
-                  teaser_link_text: 'More information',
-                  teaser_link_link: '#' ~ key,
-                  teaser_image_src: item.images|first.src,
-                  teaser_image_alt_text: item.images|first.alt
+                  paragraph_text: item.subtitle,
+                  title: item.title,
+                  link_text: 'More information',
+                  link: '#' ~ key,
+                  image_src: item.images|first.src,
+                  image_alt_text: item.images|first.alt,
+                  image_ratio: '8:5',
+                  image_placeholders: true
                 } %}
                 <!-- /Teaser -->
-              </li>
             {% endfor %}
 
           </ul>

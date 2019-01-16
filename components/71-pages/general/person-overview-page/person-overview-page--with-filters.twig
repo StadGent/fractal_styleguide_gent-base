@@ -42,15 +42,16 @@
         <h2 class="visually-hidden">Overview</h2>
         <ul class="grid-3">
           {% for key, person in people %}
-            {% include '@teaser-person' with {
+            {% include '@teaser' with {
               "teaser_uid": person.teaser_uid ~ loop.index,
-              "teaser_paragraph_text": person.teaser_paragraph_text,
-              "teaser_title": person.teaser_title,
-              "teaser_link_text": person.teaser_link_text,
-              "teaser_link_link": person.teaser_link_link,
-              "teaser_image_src": person.teaser_image_src,
-              "teaser_image_alt_text": person.teaser_image_alt_text,
-              "teaser_tag": person.teaser_tag
+              "type": 'teaser-person',
+              "paragraph_text": person.paragraph_text,
+              "title": person.title,
+              "link_text": person.link_text,
+              "link": person.link,
+              "image_src": person.image_src,
+              "image_alt_text": person.image_alt_text,
+              "tag": person.tag
             } %}
           {% endfor %}
         </ul>

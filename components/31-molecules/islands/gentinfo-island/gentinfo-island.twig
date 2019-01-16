@@ -1,9 +1,13 @@
 <div class="gentinfo-block">
   <div class="gentinfo-block-content">
-    {% include '@heading' with {
-      'type': 'h2',
-      'heading_text': 'Gentinfo'
+    <h2 class="visually-hidden">Gentinfo</h2>
+
+    {% include '@image' with {
+      src: '/styleguide/img/svg/gentinfo-logo.svg'|path,
+      modifier: 'gentinfo-logo',
+      alt_text: 'Gentinfo'
     } %}
+
     {% include '@paragraph'
       with {
         'text': 'Gentinfo is available from Monday till Saturday from 08:00 till 19:00'

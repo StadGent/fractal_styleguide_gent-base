@@ -31,11 +31,11 @@ const generateTeasers = (uid)=>{
   for (let i = 10; i--;) {
     result.push({
       teaser_uid: `search_teaser_${i}`,
-      teaser_paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet et impedit neque nobis ratione, totam unde? A asperiores, nam nihil quam repellat voluptatibus?',
-      teaser_title: 'Search result',
-      teaser_link_link: '#',
-      teaser_link_text: 'read more',
-      teaser_tag: 'some tag'
+      paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet et impedit neque nobis ratione, totam unde? A asperiores, nam nihil quam repellat voluptatibus?',
+      title: 'Search result',
+      link: '#',
+      link_text: 'read more',
+      tag: 'some tag'
     });
   }
   return result;
