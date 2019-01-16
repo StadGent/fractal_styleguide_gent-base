@@ -65,7 +65,9 @@
                   link_text: 'More information',
                   link: '#' ~ key,
                   image_src: item.images|first.src,
-                  image_alt_text: item.images|first.alt
+                  image_alt_text: item.images|first.alt,
+                  image_ratio: '8:5',
+                  image_placeholders: true
                 } %}
                 <!-- /Teaser -->
             {% endfor %}

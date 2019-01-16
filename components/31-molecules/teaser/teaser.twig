@@ -66,11 +66,12 @@
         </span>
       {% endif %}
 
-      {% if image_src is defined %}
+      {% if image_src or image_placeholders %}
         <div class="figure-wrapper">
           {% include '@figure' with {
-            "figure_image_src": image_src,
-            "figure_ratio": image_ratio
+            figure_image_src: image_src,
+            figure_image_alt_text: image_alt_text,
+            figure_ratio: image_ratio
           } %}
 
           <div class="accolade-inverse bottom-left"></div>
