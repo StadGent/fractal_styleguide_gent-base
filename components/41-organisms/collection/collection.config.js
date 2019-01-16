@@ -6,13 +6,13 @@ module.exports = {
   handle: 'collection',
   default: 'grid-4',
   context: {
-    teaser_image_src: 'https://via.placeholder.com/528x330&text=16:10+(528x330)',
-    teaser_image_alt_text: 'alt text',
-    teaser_paragraph_text: 'Teaser text, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
-    teaser_title: 'Title text ',
+    image_src: 'https://via.placeholder.com/528x330&text=16:10+(528x330)',
+    image_alt_text: 'alt text',
+    paragraph_text: 'Teaser text, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
+    title: 'Title text ',
     teaser_uid: 'uid',
-    teaser_link_text: 'read more',
-    teaser_link_link: '#',
+    link_text: 'read more',
+    link: '#',
     grid: 'grid-4'
   },
   variants: [

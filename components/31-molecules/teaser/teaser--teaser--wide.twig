@@ -1,0 +1,72 @@
+<li class="teaser {% if type %} {{ type }} {% endif %} {% if modifier %} {{ modifier }} {% endif %}">
+  <article class="teaser-content">
+    {# title must be the first element in markup #}
+    <div class="content__second">
+      <h3>{{ title }}</h3>
+
+      {% if tag %}
+        {% include '@tag' with {
+          "tag_text": tag,
+          "type": 'span-tag'
+        } %}
+      {% endif %}
+      {% if tag2 %}
+        {% include '@tag' with {
+          "tag_text": tag2,
+          "type": 'span-tag'
+        } %}
+      {% endif %}
+
+      {% if address %}
+        <ul class="icon-list">
+          <li>
+            <i class='icon-marker'></i><span><strong> {{ address_location }} </strong> &mdash; {{ address }}</span>
+          </li>
+        </ul>
+      {% endif %}
+
+      {% if location %}
+        <div class="location">
+          <i class="icon-marker" aria-hidden="true"></i><span>{{ location}}</span>
+        </div>
+      {% endif %}
+
+      {% if list %}
+        {% include '@list' with {
+          'type': 'icon-list',
+          'modifier': 'links inline',
+          'icon_items': list
+        } %}
+      {% endif %}
+
+      {% if paragraph_text %}
+        {% include '@paragraph' with {
+          'text': paragraph_text
+        } %}
+      {% endif %}
+
+      {% include '@link' with {
+        'text': link_text,
+        'link': link,
+        'modifier': 'read-more standalone-link',
+        'title': null,
+        'labeled_by': title
+      } %}
+    </div>
+
+    {% if image_src is defined %}
+      <div class="content__first">
+        <div class="figure-wrapper">
+          {% include '@figure' with {
+            "figure_image_src": image_src,
+            "figure_ratio": '8:5'
+          } %}
+          <div class="accolade-inverse right-top"></div>
+          <div class="accolade-inverse bottom-left"></div>
+        </div>
+      </div>
+    {% endif %}
+  </article>
+  <a href="{{ link }}" class="teaser-overlay-link" tabindex="-1"
+     aria-hidden="true">{{ title }}</a>
+</li>
