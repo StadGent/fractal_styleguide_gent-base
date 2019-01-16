@@ -24,6 +24,7 @@
     }
   }
 
+  &.teaser-topic, // Deprecated
   &.teaser--underlined {
     .teaser-content {
       @include theme('border-color', 'color-primary--lighten-4', 'teaser-contact-border');
@@ -96,6 +97,7 @@
     display: flex;
     flex-direction: column;
 
+    .teaser-topic-links, // Deprecated
     .teaser-contact-info, // Deprecated
     .teaser-links {
       @extend %list-no-style;
