@@ -95,13 +95,14 @@
     display: flex;
     flex-direction: column;
 
-    .teaser-contact-info {
+    .teaser-contact-info, // Deprecated
+    .teaser-links {
       @extend %list-no-style;
 
       margin-top: -$link-padding;
       margin-bottom: .4rem;
 
-      li > .no-icon {
+      a {
         font-weight: normal;
       }
     }
