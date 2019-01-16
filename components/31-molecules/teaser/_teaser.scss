@@ -5,6 +5,7 @@
   position: relative;
   list-style: none;
 
+  &.teaser-programme, // Deprecated
   &.teaser--inverted {
     .teaser-content {
       @include theme('background-color', 'color-secondary');
