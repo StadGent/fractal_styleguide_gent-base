@@ -87,8 +87,11 @@
 
     <ul class="filter__results">
       {% for key, result in results %}
-        {% include '@teaser' with {
-          "type": 'teaser-search',
+        {% include '@teaser--teaser--wide' with {
+          "image_ratio": result.image_ratio,
+          "image_src": result.image_src,
+          "image_alt_text": result.image_alt_text,
+          "type": result.type,
           "teaser_uid": result.teaser_uid,
           "paragraph_text": result.paragraph_text,
           "title": result.title,
