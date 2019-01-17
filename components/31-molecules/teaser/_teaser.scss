@@ -64,8 +64,9 @@
 
     // @TODO: Move to other layer.
     .grid-3 & {
-      .content__bottom {
-        height: 100%;
+      .content__bottom, // Deprecated
+      .content__second {
+        flex-grow: 1;
       }
     }
   }
