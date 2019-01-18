@@ -21,6 +21,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-656: Border-width of tag
 * DTGB-655: Updated copy in checkbox-with-filter popup
 * DTGB-604: removed font-size increase on +1920px screens
+* DTGB-660: Added gentinfo logo to the gentinfo-island.
 
 ## [3.0.0-alpha.10]
 
