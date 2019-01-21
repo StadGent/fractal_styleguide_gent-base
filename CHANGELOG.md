@@ -4,6 +4,11 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+* DTGB-665: Refactored pages to only show layouts. This shouldn't affect any
+  custom projects.
+
 ## [3.0.0-alpha11]
 
 ### Added
