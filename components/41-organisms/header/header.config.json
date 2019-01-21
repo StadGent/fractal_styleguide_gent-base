@@ -36,6 +36,7 @@
   "variants": [
     {
       "name": "logged-in",
+      "preview": "@preview",
       "context": {
         "mijn_gent_block_auth": "true"
       }
