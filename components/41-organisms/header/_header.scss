@@ -92,6 +92,7 @@ header.header {
     .search--link {
       @include theme('background-color', 'color-primary--lighten-5', 'header-search-background-color');
 
+      display: block;
       min-width: 2.4rem;
       max-width: calc(.8rem + 32px);
       height: 2.4rem;

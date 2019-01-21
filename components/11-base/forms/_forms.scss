@@ -25,13 +25,29 @@ $field-icon-padding: 2.5rem;
 /// @require theme
 ///
 @mixin field-base {
-  @include theme('border-color', 'color-tertiary--lighten-2', 'fields-border-color');
-  @include theme('background', 'color-tertiary--lighten-6', 'fields-background');
-  @include theme('color', 'color-tertiary', 'fields-color');
+  @include theme(
+    "border-color",
+    "color-tertiary--lighten-2",
+    "fields-border-color"
+  );
+  @include theme(
+    "background",
+    "color-tertiary--lighten-6",
+    "fields-background"
+  );
+  @include theme("color", "color-tertiary", "fields-color");
 
   &:focus {
-    @include theme('border-color', 'color-primary--lighten-2', 'fields-border-focus-color');
-    @include theme('background', 'color-primary--lighten-5', 'fields-focus-background');
+    @include theme(
+      "border-color",
+      "color-primary--lighten-2",
+      "fields-border-focus-color"
+    );
+    @include theme(
+      "background",
+      "color-primary--lighten-5",
+      "fields-focus-background"
+    );
 
     border: 1px solid;
     outline: 0;
@@ -40,64 +56,109 @@ $field-icon-padding: 2.5rem;
   &:disabled {
     padding-right: $field-icon-padding;
     border: 0;
-    background: color('dark-gray', -5) $field-icon-position;
-    background-image: svg-as-background('lock-closed', color('dark-gray', -2), 20, 20);
+    background: color("dark-gray", -5) $field-icon-position;
+    background-image: svg-as-background(
+      "lock-closed",
+      color("dark-gray", -2),
+      20,
+      20
+    );
     cursor: not-allowed;
   }
 
   &.success {
     padding-right: $field-icon-padding;
-    border: 1px solid color('green');
-    background: color('green', -6) $field-icon-position;
-    background-image: svg-as-background('checkmark-circle', color('green'), 26, 26);
+    border: 1px solid color("green");
+    background: color("green", -6) $field-icon-position;
+    background-image: svg-as-background(
+      "checkmark-circle",
+      color("green"),
+      26,
+      26
+    );
 
     &:focus {
-      border-color: color('green');
-      background: color('green', -6) $field-icon-position;
-      background-image: svg-as-background('checkmark-circle', color('green'), 26, 26);
+      border-color: color("green");
+      background: color("green", -6) $field-icon-position;
+      background-image: svg-as-background(
+        "checkmark-circle",
+        color("green"),
+        26,
+        26
+      );
     }
   }
 
   &.error {
     padding-right: $field-icon-padding;
-    border: 1px solid color('red');
-    background: color('red', -6) $field-icon-position;
-    background-image: svg-as-background('exclamation-circle', color('red'), 26, 26);
+    border: 1px solid color("red");
+    background: color("red", -6) $field-icon-position;
+    background-image: svg-as-background(
+      "exclamation-circle",
+      color("red"),
+      26,
+      26
+    );
     font-style: italic;
 
     &:focus {
-      border-color: color('red');
-      background: color('red', -6) $field-icon-position;
-      background-image: svg-as-background('exclamation-circle', color('red'), 26, 26);
+      border-color: color("red");
+      background: color("red", -6) $field-icon-position;
+      background-image: svg-as-background(
+        "exclamation-circle",
+        color("red"),
+        26,
+        26
+      );
     }
   }
 
-  &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
+  &::-webkit-input-placeholder {
+    // sass-lint:disable-line no-vendor-prefixes
+    @include theme(
+      "color",
+      "color-tertiary--lighten-1",
+      "fields-placeholder-color"
+    );
     font-style: italic;
     font-weight: normal;
   }
 
-  &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
+  &:-moz-placeholder {
+    // sass-lint:disable-line no-vendor-prefixes
+    @include theme(
+      "color",
+      "color-tertiary--lighten-1",
+      "fields-placeholder-color"
+    );
     font-style: italic;
     font-weight: normal;
   }
 
-  &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
+  &::-moz-placeholder {
+    // sass-lint:disable-line no-vendor-prefixes
+    @include theme(
+      "color",
+      "color-tertiary--lighten-1",
+      "fields-placeholder-color"
+    );
     font-style: italic;
     font-weight: normal;
   }
 
-  &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme('color', 'color-tertiary--lighten-1', 'fields-placeholder-color');
+  &:-ms-input-placeholder {
+    // sass-lint:disable-line no-vendor-prefixes
+    @include theme(
+      "color",
+      "color-tertiary--lighten-1",
+      "fields-placeholder-color"
+    );
     font-style: italic;
     font-weight: normal;
   }
 
   &::placeholder {
-    @include theme('color', 'color-tertiary', 'fields-placeholder-color');
+    @include theme("color", "color-tertiary", "fields-placeholder-color");
     font-style: italic;
     font-weight: normal;
   }
@@ -107,7 +168,7 @@ $field-icon-padding: 2.5rem;
   height: 2.4rem;
   padding: 0 .8rem;
   border: 1px solid;
-  border-radius: border-radius('radius-1');
+  border-radius: border-radius("radius-1");
   font-family: $default-font-family;
   font-size: .8rem;
   font-weight: normal;
@@ -129,7 +190,7 @@ $field-icon-padding: 2.5rem;
 /// @author Gert-Jan Meire
 ///
 @mixin choices-field-base($type) {
-  position:  relative;
+  position: relative;
   margin-bottom: .5rem;
 
   label {
@@ -143,7 +204,7 @@ $field-icon-padding: 2.5rem;
     &::before,
     &::after {
       position: absolute;
-      content: '';
+      content: "";
     }
 
     &::before {
@@ -152,8 +213,8 @@ $field-icon-padding: 2.5rem;
       width: 1rem;
       height: 1rem;
       border: 1px solid;
-      border-radius: border-radius('radius-1');
-      content: '';
+      border-radius: border-radius("radius-1");
+      content: "";
     }
 
     &::after {
@@ -161,11 +222,19 @@ $field-icon-padding: 2.5rem;
     }
   }
 
-  @if $type == 'checkbox' {
+  @if $type == "checkbox" {
     label {
       &::before {
-        @include theme('background-color', 'color-tertiary--lighten-6', 'checkbox-background-color');
-        @include theme('border-color', 'color-tertiary--lighten-2', 'checkbox-border-color');
+        @include theme(
+          "background-color",
+          "color-tertiary--lighten-6",
+          "checkbox-background-color"
+        );
+        @include theme(
+          "border-color",
+          "color-tertiary--lighten-2",
+          "checkbox-border-color"
+        );
       }
 
       &::after {
@@ -177,24 +246,40 @@ $field-icon-padding: 2.5rem;
     }
   }
 
-  @if $type == 'radio' {
+  @if $type == "radio" {
     label {
       &::before {
-        @include theme('background-color', 'color-tertiary--lighten-6', 'radio-background-color');
-        @include theme('border-color', 'color-tertiary--lighten-2', 'radio-border-color');
+        @include theme(
+          "background-color",
+          "color-tertiary--lighten-6",
+          "radio-background-color"
+        );
+        @include theme(
+          "border-color",
+          "color-tertiary--lighten-2",
+          "radio-border-color"
+        );
 
-        border-radius: border-radius('radius-4');
+        border-radius: border-radius("radius-4");
       }
 
       &::after {
-        @include theme('background-color', 'color-primary--lighten-1', 'radio-background-color');
-        @include theme('border-color', 'color-primary--lighten-1', 'radio-border-color');
+        @include theme(
+          "background-color",
+          "color-primary--lighten-1",
+          "radio-background-color"
+        );
+        @include theme(
+          "border-color",
+          "color-primary--lighten-1",
+          "radio-border-color"
+        );
 
         top: .3rem;
         left: .3rem;
         width: .4rem;
         height: .4rem;
-        border-radius: border-radius('radius-4');
+        border-radius: border-radius("radius-4");
         z-index: 999;
       }
     }
@@ -209,7 +294,7 @@ $field-icon-padding: 2.5rem;
     // Styling of the label.
     //
     + label {
-      @include theme('color', 'color-tertiary', 'label-color');
+      @include theme("color", "color-tertiary", "label-color");
 
       position: relative;
 
@@ -225,11 +310,11 @@ $field-icon-padding: 2.5rem;
     //
     [class*="cs--"] & {
       &.success + label::before {
-        border-color: color('green');
+        border-color: color("green");
       }
 
       &.error + label::before {
-        border-color: color('red');
+        border-color: color("red");
       }
     }
 
@@ -249,12 +334,20 @@ $field-icon-padding: 2.5rem;
         cursor: not-allowed;
 
         &::before {
-          border-color: color('dark-gray', -4) !important; // sass-lint:disable-line no-important
-          background: color('dark-gray', -4) !important; // sass-lint:disable-line no-important
+          border-color: color(
+            "dark-gray",
+            -4
+          ) !important; // sass-lint:disable-line no-important
+          background: color(
+            "dark-gray",
+            -4
+          ) !important; // sass-lint:disable-line no-important
         }
 
         &::after {
-          color: color('dark-gray') !important; // sass-lint:disable-line no-important
+          color: color(
+            "dark-gray"
+          ) !important; // sass-lint:disable-line no-important
         }
       }
     }
@@ -262,12 +355,12 @@ $field-icon-padding: 2.5rem;
     //
     // Checkbox specific styling.
     //
-    @if $type == 'checkbox' {
+    @if $type == "checkbox" {
       // Checked state.
       &:checked {
         // Show checkmark on checked.
         + label {
-          @include icon('checkmark', 'after');
+          @include icon("checkmark", "after");
 
           font-weight: 600;
 
@@ -278,12 +371,20 @@ $field-icon-padding: 2.5rem;
         }
 
         + label::before {
-          @include theme('background-color', 'color-primary--lighten-5', 'checkbox-background-color-checked');
-          @include theme('border-color', 'color-primary', 'checkbox-border-color-checked');
+          @include theme(
+            "background-color",
+            "color-primary--lighten-5",
+            "checkbox-background-color-checked"
+          );
+          @include theme(
+            "border-color",
+            "color-primary",
+            "checkbox-border-color-checked"
+          );
         }
 
         + label::after {
-          @include theme('color', 'color-primary', 'checkbox-checkmark-color');
+          @include theme("color", "color-primary", "checkbox-checkmark-color");
         }
       }
     }
@@ -291,7 +392,7 @@ $field-icon-padding: 2.5rem;
     //
     // Radio specific styling.
     //
-    @if $type == 'radio' {
+    @if $type == "radio" {
       // Checked state.
       &:checked {
         // Show checkmark on checked.
@@ -300,67 +401,23 @@ $field-icon-padding: 2.5rem;
         }
 
         + label::before {
-          @include theme('background-color', 'color-primary--lighten-5', 'radio-background-color-checked');
-          @include theme('border-color', 'color-primary', 'radio-border-color-checked');
+          @include theme(
+            "background-color",
+            "color-primary--lighten-5",
+            "radio-background-color-checked"
+          );
+          @include theme(
+            "border-color",
+            "color-primary",
+            "radio-border-color-checked"
+          );
         }
 
         + label::after {
-          @include theme('color', 'color-primary', 'radio-checkmark-color');
-          content: '';
+          @include theme("color", "color-primary", "radio-checkmark-color");
+          content: "";
         }
       }
     }
   }
 }
-
-.form-item {
-  margin-bottom: 1rem;
-
-  .form-label {
-    > label {
-      @at-root .no-optional .label-optional {
-        display: none;
-      }
-    }
-  }
-
-  .form-columns {
-    display: flex;
-    flex-wrap: wrap;
-
-    .form-item-column {
-      @include tablet {
-        width: calc(50% - #{$gutter-width});
-        margin-right: $gutter-width;
-      }
-
-      &:first-child {
-        @include tablet {
-          order: 2;
-          width: 50%;
-          margin-right: 0;
-        }
-      }
-
-      &:last-child {
-        @include tablet {
-          order: 1;
-        }
-      }
-
-      .no-style & {
-        // Make full width form.
-        width: 100%;
-      }
-    }
-  }
-
-  .field-description {
-    margin-bottom: .8rem;
-
-    .no-style & {
-      display: none;
-    }
-  }
-}
-

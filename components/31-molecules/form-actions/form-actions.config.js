@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-  title: 'Contact details',
-  status: 'alpha',
-  handle: 'contact-details',
+  title: 'Form actions',
+  status: 'beta',
+  handle: 'form-actions',
   preview: '@preview-description-list',
   collated: 'true',
   collator: function (markup, item) {
@@ -15,11 +15,8 @@ module.exports = {
       preview: '@preview'
     },
     {
-      name: 'inverted',
-      preview: '@preview',
-      context: {
-        modifier: 'contact-details-inverted'
-      }
+      name: 'editor',
+      preview: '@preview'
     }
   ]
 };

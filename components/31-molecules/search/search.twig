@@ -6,11 +6,12 @@
     "label_optional": label_optional
     } %}
   {% endif %}
-  {% include '@input-search' with {
+  {% include '@input' with {
+  'type': 'search',
   'placeholder': placeholder,
   'modifier': modifier_search,
-  'search_id': search_id,
-  'search_name': search_id,
+  'id': search_id,
+  'name': search_id,
   'required': true
   } %}
   {% include '@input-submit' with {

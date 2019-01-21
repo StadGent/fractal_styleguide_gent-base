@@ -9,10 +9,11 @@
           "for": "id_name",
           "label_optional": "Optional"
         } %}
-        {% include '@input-text'
+        {% include '@input'
           with {
-          "textfield_id": "id_name",
-          "textfield_name": "name"
+          "type": "text",
+          "id": "id_name",
+          "name": "name"
         } %}
       </div>
       <div class="form-item">
@@ -21,10 +22,11 @@
           "for": "id_category",
           "label_optional": "Optional"
         } %}
-        {% include '@input-text'
+        {% include '@input'
           with {
-          "textfield_id": "id_category",
-          "textfield_name": "category"
+          "type": "text",
+          "id": "id_category",
+          "name": "category"
         } %}
       </div>
       {% include '@checkbox-with-filter'
@@ -40,10 +42,11 @@
           "for": "id_type",
           "label_optional": "Optional"
         } %}
-        {% include '@input-text'
+        {% include '@input'
           with {
-          "textfield_id": "id_type",
-          "textfield_name": "type"
+          "type": "text",
+          "id": "id_type",
+          "name": "type"
         } %}
       </div>
       <button type="submit" class="button button-primary filter__submit">Show result</button>

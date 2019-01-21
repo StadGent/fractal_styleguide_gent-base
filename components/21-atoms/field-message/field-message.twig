@@ -1,5 +1,9 @@
 {% if field_message %}
-  <div class="field-message {{ modifier }}" role="alert">
+  <div class="field-message {{ modifier }}"
+    {% if id %}
+      id="{{ id }}"
+    {% endif %}>
     {{ field_message }}
+    {% include '@accolade' %}
   </div>
 {% endif %}
