@@ -44,7 +44,8 @@
     .content__second {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: stretch;
+
 
       > *:last-child {
         margin-bottom: 0;
@@ -63,8 +64,9 @@
 
     // @TODO: Move to other layer.
     .grid-3 & {
-      .content__bottom {
-        height: 100%;
+      .content__bottom, // Deprecated
+      .content__second {
+        flex-grow: 1;
       }
     }
   }

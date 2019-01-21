@@ -27,10 +27,11 @@
         'heading_text': 'Do you have suggestions or comments concerning this page?'
       } %}
 
-      {% include '@textarea' with {
+      {% include '@form-item' with {
+        input_component: "input-textarea",
         textarea_id: "textarea_id",
-        for: "textarea_id",
-        textarea_name: "textarea_name",
+        id: "textarea_id",
+        name: "textarea_name",
         label: 'Message'
       } %}
 
