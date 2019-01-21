@@ -8,7 +8,7 @@ module.exports = {
   preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
   context: {
     figure_figcaption: 'Figure caption comes here.',
@@ -22,6 +22,7 @@ module.exports = {
     },
     {
       name: 'hero',
+      preview: '@preview',
       context: {
         figure_image_src: 'https://via.placeholder.com/1600x400&text=4:1+(1600x400)',
         figure_ratio: '4:1',

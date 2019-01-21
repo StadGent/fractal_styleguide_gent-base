@@ -7,7 +7,7 @@ module.exports = {
   preview: '@preview-description-list-without-padding',
   collated: true,
   collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd style="max-width: 100%; padding: 0;">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 100%; padding: 0;">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
   default: 'contact-newsletter-social',
   variants: [
