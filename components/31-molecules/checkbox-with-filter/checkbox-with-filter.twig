@@ -1,0 +1,71 @@
+{% extends "_form-item--fieldset.template.twig" %}
+{% set modalContent %}
+  <h3>{{ label }}
+    {% if label_optional %}
+      <span class="label-optional">({{ label_optional }})</span>
+    {% endif %}
+  </h3>
+  <div class="checkbox-filter__selected"></div>
+  <div class="form-item">
+    <label for="checkboxes__filter_id_{{ modifier }}">Filter the list
+      below</label>
+    <div class="form-item checkbox-filter__filter__search-wrapper">
+      <input type="search" id="checkboxes__filter_id_{{ modifier }}"
+             class="checkbox-filter__filter">
+
+      <p aria-live="polite" aria-atomic="true"
+         class="checkbox-filter__result-wrapper">
+        <span class="checkbox-filter__result">#</span> filter(s) found
+      </p>
+    </div>
+  </div>
+
+  {% for category in options %}
+    <div class="checkbox-filter__checkboxes">
+      <h4 class="checkbox-filter__category">{{ category.title }}</h4>
+      {% include '@input' with {
+        type: 'checkbox',
+        id: category.value~"-"~modifier,
+        label: 'Show all',
+        value: category.value,
+        modifierWrapper: 'full-width'
+      } %}
+
+      {% for item in category.items %}
+        {% include '@input' with {
+          type: 'checkbox',
+          label: item.label_checkbox,
+          name: item.checkbox_name,
+          id: item.checkbox_id,
+          value: item.checkbox_value
+        } %}
+      {% endfor %}
+    </div>
+  {% endfor %}
+{% endset %}
+{% set modalActions %}
+  <button type="button"
+          class="button button-primary checkbox-filter__submit modal-close"
+          data-target="{{ 'modal' ~ modifier }}">Confirm selection
+  </button>
+{% endset %}
+{% block fieldset_class %}checkbox-filter{% endblock %}
+{% block options %}
+  {% include "@modal" with {
+    id: 'modal' ~ modifier,
+    classes: 'checkbox-filter__modal',
+    cancelClasses: 'checkbox-filter__close',
+    modifier: 'fixed-height',
+    content: modalContent,
+    actions: modalActions
+  } %}
+  <p class="checkbox-filter__count-wrapper hidden">
+    <strong><span class="checkbox-filter__count">0</span> {{ label_count }}
+      selected</strong>
+  </p>
+  <button type="button"
+          class="button button-secondary button-small checkbox-filter__open"
+          aria-controls="{{ 'modal' ~ modifier }}" aria-expanded="false">
+    Select ...
+  </button>
+{% endblock %}

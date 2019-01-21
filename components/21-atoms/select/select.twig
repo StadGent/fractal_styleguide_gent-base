@@ -1,0 +1,27 @@
+<select name="{{ name }}"
+        id="{{ id }}"
+        {% if modifier %}
+          class="{{ modifier }}"
+        {% endif  %}
+        {% if disabled %}
+          disabled="{{ disabled }}"
+        {% endif  %}
+        {% if multiple %}
+          multiple
+        {% endif  %}
+>
+  {% for option in options %}
+
+    {% if option.optgroup %}
+      <optgroup label="{{ option.label }}">
+        {% for opt in option.optgroupoptions %}
+          <option>{{ opt.label }}</option>
+        {% endfor %}
+      </optgroup>
+
+    {% else %}
+      <option>{{ option.label }}</option>
+    {% endif %}
+
+  {% endfor %}
+</select>

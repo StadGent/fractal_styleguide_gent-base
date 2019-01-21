@@ -21,87 +21,82 @@
 
     <fieldset>
       <legend>Contact details</legend>
-      {% include '@textfield' with {
+      {% include '@form-item' with {
         "label": "Name",
-        "for": "name_id",
-
+        "id": "name_id",
+        "input_component": "input",
+        "type": "text",
         "modifier": "error",
         "field_message": "Please fill in your name",
-
-        "textfield_id": "name_id",
-        "textfield_name": "name_name"
-      }%}
-      {% include '@textfield' with {
+        "name": "name_name"
+      } %}
+      {% include '@form-item' with {
         "label": "First name",
-        "for": "firstname_id",
-
+        "input_component": "input",
+        "type": "text",
         "modifier": "error",
         "field_message": "Please fill in your first name",
-
-        "textfield_id": "firstname_id",
-        "textfield_name": "firstname_name"
-      }%}
-      {% include '@email'
-      with {
+        "id": "firstname_id",
+        "name": "firstname_name"
+      } %}
+      {% include '@form-item'
+        with {
         "label": "E-mail address",
         "for": "email_id",
-
+        "input_component": "input",
+        "type": "email",
         "modifier": "error",
         "field_message": "Please fill in your email",
-
-        "email_id": "email_id",
-        "email_name": "email_name"
-      }
-      %}
-      {% include '@telephone-field'
-      with {
+        "id": "email_id",
+        "name": "email_name"
+      } %}
+      {% include '@form-item'
+        with {
         "label": "Phone number",
         "for": "tel_id",
-
+        "input_component": "input",
+        "type": "tel",
         "modifier": "error",
         "field_message": "Please fill in a valid telephone number",
-
-        "tel_id": "tel_id",
-        "tel_name": "tel_name"
-      }
-      %}
+        "id": "tel_id",
+        "name": "tel_name"
+      } %}
     </fieldset>
 
-    <fieldset>
-      <legend>Contact details</legend>
-      {% include '@radio'
+    {% include '@form-item--radio'
       with {
-        "label": "Date",
-        "options": [
-          {
-            "label_radio": "Wednesday 6 june 2018",
-            "radio_name": "radiogroup",
-            "radio_id": "radio-1"
-          },
-          {
-            "label_radio": "Thursday 7 june 2018",
-            "radio_name": "radiogroup",
-            "radio_id": "radio-2"
-          },
-          {
-            "label_radio": "Friday 8 june 2018",
-            "radio_name": "radiogroup",
-            "radio_id": "radio-3"
-          }
-        ],
-        "modifier": "error",
-        "field_message": "Please pick a date."
-      }
-      %}
-    </fieldset>
+      "input_component": "input",
+      "type": "radio",
+      "label": "Date",
+      "options": [
+        {
+          "label": "Wednesday 6 june 2018",
+          "name": "radiogroup",
+          "id": "radio-1"
+        },
+        {
+          "label": "Thursday 7 june 2018",
+          "name": "radiogroup",
+          "id": "radio-2"
+        },
+        {
+          "label": "Friday 8 june 2018",
+          "name": "radiogroup",
+          "id": "radio-3"
+        }
+      ],
+      "modifier": "error",
+      "field_message": "Please pick a date."
+    } %}
 
     <fieldset>
       <legend>Contact details</legend>
-      {% include '@textfield' with {
+      {% include '@form-item' with {
         "label": "Label textfield",
         "for": "textfield_id",
         "label_optional": "Optional",
-
+        "input_component": "input",
+        "type": "text",
         "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
         "field_error": "",
         "description": "Description textfield.",
@@ -109,50 +104,55 @@
         "modifier": "error",
         "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
 
-        "textfield_id": "textfield_id",
-        "textfield_name": "textfield_name"
-      }%}
-      {% include '@textfield' with {
+        "id": "textfield_id",
+        "name": "textfield_name"
+      } %}
+      {% include '@form-item' with {
         "label": "Label textfield",
         "for": "textfield_id--1",
-
-        "textfield_id": "textfield_id--1",
-        "textfield_name": "textfield_name--1"
-      }%}
+        "input_component": "input",
+        "type": "text",
+        "id": "textfield_id--1",
+        "name": "textfield_name--1"
+      } %}
 
       <fieldset>
         <legend>Nested fieldset</legend>
-        {% include '@textfield' with {
+        {% include '@form-item' with {
           "label": "Label textfield",
           "for": "textfield_id--2",
-
-          "textfield_id": "textfield_id--2",
-          "textfield_name": "textfield_name--2"
-        }%}
-        {% include '@textfield' with {
+          "input_component": "input",
+          "type": "text",
+          "id": "textfield_id--2",
+          "name": "textfield_name--2"
+        } %}
+        {% include '@form-item' with {
           "label": "Label textfield",
           "for": "textfield_id--3",
-
-          "textfield_id": "textfield_id--3",
-          "textfield_name": "textfield_name--3"
-        }%}
+          "input_component": "input",
+          "type": "text",
+          "id": "textfield_id--3",
+          "name": "textfield_name--3"
+        } %}
       </fieldset>
     </fieldset>
 
-    {% include '@checkbox'
-    with {
-      "label": "",
+    {% include '@form-item--checkbox'
+      with {
+      "input_component": "input",
+      "type": "checkbox",
+      "label": "Newsletter",
+      "id": "newsletter_id",
       "options": [
         {
-          "label_checkbox": "Subscribe to the newsletter",
-          "checkbox_name": "checkboxgroup",
-          "checkbox_id": "checkbox-1"
-        },
+          "label": "Subscribe to the newsletter",
+          "name": "checkboxgroup",
+          "id": "checkbox-1"
+        }
       ],
-        "modifier": "error",
-        "field_message": "Lorem ipsum dolor set"
-    }
-    %}
+      "modifier": "error",
+      "field_message": "Lorem ipsum dolor set"
+    } %}
 
     {% include '@form-actions' %}
 

@@ -11,10 +11,12 @@ module.exports = {
   },
   variants: [
     {
-      name: 'default'
+      name: 'default',
+      preview: '@preview'
     },
     {
       name: 'inverted',
+      preview: '@preview',
       context: {
         modifier: 'contact-details-inverted'
       }

@@ -1,0 +1,33 @@
+{% set hasWrapper = type == 'radio' or type == 'checkbox' %}
+{% if hasWrapper %}
+<div class="{{ type ~ (modifierWrapper ? ' ' ~ modifierWrapper : '') }}">
+  {% endif %}
+  <input type="{{ type }}" id="{{ id }}"
+    {% if ariaDescribedBy %}
+      aria-describedby="{{ ariaDescribedBy }}"
+    {% endif %}
+    {% if name %}
+      name="{{ name }}"
+    {% endif %}
+    {% if value %}
+      value="{{ value }}"
+    {% endif %}
+    {% if type %}
+      class="{{ type ~ (modifier ? ' ' ~ modifier : '') }}"
+    {% endif %}
+    {% if disabled %}
+      disabled="disabled"
+    {% endif %}
+    {% if placeholder %}
+      placeholder="{{ placeholder }}"
+    {% endif %}
+    {% if required %}
+      required="{{ required }}"
+    {% endif %}
+  />
+  {% if hasWrapper %}
+  <label for="{{ id }}">{{ label }}</label>
+</div>
+{% endif %}
+
+
