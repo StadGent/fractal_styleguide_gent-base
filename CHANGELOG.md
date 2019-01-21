@@ -8,6 +8,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * DTGB-665: Refactored pages to only show layouts. This shouldn't affect any
   custom projects.
+  
+### Updated 
+
+* DTGB-676: Exposed modal open and close functions.
 
 ## [3.0.0-alpha11]
 
@@ -28,6 +32,14 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-604: removed font-size increase on +1920px screens
 * DTGB-660: Added gentinfo logo to the gentinfo-island.
 
+### Changed
+
+* DTGB-648: Refactored form fields
+
+### Removed
+
+* DTGB-648: Field description (replaced by variant of field message)
+
 ## [3.0.0-alpha.10]
 
 ### Added
@@ -41,15 +53,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Changed
 * DTGB-641: Refactored filter template to display filter button next to result instead of above it
-* DTGB-648: Refactored form fields
 
 ### Fixed
 
 * DTGB-635: Fixed missing scroll lock on mobile menu.
-
-### Removed
-
-* DTGB-635: Field description (replaced by variant of field message)
 
 ## [3.0.0-alpha.9]
 
