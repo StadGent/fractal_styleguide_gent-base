@@ -12,6 +12,12 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated 
 
 * DTGB-676: Exposed modal open and close functions.
+* DTGB-675: Refactoring of some components:
+
+    * Fonts description changed.
+    * Label component hidden in style guide.
+    * Field message component hidden in style guide.
+    * Logo component hidden in style guide.
 
 ## [3.0.0-alpha11]
 
