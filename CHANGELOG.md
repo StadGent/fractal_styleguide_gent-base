@@ -9,6 +9,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-665: Refactored pages to only show layouts. This shouldn't affect any
   custom projects.
   
+### Added
+
+* DTGB-673: Added Gent Info component.
+  
 ### Updated 
 
 * DTGB-676: Exposed modal open and close functions.
