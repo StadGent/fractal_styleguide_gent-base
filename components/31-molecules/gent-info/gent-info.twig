@@ -1,0 +1,25 @@
+<div class="gent-info">
+  <div class="gent-info-content">
+    <h2 class="visually-hidden">Gent info</h2>
+
+    {% include '@image' with {
+      src: '/styleguide/img/svg/gentinfo-logo.svg'|path,
+      modifier: 'gent-info-logo',
+      alt_text: 'Gent info'
+    } %}
+
+    {% for text in paragraphs %}
+      {% include '@paragraph' with {
+        text: text
+      %}
+    {% endfor %}
+
+    {% include '@list' with {
+      'type': 'icon-list',
+      'modifier': 'inline',
+      'icon_items': listItems
+    }
+    %}
+
+  </div>
+</div>
