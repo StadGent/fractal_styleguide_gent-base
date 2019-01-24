@@ -5,9 +5,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  box-shadow: $box-shadow-primary color('dark-gray', -4, true);
   visibility: hidden;
-  z-index: 997;
+  z-index: 999;
   overflow-y: auto;
 
   // states
@@ -15,7 +14,7 @@
     visibility: visible;
 
     @include tablet {
-      .modal-overlay {
+      + .modal-overlay {
         display: block;
       }
     }
@@ -31,7 +30,7 @@
     width: 100%;
     min-height: 100%;
     background-color: color('white');
-    z-index: 999;
+    box-shadow: $box-shadow-primary color('dark-gray', -4, true);
 
     @include tablet {
       right: 0;
@@ -49,7 +48,8 @@
       height: 100%;
 
       @include tablet {
-        height: 80vh;
+        height: auto;
+        max-height: 80vh;
       }
 
       > .modal-content {
@@ -108,7 +108,7 @@
   /// Actions
   ///
   &-actions {
-    @include theme('border-color', 'color-primary--lighten-4', 'checkbox-with-filter-action-border-bottom');
+    @include theme('border-color', 'color-primary--lighten-4', 'modal-action-border-bottom');
 
     display: flex;
     flex-shrink: 0;
@@ -126,7 +126,7 @@
   ///
   /// Overlay
   ///
-  &-overlay {
+  + .modal-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -139,7 +139,7 @@
     &,
     &:hover,
     &:focus {
-      @include theme('background-color', 'color-primary--darken-3', 'checkbox-with-filter-overlay-background-color');
+      @include theme('background-color', 'color-primary--darken-3', 'modal-overlay-background-color');
     }
   }
 }

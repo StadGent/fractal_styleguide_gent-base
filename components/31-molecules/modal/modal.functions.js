@@ -149,7 +149,8 @@
       if (trigger) {
         trigger.setAttribute('aria-expanded', 'true');
       }
-      modal.focus();
+
+      tabTrap.home();
     };
 
     /**
