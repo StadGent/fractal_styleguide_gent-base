@@ -243,6 +243,6 @@
 
     init();
 
-    return {close: handleClose(), open: open()};
+    return {close: handleClose, open: open};
   };
 });
