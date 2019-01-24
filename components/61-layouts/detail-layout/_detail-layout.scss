@@ -98,6 +98,10 @@
       @include month-widget-desktop;
     }
   }
+
+  > .full-width {
+    @include full-width;
+  }
 }
 
 $bulb-image-width: 6rem;

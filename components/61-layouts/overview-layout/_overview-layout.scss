@@ -23,6 +23,7 @@
     font-size: .9rem;
   }
 
+  > .full-width,
   > .gent-info {
     @include full-width;
   }
