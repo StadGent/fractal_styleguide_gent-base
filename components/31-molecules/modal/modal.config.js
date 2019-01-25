@@ -37,12 +37,12 @@ module.exports = {
   variants: [
     {
       name: 'default',
-      preview: '@preview-modal'
+      preview: '@preview'
     },
     {
       name: 'fixed-height',
       label: 'Fixed Height',
-      preview: '@preview-modal',
+      preview: '@preview',
       context: {
         id: 'modal-fixed',
         modifier: 'fixed-height',
