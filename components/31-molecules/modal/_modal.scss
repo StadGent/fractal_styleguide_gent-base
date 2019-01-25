@@ -40,10 +40,10 @@
     flex-direction: column;
     width: 100%;
     min-height: 100%;
+    margin: 0 auto;
     background-clip: content-box;
     background-color: color('white');
     z-index: 999;
-    margin: 0 auto;
     filter: drop-shadow(0 2px 8px #{color('dark-gray', -4, true)});
 
     @include tablet {
