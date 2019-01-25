@@ -69,7 +69,7 @@
      * Initialise the component.
      */
     const init = () => {
-      triggers = document.querySelectorAll(`[aria-controls="${modal.id}"]`);
+      triggers = document.querySelectorAll(`[aria-controls="${modal.id}"], [href="#${modal.id}"]`);
 
       if (!options.changeHash && triggers.length === 0) {
         return;
@@ -80,7 +80,10 @@
 
       let _open = e => {
         activeTrigger = e.currentTarget;
-        open();
+
+        if (activeTrigger.hasAttribute('aria-controls')) {
+          open();
+        }
       };
 
       for (let i = triggers.length; i--;) {

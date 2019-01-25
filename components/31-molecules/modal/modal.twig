@@ -3,7 +3,8 @@
     class="modal{{ modifier ? ' modal--' ~ modifier }}{{ classes ? ' ' ~ classes }}"
     role="dialog"
     aria-modal="true"
-    aria-labelledby="{{ id }}-title">
+    aria-labelledby="{{ id }}-title"
+    tabindex="-1">
 
   <div class="modal-inner">
     <div class="modal-header">
