@@ -120,12 +120,12 @@
 ///   The exception value for the themified property.
 ///   This is the exception optionally used in subthemes.
 ///
-@mixin theme($property: null, $default: null, $exception: null) {
+@mixin theme($property: null, $default: null, $exception: null, $extra-values: null) {
   @each $theme, $colors in $themes {
     // Apply the default section as default color scheme if there is no section
     // defined in the DOM.
     .cs--#{$theme} & {
-      #{$property}: set-themified-property($colors, $default, $exception);
+      #{$property}: set-themified-property($colors, $default, $exception) #{$extra-values};
     }
   }
 }
