@@ -56,7 +56,7 @@
     }
 
     let triggers = [];
-    let trigger;
+    let activeTrigger;
     let hash;
 
     /**
@@ -78,10 +78,14 @@
       modal.setAttribute('tabindex', '-1');
       modal.setAttribute('aria-hidden', 'true');
 
+      let _open = e => {
+        activeTrigger = e.currentTarget;
+        open();
+      };
+
       for (let i = triggers.length; i--;) {
-        trigger = triggers[i];
-        trigger.setAttribute('aria-expanded', 'false');
-        trigger.addEventListener('click', ()=>{ open(); });
+        triggers[i].setAttribute('aria-expanded', 'false');
+        triggers[i].addEventListener('click', _open);
       }
 
       /**
@@ -146,8 +150,8 @@
       modal.setAttribute('aria-hidden', 'false');
       scrollLockParent();
       document.addEventListener('keydown', handleKeyboardInput);
-      if (trigger) {
-        trigger.setAttribute('aria-expanded', 'true');
+      if (activeTrigger) {
+        activeTrigger.setAttribute('aria-expanded', 'true');
       }
 
       tabTrap.home();
@@ -161,9 +165,9 @@
       modal.setAttribute('aria-hidden', 'true');
       scrollLockParent(true);
       document.removeEventListener('keydown', handleKeyboardInput);
-      if (trigger) {
-        trigger.setAttribute('aria-expanded', 'false');
-        trigger.focus();
+      if (activeTrigger) {
+        activeTrigger.setAttribute('aria-expanded', 'false');
+        activeTrigger.focus();
       }
     };
 

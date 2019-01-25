@@ -6,7 +6,7 @@
   width: 100vw;
   height: 100vh;
   visibility: hidden;
-  z-index: 999;
+  z-index: 997;
   overflow-y: auto;
 
   // states
@@ -14,7 +14,7 @@
     visibility: visible;
 
     @include tablet {
-      + .modal-overlay {
+      .modal-overlay {
         display: block;
       }
     }
@@ -31,6 +31,7 @@
     min-height: 100%;
     background-color: color('white');
     box-shadow: $box-shadow-primary color('dark-gray', -4, true);
+    z-index: 999;
 
     @include tablet {
       right: 0;
@@ -126,7 +127,7 @@
   ///
   /// Overlay
   ///
-  + .modal-overlay {
+  .modal-overlay {
     display: none;
     position: fixed;
     top: 0;
