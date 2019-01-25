@@ -25,7 +25,12 @@
     > .modal-inner {
       max-height: 100%;
 
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: 100%; // IE fix
+      }
+
       > .modal-content {
+        flex-grow: 1;
         overflow-y: auto;
       }
     }
