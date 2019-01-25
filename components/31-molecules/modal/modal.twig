@@ -13,7 +13,7 @@
       </button>
     </div>
     <div class="modal-content">
-      <h2 id="{{ id }}-title">{{ title }}</h2>
+      <{{ title_heading_level|default('h3') }} id="{{ id }}-title">{{ title }}</{{ title_heading_level|default('h3') }}>
       {{ content }}
     </div>
     {% if actions %}
