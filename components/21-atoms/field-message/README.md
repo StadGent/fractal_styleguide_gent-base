@@ -1,11 +1,38 @@
 # Field message
 
-## General
+## When to use this component
 
-* A field message is used in the context of a form.
-* A field message can only be used to provide feedback on fields or fieldsets.
-* A field message is not visible on the first page view as it provides
- feedback on the user input.
+A field message is used in the context of a form to provide help or feedback on fields or fieldsets.
+
+## When not to use this component
+
+A field message should not be used outside the context of a form.
+
+## How it works
+
+There are three types of field messages:
+
+1. Normal field message
+2. Error field message
+3. Success field message
+
+### Normal field message
+
+A normal field message is used to provide help on a field or fieldset. The text in the field message helps the user to fill in the field or fieldset in the right way by providing extra information on how the field or fieldset should be filled in. It can also be used to tell to user *why* certain information is asked in the field or fieldset.
+
+A normal field message is always visible from the first page view of the form.
+
+### Error field message
+
+An error field message is used to provide feedback on a field or fieldset. It informs the user that there was an error in filling in the field or fieldset. The text in the error field message tells to the user what is wrong and how to fix it.
+
+As it provides feedback on user input, an error field message is **not** visible on the first page view of the form. It is only visible during or after filling in the field or fieldset or when triggered by form validation.
+
+### Success field message
+
+A success field message is used to provide feedback on a field or fieldset. If informs the user that the field or fieldset is correctly filled in.
+
+As it provides feedback on user input, a success field message is **not** visible on the first page view of the form. It is only visible during or after filling in the field or fieldset or when triggered by form validation.
 
 ## Web accessibility
 
