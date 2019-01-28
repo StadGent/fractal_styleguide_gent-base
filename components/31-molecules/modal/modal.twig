@@ -1,4 +1,11 @@
-<section id="{{ id }}" class="modal{{ modifier ? ' modal--' ~ modifier }}{{ classes ? ' ' ~ classes }}" tabindex="-1">
+<div
+    id="{{ id }}"
+    class="modal{{ modifier ? ' modal--' ~ modifier }}{{ classes ? ' ' ~ classes }}"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="{{ id }}-title"
+    tabindex="-1">
+
   <div class="modal-inner">
     <div class="modal-header">
       <button type="button" class="button close icon-cross modal-close{{ cancelClasses ? ' ' ~ cancelClasses }}" data-target="{{ id }}">
@@ -6,6 +13,7 @@
       </button>
     </div>
     <div class="modal-content">
+      <{{ title_heading_level|default('h3') }} id="{{ id }}-title">{{ title }}</{{ title_heading_level|default('h3') }}>
       {{ content }}
     </div>
     {% if actions %}
@@ -14,5 +22,6 @@
       </div>
     {% endif %}
   </div>
-  <div class="modal-overlay modal-close{{ cancelClasses ? ' ' ~ cancelClasses }}" data-target="{{ id }}"></div>
-</section>
+
+  <div class="modal-overlay modal-close{{ cancelClasses ? ' ' ~ cancelClasses }}" data-target="{{ id }}" tabindex="-1"></div>
+</div>

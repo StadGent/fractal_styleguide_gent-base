@@ -6,8 +6,9 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
-* DTGB-665: Refactored pages to only show layouts. This shouldn't affect any
-  custom projects.
+### Added
+
+* DTGB-621: Modal component in molecules tree (i.e. this component isn't hidden anymore).
   
 ### Added
 
@@ -16,6 +17,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated 
 
 * DTGB-676: Exposed modal open and close functions.
+* DTGB-665: Refactored pages to only show layouts. This shouldn't affect any
+  custom projects.
+* DTGB-621: Cross-browser behavior of the modal component.
+* DTGB-621: Focus management of the modal component.
 
 ## [3.0.0-alpha11]
 
