@@ -8,14 +8,7 @@ A button is used to trigger an action.
 
 Do not use a button to trigger navigation. In this case, use a <a href="{{path './link.html'}}">link</a>.
 
-## How it works
-
-
-
 ## Web accessibility
 
-* Button elements trigger an action and always look like buttons.
-* Link elements trigger navigation and look like links.
-* If links receive a button style, the distinction between button elements
-  is conveyed visually.
-* State changes are not indicated by color alone.
+* A button should always look like a button.
+* State changes cannot be indicated by color alone.
