@@ -19,8 +19,8 @@ Headings create structure. They provide a quick way to scan the main sections of
 
 There a few style variants for headings:
 
-* **Overview titles:** Style variant that can be used above an overview, mostly as the page title. This variant is always styled as a heading 1 (h1).
-* **Collection titles:** Style variant that can be used above a collection of teasers or tiles. This variant is always styled as a heading 2 (h2)
+* **Overview title:** Style variant that can be used above an overview, mostly as the page title. This variant is always styled as a heading 1 (h1).
+* **Collection title:** Style variant that can be used above a collection of teasers or tiles. This variant is always styled as a heading 2 (h2)
 
 Simply add the title class on any heading element (according SEO guidelines) to
 apply this style. It isn't required to use these classes on the default heading
