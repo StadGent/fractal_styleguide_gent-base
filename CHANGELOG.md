@@ -21,6 +21,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   custom projects.
 * DTGB-621: Cross-browser behavior of the modal component.
 * DTGB-621: Focus management of the modal component.
+* DTGB-659: Changed tablet breakpoint from `769px` to `768px`.
 
 ## [3.0.0-alpha11]
 
