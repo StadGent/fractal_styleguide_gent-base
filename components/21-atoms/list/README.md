@@ -1,8 +1,16 @@
-# Lists
+# List
 
-Lists organize information. Lists are meant to behave in a certain way:
+## When to use this component
 
-* Use an ordered list when you need to display text in some ranking or
-  hierarchy.
-* Use unordered lists to display information with no specific order.
-* A list must always consist of two or more items; never a single item.
+A list is an organized set of items that convey information. A list must always consist of two or more items.
+
+## When to not use this component
+
+A list cannot be used for a single item.
+
+## How it works
+
+A list organizes information. There are two types of lists:
+
+* **Odered list**: To display information in some ranking or hierarchy.
+* **Unordered list**: To display information with no specific order.
