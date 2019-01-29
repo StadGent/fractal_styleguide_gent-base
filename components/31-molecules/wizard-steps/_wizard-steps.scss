@@ -97,7 +97,7 @@
         }
       }
 
-      &.completed {
+      &.completed:not(.active) {
         position: relative;
         min-height: 2rem;
         padding-left: 2.8rem;
