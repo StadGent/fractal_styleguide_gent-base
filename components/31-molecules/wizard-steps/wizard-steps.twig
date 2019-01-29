@@ -1,0 +1,24 @@
+<nav class="wizard-steps" aria-labelledby="wizard-steps-{{ steps.length }}">
+  <h2 id="wizard-steps-{{ steps.length }}" class="visually-hidden">Steps in this
+    wizard</h2>
+  {% spaceless %}
+    <ol>
+      {% for key, step in steps %}
+        {% set modifier %}
+          {% if key == active %}next
+          {% elseif key + 1 == active %}active
+          {% elseif key + 2 == active %}previous
+          {% endif %}
+        {% endset %}
+        <li class="{% if step.completed %}completed{% endif %}{{ modifier }}">
+          {% if step.url and (key + 1) != active %}
+            <a href="{{ step.url }}"><span>{{ step.text }}</span></a>
+          {% else %}
+            <span><span>{{ step.text }}</span></span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% endspaceless %}
+</nav>
+

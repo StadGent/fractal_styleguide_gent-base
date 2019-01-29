@@ -1,0 +1,128 @@
+.wizard-steps {
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    counter-reset: item;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      margin-bottom: .8rem;
+
+      &:not(:first-child):not(:last-child):not(.active):not(.previous):not(.next) {
+        // clip
+        @extend %visually-hidden;
+        // also hide from screenreaders
+        visibility: hidden;
+
+        @include tablet {
+          position: static;
+          width: auto;
+          height: auto;
+          margin: 0 0 .8rem;
+          clip: auto;
+          visibility: visible;
+        }
+      }
+
+      span > span,
+      a > span {
+        @extend %visually-hidden;
+
+        @include tablet {
+          position: static;
+          width: auto;
+          height: auto;
+          margin: auto;
+          clip: auto;
+        }
+      }
+
+      a {
+        padding: 0;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+
+          &::before {
+            @include theme('border-color', 'color-primary--darken-1', 'wizard-step--active-border-color');
+          }
+        }
+      }
+
+      a::before,
+      > span::before {
+        @include theme('border-color', 'color-primary--lighten-5', 'wizard-step--active-border-color');
+        @include theme('background-color', 'color-primary--lighten-5', 'wizard-step--active-border-color');
+        @include theme('color', 'color-tertiary', 'default-text-color');
+
+        display: inline-flex;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        margin-right: .8rem;
+        transition: .2s ease-in-out;
+        border: 2px solid;
+        border-radius: 1rem;
+        font-size: .8rem;
+        font-weight: 600;
+        content: counter(item);
+        counter-increment: item;
+      }
+
+      @include tablet {
+        &:not(:last-child)::after {
+          @include theme('border-color', 'color-primary--lighten-3', 'wizard-step--active-border-color');
+
+          display: inline-block;
+          width: .8rem;
+          margin: 0 .6rem;
+          border-bottom: 2px solid;
+          content: '';
+          vertical-align: middle;
+        }
+      }
+
+      &.active {
+        font-weight: 600;
+
+        > span::before {
+          @include theme('border-color', 'color-primary--darken-1', 'wizard-step--active-border-color');
+
+          background-color: transparent;
+        }
+      }
+
+      &.completed {
+        position: relative;
+        min-height: 2rem;
+        padding-left: 2.8rem;
+
+        a,
+        > span {
+          @include icon(checkmark, before);
+        }
+
+        a::before,
+        > span::before {
+          position: absolute;
+          left: 0;
+          border-color: color('green', -3);
+          background-color: color('green', -3);
+          font-size: 1.5rem;
+          line-height: 1.25;
+        }
+
+        a:hover,
+        a:focus {
+          &::before {
+            border-color: color('green', 1);
+          }
+        }
+      }
+    }
+  }
+}
