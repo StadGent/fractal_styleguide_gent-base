@@ -42,6 +42,22 @@
 
 ///
 /// Tablet breakpoint (see $bp-tablet defined in _vars.scss).
+/// This assumes a max-width as defined by the variable.
+///
+/// @since 3.0.0
+/// @group breakpoints
+/// @access public
+/// @author Bart Delrue
+/// @require $bp-tablet
+///
+@mixin tablet-and-below {
+  @include breakpoint(max-width $bp-tablet) {
+    @content;
+  }
+}
+
+///
+/// Tablet breakpoint (see $bp-tablet defined in _vars.scss).
 /// This assumes a min-width as defined by the variable.
 ///
 /// @since 3.0.0

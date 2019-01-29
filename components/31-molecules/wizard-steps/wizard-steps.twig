@@ -4,13 +4,7 @@
   {% spaceless %}
     <ol>
       {% for key, step in steps %}
-        {% set modifier %}
-          {% if key == active %}next
-          {% elseif key + 1 == active %}active
-          {% elseif key + 2 == active %}previous
-          {% endif %}
-        {% endset %}
-        <li class="{% if step.completed %}completed{% endif %}{{ modifier }}">
+        <li class="{% if step.completed %}completed{% endif %}{% if key + 1 == active %}active{% endif %}">
           {% if step.url and (key + 1) != active %}
             <a href="{{ step.url }}"><span>{{ step.text }}</span></a>
           {% else %}

@@ -11,32 +11,33 @@
       display: inline-block;
       margin-bottom: .8rem;
 
-      &:not(:first-child):not(:last-child):not(.active):not(.previous):not(.next) {
-        // clip
-        @extend %visually-hidden;
-        // also hide from screenreaders
-        visibility: hidden;
-
-        @include tablet {
-          position: static;
-          width: auto;
-          height: auto;
-          margin: 0 0 .8rem;
-          clip: auto;
-          visibility: visible;
+      &:not(:first-child):not(:last-child):not(.active) {
+        @include tablet-and-below {
+          // clip
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          padding: 0;
+          border: 0;
+          overflow: hidden;
+          // also hide from screenreaders
+          visibility: hidden;
+          clip: rect(0 0 0 0);
         }
       }
 
       span > span,
       a > span {
-        @extend %visually-hidden;
-
-        @include tablet {
-          position: static;
-          width: auto;
-          height: auto;
-          margin: auto;
-          clip: auto;
+        @include tablet-and-below {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          padding: 0;
+          border: 0;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
         }
       }
 
@@ -120,6 +121,29 @@
         a:focus {
           &::before {
             border-color: color('green', 1);
+          }
+        }
+      }
+
+      @include tablet-and-below {
+        &.active {
+          margin-bottom: 0;
+
+          &::before,
+          &::after {
+            @include theme('border-color', 'color-primary--darken-2', 'wizard-step-hellip-background-color');
+            @include theme('background-color', 'color-primary--darken-2', 'wizard-step-hellip-background-color');
+            @include theme('color', 'color-secondary', 'wizard-step-hellip-color');
+
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            margin-right: .8rem;
+            margin-bottom: .8rem;
+            border: 2px solid;
+            border-radius: 1rem;
+            text-align: center;
+            content: '\2026';
           }
         }
       }
