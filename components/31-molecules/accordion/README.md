@@ -29,29 +29,31 @@ There are two types of accordions:
 
 ### Single expandable item
 
+Accordions with one single expandable item are displayed with a chevron on the right-hand side.
 
+* When collapsed, the chevron points down, to indicate that it can be expanded.
+* When expanded, the chevron points up, to indicate that it can be collapsed.
+
+By default, the single expandable item is collapsed.
+
+The single expandable items has a label that tells what content is in the item. Do not start the label with a verb that describes the collapsing or expanding. This is not necessary because the item is already in an accordion. For example, if the item is a list of opening hours deze week, don't use a label "Show opening hours this week" but use "Opening hours this week" instead.
 
 ### Multiple expandable items
 
+Accordions with multiple expandable items are displayed in a list of items with labels with a plus or a minus icon on the left-hand side of each item.
 
+* When an item is collapsed, the plus icon is shown, to indicate that it can be expanded.
+* When an item is expanded, the minus icon is shown, to indicate that it can be collapsed.
 
-## Style
+By default, all the expandable items are collapsed. Multiple items can be expanded at the same time.
 
-* Single items receive a chevron on the right hand side.
-* Multiple expandable items receive a 'plus' or 'minus' sign on the left hand side.
+The expandable items each have a label that tells what content is in the item. Do not start the label with a verb that describes the collapsing or expanding. This is not necessary because the item is already in an accordion. For example, if an item is about transportation by train, don't use a label "Show transportation by train" but use "Transportation by train" instead.
 
 ## Markup
 
-* Multiple expandable items must always be contained in an unordered-
-  or description list.
-* The toggle must be of type button and preferably wrapped in an
-  element with (implicit) role header.
-* The toggle button has both aria-expanded to indicate it's current
-  state and aria-controls to indicate which element it controls.
-
-## Functionality
-
-* Multiple items can be expanded at the same time
+* Multiple expandable items must always be contained in an unordered- or description list.
+* The toggle must be of type button and preferably wrapped in an element with (implicit) role header.
+* The toggle button has both aria-expanded to indicate it's current state and aria-controls to indicate which element it controls.
 
 ## Javascript
 
