@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Added
 
 * DTGB-621: Modal component in molecules tree (i.e. this component isn't hidden anymore).
+* DTGB-677: Wizard steps.
   
 ### Added
 

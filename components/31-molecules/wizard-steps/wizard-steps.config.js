@@ -15,7 +15,7 @@ module.exports = {
       {text: 'fourth step with a long name', url: '#'},
       {text: 'inactive fifth step'},
       {text: 'inactive sixth step'},
-      {text: 'inactive seventh step'},
+      {text: 'inactive seventh step'}
     ],
     active: 3
   },
@@ -83,6 +83,6 @@ module.exports = {
         ],
         active: 6
       }
-    },
+    }
   ]
 };
