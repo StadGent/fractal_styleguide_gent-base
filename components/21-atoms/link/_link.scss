@@ -8,7 +8,7 @@ a {
   transition: background-color .1s ease-in-out;
   font-weight: 600;
   text-decoration: underline;
-  overflow-wrap: break-word;
+  word-wrap: break-word;
 
   &:focus,
   &:hover {
