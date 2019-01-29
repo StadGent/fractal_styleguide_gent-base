@@ -1,5 +1,40 @@
 # Accordion
 
+## When to use this component
+
+An accordion component is used to:
+
+* Show an overview of sections of multiple, related sections of content, that can be read independently from each other and which users typically are not interested to see all, but rather one or a few specific sections.
+* Make it possible for users to show or hide those section as needed.
+* Hide a simple piece or section of content that is only necessary for a minority of the users or in special cases (progressive disclosure principle).
+
+## When not to use this component
+
+* Do not use an accordion component to hide content that is essential to all users.
+* Do not use an accordion component when the content in the items contains more than one text paragraph or also needs other components than text paragraphs to convey the message. Only use accordion components for simple content.
+* In general, do not use an accordion component when it is not the best solution for the content.
+
+Alternatives to using an accordion component:
+
+* Reduce and simplify the content so that it can be placed as is on the page, without hiding it or the need for an accordion component.
+* Split the content accross multiple pages, especcialy if the amount of content is large (more than one text paragraph or if also other components than text paragraphs are needed to convey the message).
+* Keep the content as is on the page, separate the content by headings.
+* Use a list of links or a table of contents component to let users navigate quickly so specific sections of content.
+
+## How it works
+
+There are two types of accordions:
+* Single expandable item
+* Multiple expandable items
+
+### Single expandable item
+
+
+
+### Multiple expandable items
+
+
+
 ## Style
 
 * Single items receive a chevron on the right hand side.
