@@ -4,7 +4,7 @@
   {% spaceless %}
     <ol>
       {% for key, step in steps %}
-        <li class="{% if step.completed %}completed{% endif %}{% if key + 1 == active %}active{% endif %}">
+        <li class="{% if key + 1 < active %}completed{% endif %}{% if key + 1 == active %}active{% endif %}">
           {% if step.url and (key + 1) != active %}
             <a href="{{ step.url }}"><span>{{ step.text }}</span></a>
           {% else %}

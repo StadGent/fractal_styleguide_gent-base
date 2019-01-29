@@ -129,6 +129,11 @@
         &.active {
           margin-bottom: 0;
 
+          ::before,
+          ::after {
+            margin-bottom: .8rem;
+          }
+
           &::before,
           &::after {
             @include theme('border-color', 'color-primary--darken-2', 'wizard-step-hellip-background-color');
@@ -145,6 +150,13 @@
             text-align: center;
             content: '\2026';
           }
+        }
+
+        &:first-child::before,
+        &:nth-child(2)::before,
+        &:nth-last-child(2)::after,
+        &:last-child::after {
+          content: none;
         }
       }
     }
