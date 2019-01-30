@@ -8,11 +8,6 @@
   .sidebar {
     width: 100%;
 
-    //@include tablet {
-    //  width: span(4 of 12);
-    //  padding-right: gutter();
-    //}
-
     @include desktop {
       width: span(3 of 12);
       padding-right: gutter();
@@ -21,10 +16,6 @@
 
   .content {
     width: 100%;
-
-    //@include tablet {
-    //  width: span(8 wide of 12);
-    //}
 
     @include desktop {
       width: span(9 wide of 12);
