@@ -19,6 +19,7 @@ module.exports = {
     header_search_label: 'Search',
     header_search_placeholder: 'Search',
     header_search_text: 'Search',
+    breadcrumbs_id: 'system-breadcrumb',
     breadcrumbs_items: [
       '<a href=\'https://stad.gent\'>Stad.gent</a>',
       '<a href=\'#\'>Overview</a>',
@@ -43,7 +44,30 @@ module.exports = {
     {
       name: 'logged-in',
       context: {
-        mijn_gent_block_auth: 'true'
+        mijn_gent_block_auth: 'true',
+        header_search_id: 'header-search-authenticated',
+        breadcrumbs_id: 'system-breadcrumb-authenticated'
+      }
+    },
+    {
+      name: 'subsite-hero',
+      context: {
+        header_search_id: 'header-search-subsite',
+        breadcrumbs_id: 'system-breadcrumb-subsite'
+      }
+    },
+    {
+      name: 'hero',
+      context: {
+        header_search_id: 'header-search-hero',
+        breadcrumbs_id: 'system-breadcrumb-hero'
+      }
+    },
+    {
+      name: 'menu',
+      context: {
+        header_search_id: 'header-search-menu',
+        breadcrumbs_id: 'system-breadcrumb-menu'
       }
     }
   ]
