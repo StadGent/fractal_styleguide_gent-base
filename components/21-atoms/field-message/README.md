@@ -37,8 +37,8 @@ As it provides feedback on user input, a success field message is **not** visibl
 ## Web accessibility
 
 * A field must reference the field message by use of aria-describedby,
- this reference has priority over the field description whose information
-  has already been conveyed to the user.
+ this error and success messages have priority over the normal field message whose information
+  has already been conveyed to the user on first page view.
 * A field message must have the role=alert attribute so content updates
  are read automatically
  in case of ajax- or frontend validation.

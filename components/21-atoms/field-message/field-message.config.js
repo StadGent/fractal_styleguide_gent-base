@@ -17,10 +17,7 @@ module.exports = {
   variants: [
     {
       name: 'field-message',
-      preview: '@preview',
-      context: {
-        modifier: ''
-      }
+      preview: '@preview'
     },
     {
       name: 'field-message-error',
