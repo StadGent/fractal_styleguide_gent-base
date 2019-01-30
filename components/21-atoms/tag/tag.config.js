@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Tag',
   status: 'beta',
   handle: 'tag',
   preview: '@preview-description-list',

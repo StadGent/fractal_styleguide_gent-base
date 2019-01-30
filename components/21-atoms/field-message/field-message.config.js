@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Field message',
+  hidden: true,
   name: 'field-message',
   status: 'ready',
   default: 'field-message-error',

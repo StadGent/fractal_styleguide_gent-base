@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-  title: 'Label',
-  status: 'ready',
+  hidden: true,
+  status: 'beta',
   handle: 'label',
   context: {
     label: 'Label',

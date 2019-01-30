@@ -8,12 +8,11 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Added
 
-* DTGB-621: Modal component in molecules tree (i.e. this component isn't hidden anymore).
-  
-### Added
-
 * DTGB-673: Added Gent Info component.
-  
+* DTGB-621: Modal component in molecules tree (i.e. this component isn't hidden anymore).
+* DTGB-673: Added Gent Info component.
+* DTGB-678: Form-disclaimer.
+
 ### Updated 
 
 * DTGB-676: Exposed modal open and close functions.
@@ -22,6 +21,12 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-621: Cross-browser behavior of the modal component.
 * DTGB-621: Focus management of the modal component.
 * DTGB-659: Changed tablet breakpoint from `769px` to `768px`.
+* DTGB-675: Refactoring of some components:
+
+    * Fonts description changed.
+    * Label component hidden in style guide.
+    * Field message component hidden in style guide.
+    * Logo component hidden in style guide.
 
 ## [3.0.0-alpha11]
 
