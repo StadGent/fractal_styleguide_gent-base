@@ -11,7 +11,7 @@ An accordion component is used to:
 ## When not to use this component
 
 * Do not use an accordion component to hide content that is essential to all users.
-* Do not use an accordion component when the content in the items contains more than one text paragraph or also needs other components than text paragraphs to convey the message. Only use accordion components for simple content.
+* Do not use an accordion component when the amount of content in the items (when expanded) will make the page too long or too slow to load. Only use accordion components for simple content.
 * In general, do not use an accordion component when it is not the best solution for the content.
 
 Alternatives to using an accordion component:
