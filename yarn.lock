@@ -802,9 +802,9 @@ ajv@^6.5.5:
     uri-js "^4.2.2"
 
 allietabs@^1.0.2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/allietabs/-/allietabs-1.1.0.tgz#ef8cedfed7b5bb5f6f9bfe8e63077b85f3157f97"
-  integrity sha512-+Q0g4Z0KAynX1BBB+3Cw/cSHvFZxLAKGxANtqfk6MqIeDCJ5lLbIgnj18GrcqGROPQ+3xHFXhu5KkmczD3OUlw==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/allietabs/-/allietabs-1.2.1.tgz#ecc21ea74bfdbd8f31912fd8e7682d8c5217c376"
+  integrity sha512-IbbTZbGLScVLBKOLcK0ak4NfWzr5SzMdoC1b56HM3su7T1CgTOqx+4o+UbFNWntvGJiq50kOREagl3TavPNmRw==
 
 alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
   version "1.0.2"

@@ -1,0 +1,42 @@
+{# Variables #}
+{% if paragraphs is not defined %}
+  {% set paragraphs = [
+    'Gentinfo is h&eacute;t centrale aanspreekpunt voor informatie over het stadsbestuur en de stadsdiensten. Heeft u vragen, klachten, suggesties, meldingen,&hellip; over de Stad Gent? Neem dan contact op met Gentinfo.',
+    '<strong>Bereikbaar van maandag t.e.m. zaterdag van 8 tot 19 uur.</strong>'
+  ] %}
+{% endif %}
+
+{% if listItmes is not defined %}
+  {% set listItems = [
+    '<i aria-hidden="true" class="icon-phone"></i><a href="tel:092101010">09 210 10 10</a>',
+    '<i aria-hidden="true" class="icon-envelope"></i><a href="mailto:gentinfo@stad.gent">Gentinfo@stad.gent</a>',
+    '<i aria-hidden="true" class="icon-document"></i><a href="#!">Contactformulier</a>'
+  ] %}
+{% endif %}
+
+{# Component #}
+<div class="gent-info {{ modifier }}">
+  <div class="gent-info-content">
+    <h2 class="visually-hidden">Gent info</h2>
+
+    {% include '@image' with {
+      src: '/styleguide/img/svg/gentinfo-logo.svg'|path,
+      modifier: 'gent-info-logo',
+      alt_text: 'Gent info'
+    } %}
+
+    {% for text in paragraphs %}
+      {% include '@paragraph' with {
+        text: text
+      %}
+    {% endfor %}
+
+    {% include '@list' with {
+      'type': 'icon-list',
+      'modifier': 'inline',
+      'icon_items': listItems
+    }
+    %}
+
+  </div>
+</div>

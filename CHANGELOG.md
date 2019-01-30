@@ -6,12 +6,19 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
-* DTGB-665: Refactored pages to only show layouts. This shouldn't affect any
-  custom projects.
+### Added
+
+* DTGB-621: Modal component in molecules tree (i.e. this component isn't hidden anymore).
+* DTGB-673: Added Gent Info component.
   
 ### Updated 
 
 * DTGB-676: Exposed modal open and close functions.
+* DTGB-665: Refactored pages to only show layouts. This shouldn't affect any
+  custom projects.
+* DTGB-621: Cross-browser behavior of the modal component.
+* DTGB-621: Focus management of the modal component.
+* DTGB-659: Changed tablet breakpoint from `769px` to `768px`.
 * DTGB-675: Refactoring of some components:
 
     * Fonts description changed.

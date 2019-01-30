@@ -26,6 +26,10 @@
         "heading_text": "News and events"
       } %}
 
+      {% include '@gent-info' with {
+        modifier: 'full-width'
+      } %}
+
       <h2 class="visually-hidden">Overview</h2>
       <ul class="grid-3">
         {% for key, article in articles %}

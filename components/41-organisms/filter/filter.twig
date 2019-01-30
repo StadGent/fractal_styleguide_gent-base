@@ -1,6 +1,5 @@
 <div class="sidebar-layout filter">
   {% set modalContent %}
-    <h2>Filter the results</h2>
 
     <form action="#result">
       <div class="form-item">
@@ -55,6 +54,8 @@
   {% endset %}
   {% include "@modal" with {
     id: 'filter',
+    title: 'Filter the results',
+    title_heading_level: 'h2',
     classes: 'sidebar filter-section has-custom-binding',
     content: modalContent
   } %}
