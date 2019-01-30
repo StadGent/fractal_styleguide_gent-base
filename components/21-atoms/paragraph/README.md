@@ -17,10 +17,9 @@ Next to normal text, a paragraph can also contain:
 
 A paragraph has a certain behavior:
 
-* It should always have a width of 7/12 (except for mobile) based on the
-  container. This means the container needs to make sure that paragraphs can never be
-  bigger then 7/12 of itself.
-* On mobile, a paragraph is always full width.
-* On desktop, a paragraph always has a max-width of 40 rems.
-* A paragraph can **never** be centered.
-* A paragraph can **never** be justified.
+* On **desktop resolutions and tablet in landscape mode**, a paragraph should always have a width of 7/12 based on the container. This means the container needs to make sure that paragraphs can never be bigger then 7/12 of itself.
+* On **tablet in portrait mode and mobile resolutions**, a paragraph should always be the full width of the container.
+* The **text** in a paragraph:
+   * Should always have a max-width of 40 rems.
+   * Can **never** be centered.
+   * Can **never** be justified.
