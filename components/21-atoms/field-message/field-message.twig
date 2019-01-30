@@ -1,5 +1,8 @@
 {% if field_message %}
   <div class="field-message {{ modifier }}"
+    {% if modifier %}
+      role="alert"
+    {% endif %}
     {% if id %}
       id="{{ id }}"
     {% endif %}>

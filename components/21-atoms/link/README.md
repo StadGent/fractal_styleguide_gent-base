@@ -15,6 +15,4 @@ Both internal and external links open in the same window by default. **Exception
 ## Web accessibility
 
 * A link should always look like a link.
-* Links opening in a new window should be marked with the
-`<i class="icon-newtab"></i>` icon.
 * If a link receives a button style, the distinction between a button is conveyed visually.
