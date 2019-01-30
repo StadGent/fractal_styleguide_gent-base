@@ -10,7 +10,6 @@ module.exports = {
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
-  order: 12,
   context: {
     link: '#',
     text: 'Link text',

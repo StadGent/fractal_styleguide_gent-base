@@ -4,7 +4,6 @@ module.exports = {
   title: 'Tag',
   status: 'beta',
   handle: 'tag',
-  order: 11,
   preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {

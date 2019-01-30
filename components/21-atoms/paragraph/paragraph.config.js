@@ -3,7 +3,6 @@
 module.exports = {
   title: 'Paragraph',
   status: 'beta',
-  order: 1,
   handle: 'paragraph',
   preview: '@preview-description-list',
   collated: true,
