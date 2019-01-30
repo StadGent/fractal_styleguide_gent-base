@@ -8,12 +8,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Added
 
-* DTGB-621: Modal component in molecules tree (i.e. this component isn't hidden anymore).
-  
-### Added
-
 * DTGB-673: Added Gent Info component.
-  
+* DTGB-621: Modal component in molecules tree (i.e. this component isn't hidden anymore).
+* DTGB-678: Form-disclaimer.
+
 ### Updated 
 
 * DTGB-676: Exposed modal open and close functions.

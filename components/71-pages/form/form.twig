@@ -19,6 +19,11 @@
       'heading_text': 'Subscribe for the election show'
     } %}
 
+    {% include '@paragraph' with {
+      'text': 'All fields are required, unless they are marked as optional.',
+      'modifier': 'form-disclaimer'
+    } %}
+
     <fieldset>
       <legend>Contact details</legend>
       {% include '@form-item' with {
