@@ -1,14 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Crisis communication block',
   status: 'alpha',
-  default: 'default',
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 100%; padding: 0;">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
-  collated: true,
-  preview: '@preview-description-list',
   context: {
     title: 'This is a title',
     description: 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.'
@@ -16,7 +9,6 @@ module.exports = {
   variants: [
     {
       name: 'default',
-      preview: '@preview',
       context: {
         links: [
           '<a href="javascript:(void);">An external link where you can find more info</a>',
@@ -31,8 +23,7 @@ module.exports = {
       }
     },
     {
-      name: 'Without links',
-      preview: '@preview'
+      name: 'Without links'
     }
   ]
 };

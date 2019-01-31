@@ -424,5 +424,7 @@ $field-icon-padding: 2.5rem;
 
 .form-disclaimer {
   @include theme('color', 'color-tertiary--lighten-1', 'form-disclaimer-color');
+
+  margin: 1.2rem 0;
   font-size: .6rem;
 }

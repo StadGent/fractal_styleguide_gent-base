@@ -9,10 +9,12 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Added
 
 * DTGB-552: Spinner.
+* DTGB-680: Form-row.
 * DTGB-673: Added Gent Info component.
 * DTGB-621: Modal component in molecules tree (i.e. this component isn't hidden anymore).
 * DTGB-673: Added Gent Info component.
 * DTGB-678: Form-disclaimer.
+* DTGB-677: Wizard steps.
 
 ### Updated 
 
@@ -28,6 +30,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
     * Label component hidden in style guide.
     * Field message component hidden in style guide.
     * Logo component hidden in style guide.
+
+ ### Removed
+
+ * DTGB-677: Form steps   
 
 ## [3.0.0-alpha11]
 

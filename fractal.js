@@ -62,6 +62,14 @@ fractal.web.set('static.path', path.join(__dirname, 'public'));
 fractal.web.set('static.mount', '');
 fractal.web.set('builder.dest', __dirname + '/build');
 
+/*
+* Define collation defaults
+*/
+fractal.components.set('default.collated', true);
+fractal.components.set('default.collator', function (markup, item) {
+  return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+});
+
 const ghentTheme = mandelbrot({
   nav: ['search', 'components', 'docs'],
   scripts: [
