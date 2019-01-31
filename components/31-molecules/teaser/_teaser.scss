@@ -261,7 +261,7 @@
   .accolade-inverse.bottom-left {
     display:  block;
 
-    @include tablet {
+    @include phablet {
       display: none;
     }
   }
@@ -269,7 +269,7 @@
   .accolade-inverse.right-top {
     display:  none;
 
-    @include tablet {
+    @include phablet {
       display: block;
     }
   }
@@ -286,7 +286,7 @@
     order: 1;
     margin-bottom: gutter();
 
-    @include tablet {
+    @include phablet {
       flex-basis: span(2 of 9);
       margin-right: gutter();
       margin-bottom: 0;
@@ -297,7 +297,7 @@
   .content__second {
     order: 2;
 
-    @include tablet {
+    @include phablet {
       flex-basis: span(7 of 9);
     }
 

@@ -3,7 +3,7 @@
 module.exports = {
   name: 'File download',
   status: 'ready',
-  preview: '@preview',
+  preview: '@preview-description-list',
   default: 'default',
   collated: true,
   collator: function (markup, item) {
@@ -19,10 +19,12 @@ module.exports = {
   },
   variants: [
     {
-      name: 'default'
+      name: 'default',
+      preview: '@preview'
     },
     {
       name: 'button',
+      preview: '@preview',
       context: {
         modifier: 'button button-primary'
       }

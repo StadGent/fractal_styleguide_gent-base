@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Tag',
   status: 'beta',
   handle: 'tag',
   order: 11,
