@@ -24,6 +24,9 @@
     {% if required %}
       required="{{ required }}"
     {% endif %}
+    {% if invalid %}
+      aria-invalid="{{ invalid }}"
+    {% endif %}
   />
   {% if hasWrapper %}
   <label for="{{ id }}">{{ label }}</label>

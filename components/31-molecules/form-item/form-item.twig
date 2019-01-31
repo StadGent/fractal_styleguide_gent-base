@@ -21,7 +21,8 @@
       {% include '@'~input_component with {
         "id": id,
         "ariaDescribedBy": describedBy,
-        "type": type
+        "type": type,
+        "invalid": modifier == 'error'
       }%}
     </div>
     <div class="form-item-column">
