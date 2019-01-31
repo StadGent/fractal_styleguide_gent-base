@@ -2,10 +2,6 @@
 
 module.exports = {
   default: 'unordered-list',
-  collated: true,
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
     items: [
       'item 1',

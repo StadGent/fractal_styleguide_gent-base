@@ -2,10 +2,6 @@
 
 module.exports = {
   status: 'beta',
-  collated: true,
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
     name: 'select_name',
     id: 'select_id',

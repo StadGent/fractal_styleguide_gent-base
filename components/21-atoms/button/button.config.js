@@ -45,7 +45,6 @@ const reduceVersions = (type) => {
 
 module.exports = {
   default: 'primary-button-small',
-  collated: true,
   collator: function (markup, item) {
     let result = '';
     if (item.context.type !== previous) {

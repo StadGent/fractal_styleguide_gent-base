@@ -1,10 +1,6 @@
 'use strict';
 
 module.exports = {
-  collated: true,
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt><h2>${item.name}</h2></dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
     mijn_gent_block_items: [
       '<a href=\'javascript:(void);\'>Mijn profiel</a>',

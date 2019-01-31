@@ -2,10 +2,6 @@
 
 module.exports = {
   status: 'alpha',
-  collated: true,
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
     figure_figcaption: 'Figure caption comes here.',
     figure_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',

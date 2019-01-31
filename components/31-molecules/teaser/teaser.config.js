@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  collated: true,
   collator: function (markup, item) {
     if (item.handle === 'teaser--teaser--wide') {
       return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: calc(100% - 1.2rem); padding: 0;"><ul style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;

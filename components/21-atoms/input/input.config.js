@@ -30,10 +30,6 @@ const types = [
 module.exports = {
   status: 'beta',
   default: 'text',
-  collated: true,
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
     name: 'input_name',
     type: 'text',

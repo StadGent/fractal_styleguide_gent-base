@@ -2,7 +2,6 @@
 
 module.exports = {
   status: 'alpha',
-  collated: true,
   context: {
     total: 5555,
     active: 1

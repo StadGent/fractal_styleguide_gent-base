@@ -42,10 +42,6 @@ const data = {
 module.exports = {
   status: 'alpha',
   context: data,
-  collated: true,
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 100%">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   variants: [
     {
       name: 'no-map',
