@@ -14,7 +14,6 @@ const versions = [
 const createVariant = (type, version) => {
   return {
     name: `${type}-${version}`,
-    preview: '@preview',
     context: {
       text: version.charAt(0).toUpperCase() + version.slice(1),
       type: type,
@@ -45,13 +44,7 @@ const reduceVersions = (type) => {
 };
 
 module.exports = {
-  title: 'Button',
-  name: 'Button',
-  status: 'ready',
-  handle: 'button',
   default: 'primary-button-small',
-  preview: '@preview-description-list',
-  collated: 'true',
   collator: function (markup, item) {
     let result = '';
     if (item.context.type !== previous) {

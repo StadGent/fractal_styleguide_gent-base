@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  name: 'Subscribe',
   status: 'beta',
   hidden: true,
   context: {

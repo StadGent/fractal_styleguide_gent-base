@@ -3,6 +3,6 @@
 module.exports = {
   hidden: true,
   context: {
-    value: 'Submit'
+    text: 'Lorem ipsum dolor set ilir el.'
   }
 };

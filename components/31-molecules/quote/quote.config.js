@@ -1,8 +1,7 @@
 'use strict';
 
 module.exports = {
-  hidden: true,
   context: {
-    value: 'Submit'
+    text: 'This is a quote text.'
   }
 };

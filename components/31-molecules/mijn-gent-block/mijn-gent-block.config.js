@@ -1,10 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Mijn Gent block',
-  status: 'ready',
-  hidden: 'true',
-  handle: 'mijn-gent-block',
+  hidden: true,
   default: 'logged-in',
   context: {
     auth: 'false'
