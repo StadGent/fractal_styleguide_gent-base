@@ -8,7 +8,7 @@ All websites and all pages must include the header.
 
 The header is the first visible component on every page. The position of the header is fixed on the page.
 
-The header is shown and behaves in two different ways depending on the device's screen resolutions:
+Depending on the device's screen resolution, the header switches to one of the two following modes:
 
 * **Desktop header**: Desktop resolutions and tablet in landscape mode
 * **Mobile header**: Tablet in portrait mode and mobile resolutions
