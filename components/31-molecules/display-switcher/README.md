@@ -1,2 +1,2 @@
-# Display switcher
+# Display switcher 
 

@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  hidden: true,
   name: 'Logo',
   status: 'ready',
   default: 'default',

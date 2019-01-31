@@ -85,7 +85,7 @@
       &:first-child {
         order: 2;
 
-        @include tablet {
+        @include desktop {
           order: 1;
           width: span(4 of 12);
         }
@@ -100,12 +100,6 @@
           margin-bottom: 0;
         }
 
-        @include tablet {
-          order: 2;
-          width: span(8 of 12);
-          margin-bottom: 1.8rem;
-        }
-
         @include desktop {
           width: span(6 of 12);
         }
@@ -118,7 +112,7 @@
     margin-top: 2.2rem;
     margin-left: 1.2rem;
 
-    @include tablet {
+    @include desktop {
       margin-left: 0;
     }
   }
@@ -135,10 +129,6 @@
   .db-block-partnership {
     justify-content: center;
     width: 100%;
-
-    @include tablet {
-      justify-content: start;
-    }
   }
 
   ///
