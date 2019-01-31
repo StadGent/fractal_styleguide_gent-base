@@ -10,30 +10,20 @@ for (let i = 6; i--;) {
 }
 
 module.exports = {
-  title: 'Image gallery',
-  status: 'ready',
-  name: 'Image gallery',
   preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt>${item.label || item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
+  context: imageList[0],
   variants: [
     {
       name: 'multiple',
-      preview: '@preview',
       hidden: true
-    },
-    {
-      name: 'default',
-      label: 'Single',
-      preview: '@preview',
-      context: imageList[0]
     },
     {
       name: 'double',
       view: 'image-gallery--multiple',
-      preview: '@preview',
       context: {
         items: imageList.slice(-2)
       }
@@ -41,7 +31,6 @@ module.exports = {
     {
       name: 'triple',
       view: 'image-gallery--multiple',
-      preview: '@preview',
       context: {
         items: imageList.slice(-3)
       }
@@ -49,7 +38,6 @@ module.exports = {
     {
       name: 'quadruple',
       view: 'image-gallery--multiple',
-      preview: '@preview',
       context: {
         items: imageList.slice(-4)
       }
@@ -57,7 +45,6 @@ module.exports = {
     {
       name: 'quintuple',
       view: 'image-gallery--multiple',
-      preview: '@preview',
       context: {
         items: imageList.slice(-5)
       }
@@ -65,7 +52,6 @@ module.exports = {
     {
       name: 'quintuple et plus',
       view: 'image-gallery--multiple',
-      preview: '@preview',
       context: {
         items: imageList
       }
@@ -73,7 +59,6 @@ module.exports = {
     {
       name: 'default-alternative',
       label: 'Single (alternative)',
-      preview: '@preview',
       context: {
         src: imageList[0].src,
         caption: imageList[0].caption,
@@ -85,7 +70,6 @@ module.exports = {
       name: 'double-alternative',
       label: 'Double (alternative)',
       view: 'image-gallery--multiple',
-      preview: '@preview',
       context: {
         items: imageList.slice(-2),
         type: 'secondary'
@@ -95,7 +79,6 @@ module.exports = {
       name: 'triple-alternative',
       label: 'Triple (alternative)',
       view: 'image-gallery--multiple',
-      preview: '@preview',
       context: {
         items: imageList.slice(-3),
         type: 'secondary'
@@ -105,7 +88,6 @@ module.exports = {
       name: 'quadruple-alternative',
       label: 'Quadruple (alternative)',
       view: 'image-gallery--multiple',
-      preview: '@preview',
       context: {
         items: imageList.slice(-4),
         type: 'secondary'

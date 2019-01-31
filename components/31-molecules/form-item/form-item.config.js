@@ -1,11 +1,12 @@
 'use strict';
 
 module.exports = {
-  title: 'Form item',
   status: 'beta',
-  handle: 'form-item',
-  preview: '@preview',
-  collated: 'true',
+  preview: '@preview-description-list',
+  collated: true,
+  collator: function (markup, item) {
+    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+  },
   context: {
     label: 'input-text',
     id: 'input_id',

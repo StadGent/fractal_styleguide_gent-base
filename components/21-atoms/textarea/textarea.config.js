@@ -1,9 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Textarea',
   status: 'beta',
-  handle: 'input-textarea',
   preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
@@ -16,13 +14,7 @@ module.exports = {
   },
   variants: [
     {
-      name: 'default',
-      handle: 'input-textarea',
-      preview: '@preview'
-    },
-    {
       name: 'success',
-      preview: '@preview',
       context: {
         id: 'textarea_id--success',
         modifier: 'success'
@@ -30,7 +22,6 @@ module.exports = {
     },
     {
       name: 'error',
-      preview: '@preview',
       context: {
         id: 'textarea_id--error',
         modifier: 'error'
@@ -38,7 +29,6 @@ module.exports = {
     },
     {
       name: 'disabled',
-      preview: '@preview',
       context: {
         id: 'textarea_id--disabled',
         disabled: true

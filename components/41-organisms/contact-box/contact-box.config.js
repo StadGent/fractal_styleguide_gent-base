@@ -40,7 +40,6 @@ const data = {
 };
 
 module.exports = {
-  title: 'Contact box',
   status: 'alpha',
   context: data,
   preview: '@preview-description-list',
@@ -50,12 +49,6 @@ module.exports = {
   },
   variants: [
     {
-      preview: '@preview',
-      name: 'default'
-    },
-
-    {
-      preview: '@preview',
       name: 'no-map',
       context: Object.assign({}, data, {
         map: false
@@ -63,7 +56,6 @@ module.exports = {
     },
 
     {
-      preview: '@preview',
       name: 'contacts-only',
       context: Object.assign({}, data, {
         authorized_persons: [],
@@ -72,7 +64,6 @@ module.exports = {
     },
 
     {
-      preview: '@preview',
       name: 'compact',
       context: (function () {
         let dataCopy = Object.assign({}, data);

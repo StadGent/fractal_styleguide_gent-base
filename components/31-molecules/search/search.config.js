@@ -1,9 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Search',
   status: 'alpha',
-  handle: 'search',
   context: {
     label: 'What are you looking for?',
     for: 'header-search',

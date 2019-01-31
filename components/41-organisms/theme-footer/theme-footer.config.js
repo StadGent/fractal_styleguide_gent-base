@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports = {
-  name: 'Theme footer',
-  handle: 'theme-footer',
   status: 'beta',
   preview: '@preview-description-list-without-padding',
   collated: true,
@@ -13,7 +11,6 @@ module.exports = {
   variants: [
     {
       name: 'contact-newsletter-social',
-      preview: '@preview',
       context: {
         theme: 'Ghent mobility',
         contact: {
@@ -39,7 +36,6 @@ module.exports = {
     },
     {
       name: 'contact',
-      preview: '@preview',
       context: {
         theme: 'Ghent mobility',
         contact: {
@@ -61,7 +57,6 @@ module.exports = {
     },
     {
       name: 'newsletter',
-      preview: '@preview',
       context: {
         theme: 'Ghent mobility',
         newsletter: {
@@ -71,7 +66,6 @@ module.exports = {
     },
     {
       name: 'social',
-      preview: '@preview',
       context: {
         theme: 'Ghent mobility',
         social: {}
@@ -79,7 +73,6 @@ module.exports = {
     },
     {
       name: 'contact-newsletter',
-      preview: '@preview',
       context: {
         theme: 'Ghent mobility',
         contact: {
@@ -104,7 +97,6 @@ module.exports = {
     },
     {
       name: 'contact-social',
-      preview: '@preview',
       context: {
         theme: 'Ghent mobility',
         contact: {
@@ -127,7 +119,6 @@ module.exports = {
     },
     {
       name: 'newsletter-social',
-      preview: '@preview',
       context: {
         theme: 'Ghent mobility',
         newsletter: {

@@ -1,10 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Accordion',
-  name: 'Accordion',
-  status: 'ready',
-  collated: 'true',
+  collated: true,
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
@@ -12,8 +9,6 @@ module.exports = {
   variants: [
     {
       name: 'default',
-      label: 'Single',
-      preview: '@preview',
       context: {
         buttonText: 'single accordion',
         content: '<p>Single item accordions are indicated by a chevron.</p>' +
@@ -25,7 +20,6 @@ module.exports = {
     },
     {
       name: 'multiple',
-      preview: '@preview',
       context: {
         items: [
           {

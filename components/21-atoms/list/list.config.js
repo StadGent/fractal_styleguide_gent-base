@@ -1,9 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Lists',
-  status: 'ready',
-  handle: 'list',
   default: 'unordered-list',
   preview: '@preview-description-list',
   collated: true,

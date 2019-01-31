@@ -2,8 +2,6 @@
 
 module.exports = {
   hidden: true,
-  status: 'beta',
-  handle: 'label',
   context: {
     label: 'Label',
     for: 'form-item',

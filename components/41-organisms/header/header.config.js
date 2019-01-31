@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Header',
-  status: 'ready',
   preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {

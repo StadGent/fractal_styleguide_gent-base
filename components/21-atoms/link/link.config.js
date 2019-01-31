@@ -1,9 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Link',
-  name: 'Link',
-  handle: 'link',
   status: 'ready',
   preview: '@preview-description-list',
   collated: true,
@@ -16,11 +13,6 @@ module.exports = {
     aria_label: null
   },
   variants: [
-    {
-      name: 'default',
-      preview: '@preview',
-      handle: 'link'
-    },
     {
       name: 'external-link',
       preview: '@preview',
@@ -46,7 +38,6 @@ module.exports = {
     {
       name: 'standalone',
       preview: '@preview',
-      handle: 'link',
       context: {
         link: '#',
         modifier: 'standalone-link'
@@ -55,7 +46,6 @@ module.exports = {
     {
       name: 'standalone-external',
       preview: '@preview',
-      handle: 'link',
       context: {
         link: 'https://stad.gent',
         modifier: 'standalone-link'
@@ -64,7 +54,6 @@ module.exports = {
     {
       name: 'standalone-mailto',
       preview: '@preview',
-      handle: 'link',
       context: {
         link: 'mailto:info@stad.gent',
         modifier: 'standalone-link'
@@ -73,7 +62,6 @@ module.exports = {
     {
       name: 'standalone-download',
       preview: '@preview',
-      handle: 'link',
       context: {
         link: '#',
         modifier: 'standalone-link',
@@ -83,7 +71,6 @@ module.exports = {
     {
       name: 'standalone-back',
       preview: '@preview',
-      handle: 'link',
       context: {
         link: '#',
         text: 'back',

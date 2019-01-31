@@ -3,7 +3,7 @@
 module.exports = {
   status: 'beta',
   preview: '@preview-description-list',
-  collated: 'true',
+  collated: true,
   collator: function (markup, item) {
     return `<!-- Start: @${item.name} -->
             <dt>${item.name}</dt>
@@ -36,13 +36,8 @@ module.exports = {
   },
   variants: [
     {
-      name: 'default',
-      preview: '@preview'
-    },
-    {
       name: 'fixed-height',
       label: 'Fixed Height',
-      preview: '@preview',
       context: {
         id: 'modal-fixed',
         modifier: 'fixed-height',

@@ -1,10 +1,8 @@
 'use strict';
 
 module.exports = {
-  title: 'Form steps',
   status: 'alpha',
-  hidden: 'hidden',
-  handle: 'form-steps',
+  hidden: true,
   context: {
     step1_title: 'Step 1 title',
     step2_title: 'Step 2 title',

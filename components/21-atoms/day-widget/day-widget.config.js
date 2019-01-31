@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  name: 'Day Widget',
   status: 'alpha',
   preview: '@preview-description-list',
   collated: true,

@@ -47,10 +47,8 @@ const generateTeasers = (uid)=>{
 
 
 module.exports = {
-  title: 'Filter',
   status: 'alpha',
   preview: '@preview-without-padding',
-  name: 'Filter',
   context: {
     checkboxes: generateCheckboxes('checkbox-with-filter'),
     results: generateTeasers('search teasers')

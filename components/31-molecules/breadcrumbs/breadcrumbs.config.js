@@ -1,9 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Breadcrumbs',
   status: 'alpha',
-  handle: 'breadcrumbs',
   preview: '@preview-without-padding',
   context: {
     items: [

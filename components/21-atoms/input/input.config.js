@@ -29,10 +29,7 @@ const types = [
 ];
 
 module.exports = {
-  title: 'Input',
-  name: 'Input',
   status: 'beta',
-  handle: 'input',
   default: 'text',
   preview: '@preview-description-list',
   collated: true,

@@ -1,10 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Figure',
-  handle: 'figure',
   status: 'alpha',
-  default: 'default',
   preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
@@ -18,11 +15,7 @@ module.exports = {
   },
   variants: [
     {
-      name: 'default'
-    },
-    {
       name: 'hero',
-      preview: '@preview',
       context: {
         figure_image_src: 'https://via.placeholder.com/1600x400&text=4:1+(1600x400)',
         figure_ratio: '4:1',

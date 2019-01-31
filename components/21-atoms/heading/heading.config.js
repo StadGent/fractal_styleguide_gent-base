@@ -1,9 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Headings',
-  status: 'alpha',
-  name: 'heading',
   collated: true,
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 100%">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;

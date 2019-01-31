@@ -83,7 +83,6 @@ function getIconVariants() {
     let icon = icons[i];
     let variant = {
       name: icon,
-      preview: '@preview',
       context: {
         icon: icon
       }
@@ -95,7 +94,6 @@ function getIconVariants() {
 }
 
 module.exports = {
-  title: 'Icon',
   status: 'ready',
   collated: true,
   collator: function (markup, item) {
