@@ -39,9 +39,9 @@ module.exports = {
     {
       name: 'textarea',
       context: {
-        id: 'input-textarea',
-        label: 'input-textarea',
-        input_component: 'input-textarea'
+        id: 'textarea',
+        label: 'textarea',
+        input_component: 'textarea'
       }
     },
     {
@@ -92,9 +92,9 @@ module.exports = {
     {
       name: 'select',
       context: {
-        id: 'input-select',
+        id: 'select',
         label: 'select',
-        input_component: 'input-select',
+        input_component: 'select',
         options: [
           {
             label: 'Option 1'
@@ -120,9 +120,9 @@ module.exports = {
     {
       name: 'multiselect',
       context: {
-        id: 'input-multiselect',
+        id: 'multiselect',
         label: 'multiselect',
-        input_component: 'input-select',
+        input_component: 'select',
         multiple: true,
         options: [
           {
