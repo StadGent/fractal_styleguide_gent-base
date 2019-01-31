@@ -1,15 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Lists',
-  status: 'ready',
-  handle: 'list',
   default: 'unordered-list',
-  preview: '@preview-description-list',
-  collated: true,
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
     items: [
       'item 1',
@@ -32,7 +24,6 @@ module.exports = {
   variants: [
     {
       name: 'unordered-list',
-      preview: '@preview',
       context: {
         type: 'unordered'
       }
@@ -40,7 +31,6 @@ module.exports = {
     {
       name: 'Ordered list',
       handle: 'ordered-list',
-      preview: '@preview',
       context: {
         type: 'ordered'
       }
@@ -48,7 +38,6 @@ module.exports = {
     {
       name: 'Inline list',
       handle: 'inline-list',
-      preview: '@preview',
       context: {
         type: 'inline'
       }
@@ -56,7 +45,6 @@ module.exports = {
     {
       name: 'List with links',
       handle: 'links-list',
-      preview: '@preview',
       context: {
         type: 'links',
         items: [
@@ -68,7 +56,6 @@ module.exports = {
     {
       name: 'List with checkmarks',
       handle: 'list-with-checkmarks',
-      preview: '@preview',
       context: {
         type: 'checkmark-list'
       }
@@ -76,7 +63,6 @@ module.exports = {
     {
       name: 'List with small checkmarks',
       handle: 'list-with-small-checkmarks',
-      preview: '@preview',
       context: {
         type: 'checkmark-list-small'
       }
@@ -84,7 +70,6 @@ module.exports = {
     {
       name: 'List with icons',
       handle: 'list-with-icons',
-      preview: '@preview',
       context: {
         type: 'icon-list'
       }
@@ -92,7 +77,6 @@ module.exports = {
     {
       name: 'List with icons inline',
       handle: 'list-with-icons-inline',
-      preview: '@preview',
       context: {
         type: 'icon-list',
         modifier: 'inline',
@@ -106,7 +90,6 @@ module.exports = {
     {
       name: 'Definition list',
       handle: 'definition-list',
-      preview: '@preview',
       context: {
         type: 'definition'
       }
@@ -114,7 +97,6 @@ module.exports = {
     {
       name: 'Dash-separated list',
       handle: 'dash-separated-list',
-      preview: '@preview',
       context: {
         type: 'dash-separated-list',
         items: [

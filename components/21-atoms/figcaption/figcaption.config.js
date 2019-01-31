@@ -3,6 +3,6 @@
 module.exports = {
   hidden: true,
   context: {
-    value: 'Submit'
+    figcaption: 'Figcaption comes here'
   }
 };

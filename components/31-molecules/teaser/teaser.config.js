@@ -1,12 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Teaser',
-  status: 'ready',
-  name: 'teaser',
-  default: 'teaser',
-  preview: '@preview-description-list',
-  collated: true,
   collator: function (markup, item) {
     if (item.handle === 'teaser--teaser--wide') {
       return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: calc(100% - 1.2rem); padding: 0;"><ul style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
@@ -20,37 +14,30 @@ module.exports = {
     }
   },
   context: {
-    image_ratio: '8:5'
+    image_ratio: '8:5',
+    paragraph_text: 'This is an example teaser. Other teasers are also possible but with fewer content for example. Have a look at teaser--example for instance.',
+    title: 'Teaser title text comes here.',
+    published_date: 'Gepost op Zaterdag 7 januari 2019',
+    link_text: 'read more',
+    link: '#',
+    image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+    image_alt_text: 'alt text',
+    tag: 'Optional tag',
+    tag2: 'Optional tag 2',
+    event_date: {
+      text_1: 'From the 7th',
+      datetime_1: '2019-01-07',
+      text_2: 'untill the 13th of January 2019',
+      datetime_2: '2019-01-13'
+    },
+    label_text: 'Optional label',
+    telephone: '0123456789',
+    opening_hours_service: '2690'
   },
   variants: [
     {
-      name: 'teaser',
-      context: {
-        preview: '@preview',
-        paragraph_text: 'This is an example teaser. Other teasers are also possible but with fewer content for example. Have a look at teaser--example for instance.',
-        title: 'Teaser title text comes here.',
-        published_date: 'Gepost op Zaterdag 7 januari 2019',
-        link_text: 'read more',
-        link: '#',
-        image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        image_alt_text: 'alt text',
-        tag: 'Optional tag',
-        tag2: 'Optional tag 2',
-        event_date: {
-          text_1: 'From the 7th',
-          datetime_1: '2019-01-07',
-          text_2: 'untill the 13th of January 2019',
-          datetime_2: '2019-01-13'
-        },
-        label_text: 'Optional label',
-        telephone: '0123456789',
-        opening_hours_service: '2690'
-      }
-    },
-    {
       name: 'teaser--underlined',
       context: {
-        preview: '@preview',
         modifier: 'teaser--underlined',
         paragraph_text: 'This is another example teaser. Other teasers are also possible but with more or fewer content for example.',
         title: 'Teasers can also be underlined',
@@ -64,7 +51,6 @@ module.exports = {
     {
       name: 'teaser--inverted',
       context: {
-        preview: '@preview',
         modifier: 'teaser--inverted',
         paragraph_text: 'This is an example teaser but on a background. These kind of teasers need some padding on their content otherwise the content would visually stick to the sides.',
         title: 'Teaser with inverted styling',
@@ -77,7 +63,6 @@ module.exports = {
     {
       name: 'teaser--wide',
       context: {
-        preview: '@preview',
         image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         image_alt_text: 'alt text',
         type: 'teaser--wide',

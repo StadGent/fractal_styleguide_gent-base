@@ -1,15 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Figure',
-  handle: 'figure',
   status: 'alpha',
-  default: 'default',
-  preview: '@preview-description-list',
-  collated: true,
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
     figure_figcaption: 'Figure caption comes here.',
     figure_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
@@ -18,11 +10,7 @@ module.exports = {
   },
   variants: [
     {
-      name: 'default'
-    },
-    {
       name: 'hero',
-      preview: '@preview',
       context: {
         figure_image_src: 'https://via.placeholder.com/1600x400&text=4:1+(1600x400)',
         figure_ratio: '4:1',

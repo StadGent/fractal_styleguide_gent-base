@@ -33,7 +33,6 @@ const generateTeasers = (uid)=>{
 };
 
 module.exports = {
-  title: 'Filter page',
   status: 'alpha',
   preview: '@preview-without-padding',
   context: {
