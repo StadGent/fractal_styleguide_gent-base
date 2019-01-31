@@ -6,7 +6,7 @@
   div {
     @include spot-image('spinner', 7rem);
 
-    text-indent: -200%;
+    text-indent: -500%;
     animation: spin 2s cubic-bezier(.75, .25, .25, .75) infinite;
   }
 }
