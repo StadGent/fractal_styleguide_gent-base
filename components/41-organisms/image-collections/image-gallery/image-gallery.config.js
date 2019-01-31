@@ -10,9 +10,6 @@ for (let i = 6; i--;) {
 }
 
 module.exports = {
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.label || item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: imageList[0],
   variants: [
     {
