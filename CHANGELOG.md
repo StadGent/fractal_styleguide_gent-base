@@ -29,6 +29,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
     * Field message component hidden in style guide.
     * Logo component hidden in style guide.
 
+ ### Removed
+
+ * DTGB-677: Form steps   
+
 ## [3.0.0-alpha11]
 
 ### Added
