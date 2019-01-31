@@ -1,0 +1,18 @@
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    @include spot-image('spinner', 7rem);
+
+    text-indent: -200%;
+    animation: spin 2s cubic-bezier(.75, .25, .25, .75) infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
