@@ -99,7 +99,6 @@ module.exports = {
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt>.icon-${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
-  preview: '@preview-description-list',
   default: icons[0],
   variants: getIconVariants()
 };

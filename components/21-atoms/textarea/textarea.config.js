@@ -2,15 +2,13 @@
 
 module.exports = {
   status: 'beta',
-  preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
   context: {
     id: 'textarea_id',
-    name: 'textarea_name',
-    preview: '@preview'
+    name: 'textarea_name'
   },
   variants: [
     {

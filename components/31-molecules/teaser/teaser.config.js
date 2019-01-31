@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
     if (item.handle === 'teaser--teaser--wide') {

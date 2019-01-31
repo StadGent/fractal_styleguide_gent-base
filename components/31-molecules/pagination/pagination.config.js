@@ -2,7 +2,6 @@
 
 module.exports = {
   status: 'alpha',
-  preview: '@preview-description-list',
   collated: true,
   context: {
     total: 5555,

@@ -45,7 +45,6 @@ const reduceVersions = (type) => {
 
 module.exports = {
   default: 'primary-button-small',
-  preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
     let result = '';

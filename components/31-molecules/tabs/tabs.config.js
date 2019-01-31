@@ -34,11 +34,10 @@ module.exports = {
       }
     ]
   },
-  preview: '@preview-description-list',
   variants: [
     {
       name: 'default',
-      label: 'Dark',
+      label: 'Dark'
     },
     {
       name: 'Light',

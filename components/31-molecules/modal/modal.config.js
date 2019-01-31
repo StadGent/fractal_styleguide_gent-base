@@ -2,7 +2,6 @@
 
 module.exports = {
   status: 'beta',
-  preview: '@preview-description-list',
   collated: true,
   collator: function (markup, item) {
     return `<!-- Start: @${item.name} -->

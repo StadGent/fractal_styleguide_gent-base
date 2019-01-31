@@ -5,7 +5,6 @@ module.exports = {
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
-  preview: '@preview-description-list',
   variants: [
     {
       name: 'default',
