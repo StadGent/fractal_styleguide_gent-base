@@ -2,11 +2,6 @@
 
 module.exports = {
   status: 'alpha',
-  preview: '@preview-description-list',
-  collated: 'true',
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
     steps: [
       {text: 'first step', url: '#'},
