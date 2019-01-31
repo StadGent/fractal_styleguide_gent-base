@@ -10,7 +10,6 @@ module.exports = {
   variants: [
     {
       name: 'heading-1',
-      preview: '@preview',
       context: {
         heading_text: 'Heading 1',
         type: 'h1'
@@ -18,7 +17,6 @@ module.exports = {
     },
     {
       name: 'heading-2',
-      preview: '@preview',
       context: {
         heading_text: 'Heading 2',
         type: 'h2'
@@ -26,7 +24,6 @@ module.exports = {
     },
     {
       name: 'heading-3',
-      preview: '@preview',
       context: {
         heading_text: 'Heading 3',
         type: 'h3'
@@ -34,7 +31,6 @@ module.exports = {
     },
     {
       name: 'heading-4',
-      preview: '@preview',
       context: {
         heading_text: 'Heading 4',
         type: 'h4'
@@ -42,7 +38,6 @@ module.exports = {
     },
     {
       name: 'overview-title',
-      preview: '@preview',
       context: {
         heading: 'h1',
         heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
@@ -51,7 +46,6 @@ module.exports = {
     },
     {
       name: 'collection-title',
-      preview: '@preview',
       context: {
         heading: 'h2',
         heading_text: 'Collection title',

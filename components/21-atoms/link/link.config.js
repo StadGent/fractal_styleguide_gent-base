@@ -15,14 +15,12 @@ module.exports = {
   variants: [
     {
       name: 'external-link',
-      preview: '@preview',
       context: {
         link: 'https://stad.gent'
       }
     },
     {
       name: 'download-link',
-      preview: '@preview',
       context: {
         link: '#',
         download: true
@@ -30,14 +28,12 @@ module.exports = {
     },
     {
       name: 'mailto-link',
-      preview: '@preview',
       context: {
         link: 'mailto:info@stad.gent'
       }
     },
     {
       name: 'standalone',
-      preview: '@preview',
       context: {
         link: '#',
         modifier: 'standalone-link'
@@ -45,7 +41,6 @@ module.exports = {
     },
     {
       name: 'standalone-external',
-      preview: '@preview',
       context: {
         link: 'https://stad.gent',
         modifier: 'standalone-link'
@@ -53,7 +48,6 @@ module.exports = {
     },
     {
       name: 'standalone-mailto',
-      preview: '@preview',
       context: {
         link: 'mailto:info@stad.gent',
         modifier: 'standalone-link'
@@ -61,7 +55,6 @@ module.exports = {
     },
     {
       name: 'standalone-download',
-      preview: '@preview',
       context: {
         link: '#',
         modifier: 'standalone-link',
@@ -70,7 +63,6 @@ module.exports = {
     },
     {
       name: 'standalone-back',
-      preview: '@preview',
       context: {
         link: '#',
         text: 'back',
@@ -79,7 +71,6 @@ module.exports = {
     },
     {
       name: 'button',
-      preview: '@preview',
       context: {
         link: '#',
         modifier: 'button button-primary'
@@ -87,7 +78,6 @@ module.exports = {
     },
     {
       name: 'button mailto',
-      preview: '@preview',
       context: {
         link: 'mailto:info@stad.gent',
         modifier: 'button button-primary'
@@ -95,7 +85,6 @@ module.exports = {
     },
     {
       name: 'button download',
-      preview: '@preview',
       context: {
         link: '#',
         modifier: 'button button-primary',
@@ -104,7 +93,6 @@ module.exports = {
     },
     {
       name: 'button external',
-      preview: '@preview',
       context: {
         link: 'https://stad.gent',
         modifier: 'button button-primary'
@@ -112,7 +100,6 @@ module.exports = {
     },
     {
       name: 'button block',
-      preview: '@preview',
       context: {
         link: '#',
         modifier: 'button button-primary button-block'
@@ -120,7 +107,6 @@ module.exports = {
     },
     {
       name: 'button block mailto',
-      preview: '@preview',
       context: {
         link: 'mailto:info@stad.gent',
         modifier: 'button button-primary button-block'
@@ -128,7 +114,6 @@ module.exports = {
     },
     {
       name: 'button block download',
-      preview: '@preview',
       context: {
         link: '#',
         modifier: 'button button-primary button-block',
@@ -137,7 +122,6 @@ module.exports = {
     },
     {
       name: 'button block custom icon',
-      preview: '@preview',
       context: {
         link: '#',
         modifier: 'button button-primary button-block icon-favicon'

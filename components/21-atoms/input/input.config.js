@@ -4,7 +4,6 @@ function makeVariants(types, modifier, disabled) {
   return types.map(function (type) {
     return {
       name: `${type}${modifier ? '--' + modifier : ''}${disabled ? '--disabled-' + disabled : ''}`,
-      preview: '@preview',
       context: {
         type: type,
         label: `input type ${type}`,
@@ -45,7 +44,6 @@ module.exports = {
     ...makeVariants(types),
     {
       name: 'search',
-      preview: '@preview',
       context: {
         type: 'search',
         id: 'search',

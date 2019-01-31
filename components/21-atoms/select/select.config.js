@@ -35,7 +35,6 @@ module.exports = {
   variants: [
     {
       name: 'success',
-      preview: '@preview',
       context: {
         id: 'select_id--success',
         modifier: 'success'

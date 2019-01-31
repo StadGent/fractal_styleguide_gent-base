@@ -12,14 +12,12 @@ module.exports = {
   variants: [
     {
       name: 'field-message-error',
-      preview: '@preview',
       context: {
         modifier: 'error'
       }
     },
     {
       name: 'field-message-success',
-      preview: '@preview',
       context: {
         modifier: 'success'
       }
