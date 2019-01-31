@@ -5,8 +5,7 @@
 {% if field_message %}
   {% set describedBy = id ~ "-message" %}
 {% endif %}
-
-<div class="form-item {{ modifier }}">
+<div class="form-item {{ modifier ? ' ' ~ modifier : '' }}{{ stacked ? ' stacked' : '' }}">
   {% include '@label' with {
     "label": label,
     "for": id,
