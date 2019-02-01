@@ -22,7 +22,7 @@ The behavior is as follows:
 1. When the users clicks the button, the modal is opened.
 2. In the modal, the list of checkboxes is shown.
 3. The user can select on or more checkboxes in the modal.
-4. T o make finding and selecting the right checkboxes easier, the user can filter the list of checkboxes to narrow it down.
+4. To make finding and selecting the right checkboxes easier, the user can filter the list of checkboxes to narrow it down.
 5. When ready, the user can click the "Confirm selection" button, and the selected checkboxes will be the new state.
 6. Closing the modal without confirmation restores the previous state.
 
