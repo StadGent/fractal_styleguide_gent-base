@@ -1,9 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Table of contents',
-  status: 'ready',
-  handle: 'table-of-contents',
   context: {
     list: [
       '<a href="#" class="active">Anchor link 1</a>',

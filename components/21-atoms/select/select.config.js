@@ -1,14 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Input Select',
   status: 'beta',
-  handle: 'input-select',
-  preview: '@preview-description-list',
-  collated: true,
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
     name: 'select_name',
     id: 'select_id',
@@ -36,13 +29,7 @@ module.exports = {
   },
   variants: [
     {
-      name: 'default',
-      preview: '@preview',
-      handle: 'input-text'
-    },
-    {
       name: 'success',
-      preview: '@preview',
       context: {
         id: 'select_id--success',
         modifier: 'success'
@@ -50,7 +37,6 @@ module.exports = {
     },
     {
       name: 'error',
-      preview: '@preview',
       context: {
         id: 'select_id--error',
         modifier: 'error'
@@ -58,7 +44,6 @@ module.exports = {
     },
     {
       name: 'disabled',
-      preview: '@preview',
       context: {
         id: 'select_id--disabled',
         disabled: true
@@ -66,7 +51,6 @@ module.exports = {
     },
     {
       name: 'multiple--default',
-      preview: '@preview',
       context: {
         id: 'select_id--multiple',
         multiple: true
@@ -74,7 +58,6 @@ module.exports = {
     },
     {
       name: 'multiple--success',
-      preview: '@preview',
       context: {
         id: 'select_id--multiple--success',
         modifier: 'success',
@@ -83,7 +66,6 @@ module.exports = {
     },
     {
       name: 'multiple--error',
-      preview: '@preview',
       context: {
         id: 'select_id--multiple--error',
         modifier: 'error',
@@ -92,7 +74,6 @@ module.exports = {
     },
     {
       name: 'multiple--disabled',
-      preview: '@preview',
       context: {
         id: 'select_id--multiple--disabled',
         disabled: true,

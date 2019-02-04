@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Document box',
   status: 'alpha',
   context: {
     unique_id: '1',

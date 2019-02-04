@@ -98,7 +98,7 @@ header.header {
       height: 2.4rem;
       border-radius: border-radius('radius-1');
       background: svg-as-background('search', color('dark-gray'), 32, 32) no-repeat left .4rem center;
-      text-indent: 200%;
+      text-indent: -9999px;
       overflow: hidden;
 
       @include tablet {

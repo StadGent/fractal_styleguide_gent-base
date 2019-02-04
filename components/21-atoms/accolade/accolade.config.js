@@ -1,11 +1,8 @@
 'use strict';
 
 module.exports = {
-  title: 'Accolade',
-  hidden: 'hidden',
-  status: 'ready',
-  handle: 'accolade',
+  hidden: true,
   context: {
-    position: 'bottomm-center'
+    position: 'bottom-center'
   }
 };

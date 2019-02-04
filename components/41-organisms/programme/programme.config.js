@@ -1,10 +1,8 @@
 'use strict';
 
 module.exports = {
-  title: 'Programme',
   status: 'alpha',
   preview: '@preview-without-padding',
-  name: 'Programme',
   context: {
     slots: [
       {
