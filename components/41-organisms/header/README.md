@@ -62,7 +62,9 @@ For the top part of the mobile header, the following conditions apply:
 
 3. When the website has main navigation, the menu button is always shown in the header. The menu button opens the mobile menu with the main navigation.
 
-4. When the website has main navigation and also Mijn Gent and/or a language switch, Mijn Gent and/or the language switch are intergrated in the menu. The menu button is always shown in the header. The menu button opens the mobile menu with the main navigation and Mijn Gent and/or the language switch.
+4. When the website has main navigation and also Mijn Gent and/or a language switch, Mijn Gent and/or the language switch are integrated in the menu. The menu button is always shown in the header. The menu button opens the mobile menu with the main navigation and Mijn Gent and/or the language switch. In other words: whenever the website has main navigation, the menu button is used and Mijn Gent and/or the language switch (if applicable) are integrated in the mobile menu.
+
+5. When the websites no main navigation, but has a search function *and* Mijn Gent *and* a language switch, the menu button is used and the Mijn Gent and the language switch are integrated in the menu. The search button is always shown in the header.
 
 Taking the above conditions into account, only the following combinations of elements are possible in the top part of the mobile header:
 
