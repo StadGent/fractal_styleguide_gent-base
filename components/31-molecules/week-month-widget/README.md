@@ -6,7 +6,7 @@ Use the opening hours component to show opening hours for a certain location for
 
 ## When not use this component
 
-When the location has multiple ways of being open, for instance, free entrance without appointment versus appointment only, use the <a href="{{path './opening-hours-accordion.html'}}">Opening hours accordion</a> component instead.
+When the location has multiple ways of being open, for instance, free entrance without appointment versus appointment only, use the <a href="{{path './opening-hours-accordion.html'}}">opening hours accordion</a> component instead.
 
 ## How it works
 
@@ -21,3 +21,7 @@ The opening hours for this week are shown as a list with the next 7 days startin
 The opening hours for this month are shown as a calendar view that shows the current month. By default, the current month is shown but the user can click back and forth to  previous or coming months.
 
 For each day of the month, it is visually indicated if the location is open or closed. When clicking a day of the month, the day is selected, and the opening hours for that day are shown. When the location is closed on a certain day, this is clearly indicated using the label "Closed".
+
+## Usage within the style guide
+
+The opening hours component is used in the <a href="{{path './opening-hours-accordion.html'}}">opening hours accordion</a> component.
