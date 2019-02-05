@@ -1,4 +1,4 @@
-# Open Today
+# Open today
 
 ## When to use this component
 
