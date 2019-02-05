@@ -37,7 +37,7 @@ module.exports = {
       name: 'with-actions',
       context: {
         id: 'modal-actions',
-        actions: '<button type="button" class="button button-primary modal-close" data-target="modal-fixed">Understood!</button>'
+        actions: '<button type="button" class="button button-primary modal-close" data-target="modal-actions">Understood!</button>'
       }
     },
     {
