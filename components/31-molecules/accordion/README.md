@@ -6,7 +6,7 @@ An accordion component is used to:
 
 * Show an overview of sections of multiple, related sections of content, that can be read independently from each other and which users typically are not interested to see all, but rather one or a few specific sections.
 * Make it possible for users to show or hide those section as needed.
-* Hide a simple piece or section of content that is only necessary for a minority of the users or in special cases (progressive disclosure principle).
+* Hide a simple piece or section of content that is advanced or that is only necessary for a minority of users (progressive disclosure principle).
 
 ## When not to use this component
 
