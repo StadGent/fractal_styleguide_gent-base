@@ -34,8 +34,14 @@ module.exports = {
   },
   variants: [
     {
+      name: 'with-actions',
+      context: {
+        id: 'modal-actions',
+        actions: '<button type="button" class="button button-primary modal-close" data-target="modal-fixed">Understood!</button>'
+      }
+    },
+    {
       name: 'fixed-height',
-      label: 'Fixed Height',
       context: {
         id: 'modal-fixed',
         modifier: 'fixed-height',
