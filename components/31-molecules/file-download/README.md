@@ -6,7 +6,7 @@ Use the file download component to link to a document as a *standalone* link, in
 
 ## When not to use this component
 
-Do not use the file download component to link to a web page (internal or external link), to an e-mail address (mailto link) or to link to a document inside a text. In these case, use a normal <a href="{{path './button.html'}}">link</a>.
+Do not use the file download component to link to a web page (internal or external link), to an e-mail address (mailto link) or to link to a document inside a text. In these case, use a normal <a href="{{path './link.html'}}">link</a>.
 
 Do not use the file download component to trigger an action (other than downloading a file). In this case, use a <a href="{{path './button.html'}}">button</a>.
 
