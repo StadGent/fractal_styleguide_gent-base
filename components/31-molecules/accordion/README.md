@@ -16,7 +16,7 @@ An accordion component is used to:
 Alternatives to using an accordion component:
 
 * Reduce and simplify the content so that it can be placed as is on the page, without hiding it or the need for an accordion component.
-* Split the content accross multiple pages, especialy if the amount of content is large (more than one text paragraph or if also other components than text paragraphs are needed to convey the message).
+* Split the content accross multiple pages, especially if the amount of content is large (more than one text paragraph or if also other components than text paragraphs are needed to convey the message).
 * Keep the content as is on the page, separate the content by headings.
 * Use a <a href="{{path './table-of-contents.html'}}">table of contents component</a> to let users navigate quickly to specific sections of content.
 
