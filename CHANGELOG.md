@@ -33,7 +33,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
  ### Removed
 
- * DTGB-677: Form steps   
+ * DTGB-677: Form steps.
+ * DTGB-683: Frequently visited.
 
 ## [3.0.0-alpha11]
 
