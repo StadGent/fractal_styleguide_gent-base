@@ -20,4 +20,12 @@ Do not use the table of contents component on a web page when:
 
 ## How it works
 
+### General
+
 The table of contents component is a list of anchor links. Each anchor link points to a section withing the web page. The sections typically have a clear title (typically h2 headings). The titles of the sections are used as the link text for the anchor links.
+
+### Responsive behavior
+
+On desktop and tablet resolutions, the anchor links are shown in a horizontal way with a separator between them. When necessary, the anchor links are wrapped to new lines.
+
+On mobile resolutions, the anchor links are shown in a vertical way.
