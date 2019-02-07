@@ -22,7 +22,7 @@ Do not use the table of contents component on a web page when:
 
 ### General
 
-The table of contents component is a list of anchor links. Each anchor link points to a section withing the web page. The sections typically have a clear title (typically h2 headings). The titles of the sections are used as the link text for the anchor links.
+The table of contents component is a list of anchor links. Each anchor link points to a section within the web page. The sections typically have a clear title (typically h2 headings). The titles of the sections are used as the link text for the anchor links.
 
 ### Responsive behavior
 
