@@ -1,21 +1,21 @@
-$gent-info-icon-size: 7rem;
+$gentinfo-icon-size: 8rem;
 
-.gent-info {
-  @include theme('background-color', 'color-primary--lighten-5', 'gent-info-background');
+.gentinfo {
+  @include theme('background-color', 'color-primary--lighten-5', 'gentinfo-background');
   margin: 3rem 0;
   padding: 2rem 1rem;
 
-  .gent-info-content {
-    @include theme('background-color', 'color-secondary', 'gent-info-content-background');
-    @include theme('box-shadow', 'color-primary--lighten-5', 'gent-info-content-shadow', '0 8px 12px 0');
+  .gentinfo-content {
+    @include theme('background-color', 'color-secondary', 'gentinfo-content-background');
+    @include theme('box-shadow', 'color-primary--lighten-5', 'gentinfo-content-shadow', '0 8px 12px 0');
     position: relative;
     max-width: $bp-max-content;
-    min-height: $gent-info-icon-size + 2rem;
+    min-height: $gentinfo-icon-size + 2rem;
     margin: 0 auto;
     padding: 1.2rem;
 
     &::before {
-      @include spot-image('gentinfo', $gent-info-icon-size);
+      @include spot-image('gentinfo', $gentinfo-icon-size);
       margin: 0 auto 1.5rem;
     }
 
@@ -26,14 +26,14 @@ $gent-info-icon-size: 7rem;
         position: absolute;
         top: 50%;
         left: 10rem;
-        margin-top: $gent-info-icon-size / -2;
+        margin-top: $gentinfo-icon-size / -2;
         margin-bottom: 0;
-        margin-left: $gent-info-icon-size / -2;
+        margin-left: $gentinfo-icon-size / -2;
       }
     }
   }
 
-  .gent-info-logo {
+  .gentinfo-logo {
     margin-bottom: 1.2rem;
   }
 
