@@ -30,7 +30,7 @@ The secondary teaser links inside the teaser block are also clickable. When clic
 ## Accessibility
 
 * Do not repeat links, links inside one molecule must have unique destinations.
-* he teaser overlay-link is excluded from the tabindex and invisible to
+* The teaser overlay-link is excluded from the tabindex and invisible to
   screenreaders (WCAG 2.4.3).
 * The teaser overlay-link has visually hidden text content (WCAG 2.4.9).
 * Teaser content must include exactly one link which has the same destination as
