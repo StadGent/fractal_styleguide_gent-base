@@ -9,7 +9,7 @@ Use the tabs component when:
 * Two or more related sections of content exist on a web page that can be clearly labelled.
 * Users typically are not interested to see all sections.
 * Users typically will not need to see all sections at once.
-* The first section is more relevant than the others sections for most users.
+* The first section is more relevant than the other sections for most users.
 
 ## When not to use this component
 
