@@ -2,7 +2,7 @@
 
 ## When to use this component
 
-Use the timeline component to present a series of milestones or events in a certain period of time in the past or in the future. The milestones or events typically lead to a certain end result or a specific end goal.
+Use the timeline component on detail pages to present a series of milestones or events in a certain period of time in the past or in the future. The milestones or events typically lead to a certain end result or a specific end goal.
 
 For instance:
 * A process that took place or will take place
@@ -14,6 +14,8 @@ For instance:
 Do not use the timeline component to present the programme of a current event. In this case use the <a href="{{path './programme.html'}}">programme component</a> instead.
 
 Do not use the timeline component to show progress or a linear flow. In these cases, use a multi-step form or a wizard instead.
+
+Do not use the timeline component on overview pages or filter pages. Only use the timeline component on detail pages.
 
 ## How it works
 
