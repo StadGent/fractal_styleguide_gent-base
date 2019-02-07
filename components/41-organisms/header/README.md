@@ -6,7 +6,7 @@ All websites and all pages must include the header.
 
 ## How it works
 
-The header is the first visible component on every page. The position of the header is fixed on the page.
+The header component is the first visible component on every page. The position of the header is fixed on the page.
 
 Depending on the device's screen resolution, the header switches to one of the two following modes:
 
