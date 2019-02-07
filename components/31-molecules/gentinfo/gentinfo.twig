@@ -15,13 +15,13 @@
 {% endif %}
 
 {# Component #}
-<div class="gent-info {{ modifier }}">
-  <div class="gent-info-content">
+<div class="gentinfo {{ modifier }}">
+  <div class="gentinfo-content">
     <h2 class="visually-hidden">Gent info</h2>
 
     {% include '@image' with {
       src: '/styleguide/img/svg/gentinfo-logo.svg'|path,
-      modifier: 'gent-info-logo',
+      modifier: 'gentinfo-logo',
       alt_text: 'Gent info'
     } %}
 
