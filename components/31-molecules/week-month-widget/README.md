@@ -6,7 +6,7 @@ Use the opening hours component to show opening hours for a certain location for
 
 ## When not use this component
 
-When the location has multiple ways of being open, for instance, free entrance without appointment versus appointment only, use the <a href="{{path './opening-hours-accordion.html'}}">opening hours accordion</a> component instead.
+When the location has multiple ways of being open, for instance, free entrance without appointment versus appointment only, use the <a href="{{path './opening-hours-accordion.html'}}">opening hours accordion component</a> instead.
 
 ## How it works
 
@@ -24,4 +24,4 @@ For each day of the month, it is visually indicated if the location is open or c
 
 ## Usage within the style guide
 
-The opening hours component is used in the <a href="{{path './opening-hours-accordion.html'}}">opening hours accordion</a> component.
+The opening hours component is used in the <a href="{{path './opening-hours-accordion.html'}}">opening hours accordion component</a>.
