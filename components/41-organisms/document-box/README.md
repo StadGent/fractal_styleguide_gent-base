@@ -1,19 +1,15 @@
-# Document box
+# Documents
 
 ## When to use this component
 
-The document box is used to show documents on a page related to the content of that specific page.
+Use the documents component to show and link to documents on a page related to the content of that specific page.
 
 ## When not to use this component
 
-## How to use this component
+Do not use the documents component to show other related information than documents or to show other links than links to documents.
 
-The document box should be placed just after the page contents.
+## How it works
 
-If there is also a <a href="{{path './contact-box.html'}}">contact box</a> and/or a <a href="{{path './related-box.html'}}">related box</a> on the page, the order of the boxes should be the following:
+The documents component uses the <a href="{{path './file-download.html'}}">file download component</a> to show and link to documents. The default *standalone* link style is used. The file download components are placed in a <a href="{{path './list.html'}}">list</a>. 
 
-1. Contact box
-2. Document box
-3. Related box
-
-If the page is a news article page with related articles, the <a href="{{path './extra-articles.html'}}">extra articles</a> component should be following right after.
+When there are more than 3 documents to show, only the first 3 documents are shown. The remaining documents are in a second list that is hidden using an <a href="{{path './accordion.html'}}">accordion component</a>.
