@@ -1,8 +1,18 @@
 # Footer
 
+## When to use this component
+
+All websites and all pages must include the footer.
+
 ## Requirements
 
 ### City of Ghent website
+
+The footer should always be used **as is**. The elements, style, layout and content in the footer **cannot be changed in anyway**.
+
+In the examples the footer block is shown as it should be included in different languages.
+
+Other requirements:
 
 * The footer on the City of Ghent website and on pages within City of Ghent themes should always stay the same.
 * The footer always refers to the City of Ghent in a general level.
