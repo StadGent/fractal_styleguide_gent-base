@@ -19,6 +19,7 @@ Do not use a tabs component:
 * When users will need to see all sections at once, for instance to compare information in the different sections.
 * When the sections are equally relevant for most users or when users typically are interested in a few specific sections. In this case, use an <a href="{{path './accordion.html'}}">accordion</a> instead.
 * When users have to read through all the related sections of content in order, for example, to understand a process.
+<!-- @TODO add a link to the proposed components (after development is done) -->
 * To show progress or a linear flow. In these cases, use a multi-step form or a wizard instead.
 * When the amount of content in the tabs will make the page too long or too slow to load.
 
