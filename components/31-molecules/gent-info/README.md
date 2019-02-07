@@ -6,9 +6,9 @@ Gentinfo is the central point of contact for information about the city council 
 
 Use the Gentinfo component to show Gentinfo contact information as a call-to-action on a web page when it is relevant to the page and when a separate call-to-action for Gentinfo is useful for users.
 
-The Gentinfo block should always be used **as is**. The elements, style, layout and content in the Gentinfo component **cannot be changed in anyway**.
+The Gentinfo component should always be used **as is**. The elements, style, layout and content in the Gentinfo component **cannot be changed in anyway**.
 
-In the examples the Gentinfo block is shown as it should be included in different languages.
+In the examples the Gentinfo component is shown as it should be included in different languages.
 
 ## When not to use this component
 
@@ -21,7 +21,7 @@ Note that the contact information of Gentinfo is also always included in the foo
 
 ## How it works
 
-The Gentinfo component contains the following fixed elements:
+The Gentinfo component contains the following elements:
 
 * A spot illustration (fixed)
 * The Gentinfo typologo (fixed)
