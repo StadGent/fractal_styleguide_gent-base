@@ -14,7 +14,11 @@ Do not use the file download component to trigger an action (other than download
 
 The file download component consists of two elements:
 
-* A link to a document using the *standalone* link style.
+* A link to a document using the *standalone* link style (default) or using the *button* link style.
 * A span text showing the file format and the file size of the document.
 
 The file format and the file size of the document are shown so that the user knows what to expect, what kind of document it is and how large it is. For instance, the user could decide do not open the document now because of low bandwidth (in case of large file).
+
+## Usage within the style guide
+
+The file download component is used in the <a href="{{path './documents.html'}}">documents</a> component.
