@@ -1,19 +1,23 @@
 # Theme footer
 
-## General
+The theme footer shows specific contact information, newsletter subscription and/or social media links.
 
-The theme footer is used on web pages about a specific City of Ghent theme or separate websites to present specfic (different from the general) contact information, newsletter subscription and/or social media links specific for that City of Ghent theme or that separate website.
+## When to use this component
 
-## When to use
+Use the theme footer when the following conditions apply:
 
-The theme footer can be used if the following conditions apply:
+* The web page is about a **specific City of Ghent theme** or the web page is part of a **separate website**.
+* The City of Ghent theme or separate website has specfic contact information, newsletter subscription and/or social media links specific for that City of Ghent theme or that separate website.
 
-* The web page is part of a specific City of Ghent theme or separate website
-* The City of Ghent theme or separate website has specific (different from the general) contact information *or* newsletters where website users *or* social media channels
+When these conditions apply, the theme footer can be used on all types of pages about the specific City of Ghent theme or on all types of pages on the separate website.
 
-## How to use
+If used, the theme footer should always be placed just above the general footer.
 
-The theme footer - if used - should be placed just above the general footer.
+## When not to use this component
+
+Do not use the theme footer when the above conditions don't apply.
+
+Do not use the theme footer to present general contact information or general social media links for the City of Ghent. This information is already included in the general <a href="{{path './programme.html'}}">footer</a>.
 
 ## Components
 
