@@ -1,6 +1,6 @@
 # Collection
 
-A collection is a list of <a href="{{path './teasers.html'}}">teasers</a> used to show teasers of content.
+A collection is a list of <a href="{{path './teaser.html'}}">teasers</a> used to show teasers of content.
 
 ## When to use this component
 
