@@ -13,6 +13,7 @@ In the examples the Gentinfo component is shown as it should be included in diff
 ## When not to use this component
 
 * Do not use the Gentinfo component to present other content than the Gentinfo contact information.
+<!-- @TODO  Link to the cta component -->
 * Do not use the Gentinfo component to present other call-to-actions. For other call-to-actions, use the call-to-action component.
 * Do not use the Gentinfo component when it is not relevant for the page.
 * Do not use the Gentinfo component at the bottom of the page right above the theme footer or the footer.
