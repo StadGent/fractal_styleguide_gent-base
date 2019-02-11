@@ -4,7 +4,9 @@
 
 All websites and all pages must include the footer.
 
-The footer should be used **as is**. The elements, style, layout and content in the footer **cannot be changed in anyway**, with only a few exceptions when used on separate websites.
+The footer should be used **as is**.
+
+**See the specific requirements for the City of Ghent website and for separate websites below.**
 
 ## How it works
 
