@@ -22,7 +22,7 @@ A slot is typically:
 
 For each slot, the correspondig term there is one description linked with the corresponding term. This description contains the events that take place in that particular slot.
 
-The events that take place in a particular slot are shown using a <a href="{{path './collection.html'}}">collection</a> of <a href="{{path './teasers.html'}}">teasers</a>, shown in a grid of maximum 3 columns. For the teasers, the inverted styling is used.
+The events that take place in a particular slot are shown using a <a href="{{path './collection.html'}}">collection</a> of <a href="{{path './teaser.html'}}">teasers</a>, shown in a grid of maximum 3 columns. For the teasers, the inverted styling is used.
 
 Each teaser represents an event that takes place in a slot and can consist of the following elements:
 
