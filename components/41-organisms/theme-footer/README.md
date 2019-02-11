@@ -17,7 +17,7 @@ If used, the theme footer should always be placed just above the <a href="{{path
 
 Do not use the theme footer when the above conditions don't apply.
 
-Do not use the theme footer to present general contact information or general social media links for the City of Ghent. This information is already included in the general <a href="{{path './programme.html'}}">footer</a>.
+Do not use the theme footer to present general contact information or general social media links for the City of Ghent. This information is already included in the general <a href="{{path './footer.html'}}">footer</a>.
 
 ## Components
 
