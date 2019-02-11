@@ -8,7 +8,7 @@ Use the opening hours accordion component to:
 * Include opening hours but clearly show the type of opening hours and show or hide them depending on if the opening hours are essential for all users or only necessary for a minority of users (progressive disclosure principle).
 * Offer opening hours for this week and for this month and what the opening hours are for each day but also have a quick way to show if the location is open today and what the opening hours are for today.
 
-The opening hours accordion is only to be used on detail pages of locations.
+The opening hours accordion is only to be used on detail pages.
 
 ## How it works
 
