@@ -21,7 +21,7 @@ On overview and filter pages, <a href="{{path './pagination.html'}}">pagination<
 
 On detail pages, an optional "Show more" link can be included, as seen in the example, to link to more related content. The "Show more" always links to another page where more content is shown in an overview, typically an overview or filter page.
 
-Pagination and the "Show more" link can never be used together. Or the teaser collection already shows all content there is and pagination is used to divide the content into multiple pages, or the teaser collection is used to show a selection of related content and a "Show more" link is used to link to all related content.
+Pagination and the "Show more" link can never be used together. Either the teaser collection already shows all content there is and pagination is used to divide the content into multiple pages, or the teaser collection is used to show a selection of related content and a "Show more" link is used to link to all related content.
 
 ## Accessibility
 
