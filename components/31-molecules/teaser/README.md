@@ -35,5 +35,5 @@ The secondary teaser links inside the teaser block are also clickable. When clic
 * The teaser overlay-link has visually hidden text content (WCAG 2.4.9).
 * Teaser content must include exactly one link which has the same destination as
   the overlay link (WCAG 2.1.3).
-* If a 'read more' link is used: use aria-label or aria-labelledby to provide
+* If a 'read more' link is used: append a visually hidden span to provide
   screenreader information (WCAG 2.4.4).
