@@ -11,7 +11,7 @@ Use the theme footer when the following conditions apply:
 
 When these conditions apply, the theme footer can be used on all types of pages about the specific City of Ghent theme or on all types of pages on the separate website.
 
-If used, the theme footer should always be placed just above the general footer.
+If used, the theme footer should always be placed just above the <a href="{{path './footer.html'}}">general footer</a>.
 
 ## When not to use this component
 
