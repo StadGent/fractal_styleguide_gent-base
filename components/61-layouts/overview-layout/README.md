@@ -6,7 +6,7 @@ The overview layout is a one-column layout with one wide column.
 
 Use the overview layout to show an overview of content and to link to content in the overview.
 
-The overview page typically uses a <a href="{{path './collection.html'}}">collection</a> of <a href="{{path './teasers.html'}}">teasers</a> to show the overview of the content and link to the detail pages about the content.
+The overview page typically uses a <a href="{{path './collection.html'}}">collection</a> of <a href="{{path './teaser.html'}}">teasers</a> to show the overview of the content and link to the detail pages about the content.
 
 Examples of overview pages of content:
 
