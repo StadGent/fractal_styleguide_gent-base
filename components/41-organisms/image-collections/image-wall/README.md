@@ -2,23 +2,27 @@
 
 ## When to use this component
 
-Use the image wall component on detail pages to present a set of images in a modal image gallery format (lightbox).
+Use the image wall component on detail pages to present a set of images as a whole, showing the complete set of images using thumbnails.
 
 ## When not to use this component
 
-Do not use the image wall component to present only one image or only a few images. Only use the image wall component when the set of images contains at least 5 images.
+Do not use the image wall component:
 
-Do not use the image wall component to present images on a detail page that also already contains a lot of other content. The image wall component works best if it's the only component on the detail page or if not much other content is placed before or after the image wall component.
+* To present only one image or only a few images. Only use the image wall component when the set of images contains at least 5 images.
+* To present images on a detail page that also already contains a lot of other content. The image wall component works best if it's the only component on the detail page or if not much other content is placed before or after the image wall component.
 
 Do not use the image wall component on overview pages or filter pages. Only use the image wall component on detail pages.
 
 ## How it works
 
-An image wall is a list of <a href="{{path './figure.html'}}">figures</a>.
+* An image wall is a list of <a href="{{path './figure.html'}}">figures</a>.
+* Thumbnails are used to present the set of images.
+* The number of thumbnails is equal to the number of images in the set of images.
+* All thumbnails are shown.
+* Clicking a thumbail shows all images in a modal image gallery (lightbox).
 
-## Functionality
+## Implementation
 
-* A click event on one of the preview images shows all images in a lightbox.
 * Using the class 'image-gallery' on the list element triggers lightbox
  initialisation on page load.
 
