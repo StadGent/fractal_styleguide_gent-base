@@ -32,7 +32,7 @@ Each teaser represents an event that takes place in a slot and can consist of th
 * Summary text (optional)
 * Link (required)
 
-When clicking the link of the teaser, a <a href="{{path './modal.html'}}">fixed-height modal</a> opens containing all information regarding the event:
+When clicking the link of the teaser, a <a href="{{path './modal.html'}}">modal</a> opens containing all information regarding the event:
 
 * Title (required)
 * Date or subtitle (optional)
