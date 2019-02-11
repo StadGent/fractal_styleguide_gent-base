@@ -20,4 +20,10 @@ Do not use the detail layout to present an overview of content.
 
 ## How it works
 
-<!-- @TODO describe what is specific about how a detail layout works -->
+A detail layout conists of the following parts:
+
+* <a href="{{path './header.html'}}">Header</a> (required)
+* Page title (heading h1, required)
+* Text to speech button (optional, only when the website has a text so speech ability) <!-- @TODO add link to text to speech button component -->
+* Detail page content (required)
+* <a href="{{path './footer.html'}}">Footer</a> (required)
