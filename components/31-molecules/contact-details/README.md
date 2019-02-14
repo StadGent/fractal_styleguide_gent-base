@@ -23,4 +23,13 @@ The order is fixed. Each type of contact information is optional, however at lea
 
 The items are presented in a <a href="{{path './list.html'}}">list</a> with icons. Every item has its icon. The icon that is shown depends on the type of contact information that the item represents.
 
-Finally, the contact details component can also optionally include an image of the entity, location or person. The image must be a square image.
+The contact details component can also optionally include an image of the entity, location or person. The image must be a square image.
+
+## Styles
+
+The contact details component has two different styles that can be used:
+
+* The default version
+* The inverted, light version
+
+See the examples.
