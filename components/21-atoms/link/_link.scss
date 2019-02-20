@@ -8,6 +8,7 @@ a {
   transition: background-color .1s ease-in-out;
   font-weight: 600;
   text-decoration: underline;
+  word-wrap: break-word;
 
   &:focus,
   &:hover {
@@ -116,7 +117,7 @@ a {
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back),
   &.button:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]) {
-    @extend %a-bounce-animation;
+    @extend %a-arrow-animation;
   }
 
   &[href^="mailto:"]:not(.button),
@@ -167,7 +168,7 @@ a {
   }
 
   &.back:not(.no-icon) {
-    @extend %a-bounce-animation--left;
+    @extend %a-arrow-animation--left;
     @include icon(fancyback, after);
 
     flex-direction: row-reverse;
@@ -181,7 +182,7 @@ a {
   }
 }
 
-%a-bounce-animation {
+%a-arrow-animation {
   &::after,
   &::before {
     padding-right: .2rem;
@@ -191,7 +192,7 @@ a {
   &:hover {
     &::after,
     &::before {
-      animation: bounce 1s 2;
+      animation: arrow 1s 2;
 
       // Animation causes pointer flickering in IE.
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
@@ -200,7 +201,7 @@ a {
     }
   }
 
-  @keyframes bounce {
+  @keyframes arrow {
     0% {
       padding-right: .2rem;
       padding-left: 0;
@@ -218,12 +219,12 @@ a {
   }
 }
 
-%a-bounce-animation--left {
+%a-arrow-animation--left {
   &:focus,
   &:hover {
     &::after,
     &::before {
-      animation: bounce-left 1s 2;
+      animation: arrow-left 1s 2;
 
       // Animation causes pointer flickering in IE.
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
@@ -232,7 +233,7 @@ a {
     }
   }
 
-  @keyframes bounce-left {
+  @keyframes arrow-left {
     0% {
       padding-right: .2rem;
       padding-left: .4rem;
@@ -272,7 +273,7 @@ a {
       /// Stand alone links.
       ///
       &.standalone-link:not(.no-icon) {
-        @extend %a-bounce-animation;
+        @extend %a-arrow-animation;
         @include icon(arrow-right, after);
       }
     }
@@ -282,7 +283,7 @@ a {
     &[href^="http://"]:not(.no-icon),
     &[href^="https://"]:not(.no-icon) {
       &[href*="stad.gent"]:not(.no-icon) {
-        @extend %a-bounce-animation;
+        @extend %a-arrow-animation;
         @include icon(arrow-right);
 
         &::after {

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  title: 'Form page',
   status: 'alpha',
+  collated: false,
   preview: '@preview-without-padding'
 };

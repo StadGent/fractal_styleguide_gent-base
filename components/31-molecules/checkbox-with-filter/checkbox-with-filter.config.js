@@ -29,7 +29,6 @@ const generateCheckboxes = (uid) =>{
 module.exports = {
   title: 'Checkbox with filter',
   status: 'beta',
-  collated: true,
   context: {
     label: 'Label checkbox',
     label_optional: 'Optional',
@@ -37,14 +36,9 @@ module.exports = {
     field_description: 'Optional field description.<br> --- <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur eveniet illo porro quis sint.',
     field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.',
     description: 'Description checkboxes.',
-
     options: generateCheckboxes()
   },
   variants: [
-    {
-      name: 'default',
-      handle: 'checkbox'
-    },
     {
       name: 'with-error',
       context: {

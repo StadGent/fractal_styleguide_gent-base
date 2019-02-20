@@ -1,22 +1,12 @@
 'use strict';
 
 module.exports = {
-  title: 'Pagination',
   status: 'alpha',
-  name: 'pagination',
-  collated: 'true',
   context: {
     total: 5555,
     active: 1
   },
   variants: [
-    {
-      name: 'large_1',
-      context: {
-        total: 5555,
-        active: 2
-      }
-    },
     {
       name: 'large_2',
       context: {

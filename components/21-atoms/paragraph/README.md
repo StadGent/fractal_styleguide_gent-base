@@ -1,21 +1,25 @@
-# Paragraphs
+# Paragraph
 
-A paragraph has a certain behavior.
+## When to use this component
 
-* It should always have a width of 7/12 (except for mobile) based on the
-  container.
-  This means the container needs to make sure that paragraphs can never be
-  bigger then 7/12 of itself.
-* For a mobile layout a paragraph is always full width.
-* It always has a max-width of 40 rems on desktop.
-* A paragraph can **never** be centered!
-* A paragraph can **never** be justified!
+A paragraph is used to present a portion of text (a paragraph). A paragraph consists of one or more sentences.
 
-Examples of paragraphs are defined in paragraph variants:
+## When not to use this component
 
-* <a href="{{path './paragraph--default'}}">Paragraph default</a>
-* <a href="{{path './paragraph--caption-text'}}">Paragraph-caption text</a>
-* <a href="{{path './paragraph--small-text'}}">Paragraph-small text</a>
-* <a href="{{path './paragraph--left-text'}}">Paragraph-left aligned text</a>
-* <a href="{{path './paragraph--right-text'}}">Paragraph-right aligned text</a>
+To present text that is not a complete sentence.
 
+## Composition and behavior of this component
+
+Next to normal text, a paragraph can also contain:
+
+* Links (internal, external, download, mailto).
+* Words or parts of sentences emphasized by *italic* or **bold** text.
+
+A paragraph has a certain behavior:
+
+* On **desktop resolutions and tablet in landscape mode**, a paragraph should always have a width of 7/12 based on the container. This means the container needs to make sure that paragraphs can never be bigger then 7/12 of itself.
+* On **tablet in portrait mode and mobile resolutions**, a paragraph should always be the full width of the container.
+* The **text** in a paragraph:
+   * Should always have a max-width of 40 rems.
+   * Can **never** be centered.
+   * Can **never** be justified.

@@ -1,14 +1,28 @@
 # Image gallery
 
-## Functionality
+## When to use this component
 
+Use the image gallery component on detail pages to present a set of images in a modal image gallery format (lightbox) using thumbnails of the first images.
+
+## When not to use this component
+
+Do not use the image gallery component to present a set of images that should be all visible at once without any interaction except scrolling.
+
+Do not use the image gallery component on overview pages or filter pages. Only use the image gallery component on detail pages.
+
+## How it works
+
+* An image gallery is a list of <a href="{{path './figure.html'}}">figures</a>.
 * The images must have aspect ratio 8:5.
-* The number of preview images shown depends on the screen size.
-* Up to five images can be shown as preview.
-* If there are hidden images: an overlay is placed on the last visible image
+* Thumbnails are used to preview the set of images.
+* The number of thumbnails that are shown depends on the device's screen resolution.
+* Up to 5 thumbnails can be shown.
+* If there are hidden images an overlay is placed on the last visible thumbnail
  indicating the total number of images.
-* A click event on one of the preview images or on the overlay indicating hidden
- images shows all images in a lightbox.
+* Clicking a thumbail or the overlay on the last visible image shows all images in a modal image gallery (lightbox).
+
+## Implementation
+
 * Using the class 'image-gallery' on the list element triggers lightbox
  initialisation on page load.
 

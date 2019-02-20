@@ -1,20 +1,30 @@
-# Status messages
+# Status message
 
-## General
+## When to use this component
 
-### Success message variant
+Use the status message to inform users, give feedback, give advice, help them or confirm an action or a status. Status messages are mostly used in the context of a form as a feedback mechanism, but they can also be used outside the context of forms.
 
-* A **success message** should have enough information to help the user
-  understand the purpose of the message but should be as short as possible.
+## How it works
 
-### Warning message variant
+There are three types of status messages:
 
-* A **warning message** should be clear and helpful. Give the user constructive
-  advice on how to prevent problems.
+1. Normal (or default) status message
+2. Warning status message
+3. Error status message
+4. Success status message
 
-### Error message variant
+### Normal (or default) status message
 
-* An **error message** should be clear and helpful. Give the user constructive
-  advice on how to fix the problem.
-* Make it easier for the user to correct the error by preserving as much of the
-  content as possible.
+A normal status message is used to provide general information or help to the user. The message should have enough information to help the user understand the message, the purpose of the message and to be clear, but should be as short as possible.
+
+### Warning status message
+
+A warning status message is used to show a warning to the user. The message should be clear and helpful. Give the user constructive advice on how to prevent problems.
+
+### Error status message
+
+An error status message is used to show an error to the user. The message should be clear and helpful. Give the user constructive advice on how to fix the problem. When used in the context of a form or a wizard, make it easy for users to correct the error by preserving as much of the content as possible.
+
+### Success status message
+
+A success status message is used to provide information about an action or a status that is positive, a succes. The message should have enough information to help the user understand the message, the purpose of the message and to be clear, but should be as short as possible.

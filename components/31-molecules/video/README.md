@@ -1,5 +1,9 @@
 # Video
 
+## When to use this component
+
+Use the video component to embed a video.
+
 ## Accessibility
 
 - Captions must be provided in all languages for which the page

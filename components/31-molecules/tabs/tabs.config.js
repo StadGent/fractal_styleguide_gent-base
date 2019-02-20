@@ -1,14 +1,9 @@
 'use strict';
 
 module.exports = {
-  title: 'Tabs',
-  name: 'Tabs',
   status: 'alpha',
-  collated: 'true',
-  collator: function (markup, item) {
-    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
-  },
   context: {
+    modifier: 'dark',
     tabs: [
       {
         label: 'tab 1',
@@ -35,19 +30,13 @@ module.exports = {
       }
     ]
   },
-  preview: '@preview-description-list',
   variants: [
     {
       name: 'default',
-      label: 'Dark',
-      preview: '@preview',
-      context: {
-        modifier: 'dark'
-      }
+      label: 'Dark'
     },
     {
       name: 'Light',
-      preview: '@preview',
       context: {
         modifier: 'light'
       }

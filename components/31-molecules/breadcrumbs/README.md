@@ -1,21 +1,27 @@
 # Breadcrumbs
 
-## General
+The breadcrumbs component helps users understand where they are in the website's structure and to let them move between levels of the website.
 
-Breadcrumbs are used to show website users their current location relative to higher-level sections, helping them to understand where they are in relation to the rest of the website. They also afford one-click access to higher website sections and to the homepage of the website.
+## When to use this component
 
-## When to use
+Use the breadcrumbs component when you need to help users understand and move between the multiple levels of a website.
 
-Breadcrumbs should always be used on all websites.
+Breadcrumbs are required for most websites.
 
-## Where to use
+When breadcrumbs are used, breadcrumbs should be included:
 
-Breadcrumbs should be used:
+* On all pages of the website, except the home page.
+* On all device resolutions (desktop, tablet and mobile).
 
-* On every web page of the website except the homepage.
-* On all resolutions (desktop, tablet and mobile).
+## When not to use this component
 
-## Composition
+Do not use the breadcrumbs component on websites that have a flat website structure, in other words, websites that go only one level deep. In this case, breadcrumbs can be omitted.
+
+Do not use the breadcrumbs component to show progress or a linear flow. In these cases, use a multi-step form or a wizard instead.
+
+## How it works
+
+Breadcrumbs show website users their current location relative to higher-level sections. They also afford one-click access to higher website sections and to the homepage of the website.
 
 Breadcrumbs are composed as follows:
 

@@ -1,0 +1,49 @@
+$gentinfo-icon-size: 8rem;
+
+.gentinfo {
+  @include theme('background-color', 'color-primary--lighten-5', 'gentinfo-background');
+  margin: 3rem 0;
+  padding: 2rem 1rem;
+
+  .gentinfo-content {
+    @include theme('background-color', 'color-secondary', 'gentinfo-content-background');
+    @include theme('box-shadow', 'color-primary--lighten-5', 'gentinfo-content-shadow', '0 8px 12px 0');
+    position: relative;
+    max-width: $bp-max-content;
+    min-height: $gentinfo-icon-size + 2rem;
+    margin: 0 auto;
+    padding: 1.2rem;
+
+    &::before {
+      @include spot-image('gentinfo', $gentinfo-icon-size);
+      margin: 0 auto 1.5rem;
+    }
+
+    @include tablet {
+      padding: 2.3rem 2.3rem 2.3rem 20rem;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 10rem;
+        margin-top: $gentinfo-icon-size / -2;
+        margin-bottom: 0;
+        margin-left: $gentinfo-icon-size / -2;
+      }
+    }
+  }
+
+  .gentinfo-logo {
+    margin-bottom: 1.2rem;
+  }
+
+  .icon-list.inline {
+    > li {
+      margin-bottom: .5rem;
+
+      [class*='icon-'] {
+        @include theme('color', 'color-primary', 'link-color');
+      }
+    }
+  }
+}

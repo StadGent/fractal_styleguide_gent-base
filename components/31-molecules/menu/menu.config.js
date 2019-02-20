@@ -1,10 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Main menu',
-  handle: 'menu',
   status: 'alpha',
-  preview: '@preview',
   context: {
     items: [
       '<a href="#" class="active">Home</a>',

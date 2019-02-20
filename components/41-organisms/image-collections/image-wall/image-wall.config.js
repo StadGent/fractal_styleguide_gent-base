@@ -21,10 +21,7 @@ const createItems = (amount) => {
 };
 
 module.exports = {
-  name: 'Image wall',
   status: 'alpha',
-  handle: 'image-wall',
-  preview: '@preview',
   context: {
     items: createItems(100)
   }

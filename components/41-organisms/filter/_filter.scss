@@ -3,7 +3,7 @@
     padding-top: .7rem;
     visibility: hidden;
 
-    @include tablet {
+    @include desktop {
       position: static;
       height: auto;
       box-shadow: none;
@@ -13,7 +13,7 @@
     }
 
     &.visible {
-      @include breakpoint(max-width 768px) {
+      @include breakpoint(max-width $bp-desktop) {
         padding: 0;
         visibility: visible;
 
@@ -24,7 +24,7 @@
     }
 
     > .modal-inner {
-      @include tablet {
+      @include desktop {
         position: relative;
         top: 0;
         left: 0;
@@ -33,6 +33,7 @@
         margin: 0;
         transform: none;
         z-index: auto;
+        filter: none;
       }
 
       > .modal-header {
@@ -40,7 +41,7 @@
       }
 
       > .modal-content {
-        @include tablet {
+        @include desktop {
           padding: 0;
         }
       }
@@ -83,7 +84,7 @@
     }
 
     .result__show-filters {
-      @include tablet {
+      @include desktop {
         display: none;
       }
     }
