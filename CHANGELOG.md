@@ -31,6 +31,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
     * Field message component hidden in style guide.
     * Logo component hidden in style guide.
 
+* DTGB-629: Updated text alignment for boxes on detail pages.
+
  ### Removed
 
  * DTGB-677: Form steps.

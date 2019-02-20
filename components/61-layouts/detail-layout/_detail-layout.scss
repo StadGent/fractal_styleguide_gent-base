@@ -102,6 +102,21 @@
   > .full-width {
     @include full-width;
   }
+
+  > .box-top {
+    .inner-box {
+      @include desktop {
+        padding-right: 0;
+        padding-left: 0;
+
+        > *:not(.accolade) {
+          width: span(7 of 10);
+          margin-left: span(1 wide of 10);
+        }
+      }
+    }
+  }
+
 }
 
 $bulb-image-width: 6rem;
