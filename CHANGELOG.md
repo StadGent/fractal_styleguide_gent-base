@@ -30,6 +30,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
     * Label component hidden in style guide.
     * Field message component hidden in style guide.
     * Logo component hidden in style guide.
+    
+* DTGB-607: Changed font-size for boxes to `16px` (a.k.a. `.8rem`)
 
  ### Removed
 
