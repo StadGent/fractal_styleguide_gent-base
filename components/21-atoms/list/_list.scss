@@ -111,8 +111,6 @@ ul {
         &[download]:not(.button),
         &[href^="http://"]:not(.button),
         &[href^="https://"]:not(.button) {
-          padding-right: $link-padding;
-
           &::after {
             content: ''; // hide default link icons
           }
