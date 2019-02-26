@@ -72,10 +72,10 @@
 
 .box-top {
   .inner-box {
-    margin-bottom: 1.5rem;
-    padding-top: 4rem;
 
     @include tablet {
+      padding-top: 4rem;
+
       &::before {
         top: -3.5rem;
         right: 2rem;
