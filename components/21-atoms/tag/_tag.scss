@@ -1,12 +1,12 @@
 .tag {
-  @include theme('border-color', 'color-primary--lighten-3', 'tag-border-color');
+  @include theme('border-color', 'color-primary--lighten-3', 'tag-span-border-color');
   @include theme('background-color', 'color-secondary', 'tag-background-color');
 
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   padding: .7em .8em;
-  border: 2px solid;
+  border: 1px solid;
   border-radius: border-radius('radius-1');
   font-size: .7rem;
   line-height: 1.1;
@@ -39,9 +39,11 @@
 }
 
 a.tag {
+  @include theme('border-color', 'color-primary--lighten-2', 'tag-border-color');
   @include icon(arrow-right, after);
 
   padding: .4em .8em;
+  border-width: 2px;
 
   &::after {
     width: 1.1rem;
