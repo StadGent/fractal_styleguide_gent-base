@@ -28,8 +28,8 @@
   }
 
   > span {
-    text-align: center;
     flex-basis: 100%;
+    text-align: center;
 
     @include phablet {
       flex-basis: auto;
