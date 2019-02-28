@@ -90,17 +90,6 @@ figure {
         }
       }
 
-      ~ figcaption {
-        left: 0;
-        width: 100%;
-        max-width: none;
-        background-color: color('white');
-
-        @media (min-width: $bp-max-content) {
-          width: auto;
-        }
-      }
-
       img {
         display: inline-block;
         order: 2;
@@ -263,6 +252,24 @@ figure {
         // IE error fix
         right: -1px;
         left: calc(#{$span} + 2rem + ((100% - #{$bp-max-content}) / 2));
+      }
+    }
+
+    &:not(.hero--subsite) .subsite ~ figcaption { // Deprecated
+      left: 0;
+      width: 100%;
+      max-width: none;
+      background-color: color('white');
+
+      @media (min-width: $bp-max-content) {
+        width: auto;
+      }
+    }
+
+    &--subsite {
+      &::before,
+      &::after {
+        width: 100%;
       }
     }
   }
