@@ -71,7 +71,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: .8rem;
-    overflow: hidden;
+    overflow: hidden; 
 
     @include desktop {
       flex-wrap: nowrap;
@@ -101,7 +101,7 @@
         }
 
         @include desktop {
-          width: span(6 of 12);
+          width: span(8 of 12);
         }
       }
     }
@@ -129,6 +129,10 @@
   .db-block-partnership {
     justify-content: center;
     width: 100%;
+
+    @include desktop {
+      justify-content: flex-start;
+    }
   }
 
   ///

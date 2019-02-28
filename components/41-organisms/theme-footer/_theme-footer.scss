@@ -69,19 +69,9 @@
     }
 
     .social-list {
-      display: inline-block;
-      width: auto;
-      max-width: 100%;
-      margin: auto;
-
       ul {
-        justify-content: flex-start;
         width: calc(100% + 1rem);
         margin: 0 -.5rem;
-
-        li {
-          padding: .5rem;
-        }
 
         a {
           &,
