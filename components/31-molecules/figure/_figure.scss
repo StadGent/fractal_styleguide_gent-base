@@ -255,7 +255,7 @@ figure {
       }
     }
 
-    &:not(.hero--subsite) .subsite ~ figcaption { // Deprecated
+    &:not(.hero--subsite) .subsite ~ figcaption { /// @deprecated
       left: 0;
       width: 100%;
       max-width: none;

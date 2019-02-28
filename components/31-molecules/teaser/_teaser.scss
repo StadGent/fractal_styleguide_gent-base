@@ -5,26 +5,26 @@
   position: relative;
   list-style: none;
 
-  &.teaser-programme, // Deprecated
+  &.teaser-programme, /// @deprecated
   &.teaser--inverted {
     .teaser-content {
       @include theme('background-color', 'color-secondary');
     }
 
-    .content__top, // Deprecated
+    .content__top, /// @deprecated
     .content__first {
       > * {
         margin: 0;
       }
     }
 
-    .content__bottom, // Deprecated
+    .content__bottom, /// @deprecated
     .content__second {
       padding: .8rem;
     }
   }
 
-  &.teaser-topic, // Deprecated
+  &.teaser-topic, /// @deprecated
   &.teaser--underlined {
     .teaser-content {
       @include theme('border-color', 'color-primary--lighten-4', 'teaser-contact-border');
@@ -40,7 +40,7 @@
       border-bottom: 0;
     }
 
-    .content__bottom, // Deprecated
+    .content__bottom, /// @deprecated
     .content__second {
       display: flex;
       flex-direction: column;
@@ -64,7 +64,7 @@
 
     // @TODO: Move to other layer.
     .grid-3 & {
-      .content__bottom, // Deprecated
+      .content__bottom, /// @deprecated
       .content__second {
         flex-grow: 1;
       }
@@ -99,8 +99,8 @@
     display: flex;
     flex-direction: column;
 
-    .teaser-topic-links, // Deprecated
-    .teaser-contact-info, // Deprecated
+    .teaser-topic-links, /// @deprecated
+    .teaser-contact-info, /// @deprecated
     .teaser-links {
       @extend %list-no-style;
 
@@ -112,14 +112,14 @@
       }
     }
 
-    .content__top, // Deprecated
+    .content__top, /// @deprecated
     .content__first {
       position: relative;
       order: 1;
       overflow: hidden;
     }
 
-    .content__bottom, // Deprecated
+    .content__bottom, /// @deprecated
     .content__second {
       order: 2;
     }
@@ -204,7 +204,7 @@
     }
   }
 
-  .content__top, // Deprecated
+  .content__top, /// @deprecated
   .content__first {
     > * {
       margin-bottom: .8rem;
@@ -215,8 +215,8 @@
 //
 // Teaser wide variant.
 //
-.teaser.teaser-search, // Deprecated
-.teaser.teaser-search-wide, // Deprecated
+.teaser.teaser-search, /// @deprecated
+.teaser.teaser-search-wide, /// @deprecated
 .teaser.teaser--wide {
   @include tablet {
     dt,
@@ -274,14 +274,14 @@
     }
   }
 
-  .content__left, // Deprecated
+  .content__left, /// @deprecated
   .content__first,
-  .content__right,  // Deprecated
+  .content__right,  /// @deprecated
   .content__second {
     flex-basis: 100%;
   }
 
-  .content__left, // Deprecated
+  .content__left, /// @deprecated
   .content__first {
     order: 1;
     margin-bottom: gutter();
@@ -293,7 +293,7 @@
     }
   }
 
-  .content__right, // Deprecated
+  .content__right, /// @deprecated
   .content__second {
     order: 2;
 
