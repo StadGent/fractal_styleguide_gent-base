@@ -7,14 +7,22 @@ a {
   padding: $link-padding 0;
   transition: background-size .2s;
   border-radius: border-radius('radius-1');
-  background: linear-gradient(
-    to bottom, color('cyan', -4) 0%,
-    color('cyan', -4) 100%
-  ) repeat-x 0 100%;
-  background-size: 1px 1px;
   font-weight: 600;
   text-decoration: none;
   word-wrap: break-word;
+
+  // Support color schemes
+  @each $theme, $colors in $themes {
+    $link-hover-color: set-themified-property($colors, 'color-primary--lighten-4', 'link-background-color');
+    .cs--#{$theme} & {
+      background: linear-gradient(
+        to bottom, $link-hover-color 0%,
+        $link-hover-color 100%
+      ) repeat-x 0 100%;
+
+      background-size: 1px 1px;
+    }
+  }
 
   &:focus,
   &:hover {
@@ -90,9 +98,7 @@ a {
   ///
   /// Stand alone links.
   ///
-  &.standalone-link:not(.no-icon, .back) {
-    @include icon(arrow-right, after);
-
+  &.standalone-link:not(.no-icon) {
     margin-left: 0;
     padding-left: 0;
     background: none;
@@ -112,6 +118,11 @@ a {
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back),
   &.button:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]) {
     @extend %a-arrow-animation;
+  }
+
+
+  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back) {
+    @include icon(arrow-right, after);
   }
 
   ///
