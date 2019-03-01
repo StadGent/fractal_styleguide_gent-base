@@ -16,6 +16,8 @@ $social-media-link-width: 1.6rem;
     }
 
     a {
+      background: none;
+
       &,
       &[download]:not(.button),
       &[href^="http://"]:not(.button),

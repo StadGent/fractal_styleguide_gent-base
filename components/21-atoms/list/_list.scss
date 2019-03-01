@@ -74,12 +74,13 @@ ul {
     &.inline {
       li {
         display: flex;
+        align-items: center;
         margin-right: .7rem;
         margin-bottom: 0;
 
         i {
           width: auto;
-          margin-right: 0;
+          margin-right: .2rem;
         }
       }
     }
@@ -112,7 +113,7 @@ ul {
         &[href^="http://"]:not(.button),
         &[href^="https://"]:not(.button) {
           &::after {
-            content: ''; // hide default link icons
+            display: none; // hide default link icons
           }
         }
       }

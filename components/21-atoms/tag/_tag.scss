@@ -42,6 +42,7 @@ a.tag {
   @include icon(arrow-right, after);
 
   padding: .4em .8em;
+  background: none;
 
   &::after {
     width: 1.1rem;
