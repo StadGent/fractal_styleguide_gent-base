@@ -34,6 +34,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-607: Changed font-size for boxes to `16px` (a.k.a. `.8rem`)
 
 * DTGB-629: Updated text alignment for boxes on detail pages.
+* DTGB-697: Updated hover animation for links.
 
  ### Removed
 
