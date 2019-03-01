@@ -4,7 +4,7 @@ module.exports = {
   status: 'ready',
   context: {
     link: '#',
-    text: 'The quick brown fox jumps over the lazy dog',
+    text: 'Link text',
     aria_label: null
   },
   variants: [
