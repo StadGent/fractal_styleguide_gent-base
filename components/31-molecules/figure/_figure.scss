@@ -29,7 +29,7 @@ figure {
         right: 0;
         width: span(4 wide of 12);
         max-width: 23rem;
-        height: calc(100% - 1.6rem);
+        height: calc(100% - 1.6rem + 1px); // 1px to fix rendering issues
         margin: 0;
         text-align: center;
         z-index: 1;
