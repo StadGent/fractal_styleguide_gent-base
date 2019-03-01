@@ -13,6 +13,11 @@
     }
   }
 
+  // Save room for the accolade
+  .inner-box {
+    margin-bottom: 1.5rem;
+  }
+
   .button {
     @include button-large;
   }
