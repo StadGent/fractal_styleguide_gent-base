@@ -141,10 +141,10 @@ nav.menu {
       a[href^="http://"],
       a[href^="https://"] {
         @include theme('color', 'color-tertiary', 'default-text-color');
-        background: none;
         display: inline-block;
         margin-bottom: 1rem;
         padding: 1rem;
+        background: none;
         font-weight: 400;
         text-decoration: none;
 
