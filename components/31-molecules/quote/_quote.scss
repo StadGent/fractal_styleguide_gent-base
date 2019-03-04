@@ -32,12 +32,14 @@
       display: flex;
       position: relative;
       flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
       min-height: 3rem;
       margin-top: 1rem;
 
       @include desktop {
         min-height: 6rem;
+        justify-content: initial;
       }
 
       &::before {
