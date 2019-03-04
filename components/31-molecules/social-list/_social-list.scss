@@ -1,18 +1,17 @@
 $social-media-link-width: 1.6rem;
 
 .social-list {
-  width: 100%;
+  display: inline-block;
 
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     width: 100%;
     margin: 0;
     list-style: none;
 
-    @include tablet {
-      justify-content: space-between;
+    li {
+      padding: 0 .4rem;
     }
 
     a {
