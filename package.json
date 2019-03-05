@@ -58,6 +58,7 @@
     "yarn": "^1.13.0"
   },
   "scripts": {
+    "test": "gulp validate",
     "postinstall": "node ./scripts/postinstall.js",
     "start": "gulp watch",
     "build": "gulp build"
