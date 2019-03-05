@@ -7,7 +7,6 @@
     "@babel/preset-env": "^7.3.4",
     "@frctl/fractal": "^1.1.7",
     "@frctl/twig": "https://github.com/tnottu/fractal-twig-adapter.git",
-    "breakpoint-sass": "^2.7.1",
     "fs-extra": "^7.0.1",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.0.0",
@@ -46,6 +45,7 @@
   "dependencies": {
     "allietabs": "^1.2.2",
     "baguettebox.js": "^1.11.0",
+    "breakpoint-sass": "^2.7.1",
     "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.2",
     "susy": "^3.0.1"
