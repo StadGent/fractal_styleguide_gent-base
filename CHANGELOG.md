@@ -15,6 +15,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-673: Added Gent Info component.
 * DTGB-678: Form-disclaimer.
 * DTGB-677: Wizard steps.
+* DTGB-172: Component documentation.
 
 ### Updated 
 

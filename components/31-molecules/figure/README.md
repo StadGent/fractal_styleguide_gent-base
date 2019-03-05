@@ -12,6 +12,9 @@ The figure component wraps an image in a container and adds the benefit of provi
 
 The figure component is used in the:
 
-* Hero image component <!-- @TODO add a link to the hero image component (after development is done) -->
 * <a href="{{path './image-gallery.html'}}">Image gallery component</a>
 * <a href="{{path './image-wall.html'}}">Image wall component</a>
+
+## Hero image component
+
+The hero image component is a figure component that wraps the hero image in a container and adds a caption tag, which in the hero image component is required. <!-- @TODO add a link to the hero image component (after development is done) -->
