@@ -43,6 +43,8 @@
 
       a {
         padding: 0;
+        background: none;
+        vertical-align: middle;
 
         &:hover,
         &:focus {
@@ -51,6 +53,10 @@
           &::before {
             @include theme('border-color', 'color-primary--darken-1', 'wizard-step--active-border-color');
           }
+        }
+
+        > span {
+          @include link-background('color-primary--lighten-4', 'link-background-color', false);
         }
       }
 
@@ -61,6 +67,7 @@
         @include theme('color', 'color-tertiary', 'default-text-color');
 
         display: inline-flex;
+        align-items: center;
         justify-content: center;
         width: 2rem;
         height: 2rem;

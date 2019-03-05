@@ -35,10 +35,10 @@
     li.active {
       padding-right: .4rem;
       padding-left: .4rem;
+      background: none;
       font-size: .8rem;
       font-weight: 600;
       line-height: 1.2;
-      text-decoration: none;
 
       @include phablet {
         padding-right: 1rem;

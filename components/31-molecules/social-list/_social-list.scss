@@ -15,6 +15,8 @@ $social-media-link-width: 1.6rem;
     }
 
     a {
+      background: none;
+
       &,
       &[download]:not(.button),
       &[href^="http://"]:not(.button),
@@ -26,7 +28,6 @@ $social-media-link-width: 1.6rem;
         justify-content: center;
         width: $social-media-link-width;
         height: $social-media-link-width;
-        padding-right: $link-padding;
         border-radius: $social-media-link-width;
         text-decoration: none;
 
