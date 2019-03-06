@@ -1,7 +1,7 @@
 <nav class="table-of-contents" aria-labelledby="table-of-contents-header">
   <div class="content-container">
     <h2 id="table-of-contents-header" class="visually-hidden">Table of content</h2>
-    {% include '@list' with {
+    {% render '@list' with {
       'type': 'links',
       'items': list,
       'modifier': 'inline'

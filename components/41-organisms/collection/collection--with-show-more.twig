@@ -1,6 +1,7 @@
-{% include 'collection--grid-4.twig' %}
+{% render '@collection--grid-4' %}
+
 <div class="show-more">
-  {% include '@link' with {
+  {% render '@link' with {
     'link': null,
     'text': 'Show all news articles',
     'modifier': 'standalone-link',

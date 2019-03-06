@@ -1,6 +1,6 @@
 <aside class="summary-box box-top">
   <div class="inner-box">
-    {% include '@list' with {
+    {% render '@list' with {
     'type': 'icon-list',
     'icon_items': [
     '<i class="icon-calendar" aria-hidden="true"></i><span><time datetime="2018-11-18T18:00:00+02:00">Saturday 18 november 2018 between 18:00 and 22:00</time>Saturday 18 november with continuous activities</span>',
@@ -8,10 +8,10 @@
     ]
     } %}
 
-    {% include '@accolade' %}
+    {% render '@accolade' %}
   </div>
 
-  {% include '@button' with {
+  {% render '@button' with {
     'text': 'Register for this event',
     'type': 'primary',
     'modifier': 'icon-arrow-right'

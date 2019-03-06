@@ -10,7 +10,7 @@
             aria-labelledby="image-gallery__open-gallery"
           {% endif %}
           >
-          {% include '@figure' with {
+          {% render '@figure' with {
             "figure_figcaption": item.caption,
             "figure_image_src": item.src,
             "figure_image_alt_text": item.alt,

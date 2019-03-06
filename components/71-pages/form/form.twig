@@ -1,66 +1,70 @@
 <main class="content-container">
-  {% include '@heading' with {
+  {% render '@heading' with {
     'type': 'h1',
     'heading_text': 'Form page'
   } %}
 
   <form action="#" method="#">
-    {% include '@heading' with {
+    {% render '@heading' with {
       'type': 'h2',
       'heading_text': 'Some title'
     } %}
 
-    {% include '@paragraph' with {
+    {% render '@paragraph' with {
       "text": "De verkiezingsshow 'Stem wijs' vindt plaats op woensdag 6 juni 2018 in Muziekcentrum De Bijloke (Bijlokekaai 7, 9000 Gent). Niet alleen de jury, maar ook het publiek kan die avond stemmen voor de beste spreker, die Gent zal vertegenwoordigen in Edinburgh."
     } %}
 
-    {% include '@heading' with {
+    {% render '@heading' with {
       'type': 'h3',
       'heading_text': 'Subscribe for the election show'
     } %}
 
-    {% include '@paragraph' with {
+    {% render '@paragraph' with {
       'text': 'All fields are required, unless they are marked as optional.',
       'modifier': 'form-disclaimer'
     } %}
 
     <fieldset>
       <legend>Contact details</legend>
-      {% include '@form-item' with {
+      {% render '@form-item' with {
         "label": "Name",
         "id": "name_id",
         "input_component": "input",
         "type": "text",
-        "name": "name_name"
+        "name": "name_name",
+        "field_description": false
       } %}
-      {% include '@form-item' with {
+      {% render '@form-item' with {
         "label": "First name",
         "input_component": "input",
         "type": "text",
         "id": "firstname_id",
-        "name": "firstname_name"
+        "name": "firstname_name",
+        "field_description": false
       } %}
-      {% include '@form-item'
+      {% render '@form-item'
         with {
         "label": "E-mail address",
         "for": "email_id",
         "input_component": "input",
         "type": "email",
         "id": "email_id",
-        "name": "email_name"
+        "name": "email_name",
+        "field_description": false
       } %}
-      {% include '@form-item'
+      {% render '@form-item'
         with {
         "label": "Phone number",
         "for": "tel_id",
         "input_component": "input",
         "type": "tel",
         "id": "tel_id",
-        "name": "tel_name"
+        "name": "tel_name",
+        "field_description": false
       } %}
     </fieldset>
 
-    {% include '@form-item--radio'
+    {% render '@form-item--radio'
       with {
       "input_component": "input",
       "type": "radio",
@@ -86,7 +90,7 @@
 
     <fieldset>
       <legend>Contact details</legend>
-      {% include '@form-item' with {
+      {% render '@form-item' with {
         "label": "Label textfield",
         "for": "textfield_id",
         "label_optional": "Optional",
@@ -98,37 +102,40 @@
         "id": "textfield_id",
         "name": "textfield_name"
       } %}
-      {% include '@form-item' with {
+      {% render '@form-item' with {
         "label": "Label textfield",
         "for": "textfield_id--1",
         "input_component": "input",
         "type": "text",
         "id": "textfield_id--1",
-        "name": "textfield_name--1"
+        "name": "textfield_name--1",
+        "field_description": false
       } %}
 
       <fieldset>
         <legend>Nested fieldset</legend>
-        {% include '@form-item' with {
+        {% render '@form-item' with {
           "label": "Label textfield",
           "for": "textfield_id--2",
           "input_component": "input",
           "type": "text",
           "id": "textfield_id--2",
-          "name": "textfield_name--2"
+          "name": "textfield_name--2",
+          "field_description": false
         } %}
-        {% include '@form-item' with {
+        {% render '@form-item' with {
           "label": "Label textfield",
           "for": "textfield_id--3",
           "input_component": "input",
           "type": "text",
           "id": "textfield_id--3",
-          "name": "textfield_name--3"
+          "name": "textfield_name--3",
+          "field_description": false
         } %}
       </fieldset>
     </fieldset>
 
-    {% include '@form-item--checkbox'
+    {% render '@form-item--checkbox'
       with {
       "input_component": "input",
       "type": "checkbox",
@@ -143,11 +150,11 @@
       ]
     } %}
 
-    {% include '@form-actions' %}
+    {% render '@form-actions' %}
 
   </form>
 </main>
 
 <footer>
-  {% include '@footer' %}
+  {% render '@footer' %}
 </footer>

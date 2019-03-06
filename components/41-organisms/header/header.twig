@@ -1,17 +1,16 @@
 <header class="header">
   <div class="content-container">
-    {% block logo %}
-      {% include '@logo' %}
-    {% endblock %}
-    
-    {% include '@link' with {
+    {% render '@logo' %}
+
+
+    {% render '@link' with {
       link: "#",
       text: "search",
       modifier: "search--link",
       title: "search"
     } %}
-    
-    {% include '@search' with {
+
+    {% render '@search' with {
       label: header_search_label,
       search_id: header_search_id,
       placeholder: header_search_placeholder,
@@ -20,21 +19,17 @@
       modifier_submit: header_search_modifier_submit
     } %}
 
-    {% block menu %}
-      {% include '@mijn-gent-block' with {
-        items: mijn_gent_block_items,
-        auth: mijn_gent_block_auth
-      } %}
-    {% endblock %}
+    {% render '@mijn-gent-block' with {
+      items: mijn_gent_block_items,
+      auth: mijn_gent_block_auth
+    } %}
   </div>
 
-  {% include '@breadcrumbs' with {
+  {% render '@breadcrumbs' with {
     items: breadcrumbs_items,
     id: breadcrumbs_id
   } %}
 
   <hr/>
 
-  {% block hero %}
-  {% endblock %}
 </header>

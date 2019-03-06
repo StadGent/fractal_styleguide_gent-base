@@ -17,12 +17,12 @@
               {% endif %}
 
               {% if item.images|length > 1 %}
-                {% include '@image-gallery--multiple' with {
+                {% render '@image-gallery--multiple' with {
                   type: 'secondary',
                   items: item.images
                 } %}
                 {% elseif item.images|length > 0  %}
-                  {% include '@image-gallery' with {
+                  {% render '@image-gallery' with {
                     type: 'secondary',
                     src: item.images|first.src,
                     alt: item.images|first.alt,
@@ -31,18 +31,18 @@
                 {% endif %}
 
                 {% if item.description %}
-                  {% include '@paragraph' with {
+                  {% render '@paragraph' with {
                     'text': item.description
                   } %}
                 {% endif %}
 
                 {% if item.video %}
-                  {% include '@video' with item.video %}
+                  {% render '@video' with item.video %}
                 {% endif %}
               {% endset %}
 
               <!-- Modal -->
-              {% include "@modal" with {
+              {% render "@modal" with {
                 id: key,
                 title: item.title,
                 content: modalContent,
@@ -55,7 +55,7 @@
               {% set key = slotKey ~ itemKey %}
 
                 <!-- Teaser -->
-                {% include '@teaser' with {
+                {% render '@teaser--teaser--simple' with {
                   type: 'teaser-programme',
                   modifier: 'teaser--inverted',
                   teaser_uid: 'uid_' ~ key,
@@ -66,7 +66,8 @@
                   image_src: item.images|first.src,
                   image_alt_text: item.images|first.alt,
                   image_ratio: '8:5',
-                  image_placeholders: true
+                  image_placeholders: true,
+                  published_date: false
                 } %}
                 <!-- /Teaser -->
             {% endfor %}

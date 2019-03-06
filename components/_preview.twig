@@ -16,11 +16,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.2.0/css/ol.css" type="text/css">
     <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
     <link media="all" rel="stylesheet" href="{{ '/css/styleguide.css'| path }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~'/apple-touch-icon.png')|path }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~ '/favicon-32x32.png')|path }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~ '/favicon-16x16.png')|path }}">
-    <link rel="manifest" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~ '/site.webmanifest')|path }}">
-    <link rel="mask-icon" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~ '/safari-pinned-tab.svg')|path }}" color="{{ scheme.hex }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~'/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~ '/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~ '/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~ '/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ ('/styleguide/img/favicon/build/' ~ scheme.color ~ '/safari-pinned-tab.svg') }}" color="{{ scheme.hex }}">
     <meta name="msapplication-TileColor" content="{{ scheme.hex }}">
     <meta name="theme-color" content="{{ scheme.hex }}">
 
@@ -41,7 +41,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="cs--{{ scheme.color }}">
-    {% include '@skiplink' %}
+    {% render '@skiplink' %}
 
     <div id="main-content">
       {% block content %}
@@ -67,25 +67,23 @@
 
 
     <!--  scripts -->
-    <script type="text/javascript" src="{{ '/styleguide/vendor/baguettebox/src/baguetteBox.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/vendor/imagesloaded/imagesloaded.pkgd.min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/vendor/masonry-layout/dist/masonry.pkgd.min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/vendor/allietabs/allieTabs.min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/accordion.functions-min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/menu.functions-min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/checkbox_filter.functions-min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/modal.functions-min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/opening-hours-month-widget.functions-min.js'|path }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/vendor/baguettebox/src/baguetteBox.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/vendor/imagesloaded/imagesloaded.pkgd.min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/vendor/masonry-layout/dist/masonry.pkgd.min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/vendor/allietabs/allieTabs.min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/accordion.functions-min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/menu.functions-min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/checkbox_filter.functions-min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/modal.functions-min.js' }}"></script>
 
     <!--  JS bindings -->
     <script type="text/javascript" src="{{ '/styleguide/js/image-collections.bindings-min.js' | path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/image-wall.bindings-min.js' | path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/accordion.bindings-min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/menu.bindings-min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/checkbox_filter.bindings-min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/filter.bindings-min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/modal.bindings-min.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/opening-hours-month-widget.bindings-min.js'|path }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/accordion.bindings-min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/menu.bindings-min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/checkbox_filter.bindings-min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/filter.bindings-min.js' }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/js/modal.bindings-min.js' }}"></script>
 
   </body>
 </html>

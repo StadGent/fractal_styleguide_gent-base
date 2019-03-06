@@ -8,7 +8,13 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Updated 
 
-* Changed yarn engine requirements to a `^1.12.0`
+* Changed yarn engine requirements to a `^1.12.0`.
+* Component templates are now included with the `render` tag. More info: [frctl/twig](https://github.com/frctl/twig#included-tags).
+* Resolved all dependency vulnerabilities.
+
+### Removed 
+
+* Contact box component.
 
 ## [3.0.0-beta1]
 

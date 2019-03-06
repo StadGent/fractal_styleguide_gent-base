@@ -3,11 +3,12 @@
   <div class="overlay"></div>
   <div class="drawer" tabindex="-1">
     <div class="header">
-      {% include '@logo' %}
+      {% render '@logo' %}
       <button class="close">{{ 'Close menu' }}</button>
     </div>
-    {% include '@list' with {
-      'type': 'links'
+    {% render '@list' with {
+      type: 'links',
+      items: items
     } %}
   </div>
 </nav>

@@ -1,5 +1,5 @@
 <div class='form-row'>
-  {% include '@form-item' with {
+  {% render '@form-item' with {
     label: 'Postal code',
     id: 'postal-code_id',
     input_component: 'input',
@@ -10,7 +10,7 @@
     name: 'postal-code_name',
     stacked: true
   } %}
-  {% include '@form-item' with {
+  {% render '@form-item' with {
     label: 'Municipality',
     id: 'municipality_id',
     input_component: 'input',

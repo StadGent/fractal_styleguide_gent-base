@@ -6,7 +6,7 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@frctl/fractal": "^1.1.7",
-    "@frctl/twig": "https://github.com/tnottu/fractal-twig-adapter.git",
+    "@frctl/twig": "^1.0.0-beta.5",
     "fs-extra": "^7.0.1",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",

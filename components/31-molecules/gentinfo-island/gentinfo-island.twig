@@ -2,18 +2,19 @@
   <div class="gentinfo-block-content">
     <h2 class="visually-hidden">Gentinfo</h2>
 
-    {% include '@image' with {
-      src: '/styleguide/img/svg/gentinfo-logo.svg'|path,
+    {% render '@image' with {
+      src: '/styleguide/img/svg/gentinfo-logo.svg',
       modifier: 'gentinfo-logo',
-      alt_text: 'Gentinfo'
+      alt_text: 'Gentinfo',
+      ratio: false
     } %}
 
-    {% include '@paragraph'
+    {% render '@paragraph'
       with {
         'text': 'Gentinfo is available from Monday till Saturday from 08:00 till 19:00'
       }
     %}
-    {% include '@list'
+    {% render '@list'
       with {
         'type': 'icon-list',
         'icon_items': [
@@ -24,5 +25,5 @@
       }
     %}
   </div>
-  {% include '@button' with { 'text': 'Chat with Gentinfo', 'type': 'primary', 'modifier': 'gentinfo-chat-button button icon-chat-round' } %}
+  {% render '@button' with { 'text': 'Chat with Gentinfo', 'type': 'primary', 'modifier': 'gentinfo-chat-button button icon-chat-round' } %}
 </div>
