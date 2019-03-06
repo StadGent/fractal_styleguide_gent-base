@@ -4,7 +4,7 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
-## [Unreleased]
+## [3.0.0-beta1]
 
 ### Added
 
@@ -33,15 +33,14 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
     * Logo component hidden in style guide.
     
 * DTGB-607: Changed font-size for boxes to `16px` (a.k.a. `.8rem`)
-
 * DTGB-629: Updated text alignment for boxes on detail pages.
 * DTGB-697: Updated hover animation for links.
 
- ### Removed
+### Removed
 
- * DTGB-677: Form steps.
- * DTGB-683: Frequently visited.
- * DTGB-683: Filter placeholder.
+* DTGB-677: Form steps.
+* DTGB-683: Frequently visited.
+* DTGB-683: Filter placeholder.
 
 ## [3.0.0-alpha11]
 
@@ -444,6 +443,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.11...3.0.0-beta1
 [3.0.0-alpha11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.10...3.0.0-alpha11
 [3.0.0-alpha.10]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.9...3.0.0-alpha.10
 [3.0.0-alpha.9]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.8...3.0.0-alpha.9
