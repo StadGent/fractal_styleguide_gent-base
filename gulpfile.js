@@ -263,7 +263,7 @@ gulp.task('js:dist', () => {
       suffix: '-min'
     }))
     .pipe(babel({
-      presets: ['env', 'es2015']
+      presets: ['@babel/preset-env']
     }))
     .pipe(gulp.dest('./public/styleguide/js/'));
 });
@@ -281,7 +281,7 @@ gulp.task('js:build', gulp.parallel(
         suffix: '-min'
       }))
       .pipe(babel({
-        presets: ['env', 'es2015']
+        presets: ['@babel/preset-env']
       }))
       .pipe(uglify())
       .pipe(gulp.dest('./build/styleguide/js/'));
