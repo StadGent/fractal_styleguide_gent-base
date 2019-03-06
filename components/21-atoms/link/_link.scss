@@ -89,10 +89,6 @@ a {
 
       background-color: transparent;
     }
-
-    &::after {
-      vertical-align: middle;
-    }
   }
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back),
@@ -110,10 +106,6 @@ a {
   ///
   &[download]:not(.no-icon) {
     @include icon(download, after);
-
-    &::after {
-      vertical-align: -25%;
-    }
   }
 
   ///
@@ -121,10 +113,6 @@ a {
   ///
   &[href^="mailto:"]:not(.no-icon) {
     @include icon(envelope, after);
-
-    &::after {
-      vertical-align: -25%;
-    }
   }
 
   ///
@@ -132,10 +120,6 @@ a {
   ///
   &[href^="tel:"]:not(.no-icon) {
     @include icon(phone, after);
-
-    &::after {
-      vertical-align: -25%;
-    }
   }
 
   ///
@@ -145,16 +129,8 @@ a {
   &[href^="https://"]:not(.no-icon) {
     @include icon(external-link, after);
 
-    &::after {
-      vertical-align: -25%;
-    }
-
     &[download]:not(.button):not(.no-icon) {
       @include icon(download, after);
-
-      &::after {
-        vertical-align: -25%;
-      }
     }
   }
 
