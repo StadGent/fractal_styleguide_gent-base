@@ -54,7 +54,7 @@
   },
   "resolutions": {
     "**/cli": "^1.0.0",
-    "**/uglify-js": "^2.6.0",
+    "sassdoc/**/uglify-js": "^2.6.0",
     "**/lodash": "^4.17.11",
     "**/braces": "^2.3.1",
     "gulp-iconfont/**/debug": "^3.1.0"
