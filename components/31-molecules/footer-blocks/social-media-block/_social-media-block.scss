@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   min-height: 2rem;
   margin-bottom: 1rem;
@@ -12,34 +12,32 @@
     margin-bottom: 0;
   }
 
+  @include desktop {
+    justify-content: flex-end;
+  }
+
   > span,
   > div {
-    width: 100%;
     margin-bottom: 1.2rem;
     font-size: .7rem;
     line-height: 1rem;
-    text-align: center;
 
     @include phablet {
       margin-bottom: 0;
     }
-
-    @include tablet {
-      margin: 0 1.4rem 0 0;
-      text-align: right;
-    }
   }
 
   > span {
+    flex-basis: 100%;
+    text-align: center;
+
     @include phablet {
-      width: span(5 of 12);
+      flex-basis: auto;
       text-align: right;
     }
-  }
 
-  > div {
-    @include phablet {
-      width: span(7 of 12);
+    @include tablet {
+      margin-right: 1.4rem;
     }
   }
 }

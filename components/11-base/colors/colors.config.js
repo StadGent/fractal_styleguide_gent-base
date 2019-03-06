@@ -1,9 +1,6 @@
 'use strict';
 
 module.exports = {
-  title: 'Colors',
-  status: 'ready',
-  handle: 'colors',
   context: {
     primary: {
       'cyan': '#009de0',

@@ -1,11 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Figure',
-  handle: 'figure',
   status: 'alpha',
-  preview: '@preview',
-  default: 'default',
   context: {
     figure_figcaption: 'Figure caption comes here.',
     figure_image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
@@ -13,9 +9,6 @@ module.exports = {
     figure_ratio: '8:5'
   },
   variants: [
-    {
-      name: 'default'
-    },
     {
       name: 'hero',
       context: {

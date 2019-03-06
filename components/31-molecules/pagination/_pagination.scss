@@ -35,10 +35,10 @@
     li.active {
       padding-right: .4rem;
       padding-left: .4rem;
+      background: none;
       font-size: .8rem;
       font-weight: 600;
       line-height: 1.2;
-      text-decoration: none;
 
       @include phablet {
         padding-right: 1rem;
@@ -98,7 +98,7 @@
 
     .next {
       a {
-        @extend %a-bounce-animation;
+        @extend %a-arrow-animation;
         @include icon(arrow-right, after);
 
         padding-right: 0;
@@ -112,7 +112,7 @@
 
     .previous {
       a {
-        @extend %a-bounce-animation--left;
+        @extend %a-arrow-animation--left;
         @include icon(arrow-left, after);
 
         flex-direction: row-reverse;

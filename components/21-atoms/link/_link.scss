@@ -1,20 +1,15 @@
-$link-padding: .3em;
+$link-padding: .2em;
 
 %a,
 a {
   @include theme('color', 'color-primary', 'link-color');
+  @include link-background('color-primary--lighten-4', 'link-background-color');
 
-  padding: $link-padding;
-  transition: background-color .1s ease-in-out;
+  padding: $link-padding 0;
+  border-radius: border-radius('radius-1');
   font-weight: 600;
-  text-decoration: underline;
-
-  &:focus,
-  &:hover {
-    @include theme('background-color', 'color-primary--lighten-4', 'link-hover-background');
-    @include theme('color', 'color-primary--darken-2', 'link-hover-color');
-    border-radius: border-radius('radius-1');
-  }
+  text-decoration: none;
+  word-wrap: break-word;
 
   &:focus {
     outline: thin dotted;
@@ -27,7 +22,12 @@ a {
     // Overrule flex for IE
     align-items: flex-start;
     padding-top: .6em;
-    text-decoration: none;
+    background: none;
+
+    &::before,
+    &::after {
+      line-height: 1.4em;
+    }
 
     &:not([class*="icon"]) {
       @include button-icon;
@@ -68,13 +68,12 @@ a {
     }
   }
 
+  &::before,
   &::after {
     transition: margin .1s ease-in;
     font-size: 1.5em;
     line-height: 1em;
-    // For IE purposes first set underline, then remove it.
-    text-decoration: underline;
-    vertical-align: text-bottom;
+    vertical-align: -25%;
   }
 
   &:not(.button)::after {
@@ -82,29 +81,12 @@ a {
   }
 
   ///
-  /// Styling of:
-  ///   - standalone links
-  ///   - links with an icon class on them
-  ///   - links that go to an external source
-  ///
-  &.standalone-link,
-  &[download]:not(.button),
-  &[class^="icon-"],
-  &[href^="http://"],
-  &[href^="https://"] {
-    display: inline-flex;
-    align-items: center;
-  }
-
-  ///
   /// Stand alone links.
   ///
   &.standalone-link:not(.no-icon) {
-    @include icon(arrow-right, after);
-
     margin-left: 0;
     padding-left: 0;
-    text-decoration: none;
+    background: none;
 
     &:focus,
     &:hover {
@@ -116,21 +98,12 @@ a {
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back),
   &.button:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]) {
-    @extend %a-bounce-animation;
+    @extend %a-arrow-animation;
   }
 
-  &[href^="mailto:"]:not(.button),
-  &[href^="tel:"]:not(.button),
-  &[download]:not(.button),
-  &[href^="http://"]:not(.button),
-  &[href^="https://"]:not(.button) {
-    display: inline;
 
-    &::after {
-      display: inline-block;
-      text-decoration: none;
-      overflow: hidden; // Hides text decoration underline.
-    }
+  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back) {
+    @include icon(arrow-right, after);
   }
 
   ///
@@ -167,9 +140,10 @@ a {
   }
 
   &.back:not(.no-icon) {
-    @extend %a-bounce-animation--left;
+    @extend %a-arrow-animation--left;
     @include icon(fancyback, after);
 
+    display: inline-flex;
     flex-direction: row-reverse;
     padding-left: 0;
 
@@ -181,7 +155,7 @@ a {
   }
 }
 
-%a-bounce-animation {
+%a-arrow-animation {
   &::after,
   &::before {
     padding-right: .2rem;
@@ -191,7 +165,7 @@ a {
   &:hover {
     &::after,
     &::before {
-      animation: bounce 1s 2;
+      animation: arrow 1s 2;
 
       // Animation causes pointer flickering in IE.
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
@@ -200,7 +174,7 @@ a {
     }
   }
 
-  @keyframes bounce {
+  @keyframes arrow {
     0% {
       padding-right: .2rem;
       padding-left: 0;
@@ -218,12 +192,12 @@ a {
   }
 }
 
-%a-bounce-animation--left {
+%a-arrow-animation--left {
   &:focus,
   &:hover {
     &::after,
     &::before {
-      animation: bounce-left 1s 2;
+      animation: arrow-left 1s 2;
 
       // Animation causes pointer flickering in IE.
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
@@ -232,7 +206,7 @@ a {
     }
   }
 
-  @keyframes bounce-left {
+  @keyframes arrow-left {
     0% {
       padding-right: .2rem;
       padding-left: .4rem;
@@ -272,7 +246,7 @@ a {
       /// Stand alone links.
       ///
       &.standalone-link:not(.no-icon) {
-        @extend %a-bounce-animation;
+        @extend %a-arrow-animation;
         @include icon(arrow-right, after);
       }
     }
@@ -282,7 +256,7 @@ a {
     &[href^="http://"]:not(.no-icon),
     &[href^="https://"]:not(.no-icon) {
       &[href*="stad.gent"]:not(.no-icon) {
-        @extend %a-bounce-animation;
+        @extend %a-arrow-animation;
         @include icon(arrow-right);
 
         &::after {

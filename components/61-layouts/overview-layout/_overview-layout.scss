@@ -1,0 +1,30 @@
+.overview-page {
+  position: relative;
+
+  // Center accolade on the header for overview pages.
+  header.header nav.breadcrumb .content-container {
+    &::after,
+    &::before {
+      width: calc(50% + #{$gutter-width} +  1px);
+
+      @include desktop {
+        width: calc(50% + 1px);
+      }
+    }
+  }
+}
+
+.overview-layout {
+  @extend %content-container;
+  margin-bottom: 4rem;
+
+  .intro {
+    margin-bottom: 2rem;
+    font-size: .9rem;
+  }
+
+  > .full-width,
+  > .gentinfo {
+    @include full-width;
+  }
+}

@@ -1,10 +1,11 @@
 {% extends "_form-item--fieldset.template.twig" %}
+
+{% set modalTitle = label %}
+{% if label_optional %}
+  {% set modalTitle = modalTitle ~ '<span class="label-optional">(' ~ label_optional ~ ')</span>' %}
+{% endif %}
+
 {% set modalContent %}
-  <h3>{{ label }}
-    {% if label_optional %}
-      <span class="label-optional">({{ label_optional }})</span>
-    {% endif %}
-  </h3>
   <div class="checkbox-filter__selected"></div>
   <div class="form-item">
     <label for="checkboxes__filter_id_{{ modifier }}">Filter the list
@@ -53,6 +54,7 @@
 {% block options %}
   {% include "@modal" with {
     id: 'modal' ~ modifier,
+    title: modalTitle,
     classes: 'checkbox-filter__modal',
     cancelClasses: 'checkbox-filter__close',
     modifier: 'fixed-height',

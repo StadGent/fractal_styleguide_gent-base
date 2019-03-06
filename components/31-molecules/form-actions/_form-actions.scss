@@ -1,5 +1,6 @@
 .form-actions {
   display: flex;
+  align-items: center;
 
   > * {
     margin-right: $gutter-width;

@@ -29,7 +29,7 @@ figure {
         right: 0;
         width: span(4 wide of 12);
         max-width: 23rem;
-        height: calc(100% - 1.6rem);
+        height: calc(100% - 1.6rem + 1px); // 1px to fix rendering issues
         margin: 0;
         text-align: center;
         z-index: 1;
@@ -87,17 +87,6 @@ figure {
             bottom: 0;
             border-top-left-radius: border-radius('radius-5');
           }
-        }
-      }
-
-      ~ figcaption {
-        left: 0;
-        width: 100%;
-        max-width: none;
-        background-color: color('white');
-
-        @media (min-width: $bp-max-content) {
-          width: auto;
         }
       }
 
@@ -263,6 +252,24 @@ figure {
         // IE error fix
         right: -1px;
         left: calc(#{$span} + 2rem + ((100% - #{$bp-max-content}) / 2));
+      }
+    }
+
+    &:not(.hero--subsite) .subsite ~ figcaption { /// @deprecated
+      left: 0;
+      width: 100%;
+      max-width: none;
+      background-color: color('white');
+
+      @media (min-width: $bp-max-content) {
+        width: auto;
+      }
+    }
+
+    &--subsite {
+      &::before,
+      &::after {
+        width: 100%;
       }
     }
   }

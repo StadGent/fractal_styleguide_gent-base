@@ -1,8 +1,48 @@
 # Footer
 
+## When to use this component
+
+All websites and all pages must include the footer.
+
+The footer should be used **as is**.
+
+**See the specific requirements for the City of Ghent website and for separate websites below.**
+
+## How it works
+
+The footer component is the last visible component on every page. The position of the footer is fixed on the page.
+
+The footer is fully responsive and shows the same content and functionalitiy on all  screen resolutions.
+
+The footer component contains the following elements:
+
+* Gentinfo contact information (fixed)
+* Useful links (fixed)
+* Postal address (fixed)
+* Social media links (fixed)
+* Mention of Digipolis (fixed)
+
+The Gentinfo contact information in itself contains the following fixed elements:
+
+* A spot illustration (fixed)
+* The Gentinfo typologo (fixed)
+* Introduction to Gentinfo (fixed)
+* Gentinfo telephone number with tel-link (fixed)
+* Gentinfo e-mail address with mailto-link (fixed)
+* Link to the Gentinfo contact form (fixed)
+* Chat function (fixed)
+
+**Specific requirements for the City of Ghent website and for separate websites are listed below.**
+
 ## Requirements
 
 ### City of Ghent website
+
+The footer on the City of Ghent website should always be used **as is**. The elements, style, layout and content in the footer **cannot be changed in anyway**.
+
+In the examples the footer component is shown as it should be included in different languages.
+
+Other requirements:
 
 * The footer on the City of Ghent website and on pages within City of Ghent themes should always stay the same.
 * The footer always refers to the City of Ghent in a general level.
@@ -21,7 +61,7 @@
         * The chat function ("Chat with Gentinfo") can be omitted. This is a functional decision specific for the separate website.
         * The language button that opens the popup with links to the other language versions can be omitted if this is not necessary or not applicable for the separate website.
             * In the popup with links to the other language versions, there can also be more or less language versions depending on which languages are or aren't supported by the separate website.
-    * The postal address, Gentinfo block, social media links and mention of Digipolis cannot be altered, this should stay the same als on the City of Ghent website and City of Ghent themes.
+    * The postal address, Gentinfo contact information, social media links and mention of Digipolis cannot be altered, this should stay the same als on the City of Ghent website and City of Ghent themes.
 * The links in the footer always refer to the same web pages.
 * The social media links always refer to the social media pages of the City of Ghent in a general level.
 

@@ -3,9 +3,9 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-var publicRootPath = path.resolve(__dirname, '../public');
-var nodeModulesRootPath = path.resolve(__dirname, '../node_modules');
-var componentsRootPath = path.resolve(__dirname, '../components');
+const nodeModulesRootPath = path.resolve(require.resolve('fs-extra'), '../../../'); // get the node_modules folder location
+const publicRootPath = path.resolve(__dirname, '../public');
+const componentsRootPath = path.resolve(__dirname, '../components');
 
 /*
 * Create the necessary directories and move files to them after npm install or yarn install is run.

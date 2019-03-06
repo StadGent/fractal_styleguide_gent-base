@@ -2,10 +2,9 @@
   display: flex;
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  box-shadow: $box-shadow-primary color('dark-gray', -4, true);
   visibility: hidden;
   z-index: 997;
   overflow-y: auto;
@@ -21,6 +20,22 @@
     }
   }
 
+  // modifiers
+  &--fixed-height {
+    > .modal-inner {
+      max-height: 80vh;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: 80vh; // IE fix
+      }
+
+      > .modal-content {
+        flex-grow: 1;
+        overflow-y: auto;
+      }
+    }
+  }
+
   // children
   &-inner {
     display: flex;
@@ -30,31 +45,19 @@
     flex-direction: column;
     width: 100%;
     min-height: 100%;
+    margin: 0 auto;
+    background-clip: content-box;
     background-color: color('white');
     z-index: 999;
+    filter: drop-shadow(0 2px 8px #{color('dark-gray', -4, true)});
 
     @include tablet {
       right: 0;
-      width: 80vw;
       max-width: $bp-max-content * .8;
       height: auto;
       min-height: 0;
-      margin: 10vh auto $gutter-width;
-    }
-  }
-
-  // modifiers
-  &--fixed-height {
-    > .modal-inner {
-      height: 100%;
-
-      @include tablet {
-        height: 80vh;
-      }
-
-      > .modal-content {
-        overflow-y: auto;
-      }
+      margin: 10vh auto 0;
+      padding-bottom: $gutter-width;
     }
   }
 
@@ -108,7 +111,7 @@
   /// Actions
   ///
   &-actions {
-    @include theme('border-color', 'color-primary--lighten-4', 'checkbox-with-filter-action-border-bottom');
+    @include theme('border-color', 'color-primary--lighten-4', 'modal-action-border-bottom');
 
     display: flex;
     flex-shrink: 0;
@@ -126,7 +129,7 @@
   ///
   /// Overlay
   ///
-  &-overlay {
+  .modal-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -139,7 +142,7 @@
     &,
     &:hover,
     &:focus {
-      @include theme('background-color', 'color-primary--darken-3', 'checkbox-with-filter-overlay-background-color');
+      @include theme('background-color', 'color-primary--darken-3', 'modal-overlay-background-color');
     }
   }
 }

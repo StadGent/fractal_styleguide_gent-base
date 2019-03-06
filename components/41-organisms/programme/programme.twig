@@ -10,8 +10,6 @@
             {% for itemKey, item in slot.items %}
               {% set key = slotKey ~ itemKey %}
               {% set modalContent %}
-
-              <h3>{{ item.title }}</h3>
               <h4>{{ slot.title }}</h4>
 
               {% if item.subtitle %}
@@ -46,6 +44,7 @@
               <!-- Modal -->
               {% include "@modal" with {
                 id: key,
+                title: item.title,
                 content: modalContent,
                 classes: 'programme-detail'
               } %}

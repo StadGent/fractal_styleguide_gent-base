@@ -1,0 +1,83 @@
+{% include '@header' with {
+"mijn_gent_block_items": [
+"<a href='javascript:(void);'>Mijn profiel</a>",
+"<a href='javascript:(void);'>Nieuwsbrieven</a>",
+"<a href='javascript:(void);'>Historiek</a>"
+],
+"mijn_gent_block_auth": "true",
+"header_search_id": "header-search",
+"header_search_label": "Search",
+"header_search_placeholder": "Search",
+"header_search_text": "Search",
+"breadcrumbs_items": [
+"<a href='https://stad.gent'>Stad.gent</a>",
+"<a href='#'>Overview</a>",
+"<a href='#'>Theme</a>",
+"<a href='#'>Subpage</a>",
+"<span>Page title</span>"
+]
+} %}
+
+<main class="news-overview-page">
+  <section class="overview-layout">
+    {% block news_overview_content %}
+      {% include '@heading' with {
+        "type": "overview-title",
+        "heading_text": "News and events"
+      } %}
+
+      <h2 class="visually-hidden">Overview</h2>
+      <ul class="grid-3">
+        {% for key, article in articles %}
+          {% if article.event_date %}
+            {% include '@teaser' with {
+              "type": 'teaser-article',
+              "teaser_uid": article.teaser_uid ~ loop.index,
+              "paragraph_text": article.paragraph_text,
+              "title": article.title,
+              "event_date": {
+                "text_1": article.text_1,
+                "datetime_1": article.datetime_1,
+                "text_2": article.text_2,
+                "datetime_2": article.datetime_2
+              },
+              "teaser_datetime": article.teaser_datetime,
+              "link_text": article.link_text,
+              "link": article.link,
+              "image_src": article.image_src ~ '?random=' ~ key,
+              "image_alt_text": article.image_alt_text,
+              "tag": article.tag,
+              "label_text": article.label_text
+            } %}
+          {% else %}
+          {% include '@teaser' with {
+            "type": 'teaser-article',
+            "teaser_uid": article.teaser_uid ~ loop.index,
+            "paragraph_text": article.paragraph_text,
+            "title": article.title,
+            "published_date": article.published_date,
+            "teaser_datetime": article.teaser_datetime,
+            "link_text": article.link_text,
+            "link": article.link,
+            "image_src": article.image_src ~ '?random=' ~ key,
+            "image_alt_text": article.image_alt_text,
+            "tag": article.tag
+          } %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      {% include '@pagination' with {
+        total: 20,
+        active: 4
+      }%}
+
+    {% endblock %}
+
+    {% include '@gentinfo' %}
+  </section>
+</main>
+
+<footer>
+  {% include '@footer' %}
+</footer>

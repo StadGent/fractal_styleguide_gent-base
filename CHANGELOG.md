@@ -4,6 +4,44 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta1]
+
+### Added
+
+* DTGB-552: Spinner.
+* DTGB-680: Form-row.
+* DTGB-673: Added Gent Info component.
+* DTGB-621: Modal component in molecules tree (i.e. this component isn't hidden anymore).
+* DTGB-673: Added Gent Info component.
+* DTGB-678: Form-disclaimer.
+* DTGB-677: Wizard steps.
+* DTGB-172: Component documentation.
+
+### Updated 
+
+* DTGB-676: Exposed modal open and close functions.
+* DTGB-665: Refactored pages to only show layouts. This shouldn't affect any
+  custom projects.
+* DTGB-621: Cross-browser behavior of the modal component.
+* DTGB-621: Focus management of the modal component.
+* DTGB-659: Changed tablet breakpoint from `769px` to `768px`.
+* DTGB-675: Refactoring of some components:
+
+    * Fonts description changed.
+    * Label component hidden in style guide.
+    * Field message component hidden in style guide.
+    * Logo component hidden in style guide.
+    
+* DTGB-607: Changed font-size for boxes to `16px` (a.k.a. `.8rem`)
+* DTGB-629: Updated text alignment for boxes on detail pages.
+* DTGB-697: Updated hover animation for links.
+
+### Removed
+
+* DTGB-677: Form steps.
+* DTGB-683: Frequently visited.
+* DTGB-683: Filter placeholder.
+
 ## [3.0.0-alpha11]
 
 ### Added
@@ -23,6 +61,14 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-604: removed font-size increase on +1920px screens
 * DTGB-660: Added gentinfo logo to the gentinfo-island.
 
+### Changed
+
+* DTGB-648: Refactored form fields
+
+### Removed
+
+* DTGB-648: Field description (replaced by variant of field message)
+
 ## [3.0.0-alpha.10]
 
 ### Added
@@ -36,15 +82,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Changed
 * DTGB-641: Refactored filter template to display filter button next to result instead of above it
-* DTGB-648: Refactored form fields
 
 ### Fixed
 
 * DTGB-635: Fixed missing scroll lock on mobile menu.
-
-### Removed
-
-* DTGB-635: Field description (replaced by variant of field message)
 
 ## [3.0.0-alpha.9]
 
@@ -402,6 +443,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.11...3.0.0-beta1
 [3.0.0-alpha11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.10...3.0.0-alpha11
 [3.0.0-alpha.10]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.9...3.0.0-alpha.10
 [3.0.0-alpha.9]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.8...3.0.0-alpha.9
