@@ -24,6 +24,11 @@ a {
     padding-top: .6em;
     background: none;
 
+    &::before,
+    &::after {
+      line-height: 1.4em;
+    }
+
     &:not([class*="icon"]) {
       @include button-icon;
       @include icon(arrow-right);
