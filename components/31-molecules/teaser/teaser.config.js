@@ -52,11 +52,11 @@ module.exports = {
       name: 'teaser--simple',
       hidden: true,
       context: {
-        event_date: false,
-        tag: false,
-        tag2: false,
-        telephone: false,
-        label_text: false
+        event_date: null,
+        tag: null,
+        tag2: null,
+        telephone: null,
+        label_text: null
       }
     },
     {
