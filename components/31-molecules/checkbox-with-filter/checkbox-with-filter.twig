@@ -49,7 +49,7 @@
   </button>
 {% endset %}
 
-<fieldset class="form-item {{ modifier }} checkbox-filter">
+<fieldset class="form-item {{ modifier }} {{ stacked ? 'stacked' : '' }} checkbox-filter">
   <legend>
     {{ label }}
     {% if label_optional %}
