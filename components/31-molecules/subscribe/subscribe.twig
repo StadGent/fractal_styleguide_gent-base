@@ -1,15 +1,15 @@
 <form class="form subscribe">
-  {% include '@label' with {
+  {% render '@label' with {
   "label": label,
   "for": id,
   } %}
-  {% include '@input' with {
+  {% render '@input' with {
     'id': id,
     'type': 'email',
     'name': id,
     'required': true
   } %}
-  {% include '@input-submit' with {
+  {% render '@input-submit' with {
   'value': text,
   } %}
 </form>

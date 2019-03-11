@@ -1,5 +1,5 @@
 <div class="document-box accordion">
-  {% include '@heading' with {
+  {% render '@heading' with {
     'type': 'h2',
     'heading_text': 'Documents'
   } %}
@@ -7,7 +7,7 @@
     {% for document in documents %}
       <li>
         {% block link %}
-          {% include '@file-download' with {
+          {% render '@file-download' with {
             link: 'javascript:(void);',
             text: document.text,
             file: {
@@ -33,7 +33,7 @@
     <ul class="links">
       {% for document in other_documents %}
         <li>
-          {% include '@file-download' with {
+          {% render '@file-download' with {
             link: 'javascript:(void);',
             text: document.text,
             file: {

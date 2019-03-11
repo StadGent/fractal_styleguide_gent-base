@@ -1,4 +1,4 @@
-{% include '@header' with {
+{% render '@header' with {
 "mijn_gent_block_items": [
 "<a href='javascript:(void);'>Mijn profiel</a>",
 "<a href='javascript:(void);'>Nieuwsbrieven</a>",
@@ -21,7 +21,7 @@
 <main class="news-overview-page">
   <section class="overview-layout">
     {% block news_overview_content %}
-      {% include '@heading' with {
+      {% render '@heading' with {
         "type": "overview-title",
         "heading_text": "News and events"
       } %}
@@ -30,7 +30,7 @@
       <ul class="grid-3">
         {% for key, article in articles %}
           {% if article.event_date %}
-            {% include '@teaser' with {
+            {% render '@teaser--teaser--simple' with {
               "type": 'teaser-article',
               "teaser_uid": article.teaser_uid ~ loop.index,
               "paragraph_text": article.paragraph_text,
@@ -50,7 +50,7 @@
               "label_text": article.label_text
             } %}
           {% else %}
-          {% include '@teaser' with {
+          {% render '@teaser--teaser--simple' with {
             "type": 'teaser-article',
             "teaser_uid": article.teaser_uid ~ loop.index,
             "paragraph_text": article.paragraph_text,
@@ -67,17 +67,17 @@
         {% endfor %}
       </ul>
 
-      {% include '@pagination' with {
+      {% render '@pagination' with {
         total: 20,
         active: 4
       }%}
 
     {% endblock %}
 
-    {% include '@gentinfo' %}
+    {% render '@gentinfo' %}
   </section>
 </main>
 
 <footer>
-  {% include '@footer' %}
+  {% render '@footer' %}
 </footer>

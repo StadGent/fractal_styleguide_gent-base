@@ -1,5 +1,3 @@
-{% extends "_form-item--fieldset.template.twig" %}
-
 {% set modalTitle = label %}
 {% if label_optional %}
   {% set modalTitle = modalTitle ~ '<span class="label-optional">(' ~ label_optional ~ ')</span>' %}
@@ -24,7 +22,7 @@
   {% for category in options %}
     <div class="checkbox-filter__checkboxes">
       <h4 class="checkbox-filter__category">{{ category.title }}</h4>
-      {% include '@input' with {
+      {% render '@input' with {
         type: 'checkbox',
         id: category.value~"-"~modifier,
         label: 'Show all',
@@ -33,7 +31,7 @@
       } %}
 
       {% for item in category.items %}
-        {% include '@input' with {
+        {% render '@input' with {
           type: 'checkbox',
           label: item.label_checkbox,
           name: item.checkbox_name,
@@ -50,24 +48,50 @@
           data-target="{{ 'modal' ~ modifier }}">Confirm selection
   </button>
 {% endset %}
-{% block fieldset_class %}checkbox-filter{% endblock %}
-{% block options %}
-  {% include "@modal" with {
-    id: 'modal' ~ modifier,
-    title: modalTitle,
-    classes: 'checkbox-filter__modal',
-    cancelClasses: 'checkbox-filter__close',
-    modifier: 'fixed-height',
-    content: modalContent,
-    actions: modalActions
+
+<fieldset class="form-item {{ modifier }} {{ stacked ? 'stacked' : '' }} checkbox-filter">
+  <legend>
+    {{ label }}
+    {% if label_optional %}
+      <span class="label-optional">({{ label_optional }})</span>
+    {% endif %}
+  </legend>
+  {% render '@field-message' with {
+    "field_message": field_description,
+    "modifier": null
   } %}
-  <p class="checkbox-filter__count-wrapper hidden">
-    <strong><span class="checkbox-filter__count">0</span> {{ label_count }}
-      selected</strong>
-  </p>
-  <button type="button"
-          class="button button-secondary button-small checkbox-filter__open"
-          aria-controls="{{ 'modal' ~ modifier }}" aria-expanded="false">
-    Select ...
-  </button>
-{% endblock %}
+  <div class="form-columns">
+    <div class="form-item-column">
+      {% render "@modal" with {
+        id: 'modal' ~ modifier,
+        title: modalTitle,
+        classes: 'checkbox-filter__modal',
+        cancelClasses: 'checkbox-filter__close',
+        modifier: 'fixed-height',
+        content: modalContent,
+        actions: modalActions
+      } %}
+      <p class="checkbox-filter__count-wrapper hidden">
+        <strong><span class="checkbox-filter__count">0</span> {{ label_count }}
+          selected</strong>
+      </p>
+      <button type="button"
+              class="button button-secondary button-small checkbox-filter__open"
+              aria-controls="{{ 'modal' ~ modifier }}" aria-expanded="false">
+        Select ...
+      </button>
+    </div>
+    <div class="form-item-column">
+      {% if modifier == 'error' %}
+        {% render '@field-message' with {
+          "modifier": "error"
+        } %}
+      {% endif %}
+      {% if modifier == 'success' %}
+        {% render '@field-message' with {
+          "modifier": "success"
+        } %}
+      {% endif %}
+    </div>
+  </div>
+</fieldset>

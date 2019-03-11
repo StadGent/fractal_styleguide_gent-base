@@ -1,4 +1,4 @@
 <div class="cta-block--multiple">
-  {% include 'cta-block.twig' with items[0]|merge({'top' : true}) %}
-  {% include 'cta-block.twig' with items[1]|merge({'top' : true}) %}
+  {% render '@cta-block' with items[0]|merge({'top' : true}) %}
+  {% render '@cta-block' with items[1]|merge({'top' : true}) %}
 </div>

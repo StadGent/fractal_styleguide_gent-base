@@ -1,14 +1,14 @@
 <div class="contact-block box-left {% if tel %}tel{% endif %}{% if email %}mail{% endif %}">
   <div class="inner-box">
     {%  if title %}
-      {% include '@heading' with {
+      {% render '@heading' with {
         'type': 'h2',
         'heading_text': title
       } %}
     {% endif %}
 
     {% if description %}
-      {% include '@paragraph' with {
+      {% render '@paragraph' with {
         'text': description
       } %}
     {% endif %}
@@ -16,7 +16,7 @@
     <ul class="links">
       {% if tel %}
         <li>
-          {% include '@link' with {
+          {% render '@link' with {
             'text': 'Call '~tel,
             'link': 'tel:'~tel,
             'modifier': 'button button-primary'
@@ -25,7 +25,7 @@
       {% endif %}
       {% if email %}
         <li>
-          {% include '@link' with {
+          {% render '@link' with {
             'text': 'Send an email to '~email,
             'link': 'mailto:'~email,
             'modifier': 'button button-primary'
@@ -34,7 +34,7 @@
       {% endif %}
       {% if link %}
         <li>
-          {% include '@link' with {
+          {% render '@link' with {
             'text': 'Check all contact details',
             'link': '#'
           } %}

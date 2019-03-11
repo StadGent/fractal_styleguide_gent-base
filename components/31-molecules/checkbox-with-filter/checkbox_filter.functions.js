@@ -132,7 +132,7 @@
      * A Gent styleguide class to create a tabTrap.
      * @type {TabTrap}
      */
-      // eslint-disable-next-line no-undef
+    // eslint-disable-next-line no-undef
     const tabTrap = new gent_styleguide.TabTrap(modal);
 
     /**

@@ -1,12 +1,12 @@
 <div class="contact-details box-top {{ modifier }}">
   <div class="inner-box">
-    {% include '@heading' with {
+    {% render '@heading' with {
       'type': 'h2',
       'heading_text': 'Contact details'
     } %}
 
     <div class="contact-details-column">
-      {% include '@list'
+      {% render '@list'
         with {
           'type': 'icon-list',
           'icon_items': [
@@ -23,9 +23,10 @@
 
     <div class="contact-details-column">
       <div class="image-wrapper" data-ratio="1:1">
-        {% include '@image' with {
+        {% render '@image' with {
           'src': 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
           'alt_text': 'Person avatar',
+          'ratio': null
         } %}
       </div>
     </div>

@@ -27,12 +27,12 @@
       <div class="top">
         {% set contactshown = true %}
         <div class="contact">
-          {% include '@heading' with {
+          {% render '@heading' with {
           'type': 'h3',
           'heading_text': 'Contact'~ ' ' ~ theme
           } %}
 
-          {% include '@list'
+          {% render '@list'
           with {
           'type': 'icon-list',
           'icon_items': iconlist
@@ -43,12 +43,12 @@
     <div class="bottom">
       {% if contact and contactshown|default(false) == false %}
         <div class="contact">
-          {% include '@heading' with {
+          {% render '@heading' with {
           'type': 'h3',
           'heading_text': 'Contact'~ ' ' ~ theme
           } %}
 
-          {% include '@list'
+          {% render '@list'
           with {
           'type': 'icon-list',
           'icon_items': iconlist
@@ -58,23 +58,23 @@
       {% if newsletter %}
         <div class="newsletter box-left">
           <div class="inner-box">
-            {% include '@heading' with {
+            {% render '@heading' with {
             'type': 'h3',
             'heading_text': 'Subscribe to the newsletter of'~ ' ' ~ theme
             } %}
 
-            {% include '@paragraph' with {
+            {% render '@paragraph' with {
             'text': 'Receive the most important mobility news in your mailbox.'
             } %}
 
-            {% include '@subscribe' with {
+            {% render '@subscribe' with {
             label: 'Email address',
             text: 'Subscribe',
             id: 'subscribe' ~ newsletter.uid,
             name: 'subscribe'
             } %}
 
-            {% include '@link' with {
+            {% render '@link' with {
               'link': 'javascript:(void);',
               'text': 'View the list and subscribe to one of our newsletters',
               'modifier': 'standalone-link'
@@ -84,11 +84,11 @@
       {% endif %}
       {% if social %}
         <div class="social">
-          {% include '@heading' with {
+          {% render '@heading' with {
           'type': 'h3',
           'heading_text': 'Follow this theme site on social media'
           } %}
-          {% include '@social-list' %}
+          {% render '@social-list' %}
         </div>
       {% endif %}
     </div>

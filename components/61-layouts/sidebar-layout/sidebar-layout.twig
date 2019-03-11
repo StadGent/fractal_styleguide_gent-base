@@ -1,4 +1,4 @@
-{% include '@header' with {
+{% render '@header' with {
 "mijn_gent_block_items": [
 "<a href='javascript:(void);'>Mijn profiel</a>",
 "<a href='javascript:(void);'>Nieuwsbrieven</a>",
@@ -19,12 +19,12 @@
 } %}
 
 <main class="filter-page">
-  {% include '@filter' with {
+  {% render '@filter' with {
     'checkboxes': checkboxes,
     'results': teasers
   }%}
 </main>
 
 <footer>
-  {% include '@footer' %}
+  {% render '@footer' %}
 </footer>

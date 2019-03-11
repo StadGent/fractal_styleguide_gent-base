@@ -1,46 +1,46 @@
 <div class="help-block box-no-icon">
-  {% include '@heading' with {
+  {% render '@heading' with {
     'type': 'h2',
     'heading_text': 'How can we help you further?'
   } %}
 
   <div class="help-block-section">
-    {% include '@heading' with {
+    {% render '@heading' with {
       'type': 'h3',
       'heading_text': '1. Maybe you were looking for this?'
     } %}
-    {% include '@link' with {
+    {% render '@link' with {
       'link': 'javascript:(void);',
       'text': 'Filip Watteeuw',
       'modifier': 'standalone-link'
     } %}
-    {% include '@paragraph' with {
+    {% render '@paragraph' with {
       'text': 'Donec condimentum morbi et mollis ultrices eleifend a montes ante ad morbi est ad eleifend ullamcorper. Sapien tristique lectus integer ac condimentum orci nunc quisque',
     } %}
-    {% include '@link' with {
+    {% render '@link' with {
       'link': 'javascript:(void);',
       'text': 'This is another link',
       'modifier': 'standalone-link'
     } %}
-    {% include '@paragraph' with {
+    {% render '@paragraph' with {
     'text': 'Donec condimentum morbi et mollis ultrices eleifend a montes ante ad morbi est ad eleifend ullamcorper.',
     } %}
-    {% include '@link' with {
+    {% render '@link' with {
       'link': 'javascript:(void);',
       'text': 'And a third link',
       'modifier': 'standalone-link'
     } %}
-    {% include '@paragraph' with {
+    {% render '@paragraph' with {
     'text': 'Donec condimentum morbi et mollis ultrices eleifend a montes ante ad morbi est ad eleifend ullamcorper. Sapien tristique lectus integer ac condimentum orci nunc quisque',
     } %}
   </div>
 
   <div class="help-block-section">
-    {% include '@heading' with {
+    {% render '@heading' with {
       'type': 'h3',
       'heading_text': '2. Try to find the page through our search function:'
     } %}
-    {% include '@search' with {
+    {% render '@search' with {
       'text': 'Search!',
       'for': 'search_field_403',
       'search_id': 'search_field_403'
@@ -48,14 +48,14 @@
   </div>
 
   <div class="help-block-section">
-    {% include '@heading' with {
+    {% render '@heading' with {
       'type': 'h3',
       'heading_text': '3. Continue to navigate from here?'
     } %}
-    {% include '@paragraph' with {
+    {% render '@paragraph' with {
       'text': 'This can be done in several ways:',
     } %}
-    {% include '@list' with {
+    {% render '@list' with {
       'type': 'icon-list',
       'icon_items': [
         '<i class="icon-home" aria-hidden="true"></i><span>Return to the <a href="javascript:(void);" alt="Homepage">homepage</a></span>',

@@ -1,12 +1,12 @@
 <form class="form search">
   {% if label %}
-    {% include '@label' with {
+    {% render '@label' with {
     "label": label,
     "for": for,
     "label_optional": label_optional
     } %}
   {% endif %}
-  {% include '@input' with {
+  {% render '@input' with {
   'type': 'search',
   'placeholder': placeholder,
   'modifier': modifier_search,
@@ -14,7 +14,7 @@
   'name': search_id,
   'required': true
   } %}
-  {% include '@input-submit' with {
+  {% render '@input-submit' with {
   'value': text,
   'modifier': modifier_submit
   } %}

@@ -4,6 +4,18 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta2]
+
+### Updated 
+
+* Changed yarn engine requirements to a `^1.12.0`.
+* Component templates are now included with the `render` tag. More info: [frctl/twig](https://github.com/frctl/twig#included-tags).
+* Resolved all dependency vulnerabilities.
+
+### Removed 
+
+* Contact box component.
+
 ## [3.0.0-beta1]
 
 ### Added
@@ -443,7 +455,8 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
-[3.0.0-beta1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.11...3.0.0-beta1
+[3.0.0-beta2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta1...3.0.0-beta2
+[3.0.0-beta1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha11...3.0.0-beta1
 [3.0.0-alpha11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.10...3.0.0-alpha11
 [3.0.0-alpha.10]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.9...3.0.0-alpha.10
 [3.0.0-alpha.9]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.8...3.0.0-alpha.9

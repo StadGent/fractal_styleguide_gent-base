@@ -1,6 +1,6 @@
 <ul class="{{ grid }}">
   {% for i in 0..6 %}
-    {% include '@teaser' with {
+    {% render '@teaser--teaser--simple' with {
       "type": 'teaser-underlined',
       "paragraph_text": paragraph_text,
       "title": title,
