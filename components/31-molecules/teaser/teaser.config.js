@@ -15,7 +15,7 @@ module.exports = {
   },
   context: {
     image_ratio: '8:5',
-    paragraph_text: 'This is an example teaser. Other teasers are also possible but with fewer content for example. Have a look at teaser--example for instance.',
+    paragraph_text: 'This is an example teaser. Other teasers are also possible but with fewer content for example.',
     title: 'Teaser title text comes here.',
     published_date: 'Gepost op Zaterdag 7 januari 2019',
     link_text: 'read more',
@@ -46,6 +46,17 @@ module.exports = {
         link: '#',
         telephone: '0123456789',
         opening_hours_service: '2690'
+      }
+    },
+    {
+      name: 'teaser--simple',
+      hidden: true,
+      context: {
+        event_date: null,
+        tag: null,
+        tag2: null,
+        telephone: null,
+        label_text: null
       }
     },
     {

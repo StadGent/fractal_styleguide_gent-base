@@ -3,45 +3,47 @@
 
     <form action="#result">
       <div class="form-item">
-        {% include '@label' with {
+        {% render '@label' with {
           "label": "Name",
           "for": "id_name",
           "label_optional": "Optional"
         } %}
-        {% include '@input'
+        {% render '@input'
           with {
           "type": "text",
           "id": "id_name",
-          "name": "name"
+          "name": "name",
         } %}
       </div>
       <div class="form-item">
-        {% include '@label' with {
+        {% render '@label' with {
           "label": "Category",
           "for": "id_category",
           "label_optional": "Optional"
         } %}
-        {% include '@input'
+        {% render '@input'
           with {
           "type": "text",
           "id": "id_category",
           "name": "category"
         } %}
       </div>
-      {% include '@checkbox-with-filter'
+      {% render '@checkbox-with-filter'
         with {
         "label": "Activities",
         "label_optional": "Optional",
         "label_count": "activity(ies)",
-        "options": checkboxes
+        "options": checkboxes,
+        "field_description": null,
+        "stacked": true
       } %}
       <div class="form-item">
-        {% include '@label' with {
+        {% render '@label' with {
           "label": "Type",
           "for": "id_type",
           "label_optional": "Optional"
         } %}
-        {% include '@input'
+        {% render '@input'
           with {
           "type": "text",
           "id": "id_type",
@@ -52,7 +54,7 @@
 
     </form>
   {% endset %}
-  {% include "@modal" with {
+  {% render "@modal" with {
     id: 'filter',
     title: 'Filter the results',
     title_heading_level: 'h2',
@@ -61,12 +63,12 @@
   } %}
 
   <section class="content result-section" id="result">
-    {% include '@heading' with {
+    {% render '@heading' with {
       "type": "overview-title",
       "heading_text": "Filtercomponent"
     } %}
 
-    {% include '@readspeaker-button' %}
+    {% render '@readspeaker-button' %}
 
     <div class="selected-filters">
       <h2>You have selected:</h2>
@@ -91,7 +93,7 @@
 
     <ul class="filter__results">
       {% for key, result in results %}
-        {% include '@teaser--teaser--wide' with {
+        {% render '@teaser--teaser--wide' with {
           "image_ratio": result.image_ratio,
           "image_src": result.image_src,
           "image_alt_text": result.image_alt_text,
@@ -101,12 +103,16 @@
           "title": result.title,
           "link_text": result.link_text,
           "link": result.link,
-          "tag": result.tag
+          "tag": result.tag,
+          "tag2": null,
+          "address_location": null,
+          "address": null,
+          "list": null
         } %}
       {% endfor %}
     </ul>
 
-    {% include '@pagination' with {
+    {% render '@pagination' with {
       total: 20,
       active: 17
     }%}

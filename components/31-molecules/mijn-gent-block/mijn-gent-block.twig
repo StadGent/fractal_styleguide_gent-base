@@ -1,33 +1,41 @@
 <div class="mijn-gent-block accordion">
-  
+
   {% if auth == 'false' %}
-  
-  {% include '@link' with {
+
+  {% render '@link' with {
   'modifier': 'login-link',
   'link': 'javascript:(void);',
   'text': 'Aanmelden'
   } %}
-  
+
   {% else %}
-  
+
   <button aria-expanded="false"
           aria-controls="mijn_gent_content"
           class="toggle accordion--button">
-    {% include '@image' with { 'src': '/styleguide/img/stock/user_avatar.jpg'|path, 'alt_text': 'Username' } %}
+    {% render '@image' with {
+      'src': '/styleguide/img/stock/user_avatar.jpg',
+      'alt_text': 'Username',
+      'ratio': null
+    } %}
     <span>James M.</span>
   </button>
-  
+
   <div id="mijn_gent_content" class="accordion--content" aria-hidden="true" hidden>
     <article class="content">
-      {% include '@heading' with {
+      {% render '@heading' with {
         'type': 'h2',
         'heading_text': 'Mijn gent'
       } %}
       <section class="profile">
-        {% include '@image' with { 'src': '/styleguide/img/stock/user_avatar.jpg'|path, 'alt_text': 'Username' } %}
+        {% render '@image' with {
+          'src': '/styleguide/img/stock/user_avatar.jpg',
+          'alt_text': 'Username',
+          'ratio': null
+        } %}
         <div class="profile-info">
           <span>{{ 'John Doe' }}</span>
-          {% include 'link' with {
+          {% render '@link' with {
           'link': '#',
           'text': 'Show profile',
           'modifier': 'button button-primary button-small'
@@ -35,7 +43,7 @@
         </div>
       </section>
       <section>
-        {% include '@list' with {
+        {% render '@list' with {
         'type': 'unordered',
         'modifier': 'links',
         'items': [
@@ -46,12 +54,12 @@
         } %}
       </section>
       <section>
-        {% include '@heading' with {
+        {% render '@heading' with {
           'type': 'h2',
           'heading_text': 'Mijn gent'
         } %}
 
-        {% include '@list' with {
+        {% render '@list' with {
         'type': 'unordered',
         'modifier': 'links',
         'items': [
@@ -62,7 +70,7 @@
         } %}
       </section>
       <footer>
-        {% include '@link' with {
+        {% render '@link' with {
         'link': 'javascript:(void);',
         'modifier': 'button button-small button-secondary',
         'type': 'unordered',

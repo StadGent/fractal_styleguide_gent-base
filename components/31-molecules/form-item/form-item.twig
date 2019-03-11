@@ -6,19 +6,19 @@
   {% set describedBy = id ~ "-message" %}
 {% endif %}
 <div class="form-item {{ modifier ? ' ' ~ modifier : '' }}{{ stacked ? ' stacked' : '' }}">
-  {% include '@label' with {
+  {% render '@label' with {
     "label": label,
     "for": id,
     "label_optional": label_optional
   } %}
-  {% include '@field-message' with {
+  {% render '@field-message' with {
     "field_message": field_description,
     "modifier": null,
     "id": id ~ "-description"
   } %}
   <div class="form-columns">
     <div class="form-item-column">
-      {% include '@'~input_component with {
+      {% render '@'~input_component with {
         "id": id,
         "ariaDescribedBy": describedBy,
         "type": type,
@@ -27,7 +27,7 @@
     </div>
     <div class="form-item-column">
       {% if field_message %}
-        {% include '@field-message' with {
+        {% render '@field-message' with {
           "modifier": modifier,
           "id": id ~ "-message"
         } %}
