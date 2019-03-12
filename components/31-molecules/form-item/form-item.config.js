@@ -91,63 +91,6 @@ module.exports = {
       }
     },
     {
-      name: 'select',
-      context: {
-        id: 'select',
-        label: 'select',
-        input_component: 'select',
-        options: [
-          {
-            label: 'Option 1'
-          },
-          {
-            label: 'Option 2'
-          },
-          {
-            optgroup: true,
-            label: 'Option group',
-            optgroupoptions: [
-              {
-                label: 'Option 3'
-              },
-              {
-                label: 'Option 4'
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      name: 'multiselect',
-      context: {
-        id: 'multiselect',
-        label: 'multiselect',
-        input_component: 'select',
-        multiple: true,
-        options: [
-          {
-            label: 'Option 1'
-          },
-          {
-            label: 'Option 2'
-          },
-          {
-            optgroup: true,
-            label: 'Option group',
-            optgroupoptions: [
-              {
-                label: 'Option 3'
-              },
-              {
-                label: 'Option 4'
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       name: 'file',
       context: {
         id: 'input-file',

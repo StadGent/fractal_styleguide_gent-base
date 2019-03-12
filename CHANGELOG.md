@@ -11,6 +11,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-684: Separate `checkboxes` component.
 * DTGB-684: Separate `radios` component.
 
+### Updated
+
+* DTGB-684: Moved `select` to molecules and have it use the `form-item` component.
+
 ### Removed
 
 * DTGB-684: Dark button variant.
