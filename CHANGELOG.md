@@ -6,7 +6,11 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
-## Removed
+### Added
+
+* DTGB-684: Separate `checkboxes` component.
+
+### Removed
 
 * DTGB-684: Dark button variant.
 

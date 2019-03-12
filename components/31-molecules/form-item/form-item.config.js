@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  label: 'Input',
   status: 'beta',
   context: {
     label: 'input-text',
@@ -172,27 +173,6 @@ module.exports = {
             label: 'Radio option 2',
             name: 'radiogroup-error',
             id: 'radio-error-2'
-          }
-        ]
-      }
-    },
-    {
-      name: 'checkbox',
-      context: {
-        id: 'input-checkbox',
-        input_component: 'input',
-        type: 'checkbox',
-        label: 'Checkboxes',
-        options: [
-          {
-            label: 'checkbox option 1',
-            name: 'checkboxgroup-error',
-            id: 'checkbox-error-1'
-          },
-          {
-            label: 'checkbox option 2',
-            name: 'checkboxgroup-error',
-            id: 'checkbox-error-2'
           }
         ]
       }
