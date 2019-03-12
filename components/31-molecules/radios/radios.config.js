@@ -1,0 +1,41 @@
+'use strict';
+
+module.exports = {
+  context: {
+    id: 'input-radio',
+    label: 'radio buttons',
+    field_description: 'You can add an optional field description here.',
+    options: [
+      {
+        label: 'Radio option 1',
+        name: 'radiogroup-error',
+        id: 'radio-error-1'
+      },
+      {
+        label: 'Radio option 2',
+        name: 'radiogroup-error',
+        id: 'radio-error-2'
+      }
+    ]
+  },
+  variants: [
+    {
+      name: 'with-error',
+      context: {
+        id: 'input_text--error',
+        label: 'input-text',
+        modifier: 'error',
+        field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
+      }
+    },
+    {
+      name: 'with-success',
+      context: {
+        id: 'input-text--success',
+        label: 'input-text',
+        modifier: 'success',
+        field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
+      }
+    }
+  ]
+};

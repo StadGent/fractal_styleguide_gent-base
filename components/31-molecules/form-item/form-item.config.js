@@ -155,27 +155,6 @@ module.exports = {
         input_component: 'input',
         type: 'file'
       }
-    },
-    {
-      name: 'radio',
-      context: {
-        id: 'input-radio',
-        label: 'radio buttons',
-        input_component: 'input',
-        type: 'radio',
-        options: [
-          {
-            label: 'Radio option 1',
-            name: 'radiogroup-error',
-            id: 'radio-error-1'
-          },
-          {
-            label: 'Radio option 2',
-            name: 'radiogroup-error',
-            id: 'radio-error-2'
-          }
-        ]
-      }
     }
   ]
 };

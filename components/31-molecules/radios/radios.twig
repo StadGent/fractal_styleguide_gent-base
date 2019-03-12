@@ -12,9 +12,9 @@
   <div class="form-columns">
     <div class="form-item-column">
       {% for option in options %}
-        {% render '@'~input_component with {
-          "id": input_component ~ "-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
-          "type": type,
+        {% render '@input' with {
+          "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+          "type": "radio",
           "name": option.name,
           "label": option.label
         } %}

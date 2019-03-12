@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Added
 
 * DTGB-684: Separate `checkboxes` component.
+* DTGB-684: Separate `radios` component.
 
 ### Removed
 

@@ -15,7 +15,7 @@
     <div class="form-item-column">
       {% for option in options %}
         {% render '@input' with {
-          "id": input_component ~ "-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+          "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
           "type": 'checkbox',
           "name": option.name,
           "label": option.label
