@@ -22,7 +22,8 @@ const eslint = require('gulp-eslint');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const uglify = require('gulp-uglify');
-const npm = require('npm');
+const npmLogin = require('npm-cli-login');
+const spawn = require('child_process').spawn;
 const bump = require('gulp-bump');
 const inject = require('gulp-inject');
 const yargs = require('yargs');
@@ -374,7 +375,6 @@ gulp.task('fractal:build', () => {
  * Publish to the NPM public registry.
  */
 gulp.task('publish:npm', (callback) => {
-  let metadata = require('./package.json');
   const argv = yargs
     .options({
       username: {
@@ -404,52 +404,11 @@ gulp.task('publish:npm', (callback) => {
     .alias('help', 'h')
     .argv;
 
-  const username = argv.username;
-  const password = argv.password;
-  const email = argv.email;
-
-  const uri = 'http://registry.npmjs.org/';
-
-  npm.load(null, (loadError) => {
-    if (loadError) {
-      return callback(loadError);
-    }
-    const auth = {
-      username: username,
-      password: password,
-      email: email,
-      alwaysAuth: true
-    };
-    const addUserParams = {
-      auth: auth
-    };
-
-    npm.registry.adduser(uri, addUserParams, (addUserError, data, raw, res) => {
-      if (addUserError) {
-        return callback(addUserError);
-      }
-      metadata = JSON.parse(JSON.stringify(metadata));
-      npm.commands.pack([], (packError) => { // eslint-disable-line max-nested-callbacks
-        if (packError) {
-          return callback(packError);
-        }
-        const fileName = metadata.name + '-' + metadata.version + '.tgz';
-        const bodyPath = require.resolve('./' + fileName);
-        const body = fs.createReadStream(bodyPath);
-        const publishParams = {
-          metadata: metadata,
-          access: 'public',
-          body: body,
-          auth: auth
-        };
-        npm.registry.publish(uri, publishParams, (publishError, resp) => { // eslint-disable-line max-nested-callbacks
-          if (publishError) {
-            return callback(publishError);
-          }
-          return callback(`Publish succesfull: ${JSON.stringify(resp, undefined, 2)}`); // eslint-disable-line no-undefined
-        });
-      });
-    });
+  npmLogin(argv.username, argv.password, argv.email);
+  var cmd = spawn('npm', ['publish'], {stdio: 'inherit'});
+  cmd.on('close', function (code) {
+    console.log('Published successful (code ' + code + ')');
+    callback(code);
   });
 });
 
