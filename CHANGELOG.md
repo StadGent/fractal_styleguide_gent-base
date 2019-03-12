@@ -14,6 +14,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * DTGB-684: Moved `select` to molecules and have it use the `form-item` component.
+* DTGB-684: Moved `form` to organisms.
 
 ### Removed
 

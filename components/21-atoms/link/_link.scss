@@ -62,10 +62,6 @@ a {
     &.button-alert {
       @extend %button-alert;
     }
-
-    &.button-dark {
-      @extend %button-dark;
-    }
   }
 
   &::before,

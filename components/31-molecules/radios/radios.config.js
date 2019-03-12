@@ -4,7 +4,6 @@ module.exports = {
   context: {
     id: 'input-radio',
     label: 'radio buttons',
-    field_description: 'You can add an optional field description here.',
     options: [
       {
         label: 'Radio option 1',
@@ -25,6 +24,7 @@ module.exports = {
         id: 'input_text--error',
         label: 'input-text',
         modifier: 'error',
+        field_description: 'You can add an optional field description here.',
         field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
       }
     },
@@ -34,6 +34,7 @@ module.exports = {
         id: 'input-text--success',
         label: 'input-text',
         modifier: 'success',
+        field_description: 'You can add an optional field description here.',
         field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
       }
     }
