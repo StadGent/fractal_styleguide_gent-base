@@ -1,6 +1,6 @@
-.wizard-steps {
-
-  ol {
+.form-steps,
+.wizard-steps { /// @deprecated
+  & ol {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -51,7 +51,7 @@
           background-color: transparent;
 
           &::before {
-            @include theme('border-color', 'color-primary--darken-1', 'wizard-step--active-border-color');
+            @include theme('border-color', 'color-primary--darken-1', 'form-step--active-border-color');
           }
         }
 
@@ -62,8 +62,8 @@
 
       a::before,
       > span::before {
-        @include theme('border-color', 'color-primary--lighten-5', 'wizard-step--active-border-color');
-        @include theme('background-color', 'color-primary--lighten-5', 'wizard-step--active-border-color');
+        @include theme('border-color', 'color-primary--lighten-5', 'form-step--active-border-color');
+        @include theme('background-color', 'color-primary--lighten-5', 'form-step--active-border-color');
         @include theme('color', 'color-tertiary', 'default-text-color');
 
         display: inline-flex;
@@ -81,34 +81,17 @@
         counter-increment: item;
       }
 
-      @include tablet {
-        &:not(:last-child)::after {
-          @include theme('border-color', 'color-primary--lighten-3', 'wizard-step--active-border-color');
-
-          display: inline-block;
-          width: .8rem;
-          margin: 0 .6rem;
-          border-bottom: 2px solid;
-          content: '';
-          vertical-align: middle;
-        }
-      }
-
       &.active {
         font-weight: 600;
 
         > span::before {
-          @include theme('border-color', 'color-primary--darken-1', 'wizard-step--active-border-color');
+          @include theme('border-color', 'color-primary--darken-1', 'form-step--active-border-color');
 
           background-color: transparent;
         }
       }
 
       &.completed:not(.active) {
-        position: relative;
-        min-height: 2rem;
-        padding-left: 2.8rem;
-
         a,
         > span {
           @include icon(checkmark, before);
@@ -116,8 +99,6 @@
 
         a::before,
         > span::before {
-          position: absolute;
-          left: 0;
           border-color: color('green', -3);
           background-color: color('green', -3);
           font-size: 1.5rem;
@@ -143,9 +124,9 @@
 
           &::before,
           &::after {
-            @include theme('border-color', 'color-primary--darken-2', 'wizard-step-hellip-background-color');
-            @include theme('background-color', 'color-primary--darken-2', 'wizard-step-hellip-background-color');
-            @include theme('color', 'color-secondary', 'wizard-step-hellip-color');
+            @include theme('border-color', 'color-primary--darken-2', 'form-step-hellip-background-color');
+            @include theme('background-color', 'color-primary--darken-2', 'form-step-hellip-background-color');
+            @include theme('color', 'color-secondary', 'form-step-hellip-color');
 
             display: inline-block;
             width: 2rem;
@@ -164,6 +145,42 @@
         &:nth-last-child(2)::after,
         &:last-child::after {
           content: none;
+        }
+      }
+    }
+  }
+
+  &:not(.vertical) ol {
+    @include tablet {
+      li:not(:last-child)::after {
+        @include theme('border-color', 'color-primary--lighten-3', 'form-step--active-border-color');
+
+        display: inline-block;
+        width: .8rem;
+        margin: 0 .6rem;
+        border-bottom: 2px solid;
+        content: '';
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &.vertical ol {
+    @include tablet {
+      flex-direction: column;
+
+      li {
+        margin-bottom: .6rem;
+
+        &:not(:last-child)::after {
+          @include theme('border-color', 'color-primary--lighten-3', 'form-step--active-border-color');
+
+          display: block;
+          width: 1rem;
+          height: .8rem;
+          margin: .6rem 0 0;
+          border-right: 2px solid;
+          content: '';
         }
       }
     }

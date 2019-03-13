@@ -51,7 +51,7 @@
 /// @require $bp-tablet
 ///
 @mixin tablet-and-below {
-  @include breakpoint(max-width $bp-tablet) {
+  @include breakpoint(max-width $bp-tablet - 1) {
     @content;
   }
 }
