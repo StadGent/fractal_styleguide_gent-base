@@ -12,6 +12,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-684: Separate `radios` component.
 * DTGB-688: Vertical variant for Form Steps.
 * DTGB-688: Wizard (as a variant for the Form organism).
+* DTGB-688: Multistep form (as a variant for the Form organism).
 
 ### Updated
 

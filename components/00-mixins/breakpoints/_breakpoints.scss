@@ -83,7 +83,7 @@
 /// @require $bp-mobile
 ///
 @mixin desktop-and-below {
-  @include breakpoint(max-width $bp-desktop) {
+  @include breakpoint(max-width $bp-desktop - 1) {
     @content;
   }
 }

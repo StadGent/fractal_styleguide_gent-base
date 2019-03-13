@@ -12,7 +12,7 @@
       margin-bottom: .8rem;
 
       &:not(:first-child):not(:last-child):not(.active) {
-        @include tablet-and-below {
+        @include desktop-and-below {
           // clip
           position: absolute;
           width: 1px;
@@ -29,7 +29,7 @@
 
       span > span,
       a > span {
-        @include tablet-and-below {
+        @include desktop-and-below {
           position: absolute;
           width: 1px;
           height: 1px;
@@ -113,7 +113,7 @@
         }
       }
 
-      @include tablet-and-below {
+      @include desktop-and-below {
         &.active {
           margin-bottom: 0;
 
@@ -151,7 +151,7 @@
   }
 
   &:not(.vertical) ol {
-    @include tablet {
+    @include desktop {
       li:not(:last-child)::after {
         @include theme('border-color', 'color-primary--lighten-3', 'form-step--active-border-color');
 
@@ -166,7 +166,7 @@
   }
 
   &.vertical ol {
-    @include tablet {
+    @include desktop {
       flex-direction: column;
 
       li {
