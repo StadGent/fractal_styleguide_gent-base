@@ -1,9 +1,10 @@
 .form-item {
   margin-bottom: 1rem;
+  max-width: 41rem;
 
   @include desktop {
     > .field-message {
-      max-width: span(6 of 12);
+      max-width: 50%;
     }
   }
 
@@ -19,7 +20,7 @@
         display: flex;
 
         .form-item-column {
-          width: span(6 of 12);
+          width: 50%;
 
           &:last-child {
             display: flex;
@@ -70,6 +71,8 @@
   }
 
   &.stacked {
+    max-width: 10.25rem;
+
     .form-columns {
       flex-wrap: wrap;
       margin-top: auto;
