@@ -71,6 +71,11 @@
     } %}
 
     <fieldset>
+      <legend>Form row</legend>
+      {% render '@form-row' %}
+    </fieldset>
+
+    <fieldset>
       <legend>Another fieldset</legend>
       {% render '@form-item' with {
         "label": "Label textfield",
