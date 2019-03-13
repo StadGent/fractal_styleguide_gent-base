@@ -1,19 +1,18 @@
 <div class="related-box">
   <div class="related-box-content">
-    {% render '@heading' with {
+    {% include '@heading' with {
       'type': 'h2',
       'heading_text': 'Also interesting'
     } %}
 
   {% if similar_articles %}
     <div class="related-box-content-column">
-        {% render '@heading' with {
+        {% include '@heading' with {
           'type': 'h3',
           'heading_text': 'Similar articles'
         } %}
 
-        {% render '@list'
-          with {
+        {% include '@list' with {
             'type': 'unordered',
             "items": [
               '<a href="javascript:(void);">Council meeting dates</a>',
@@ -26,7 +25,7 @@
       </div>
     {% endif %}
     <div class="related-box-content-column">
-      {% render '@heading' with {
+      {% include '@heading' with {
         'type': 'h3',
         'heading_text': 'More info about'
       } %}
@@ -35,7 +34,7 @@
         <ul class="related-box-tags">
           {% for tag in tags %}
             <li>
-              {% render '@tag' with {
+              {% include '@tag' with {
                 'tag_text': tag,
                 type: 'tag'
               } %}
@@ -43,17 +42,17 @@
           {% endfor %}
         </ul>
       {% else %}
-        {% render '@tag' with {
+        {% include '@tag' with {
           'tag_text': tags.0
         } %}
       {% endif %}
 
-      {% render '@heading' with {
+      {% include '@heading' with {
         'type': 'h3',
         'heading_text': 'Related Linked Open Data'
       } %}
 
-      {% render '@link' with {
+      {% include '@link' with {
         'link': 'https://stad.gent',
         'text': 'Lorem ipsum dolor set'
       } %}

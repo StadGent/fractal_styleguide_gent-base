@@ -729,8 +729,7 @@ gulp.task('sassdoc', () => {
   return gulp.src('./components/**/*.scss')
     .pipe(sassdoc({
       dest: 'public/sassdocs',
-      verbose: true,
-      theme: 'flippant'
+      verbose: true
     }));
 });
 

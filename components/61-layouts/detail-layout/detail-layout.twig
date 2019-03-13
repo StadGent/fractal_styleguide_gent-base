@@ -1,4 +1,4 @@
-{% render '@header--subsite-hero' with {
+{% include '@header--subsite-hero' with {
 "mijn_gent_block_items": [
 "<a href='javascript:(void);'>Mijn profiel</a>",
 "<a href='javascript:(void);'>Nieuwsbrieven</a>",
@@ -16,46 +16,46 @@
 "<a href='#'>Subpage</a>",
 "<span>Page title</span>"
 ],
-"hero_image_src": "/styleguide/img/stock/hero_blaarmeersen.jpg",
+"hero_image_src": "/styleguide/img/stock/hero_blaarmeersen.jpg" | path,
 "hero_image_description": "Caption text comes here."
 } %}
 
 <main class="info-page">
   <article class="detail-layout">
     {% block info_page_article_content %}
-      {% render '@heading' with {
+      {% include '@heading' with {
         'type': 'h1',
         'heading_text': 'Info page title'
       } %}
 
-      {% render '@readspeaker-button' %}
+      {% include '@readspeaker-button' %}
 
-      {% render '@summary-box' %}
+      {% include '@summary-box' %}
 
-      {% render '@paragraph' with {
+      {% include '@paragraph' with {
       "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus.",
       "modifier": "summary-text"
       } %}
 
-      {% render '@heading' with {
+      {% include '@heading' with {
         'type': 'h2',
         'heading_text': 'This is an H2 paragraph title'
       } %}
 
-      {% render '@paragraph' with {
+      {% include '@paragraph' with {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio. In id tellus ut ligula facilisis efficitur at vel urna. Vivamus iaculis felis non <strong>bold text</strong> tristique malesuada. Quisque venenatis, arcu sed luctus molestie, leo mauris commodo sem, eget <a href='https://stad.gent' alt='Stad Gent'>egestas orci</a> libero eu justo. Curabitur sollicitudin odio non vulputate tincidunt. Etiam vel dolor in massa dapibus bibendum sit amet vel ipsum. Donec sagittis, elit et hendrerit maximus, nulla tortor laoreet quam, id tincidunt massa neque a ex. Fusce suscipit, ipsum interdum elementum sodales, <a href='javascript:(void);' alt='Link'>tellus</a> sapien vehicula nisi, in condimentum neque nisl sit amet elit. Donec sed augue a elit sodales commodo pulvinar vitae nisl. Sed <a href='javascript:(void);' alt='File link' download>pharetra</a> ante non mollis consequat. Pellentesque a est neque. Nullam maximus ornare metus. Quisque porttitor turpis tristique faucibus efficitur."
       } %}
 
-      {% render '@heading' with {
+      {% include '@heading' with {
         'type': 'h3',
         'heading_text': 'This is an H3 paragraph title'
       } %}
 
-      {% render '@paragraph' with {
+      {% include '@paragraph' with {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio."
       } %}
 
-      {% render '@cta-block' with {
+      {% include '@cta-block' with {
         'type': 'link',
           'description': 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.',
         'links': [
@@ -72,16 +72,16 @@
         ]
       } %}
 
-      {% render '@heading' with {
+      {% include '@heading' with {
         'type': 'h4',
         'heading_text': 'This is an H4 paragraph title'
       } %}
 
-      {% render '@paragraph' with {
+      {% include '@paragraph' with {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio."
       } %}
 
-      {% render '@image-gallery--multiple' with {
+      {% include '@image-gallery--multiple' with {
         "items": [
           {
             "src": "https://loremflickr.com/735/459/ghent?random=1",
@@ -120,30 +120,29 @@
         ]
       } %}
 
-      {% render '@paragraph' with {
+      {% include '@paragraph' with {
       "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus."
       } %}
 
-      {% render '@image-gallery' with {
+      {% include '@image-gallery' with {
         "src": "https://loremflickr.com/735/459/ghent",
         "alt": "placeholder image alternative text",
         "caption": "image caption"
       } %}
 
-      {% render '@paragraph' with {
+      {% include '@paragraph' with {
       "text": "Quisque sollicitudin leo at erat sagittis aliquet. Nullam ipsum erat, aliquet vel scelerisque posuere, interdum vitae dolor. Morbi finibus nisi efficitur, laoreet risus id, mollis mauris. Donec eu interdum velit, at mattis leo. Suspendisse eget finibus diam. Aliquam condimentum nec elit a aliquam. Donec efficitur et enim et tempor. Vestibulum quis tempor purus. Cras id magna ante. Morbi nec purus vehicula, auctor erat eget, aliquet mi. Nam at ligula convallis, vestibulum ligula a, pretium tellus. Sed pretium vulputate iaculis."
       } %}
 
-      {% render '@quote' %}
+      {% include '@quote' %}
 
-      {% render '@paragraph' with {
+      {% include '@paragraph' with {
       "text": "Nam lorem ex, posuere non lectus tempus, ornare scelerisque mauris. Integer vitae tortor orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas enim lectus, malesuada in hendrerit in, vulputate ut enim. Integer pretium elit purus, ac pulvinar augue scelerisque quis. In velit elit, luctus vitae nunc quis, hendrerit congue felis. Nulla tincidunt tincidunt cursus. Mauris pretium eu ex id aliquet. Aenean massa metus, posuere ac dui sit amet, volutpat interdum libero."
       } %}
 
-      {% render '@contact-details' %}
+      {% include '@contact-details' %}
 
-      {% render '@list'
-        with {
+      {% include '@list' with {
         'type': 'unordered',
         "items": [
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
@@ -161,7 +160,7 @@
       }
       %}
 
-      {% render '@accordion--multiple' with {
+      {% include '@accordion--multiple' with {
         items: [
           {
             'buttonText': 'First item',
@@ -199,18 +198,18 @@
         ]
       } %}
 
-      {% render '@video' with {
+      {% include '@video' with {
       "title": "Promofilm stad Gent.",
       "src": "https://www.youtube.com/embed/S0vLmTWUmok",
       "audio_description_src": "https://www.youtube.com/embed/S0vLmTWUmok"
       } %}
 
-      {% render '@timeline' %}
+      {% include '@timeline' %}
     {% endblock %}
   </article>
 
   <aside class="top">
-    {% render '@document-box' with {
+    {% include '@document-box' with {
         unique_id: '1',
         documents: [
           {
@@ -248,7 +247,7 @@
         ]
       }
     %}
-    {% render '@related-box' with {
+    {% include '@related-box' with {
     'similar_articles': true,
     tags: [
     'Inner city',
@@ -256,17 +255,17 @@
     ]
     } %}
 
-    {% render '@extra-articles' with {
+    {% include '@extra-articles' with {
       title: 'More news and events'
     } %}
   </aside>
   <aside class="bottom">
-    {% render '@feedback-form' %}
+    {% include '@feedback-form' %}
   </aside>
 </main>
 
 <footer>
-  {% render '@theme-footer' %}
-  {% render '@footer' %}
+  {% include '@theme-footer' %}
+  {% include '@footer' %}
 </footer>
 

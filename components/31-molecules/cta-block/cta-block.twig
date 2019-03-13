@@ -1,14 +1,14 @@
 <div class="cta-block box-{{ top ? 'top' : 'left' }} {{ type }}">
   <div class="inner-box">
     {% if title %}
-      {% render '@heading' with {
+      {% include '@heading' with {
       'type': 'h2',
       'heading_text': title
       } %}
     {% endif %}
 
     {% if description %}
-      {% render '@paragraph' with {
+      {% include '@paragraph' with {
       'text': description
       } %}
     {% endif %}
@@ -35,7 +35,7 @@
         {% if links|length > 1 %}
         <li>
         {% endif %}
-          {% render '@file-download' with options %}
+          {% include '@file-download' with options %}
         {% if links|length > 1 %}
         </li>
         {% endif %}

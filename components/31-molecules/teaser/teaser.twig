@@ -21,7 +21,7 @@
       {% endif %}
 
       {% if paragraph_text %}
-        {% render '@paragraph' with {
+        {% include '@paragraph' with {
           'text': paragraph_text
         } %}
       {% endif %}
@@ -30,7 +30,7 @@
         <ul class="teaser-links">
           {% if telephone %}
             <li>
-              {% render '@link' with {
+              {% include '@link' with {
                 'text': telephone,
                 'link': 'tel:'~telephone,
                 'modifier': 'no-icon'
@@ -39,7 +39,7 @@
           {% endif %}
           {% if teaser_email %}
             <li>
-              {% render '@link' with {
+              {% include '@link' with {
                 'text': teaser_email,
                 'link': 'mailto:'~teaser_email,
                 'modifier': 'no-icon'
@@ -50,7 +50,7 @@
       {% endif %}
 
       {% if link %}
-        {% render '@link' with {
+        {% include '@link' with {
           'text': 'read more',
           'link': link,
           'modifier': 'read-more standalone-link',
@@ -68,7 +68,7 @@
 
       {% if image_src or image_placeholders %}
         <div class="figure-wrapper">
-          {% render '@figure' with {
+          {% include '@figure' with {
             figure_image_src: image_src,
             figure_image_alt_text: image_alt_text,
             figure_ratio: image_ratio
@@ -79,13 +79,13 @@
       {% endif %}
 
       {% if tag %}
-        {% render '@tag' with {
+        {% include '@tag' with {
           "tag_text": tag,
           "type": 'span-tag'
         } %}
       {% endif %}
       {% if tag2 %}
-        {% render '@tag' with {
+        {% include '@tag' with {
           "tag_text": tag2,
           "type": 'span-tag'
         } %}

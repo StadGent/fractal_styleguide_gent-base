@@ -17,12 +17,12 @@
               {% endif %}
 
               {% if item.images|length > 1 %}
-                {% render '@image-gallery--multiple' with {
+                {% include '@image-gallery--multiple' with {
                   type: 'secondary',
                   items: item.images
                 } %}
                 {% elseif item.images|length > 0  %}
-                  {% render '@image-gallery' with {
+                  {% include '@image-gallery' with {
                     type: 'secondary',
                     src: item.images|first.src,
                     alt: item.images|first.alt,
@@ -31,18 +31,18 @@
                 {% endif %}
 
                 {% if item.description %}
-                  {% render '@paragraph' with {
+                  {% include '@paragraph' with {
                     'text': item.description
                   } %}
                 {% endif %}
 
                 {% if item.video %}
-                  {% render '@video' with item.video %}
+                  {% include '@video' with item.video %}
                 {% endif %}
               {% endset %}
 
               <!-- Modal -->
-              {% render "@modal" with {
+              {% include "@modal" with {
                 id: key,
                 title: item.title,
                 content: modalContent,
@@ -55,7 +55,7 @@
               {% set key = slotKey ~ itemKey %}
 
                 <!-- Teaser -->
-                {% render '@teaser--teaser--simple' with {
+                {% include '@teaser' with {
                   type: 'teaser-programme',
                   modifier: 'teaser--inverted',
                   teaser_uid: 'uid_' ~ key,

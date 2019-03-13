@@ -1,32 +1,32 @@
 <main class="content-container">
-  {% render '@heading' with {
+  {% include '@heading' with {
     'type': 'h1',
     'heading_text': 'Form page'
   } %}
 
   <form action="#" method="#">
-    {% render '@heading' with {
+    {% include '@heading' with {
       'type': 'h2',
       'heading_text': 'Some title'
     } %}
 
-    {% render '@paragraph' with {
+    {% include '@paragraph' with {
       "text": "De verkiezingsshow 'Stem wijs' vindt plaats op woensdag 6 juni 2018 in Muziekcentrum De Bijloke (Bijlokekaai 7, 9000 Gent). Niet alleen de jury, maar ook het publiek kan die avond stemmen voor de beste spreker, die Gent zal vertegenwoordigen in Edinburgh."
     } %}
 
-    {% render '@heading' with {
+    {% include '@heading' with {
       'type': 'h3',
       'heading_text': 'Subscribe for the election show'
     } %}
 
-    {% render '@paragraph' with {
+    {% include '@paragraph' with {
       'text': 'All fields are required, unless they are marked as optional.',
       'modifier': 'form-disclaimer'
     } %}
 
     <fieldset>
       <legend>Contact details</legend>
-      {% render '@form-item' with {
+      {% include '@form-item' with {
         "label": "Name",
         "id": "name_id",
         "input_component": "input",
@@ -34,7 +34,7 @@
         "name": "name_name",
         "field_description": null
       } %}
-      {% render '@form-item' with {
+      {% include '@form-item' with {
         "label": "First name",
         "input_component": "input",
         "type": "text",
@@ -42,7 +42,7 @@
         "name": "firstname_name",
         "field_description": null
       } %}
-      {% render '@form-item'
+      {% include '@form-item'
         with {
         "label": "E-mail address",
         "for": "email_id",
@@ -52,7 +52,7 @@
         "name": "email_name",
         "field_description": null
       } %}
-      {% render '@form-item'
+      {% include '@form-item'
         with {
         "label": "Phone number",
         "for": "tel_id",
@@ -64,7 +64,7 @@
       } %}
     </fieldset>
 
-    {% render '@form-item--radio'
+    {% include '@form-item--radio'
       with {
       "input_component": "input",
       "type": "radio",
@@ -90,7 +90,7 @@
 
     <fieldset>
       <legend>Contact details</legend>
-      {% render '@form-item' with {
+      {% include '@form-item' with {
         "label": "Label textfield",
         "for": "textfield_id",
         "label_optional": "Optional",
@@ -102,7 +102,7 @@
         "id": "textfield_id",
         "name": "textfield_name"
       } %}
-      {% render '@form-item' with {
+      {% include '@form-item' with {
         "label": "Label textfield",
         "for": "textfield_id--1",
         "input_component": "input",
@@ -114,7 +114,7 @@
 
       <fieldset>
         <legend>Nested fieldset</legend>
-        {% render '@form-item' with {
+        {% include '@form-item' with {
           "label": "Label textfield",
           "for": "textfield_id--2",
           "input_component": "input",
@@ -123,7 +123,7 @@
           "name": "textfield_name--2",
           "field_description": null
         } %}
-        {% render '@form-item' with {
+        {% include '@form-item' with {
           "label": "Label textfield",
           "for": "textfield_id--3",
           "input_component": "input",
@@ -135,7 +135,7 @@
       </fieldset>
     </fieldset>
 
-    {% render '@form-item--checkbox'
+    {% include '@form-item--checkbox'
       with {
       "input_component": "input",
       "type": "checkbox",
@@ -150,11 +150,11 @@
       ]
     } %}
 
-    {% render '@form-actions' %}
+    {% include '@form-actions' %}
 
   </form>
 </main>
 
 <footer>
-  {% render '@footer' %}
+  {% include '@footer' %}
 </footer>

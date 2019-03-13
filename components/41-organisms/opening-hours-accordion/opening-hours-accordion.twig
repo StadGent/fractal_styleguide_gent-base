@@ -1,15 +1,15 @@
 <div class="opening-hours-accordion">
   <div class="opening-hours-accordion__item">
     <h3>Appointments</h3>
-    {% render '@day-widget' with {
+    {% include '@day-widget' with {
       open: true
     } %}
 
     {% set openingHoursMonth %}
-      {% render '@week-month-widget' %}
+      {% include '@week-month-widget' %}
     {% endset %}
 
-    {% render '@accordion' with {
+    {% include '@accordion' with {
       buttonText: 'All opening hours',
       content: openingHoursMonth
     } %}

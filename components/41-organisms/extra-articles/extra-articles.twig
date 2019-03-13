@@ -1,13 +1,13 @@
 <div class="extra-articles">
 
   <div class="extra-articles-content">
-    {% render '@heading' with {
+    {% include '@heading' with {
       'type': 'h2',
       'heading_text': title
     } %}
 
     <ul>
-      {% render '@teaser' with {
+      {% include '@teaser' with {
       "teaser_uid": "uid",
       "type": 'teaser-article',
       "paragraph_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cumque debitis eligendi harum iste laborum quibusdam ut, vitae voluptate?",
@@ -20,12 +20,12 @@
       "teaser_datetime": "2019-01-07",
       "link_text": "read more",
       "link": "#",
-      "image_src": "/styleguide/img/stock/teaser_2.jpg",
+      "image_src": "/styleguide/img/stock/teaser_2.jpg" | path,
       "image_alt_text": "alt text",
       "tag": "Just some tag"
       } %}
 
-      {% render '@teaser' with {
+      {% include '@teaser' with {
       "teaser_uid": "uid_1",
       "type": 'teaser-article',
       "paragraph_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias nihil quisquam ratione. Ab deserunt omnis quam quisquam quo repudiandae temporibus totam voluptates.",
@@ -35,7 +35,7 @@
       "teaser_datetime": "2019-01-07",
       "link_text": "read more",
       "link": "javascript:void(0);",
-      "image_src": "/styleguide/img/stock/teaser_1.jpg",
+      "image_src": "/styleguide/img/stock/teaser_1.jpg" | path,
       "image_alt_text": "alt text",
       "tag": "I'm another tag"
       } %}
