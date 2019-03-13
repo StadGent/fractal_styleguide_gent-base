@@ -12,7 +12,7 @@ module.exports = {
       {text: 'inactive sixth step'},
       {text: 'inactive seventh step'}
     ],
-    active: 1
+    active: 3
   },
 
   variants: [

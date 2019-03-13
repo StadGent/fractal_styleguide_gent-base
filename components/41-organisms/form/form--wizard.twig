@@ -1,0 +1,8 @@
+{% extends '@form' %}
+
+{% block content %}
+  {% render '@form-steps' with _context %}
+
+  <h2>Active step</h2>
+  {{ parent() }}
+{% endblock %}

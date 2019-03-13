@@ -10,11 +10,16 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * DTGB-684: Separate `checkboxes` component.
 * DTGB-684: Separate `radios` component.
+* DTGB-688: Vertical variant for Form Steps.
+* DTGB-688: Wizard (as a variant for the Form organism).
 
 ### Updated
 
 * DTGB-684: Moved `select` to molecules and have it use the `form-item` component.
 * DTGB-684: Moved `form` to organisms.
+* DTGB-688: Renamed 'Wizard Steps' to 'Form Steps'.
+
+    > :warning: The `wizard-steps` CSS class is now deprecated and will be removed in the next major version. Update it to `form-steps`.
 
 ### Removed
 
