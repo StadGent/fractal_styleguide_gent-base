@@ -42,8 +42,7 @@
         "name": "firstname_name",
         "field_description": null
       } %}
-      {% include '@form-item'
-        with {
+      {% include '@form-item' with {
         "label": "E-mail address",
         "for": "email_id",
         "input_component": "input",
@@ -52,8 +51,7 @@
         "name": "email_name",
         "field_description": null
       } %}
-      {% include '@form-item'
-        with {
+      {% include '@form-item' with {
         "label": "Phone number",
         "for": "tel_id",
         "input_component": "input",
@@ -64,8 +62,7 @@
       } %}
     </fieldset>
 
-    {% include '@form-item--radio'
-      with {
+    {% include '@form-item--radio' with {
       "input_component": "input",
       "type": "radio",
       "label": "Date",
@@ -135,8 +132,7 @@
       </fieldset>
     </fieldset>
 
-    {% include '@form-item--checkbox'
-      with {
+    {% include '@form-item--checkbox' with {
       "input_component": "input",
       "type": "checkbox",
       "label": "Newsletter",
