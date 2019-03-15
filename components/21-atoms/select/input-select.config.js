@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  status: 'beta',
+  hidden: true,
   context: {
     name: 'select_name',
     id: 'select_id',

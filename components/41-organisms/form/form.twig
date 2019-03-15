@@ -1,0 +1,143 @@
+<form action="#" method="#">
+
+  {% render '@paragraph' with {
+    'text': 'All fields are required, unless they are marked as optional.',
+    'modifier': 'form-disclaimer'
+  } %}
+
+  <fieldset>
+    <legend>Contact details</legend>
+    {% render '@form-item' with {
+      "label": "Name",
+      "id": "name_id",
+      "input_component": "input",
+      "type": "text",
+      "name": "name_name",
+      "field_description": null
+    } %}
+    {% render '@form-item' with {
+      "label": "First name",
+      "input_component": "input",
+      "type": "text",
+      "id": "firstname_id",
+      "name": "firstname_name",
+      "field_description": null
+    } %}
+    {% render '@form-item'
+      with {
+      "label": "E-mail address",
+      "for": "email_id",
+      "input_component": "input",
+      "type": "email",
+      "id": "email_id",
+      "name": "email_name",
+      "field_description": null
+    } %}
+    {% render '@form-item'
+      with {
+      "label": "Phone number",
+      "for": "tel_id",
+      "input_component": "input",
+      "type": "tel",
+      "id": "tel_id",
+      "name": "tel_name",
+      "field_description": null
+    } %}
+  </fieldset>
+
+  {% render '@radios--with-error' with {
+    "input_component": "input",
+    "type": "radio",
+    "label": "Date",
+    "field_description": null,
+    "options": [
+      {
+        "label": "Wednesday 6 june 2018",
+        "name": "radiogroup",
+        "id": "radio-1"
+      },
+      {
+        "label": "Thursday 7 june 2018",
+        "name": "radiogroup",
+        "id": "radio-2"
+      },
+      {
+        "label": "Friday 8 june 2018",
+        "name": "radiogroup",
+        "id": "radio-3"
+      }
+    ]
+  } %}
+
+  <fieldset>
+    <legend>Form row</legend>
+    {% render '@form-row' %}
+  </fieldset>
+
+  <fieldset>
+    <legend>Another fieldset</legend>
+    {% render '@form-item' with {
+      "label": "Label textfield",
+      "for": "textfield_id",
+      "label_optional": "Optional",
+      "input_component": "input",
+      "type": "text",
+      "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
+      "field_error": "",
+      "description": "Description textfield.",
+      "id": "textfield_id",
+      "name": "textfield_name",
+      "modifier": "error",
+      "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam."
+    } %}
+    {% render '@form-item' with {
+      "label": "Label textfield",
+      "for": "textfield_id--1",
+      "input_component": "input",
+      "type": "text",
+      "id": "textfield_id--1",
+      "name": "textfield_name--1",
+      "field_description": null
+    } %}
+
+    <fieldset>
+      <legend>Nested fieldset</legend>
+      {% render '@form-item' with {
+        "label": "Label textfield",
+        "for": "textfield_id--2",
+        "input_component": "input",
+        "type": "text",
+        "id": "textfield_id--2",
+        "name": "textfield_name--2",
+        "field_description": null
+      } %}
+      {% render '@form-item' with {
+        "label": "Label textfield",
+        "for": "textfield_id--3",
+        "input_component": "input",
+        "type": "text",
+        "id": "textfield_id--3",
+        "name": "textfield_name--3",
+        "field_description": null
+      } %}
+    </fieldset>
+  </fieldset>
+
+  {% render '@checkboxes'
+    with {
+    "input_component": "input",
+    "type": "checkbox",
+    "label": "Newsletter",
+    "id": "newsletter_id",
+    "options": [
+      {
+        "label": "Subscribe to the newsletter",
+        "name": "checkboxgroup",
+        "id": "checkbox-1"
+      }
+    ]
+  } %}
+
+  {% render '@form-actions' %}
+
+</form>

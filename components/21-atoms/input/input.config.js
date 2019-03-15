@@ -28,7 +28,7 @@ const types = [
 ];
 
 module.exports = {
-  status: 'beta',
+  hidden: true,
   default: 'text',
   context: {
     name: 'input_name',

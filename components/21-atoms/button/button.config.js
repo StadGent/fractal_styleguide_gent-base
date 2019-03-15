@@ -1,6 +1,6 @@
 'use strict';
 let previous;
-const types = ['primary', 'secondary', 'dark', 'alert', 'success'];
+const types = ['primary', 'secondary', 'alert', 'success'];
 const versions = [
   'button-small',
   'button-default',
