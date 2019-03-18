@@ -15,6 +15,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * DTGB-684: Moved `select` to molecules and have it use the `form-item` component.
 * DTGB-684: Moved `form` to organisms.
+* DTGB-707: Removed webkit datepicker up/down arrows.
 
 ### Removed
 

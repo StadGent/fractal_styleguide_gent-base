@@ -113,8 +113,7 @@ $field-icon-padding: 2.5rem;
     }
   }
 
-  &::-webkit-input-placeholder {
-    // sass-lint:disable-line no-vendor-prefixes
+  &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
     @include theme(
       "color",
       "color-tertiary--lighten-1",
@@ -124,8 +123,7 @@ $field-icon-padding: 2.5rem;
     font-weight: normal;
   }
 
-  &:-moz-placeholder {
-    // sass-lint:disable-line no-vendor-prefixes
+  &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
     @include theme(
       "color",
       "color-tertiary--lighten-1",
@@ -135,8 +133,7 @@ $field-icon-padding: 2.5rem;
     font-weight: normal;
   }
 
-  &::-moz-placeholder {
-    // sass-lint:disable-line no-vendor-prefixes
+  &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
     @include theme(
       "color",
       "color-tertiary--lighten-1",
@@ -146,8 +143,7 @@ $field-icon-padding: 2.5rem;
     font-weight: normal;
   }
 
-  &:-ms-input-placeholder {
-    // sass-lint:disable-line no-vendor-prefixes
+  &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
     @include theme(
       "color",
       "color-tertiary--lighten-1",
