@@ -22,7 +22,7 @@
   {% for category in options %}
     <div class="checkbox-filter__checkboxes">
       <h4 class="checkbox-filter__category">{{ category.title }}</h4>
-      {% render '@input' with {
+      {% include '@input' with {
         type: 'checkbox',
         id: category.value~"-"~modifier,
         label: 'Show all',
@@ -31,7 +31,7 @@
       } %}
 
       {% for item in category.items %}
-        {% render '@input' with {
+        {% include '@input' with {
           type: 'checkbox',
           label: item.label_checkbox,
           name: item.checkbox_name,
@@ -56,13 +56,13 @@
       <span class="label-optional">({{ label_optional }})</span>
     {% endif %}
   </legend>
-  {% render '@field-message' with {
+  {% include '@field-message' with {
     "field_message": field_description,
     "modifier": null
   } %}
   <div class="form-columns">
     <div class="form-item-column">
-      {% render "@modal" with {
+      {% include "@modal" with {
         id: 'modal' ~ modifier,
         title: modalTitle,
         classes: 'checkbox-filter__modal',
@@ -83,12 +83,12 @@
     </div>
     <div class="form-item-column">
       {% if modifier == 'error' %}
-        {% render '@field-message' with {
+        {% include '@field-message' with {
           "modifier": "error"
         } %}
       {% endif %}
       {% if modifier == 'success' %}
-        {% render '@field-message' with {
+        {% include '@field-message' with {
           "modifier": "success"
         } %}
       {% endif %}

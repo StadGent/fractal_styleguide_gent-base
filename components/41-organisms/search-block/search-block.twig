@@ -1,11 +1,11 @@
 <div class="search-block box-left">
   <div class="search-block-content">
-    {% render '@heading' with {
+    {% include '@heading' with {
       'type': 'h2',
       'heading_text': 'From here you can...'
     } %}
 
-    {% render '@list' with {
+    {% include '@list' with {
       'type': 'icon-list',
       'icon_items': [
         '<i class="icon-home" aria-hidden="true"></i><span>Return to the <a href="javascript:(void);" alt="Homepage">homepage</a></span>',
@@ -14,12 +14,12 @@
       ]
     } %}
 
-    {% render '@heading' with {
+    {% include '@heading' with {
       'type': 'h3',
       'heading_text': 'Are you looking for another page?'
     } %}
 
-    {% render '@search' with {
+    {% include '@search' with {
       'label': '',
       'text': 'Search!',
       'for': 'search_field_403',

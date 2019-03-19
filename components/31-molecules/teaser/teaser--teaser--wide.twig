@@ -5,13 +5,13 @@
       <h3>{{ title }}</h3>
 
       {% if tag %}
-        {% render '@tag' with {
+        {% include '@tag' with {
           "tag_text": tag,
           "type": 'span-tag'
         } %}
       {% endif %}
       {% if tag2 %}
-        {% render '@tag' with {
+        {% include '@tag' with {
           "tag_text": tag2,
           "type": 'span-tag'
         } %}
@@ -32,7 +32,7 @@
       {% endif %}
 
       {% if list %}
-        {% render '@list' with {
+        {% include '@list' with {
           'type': 'icon-list',
           'modifier': 'links inline',
           'icon_items': list
@@ -40,12 +40,12 @@
       {% endif %}
 
       {% if paragraph_text %}
-        {% render '@paragraph' with {
+        {% include '@paragraph' with {
           'text': paragraph_text
         } %}
       {% endif %}
 
-      {% render '@link' with {
+      {% include '@link' with {
         'text': link_text,
         'link': link,
         'modifier': 'read-more standalone-link',
@@ -57,7 +57,7 @@
     {% if image_src is defined %}
       <div class="content__first">
         <div class="figure-wrapper">
-          {% render '@figure' with {
+          {% include '@figure' with {
             "figure_image_src": image_src,
             "figure_ratio": '8:5'
           } %}

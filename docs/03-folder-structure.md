@@ -54,7 +54,7 @@ Two components - _alert_ and _CTA_ should both be displayed as a box with a back
 
 **cta.html.twig**
 ```twig
-{% render '@box' with _self.context %}
+{% include '@box' with _self.context %}
 ```
 
 **cta.config.js**
