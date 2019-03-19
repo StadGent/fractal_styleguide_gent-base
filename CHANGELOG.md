@@ -22,6 +22,9 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
     > :warning: The `wizard-steps` CSS class is now deprecated and will be removed in the next major version. Update it to `form-steps`.
 
+* DTGB-707: Removed webkit datepicker up/down arrows.
+* DTGB-708: Fixed button styling for iOS' Safari.
+
 ### Removed
 
 * DTGB-684: Dark button variant.
