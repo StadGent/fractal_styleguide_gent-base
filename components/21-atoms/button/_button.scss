@@ -181,5 +181,7 @@
 input[type="button"],
 input[type="submit"] {
   @include button;
+
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
 }
 
