@@ -1,8 +1,10 @@
 .form-item {
-  max-width: 41rem;
+  max-width: 20.5rem;
   margin-bottom: 1rem;
 
   @include desktop {
+    max-width: 41rem;
+
     > .field-message {
       max-width: 50%;
     }
@@ -71,7 +73,7 @@
   }
 
   &.stacked {
-    max-width: 10.25rem;
+    max-width: none;
 
     .form-columns {
       flex-wrap: wrap;
