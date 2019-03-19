@@ -29,6 +29,13 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * DTGB-684: Dark button variant.
 
+## [3.0.0-beta3]
+
+### Updated 
+
+* Reverted the `render` tag back to the default `include` tag.
+* Re-added path filters to fix asset paths for the generated static files.
+
 ## [3.0.0-beta2]
 
 ### Updated 

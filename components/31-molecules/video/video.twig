@@ -10,7 +10,7 @@
   </div>
   <div class="audio-description">
     {% if audio_description_src %}
-      {% render '@link' with {
+      {% include '@link' with {
         'link': audio_description_src,
         'text': 'Watch this video with audio description',
         'modifier': 'standalone-link',

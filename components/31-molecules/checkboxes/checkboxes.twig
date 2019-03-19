@@ -6,15 +6,16 @@
     {% endif %}
   </legend>
 
-  {% render '@field-message' with {
+  {% include '@field-message' with {
     "field_message": field_description,
+    "id": id ~ '-description',
     "modifier": null
   } %}
 
   <div class="form-columns">
     <div class="form-item-column">
       {% for option in options %}
-        {% render '@input' with {
+        {% include '@input' with {
           "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
           "type": 'checkbox',
           "name": option.name,
@@ -25,13 +26,15 @@
     </div>
     <div class="form-item-column">
       {% if modifier == 'error' %}
-        {% render '@field-message' with {
+        {% include '@field-message' with {
+          "id": id ~ '-validation',
           "modifier": "error"
         } %}
       {% endif %}
 
       {% if modifier == 'success' %}
-        {% render '@field-message' with {
+        {% include '@field-message' with {
+          "id": id ~ '-validation',
           "modifier": "success"
         } %}
       {% endif %}
