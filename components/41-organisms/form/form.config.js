@@ -2,6 +2,12 @@
 
 module.exports = {
   status: 'alpha',
-  collated: false,
-  preview: '@preview-without-padding'
+  variants: [
+    {
+      name: 'wizard'
+    },
+    {
+      name: 'multistep'
+    }
+  ]
 };

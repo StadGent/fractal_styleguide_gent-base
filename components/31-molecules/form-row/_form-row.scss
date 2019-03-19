@@ -2,17 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   width: calc(100% + .8rem);
-  max-width: 40.8rem;
+  max-width: 21.3rem;
   margin-right: -.4rem;
   margin-left: -.4rem;
 
 
   @include desktop {
-    width: calc(#{span(6 of 12)} + .8rem);
+    width: calc(50% + .8rem);
   }
 
   > * {
-    flex-basis: calc((21rem - 100%) * 999);
+    flex-basis: calc((21.3rem - 100%) * 999);
     flex-grow: 1;
     margin-right: .4rem;
     margin-left: .4rem;

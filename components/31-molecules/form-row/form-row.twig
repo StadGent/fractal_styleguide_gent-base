@@ -1,24 +1,24 @@
 <div class='form-row'>
   {% render '@form-item' with {
     label: 'Postal code',
-    id: 'postal-code_id',
+    id: id ~ '-postal-code_id',
     input_component: 'input',
     type: 'text',
     modifier: 'error',
     field_message: 'Almost there!',
     field_description: 'Wrap form items in a .form-row element.',
-    name: 'postal-code_name',
+    name: id ~ '-postal-code_name',
     stacked: true
   } %}
   {% render '@form-item' with {
     label: 'Municipality',
-    id: 'municipality_id',
+    id: id ~ '-municipality_id',
     input_component: 'input',
     type: 'text',
     modifier: 'success',
     field_message: 'Very good!',
     field_description: 'Place modifier .stacked on the form-items.',
-    name: 'municipality_name',
+    name: id ~ '-municipality_name',
     stacked: true
   } %}
 </div>
