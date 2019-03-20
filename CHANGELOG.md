@@ -4,7 +4,7 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
-## [Unreleased]
+## [3.0.0-beta4]
 
 ### Added
 
@@ -487,6 +487,8 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta3...3.0.0-beta4
+[3.0.0-beta3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta2...3.0.0-beta3
 [3.0.0-beta2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta1...3.0.0-beta2
 [3.0.0-beta1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha11...3.0.0-beta1
 [3.0.0-alpha11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.10...3.0.0-alpha11
