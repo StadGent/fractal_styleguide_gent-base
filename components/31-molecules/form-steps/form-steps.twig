@@ -1,6 +1,5 @@
-<nav class="wizard-steps" aria-labelledby="wizard-steps-{{ steps.length }}{{ active }}">
-  <h2 id="wizard-steps-{{ steps.length }}{{ active }}" class="visually-hidden">Steps in this
-    wizard</h2>
+<nav class="form-steps{{ modifier ? ' ' ~ modifier }}" aria-labelledby="form-steps-{{ steps.length }}{{ active }}{{ modifier ? '-' ~ modifier }}">
+  <h2 id="form-steps-{{ steps.length }}{{ active }}{{ modifier ? '-' ~ modifier }}" class="visually-hidden">Steps in this wizard</h2>
   {% spaceless %}
     <ol>
       {% for key, step in steps %}

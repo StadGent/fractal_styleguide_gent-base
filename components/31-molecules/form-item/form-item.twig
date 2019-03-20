@@ -20,9 +20,11 @@
     <div class="form-item-column">
       {% include '@'~input_component with {
         "id": id,
+        "name": name|default(id),
         "ariaDescribedBy": describedBy,
         "type": type,
-        "invalid": modifier == 'error'
+        "invalid": modifier == 'error',
+        "modifier": modifier
       }%}
     </div>
     <div class="form-item-column">

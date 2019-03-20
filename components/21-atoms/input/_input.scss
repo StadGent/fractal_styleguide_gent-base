@@ -3,6 +3,7 @@ input[type="number"],
 input[type="password"],
 input[type="search"],
 input[type="date"],
+input[type="time"],
 input[type="tel"],
 input[type="email"],
 input[type="url"] {
@@ -23,6 +24,11 @@ input[type="password"] {
       }
     }
   }
+}
+
+input[type=date]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
+  margin-left: .5rem;
+  -webkit-appearance: none;  // sass-lint:disable-line no-vendor-prefixes
 }
 
 .radio {

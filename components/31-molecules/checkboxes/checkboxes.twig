@@ -1,33 +1,40 @@
-<fieldset class="form-item {{ modifier }} {% block fieldset_class %}{% endblock %}">
+<fieldset class="form-item {{ modifier }}">
   <legend>
     {{ label }}
     {% if label_optional %}
       <span class="label-optional">({{ label_optional }})</span>
     {% endif %}
   </legend>
+
   {% include '@field-message' with {
     "field_message": field_description,
+    "id": id ~ '-description',
     "modifier": null
   } %}
+
   <div class="form-columns">
     <div class="form-item-column">
       {% for option in options %}
-        {% include '@'~input_component with {
-          "id": input_component ~ "-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
-          "type": type,
+        {% include '@input' with {
+          "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+          "type": 'checkbox',
           "name": option.name,
-          "label": option.label
+          "label": option.label,
+          "modifier": modifier
         } %}
       {% endfor %}
     </div>
     <div class="form-item-column">
       {% if modifier == 'error' %}
         {% include '@field-message' with {
+          "id": id ~ '-validation',
           "modifier": "error"
         } %}
       {% endif %}
+
       {% if modifier == 'success' %}
         {% include '@field-message' with {
+          "id": id ~ '-validation',
           "modifier": "success"
         } %}
       {% endif %}

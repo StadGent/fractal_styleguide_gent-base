@@ -4,6 +4,31 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta4]
+
+### Added
+
+* DTGB-684: Separate `checkboxes` component.
+* DTGB-684: Separate `radios` component.
+* DTGB-688: Vertical variant for Form Steps.
+* DTGB-688: Wizard (as a variant for the Form organism).
+* DTGB-688: Multistep form (as a variant for the Form organism).
+
+### Updated
+
+* DTGB-684: Moved `select` to molecules and have it use the `form-item` component.
+* DTGB-684: Moved `form` to organisms.
+* DTGB-688: Renamed 'Wizard Steps' to 'Form Steps'.
+
+    > :warning: The `wizard-steps` CSS class is now deprecated and will be removed in the next major version. Update it to `form-steps`.
+
+* DTGB-707: Removed webkit datepicker up/down arrows.
+* DTGB-708: Fixed button styling for iOS' Safari.
+
+### Removed
+
+* DTGB-684: Dark button variant.
+
 ## [3.0.0-beta3]
 
 ### Updated 
@@ -462,6 +487,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta3...3.0.0-beta4
 [3.0.0-beta3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta2...3.0.0-beta3
 [3.0.0-beta2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta1...3.0.0-beta2
 [3.0.0-beta1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha11...3.0.0-beta1

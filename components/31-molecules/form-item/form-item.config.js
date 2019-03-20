@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  label: 'Input',
   status: 'beta',
   context: {
     label: 'input-text',
@@ -90,111 +91,12 @@ module.exports = {
       }
     },
     {
-      name: 'select',
-      context: {
-        id: 'select',
-        label: 'select',
-        input_component: 'select',
-        options: [
-          {
-            label: 'Option 1'
-          },
-          {
-            label: 'Option 2'
-          },
-          {
-            optgroup: true,
-            label: 'Option group',
-            optgroupoptions: [
-              {
-                label: 'Option 3'
-              },
-              {
-                label: 'Option 4'
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      name: 'multiselect',
-      context: {
-        id: 'multiselect',
-        label: 'multiselect',
-        input_component: 'select',
-        multiple: true,
-        options: [
-          {
-            label: 'Option 1'
-          },
-          {
-            label: 'Option 2'
-          },
-          {
-            optgroup: true,
-            label: 'Option group',
-            optgroupoptions: [
-              {
-                label: 'Option 3'
-              },
-              {
-                label: 'Option 4'
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       name: 'file',
       context: {
         id: 'input-file',
         label: 'input--file',
         input_component: 'input',
         type: 'file'
-      }
-    },
-    {
-      name: 'radio',
-      context: {
-        id: 'input-radio',
-        label: 'radio buttons',
-        input_component: 'input',
-        type: 'radio',
-        options: [
-          {
-            label: 'Radio option 1',
-            name: 'radiogroup-error',
-            id: 'radio-error-1'
-          },
-          {
-            label: 'Radio option 2',
-            name: 'radiogroup-error',
-            id: 'radio-error-2'
-          }
-        ]
-      }
-    },
-    {
-      name: 'checkbox',
-      context: {
-        id: 'input-checkbox',
-        input_component: 'input',
-        type: 'checkbox',
-        label: 'Checkboxes',
-        options: [
-          {
-            label: 'checkbox option 1',
-            name: 'checkboxgroup-error',
-            id: 'checkbox-error-1'
-          },
-          {
-            label: 'checkbox option 2',
-            name: 'checkboxgroup-error',
-            id: 'checkbox-error-2'
-          }
-        ]
       }
     }
   ]

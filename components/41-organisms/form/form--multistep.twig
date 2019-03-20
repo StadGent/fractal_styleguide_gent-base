@@ -1,0 +1,12 @@
+{% extends '@form' %}
+
+{% block content %}
+  <div class="form--multistep">
+    {% render '@form-steps--vertical' %}
+
+    <div class="form-content">
+      <h2>Active step</h2>
+      {{ parent() }}
+    </div>
+  </div>
+{% endblock %}

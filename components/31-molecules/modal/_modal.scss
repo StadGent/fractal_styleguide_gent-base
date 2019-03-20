@@ -25,7 +25,7 @@
     > .modal-inner {
       max-height: 80vh;
 
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // sass-lint:disable-line no-vendor-prefixes
         height: 80vh; // IE fix
       }
 
