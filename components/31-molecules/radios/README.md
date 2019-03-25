@@ -8,10 +8,10 @@ Use the radios component when users should only be able to select one option and
 
 Do not use the radios component when you need to help users:
 
-* Select one or more options from a short list of options.
+* Select one or more options.
 * Toggle a single option on or off.
 
-In these cases, use the <a href="{{path './checkboxes.html'}}">checkboxes component</a> instead.
+In these cases, use the <a href="{{path './checkboxes.html'}}">checkboxes component</a> (for a single option or a short list of options) or the <a href="{{path './checkboxes-with-filter.html'}}">checkboxes with filter component</a> (for a long list of options) instead.
 
 ## How it works
 
