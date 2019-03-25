@@ -23,3 +23,7 @@ In these cases, use the <a href="{{path './checkboxes.html'}}">checkboxes compon
 * The select component allows users to select one option and no more from a long list of options.
 * The options can be grouped in option groups.
 * The first option can be a placeholder option that indicates to the user what to do, for instance, "Select a value". The placeholder option is not actually an option. When the user does not select another, real option, no option is selected. When use the placeholder option is selected by default and disabled. The user can only select another, real option.
+
+## Usage, behavior, layout and validation
+
+The select component is a form element that should always be used in a form. For a description of the usage, the behavior, the layout and validation of form elements, see the <a href="{{path './form.html'}}">form component examples and documentation</a>.
