@@ -25,6 +25,15 @@
   <div class="content-container">
     {% if contact and newsletter %}
       <div class="top">
+        {% if logo %}
+          <div class="logo">
+            {% include '@image' with {
+              'src': '/styleguide/img/stock/puur_gent_logo.png' | path,
+              'alt_text': 'Puur Gent',
+            } %}
+          </div>
+        {% endif %}
+
         {% set contactshown = true %}
         <div class="contact">
           {% include '@heading' with {
@@ -41,6 +50,15 @@
     {% endif %}
     <div class="bottom">
       {% if contact and contactshown|default(false) == false %}
+        {% if logo %}
+          <div class="logo">
+            {% include '@image' with {
+              'src': '/styleguide/img/stock/puur_gent_logo.png' | path,
+              'alt_text': 'Puur Gent',
+            } %}
+          </div>
+        {% endif %}
+
         <div class="contact">
           {% include '@heading' with {
           'type': 'h3',
