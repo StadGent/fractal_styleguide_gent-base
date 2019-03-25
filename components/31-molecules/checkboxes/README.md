@@ -20,3 +20,7 @@ Do not use the checkboxes component when users should only be able to select one
 * Users should be able to select one or more options.
 * Do not select checkboxes by default as users might not notice this, resulting in not realising they missed a question and/or sending a wrong answer.
 * The options should have short but clearly different labels. There's no need to name the action "Select this checkbox to..." because it is already a checkbox. Avoid repeating words at the start of the labels for the options so that the options are easiliy scannable.
+
+## Usage, behavior, layout and validation
+
+The checkboxes component is a form element that should always be used in a form. For a description of the usage, the behavior, the layout and validation of form elements, see the <a href="{{path './form.html'}}">form component examples and documentation</a>.
