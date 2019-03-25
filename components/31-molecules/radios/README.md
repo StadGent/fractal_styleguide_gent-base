@@ -20,3 +20,7 @@ In these cases, use the <a href="{{path './checkboxes.html'}}">checkboxes compon
 * Users should be able to select only one option and no more. Once they selected an option, they can only select another one, and the one that was selected should become deselected. Furthermore, users cannot go back to having no option selected, except when refreshing their browser window.
 * Do not select radios by default as users might not notice this, resulting in not realising they missed a question and/or sending a wrong answer.
 * The options should have short but clearly different labels. There's no need to name the action "Select this radio to..." because it is already a radio. Avoid repeating words at the start of the labels for the options so that the options are easiliy scannable.
+
+## Usage, behavior, layout and validation
+
+The radios component is a form element that should always be used in a form. For a description of the usage, the behavior, the layout and validation of form elements, see the <a href="{{path './form.html'}}">form component examples and documentation</a>.
