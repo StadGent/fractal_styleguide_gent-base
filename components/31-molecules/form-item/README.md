@@ -12,11 +12,11 @@ Do not use the input component to let users enters longer text that might have m
 
 ### Types of input
 
-* Default (simple text, free format)
+* Default (simple text or text value, no format)
 * Date (date format)
 * Number (number format)
-* Password
-* Email
+* Password (password, characters are masked)
+* Email (automatically validated)
 * Telephone number
 
 ### Layout and validation
