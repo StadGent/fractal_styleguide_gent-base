@@ -6,13 +6,13 @@ Use the input component to let users enter text or a value that is not longer th
 
 ## When not to use this component
 
-Do not use the input component to let users enters longer text that might have multiple lines. In this case, use <a href="{{path './textarea.html'}}">textarea component</a> instead.
+Do not use the input component to let users enter longer text that might have multiple lines. In this case, use <a href="{{path './textarea.html'}}">textarea component</a> instead.
 
 ## How it works
 
 ### Types of input
 
-* Default (simple text or text value, no format)
+* Default (simple text or text value that is not longer than a single line, no format)
 * Date (date format)
 * Number (number format)
 * Password (password, characters are masked)
