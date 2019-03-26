@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Added
 
 * Bottom border to fieldset.
+* Logo to theme footer.
 
 ## [3.0.0-beta4]
 
