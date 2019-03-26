@@ -61,13 +61,19 @@ A **success field message** is used to inform the user that the field or fieldse
 
 Every form requires at least one form action.
 
-### Layout and validation
+## Layout and validation
 
-Form elements get 50% of the width of the container. There are aligned to the left of the container. The right-hand side (the remaining 50% of the width of the container) is the space where validation error messages are shown. Validation error messages appear at the right of the form elements.
+The container is divided in two virtual sides that each get 50% of the width of the container.
 
-On mobile or when the container is too small, the right-hand side is not used. In this case, the form elements get 100% of the width of the container. Validation error messages appear directly below the input instead of at the right. The messages are aligned to the top of the form element.
+Form elements are shown at the left-hand side and are aligned to the left of the container. The width of form elements is 50% of the container.
 
-Help texts are always shown inline at the left-hand side. They are shown between the label of the form element and the form element itself, in other words directly below the label of the form element and directly above the form element itself.
+The right-hand side is the space where error field messages (also see above) are shown on validation. Error field messages appear at the right of each form element and are aligned to the top of the form element.
+
+On mobile or when the container is too small, the right-hand side is not used. In this case, there is only one virtual column. Form elements get 100% of the width of the container. Error field messages appear directly below each form element instead of at the right and are aligned to the top of the form element.
+
+Help texts (normal field messages) are always shown inline with the form elements. The are aligned to the left of the container. The width of the messages is the same as the width of the form elements. They are shown between the label of the form element and the form element itself, in other words directly below the label of the form element and directly above the form element itself.
+
+Fieldsets always get a width of 100% of the container.
 
 ## Web accessibility
 
