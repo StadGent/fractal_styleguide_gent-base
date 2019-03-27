@@ -37,7 +37,17 @@ module.exports = {
     {
       name: 'logged-in',
       context: {
-        mijn_gent_block_auth: 'true',
+        mijn_gent_block_auth: true,
+        mijn_gent_block_image: true,
+        header_search_id: 'header-search-authenticated',
+        breadcrumbs_id: 'system-breadcrumb-authenticated'
+      }
+    },
+    {
+      name: 'logged-in-no-image',
+      context: {
+        mijn_gent_block_auth: true,
+        mijn_gent_block_image: false,
         header_search_id: 'header-search-authenticated',
         breadcrumbs_id: 'system-breadcrumb-authenticated'
       }

@@ -2,7 +2,7 @@
 
   {% if auth == 'false' %}
 
-  {% include '@link' with {
+   {% include '@link' with {
   'modifier': 'login-link',
   'link': 'javascript:(void);',
   'text': 'Aanmelden'
@@ -13,11 +13,15 @@
   <button aria-expanded="false"
           aria-controls="mijn_gent_content"
           class="toggle accordion--button">
-    {% include '@image' with {
+    {% if image %}
+      {% include '@image' with {
       'src': '/styleguide/img/stock/user_avatar.jpg' | path,
-      'alt_text': 'Username',
-      'ratio': null
-    } %}
+        'alt_text': 'Username',
+        'ratio': null
+      } %}
+    {% else %}
+      <span class="avatar">j</span>
+    {% endif %}
     <span>James M.</span>
   </button>
 
@@ -28,11 +32,15 @@
         'heading_text': 'Mijn gent'
       } %}
       <section class="profile">
-        {% include '@image' with {
+        {% if image %}
+           {% include '@image' with {
           'src': '/styleguide/img/stock/user_avatar.jpg' | path,
-          'alt_text': 'Username',
-          'ratio': null
-        } %}
+            'alt_text': 'Username',
+            'ratio': null
+          } %}
+        {% else %}
+          <span class="avatar">j</span>
+        {% endif %}
         <div class="profile-info">
           <span>{{ 'John Doe' }}</span>
           {% include '@link' with {
@@ -54,7 +62,7 @@
         } %}
       </section>
       <section>
-        {% include '@heading' with {
+         {% include '@heading' with {
           'type': 'h2',
           'heading_text': 'Mijn gent'
         } %}
@@ -81,4 +89,3 @@
   </div>
   {% endif %}
 </div>
-

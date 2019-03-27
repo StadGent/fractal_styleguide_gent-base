@@ -3,6 +3,20 @@
   position: relative;
   justify-content: flex-end;
 
+  .avatar {
+    flex-shrink: 0;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    background-color: #29cfc9;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2.3rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   .login-link {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -17,7 +31,6 @@
   }
 
   .accordion--button {
-
     display: flex;
     align-items: center;
     border: 0;
@@ -46,6 +59,12 @@
 
     &::before {
       line-height: 0;
+    }
+
+    span.avatar {
+      display: block;
+      width: 2.3rem;
+      height: 2.3rem;
     }
   }
 
@@ -107,6 +126,13 @@
         height: 3.3rem;
         margin-right: $gutter-width;
         object-fit: cover;
+      }
+
+      .avatar {
+        width: 3.3rem;
+        height: 3.3rem;
+        margin-right: 1.2rem;
+        line-height: 3.3rem;
       }
     }
   }
