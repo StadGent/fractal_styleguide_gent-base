@@ -13,6 +13,11 @@ Do not use the radios component when you need to help users:
 
 In these cases, use the <a href="{{path './checkboxes.html'}}">checkboxes component</a> (for a single option or a short list of options) or the <a href="{{path './checkboxes-with-filter.html'}}">checkboxes with filter component</a> (for a long list of options) instead.
 
+When users should be able to select one option and no more from a long list of options:
+
+* Try to reduce and simplify the list of options to present fewer options to the user.
+* When there are no better alternatives, use the <a href="{{path './select.html'}}">select component</a>.
+
 ## How it works
 
 * Radios are grouped in a fieldset.
