@@ -14,6 +14,7 @@ Do not use the input component to let users enter longer text that might have mu
 
 * Default (simple text or text value that is not longer than a single line, no format)
 * Date (date format)
+* Time
 * Number (number format)
 * Password (password, characters are masked)
 * Email (automatically validated)
