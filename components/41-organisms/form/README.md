@@ -41,11 +41,11 @@ There are three types of field messages:
 2. Error field message
 3. Success field message
 
-A **normal field message** is used to provide **help** on a field or fieldset.
+A **normal field message** is used to **help** users fill in a field or fieldset. 
 
-* The text in the field message helps the user to fill in the field or fieldset in the right way by providing extra information on how the field or fieldset should be filled in.
-* It can also be used to tell to user *why* certain information is asked in the field or fieldset.
-* A normal field message is always visible from the first page view of the form.
+* The text in the field message provides extra information to the user on how the field or fieldset should be filled in. It can also be used to tell to the user *why* certain information is asked.
+* Try not to specify what is already implied by the input label. Only this kind of messages to provide extra information to the user.
+* As it is intended to provide help, a normal field message is always visible from the first page view of the form.
 
 An **error field message** is used to provide **feedback** on a field or fieldset. It informs the user that there was an error in filling in the field or fieldset.
 
