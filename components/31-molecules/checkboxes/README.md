@@ -9,7 +9,7 @@ Use the checkboxes component to help users:
 
 ## When not to use this component
 
-Do not use the checkboxes component when you need to help users select one or more options from a long list of options. In this cases, use <a href="{{path './checkboxes-with-filter.html'}}">checkboxes with filter component</a> instead.
+Do not use the checkboxes component when you need to help users select one or more options from a long list of options. In this case, use <a href="{{path './checkboxes-with-filter.html'}}">checkboxes with filter component</a> instead.
 
 Do not use the checkboxes component when users should only be able to select one option and no more. In this case, use the <a href="{{path './radios.html'}}">radios component</a> instead.
 
