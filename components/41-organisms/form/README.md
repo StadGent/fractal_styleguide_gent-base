@@ -63,7 +63,7 @@ Every form requires at least one form action. Form actions should be placed **in
 
 The **primary form action** is the first action of the form and is typically the submit button of the form. A submit button is required for every form.
 
-Make the label of the submit button clear so that the user is reminder what user input is collected, for what purpose and which action is taken when clicking the submit button. Examples are: "Send message", "Subscribe", "Next", "Continue", "Confirm". The button should have the *primary* button style.
+Make the label of the submit button clear so that the user is reminded what user input is collected, for what purpose and which action is taken when clicking the submit button. Examples are: "Send message", "Subscribe", "Next", "Continue", "Confirm". The button should have the *primary* button style.
 
 A form can also have a **secondary form action**.
 
