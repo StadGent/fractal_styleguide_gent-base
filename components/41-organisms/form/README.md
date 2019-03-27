@@ -71,7 +71,7 @@ The right-hand side is the space where error field messages (also see above) are
 
 On mobile or when the container is too small, the right-hand side is not used. In this case, there is only one virtual column. Form elements get 100% of the width of the container. Error field messages appear directly below each form element instead of at the right and are aligned to the top of the form element.
 
-Help texts (normal field messages) are always shown inline with the form elements. The are aligned to the left of the container. The width of the messages is the same as the width of the form elements. They are shown between the label of the form element and the form element itself, in other words directly below the label of the form element and directly above the form element itself.
+Help texts (normal field messages) are always shown inline with the form elements. They are aligned to the left of the container. The width of the messages is the same as the width of the form elements. They are shown between the label of the form element and the form element itself, in other words directly below the label of the form element and directly above the form element itself.
 
 Fieldsets always get a width of 100% of the container.
 
