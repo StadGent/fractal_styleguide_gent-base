@@ -11,6 +11,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Bottom border to fieldset.
 * Logo to theme footer.
 
+### Fixed
+
+* Accolade background for field messages in boxes.
+
 ## [3.0.0-beta4]
 
 ### Added
