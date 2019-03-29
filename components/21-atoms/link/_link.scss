@@ -3,10 +3,12 @@ $link-padding: .2em;
 %a,
 a {
   @include theme('color', 'color-primary', 'link-color');
-  @include link-background('color-primary--lighten-4', 'link-background-color');
+  @include link-background('color-primary', 'color-primary--lighten-4', 'link-underline-color', 'link-background-color');
 
   padding: $link-padding 0;
   border-radius: border-radius('radius-1');
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   font-weight: 600;
   text-decoration: none;
   word-wrap: break-word;
@@ -17,12 +19,12 @@ a {
 
   // Different button link types. These are links styled as a button.
   &.button {
+    @include reset-link-background;
     @include button;
     @include button-icon;
     // Overrule flex for IE
     align-items: flex-start;
     padding-top: .6em;
-    background: none;
 
     &::before,
     &::after {
@@ -80,15 +82,13 @@ a {
   /// Stand alone links.
   ///
   &.standalone-link:not(.no-icon) {
+    @include reset-link-background;
     margin-left: 0;
     padding-left: 0;
-    background: none;
 
     &:focus,
     &:hover {
       @include theme('color', 'color-primary--darken-2', 'link-hover-color');
-
-      background-color: transparent;
     }
   }
 

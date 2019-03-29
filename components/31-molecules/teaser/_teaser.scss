@@ -78,6 +78,7 @@
   }
 
   a.teaser-overlay-link {
+    @include reset-link-background;
     @include element-states(transparent, transparent, background-color);
 
     position: absolute;
@@ -85,7 +86,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: none;
     text-indent: 200%;
     white-space: nowrap;
     overflow: hidden;

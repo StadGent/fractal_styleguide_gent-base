@@ -140,11 +140,11 @@ nav.menu {
       a[download],
       a[href^="http://"],
       a[href^="https://"] {
+        @include reset-link-background;
         @include theme('color', 'color-tertiary', 'default-text-color');
         display: inline-block;
         margin-bottom: 1rem;
         padding: 1rem;
-        background: none;
         font-weight: 400;
         text-decoration: none;
 

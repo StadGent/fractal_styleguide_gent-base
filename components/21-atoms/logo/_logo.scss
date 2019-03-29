@@ -1,11 +1,9 @@
 a.site-logo {
+  @include reset-link-background;
   @include theme('color', 'color-tertiary', 'default-text-color');
   display: inline-flex;
   align-items: center;
-  padding: 0;
-  background: none;
   font-size: 0;
-  text-decoration: none;
 
   &::before {
     @include spot-image('logo', 4rem);
