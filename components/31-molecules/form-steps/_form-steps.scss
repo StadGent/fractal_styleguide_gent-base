@@ -42,8 +42,8 @@
       }
 
       a {
+        @include reset-link-background;
         padding: 0;
-        background: none;
         vertical-align: middle;
 
         &:hover,
@@ -56,7 +56,7 @@
         }
 
         > span {
-          @include link-background('color-primary--lighten-4', 'link-background-color', false);
+          @include link-background('color-primary', null, 'link-background-color');
         }
       }
 
