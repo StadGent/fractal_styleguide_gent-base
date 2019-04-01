@@ -72,11 +72,11 @@
   }
 
   a.gallery-link {
+    @include reset-link-background;
     display: inline-block;
     width: 100%;
     margin: 0;
     padding: 0;
-    background: none;
     font-weight: normal;
     text-decoration: none;
 

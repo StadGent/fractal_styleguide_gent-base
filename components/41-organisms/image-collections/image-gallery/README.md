@@ -13,13 +13,14 @@ Do not use the image gallery component on overview pages or filter pages. Only u
 ## How it works
 
 * An image gallery is a list of <a href="{{path './figure.html'}}">figures</a>.
-* The images must have aspect ratio 8:5.
+* The images can have different aspect ratios.
 * Thumbnails are used to preview the set of images.
+* The thumbnails must have aspect ratio 8:5.
 * The number of thumbnails that are shown depends on the device's screen resolution.
 * Up to 5 thumbnails can be shown.
 * If there are hidden images an overlay is placed on the last visible thumbnail
  indicating the total number of images.
-* Clicking a thumbail or the overlay on the last visible image shows all images in a modal image gallery (lightbox).
+* Clicking a thumbail or the overlay on the last visible image shows all images in a modal image gallery (lightbox). The images are all fully shown in their respective aspect ratio.
 
 ## Implementation
 
