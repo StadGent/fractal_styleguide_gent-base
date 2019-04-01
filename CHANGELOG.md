@@ -10,6 +10,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Bottom border to fieldset.
 * Logo to theme footer.
+* No Image fallback for avatar in MijnGent block.
 
 ### Fixed
 

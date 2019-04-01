@@ -4,19 +4,27 @@ module.exports = {
   hidden: true,
   default: 'logged-in',
   context: {
-    auth: 'false'
+    auth: false,
+    image: true
   },
   variants: [
     {
       name: 'logged-in',
       context: {
-        auth: 'true'
+        auth: true
       }
     },
     {
       name: 'logged-out',
       context: {
-        auth: 'false'
+        auth: false
+      }
+    },
+    {
+      name: 'no-image',
+      context: {
+        auth: true,
+        image: false
       }
     }
   ]
