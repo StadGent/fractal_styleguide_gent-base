@@ -14,6 +14,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Fixed
 
+* Accolade background for field messages in boxes.
 * Positioning of the subsite figure on IE11.
 
 ### Updated
