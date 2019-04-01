@@ -11,6 +11,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Bottom border to fieldset.
 * Logo to theme footer.
 
+### Updated
+
+* Underline for links.
+
 ## [3.0.0-beta4]
 
 ### Added
@@ -38,20 +42,20 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [3.0.0-beta3]
 
-### Updated 
+### Updated
 
 * Reverted the `render` tag back to the default `include` tag.
 * Re-added path filters to fix asset paths for the generated static files.
 
 ## [3.0.0-beta2]
 
-### Updated 
+### Updated
 
 * Changed yarn engine requirements to a `^1.12.0`.
 * Component templates are now included with the `render` tag. More info: [frctl/twig](https://github.com/frctl/twig#included-tags).
 * Resolved all dependency vulnerabilities.
 
-### Removed 
+### Removed
 
 * Contact box component.
 
@@ -68,7 +72,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * DTGB-677: Wizard steps.
 * DTGB-172: Component documentation.
 
-### Updated 
+### Updated
 
 * DTGB-676: Exposed modal open and close functions.
 * DTGB-665: Refactored pages to only show layouts. This shouldn't affect any
@@ -82,7 +86,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
     * Label component hidden in style guide.
     * Field message component hidden in style guide.
     * Logo component hidden in style guide.
-    
+
 * DTGB-607: Changed font-size for boxes to `16px` (a.k.a. `.8rem`)
 * DTGB-629: Updated text alignment for boxes on detail pages.
 * DTGB-697: Updated hover animation for links.

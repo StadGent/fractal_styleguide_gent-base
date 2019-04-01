@@ -7,34 +7,49 @@
 /// @access public
 /// @author Helena Standaert
 ///
-/// @param {string} $default [null]
-///   The default value for the themified property.
+/// @param {string} $underline
+///   Underline color for the link.
 ///
-/// @param {string} $exception [null]
-///   The exception value for the themified property.
+/// @param {string} $hover [null]
+///   Background color for the link on hover.
+///
+/// @param {string} $underline-exception [null]
+///   The exception value for the underline color.
 ///   This is the exception optionally used in subthemes.
 ///
-@mixin link-background($default: null, $exception: null, $animate: true) {
-  // Support color schemes
-  @each $theme, $colors in $themes {
-    $link-hover-color: set-themified-property($colors, $default, $exception);
+/// @param {string} $hover-exception [null]
+///   The exception value for the background color.
+///   This is the exception optionally used in subthemes.
+///
+@mixin link-background($underline, $hover: null, $underline-exception: null, $hover-exception: null) {
+  @include theme('border-color', $underline, $underline-exception);
+  transition: background-image 1s;
+  border-bottom: 1px solid;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
 
-    .cs--#{$theme} & {
-      background: linear-gradient(
-        to bottom, $link-hover-color 0%,
-        $link-hover-color 100%
-      ) repeat-x 0 100%;
-
-      background-size: 1px 1px;
+  @if $hover {
+    @include theme-content($hover, $hover-exception) {
+      background-image: linear-gradient(to bottom,
+        $theme-color 0,
+        $theme-color 100%);
     }
-  }
-
-  @if $animate {
     transition: background-size .2s;
+    background-size: 1px 0;
 
-    &:focus,
-    &:hover {
+    &:hover,
+    &:focus {
       background-size: 1px 100%;
     }
+  }
+}
+
+@mixin reset-link-background() {
+  border-bottom: 0;
+
+  &,
+  &:focus,
+  &:hover {
+    background-image: none;
   }
 }

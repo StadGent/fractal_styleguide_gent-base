@@ -7,7 +7,10 @@ $gentinfo-icon-size: 8rem;
 
   .gentinfo-content {
     @include theme('background-color', 'color-secondary', 'gentinfo-content-background');
-    @include theme('box-shadow', 'color-primary--lighten-5', 'gentinfo-content-shadow', '0 8px 12px 0');
+    @include theme-content('color-primary--lighten-5', 'gentinfo-content-shadow') {
+      box-shadow: 0 8px 12px 0 $theme-color;
+    }
+
     position: relative;
     max-width: $bp-max-content;
     min-height: $gentinfo-icon-size + 2rem;
