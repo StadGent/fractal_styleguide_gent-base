@@ -39,12 +39,12 @@
 }
 
 a.tag {
+  @include reset-link-background;
   @include theme('border-color', 'color-primary--lighten-2', 'tag-border-color');
   @include icon(arrow-right, after);
 
   padding: .4em .8em;
   border-width: 2px;
-  background: none;
 
   &::after {
     width: 1.1rem;

@@ -74,6 +74,7 @@ module.exports = {
       name: 'contact-newsletter',
       context: {
         theme: 'Ghent mobility',
+        logo: true,
         contact: {
           address: {
             name: 'City hall',
@@ -98,6 +99,7 @@ module.exports = {
       name: 'contact-social',
       context: {
         theme: 'Ghent mobility',
+        logo: true,
         contact: {
           address: {
             name: 'City hall',
