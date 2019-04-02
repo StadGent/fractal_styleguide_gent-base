@@ -1,21 +1,5 @@
 'use strict';
 
-const contact = {
-  address: {
-    name: 'City hall',
-    address: 'Botermarkt 1, 9000 Gent'
-  },
-  phone: {
-    machine: '+3292101060',
-    human: '09 210 10 60'
-  },
-  email: 'noreply@stad.gent',
-  form: {
-    machine: '#',
-    human: 'Contactform Ghent mobility'
-  }
-};
-
 module.exports = {
   status: 'beta',
   preview: '@preview-description-list-without-padding',
@@ -30,10 +14,8 @@ module.exports = {
     {
       name: 'contact-newsletter-social-logo',
       context: {
-        contact: contact,
-        newsletter: {
-          uid: 'theme-footer-1'
-        },
+        contact: true,
+        newsletter: true,
         social: true,
         logo: true
       }
@@ -41,31 +23,27 @@ module.exports = {
     {
       name: 'contact',
       context: {
-        contact: contact
+        contact: true
       }
     },
     {
       name: 'contact-logo',
       context: {
-        contact: contact,
+        contact: true,
         logo: true
       }
     },
     {
       name: 'newsletter',
       context: {
-        newsletter: {
-          uid: 'theme-footer-2'
-        }
+        newsletter: true
       }
     },
     {
       name: 'newsletter-logo',
       context: {
         logo: true,
-        newsletter: {
-          uid: 'theme-footer-3'
-        }
+        newsletter: true
       }
     },
     {
@@ -84,26 +62,22 @@ module.exports = {
     {
       name: 'contact-newsletter',
       context: {
-        contact: contact,
-        newsletter: {
-          uid: 'theme-footer-4'
-        }
+        contact: true,
+        newsletter: true
       }
     },
     {
       name: 'contact-newsletter-logo',
       context: {
-        contact: contact,
+        contact: true,
         logo: true,
-        newsletter: {
-          uid: 'theme-footer-5'
-        }
+        newsletter: true
       }
     },
     {
       name: 'contact-social',
       context: {
-        contact: contact,
+        contact: true,
         social: true
       }
     },
@@ -111,16 +85,14 @@ module.exports = {
       name: 'contact-social-logo',
       context: {
         logo: true,
-        contact: contact,
+        contact: true,
         social: true
       }
     },
     {
       name: 'newsletter-social',
       context: {
-        newsletter: {
-          uid: 'theme-footer-6'
-        },
+        newsletter: true,
         social: true
       }
     },
@@ -128,19 +100,15 @@ module.exports = {
       name: 'newsletter-social-logo',
       context: {
         logo: true,
-        newsletter: {
-          uid: 'theme-footer-7'
-        },
+        newsletter: true,
         social: true
       }
     },
     {
       name: 'contact-newsletter-social',
       context: {
-        contact: contact,
-        newsletter: {
-          uid: 'theme-footer-1'
-        },
+        contact: true,
+        newsletter: true,
         social: true
       }
     }

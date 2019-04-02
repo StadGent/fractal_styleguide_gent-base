@@ -1,24 +1,30 @@
-{% set iconlist = [] %}
-{% if contact.address %}
-  {% set iconlist = iconlist|merge([
-  '<i class="icon-marker" aria-hidden="true"></i>' ~ '<strong>' ~ contact.address.name ~  ' — ' ~ '</strong>' ~ contact.address.address
-  ]) %}
-{% endif %}
-{% if contact.phone %}
-  {% set iconlist = iconlist|merge([
-  '<i class="icon-normalphone" aria-hidden="true"></i><a href="tel:'~ contact.phone.machine ~'">'~ contact.phone.human ~'</a>'
-  ]) %}
-{% endif %}
-{% if contact.email %}
-  {% set iconlist = iconlist|merge([
-  '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:' ~ contact.email ~ '">' ~ contact.email ~'</a>'
-  ]) %}
-{% endif %}
-{% if contact.form %}
-  {% set iconlist = iconlist|merge([
-  '<i class="icon-document" aria-hidden="true"></i><a href="' ~ contact.form.machine ~ '">' ~ contact.form.human ~'</a>'
-  ]) %}
-{% endif %}
+{% set blockContact %}
+  <div class="contact">
+    {% include '@heading' with {
+    'type': 'h3',
+    'heading_text': 'Contact' ~ ' ' ~ theme
+    } %}
+
+    {% include '@list' with {
+      'type': 'icon-list',
+      'icon_items': [
+        '<i class="icon-marker" aria-hidden="true"></i><strong>City hall — </strong>Botermarkt 1, 9000 Gent',
+        '<i class="icon-normalphone" aria-hidden="true"></i><a href="tel:+3292101060">09 210 10 60</a>',
+        '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:noreply@stad.gent">noreply@stad.gent</a>',
+        '<i class="icon-document" aria-hidden="true"></i><a href="#">Contactform Ghent mobility</a>'
+      ]
+    } %}
+  </div>
+{% endset %}
+
+{% set blockLogo %}
+  <div class="logo">
+    {% include '@image' with {
+      'src': '/styleguide/img/stock/puur_gent_logo.png' | path,
+      'alt_text': 'Puur Gent',
+    } %}
+  </div>
+{% endset %}
 
 <section class="theme-footer">
   <h2 class="visually-hidden">{{ 'Theme footer' }}</h2>
@@ -27,55 +33,25 @@
       {% set contactshown = true %}
 
       <div class="top">
-        {% if logo %}
-          <div class="logo">
-            {% include '@image' with {
-              'src': '/styleguide/img/stock/puur_gent_logo.png' | path,
-              'alt_text': 'Puur Gent',
-            } %}
-          </div>
-        {% endif %}
-
-        <div class="contact">
-          {% include '@heading' with {
-          'type': 'h3',
-          'heading_text': 'Contact'~ ' ' ~ theme
-          } %}
-
-          {% include '@list' with {
-            'type': 'icon-list',
-            'icon_items': iconlist
-          } %}
-        </div>
+        {{ logo ? blockLogo }}
+        {{ blockContact }}
       </div>
     {% endif %}
     <div class="bottom">
+      {# Logo #}
       {% if logo and not contactshown %}
-        <div class="logo">
-          {% include '@image' with {
-            'src': '/styleguide/img/stock/puur_gent_logo.png' | path,
-            'alt_text': 'Puur Gent',
-          } %}
-        </div>
+        {{ blockLogo }}
       {% endif %}
 
+      {# Contact #}
       {% if contact and not contactshown %}
         {% set contactshown = true %}
 
-        <div class="contact">
-          {% include '@heading' with {
-          'type': 'h3',
-          'heading_text': 'Contact'~ ' ' ~ theme
-          } %}
-
-          {% include '@list' with {
-            'type': 'icon-list',
-            'icon_items': iconlist
-          } %}
-        </div>
+        {{ blockContact }}
       {% endif %}
-      {% if newsletter %}
 
+      {# Newsletter #}
+      {% if newsletter %}
         <div class="newsletter box-left">
           <div class="inner-box">
             {% include '@heading' with {
@@ -90,7 +66,7 @@
             {% include '@subscribe' with {
             label: 'Email address',
             text: 'Subscribe',
-            id: 'subscribe' ~ newsletter.uid,
+            id: 'subscribe-' ~ _self.name,
             name: 'subscribe'
             } %}
 
