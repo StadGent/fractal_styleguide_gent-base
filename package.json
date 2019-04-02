@@ -68,5 +68,9 @@
     "postinstall": "node ./scripts/postinstall.js",
     "start": "gulp watch",
     "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StadGent/fractal_styleguide_gent-base.git"
   }
 }
