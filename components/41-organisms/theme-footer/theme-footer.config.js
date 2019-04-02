@@ -1,131 +1,147 @@
 'use strict';
 
+const contact = {
+  address: {
+    name: 'City hall',
+    address: 'Botermarkt 1, 9000 Gent'
+  },
+  phone: {
+    machine: '+3292101060',
+    human: '09 210 10 60'
+  },
+  email: 'noreply@stad.gent',
+  form: {
+    machine: '#',
+    human: 'Contactform Ghent mobility'
+  }
+};
+
 module.exports = {
   status: 'beta',
   preview: '@preview-description-list-without-padding',
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 100%; padding: 0;">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
-  default: 'contact-newsletter-social',
+  default: 'contact-newsletter-social-logo',
+  context: {
+    theme: 'Ghent mobility'
+  },
   variants: [
     {
-      name: 'contact-newsletter-social',
+      name: 'contact-newsletter-social-logo',
       context: {
-        theme: 'Ghent mobility',
-        contact: {
-          address: {
-            name: 'City hall',
-            address: 'Botermarkt 1, 9000 Gent'
-          },
-          phone: {
-            machine: '+3292101060',
-            human: '09 210 10 60'
-          },
-          email: 'noreply@stad.gent',
-          form: {
-            machine: '#',
-            human: 'Contactform Ghent mobility'
-          }
-        },
+        contact: contact,
         newsletter: {
           uid: 'theme-footer-1'
         },
-        social: {}
+        social: true,
+        logo: true
       }
     },
     {
       name: 'contact',
       context: {
-        theme: 'Ghent mobility',
-        contact: {
-          address: {
-            name: 'City hall',
-            address: 'Botermarkt 1, 9000 Gent'
-          },
-          phone: {
-            machine: '+3292101060',
-            human: '09 210 10 60'
-          },
-          email: 'noreply@stad.gent',
-          form: {
-            machine: '#',
-            human: 'Contactform Ghent mobility'
-          }
-        }
+        contact: contact
+      }
+    },
+    {
+      name: 'contact-logo',
+      context: {
+        contact: contact,
+        logo: true
       }
     },
     {
       name: 'newsletter',
       context: {
-        theme: 'Ghent mobility',
         newsletter: {
           uid: 'theme-footer-2'
         }
       }
     },
     {
-      name: 'social',
+      name: 'newsletter-logo',
       context: {
-        theme: 'Ghent mobility',
-        social: {}
-      }
-    },
-    {
-      name: 'contact-newsletter',
-      context: {
-        theme: 'Ghent mobility',
         logo: true,
-        contact: {
-          address: {
-            name: 'City hall',
-            address: 'Botermarkt 1, 9000 Gent'
-          },
-          phone: {
-            machine: '+3292101060',
-            human: '09 210 10 60'
-          },
-          email: 'noreply@stad.gent',
-          form: {
-            machine: '#',
-            human: 'Contactform Ghent mobility'
-          }
-        },
         newsletter: {
           uid: 'theme-footer-3'
         }
       }
     },
     {
+      name: 'social',
+      context: {
+        social: true
+      }
+    },
+    {
+      name: 'social-logo',
+      context: {
+        social: true,
+        logo: true
+      }
+    },
+    {
+      name: 'contact-newsletter',
+      context: {
+        contact: contact,
+        newsletter: {
+          uid: 'theme-footer-4'
+        }
+      }
+    },
+    {
+      name: 'contact-newsletter-logo',
+      context: {
+        contact: contact,
+        logo: true,
+        newsletter: {
+          uid: 'theme-footer-5'
+        }
+      }
+    },
+    {
       name: 'contact-social',
       context: {
-        theme: 'Ghent mobility',
+        contact: contact,
+        social: true
+      }
+    },
+    {
+      name: 'contact-social-logo',
+      context: {
         logo: true,
-        contact: {
-          address: {
-            name: 'City hall',
-            address: 'Botermarkt 1, 9000 Gent'
-          },
-          phone: {
-            machine: '+3292101060',
-            human: '09 210 10 60'
-          },
-          email: 'noreply@stad.gent',
-          form: {
-            machine: '#',
-            human: 'Contactform Ghent mobility'
-          }
-        },
-        social: {}
+        contact: contact,
+        social: true
       }
     },
     {
       name: 'newsletter-social',
       context: {
-        theme: 'Ghent mobility',
         newsletter: {
-          uid: 'theme-footer-4'
+          uid: 'theme-footer-6'
         },
-        social: {}
+        social: true
+      }
+    },
+    {
+      name: 'newsletter-social-logo',
+      context: {
+        logo: true,
+        newsletter: {
+          uid: 'theme-footer-7'
+        },
+        social: true
+      }
+    },
+    {
+      name: 'contact-newsletter-social',
+      context: {
+        contact: contact,
+        newsletter: {
+          uid: 'theme-footer-1'
+        },
+        social: true
       }
     }
   ]
