@@ -63,6 +63,13 @@
         margin-bottom: 0;
       }
 
+      @include desktop {
+        column-gap: gutter();
+        column-count: 2;
+      }
+    }
+
+    &:only-child .icon-list {
       @include tablet {
         column-gap: gutter();
         column-count: 2;
@@ -74,7 +81,7 @@
     text-align: center;
 
     @include tablet {
-      width: span(3 of 12);
+      width: $bp-mobile;
     }
 
     @include desktop {
@@ -172,6 +179,7 @@
   .bottom {
     @include tablet {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
     }
 
