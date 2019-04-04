@@ -10,6 +10,7 @@
     new ResponsiveTable(table, { // eslint-disable-line no-undef
       scrollableText: '(scroll to see more)'
     });
+    new MobileTable(table); // eslint-disable-line no-undef
   }
 
 })();
