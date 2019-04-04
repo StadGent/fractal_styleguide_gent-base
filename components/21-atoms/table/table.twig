@@ -1,0 +1,45 @@
+<div class="responsive-table">
+  <table>
+    <tbody>
+    <tr>
+      {% for col in range(1, numberOfCols+1) %}
+        <th scope="col">Heading col {{ col }}</th>
+      {% endfor %}
+    </tr>
+
+    {% for row in range(1, numberOfRows) %}
+      <tr>
+        {% for col in range(1, numberOfCols) %}
+          {% if col == 1 %}
+            <td scope="row">Row heading {{ row }}</td>
+          {% endif %}
+          <td>Row {{ row }} cell {{ col+1 }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+
+    </tbody>
+    <caption>
+      {{ caption }}
+    </caption>
+  </table>
+</div>
+
+<div class="table-list">
+  <ul>
+    {% for row in range(1, numberOfRows) %}
+      <li>
+        <h3>Row heading {{ row }}</h3>
+        <dl>
+          {% for col in range(1, numberOfCols+1) %}
+            <dt>Col heading {{ col }}</dt>
+            <dd>Row {{ row }} cell {{ col }}</dd>
+          {% endfor %}
+        </dl>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="list-description">
+    {{ caption }}
+  </div>
+</div>
