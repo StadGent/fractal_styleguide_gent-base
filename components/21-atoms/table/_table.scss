@@ -12,22 +12,29 @@ div.table-list {
 
 div.responsive-table {
   @include tablet {
-    display: block ;
+    display: block;
   }
 
   display: none;
   overflow-x: auto;
 
+  &:focus {
+    border: 2px dotted;
+  }
+
   table {
     caption-side: bottom;
 
     th {
-      @include theme('border-color', 'color-primary--lighten-5', 'table-header-border-color');
-
-      border-bottom: 2px solid;
       font-size: .9rem;
       font-weight: 600;
       line-height: 1.7;
+
+      &[scope="col"] {
+        @include theme('border-color', 'color-primary--lighten-5', 'table-header-border-color');
+
+        border-bottom: 2px solid;
+      }
     }
 
     tr:nth-child(2n+1):not(:first-child) {
