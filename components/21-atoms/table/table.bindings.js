@@ -1,4 +1,4 @@
-/** global ResponsiveTable, MobileTable */
+/* global ResponsiveTable, MobileTable */
 
 'use strict';
 
@@ -11,12 +11,12 @@
 
     // Adds accessibility support.
 
-    new ResponsiveTable(table, { // eslint-disable-line no-undef
+    new ResponsiveTable(table, {
       scrollableText: '(scroll to see more)'
     });
 
     // Adds a mobile solution using definition lists.
-    new MobileTable(table, {}); // eslint-disable-line no-undef
+    new MobileTable(table);
   }
 
 })();

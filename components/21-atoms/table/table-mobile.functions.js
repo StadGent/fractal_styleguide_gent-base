@@ -14,7 +14,7 @@
     }
   }
 }(this || window, function () {
-  return function (element, options) {
+  return function (element, options = {}) {
 
     /**
      * The table caption.
@@ -138,13 +138,6 @@
     };
 
     /**
-     * Build a mobile version of the table with definition lists.
-     */
-    const buildMobileTable = () => {
-      addTableList();
-    };
-
-    /**
      * Entry point of the script.
      *
      */
@@ -157,7 +150,7 @@
       caption = element.querySelector('caption');
 
       // Build a definition list based on the table for mobile use.
-      buildMobileTable();
+      addTableList();
     };
 
     init();
