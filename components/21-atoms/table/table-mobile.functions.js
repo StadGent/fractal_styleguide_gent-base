@@ -119,5 +119,5 @@ var MobileTable = function (element) { // eslint-disable-line no-unused-vars
     buildMobileTable();
   };
 
-  init(element);
+  init();
 };
