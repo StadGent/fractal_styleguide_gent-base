@@ -122,7 +122,6 @@
       let list = document.createElement('ul');
       tableList.appendChild(list);
       addListItems(list);
-
       addListDescription();
     };
 
