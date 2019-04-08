@@ -16,7 +16,7 @@
     });
 
     // Adds a mobile solution using definition lists.
-    new MobileTable(table); // eslint-disable-line no-undef
+    new MobileTable(table, {}); // eslint-disable-line no-undef
   }
 
 })();

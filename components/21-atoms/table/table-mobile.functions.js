@@ -14,7 +14,7 @@
     }
   }
 }(this || window, function () {
-  return function (element) {
+  return function (element, options) {
 
     /**
      * The table caption.
@@ -27,9 +27,22 @@
     let tableList = null;
 
     /**
-     * The options of the table.
+     * Override default options with options param.
      */
-    let options = {};
+    options = (() => {
+      const defaults = {
+        headingType: 'h3'
+      };
+
+      const keys = Object.keys(defaults);
+      let newOptions = options || {};
+
+      for (let i = keys.length; i--;) {
+        newOptions[keys[i]] = options[keys[i]] || defaults[keys[i]];
+      }
+
+      return options;
+    })();
 
     /**
      * Add a wrapper div with class .table-list as next sibling to the table.
@@ -37,7 +50,10 @@
     const addTableList = () => {
       tableList = document.createElement('div');
       tableList.classList.add('table-list');
+      tableList.setAttribute('aria-labelledby', 'list-description');
       element.parentNode.insertBefore(tableList, null);
+
+      addList();
     };
 
     /**
@@ -53,21 +69,14 @@
       let rowHeadingsNodeList = element.querySelector('table').querySelectorAll('th[scope="row"]');
       // Get all rows of the table.
       let rowsNodeList = element.querySelector('table').querySelectorAll('tr');
-      // Define an inital start to loop the rows.
-      let initial = '';
-
       // The first row of the table.
       const firstRow = element.querySelector('tr');
 
-      if (firstRow.getElementsByTagName('th').length === firstRow.querySelectorAll('*').length) {
-        options.columnHeaders = true;
-      }
-      else {
-        options.columnHeaders = false;
-      }
+      // Determine if we have column headings.
+      options.columnHeaders = (firstRow.getElementsByTagName('th').length === firstRow.querySelectorAll('*').length);
 
       // Determine if we have column headers. If so set the initial row +1.
-      initial = (options.columnHeaders) ? 1 : 0;
+      let initial = (options.columnHeaders) ? 1 : 0;
 
       // Add the rows as a list item.
       for (let i = initial; i < rowsNodeList.length; i++) {
@@ -81,7 +90,7 @@
 
         // Add a header based on the row heading.
         if (rowHeadingsNodeList !== undefined) { // eslint-disable-line no-undefined
-          let header = document.createElement('h3');
+          let header = document.createElement(options.headingType);
           header.innerHTML = row.querySelector('th[scope="row"]').innerHTML;
           listItem.appendChild(header);
         }
@@ -95,7 +104,7 @@
 
           if (colHeadingsNodeList.length > 0) {
             let term = document.createElement('dt');
-            term .innerHTML = colHeadingsNodeList[j + 1].innerHTML; // Refactor this j + 1 line.
+            term.innerHTML = colHeadingsNodeList[j + 1].innerHTML; // Refactor this j + 1 line.
             defList.appendChild(term);
           }
 
@@ -113,6 +122,8 @@
       let list = document.createElement('ul');
       tableList.appendChild(list);
       addListItems(list);
+
+      addListDescription();
     };
 
     /**
@@ -121,6 +132,7 @@
     const addListDescription = () => {
       let description = document.createElement('div');
       description.setAttribute('class', 'list-description');
+      description.setAttribute('id', 'list-description');
       description.innerHTML = caption.innerHTML;
       tableList.appendChild(description);
     };
@@ -130,8 +142,6 @@
      */
     const buildMobileTable = () => {
       addTableList();
-      addList();
-      addListDescription();
     };
 
     /**
