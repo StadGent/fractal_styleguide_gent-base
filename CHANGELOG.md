@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * Added all possible variants for the `Theme Footer` component.
+* Increased `legend` font-size.
 
 ## [3.0.0-beta5]
 
