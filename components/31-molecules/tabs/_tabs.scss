@@ -40,6 +40,7 @@
       a[download],
       a[href^="http://"],
       a[href^="https://"] {
+        @include reset-link-background;
         @include theme('color', 'color-tertiary', 'default-text-color');
         display: inline-block;
         padding: .3rem .8rem;
