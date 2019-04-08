@@ -71,7 +71,7 @@ var ResponsiveTable = function (element, options) { // eslint-disable-line no-un
    * @param options
    *   The options for the element.
    */
-  var init = function (element, options) {
+  var init = function () {
     if (!element) {
       return;
     }
