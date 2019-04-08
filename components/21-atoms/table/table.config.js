@@ -11,8 +11,7 @@ module.exports = {
   },
   variants: [
     {
-      name: 'table',
-      context: {}
+      name: 'table'
     },
     {
       name: 'table-without-column-headers',
@@ -23,6 +22,13 @@ module.exports = {
     {
       name: 'table-without-row-headers',
       context: {
+        rowHeaders: false
+      }
+    },
+    {
+      name: 'table-without-no-headers',
+      context: {
+        columnHeaders: false,
         rowHeaders: false
       }
     }

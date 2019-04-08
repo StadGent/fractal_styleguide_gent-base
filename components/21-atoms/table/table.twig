@@ -18,7 +18,11 @@
             {% endif %}
           {% endif %}
 
-          <td>Row {{ row }} cell {{ col+1 }}</td>
+          {% if rowHeaders %}
+            <td>Row {{ row }} cell {{ col+1 }}</td>
+          {% else %}
+            <td>Row {{ row }} cell {{ col }}</td>
+          {% endif %}
         {% endfor %}
       </tr>
     {% endfor %}
