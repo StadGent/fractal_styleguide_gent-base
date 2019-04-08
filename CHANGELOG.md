@@ -4,6 +4,12 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Updated
+
+* Added all possible variants for the `Theme Footer` component.
+
 ## [3.0.0-beta5]
 
 ### Added
