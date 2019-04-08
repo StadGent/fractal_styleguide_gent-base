@@ -16,7 +16,6 @@
   .newsletter,
   .social,
   .logo {
-    flex: 1;
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
 
@@ -27,14 +26,10 @@
   }
 
   .logo {
-    flex-basis: 100%;
-    flex-grow: 0;
     flex-shrink: 0;
     text-align: center;
 
     @include tablet {
-      flex-basis: auto;
-      flex-grow: 0;
       margin-right: 2rem;
       text-align: left;
     }
@@ -42,11 +37,22 @@
     img {
       height: 8rem;
     }
+
+    + .newsletter,
+    + .social,
+    + .contact {
+      padding-top: 0;
+
+      @include tablet {
+        padding-top: 2.4rem;
+      }
+    }
   }
 
   .contact {
+    margin-right: auto;
+
     @include desktop {
-      flex-basis: span(7 of 12);
       padding-right: 2rem;
     }
 
@@ -57,6 +63,13 @@
         margin-bottom: 0;
       }
 
+      @include desktop {
+        column-gap: gutter();
+        column-count: 2;
+      }
+    }
+
+    &:only-child .icon-list {
       @include tablet {
         column-gap: gutter();
         column-count: 2;
@@ -65,14 +78,17 @@
   }
 
   .social {
-    flex-basis: 100%;
     text-align: center;
 
+    @include tablet {
+      width: $bp-mobile;
+    }
+
     @include desktop {
-      flex: 1;
       text-align: left;
 
       &:only-child {
+        width: auto;
         text-align: center;
       }
     }
@@ -99,13 +115,11 @@
   }
 
   .newsletter {
-    flex-basis: 100%;
+    flex-grow: 1;
     border-radius: 0;
     font-size: .8rem;
 
     @include desktop {
-      flex-basis: span(9 of 12);
-      flex-grow: 0;
       padding-right: 2rem;
     }
 
@@ -138,6 +152,20 @@
     }
   }
 
+  .logo + .newsletter {
+    .inner-box {
+      padding-top: 0;
+
+      &::before {
+        display: none;
+      }
+
+      @include tablet {
+        padding-left: 0;
+      }
+    }
+  }
+
   .content-container {
     padding: 0 $gutter-width;
   }
@@ -149,8 +177,11 @@
 
   .top,
   .bottom {
-    display: flex;
-    flex-wrap: wrap;
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     .newsletter,
     .contact {
