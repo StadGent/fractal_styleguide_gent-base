@@ -73,10 +73,10 @@
       const firstRow = element.querySelector('tr');
 
       // Determine if we have column headings.
-      options.columnHeaders = (firstRow.getElementsByTagName('th').length === firstRow.querySelectorAll('*').length);
+      options.columnHeaders = firstRow.getElementsByTagName('th').length === firstRow.querySelectorAll('*').length;
 
       // Determine if we have column headers. If so set the initial row +1.
-      let initial = (options.columnHeaders) ? 1 : 0;
+      let initial = options.columnHeaders ? 1 : 0;
 
       // Add the rows as a list item.
       for (let i = initial; i < rowsNodeList.length; i++) {
@@ -89,7 +89,7 @@
         list.appendChild(listItem);
 
         // Add a header based on the row heading.
-        if (rowHeadingsNodeList !== undefined) { // eslint-disable-line no-undefined
+        if (!rowHeadingsNodeList) {
           let header = document.createElement(options.headingType);
           header.innerHTML = row.querySelector('th[scope="row"]').innerHTML;
           listItem.appendChild(header);
@@ -104,7 +104,7 @@
 
           if (colHeadingsNodeList.length > 0) {
             let term = document.createElement('dt');
-            term.innerHTML = colHeadingsNodeList[j + 1].innerHTML; // Refactor this j + 1 line.
+            term.innerHTML = colHeadingsNodeList[j + 1].innerHTML; // @TODO Refactor this j + 1 line.
             defList.appendChild(term);
           }
 
@@ -122,7 +122,6 @@
       let list = document.createElement('ul');
       tableList.appendChild(list);
       addListItems(list);
-
       addListDescription();
     };
 
