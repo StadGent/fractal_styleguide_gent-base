@@ -10,12 +10,13 @@
     var table = tablesNodeList[i];
 
     // Adds accessibility support.
-    new ResponsiveTable(table, {
+
+    new ResponsiveTable(table, { // eslint-disable-line no-undef
       scrollableText: '(scroll to see more)'
     });
 
     // Adds a mobile solution using definition lists.
-    new MobileTable(table);
+    new MobileTable(table); // eslint-disable-line no-undef
   }
 
 })();
