@@ -89,7 +89,7 @@
         list.appendChild(listItem);
 
         // Add a header based on the row heading.
-        if (rowHeadingsNodeList !== undefined) { // eslint-disable-line no-undefined
+        if (!rowHeadingsNodeList) {
           let header = document.createElement(options.headingType);
           header.innerHTML = row.querySelector('th[scope="row"]').innerHTML;
           listItem.appendChild(header);
