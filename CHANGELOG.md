@@ -14,6 +14,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Faulty underline for tabs.
+* Missing border-bottom for tags with a link.
 
 ## [3.0.0-beta5]
 
