@@ -73,7 +73,7 @@
       const firstRow = element.querySelector('tr');
 
       // Determine if we have column headings.
-      options.columnHeaders = (firstRow.getElementsByTagName('th').length === firstRow.querySelectorAll('*').length);
+      options.columnHeaders = firstRow.getElementsByTagName('th').length === firstRow.querySelectorAll('*').length;
 
       // Determine if we have column headers. If so set the initial row +1.
       let initial = (options.columnHeaders) ? 1 : 0;
