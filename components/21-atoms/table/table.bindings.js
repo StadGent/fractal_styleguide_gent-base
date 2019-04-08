@@ -10,7 +10,7 @@
     var table = tablesNodeList[i];
 
     // Adds accessibility support.
-    new ResponsiveTable(table, { // eslint-disable-line no-undef
+    new ResponsiveTable(table, {
       scrollableText: '(scroll to see more)'
     });
 
