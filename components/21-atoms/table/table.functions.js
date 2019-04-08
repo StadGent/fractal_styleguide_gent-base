@@ -20,7 +20,7 @@ var ResponsiveTable = function (element, options) { // eslint-disable-line no-un
    * Determine if the table should be focusable.
    */
   var determineFocusable = function () {
-    var scrollableWidth = table.parentNode.querySelector('table').scrollWidth; // eslint-disable-line no-console
+    var scrollableWidth = table.parentNode.querySelector('table').scrollWidth;
     var containerWidth = table.parentNode.clientWidth; // eslint-disable-line no-console
 
     // Check if element is scrollable.
