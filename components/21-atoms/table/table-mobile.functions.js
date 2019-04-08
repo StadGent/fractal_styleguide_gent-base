@@ -104,7 +104,7 @@
 
           if (colHeadingsNodeList.length > 0) {
             let term = document.createElement('dt');
-            term.innerHTML = colHeadingsNodeList[j + 1].innerHTML; // Refactor this j + 1 line.
+            term.innerHTML = colHeadingsNodeList[j + 1].innerHTML; // @TODO Refactor this j + 1 line.
             defList.appendChild(term);
           }
 
