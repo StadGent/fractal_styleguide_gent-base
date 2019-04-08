@@ -29,7 +29,7 @@ var ResponsiveTable = function (element, options) { // eslint-disable-line no-un
       table.removeAttribute('tabindex');
     }
     else {
-      caption.innerText = caption.innerText + ' ' + opts.scrollableText;
+      caption.innerText += ' ' + options.scrollableText;
     }
   };
 
