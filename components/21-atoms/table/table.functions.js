@@ -83,5 +83,5 @@ var ResponsiveTable = function (element, options) { // eslint-disable-line no-un
     setupResponsiveTable();
   };
 
-  init(element, options);
+  init();
 };
