@@ -76,7 +76,7 @@
       options.columnHeaders = firstRow.getElementsByTagName('th').length === firstRow.querySelectorAll('*').length;
 
       // Determine if we have column headers. If so set the initial row +1.
-      let initial = (options.columnHeaders) ? 1 : 0;
+      let initial = options.columnHeaders ? 1 : 0;
 
       // Add the rows as a list item.
       for (let i = initial; i < rowsNodeList.length; i++) {
