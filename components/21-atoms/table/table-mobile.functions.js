@@ -14,7 +14,7 @@
     }
   }
 }(this || window, function () {
-  return function (element, options = {}) {
+  return function (element, options) {
 
     /**
      * The table caption.
@@ -31,14 +31,15 @@
      */
     options = (() => {
       const defaults = {
+        init: true,
         headingType: 'h3'
       };
 
       const keys = Object.keys(defaults);
-      let newOptions = options || {};
+      options = options || {};
 
       for (let i = keys.length; i--;) {
-        newOptions[keys[i]] = options[keys[i]] || defaults[keys[i]];
+        options[keys[i]] = options[keys[i]] || defaults[keys[i]];
       }
 
       return options;
@@ -104,7 +105,7 @@
 
           if (colHeadingsNodeList.length) {
             let term = document.createElement('dt');
-            term.innerHTML = colHeadingsNodeList[j + 1].innerHTML; // @TODO Refactor this j + 1 line.
+            term.innerHTML = colHeadingsNodeList[j + 1].innerHTML;
             defList.appendChild(term);
           }
 
@@ -130,7 +131,7 @@
      */
     const addListDescription = () => {
       let description = document.createElement('div');
-      description.setAttribute('class', 'list-description');
+      description.classList.add('list-description');
       description.setAttribute('id', 'list-description');
       description.innerHTML = caption.innerHTML;
       tableList.appendChild(description);
@@ -152,8 +153,8 @@
       addTableList();
     };
 
-    init();
-
-    return {init};
+    if (options.init !== false) {
+      init();
+    }
   };
 }));
