@@ -96,6 +96,6 @@
 
     init();
 
-    return {init};
+    return {};
   };
 }));
