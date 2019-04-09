@@ -25,15 +25,5 @@ module.exports = {
         ]
       }
     ]
-  },
-  variants: [
-    {
-      name: 'multiselect',
-      context: {
-        id: 'multiselect',
-        label: 'multiselect',
-        input_component: 'input-select--multiple--default'
-      }
-    }
-  ]
+  }
 };
