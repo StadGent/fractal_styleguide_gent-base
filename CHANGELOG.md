@@ -17,6 +17,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Missing border-bottom for tags with a link.
 * Header search button underline.
 
+### Removed
+
+* Multiselect variant for `Select` component.
+
 ## [3.0.0-beta5]
 
 ### Added
