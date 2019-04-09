@@ -10,7 +10,6 @@
     var table = tablesNodeList[i];
 
     // Adds accessibility support.
-
     new ResponsiveTable(table, {
       scrollableText: '(scroll to see more)'
     });
