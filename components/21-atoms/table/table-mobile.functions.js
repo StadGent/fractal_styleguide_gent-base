@@ -102,7 +102,7 @@
         for (let j = 0; j < colsNodeList.length; j++) {
           let column = colsNodeList[j];
 
-          if (colHeadingsNodeList.length > 0) {
+          if (colHeadingsNodeList.length) {
             let term = document.createElement('dt');
             term.innerHTML = colHeadingsNodeList[j + 1].innerHTML; // @TODO Refactor this j + 1 line.
             defList.appendChild(term);
