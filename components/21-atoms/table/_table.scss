@@ -11,6 +11,8 @@ div.table-list {
 }
 
 div.responsive-table {
+  @include focus-style; // @TODO: https://digipolisgent.atlassian.net/browse/DTGB-715
+
   @include tablet {
     display: block;
   }
@@ -18,9 +20,6 @@ div.responsive-table {
   display: none;
   overflow-x: auto;
 
-  &:focus {
-    border: 2px dotted;
-  }
 
   table {
     caption-side: bottom;
