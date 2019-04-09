@@ -11,6 +11,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Added all possible variants for the `Theme Footer` component.
 * Increased `legend` font-size.
 
+### Removed
+
+* Multiselect variant for `Select` component.
+
 ## [3.0.0-beta5]
 
 ### Added
