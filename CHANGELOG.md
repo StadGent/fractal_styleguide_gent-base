@@ -11,6 +11,12 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Added all possible variants for the `Theme Footer` component.
 * Increased `legend` font-size.
 
+### Fixed
+
+* Faulty underline for tabs.
+* Missing border-bottom for tags with a link.
+* Header search button underline.
+
 ### Removed
 
 * Multiselect variant for `Select` component.
