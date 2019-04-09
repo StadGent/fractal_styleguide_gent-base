@@ -156,5 +156,7 @@
     if (options.init !== false) {
       init();
     }
+
+    return {init};
   };
 }));
