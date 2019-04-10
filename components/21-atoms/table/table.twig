@@ -1,0 +1,63 @@
+<div class="responsive-table">
+  <table>
+    <tbody>
+    {% if columnHeaders %}
+      <tr>
+        {% for col in range(1, numberOfCols+1) %}
+          <th scope="col">Heading col {{ col }}</th>
+        {% endfor %}
+      </tr>
+    {% endif %}
+
+    {% for row in range(1, numberOfRows) %}
+      <tr>
+        {% for col in range(1, numberOfCols) %}
+          {% if rowHeaders %}
+            {% if col == 1 %}
+              <th scope="row">Row heading {{ row }}</th>
+            {% endif %}
+          {% endif %}
+
+          {% if rowHeaders %}
+            <td>Row {{ row }} cell {{ col+1 }}</td>
+          {% else %}
+            <td>Row {{ row }} cell {{ col }}</td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    {% endfor %}
+    </tbody>
+    <caption>
+      {{ caption }}
+    </caption>
+  </table>
+</div>
+
+<div aria-labelledby="list-description" class="table-list">
+  <ul>
+    {% for row in range(1, numberOfRows) %}
+    <li>
+        {% for col in range(1, numberOfCols) %}
+          {% if rowHeaders %}
+            {% if col == 1 %}
+              <h3>Row heading {{ row }}</h3>
+            {% endif %}
+          {% endif %}
+          <dl>
+            {% if columnHeaders %}
+              <dt>Heading col {{ col + 1 }}</dt>
+            {% endif %}
+            {% if rowHeaders %}
+              <dd>Row {{ row }} cell {{ col + 1 }}</dd>
+            {% else %}
+              <dd>Row {{ row }} cell {{ col }}</dd>
+            {% endif %}
+          </dl>
+        {% endfor %}
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="list-description" id="list-description">
+    This is a table caption that describes the table content.
+  </div>
+</div>
