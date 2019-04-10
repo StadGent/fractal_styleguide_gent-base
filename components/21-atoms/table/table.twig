@@ -32,3 +32,32 @@
     </caption>
   </table>
 </div>
+
+<div aria-labelledby="list-description" class="table-list">
+  <ul>
+    {% for row in range(1, numberOfRows) %}
+    <li>
+        {% for col in range(1, numberOfCols) %}
+          {% if rowHeaders %}
+            {% if col == 1 %}
+              <h3>Row heading {{ row }}</h3>
+            {% endif %}
+          {% endif %}
+          <dl>
+            {% if columnHeaders %}
+              <dt>Heading col {{ col + 1 }}</dt>
+            {% endif %}
+            {% if rowHeaders %}
+              <dd>Row {{ row }} cell {{ col + 1 }}</dd>
+            {% else %}
+              <dd>Row {{ row }} cell {{ col }}</dd>
+            {% endif %}
+          </dl>
+        {% endfor %}
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="list-description" id="list-description">
+    This is a table caption that describes the table content.
+  </div>
+</div>

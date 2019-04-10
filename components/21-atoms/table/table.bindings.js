@@ -1,4 +1,4 @@
-/* global ResponsiveTable, MobileTable */
+/* global ResponsiveTable */
 
 'use strict';
 
@@ -13,9 +13,6 @@
     new ResponsiveTable(table, {
       scrollableText: '(scroll to see more)'
     });
-
-    // Adds a mobile solution using definition lists.
-    new MobileTable(table);
   }
 
 })();
