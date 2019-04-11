@@ -26,7 +26,7 @@ module.exports = {
       }
     },
     {
-      name: 'table-without-no-headers',
+      name: 'table-without-headers',
       context: {
         columnHeaders: false,
         rowHeaders: false
