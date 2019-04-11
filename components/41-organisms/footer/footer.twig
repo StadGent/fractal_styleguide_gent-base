@@ -1,24 +1,96 @@
 <section class="footer">
   <h2 class="visually-hidden">{{ 'Footer' }}</h2>
   <div class="footer-top">
-    <div class="content-container">
+    <div
+      class="content-container">
+
+      {# Gentinfo #}
       <div class="footer--column">
-        {% include '@gentinfo-island' %}
+        <div class="gentinfo-block">
+          <div class="gentinfo-block-content">
+            <h2 class="visually-hidden">Gentinfo</h2>
+            {% include '@image' with {
+              src: '/styleguide/img/svg/gentinfo-logo.svg' | path,
+              modifier: 'gentinfo-logo',
+              alt_text: 'Gentinfo',
+              ratio: null
+            } %}
+
+            {% include '@paragraph' with {
+              'text': 'Gentinfo is available from Monday till Saturday from 08:00 till 19:00'
+            } %}
+            {% include '@list' with {
+              'type': 'icon-list',
+              'icon_items': [
+                '<i class="icon-phone" aria-hidden="true"></i><a href="tel:+32 9 210 10 10" alt="Gentinfo tel link">09 210 10 10</a>',
+                '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:gentinfo@stad.gent" alt="Gentinfo mail link">Gentinfo@stad.gent</a>',
+                '<i class="icon-document" aria-hidden="true"></i><a href="#">Contactformulier</a>'
+              ]
+            } %}
+          </div>
+
+          {% include '@button' with { 'text': 'Chat with Gentinfo', 'type': 'primary', 'modifier': 'gentinfo-chat-button button icon-chat-round' } %}
+        </div>
       </div>
+
+      {# Disclaimer #}
       <div class="footer--column">
-        {% include '@disclaimer-block' %}
+        <div class="dg-block-disclaimer">
+          {% include '@heading' with {
+            'type': 'h2',
+            'heading_text': 'Useful links'
+          } %}
+
+          {% include "@list" with
+            {
+              "type": 'unordered',
+              "items": [
+                "<a href='javascript:(void);'>Vacancies</a>",
+                "<a href='javascript:(void);'>City plan</a>",
+                "<a href='https://persruimte.stad.gent'>Press room City of Ghent</a>",
+                "<a href='javascript:(void);'>Legal information and privacy</a>",
+                "<a href='https://www.example.com'>Another link</a>",
+              ]
+            }
+          %}
+        </div>
+
       </div>
+
+      {# Post address #}
       <div class="footer--column">
-        {% include '@post-address-block' %}
+        <div class="dg-block-post-address">
+          {% include '@heading' with {
+            'type': 'h2',
+            'heading_text': 'Address'
+          } %}
+          <address>
+            City of Ghent<br/>
+            Botermarkt 1<br/>
+            9000 Ghent
+          </address>
+        </div>
       </div>
     </div>
   </div>
   <div class="footer-bottom content-container">
+
+    {# Partnership #}
     <div class="footer--column">
-      {% include '@partnership-block' %}
+      <div class="db-block-partnership">
+        {% include '@paragraph' with {
+          'text': 'In cooperation with Digipolis'
+        } %}
+        <i aria-hidden="true" class="icon-digipolis"></i>
+      </div>
     </div>
+
+    {# Social media #}
     <div class="footer--column">
-      {% include '@social-media-block' %}
+      <div class="dg-blocks-social">
+        <span>{{ 'Volg Stad Gent op sociale media' }}</span>
+        {% include '@social-list' %}
+      </div>
     </div>
   </div>
 </section>
