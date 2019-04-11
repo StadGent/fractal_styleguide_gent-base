@@ -16,12 +16,16 @@
             {% if col == 1 %}
               <th scope="row">Row heading {{ row }}</th>
             {% endif %}
+          {% else %}
+            {% if col == 1 %}
+              <td>Row {{ row }} cell {{ col }}</th>
+            {% endif %}
           {% endif %}
 
           {% if rowHeaders %}
             <td>Row {{ row }} cell {{ col+1 }}</td>
           {% else %}
-            <td>Row {{ row }} cell {{ col }}</td>
+            <td>Row {{ row }} cell {{ col + 1 }}</td>
           {% endif %}
         {% endfor %}
       </tr>

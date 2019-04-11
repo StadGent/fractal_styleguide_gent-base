@@ -36,8 +36,13 @@ div.responsive-table {
       }
     }
 
-    tr:nth-child(2n+1):not(:first-child) {
+    tr:nth-child(2n+1) th,
+    tr:nth-child(2n+1) td {
       @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
+    }
+
+    tr:first-child th[scope="col"] {
+      @include theme('background-color', 'color-secondary', 'table-first-row-color');
     }
 
     th,
@@ -66,7 +71,7 @@ div.table-list {
     @extend %list-no-style;
 
     li {
-      padding: .3rem;
+      padding: .6rem .3rem;
       font-size: .9rem;
 
       &:nth-child(2n) {
@@ -79,6 +84,10 @@ div.table-list {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
+
+    &:last-of-type {
+      margin-bottom: 1rem;
+    }
 
     > dt {
       @include phablet {
