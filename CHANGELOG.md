@@ -6,9 +6,15 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Added
+
+* Added table theming.
+* Added JS functionality that adds necessary attributes to tables on page load.
+
 ### Updated
 
 * Added all possible variants for the `Theme Footer` component.
+* Added all language variants for the `Footer` component.
 * Increased `legend` font-size.
 
 ### Fixed
