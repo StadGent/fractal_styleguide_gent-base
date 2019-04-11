@@ -17,19 +17,19 @@
             } %}
 
             {% include '@paragraph' with {
-              'text': 'Gentinfo is available from Monday till Saturday from 08:00 till 19:00'
+              'text': gentinfo.description
             } %}
             {% include '@list' with {
               'type': 'icon-list',
               'icon_items': [
-                '<i class="icon-phone" aria-hidden="true"></i><a href="tel:+32 9 210 10 10" alt="Gentinfo tel link">09 210 10 10</a>',
-                '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:gentinfo@stad.gent" alt="Gentinfo mail link">Gentinfo@stad.gent</a>',
-                '<i class="icon-document" aria-hidden="true"></i><a href="#">Contactformulier</a>'
+                '<i class="icon-phone" aria-hidden="true"></i><a href="tel:' ~ gentinfo.phone.machine ~ '" alt="Gentinfo tel link">' ~ gentinfo.phone.label ~ '</a>',
+                '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:' ~ gentinfo.email ~ '" alt="Gentinfo mail link">' ~ gentinfo.email ~ '</a>',
+                '<i class="icon-document" aria-hidden="true"></i><a href="#">' ~ gentinfo.form ~ '</a>'
               ]
             } %}
           </div>
 
-          {% include '@button' with { 'text': 'Chat with Gentinfo', 'type': 'primary', 'modifier': 'gentinfo-chat-button button icon-chat-round' } %}
+          {% include '@button' with { 'text': gentinfo.chat, 'type': 'primary', 'modifier': 'gentinfo-chat-button button icon-chat-round' } %}
         </div>
       </div>
 
@@ -38,23 +38,16 @@
         <div class="dg-block-disclaimer">
           {% include '@heading' with {
             'type': 'h2',
-            'heading_text': 'Useful links'
+            'heading_text': disclaimer.title
           } %}
 
           {% include "@list" with
             {
               "type": 'unordered',
-              "items": [
-                "<a href='javascript:(void);'>Vacancies</a>",
-                "<a href='javascript:(void);'>City plan</a>",
-                "<a href='https://persruimte.stad.gent'>Press room City of Ghent</a>",
-                "<a href='javascript:(void);'>Legal information and privacy</a>",
-                "<a href='https://www.example.com'>Another link</a>",
-              ]
+              "items": disclaimer.links
             }
           %}
         </div>
-
       </div>
 
       {# Post address #}
@@ -62,12 +55,12 @@
         <div class="dg-block-post-address">
           {% include '@heading' with {
             'type': 'h2',
-            'heading_text': 'Address'
+            'heading_text': address.title
           } %}
           <address>
-            City of Ghent<br/>
-            Botermarkt 1<br/>
-            9000 Ghent
+            {{ address.name }}<br/>
+            {{ address.street }}<br/>
+            {{ address.city }}
           </address>
         </div>
       </div>
@@ -79,7 +72,7 @@
     <div class="footer--column">
       <div class="db-block-partnership">
         {% include '@paragraph' with {
-          'text': 'In cooperation with Digipolis'
+          'text': bottom.partnership
         } %}
         <i aria-hidden="true" class="icon-digipolis"></i>
       </div>
@@ -88,7 +81,7 @@
     {# Social media #}
     <div class="footer--column">
       <div class="dg-blocks-social">
-        <span>{{ 'Volg Stad Gent op sociale media' }}</span>
+        <span>{{ bottom.social }}</span>
         {% include '@social-list' %}
       </div>
     </div>
