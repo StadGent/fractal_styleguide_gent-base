@@ -4,6 +4,28 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta6]
+
+### Added
+
+* Added table theming.
+* Added JS functionality that adds necessary attributes to tables on page load.
+
+### Updated
+
+* Added all possible variants for the `Theme Footer` component.
+* Increased `legend` font-size.
+
+### Fixed
+
+* Faulty underline for tabs.
+* Missing border-bottom for tags with a link.
+* Header search button underline.
+
+### Removed
+
+* Multiselect variant for `Select` component.
+
 ## [3.0.0-beta5]
 
 ### Added
@@ -504,6 +526,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta5...3.0.0-beta6
 [3.0.0-beta5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta4...3.0.0-beta5
 [3.0.0-beta4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta3...3.0.0-beta4
 [3.0.0-beta3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta2...3.0.0-beta3

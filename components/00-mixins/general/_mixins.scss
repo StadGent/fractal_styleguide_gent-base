@@ -280,3 +280,19 @@
   margin-right: -50vw;
   margin-left: -50vw;
 }
+
+///
+/// Add accessibility focus style.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access private
+/// @author Gert-Jan Meire
+///
+@mixin focus-style {
+  &:focus {
+    @include theme('border-color', 'color-primary', 'focus-style');
+
+    border: 2px dotted;
+  }
+}

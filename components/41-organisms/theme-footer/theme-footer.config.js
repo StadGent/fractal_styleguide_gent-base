@@ -6,126 +6,110 @@ module.exports = {
   collator: function (markup, item) {
     return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 100%; padding: 0;">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
   },
-  default: 'contact-newsletter-social',
+  default: 'contact-newsletter-social-logo',
+  context: {
+    theme: 'Ghent mobility'
+  },
   variants: [
     {
-      name: 'contact-newsletter-social',
+      name: 'contact-newsletter-social-logo',
       context: {
-        theme: 'Ghent mobility',
-        contact: {
-          address: {
-            name: 'City hall',
-            address: 'Botermarkt 1, 9000 Gent'
-          },
-          phone: {
-            machine: '+3292101060',
-            human: '09 210 10 60'
-          },
-          email: 'noreply@stad.gent',
-          form: {
-            machine: '#',
-            human: 'Contactform Ghent mobility'
-          }
-        },
-        newsletter: {
-          uid: 'theme-footer-1'
-        },
-        social: {}
+        contact: true,
+        newsletter: true,
+        social: true,
+        logo: true
       }
     },
     {
       name: 'contact',
       context: {
-        theme: 'Ghent mobility',
-        contact: {
-          address: {
-            name: 'City hall',
-            address: 'Botermarkt 1, 9000 Gent'
-          },
-          phone: {
-            machine: '+3292101060',
-            human: '09 210 10 60'
-          },
-          email: 'noreply@stad.gent',
-          form: {
-            machine: '#',
-            human: 'Contactform Ghent mobility'
-          }
-        }
+        contact: true
+      }
+    },
+    {
+      name: 'contact-logo',
+      context: {
+        contact: true,
+        logo: true
       }
     },
     {
       name: 'newsletter',
       context: {
-        theme: 'Ghent mobility',
-        newsletter: {
-          uid: 'theme-footer-2'
-        }
+        newsletter: true
+      }
+    },
+    {
+      name: 'newsletter-logo',
+      context: {
+        logo: true,
+        newsletter: true
       }
     },
     {
       name: 'social',
       context: {
-        theme: 'Ghent mobility',
-        social: {}
+        social: true
+      }
+    },
+    {
+      name: 'social-logo',
+      context: {
+        social: true,
+        logo: true
       }
     },
     {
       name: 'contact-newsletter',
       context: {
-        theme: 'Ghent mobility',
+        contact: true,
+        newsletter: true
+      }
+    },
+    {
+      name: 'contact-newsletter-logo',
+      context: {
+        contact: true,
         logo: true,
-        contact: {
-          address: {
-            name: 'City hall',
-            address: 'Botermarkt 1, 9000 Gent'
-          },
-          phone: {
-            machine: '+3292101060',
-            human: '09 210 10 60'
-          },
-          email: 'noreply@stad.gent',
-          form: {
-            machine: '#',
-            human: 'Contactform Ghent mobility'
-          }
-        },
-        newsletter: {
-          uid: 'theme-footer-3'
-        }
+        newsletter: true
       }
     },
     {
       name: 'contact-social',
       context: {
-        theme: 'Ghent mobility',
+        contact: true,
+        social: true
+      }
+    },
+    {
+      name: 'contact-social-logo',
+      context: {
         logo: true,
-        contact: {
-          address: {
-            name: 'City hall',
-            address: 'Botermarkt 1, 9000 Gent'
-          },
-          phone: {
-            machine: '+3292101060',
-            human: '09 210 10 60'
-          },
-          email: 'noreply@stad.gent',
-          form: {
-            machine: '#',
-            human: 'Contactform Ghent mobility'
-          }
-        },
-        social: {}
+        contact: true,
+        social: true
       }
     },
     {
       name: 'newsletter-social',
       context: {
-        theme: 'Ghent mobility',
-        newsletter: {
-          uid: 'theme-footer-4'
-        },
-        social: {}
+        newsletter: true,
+        social: true
+      }
+    },
+    {
+      name: 'newsletter-social-logo',
+      context: {
+        logo: true,
+        newsletter: true,
+        social: true
+      }
+    },
+    {
+      name: 'contact-newsletter-social',
+      context: {
+        contact: true,
+        newsletter: true,
+        social: true
       }
     }
   ]

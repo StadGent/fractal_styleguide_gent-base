@@ -96,6 +96,7 @@ header.header {
       min-width: 2.4rem;
       max-width: calc(.8rem + 32px);
       height: 2.4rem;
+      border-bottom: 0;
       border-radius: border-radius('radius-1');
       background: svg-as-background('search', color('dark-gray'), 32, 32) no-repeat left .4rem center;
       text-indent: -9999px;

@@ -39,7 +39,6 @@
 }
 
 a.tag {
-  @include reset-link-background;
   @include theme('border-color', 'color-primary--lighten-2', 'tag-border-color');
   @include icon(arrow-right, after);
 
@@ -52,6 +51,12 @@ a.tag {
     margin-left: .5rem;
     font-size: 1rem;
     vertical-align: middle;
+  }
+
+  &,
+  &:focus,
+  &:hover {
+    background-image: none;
   }
 
   &:hover {
