@@ -19,19 +19,21 @@ The following form elements can be used in the form component:
 * Textarea <!-- @TODO Add link to the textarea component -->
 * File upload <!-- @TODO Add link to the file upload component -->
 
-### Additional components
+### Fieldsets
 
-The following additional components can help the user to fill in the form component.
+In a form component, form elements can be grouped into one or more fieldsets.
 
-* Fieldsets. A fieldset is used to group related form elements. Fieldsets have a visual indication of where the fieldset starts and where it ends. Fieldsets can also be nested. See the examples.
-* <a href="{{path './field-message.html'}}">Field messages</a>
-* <a href="{{path './status-message.html'}}">Status messages</a>
+A fieldset is used to group related form elements. Fieldsets have a visual indication of where the fieldset starts and where it ends. Fieldsets can also be nested. See the examples.
 
 ### Form actions
 
-Every form requires at least one form action. Form actions should be placed **inside** the form component. For more information, see the <a href="{{path './form-actions.html'}}">form actions component</a>.
+Every form requires at least one form action. Form actions should be placed **inside** the form component.
 
-## Layout and validation
+The **primary form action** is the first action of the form and is typically the submit button of the form. A submit button is required for every form.
+
+For more information, see the <a href="{{path './form-actions.html'}}">form actions component</a>.
+
+## Layout
 
 The container is divided in two virtual sides that each get 50% of the width of the container.
 
@@ -44,3 +46,49 @@ On mobile or when the container is too small, the right-hand side is not used. I
 Help texts (normal field messages) are always shown inline with the form elements. They are aligned to the left of the container. The width of the messages is the same as the width of the form elements. They are shown between the label of the form element and the form element itself, in other words directly below the label of the form element and directly above the form element itself.
 
 Fieldsets always get a width of 100% of the container.
+
+## Validation
+
+*The following principles and documentation about form validation is based on the book Inclusive Design Patterns by Heydon Pickering.*
+
+**When the form is validated and one or more errors are found, there should appear 1 general error message and specific error message per field where an error was found.**
+
+The intention is to convey 2 important messages to the user during validation of the form. These should be separate messages.
+
+The first message is that **something is broken**. This is purely about the fact that errors were found in the form. This message is conveyed by using 1 **general error message**.
+
+The second message is **what needs fixing**. This is about wat will make the form valid. This message is conveyed by using a **specific error message per field** where an error was found.
+
+### General error message
+
+When the user clicks the submit button of the form to try to submit the form, we need to check if there are any errors. If there are, we need to surpress form submission temporarily. At this point, all we want to communicate is the prsesence of errors and that they need attention.
+
+* The text of the general error message is fixed and should say something like: "Errors were found. Correct them to continue.".
+* The general error message should appear right after checking if there are errors in the form after the user tried to submit the form.
+* The general error message should be placed as close as possible and just below the submit button.
+* For the general error message, the <a href="{{path './status-message.html'}}">error status message</a> is used.
+
+### Specific error message per field
+
+Now that the user knows something is broken, we need to help the user with what needs fixing (what will make the form valid). We can savely move on to handling the invalid fields.
+
+* The text of the specific error message is composed out of the two pieces of information that are necessary (also see below), for example: "This is not a valid email address. Please enter an email address that meets the format example@gmail.com.".
+* The specific error messages should appear at the same moment as the general error message, right after checking if there are errors in the form after the user tried to submit the form.
+* The specific error message should be placed as close as possible and directly at the right next to the fields.
+ * In the responsive layout, when there is too little horizontal space, the specific error message move to directy below the fields.
+* For the specific error messages, the <a href="{{path './field-message.html'}}">error field message</a> is used.
+
+#### What text to use for the specific error message per field?
+
+For each invalid field in the form the following two pieces of information should be present in the specific error message:
+
+1. That the field is invalid.
+2. What would make the field valid.
+
+#### Tips to write the tekst of the specific error message
+
+* **Be clear.** Error message are a conversation, with people. Use simple language, not ambiguous. Give the reason why something has gone wrong, say what has happened and why.
+* **Be gentile and humble.** Don't blame the user. Remember that "the user is always right". Imagine a situation where you would talk to the user in person.
+* **Be useful.** Help the user move forward. Tell the user what to do. Give the solution or a clue. Link the error message to the corresponding next action or step.
+* **Avoid technical jargon.**
+* **Avoid negative words.**
