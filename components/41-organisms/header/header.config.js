@@ -25,7 +25,7 @@ module.exports = {
     hero_title: 'ICT Supplier <span>Digipolis Gent</span>',
     figure_logo_src_dark: '/styleguide/img/stock/digipolis-dark.svg',
     figure_logo_src_light: '/styleguide/img/stock/digipolis-light.svg',
-    subsite: 'ICT Supplier Digipolis Gent',
+    site_name: 'Stad Gent',
     menu_items: [
       '<a href=\'#\' class=\'active\'>Home</a>',
       '<a href=\'#\'>News & events</a>',
@@ -48,15 +48,17 @@ module.exports = {
       context: {
         mijn_gent_block_auth: true,
         mijn_gent_block_image: false,
-        header_search_id: 'header-search-authenticated',
-        breadcrumbs_id: 'system-breadcrumb-authenticated'
+        header_search_id: 'header-search-authenticated-no-image',
+        breadcrumbs_id: 'system-breadcrumb-authenticated-no-image'
       }
     },
     {
       name: 'subsite-hero',
       context: {
         header_search_id: 'header-search-subsite',
-        breadcrumbs_id: 'system-breadcrumb-subsite'
+        breadcrumbs_id: 'system-breadcrumb-subsite',
+        site_name: 'ICT Supplier Digipolis Gent',
+        logo_type: 'subsite'
       }
     },
     {

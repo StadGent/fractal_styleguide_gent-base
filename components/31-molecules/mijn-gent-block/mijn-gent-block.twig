@@ -11,7 +11,7 @@
   {% else %}
 
   <button aria-expanded="false"
-          aria-controls="mijn_gent_content"
+          aria-controls="{{ id|default('mijn_gent_content') }}"
           class="toggle accordion--button">
     {% if image %}
       {% include '@image' with {
@@ -25,7 +25,7 @@
     <span>James M.</span>
   </button>
 
-  <div id="mijn_gent_content" class="accordion--content" aria-hidden="true" hidden>
+  <div id="{{ id|default('mijn_gent_content') }}" class="accordion--content" aria-hidden="true" hidden>
     <article class="content">
       {% include '@heading' with {
         'type': 'h2',

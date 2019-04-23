@@ -737,7 +737,8 @@ gulp.task('axe:input', callback => {
   return axe(Object.assign({}, axeOptions, {
     saveOutputIn: 'inputAtoms.json',
     urls: [
-      'build/components/preview/input*.html'
+      'build/components/preview/input*.html',
+      'build/components/preview/textarea*.html'
     ],
     a11yCheckOptions
   }));
@@ -769,14 +770,14 @@ gulp.task('axe:components', callback => {
   return axe(Object.assign({}, axeOptions, {
     saveOutputIn: 'components.json',
     urls: [
-      'build/components/preview/!(input*|*layout*).html'
+      'build/components/preview/!(input*|*layout*|preview*|textarea*|teaser--*).html'
     ],
     a11yCheckOptions
   }));
 });
 
 
-gulp.task('axe', gulp.series('build', gulp.parallel('axe:input', 'axe:layout', 'axe:components')));
+gulp.task('axe', gulp.series('build', gulp.series('axe:input', 'axe:layout', 'axe:components')));
 
 /**
  * Publish task:
