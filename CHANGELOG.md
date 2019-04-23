@@ -4,6 +4,17 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Added
+
+* File upload molecule.
+
+### Updated
+
+* Field message colors are now themeable.
+* Added class `form-steps-list` to make Form Steps extendable.
+
 ## [3.0.0-beta6]
 
 ### Added
