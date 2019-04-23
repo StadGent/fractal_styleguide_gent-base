@@ -1,6 +1,6 @@
 .form-steps,
 .wizard-steps { /// @deprecated
-  .form-steps-list {
+  ol.form-steps-list {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -151,7 +151,7 @@
     }
   }
 
-  &:not(.vertical) .form-steps-list {
+  &:not(.vertical) ol.form-steps-list {
     @include desktop {
       li:not(:last-child)::after {
         @include theme('border-color', 'color-primary--lighten-3', 'form-step--active-border-color');
