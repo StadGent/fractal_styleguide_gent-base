@@ -12,7 +12,6 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Updated
 
-* Field message colors are now themeable.
 * Added class `form-steps-list` to make Form Steps extendable.
 
 ## [3.0.0-beta6]
