@@ -50,17 +50,17 @@
   }
 
   &.success {
+    @include theme("background-color", "color-success--lighten-4", "field-success-background");
     @include icon("checkmark");
 
     padding-left: 2.9rem;
-    background-color: color("green", -4);
   }
 
   &.error {
+    @include theme("background-color", "color-error--lighten-4", "field-error-background");
     @include icon("cross");
 
     padding-left: 2.9rem;
-    background-color: color("red", -4);
   }
 
   a {
