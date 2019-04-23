@@ -36,6 +36,7 @@ const babel = require('gulp-babel');
 const Color = require('color');
 const RecolorSvg = require('gulp-recolor-svg');
 const realFavicon = require('gulp-real-favicon');
+const axe = require('gulp-axe-webdriver');
 // require our configurated fractal module.
 const fractal = require('./fractal');
 
@@ -107,6 +108,28 @@ const _spotimagesMap = () => {
   }
 
   return map;
+};
+
+const axeOptions = {
+  errorOnViolation: true,
+  showOnlyViolations: true,
+  headless: true,
+  a11yCheckOptions: {
+    runOnly: {
+      type: 'tag',
+      values: ['wcag2a', 'wcag2aa']
+    },
+    // Todo: remove after axe-core issue #262 fix.
+    rules: {
+      'definition-list': {
+        enabled: false
+      },
+      'dlitem': {
+        enabled: false
+      }
+    },
+    iframes: false
+  }
 };
 
 /**
@@ -439,88 +462,6 @@ gulp.task('bump', () => {
 });
 
 /**
- * Test the style guide components for accessibility issues.
- *   - wcag2a
- *   - wcag2aa
- */
-gulp.task('axe', function (done) {
-  try {
-    // gulp-axe-webdriver is an optional dependency
-    // we need to catch a require failure
-    const axe = require('gulp-axe-webdriver');
-    const options = {
-      saveOutputIn: 'allHtml.json',
-      urls: ['build/components/preview/*.html'],
-      showOnlyViolations: true,
-      verbose: true,
-      headless: true,
-      a11yCheckOptions: {
-        runOnly: {
-          type: 'tag',
-          values: ['wcag2a', 'wcag2aa']
-        },
-        // Todo: remove after axe-core issue #262 fix.
-        rules: {
-          'definition-list': {enabled: false},
-          'dlitem': {enabled: false}
-        },
-        iframes: false
-      }
-    };
-    // not input atoms and not pages
-    const notInputNotPages = () => {
-      return new Promise((resolve, reject) => {
-
-        let components = Object.assign({}, options);
-        components.saveOutputIn = 'components.json';
-        components.urls = ['build/components/preview/!(input*|*page|teaser*|preview*).html'];
-        components.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
-        components.a11yCheckOptions.rules.bypass = {enabled: false};
-
-        axe(components).then(resolve).catch(reject);
-      });
-    };
-    // input atoms
-    const input = () => {
-      return new Promise((resolve, reject) => {
-
-        let input = Object.assign({}, options);
-        input.saveOutputIn = 'inputAtoms.json';
-        input.urls = ['build/components/preview/input*.html'];
-        input.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
-        input.a11yCheckOptions.rules.label = {enabled: false};
-        input.a11yCheckOptions.rules.bypass = {enabled: false};
-
-        axe(input).then(resolve).catch(reject);
-      });
-    };
-    // pages
-    const pages = () => {
-      return new Promise((resolve, reject) => {
-
-        let pages = Object.assign({}, options);
-        pages.saveOutputIn = 'pages.json';
-        pages.urls = ['build/components/preview/*page*.html'];
-        pages.a11yCheckOptions = Object.assign({}, options.a11yCheckOptions);
-
-        axe(pages).then(resolve).catch(reject);
-      });
-    };
-
-    Promise.all([input(), notInputNotPages(), pages()])
-      .then(()=>done())
-      .catch(err=>{
-        console.log('Error catched', err); // eslint-disable-line no-console
-        done();
-      });
-  }
-  catch (err) {
-    console.log('Error catched', err); // eslint-disable-line no-console
-    done();
-  }
-});
-
-/**
  * Create an iconfont based on SVG files.
  *
  * Usage:
@@ -782,6 +723,60 @@ gulp.task('build', gulp.series((callback) => {
   build = false;
   callback();
 }));
+
+/**
+ * Test the style guide input components for accessibility issues.
+ *   - wcag2a
+ *   - wcag2aa
+ */
+gulp.task('axe:input', callback => {
+  let a11yCheckOptions = Object.assign({}, axeOptions.a11yCheckOptions);
+  a11yCheckOptions.rules.label = {enabled: false};
+  a11yCheckOptions.rules.bypass = {enabled: false};
+
+  return axe(Object.assign({}, axeOptions, {
+    saveOutputIn: 'inputAtoms.json',
+    urls: [
+      'build/components/preview/input*.html'
+    ],
+    a11yCheckOptions
+  }));
+});
+
+/**
+ * Test the style guide layouts for accessibility issues.
+ *   - wcag2a
+ *   - wcag2aa
+ */
+gulp.task('axe:layout', callback => {
+  return axe(Object.assign({}, axeOptions, {
+    saveOutputIn: 'layouts.json',
+    urls: [
+      'build/components/preview/*layout*.html'
+    ]
+  }));
+});
+
+/**
+ * Test the style guide components for accessibility issues.
+ *   - wcag2a
+ *   - wcag2aa
+ */
+gulp.task('axe:components', callback => {
+  let a11yCheckOptions = Object.assign({}, axeOptions.a11yCheckOptions);
+  a11yCheckOptions.rules.bypass = {enabled: false};
+
+  return axe(Object.assign({}, axeOptions, {
+    saveOutputIn: 'components.json',
+    urls: [
+      'build/components/preview/!(input*|*layout*).html'
+    ],
+    a11yCheckOptions
+  }));
+});
+
+
+gulp.task('axe', gulp.series('build', gulp.parallel('axe:input', 'axe:layout', 'axe:components')));
 
 /**
  * Publish task:
