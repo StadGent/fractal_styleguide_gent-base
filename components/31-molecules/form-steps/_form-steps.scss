@@ -166,7 +166,7 @@
     }
   }
 
-  &.vertical .form-steps-list {
+  &.vertical ol.form-steps-list {
     @include desktop {
       flex-direction: column;
 
