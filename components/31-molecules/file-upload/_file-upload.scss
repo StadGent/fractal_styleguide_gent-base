@@ -1,0 +1,42 @@
+.file-upload {
+  display: inline-flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+
+  &::before {
+    @include button;
+    @include button-small;
+    @extend %button-secondary;
+
+    max-width: 100%;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    content: attr(data-text);
+  }
+
+  &::after {
+    color: color('dark-gray', -1);
+    margin-left: .6rem;
+    font-size: .7rem;
+    font-style: italic;
+    content: attr(data-file);
+  }
+
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  + .help-text {
+    @include theme('color', 'color-tertiary--lighten-1', 'file-size-color');
+    display: block;
+    font-size: .6rem;
+    margin-top: .4rem;
+  }
+}
