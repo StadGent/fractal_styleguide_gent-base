@@ -16,46 +16,14 @@ The following form elements can be used in the form component:
 * <a href="{{path './checkboxes.html'}}">Checkboxes</a>
 * <a href="{{path './radios.html'}}">Radios</a>
 * <a href="{{path './select.html'}}">Select</a>
-* Textarea <!-- @TODO Add link to the file upload component -->
+* Textarea <!-- @TODO Add link to the textarea component -->
 * File upload <!-- @TODO Add link to the file upload component -->
 
-### Additional components
+### Fieldsets
 
-The following additional components can help the user to fill in the form component.
+In a form component, form elements can be grouped into one or more fieldsets.
 
-* Fieldsets
-* Field messages
-* <a href="{{path './status-message.html'}}">Status messages</a>
-
-#### Fieldsets
-
-A fieldset is used to group related form elements. Fieldsets have a visual indication of where the fieldset starts and where it ends. Fields can also be nested. See the examples.
-
-#### Field messages
-
-A field message to provide help or feedback on fields or fieldsets. See the examples.
-
-There are three types of field messages:
-
-1. Normal field message
-2. Error field message
-3. Success field message
-
-A **normal field message** is used to **help** users fill in a field or fieldset. 
-
-* The text in the field message provides extra information to the user on how the field or fieldset should be filled in. It can also be used to tell to the user *why* certain information is asked.
-* Try not to specify what is already implied by the input label. Only use this kind of messages to provide extra information to the user.
-* As it is intended to provide help, a normal field message is always visible from the first page view of the form.
-
-An **error field message** is used to provide **feedback** on a field or fieldset. It informs the user that there was an error in filling in the field or fieldset.
-
-* The text in the error field message tells to the user what is wrong and how to fix it.
-* As it provides feedback on user input, an error field message is **not** visible on the first page view of the form. It is only visible during or after filling in the field or fieldset or when triggered by form validation.
-
-A **success field message** is used to inform the user that the field or fieldset is **correctly filled in**.
-
-* The text in the error field message tells the user about the success.
-* As it provides feedback on user input, a success field message is **not** visible on the first page view of the form. It is only visible during or after filling in the field or fieldset or when triggered by form validation.
+A fieldset is used to group related form elements. Fieldsets have a visual indication of where the fieldset starts and where it ends. Fieldsets can also be nested. See the examples.
 
 ### Form actions
 
@@ -63,15 +31,9 @@ Every form requires at least one form action. Form actions should be placed **in
 
 The **primary form action** is the first action of the form and is typically the submit button of the form. A submit button is required for every form.
 
-Make the label of the submit button clear so that the user is reminded what user input is collected, for what purpose and which action is taken when clicking the submit button. Examples are: "Send message", "Subscribe", "Next", "Continue", "Confirm". The button should have the *primary* button style.
+For more information, see the <a href="{{path './form-actions.html'}}">form actions component</a>.
 
-A form can also have a **secondary form action**.
-
-The secondary action is typically a way to temporarily pause filling in the current form. In multi-step forms, this button is used to get the user to the previous step. An other use, could be a button that saves but not submits the input the user already gave so that the user can continue filling in the form at another time. Either way, make the label of the button clear so that the user understands what the button does. Examples are: "Previous", "Save for later". The button should have the *secondary* button style.
- 
-Sometimes, in more complex multi-step forms or wizards, a **third form action**. The third action is typically a way for the user to reset user input, go back to the beginning of the form or wizard and start over. This not a button, but a link using the *standalone* link style.
-
-## Layout and validation
+## Layout
 
 The container is divided in two virtual sides that each get 50% of the width of the container.
 
@@ -85,11 +47,48 @@ Help texts (normal field messages) are always shown inline with the form element
 
 Fieldsets always get a width of 100% of the container.
 
-## Web accessibility
+## Validation
 
-### Field messages
+*The following principles and documentation about form validation is based on the book Inclusive Design Patterns by Heydon Pickering.*
 
-* A field must reference the field message by use of aria-describedby, this error and success messages have priority over the normal field message whose information has already been conveyed to the user on first page view.
-* A field message must have the role=alert attribute so content updates are read automatically in case of ajax- or frontend validation.
-* Error messages should be as specific as possible, the item that is in error is identified and the error is described to the user in text. [See WCAG 2.0 success criterion 3.3.1. error identification](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
-* The field that causes an error message has the aria-invalid=true attribute.
+**When the form is validated and one or more errors are found, there should appear 1 general error message and specific error message per field where an error was found.**
+
+The intention is to convey 2 important messages to the user during validation of the form. These should be separate messages.
+
+The first message is that **something is broken**. This is purely about the fact that errors were found in the form. This message is conveyed by using 1 **general error message**.
+
+The second message is **what needs fixing**. This is about wat will make the form valid. This message is conveyed by using a **specific error message per field** where an error was found.
+
+### General error message
+
+When the user clicks the submit button of the form to try to submit the form, we need to check if there are any errors. If there are, we need to surpress form submission temporarily. At this point, all we want to communicate is the prsesence of errors and that they need attention.
+
+* The text of the general error message is fixed and should say something like: "Errors were found. Correct them to continue.".
+* The general error message should appear right after checking if there are errors in the form after the user tried to submit the form.
+* The general error message should be placed as close as possible and just below the submit button.
+* For the general error message, the <a href="{{path './status-message.html'}}">error status message</a> is used.
+
+### Specific error message per field
+
+Now that the user knows something is broken, we need to help the user with what needs fixing (what will make the form valid). We can savely move on to handling the invalid fields.
+
+* The text of the specific error message is composed out of the two pieces of information that are necessary (also see below), for example: "This is not a valid email address. Please enter an email address that meets the format example@gmail.com.".
+* The specific error messages should appear at the same moment as the general error message, right after checking if there are errors in the form after the user tried to submit the form.
+* The specific error message should be placed as close as possible and directly at the right next to the fields.
+ * In the responsive layout, when there is too little horizontal space, the specific error message move to directy below the fields.
+* For the specific error messages, the <a href="{{path './field-message.html'}}">error field message</a> is used.
+
+#### What text to use for the specific error message per field?
+
+For each invalid field in the form the following two pieces of information should be present in the specific error message:
+
+1. That the field is invalid.
+2. What would make the field valid.
+
+#### Tips to write the tekst of the specific error message
+
+* **Be clear.** Error message are a conversation, with people. Use simple language, not ambiguous. Give the reason why something has gone wrong, say what has happened and why.
+* **Be gentile and humble.** Don't blame the user. Remember that "the user is always right". Imagine a situation where you would talk to the user in person.
+* **Be useful.** Help the user move forward. Tell the user what to do. Give the solution or a clue. Link the error message to the corresponding next action or step.
+* **Avoid technical jargon.**
+* **Avoid negative words.**

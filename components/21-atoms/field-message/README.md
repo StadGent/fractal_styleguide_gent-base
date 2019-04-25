@@ -18,21 +18,25 @@ There are three types of field messages:
 
 ### Normal field message
 
-A normal field message is used to provide help on a field or fieldset. The text in the field message helps the user to fill in the field or fieldset in the right way by providing extra information on how the field or fieldset should be filled in. It can also be used to tell to user *why* certain information is asked in the field or fieldset.
+A normal field message is used to provide **help** on a field or fieldset.
 
-A normal field message is always visible from the first page view of the form.
+* The text in the field message provides extra information to the user on how the field or fieldset should be filled in. It can also be used to tell to the user *why* certain information is asked.
+* Try not to specify what is already implied by the input label. Only use this kind of messages to provide extra information to the user.
+* As it is intended to provide help, a normal field message is always visible from the first page view of the form.
 
 ### Error field message
 
-An error field message is used to provide feedback on a field or fieldset. It informs the user that there was an error in filling in the field or fieldset. The text in the error field message tells to the user what is wrong and how to fix it.
+An error field message is used to provide **feedback** on a field or fieldset. It informs the user that there was an error in filling in the field or fieldset.
 
-As it provides feedback on user input, an error field message is **not** visible on the first page view of the form. It is only visible during or after filling in the field or fieldset or when triggered by form validation.
+* The text in the error field message tells to the user what is wrong and how to fix it.
+* As it provides feedback on user input, an error field message is **not** visible on the first page view of the form. It is only visible during or after filling in the field or fieldset or when triggered by form validation.
 
 ### Success field message
 
-A success field message is used to provide feedback on a field or fieldset. If informs the user that the field or fieldset is correctly filled in.
+A success field message is used to inform the user that the field or fieldset is **correctly filled in**.
 
-As it provides feedback on user input, a success field message is **not** visible on the first page view of the form. It is only visible during or after filling in the field or fieldset or when triggered by form validation.
+* The text in the error field message tells the user about the success.
+* As it provides feedback on user input, a success field message is **not** visible on the first page view of the form. It is only visible during or after filling in the field or fieldset or when triggered by form validation.
 
 ## Web accessibility
 
@@ -46,3 +50,7 @@ As it provides feedback on user input, a success field message is **not** visibl
  identified and the error is described to the user in text.
  [See WCAG 2.0 success criterion 3.3.1. error identification](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
 * The field that causes an error message has the aria-invalid=true attribute.
+
+## Usage in form validation
+
+For more information about the usage of field messages components in the context of a form and form validation, see the <a href="{{path './form.html'}}">form component documentation</a>.
