@@ -21,11 +21,11 @@ module.exports = {
     disclaimer: {
       title: 'Useful links',
       links: [
-        "<a href='javascript:(void);'>Vacancies</a>",
-        "<a href='javascript:(void);'>City plan</a>",
-        "<a href='https://persruimte.stad.gent'>Press room City of Ghent</a>",
-        "<a href='javascript:(void);'>Legal information and privacy</a>",
-        "<a href='https://www.example.com'>Another link</a>"
+        'Vacancies',
+        'City map',
+        'Newsroom City of Ghent',
+        'Legal information',
+        'Privacy'
       ]
     },
     address: {
@@ -57,11 +57,11 @@ module.exports = {
         disclaimer: {
           title: 'Nuttige links',
           links: [
-            "<a href='javascript:(void);'>Vacatures</a>",
-            "<a href='javascript:(void);'>Stadsplan</a>",
-            "<a href='https://persruimte.stad.gent'>Persruimte Stad Gent</a>",
-            "<a href='javascript:(void);'>Juridische info</a>",
-            "<a href='https://www.example.com'>Privacy</a>"
+            'Vacatures',
+            'Stadsplan',
+            'Persruimte Stad Gent',
+            'Juridische info',
+            'Privacy'
           ]
         },
         address: {
@@ -88,11 +88,11 @@ module.exports = {
         disclaimer: {
           title: 'Liens utiles',
           links: [
-            "<a href='javascript:(void);'>Postes vacants</a>",
-            "<a href='javascript:(void);'>Plan de la ville</a>",
-            "<a href='https://persruimte.stad.gent'>Salle de presse</a>",
-            "<a href='javascript:(void);'>Infos légales</a>",
-            "<a href='https://www.example.com'>Un autre lien</a>"
+            'Postes vacants',
+            'Plan de la ville',
+            'Espace presse de la Ville de Gand',
+            'Informations légales',
+            'Vie privée'
           ]
         },
         address: {
@@ -118,11 +118,11 @@ module.exports = {
         disclaimer: {
           title: 'Nützliche Links',
           links: [
-            "<a href='javascript:(void);'>Stellenangebote</a>",
-            "<a href='javascript:(void);'>Stadtplan</a>",
-            "<a href='https://persruimte.stad.gent'>Presseraum</a>",
-            "<a href='javascript:(void);'>Rechtliche Hinweise</a>",
-            "<a href='https://www.example.com'>Noch ein Link</a>"
+            'Stellenangebote',
+            'Stadtplan',
+            'Presseraum der Stadt Gent',
+            'Rechtliche Informationen',
+            'Privatsphäre'
           ]
         },
         address: {
