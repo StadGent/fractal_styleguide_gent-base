@@ -4,6 +4,12 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Fixed
+
+* Table row color for tables that both have a `thead` and `tbody` element.
+
 ## [3.0.0-beta6]
 
 ### Added
