@@ -42,16 +42,16 @@
      * Setup the responsive table.
      */
     const setupResponsiveTable = () => {
-      const tableUid = Math.random() * 10000;
+      // Set caption id.
+      if (!caption.hasAttribute('id')) {
+        const tableUid = Math.random().toString(36).substr(2, 16);
+        caption.setAttribute('id', 'responsive-table-caption-caption-' + tableUid);
+      }
+
       // Set table container attributes.
       element.setAttribute('tabindex', '0');
       element.setAttribute('role', 'group');
-      element.setAttribute('aria-labelledby', 'responsive-table-caption-' + tableUid);
-
-      // Set caption id.
-      if (!caption.hasAttribute('id')) {
-        caption.setAttribute('id', 'responsive-table-caption-caption-' + tableUid);
-      }
+      element.setAttribute('aria-labelledby', caption.getAttribute('id'));
 
       // Set th scope attributes.
       let firstRow = element.querySelector('tr');
