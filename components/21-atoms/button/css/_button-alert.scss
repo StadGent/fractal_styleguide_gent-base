@@ -10,12 +10,15 @@
 %button-alert,
 .button-alert {
   @include button-icon;
-  @include icon(lightning);
 
   border-color: color('red', 1);
   background-color: color('red', 1);
   color: color('white');
   box-shadow: $box-shadow-primary color('red', -3);
+
+  &:not([class*="icon-"]) {
+    @include icon(lightning);
+  }
 
   &.button-block {
     @include button-icon;
