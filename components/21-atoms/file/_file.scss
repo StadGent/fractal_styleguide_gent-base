@@ -5,9 +5,11 @@
   justify-content: flex-start;
 
   .file__button {
-    @extend %button-secondary;
     @include button;
     @include button-small;
+    @include theme('background-color', 'color-secondary', 'button-secondary-background');
+    @include theme('color', 'color-primary', 'button-secondary-color');
+    @include theme('border-color', 'color-primary--lighten-1', 'button-secondary-border-color');
 
     max-width: 100%;
     padding-top: .6rem;
@@ -35,9 +37,24 @@
     &:disabled {
       pointer-events: none;
 
-      +.file__button {
+      + .file__button {
         @include button-disabled;
       }
+    }
+
+    &:hover + .file__button,
+    &:focus + .file__button {
+      @include theme('background-color', 'color-primary--lighten-5', 'button-secondary-hover-background');
+      @include theme('color', 'color-primary', 'button-secondary-hover-color');
+      @include theme('border-color', 'color-primary--lighten-2', 'button-secondary-hover-border-color');
+    }
+
+    &:active + .file__button {
+      @include theme('background-color', 'color-primary--lighten-3', 'button-secondary-focus-background');
+      @include theme('color', 'color-primary--darken-3', 'button-secondary-focus-color');
+      @include theme('border-color', 'color-primary', 'button-secondary-focus-border-color');
+
+      box-shadow: none;
     }
   }
 
