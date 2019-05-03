@@ -13,6 +13,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * Added class `form-steps-list` to make Form Steps extendable.
+* Make it possible to override the icon of `button-alert`.
 
 ## [3.0.0-beta6]
 
