@@ -1,4 +1,17 @@
-<div class="file-upload" data-text="Select your files here to upload">
-  <input type="file" />
-</div>
-<span class="help-text">Info about size and extention (optional)</span>
+<section class="file-upload">
+  <div class="form-item">
+    {% include '@label' with {
+      "label": label,
+      "for": id ~ '--' ~ _self.name,
+    } %}
+    <div class="form-columns">
+      <div class="form-item-column">
+        {% render '@file' with {
+          "id": id ~ '--' ~ _self.name,
+          "name": name ~ '--' ~ _self.name|default(id ~ '--' ~ _self.name),
+        } %}
+      </div>
+      <div class="form-item-column"></div>
+    </div>
+  </div>
+</section>

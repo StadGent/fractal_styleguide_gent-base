@@ -1,0 +1,30 @@
+<div class="file">
+
+  <input type="file" id="{{ id }}"
+      aria-describedby="{{ id  ~ '-description' }}"
+    {% if name %}
+      name="{{ name }}"
+    {% endif %}
+    {% if value %}
+      value="{{ value }}"
+    {% endif %}
+    {% if disabled %}
+      disabled="disabled"
+    {% endif %}
+    {% if required %}
+      required="{{ required }}"
+    {% endif %}
+    {% if invalid %}
+      aria-invalid="{{ invalid }}"
+    {% endif %}
+    {% if multiple %}
+      multiple
+    {% endif %}
+  />
+
+  <span id="{{ id ~ '-description' }}" class="file__button">{{ buttonText|default('Select your files here to upload') }}</span>
+</div>
+
+{% if help %}
+  <span class="help-text">{{ help }}</span>
+{% endif %}

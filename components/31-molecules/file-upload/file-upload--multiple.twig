@@ -1,0 +1,28 @@
+<fieldset class="file-upload">
+  <legend>{{ label }}</legend>
+
+  <div class="form-item">
+    {% include '@label' with {
+      "label": label,
+      "for": id ~ '--' ~ _self.name,
+    } %}
+    <div class="form-columns">
+      <div class="form-item-column">
+        {% render '@file' with {
+          id: id ~ '--' ~ _self.name,
+          name: name ~ '--' ~ _self.name|default(id ~ '--' ~ _self.name),
+          multiple: true
+        } %}
+
+        <ul class="inline">
+          <li>{% render '@tag--filter-tag' with { tag_text: 'my uploaded file.pdf' } %}</li>
+          <li>{% render '@tag--filter-tag' with { tag_text: 'another_file.pdf' }  %}</li>
+          <li>{% render '@tag--filter-tag' with { tag_text: 'my_image.jpg' }  %}</li>
+          <li>{% render '@tag--filter-tag' with { tag_text: 'super_secret.txt' }  %}</li>
+        </ul>
+      </div>
+      <div class="form-item-column"></div>
+    </div>
+  </div>
+
+</fieldset>

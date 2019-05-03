@@ -10,7 +10,7 @@
       module.exports = factory();
     }
     else {
-      root.FileUpload = factory();
+      root.File = factory();
     }
   }
 }(this || window, function () {
@@ -45,20 +45,15 @@
     };
 
     /**
-     * Make container element focusable instead of the file input.
-     */
-    const initFocus = () => {
-      elem.setAttribute('tabindex', 0);
-      input.setAttribute('tabindex', -1);
-    };
-
-    /**
      * Initialize the FileUpload component
      */
     const init = () => {
+      if (input.hasAttribute('multiple')) {
+        return;
+      }
+
       input.addEventListener('change', updateFile);
       updateFile();
-      initFocus();
     };
 
     init();

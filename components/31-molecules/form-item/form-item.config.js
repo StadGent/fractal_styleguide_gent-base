@@ -95,8 +95,7 @@ module.exports = {
       context: {
         id: 'input-file',
         label: 'input--file',
-        input_component: 'input',
-        type: 'file'
+        input_component: 'file'
       }
     }
   ]
