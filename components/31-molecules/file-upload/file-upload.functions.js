@@ -45,11 +45,20 @@
     };
 
     /**
+     * Make container element focusable instead of the file input.
+     */
+    const initFocus = () => {
+      elem.setAttribute('tabindex', 0);
+      input.setAttribute('tabindex', -1);
+    };
+
+    /**
      * Initialize the FileUpload component
      */
     const init = () => {
       input.addEventListener('change', updateFile);
       updateFile();
+      initFocus();
     };
 
     init();
