@@ -4,7 +4,6 @@ module.exports = {
   status: 'alpha',
   context: {
     label: 'What are you looking for?',
-    for: 'header-search',
     label_optional: '',
     placeholder: '',
     modifier_search: 'inline',

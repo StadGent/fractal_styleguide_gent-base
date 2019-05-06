@@ -2,11 +2,13 @@
 
 ## When to use this component
 
-Use the status message to inform users, give feedback, give advice, help them or confirm an action or a status. Status messages are mostly used in the context of a form as a feedback mechanism, but they can also be used outside the context of forms.
+Use the status message to inform users, give feedback, give advice, help them or confirm an action or a status.
+
+Status messages are mostly used in the context of a form as a feedback mechanism, but they can also be used outside the context of forms.
 
 ## How it works
 
-There are three types of status messages:
+There are four types of status messages:
 
 1. Normal (or default) status message
 2. Warning status message
@@ -28,3 +30,7 @@ An error status message is used to show an error to the user. The message should
 ### Success status message
 
 A success status message is used to provide information about an action or a status that is positive, a succes. The message should have enough information to help the user understand the message, the purpose of the message and to be clear, but should be as short as possible.
+
+## Usage in form validation
+
+For more information about the usage of the status message component in the context of a form and form validation, see the <a href="{{path './form.html'}}">form component documentation</a>.

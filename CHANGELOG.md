@@ -6,6 +6,15 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Added
+
+* File upload molecule.
+
+### Updated
+
+* Added class `form-steps-list` to make Form Steps extendable.
+* Make it possible to override the icon of `button-alert`.
+
 ### Fixed
 
 * Table row color for tables that both have a `thead` and `tbody` element.

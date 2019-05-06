@@ -81,6 +81,7 @@
     text-align: center;
 
     @include tablet {
+      flex-shrink: 0;
       width: $bp-mobile;
     }
 
@@ -181,6 +182,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+    }
+
+    @include desktop {
+      flex-wrap: nowrap;
     }
 
     .newsletter,
