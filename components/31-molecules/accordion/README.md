@@ -14,7 +14,6 @@ An accordion component is used to:
 * Do not use an accordion component when the amount of content in the items (when expanded) will make the page too long or too slow to load. Only use accordion components for simple content.
 
 Alternatives to using an accordion component:
-
 * Reduce and simplify the content so that it can be placed as is on the page, without hiding it or the need for an accordion component.
 * Split the content accross multiple pages, especially if the amount of content is large (more than one text paragraph or if also other components than text paragraphs are needed to convey the message).
 * Keep the content as is on the page, separate the content by headings.

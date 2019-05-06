@@ -1,0 +1,27 @@
+<fieldset class="file-upload">
+  <legend>{{ label }}</legend>
+
+  {% for i in 1..2 %}
+    <div class="form-item">
+      {% include '@label' with {
+          "label": itemLabel|replace({'%s': i}),
+          "for": id ~ '--' ~ _self.name ~ '--' ~ i,
+        } %}
+      <div class="form-columns">
+        <div class="form-item-column">
+          {% render '@file' with {
+              "id":  id ~ '--' ~ _self.name ~ '--' ~ i,
+              "name": (name ~ '--' ~ _self.name ~ '--' ~ i)|default( id ~ '--' ~ _self.name ~ '--' ~ i),
+            } %}
+        </div>
+        <div class="form-item-column"></div>
+      </div>
+    </div>
+  {% endfor %}
+
+  {% render '@button' with {
+    text: 'Add attachment',
+    type: 'primary',
+    modifier: 'icon-plus'
+  } %}
+</fieldset>

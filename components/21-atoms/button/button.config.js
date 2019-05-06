@@ -34,11 +34,6 @@ const createVariant = (type, version) => {
 
 const reduceVersions = (type) => {
   return versions.reduce((accumulator, v) => {
-    // Alert buttons already have an icon.
-    if (type === 'alert' && v.indexOf('icon') >= 0) {
-      return accumulator;
-    }
-    // Create a variant and add it to the result.
     return accumulator.concat(createVariant(type, v));
   }, []);
 };

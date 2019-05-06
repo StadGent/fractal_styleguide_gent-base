@@ -2,23 +2,93 @@
   <h2 class="visually-hidden">{{ 'Footer' }}</h2>
   <div class="footer-top">
     <div class="content-container">
+
+      {# Gentinfo #}
       <div class="footer--column">
-        {% include '@gentinfo-island' %}
+        <div class="gentinfo-block">
+          <div class="gentinfo-block-content">
+            <h2 class="visually-hidden">Gentinfo</h2>
+            {% include '@image' with {
+              src: '/styleguide/img/svg/gentinfo-logo.svg' | path,
+              modifier: 'gentinfo-logo',
+              alt_text: 'Gentinfo',
+              ratio: null
+            } %}
+
+            {% include '@paragraph' with {
+              'text': gentinfo.description
+            } %}
+            {% include '@list' with {
+              'type': 'icon-list',
+              'icon_items': [
+                '<i class="icon-phone" aria-hidden="true"></i><a href="tel:' ~ gentinfo.phone.machine ~ '" alt="Gentinfo tel link">' ~ gentinfo.phone.label ~ '</a>',
+                '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:' ~ gentinfo.email ~ '" alt="Gentinfo mail link">' ~ gentinfo.email ~ '</a>',
+                '<i class="icon-document" aria-hidden="true"></i><a href="#">' ~ gentinfo.form ~ '</a>'
+              ]
+            } %}
+          </div>
+
+          {% include '@button' with { 'text': gentinfo.chat, 'type': 'primary', 'modifier': 'gentinfo-chat-button button icon-chat-round' } %}
+        </div>
       </div>
+
+      {# Disclaimer #}
       <div class="footer--column">
-        {% include '@disclaimer-block' %}
+        <div class="dg-block-disclaimer">
+          {% include '@heading' with {
+            'type': 'h2',
+            'heading_text': disclaimer.title
+          } %}
+
+          {% include "@list" with
+            {
+              "type": 'unordered',
+              "items": [
+                '<a href="https://jobs.gent.be/">' ~ disclaimer.links[0] ~ '</a>',
+                '<a href="https://stad.gent/over-gent-en-het-stadsbestuur/over-gent/kaarten-cijfers-en-data/gent-kaart/stadsplan">' ~ disclaimer.links[1] ~ '</a>',
+                '<a href="https://persruimte.stad.gent/nl">' ~ disclaimer.links[2] ~ '</a>',
+                '<a href="https://stad.gent/over-gent-en-het-stadsbestuur/vragen-suggesties-en-meldingen/juridische-info">' ~ disclaimer.links[3] ~ '</a>',
+                '<a href="https://stad.gent/over-gent-en-het-stadsbestuur/vragen-suggesties-en-meldingen/met-respect-voor-uw-privacy">' ~ disclaimer.links[4] ~ '</a>',
+              ]
+            }
+          %}
+        </div>
       </div>
+
+      {# Post address #}
       <div class="footer--column">
-        {% include '@post-address-block' %}
+        <div class="dg-block-post-address">
+          {% include '@heading' with {
+            'type': 'h2',
+            'heading_text': address.title
+          } %}
+          <address>
+            {{ address.name }}<br/>
+            {{ address.street }}<br/>
+            {{ address.city }}
+          </address>
+        </div>
       </div>
     </div>
   </div>
   <div class="footer-bottom content-container">
+
+    {# Partnership #}
     <div class="footer--column">
-      {% include '@partnership-block' %}
+      <div class="db-block-partnership">
+        {% include '@paragraph' with {
+          'text': bottom.partnership
+        } %}
+        <i aria-hidden="true" class="icon-digipolis"></i>
+      </div>
     </div>
+
+    {# Social media #}
     <div class="footer--column">
-      {% include '@social-media-block' %}
+      <div class="dg-blocks-social">
+        <span>{{ bottom.social }}</span>
+        {% include '@social-list' %}
+      </div>
     </div>
   </div>
 </section>

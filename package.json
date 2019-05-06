@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "3.0.0-beta6",
+  "version": "3.0.0-beta7",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -64,7 +64,7 @@
     "yarn": "^1.12.0"
   },
   "scripts": {
-    "test": "gulp validate",
+    "test": "gulp validate && gulp axe",
     "postinstall": "node ./scripts/postinstall.js",
     "start": "gulp watch",
     "build": "gulp build"

@@ -4,7 +4,27 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta7]
+
+### Added
+
+* File upload molecule.
+
+### Updated
+
+* Added class `form-steps-list` to make Form Steps extendable.
+* Make it possible to override the icon of `button-alert`.
+
+### Fixed
+
+* Table row color for tables that both have a `thead` and `tbody` element.
+
 ## [3.0.0-beta6]
+
+### Added
+
+* Added table theming.
+* Added JS functionality that adds necessary attributes to tables on page load.
 
 ### Added
 
@@ -14,6 +34,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * Added all possible variants for the `Theme Footer` component.
+* Added all language variants for the `Footer` component.
 * Increased `legend` font-size.
 
 ### Fixed
@@ -526,6 +547,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta7]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta6...3.0.0-beta7
 [3.0.0-beta6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta5...3.0.0-beta6
 [3.0.0-beta5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta4...3.0.0-beta5
 [3.0.0-beta4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta3...3.0.0-beta4

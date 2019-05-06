@@ -26,4 +26,3 @@
 - [ ] I have read the **CONTRIBUTING** document.
 - [ ] I have updated the documentation accordingly.
 - [ ] I have updated the styleguide CHANGELOG accordingly.
-- [ ] I have ran gulp axe on the compiled files and found no errors.
