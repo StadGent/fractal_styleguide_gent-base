@@ -43,7 +43,8 @@
     }
 
     &:hover + .file__button,
-    &:focus + .file__button {
+    &:focus + .file__button,
+    &:focus-within + .file__button {
       @include theme('background-color', 'color-primary--lighten-5', 'button-secondary-hover-background');
       @include theme('color', 'color-primary', 'button-secondary-hover-color');
       @include theme('border-color', 'color-primary--lighten-2', 'button-secondary-hover-border-color');
