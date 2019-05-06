@@ -33,7 +33,7 @@
         // If not remove the tab focus.
         element.removeAttribute('tabindex');
       }
-      else {
+      else if (caption) {
         caption.innerText += ' ' + options.scrollableText;
       }
     };
@@ -43,15 +43,15 @@
      */
     const setupResponsiveTable = () => {
       // Set caption id.
-      if (!caption.hasAttribute('id')) {
+      if (caption && !caption.hasAttribute('id')) {
         const tableUid = Math.random().toString(36).substr(2, 16);
         caption.setAttribute('id', 'responsive-table-caption-caption-' + tableUid);
+        element.setAttribute('aria-labelledby', caption.getAttribute('id'));
       }
 
       // Set table container attributes.
       element.setAttribute('tabindex', '0');
       element.setAttribute('role', 'group');
-      element.setAttribute('aria-labelledby', caption.getAttribute('id'));
 
       // Set th scope attributes.
       let firstRow = element.querySelector('tr');
