@@ -50,6 +50,20 @@ div.responsive-table {
       @include theme('background-color', 'color-secondary', 'table-first-row-color');
     }
 
+    thead ~ tbody {
+      tr:nth-child(2n+1) th,
+      tr:nth-child(2n+1) td {
+        [class*="cs--"] & {
+          background-color: unset;
+        }
+      }
+
+      tr:nth-child(2n) th,
+      tr:nth-child(2n) td {
+        @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
+      }
+    }
+
     th,
     td {
       @include theme('color', 'color-tertiary', 'table-content-color');
