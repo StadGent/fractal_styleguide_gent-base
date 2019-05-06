@@ -1,7 +1,8 @@
-{% set hasWrapper = type == 'radio' or type == 'checkbox' %}
-{% if hasWrapper %}
+{% set isOptionElement = type == 'radio' or type == 'checkbox' %}
+{% if isOptionElement %}
 <div class="{{ type ~ (modifierWrapper ? ' ' ~ modifierWrapper : '') }}">
-  {% endif %}
+{% endif %}
+
   <input type="{{ type }}" id="{{ id }}"
     {% if ariaDescribedBy %}
       aria-describedby="{{ ariaDescribedBy }}"
@@ -28,9 +29,7 @@
       aria-invalid="{{ invalid }}"
     {% endif %}
   />
-  {% if hasWrapper %}
+  {% if isOptionElement %}
   <label for="{{ id }}">{{ label }}</label>
 </div>
 {% endif %}
-
-
