@@ -1242,11 +1242,6 @@ async@1.5.2, async@^1.4.0:
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
   integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
 
-async@~0.9.0:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/async/-/async-0.9.2.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
-  integrity sha1-rqdNXmHB+JlhO/ZL2mbUx48v0X0=
-
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -4360,13 +4355,6 @@ fs-mkdirp-stream@^1.0.0:
     graceful-fs "^4.1.11"
     through2 "^2.0.3"
 
-fs-path@0.0.24:
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/fs-path/-/fs-path-0.0.24.tgz#21a4b8d7dce5bae6d208261955dbc2bcf1e75c06"
-  integrity sha512-kKxBYWJVCidJpBkp2pj9yn9myAoe+fwk/w8PfZQS4RfjB0oY9pkD4MQQQBq/NQib6Yq9EhGZgzUv/NORK/k+5A==
-  dependencies:
-    async "~0.9.0"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -4863,10 +4851,10 @@ gulp-autoprefixer@^6.0.0:
     through2 "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.0"
 
-gulp-axe-webdriver@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/gulp-axe-webdriver/-/gulp-axe-webdriver-3.1.2.tgz#0253be0acb1749a50e4b6b31a86aab2acd0ad462"
-  integrity sha512-xcRDjoChLQ8CRpycISCWu69mZhAYDcm8s6X/L/ljc43ZWd6QcSQ5KI3qJL0fxunmpANoj7Dm+3Mq1jEonnecbQ==
+gulp-axe-webdriver@^3.1.0:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/gulp-axe-webdriver/-/gulp-axe-webdriver-3.1.3.tgz#b01e4c4f13579e8096c3ffe5b975f7bb7c7c9cf5"
+  integrity sha512-7URU1viKjrl0TpmnaZEEOILWvOfcsohHAzqaysoM7CyTDbfR4DfWzZZNA1VXULjjFn7gOp18eRljJQJ+LRXpBQ==
   dependencies:
     axe-core "^3.0.1"
     axe-webdriverjs "^2.2.0"
@@ -4874,7 +4862,6 @@ gulp-axe-webdriver@^3.1.2:
     chromedriver "2.41.0"
     file-url "^1.1.0"
     fs-extra "^0.30.0"
-    fs-path "0.0.24"
     glob "^7.0.6"
     natives "^1.1.6"
     plugin-error "^1.0.1"

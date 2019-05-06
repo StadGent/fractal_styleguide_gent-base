@@ -1,5 +1,7 @@
 'use strict';
 
+const footerConfig = require('../../41-organisms/footer/footer.config').context;
+
 module.exports = {
   status: 'alpha',
   preview: '@preview-overview-without-padding',
@@ -249,6 +251,7 @@ module.exports = {
         image_alt_text: 'alt text',
         tag: 'Just some tag'
       }
-    ]
+    ],
+    footerConfig
   }
 };
