@@ -37,7 +37,6 @@
     padding-left: 2rem;
   }
 
-  > .quote-wrapper,
   > .help-block,
   > .search-block {
     @include desktop {
@@ -70,6 +69,20 @@
   > .help-block {
     @include desktop {
       padding-left: span(1 wide of 12);
+    }
+  }
+
+  > .quote-wrapper > .quote, // Deprecated
+  > .quote {
+    @include set-layout();
+    @include desktop-and-below {
+      margin-top: 5.5rem;
+    }
+
+    > blockquote {
+      @include desktop {
+        @include set-layout('width-9', 'offset-1');
+      }
     }
   }
 
