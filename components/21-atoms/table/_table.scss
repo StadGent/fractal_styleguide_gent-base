@@ -104,10 +104,6 @@ div.table-list {
     flex-wrap: wrap;
     margin: 0;
 
-    &:last-of-type {
-      margin-bottom: 1rem;
-    }
-
     > dt {
       @include phablet {
         flex: 0 30%;

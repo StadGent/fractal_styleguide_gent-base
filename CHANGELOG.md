@@ -4,6 +4,13 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Fixed
+
+* JS error when no caption for table is provided.
+* Spacing for mobile tables.
+
 ## [3.0.0-beta7]
 
 ### Added
