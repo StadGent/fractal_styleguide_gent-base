@@ -72,13 +72,14 @@
     }
   }
 
-  > .quote-wrapper > .quote, // Deprecated
+  > .quote-wrapper, // Deprecated
   > .quote {
     @include set-layout();
     @include desktop-and-below {
       margin-top: 5.5rem;
     }
 
+    > .quote > blockquote, // Deprecated
     > blockquote {
       @include desktop {
         @include set-layout('width-9', 'offset-1');
