@@ -14,6 +14,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Added class `form-steps-list` to make Form Steps extendable.
 * Make it possible to override the icon of `button-alert`.
+* Changed width of image gallery to 10 columns in the Detail layout.
 
 ### Fixed
 
