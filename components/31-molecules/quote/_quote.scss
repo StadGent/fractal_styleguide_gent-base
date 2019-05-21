@@ -2,6 +2,10 @@
   @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
   margin-top: 3.5rem;
   border-top: 2px solid;
+
+  @include desktop {
+    margin-top: 0;
+  }
 }
 
 blockquote {
