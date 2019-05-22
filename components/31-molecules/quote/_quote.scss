@@ -1,3 +1,7 @@
+.quote-wrapper {
+  overflow: auto;
+}
+
 .quote {
   @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
   margin-top: 3.5rem;

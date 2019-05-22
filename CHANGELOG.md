@@ -21,10 +21,6 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Table row color for tables that both have a `thead` and `tbody` element.
 
-### Deprecated
-
-* `quote-wrapper`: wrapper for quotes is not required anymore.
-
 ## [3.0.0-beta6]
 
 ### Added
