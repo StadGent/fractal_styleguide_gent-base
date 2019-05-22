@@ -20,6 +20,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Table row color for tables that both have a `thead` and `tbody` element.
+* Broken line in accolade for the Quote component.
 
 ## [3.0.0-beta6]
 
