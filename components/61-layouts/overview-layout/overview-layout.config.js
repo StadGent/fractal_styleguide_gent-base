@@ -21,6 +21,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         label_text: 'Event'
       },
       {
@@ -37,6 +38,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag',
         label_text: 'Event'
       },
@@ -53,7 +55,8 @@ module.exports = {
         link_text: 'read more',
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
-        image_alt_text: 'alt text'
+        image_alt_text: 'alt text',
+        image_ratio: '8:5'
       },
       {
         teaser_uid: 'uid',
@@ -69,6 +72,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag',
         label_text: 'Event'
       },
@@ -85,7 +89,8 @@ module.exports = {
         link_text: 'read more',
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
-        image_alt_text: 'alt text'
+        image_alt_text: 'alt text',
+        image_ratio: '8:5'
       },
       {
         teaser_uid: 'uid',
@@ -101,6 +106,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag'
       },
       {
@@ -117,6 +123,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         label_text: 'Event'
       },
       {
@@ -133,6 +140,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag',
         label_text: 'Event'
       },
@@ -149,7 +157,8 @@ module.exports = {
         link_text: 'read more',
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
-        image_alt_text: 'alt text'
+        image_alt_text: 'alt text',
+        image_ratio: '8:5'
       },
       {
         teaser_uid: 'uid',
@@ -165,6 +174,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag'
       },
       {
@@ -181,6 +191,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag',
         label_text: 'Event'
       },
@@ -198,6 +209,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag',
         label_text: 'Event'
       },
@@ -215,6 +227,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag',
         label_text: 'Event'
       },
@@ -232,6 +245,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag',
         label_text: 'Event'
       },
@@ -249,6 +263,7 @@ module.exports = {
         link: '#',
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
+        image_ratio: '8:5',
         tag: 'Just some tag'
       }
     ],

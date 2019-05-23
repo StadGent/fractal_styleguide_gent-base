@@ -17,6 +17,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * JS error when no caption for table is provided.
 * Spacing for mobile tables.
 * Broken line in accolade for the Quote component.
+* Image placeholders on Overview layout.
 
 ## [3.0.0-beta7]
 
