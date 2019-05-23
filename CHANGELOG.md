@@ -6,11 +6,6 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
-### Fixed
-
-* JS error when no caption for table is provided.
-* Spacing for mobile tables.
-
 ### Updated
 
 * Changed width of image gallery to 10 columns in the Detail layout.
@@ -19,6 +14,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Fixed
 
+* JS error when no caption for table is provided.
+* Spacing for mobile tables.
 * Broken line in accolade for the Quote component.
 
 ## [3.0.0-beta7]
