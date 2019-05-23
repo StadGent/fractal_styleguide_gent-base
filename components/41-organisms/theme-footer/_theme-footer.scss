@@ -78,16 +78,12 @@
   }
 
   .social {
-    text-align: center;
-
     @include tablet {
       flex-shrink: 0;
       width: $bp-mobile;
     }
 
-    @include desktop {
-      text-align: left;
-
+    @include tablet {
       &:only-child {
         width: auto;
         text-align: center;
