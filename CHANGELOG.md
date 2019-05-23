@@ -4,6 +4,21 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta8]
+
+### Updated
+
+* Changed width of image gallery to 10 columns in the Detail layout.
+* Quote wrapper is displayed over the full 12 columns in the Detail layout.
+* Social block in theme footer is left aligned on mobile devices.
+
+### Fixed
+
+* JS error when no caption for table is provided.
+* Spacing for mobile tables.
+* Broken line in accolade for the Quote component.
+* Image placeholders on Overview layout.
+
 ## [3.0.0-beta7]
 
 ### Added
@@ -547,6 +562,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta8]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta7...3.0.0-beta8
 [3.0.0-beta7]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta6...3.0.0-beta7
 [3.0.0-beta6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta5...3.0.0-beta6
 [3.0.0-beta5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta4...3.0.0-beta5

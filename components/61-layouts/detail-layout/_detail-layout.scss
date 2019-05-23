@@ -37,8 +37,6 @@
     padding-left: 2rem;
   }
 
-  > .quote-wrapper,
-  > .image-gallery--wrapper.multiple,
   > .help-block,
   > .search-block {
     @include desktop {
@@ -51,6 +49,7 @@
   > .cta-block,
   > .contact-block,
   > .contact-details,
+  > .image-gallery--wrapper.multiple,
   > .contact-box {
     @include desktop {
       @include set-layout('width-10', 'offset-1');
@@ -70,6 +69,16 @@
   > .help-block {
     @include desktop {
       padding-left: span(1 wide of 12);
+    }
+  }
+
+  > .quote-wrapper {
+    @include desktop {
+      @include set-layout();
+
+      > .quote {
+        @include set-layout('width-9', 'offset-1');
+      }
     }
   }
 

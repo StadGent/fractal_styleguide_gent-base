@@ -209,8 +209,8 @@ $themes: (
     'color-box-shadow-hover': $box-shadow-primary color('cyan-wcag', -2),
     'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
     'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan-wcag', -4), 54, 23),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1), 54, 23),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan-wcag', -4), 1280, 21),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1), 1280, 21),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
@@ -258,8 +258,8 @@ $themes: (
     'color-box-shadow-hover': $box-shadow-primary color('dark-gray', -2),
     'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
     'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('orange', -4), 54, 23),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('orange', 1), 54, 23),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('orange', -4), 1280, 21),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('orange', 1), 1280, 21),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!

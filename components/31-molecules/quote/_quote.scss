@@ -1,140 +1,85 @@
 .quote-wrapper {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .quote {
   @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
-
-  display: flex;
-  flex-direction: column;
-  margin: 3.5rem 0 0;
-  padding-top: 2.5rem;
+  margin-top: 3.5rem;
   border-top: 2px solid;
 
   @include desktop {
-    flex-direction: row;
-    margin: 2.5rem 0;
-    padding-top: 1.6rem;
+    margin-top: 0;
+  }
+}
+
+blockquote {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  font-size: .8rem;
+  font-weight: 600;
+  text-align: center;
+
+  @include desktop {
+    padding-top: 1.5rem;
+    padding-left: 11.2rem;
+    font-size: .9rem;
+    text-align: left;
   }
 
-  blockquote {
-    position: relative;
-    flex: 1 1 auto;
-    width: 100%;
-    max-width: 40rem;
+  &::before {
+    @include spot-image('quote', 7rem);
+    margin: -3.5rem auto .8rem;
 
     @include desktop {
-      align-items: center;
-      padding-left: 9rem;
+      position: absolute;
+      top: 1.5rem;
+      left: 1rem;
+      margin: 0;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+
+    @include desktop {
+      min-height: 7.8rem;
+    }
+  }
+
+  p {
+    &:first-of-type::before {
+      content: '\201C';
     }
 
-    .content {
-      display: flex;
-      position: relative;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      min-height: 3rem;
-      margin-top: 1rem;
-
-      @include desktop {
-        justify-content: initial;
-        min-height: 6rem;
-      }
-
-      &::before {
-        display: block;
-        position: absolute;
-        top: -7rem;
-        right: 0;
-        left: 0;
-        width: 5rem;
-        height: 5rem;
-        margin: auto;
-        border: 1rem solid color('white');
-        background-color: color('white');
-        background-image: url('#{$styleguide-dir}/img/svg/quote.svg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 100%;
-        content: '';
-        box-sizing: content-box;
-
-        @include desktop {
-          top: 0;
-          right: auto;
-          bottom: 0;
-          left: -9rem;
-          width: 6.5rem;
-          height: 6.5rem;
-          margin: auto;
-          border: 0;
-          box-sizing: border-box;
-        }
-      }
+    &:last-of-type::after {
+      content: '\201D';
     }
+  }
 
-    p {
-      font-size: .8rem;
-      font-weight: 600;
-      line-height: 1.9;
-      text-align: center;
 
-      &:first-of-type::before {
-        content: '\201C';
-      }
+  footer {
+    position: relative;
+    padding-top: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
 
-      &:last-of-type {
-        margin-bottom: 0;
+    &::before {
+      @include theme('background-image', 'accolade-stroke-light', 'quote-accolade-stroke');
 
-        &::after {
-          content: '\201D';
-        }
-      }
-
-      @include desktop {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        text-align: left;
-      }
-    }
-
-    footer {
-      @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
-
-      position: relative;
-      margin-top: 1rem;
-      padding-top: 1.6rem;
-      border-top: 2px solid;
-      font-size: .8rem;
-      font-style: italic;
-      font-weight: 500;
-      line-height: 1.6;
-      text-align: center;
-
-      @include desktop {
-        margin-top: 1.6rem;
-        font-size: .9rem;
-        line-height: 1.4;
-      }
-
-      &::before {
-        @include theme('background-image', 'accolade-stroke-light', 'quote-accolade-stroke');
-
-        display: block;
-        position: absolute;
-        top: -.1rem;
-        right: 0;
-        left: 0;
-        width: 2rem;
-        height: 1rem;
-        margin: auto;
-        transform: rotate(180deg);
-        background-color: color('white');
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        content: '';
-      }
+      display: block;
+      position: absolute;
+      top: -.1rem;
+      right: 0;
+      left: 0;
+      height: 1.1rem;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      content: '';
     }
   }
 }
