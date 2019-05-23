@@ -23,6 +23,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Make it possible to override the icon of `button-alert`.
 * Changed width of image gallery to 10 columns in the Detail layout.
 * Quote wrapper is displayed over the full 12 columns in the Detail layout.
+* Social block in theme footer is left aligned on mobile devices.
 
 ### Fixed
 
