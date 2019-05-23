@@ -11,6 +11,16 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * JS error when no caption for table is provided.
 * Spacing for mobile tables.
 
+### Updated
+
+* Changed width of image gallery to 10 columns in the Detail layout.
+* Quote wrapper is displayed over the full 12 columns in the Detail layout.
+* Social block in theme footer is left aligned on mobile devices.
+
+### Fixed
+
+* Broken line in accolade for the Quote component.
+
 ## [3.0.0-beta7]
 
 ### Added
@@ -21,14 +31,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Added class `form-steps-list` to make Form Steps extendable.
 * Make it possible to override the icon of `button-alert`.
-* Changed width of image gallery to 10 columns in the Detail layout.
-* Quote wrapper is displayed over the full 12 columns in the Detail layout.
-* Social block in theme footer is left aligned on mobile devices.
 
 ### Fixed
 
 * Table row color for tables that both have a `thead` and `tbody` element.
-* Broken line in accolade for the Quote component.
 
 ## [3.0.0-beta6]
 
