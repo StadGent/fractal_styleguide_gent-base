@@ -14,7 +14,7 @@ module.exports = {
     header_search_text: 'Search',
     breadcrumbs_id: 'system-breadcrumb',
     breadcrumbs_items: [
-      '<a href=\'https://stad.gent\'>Stad.gent</a>',
+      '<a href=\'#\'>Home</a>',
       '<a href=\'#\'>Overview</a>',
       '<a href=\'#\'>Theme</a>',
       '<a href=\'#\'>Subpage</a>',
@@ -53,26 +53,12 @@ module.exports = {
       }
     },
     {
-      name: 'subsite-hero',
+      name: 'subsite',
       context: {
         header_search_id: 'header-search-subsite',
         breadcrumbs_id: 'system-breadcrumb-subsite',
         site_name: 'ICT Supplier Digipolis Gent',
-        logo_type: 'subsite'
-      }
-    },
-    {
-      name: 'hero',
-      context: {
-        header_search_id: 'header-search-hero',
-        breadcrumbs_id: 'system-breadcrumb-hero'
-      }
-    },
-    {
-      name: 'menu',
-      context: {
-        header_search_id: 'header-search-menu',
-        breadcrumbs_id: 'system-breadcrumb-menu'
+        subsite: true
       }
     }
   ]

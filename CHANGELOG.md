@@ -4,6 +4,12 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Added
+
+* Subsite header title added for mobile.
+
 ## [3.0.0-beta8]
 
 ### Updated
