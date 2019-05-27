@@ -10,6 +10,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Subsite header title added for mobile.
 
+### updated
+
+* Refactored subsite header template.
+
 ## [3.0.0-beta8]
 
 ### Updated
