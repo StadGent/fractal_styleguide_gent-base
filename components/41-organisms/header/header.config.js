@@ -40,7 +40,8 @@ module.exports = {
         mijn_gent_block_auth: true,
         mijn_gent_block_image: true,
         header_search_id: 'header-search-authenticated',
-        breadcrumbs_id: 'system-breadcrumb-authenticated'
+        breadcrumbs_id: 'system-breadcrumb-authenticated',
+        hero_image_src: null
       }
     },
     {
@@ -49,11 +50,22 @@ module.exports = {
         mijn_gent_block_auth: true,
         mijn_gent_block_image: false,
         header_search_id: 'header-search-authenticated-no-image',
-        breadcrumbs_id: 'system-breadcrumb-authenticated-no-image'
+        breadcrumbs_id: 'system-breadcrumb-authenticated-no-image',
+        hero_image_src: null
       }
     },
     {
       name: 'subsite',
+      context: {
+        header_search_id: 'header-search-subsite',
+        breadcrumbs_id: 'system-breadcrumb-subsite',
+        site_name: 'ICT Supplier Digipolis Gent',
+        subsite: true,
+        hero_image_src: null
+      }
+    },
+    {
+      name: 'subsite-hero',
       context: {
         header_search_id: 'header-search-subsite',
         breadcrumbs_id: 'system-breadcrumb-subsite',
