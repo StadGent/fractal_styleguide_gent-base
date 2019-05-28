@@ -2,9 +2,8 @@
   <div class="content-container">
     {% include '@logo' with {
       site_name: site_name,
-      type: logo_type
+      type: subsite ? 'subsite'	
     } %}
-
 
     {% include '@link' with {
       link: "#",
@@ -30,11 +29,46 @@
     } %}
   </div>
 
+  {% if subsite %}
+    <div class="site-name">
+      <span>{{ site_name }}</span>
+    </div>
+  {% endif %}
+
   {% include '@breadcrumbs' with {
     items: breadcrumbs_items,
     id: breadcrumbs_id
   } %}
 
   <hr/>
-
+  {% if hero_image_src %}
+    <figure class="hero">
+      {% if subsite %}
+        <div class="subsite">
+          <div class="subsite-title">
+            {% include '@image' with {
+              'src': figure_logo_src_light | path,
+              'alt_text': figure_logo_alt_text,
+              'modifier': null,
+              'ratio': null
+            } %}
+            {% include '@heading' with {
+              'type': 'h1',
+              'heading_text': hero_title
+            } %}
+          </div>
+        </div>
+      {% endif %}
+      {% include '@image' with {
+        'src': hero_image_src,
+        'alt_text': '',
+        'ratio': '4:1'
+      } %}
+      {% if hero_image_description %}
+        {% include '@figcaption' with {
+          'figcaption': hero_image_description
+        } %}
+      {% endif %}
+    </figure>
+  {% endif %}
 </header>

@@ -14,7 +14,7 @@ module.exports = {
     header_search_text: 'Search',
     breadcrumbs_id: 'system-breadcrumb',
     breadcrumbs_items: [
-      '<a href=\'https://stad.gent\'>Stad.gent</a>',
+      '<a href=\'#\'>Home</a>',
       '<a href=\'#\'>Overview</a>',
       '<a href=\'#\'>Theme</a>',
       '<a href=\'#\'>Subpage</a>',
@@ -40,7 +40,8 @@ module.exports = {
         mijn_gent_block_auth: true,
         mijn_gent_block_image: true,
         header_search_id: 'header-search-authenticated',
-        breadcrumbs_id: 'system-breadcrumb-authenticated'
+        breadcrumbs_id: 'system-breadcrumb-authenticated',
+        hero_image_src: null
       }
     },
     {
@@ -49,30 +50,27 @@ module.exports = {
         mijn_gent_block_auth: true,
         mijn_gent_block_image: false,
         header_search_id: 'header-search-authenticated-no-image',
-        breadcrumbs_id: 'system-breadcrumb-authenticated-no-image'
+        breadcrumbs_id: 'system-breadcrumb-authenticated-no-image',
+        hero_image_src: null
+      }
+    },
+    {
+      name: 'subsite',
+      context: {
+        header_search_id: 'header-search-subsite',
+        breadcrumbs_id: 'system-breadcrumb-subsite',
+        site_name: 'ICT Supplier Digipolis Gent',
+        subsite: true,
+        hero_image_src: null
       }
     },
     {
       name: 'subsite-hero',
       context: {
-        header_search_id: 'header-search-subsite',
-        breadcrumbs_id: 'system-breadcrumb-subsite',
+        header_search_id: 'header-search-subsite-hero',
+        breadcrumbs_id: 'system-breadcrumb-subsite-hero',
         site_name: 'ICT Supplier Digipolis Gent',
-        logo_type: 'subsite'
-      }
-    },
-    {
-      name: 'hero',
-      context: {
-        header_search_id: 'header-search-hero',
-        breadcrumbs_id: 'system-breadcrumb-hero'
-      }
-    },
-    {
-      name: 'menu',
-      context: {
-        header_search_id: 'header-search-menu',
-        breadcrumbs_id: 'system-breadcrumb-menu'
+        subsite: true
       }
     }
   ]
