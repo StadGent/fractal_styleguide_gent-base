@@ -67,8 +67,8 @@ module.exports = {
     {
       name: 'subsite-hero',
       context: {
-        header_search_id: 'header-search-subsite',
-        breadcrumbs_id: 'system-breadcrumb-subsite',
+        header_search_id: 'header-search-subsite-hero',
+        breadcrumbs_id: 'system-breadcrumb-subsite-hero',
         site_name: 'ICT Supplier Digipolis Gent',
         subsite: true
       }
