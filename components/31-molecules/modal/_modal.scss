@@ -120,6 +120,7 @@
     padding: .8rem 1rem;
     border-top: 2px solid;
     background-color: color('white');
+    z-index: 5;
 
     @include tablet {
       position: relative;

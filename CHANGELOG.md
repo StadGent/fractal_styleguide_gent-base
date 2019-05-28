@@ -10,9 +10,13 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Subsite header title added for mobile.
 
-### updated
+### Updated
 
 * Refactored subsite header template.
+
+### Fixed
+
+* Bug where checkboxes in fixed-height modal were displayed in the `modal-actions`.
 
 ## [3.0.0-beta8]
 
