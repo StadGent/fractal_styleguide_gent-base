@@ -1,0 +1,10 @@
+///
+/// Returns the z-index value for a certain layer.
+/// The z-layers map is defined in _vars.scss.
+///
+/// @param {string} $layers
+///   Name of
+///
+@function z($layers...) {
+  @return map-deep-get($z-layers, $layers...);
+}

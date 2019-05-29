@@ -52,6 +52,53 @@ $border-radius: (
 ) !default;
 
 ///
+/// Lists all z-index values used in the components.
+///
+/// @since 3.0.0-beta9
+/// @group settings
+/// @access public
+/// @type map
+/// @author Helena Standaert
+///
+$z-layers: (
+  'default': 1,
+  'skiplink': 5,
+  'mijn-gent': 3,
+  'boxes': (
+    'spotimage': 1
+  ),
+  'menu': (
+    'overlay': 4,
+    'base': 4
+  ),
+  'timeline': (
+    'dots': 1,
+    'video': (
+      'background': 1,
+      'dots': 2,
+      'player': 2
+    )
+  ),
+  'hero': (
+    'base': 1,
+    'caption': 2,
+    'accolade': 1,
+    'overlay': -1
+  ),
+  'teaser': (
+    'overlay-link': 1,
+    'content-link': 2,
+    'label': 1
+  ),
+  'modal': (
+    'base': 6, // creates new stacking context
+    'overlay': -1,
+    'content': 1,
+    'actions': 2 // iOS fix
+  )
+) !default;
+
+///
 /// Defines the min-width breakpoint for mobile screens.
 ///
 /// @since 3.0.0

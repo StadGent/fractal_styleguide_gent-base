@@ -46,7 +46,7 @@
       margin: auto;
       border-radius: 50%;
       box-shadow: 0 10px 35px -25px;
-      z-index: 10;
+      z-index: z('boxes', 'spotimage');
     }
   }
 
