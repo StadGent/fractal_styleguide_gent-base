@@ -18,6 +18,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Bug where checkboxes in fixed-height modal were displayed in the `modal-actions`.
+* Modal width/height on tablet resolutions.
 * Spacing for tags in inverted teasers.
 
 ## [3.0.0-beta8]
