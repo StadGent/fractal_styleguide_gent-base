@@ -39,7 +39,7 @@
   }
 
   // children
-  &-inner {
+  &.visible .modal-inner {
     display: flex;
     position: absolute;
     top: 0;
@@ -61,6 +61,14 @@
       min-height: 0;
       margin: 10vh auto 0;
       padding-bottom: $gutter-width;
+    }
+
+    .modal-inner { // Nested modal.
+      @include tablet {
+        max-width: 100%;
+        margin: 0;
+        padding-bottom: 0;
+      }
     }
   }
 
