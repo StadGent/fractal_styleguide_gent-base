@@ -13,10 +13,12 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * Refactored subsite header template.
+* Background color for the teaser label.
 
 ### Fixed
 
 * Bug where checkboxes in fixed-height modal were displayed in the `modal-actions`.
+* Spacing for tags in inverted teasers.
 
 ## [3.0.0-beta8]
 
