@@ -5,6 +5,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  max-height: 100vh;
   visibility: hidden;
   z-index: 997;
   overflow-y: auto;
@@ -24,6 +25,7 @@
   &--fixed-height {
     > .modal-inner {
       max-height: 80vh;
+      padding-bottom: 0;
 
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // sass-lint:disable-line no-vendor-prefixes
         height: 80vh; // IE fix
@@ -53,7 +55,8 @@
 
     @include tablet {
       right: 0;
-      max-width: $bp-max-content * .8;
+      width: $bp-max-content * .8;
+      max-width: calc(100% - #{$gutter-width * 2});
       height: auto;
       min-height: 0;
       margin: 10vh auto 0;
