@@ -10,9 +10,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Subsite header title added for mobile.
 
-### updated
+### Updated
 
 * Refactored subsite header template.
+* Added fixed font-size of .8rem to table cells.
 
 ## [3.0.0-beta8]
 

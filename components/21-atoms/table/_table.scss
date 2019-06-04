@@ -41,6 +41,10 @@ div.responsive-table {
       }
     }
 
+    td {
+      font-size: .8rem;
+    }
+
     tr:nth-child(2n+1) th,
     tr:nth-child(2n+1) td {
       @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
