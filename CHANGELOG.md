@@ -13,6 +13,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * Refactored subsite header template.
+* Added fixed font-size of .8rem to table cells.
 * Background color for the teaser label.
 
 ### Fixed
