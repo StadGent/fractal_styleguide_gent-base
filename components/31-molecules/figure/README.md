@@ -1,20 +1,16 @@
-# Figure
+# Image
 
 ## When to use this component
 
-Use the figure component to present an image on a page.
+Use the image component to present an image on a page.
 
 ## How it works
 
-The figure component wraps an image in a container and adds the benefit of providing an optional caption tag.
+The image component wraps an image in a container and adds the benefit of providing an optional caption tag.
 
 ## Usage within the style guide
 
-The figure component is used in the:
+The image component is used in the:
 
 * <a href="{{path './image-gallery.html'}}">Image gallery component</a>
 * <a href="{{path './image-wall.html'}}">Image wall component</a>
-
-## Hero image component
-
-The hero image component is a figure component that wraps the hero image in a container and adds a caption tag, which in the hero image component is required. <!-- @TODO add a link to the hero image component (after development is done) -->
