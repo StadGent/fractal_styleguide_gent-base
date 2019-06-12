@@ -141,40 +141,14 @@ nav.menu {
       a[href^="http://"],
       a[href^="https://"] {
         @include reset-link-background;
-        @include theme('color', 'color-tertiary', 'default-text-color');
-        display: inline-block;
+        @include link-underlined;
+
         margin-bottom: 1rem;
         padding: 1rem;
-        font-weight: 400;
-        text-decoration: none;
 
         @include tablet {
           margin-bottom: 0;
           padding: .5rem 0;
-        }
-
-        &::after {
-          @include theme('color', 'color-primary', 'menu-hover-color');
-          display: block;
-          position: static;
-          width: 0;
-          margin: 0 auto;
-          transition: width 100ms;
-          border-bottom: 2px solid;
-          content: '';
-          overflow: visible;
-        }
-
-        &.active,
-        &:hover,
-        &:focus {
-          outline: 0;
-          background: transparent;
-          font-weight: 600;
-
-          &::after {
-            width: 70%;
-          }
         }
       }
     }

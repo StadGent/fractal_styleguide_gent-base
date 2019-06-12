@@ -48,7 +48,7 @@
         accordionExpandedClass: 'accordion--expanded'
       };
       const keys = Object.keys(defaults);
-      let options = options || {};
+      options = options || {};
 
       for (let i = keys.length; i--;) {
         options[keys[i]] = options[keys[i]] || defaults[keys[i]];
@@ -116,6 +116,10 @@
      * Listen for animationEnd on accordionContent.
      */
     const addEvents = () => {
+      const onResize = (e) => {
+        options.resizeEvent(e, expandedContent);
+      };
+
       for (let i = buttons.length; i--;) {
         const button = buttons[i];
         button.addEventListener('click', toggle);
@@ -125,9 +129,7 @@
         accordionContent.addEventListener('transitionend', options.transitionEnd);
 
         if (options.resizeEvent) {
-          window.addEventListener('resize', (e) => {
-            options.resizeEvent(e, expandedContent);
-          });
+          window.addEventListener('resize', onResize);
         }
       }
     };
