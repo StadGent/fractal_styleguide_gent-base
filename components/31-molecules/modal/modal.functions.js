@@ -278,7 +278,7 @@
 
       window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(options.resizeEvent, 250);
+        resizeTimer = setTimeout(() => options.resizeEvent(open, close), 250);
       });
     };
 

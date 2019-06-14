@@ -1,3 +1,9 @@
+// Needed for smooths scrolling on iphone / ipad inside modals.
+// Placing it on .modal is not sufficient for safari.
+body {
+  -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
+}
+
 .modal {
   display: flex;
   position: fixed;
