@@ -15,7 +15,13 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Refactored subsite header template.
 * Added fixed font-size of .8rem to table cells.
 * Background color for the teaser label.
+* Forms:
 
+  * Don't stretch field-message over the available width, but determine the width
+    according to the content instead.
+  * Add spacing to fieldset field-messages.
+  * Display font in errored fields in normal font-style (instead of italic).
+  
 ### Fixed
 
 * Bug where checkboxes in fixed-height modal were displayed in the `modal-actions`.
