@@ -2,19 +2,22 @@
 
 ## When to use this component
 
-Use the figure component to present an image on a page.
+Use the image component to present an image on a page.
 
 ## How it works
 
-The figure component wraps an image in a container and adds the benefit of providing an optional caption tag.
+In general, the figure component represents self-contained content and adds the benefit of providing an optional caption tag. A figure mostly is an image, but it also be other self-containted content such as an illustration, a diagram or a code snippet.
+
+For images, the following requirements should be followed:
+
+* An alt attribute is required. A short text alternative should be specifid using the alt attribute. [See WCAG Technique page](https://www.w3.org/TR/WCAG20-TECHS/H37.html)
+* For images that are purely decorative images, the alt attributes must be empty.
+* An aspect ratio should always be provided. The default aspect ratio is 8:5.
+* When the image is loading or is not found, a placeholder image is used.
 
 ## Usage within the style guide
 
-The figure component is used in the:
+The image component is used in the:
 
 * <a href="{{path './image-gallery.html'}}">Image gallery component</a>
 * <a href="{{path './image-wall.html'}}">Image wall component</a>
-
-## Hero image component
-
-The hero image component is a figure component that wraps the hero image in a container and adds a caption tag, which in the hero image component is required. <!-- @TODO add a link to the hero image component (after development is done) -->
