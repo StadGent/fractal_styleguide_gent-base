@@ -31,7 +31,6 @@ body {
   &--fixed-height {
     > .modal-inner {
       max-height: 80vh;
-      padding-bottom: 0;
 
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // sass-lint:disable-line no-vendor-prefixes
         height: 80vh; // IE fix
@@ -39,7 +38,19 @@ body {
 
       > .modal-content {
         flex-grow: 1;
+        margin-bottom: 3.8rem;
         overflow-y: auto;
+      }
+
+      > .modal-actions {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-top: -3.8rem;
+
+        @include tablet {
+          position: relative;
+        }
       }
     }
   }
