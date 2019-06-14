@@ -28,6 +28,11 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Modal width/height on tablet resolutions.
 * Spacing for tags in inverted teasers.
 
+### Removed
+
+* Base.js dependencies from menu.functions and modal.functions.  
+  Base.js does not exist anymore, remove it from your page template.
+
 ## [3.0.0-beta8]
 
 ### Updated
