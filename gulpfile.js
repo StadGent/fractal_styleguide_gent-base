@@ -16,7 +16,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const sassLint = require('gulp-sass-lint');
 const sassdoc = require('sassdoc');
 const autoprefixer = require('gulp-autoprefixer');
-const cssnano = require('gulp-cssnano');
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const imagemin = require('gulp-imagemin');
@@ -234,7 +235,7 @@ gulp.task('styles:dist', () => {
 gulp.task('styles:build', () => {
   return _sassFiles()
     .pipe(_sassCompile())
-    .pipe(cssnano())
+    .pipe(postcss([cssnano()]))
     .pipe(gulp.dest('build/css/'));
 });
 
