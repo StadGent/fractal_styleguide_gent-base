@@ -21,6 +21,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * Add spacing to fieldset field-messages.
   * Display font in errored fields in normal font-style (instead of italic).
 
+* Updated link styling in mijn-gent block.
+
 ## [3.0.0-beta8]
 
 ### Updated

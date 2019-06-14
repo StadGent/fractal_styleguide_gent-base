@@ -50,7 +50,7 @@
         text-decoration: none;
 
         &::after {
-          @include theme('color', 'color-primary', 'menu-hover-color');
+          @include theme('color', 'color-primary', 'link-underlined-hover-color');
           display: block;
           width: 0;
           margin: 0 auto;

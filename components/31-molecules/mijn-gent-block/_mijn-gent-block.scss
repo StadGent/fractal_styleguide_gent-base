@@ -85,6 +85,9 @@
 
     h2 {
       @extend %h3;
+    }
+
+    > h2 {
       margin-bottom: 0;
     }
 
@@ -94,14 +97,15 @@
       padding: .6rem 0;
       border-top: 2px solid;
 
-      ul {
+      .links {
         margin: 0;
 
         ///
         /// All links shouldn't have an indicator.
         ///
-        a::after {
-          display: none;
+        a {
+          @include reset-link-background;
+          @include link-underlined;
         }
       }
     }

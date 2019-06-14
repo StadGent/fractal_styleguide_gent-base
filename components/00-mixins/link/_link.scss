@@ -44,6 +44,14 @@
   }
 }
 
+///
+/// Undo default link styling.
+///
+/// @since 3.0.0-beta9
+/// @group tools
+/// @access public
+/// @author Helena Standaert
+///
 @mixin reset-link-background() {
   border-bottom: 0;
 
@@ -51,5 +59,48 @@
   &:focus,
   &:hover {
     background-image: none;
+  }
+}
+
+///
+/// Link styling with an underline on-hover
+///
+/// @since 3.0.0-beta9
+/// @group tools
+/// @access public
+/// @author Helena Standaert
+///
+/// @param {string} $active-selector [null]
+///   Selector for active elements.
+///   The 'active' state styling is applied to this selector.
+///
+@mixin link-underlined($active-selector: '.active') {
+  @include theme('color', 'color-tertiary', 'default-text-color');
+  display: inline-block;
+  font-weight: 400;
+  text-decoration: none;
+
+  &::after {
+    @include theme('color', 'color-primary', 'link-underlined-hover-color');
+    display: block;
+    position: static;
+    width: 0;
+    margin: 0 auto;
+    transition: width 100ms;
+    border-bottom: 2px solid;
+    content: '';
+    overflow: visible;
+  }
+
+  &#{$active-selector},
+  &:hover,
+  &:focus {
+    outline: 0;
+    background: transparent;
+    font-weight: 600;
+
+    &::after {
+      width: 70%;
+    }
   }
 }
