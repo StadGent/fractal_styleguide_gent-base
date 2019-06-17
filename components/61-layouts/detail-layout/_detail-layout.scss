@@ -172,7 +172,7 @@ aside.top {
       display: block;
       position: relative;
       margin: (-$bulb-image-width) auto 1rem;
-      z-index: 1;
+      z-index: z('default');
 
       @include tablet {
         position: absolute;

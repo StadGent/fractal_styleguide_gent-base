@@ -214,7 +214,7 @@ header.header {
         margin: 0;
         padding: $gutter-width 2rem;
         text-align: center;
-        z-index: 1;
+        z-index: z('hero', 'base');
       }
 
       @include desktop {
@@ -236,7 +236,7 @@ header.header {
         border: 1px solid;
         content: '';
         opacity: .94;
-        z-index: -1;
+        z-index: z('hero', 'overlay');
       }
 
       &::before {
@@ -328,7 +328,7 @@ header.header {
         left: 3rem + $gutter-width;
         margin: 0;
         padding: .4rem $gutter-width 0;
-        z-index: 2;
+        z-index: z('hero', 'caption');
 
         @include desktop {
           left: calc(#{$span} + 2rem);
@@ -350,7 +350,7 @@ header.header {
         height: 1.7rem;
         background-color: color('white');
         content: '';
-        z-index: 1;
+        z-index: z('hero', 'accolade');
       }
     }
 

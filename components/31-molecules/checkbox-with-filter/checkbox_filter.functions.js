@@ -15,12 +15,6 @@
   }
 })(this || window, function () {
   return function (elem, options) {
-    if (typeof gent_styleguide === 'undefined') {
-      // eslint-disable-next-line no-console
-      console.error('You need to include base.js.');
-      return;
-    }
-
     if (!options) {
       options = {};
     }
@@ -73,12 +67,6 @@
     );
 
     /**
-     * The modal containing checkboxes and filter.
-     * @type {Element}
-     */
-    const modal = elem.querySelector(options.modal || '.checkbox-filter__modal');
-
-    /**
      * A list of elements to trigger closing the modal.
      * At least one must have the button role.
      * @type {NodeList}
@@ -129,13 +117,6 @@
     })();
 
     /**
-     * A Gent styleguide class to create a tabTrap.
-     * @type {TabTrap}
-     */
-    // eslint-disable-next-line no-undef
-    const tabTrap = new gent_styleguide.TabTrap(modal);
-
-    /**
      * Filter the displayed checkboxes.
      * @param {boolean} clear Clear the filtervalue if true.
      */
@@ -179,7 +160,6 @@
       });
 
       updateResult(count);
-      tabTrap.setFocusables();
     };
 
     /**

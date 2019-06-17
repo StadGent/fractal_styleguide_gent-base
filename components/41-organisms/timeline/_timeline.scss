@@ -102,7 +102,7 @@ dl.timeline {
         border: $timeline-border solid;
         border-radius: 100%;
         content: '';
-        z-index: 2;
+        z-index: z('timeline', 'dots');
 
         @include desktop {
           left: calc(-#{$timeline-dt-right-padding} - #{$timeline-dot-width} / 2);
@@ -277,7 +277,7 @@ dl.timeline {
           width: 100%;
           height: 100%;
           content: '';
-          z-index: 1;
+          z-index: z('timeline', 'video', 'background');
         }
 
         &::after {
@@ -294,7 +294,7 @@ dl.timeline {
             height: 1rem;
             border-left: $timeline-border dotted;
             content: '';
-            z-index: 10;
+            z-index: z('timeline', 'video', 'dots');
 
             @include desktop {
               left: calc(#{$timeline-dt-right-padding} + 1px);
@@ -314,7 +314,7 @@ dl.timeline {
           position: relative;
           padding-top: 2rem;
           border: 0;
-          z-index: 2;
+          z-index: z('timeline', 'video', 'player');
 
           .audio-description {
             min-height: 2rem;

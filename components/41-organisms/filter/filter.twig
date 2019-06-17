@@ -46,6 +46,42 @@
           "name": "type"
         } %}
       </div>
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Extra",
+          "for": "id_extra",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input' with {
+          "type": "text",
+          "id": "id_extra",
+          "name": "type"
+        } %}
+      </div>
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Extra bis",
+          "for": "id_extra1",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input' with {
+          "type": "text",
+          "id": "id_extra1",
+          "name": "type"
+        } %}
+      </div>
+      <div class="form-item">
+        {% include '@label' with {
+          "label": "Extra tris",
+          "for": "id_extra2",
+          "label_optional": "Optional"
+        } %}
+        {% include '@input' with {
+          "type": "text",
+          "id": "id_extra2",
+          "name": "type"
+        } %}
+      </div>
       <button type="submit" class="button button-primary filter__submit">Show result</button>
 
     </form>

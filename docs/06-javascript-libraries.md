@@ -13,17 +13,6 @@ the following files namely:
 Depending on the implementation of the style guide either the functions.js
 file or both are necessary.
 
-Take into consideration that all Javascript included in this style guide is
-dependent on:
-
-* base.js
-
-## Base JS
-
-base.js contains all global variables and must be included before all other
-javascript files.
-Global variables are prefixed with **gent_styleguide** to avoid contamination.
-
 ### TabTrap
 
 TabTrap enables looping over the focusable elements within the given
