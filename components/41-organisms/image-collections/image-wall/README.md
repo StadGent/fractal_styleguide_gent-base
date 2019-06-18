@@ -15,7 +15,7 @@ Do not use the image wall component on overview pages or filter pages. Only use 
 
 ## How it works
 
-* An image wall is a list of <a href="{{path './figure.html'}}">figures</a>.
+* An image wall is a list of images presented by using <a href="{{path './figure.html'}}">figures</a>.
 * Thumbnails are used to present the set of images.
 * The number of thumbnails is equal to the number of images in the set of images.
 * All thumbnails are shown.

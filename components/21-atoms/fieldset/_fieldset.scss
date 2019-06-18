@@ -11,6 +11,11 @@ fieldset  {
     font-size: .9rem;
     font-weight: 600;
     line-height: 2;
+
+    + .field-message {
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
   }
 
   fieldset {

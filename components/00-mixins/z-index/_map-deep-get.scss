@@ -1,0 +1,25 @@
+///
+/// Deep get function to get a value from nested sass maps.
+///
+/// @author Hugo Giraudel
+/// @access public
+///
+/// @param {Map} $map
+///   Sass map that contains the desired value.
+/// @param {Arglist} $keys
+///   Chain of keys that represent the position of the desired value.
+///
+/// @return {*}
+///   Desired value.
+///
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @warn "Key `#{$key}` in not found in map. Property omitted.";
+    }
+
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}

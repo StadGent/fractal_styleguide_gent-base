@@ -1,9 +1,4 @@
 .checkbox-filter {
-
-  .tag {
-    margin: 0 .5rem .5rem 0;
-  }
-
   .checkbox-filter__count-wrapper {
     &.hidden {
       @extend %visually-hidden
@@ -14,67 +9,71 @@
     }
   }
 
-  .checkbox-filter__result-placeholder,
-  .checkbox-filter__result-wrapper {
+  .checkbox-filter__result-placeholder {
     &.hidden {
       display: none;
     }
   }
+}
 
-  .checkbox-filter__result-wrapper,
-  .checkbox-filter__count-wrapper {
-    em {
-      font-style: normal;
+.checkbox-filter__modal {
+  .tag {
+    margin: 0 .5rem .5rem 0;
+  }
+
+  .checkbox-filter__filter__search-wrapper {
+    max-width: 30rem;
+
+    @include desktop {
+      display: flex;
     }
   }
 
-  .checkbox-filter__modal {
-    .checkbox-filter__filter__search-wrapper {
-      max-width: 30rem;
+  .checkbox-filter__filter {
+    margin-bottom: 1rem;
+  }
 
-      @include desktop {
-        display: flex;
-      }
+  .checkbox-filter__result-wrapper {
+    &.hidden {
+      display: none;
     }
 
-    .checkbox-filter__filter {
-      margin-bottom: 1rem;
+    em {
+      font-style: normal;
     }
 
-    .checkbox-filter__result-wrapper {
-      @include desktop {
-        margin-left: 1rem;
-        line-height: 2.4rem;
-        white-space: nowrap;
-      }
+    @include desktop {
+      margin-left: 1rem;
+      line-height: 2.4rem;
+      white-space: nowrap;
+    }
+  }
+
+  .checkbox-filter__checkboxes {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+
+    > .checkbox {
+      flex-basis: 320px;
+      padding-right: 1rem;
     }
 
-    .checkbox-filter__checkboxes {
-      display: flex;
-      flex: 1;
-      flex-wrap: wrap;
-
-      > .checkbox {
-        flex-basis: 320px;
-        padding-right: 1rem;
-      }
-
-      > .checkbox.full-width,
-      > .checkbox-filter__category {
-        flex-basis: 100%;
-      }
-
-      > [hidden] {
-        display: none;
-      }
-
-      & + .checkbox-filter__checkboxes {
-        margin-top: 1rem;
-      }
+    > .checkbox.full-width,
+    > .checkbox-filter__category {
+      flex-basis: 100%;
     }
 
-    .checkbox-filter__selected {
-      margin-bottom: .7rem;
+    > [hidden] {
+      display: none;
     }
+
+    & + .checkbox-filter__checkboxes {
+      margin-top: 1rem;
+    }
+  }
+
+  .checkbox-filter__selected {
+    margin-bottom: .7rem;
   }
 }
