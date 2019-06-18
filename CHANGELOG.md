@@ -4,6 +4,12 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Removed
+
+* `Crisis communcation block`, since it was too project-specific
+
 ## [3.0.0-beta9]
 
 ### Added
@@ -613,4 +619,4 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
 [3.0.0-alpha.3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.2...3.0.0-alpha.3
 [3.0.0-alpha.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.1...3.0.0-alpha.2
 [3.0.0-alpha.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/2.10.0...3.0.0-alpha.1
-[Unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/master...develop
+[Unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.x...3.x-dev
