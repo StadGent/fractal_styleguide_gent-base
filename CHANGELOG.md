@@ -4,7 +4,7 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
-## [Unreleased]
+## [3.0.0-beta9]
 
 ### Added
 
@@ -21,7 +21,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
     according to the content instead.
   * Add spacing to fieldset field-messages.
   * Display font in errored fields in normal font-style (instead of italic).
-  
+
 ### Fixed
 
 * Bug where checkboxes in fixed-height modal were displayed in the `modal-actions`.
@@ -30,7 +30,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Removed
 
-* Base.js dependencies from menu.functions and modal.functions.  
+* Base.js dependencies from menu.functions and modal.functions.
   Base.js does not exist anymore, remove it from your page template.
 
 * Updated link styling in mijn-gent block.
@@ -593,6 +593,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta9]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta8...3.0.0-beta9
 [3.0.0-beta8]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta7...3.0.0-beta8
 [3.0.0-beta7]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta6...3.0.0-beta7
 [3.0.0-beta6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta5...3.0.0-beta6
