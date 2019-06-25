@@ -6,6 +6,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Updated
+
+* Added rounded corners to modal.
+
 ### Removed
 
 * `Crisis communcation block`, since it was too project-specific
