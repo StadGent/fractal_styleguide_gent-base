@@ -138,7 +138,9 @@
       ]
     } %}
 
-    {% render "@file-upload" %}
+    {% render "@file-upload" with {
+      id: _self.name ~ "-file"
+    } %}
 
     {% include '@form-actions' %}
 
