@@ -48,11 +48,22 @@ div.responsive-table {
 
     td {
       font-size: .8rem;
+
+      &:nth-of-type(n) {
+        @include table-backgrounds;
+      }
     }
 
-    tr:nth-of-type(odd) th:not([scope="col"]),
-    tr:nth-of-type(odd) td {
-      @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
+    tr {
+      &:nth-of-type(odd) th:not([scope="col"]),
+      &:nth-of-type(odd) td {
+        @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
+      }
+
+      &:nth-of-type(n) {
+        @include table-backgrounds(th);
+        @include table-backgrounds(td);
+      }
     }
 
     th,
@@ -62,11 +73,6 @@ div.responsive-table {
       min-width: 8rem;
       padding: .3rem .2rem;
       text-align: left;
-    }
-
-    tr:nth-of-type(n),
-    td:nth-of-type(n) {
-      @include table-backgrounds();
     }
   }
 }
