@@ -6,13 +6,17 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
-### Removed
+### Updated
 
-* `Crisis communcation block`, since it was too project-specific
+* Improved responsive behavior for file upload.
 
 ### Fixed
 
 * Video breaking out of container when used in combination with text alignment.
+*
+### Removed
+
+* `Crisis communcation block`, since it was too project-specific
 
 ## [3.0.0-beta9]
 

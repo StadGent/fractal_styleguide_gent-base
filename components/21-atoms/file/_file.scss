@@ -1,8 +1,10 @@
 .file {
   display: inline-flex;
   position: relative;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  max-width: 100%;
+  margin: 0 -.6rem;
 
   .file__button {
     @include button;
@@ -12,17 +14,21 @@
     @include theme('border-color', 'color-primary--lighten-1', 'button-secondary-border-color');
 
     max-width: 100%;
+    margin: 0 .6rem;
     padding-top: .6rem;
     padding-bottom: .6rem;
     content: attr(data-text);
   }
 
   &::after {
-    margin-left: .6rem;
+    max-width: 100%;
+    margin: .6rem;
     color: color('dark-gray', -1);
     font-size: .7rem;
     font-style: italic;
+    text-overflow: ellipsis;
     content: attr(data-file);
+    overflow: hidden;
   }
 
   input[type="file"] {
