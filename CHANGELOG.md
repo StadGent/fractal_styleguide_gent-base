@@ -6,6 +6,15 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Added
+
+* Background colors for table cells
+
+### Updated
+
+* Added extra wrapper for tables, named `table-wrapper`
+ > **:warning: BREAKING CHANGE:**: markup for table has changed.
+
 ### Removed
 
 * `Crisis communcation block`, since it was too project-specific
