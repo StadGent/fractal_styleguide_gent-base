@@ -1,14 +1,15 @@
 div.responsive-table,
 div.table-list {
+  position: relative;
+  padding-bottom: 1.4rem;
+
   .list-description,
   caption {
     @include theme('color', 'color-tertiary--lighten-1', 'table-caption-color');
 
-    @include tablet {
-      padding-right: 3.3rem;
-    }
-
-    max-width: 100vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     margin: .4rem 0;
     font-size: .6rem;
     text-align: right;
@@ -19,11 +20,15 @@ div.responsive-table {
   @include focus-style; // @TODO: https://digipolisgent.atlassian.net/browse/DTGB-715
 
   @include tablet {
-    display: block;
+    display: inline-block;
+    max-width: 100%;
   }
 
   display: none;
-  overflow-x: auto;
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
 
 
   table {
@@ -45,27 +50,9 @@ div.responsive-table {
       font-size: .8rem;
     }
 
-    tr:nth-child(2n+1) th,
-    tr:nth-child(2n+1) td {
+    tr:nth-of-type(odd) th:not([scope="col"]),
+    tr:nth-of-type(odd) td {
       @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
-    }
-
-    tr:first-child th[scope="col"] {
-      @include theme('background-color', 'color-secondary', 'table-first-row-color');
-    }
-
-    thead ~ tbody {
-      tr:nth-child(2n+1) th,
-      tr:nth-child(2n+1) td {
-        [class*="cs--"] & {
-          background-color: unset;
-        }
-      }
-
-      tr:nth-child(2n) th,
-      tr:nth-child(2n) td {
-        @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
-      }
     }
 
     th,
@@ -75,6 +62,11 @@ div.responsive-table {
       min-width: 8rem;
       padding: .3rem .2rem;
       text-align: left;
+    }
+
+    tr:nth-of-type(n),
+    td:nth-of-type(n) {
+      @include table-backgrounds();
     }
   }
 }
@@ -100,6 +92,10 @@ div.table-list {
       &:nth-child(2n) {
         @include theme('background-color', 'color-primary--lighten-5', 'table-list-row-color');
       }
+
+      &:nth-child(n) {
+        @include table-backgrounds;
+      }
     }
   }
 
@@ -115,14 +111,18 @@ div.table-list {
 
       flex: 0 50%;
       line-height: 2.1;
+
+      + dd {
+        flex: 0 50%;
+
+        @include phablet {
+          flex: 0 70%;
+        }
+      }
     }
 
     > dd {
-      @include phablet {
-        flex: 1 1 70%;
-      }
-
-      flex: 0 50%;
+      flex: 0 100%;
       margin: 0;
       padding: 0;
       font-size: .8rem;

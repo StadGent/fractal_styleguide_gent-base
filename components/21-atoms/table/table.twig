@@ -1,67 +1,52 @@
+{# Table (desktop) #}
 <div class="responsive-table">
-  <table>
-    <tbody>
-    {% if columnHeaders %}
-      <tr>
-        {% for col in range(1, numberOfCols+1) %}
-          <th scope="col">Heading col {{ col }}</th>
-        {% endfor %}
-      </tr>
-    {% endif %}
-
-    {% for row in range(1, numberOfRows) %}
-      <tr>
-        {% for col in range(1, numberOfCols) %}
-          {% if rowHeaders %}
-            {% if col == 1 %}
-              <th scope="row">Row heading {{ row }}</th>
+  <div class="table-wrapper">
+    <table>
+      {% for row in table.rows %}
+        <tr {{ row.attributes }}>
+          {% for cell in row.cells %}
+            {% if cell.header %}
+              <th {{ cell.attributes }}>{{ cell.text }}</th>
+            {% else %}
+              <td {{ cell.attributes }}>{{ cell.text }}</td>
             {% endif %}
-          {% else %}
-            {% if col == 1 %}
-              <td>Row {{ row }} cell {{ col }}</th>
-            {% endif %}
-          {% endif %}
-
-          {% if rowHeaders %}
-            <td>Row {{ row }} cell {{ col+1 }}</td>
-          {% else %}
-            <td>Row {{ row }} cell {{ col + 1 }}</td>
-          {% endif %}
-        {% endfor %}
-      </tr>
-    {% endfor %}
-    </tbody>
-    <caption>
-      {{ caption }}
-    </caption>
-  </table>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+      <caption>
+        {{ caption }}
+      </caption>
+    </table>
+  </div>
 </div>
 
+{# List (mobile) #}
 <div aria-labelledby="{{ _self.name }}-list-description" class="table-list">
   <ul>
-    {% for row in range(1, numberOfRows) %}
-    <li>
-        {% for col in range(1, numberOfCols) %}
-          {% if rowHeaders %}
-            {% if col == 1 %}
-              <h3>Row heading {{ row }}</h3>
-            {% endif %}
+    {% for row in table.rows|slice(table.columnHeaders ? 1 : 0) %}
+    <li {{ row.attributes }}>
+
+      {# Row title #}
+      {% if table.rowHeaders %}
+        {% set rowHeader = row.cells|first %}
+        <h3>{{ rowHeader.text }}</h3>
+      {% endif %}
+
+      {# Cells #}
+      <dl>
+        {% for cell in row.cells|slice(table.rowHeaders ? 1 : 0) %}
+          {% if table.columnHeaders %}
+            {% set headingIndex = loop.index - (table.rowHeaders ? 0 : 1) %}
+            <dt>{{ table.rows|first.cells[headingIndex].text }}</dt>
           {% endif %}
-          <dl>
-            {% if columnHeaders %}
-              <dt>Heading col {{ col + 1 }}</dt>
-            {% endif %}
-            {% if rowHeaders %}
-              <dd>Row {{ row }} cell {{ col + 1 }}</dd>
-            {% else %}
-              <dd>Row {{ row }} cell {{ col }}</dd>
-            {% endif %}
-          </dl>
+
+          <dd {{ cell.attributes }}>{{ cell.text }}</dd>
         {% endfor %}
+      </dl>
     </li>
     {% endfor %}
   </ul>
   <div class="list-description" id="{{ _self.name }}-list-description">
-    This is a table caption that describes the table content.
+    {{ caption }}
   </div>
 </div>
