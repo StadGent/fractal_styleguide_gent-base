@@ -8,6 +8,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Updated
 
+* Added rounded corners to modal.
 * Improved responsive behavior for file upload.
 
 ### Fixed
