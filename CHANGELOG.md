@@ -14,6 +14,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Video breaking out of container when used in combination with text alignment.
+* 'Show more' styling not being applied when not placed directly after a
+  collection.
 *
 ### Removed
 
