@@ -7,7 +7,7 @@ ul.grid-5 {
   display: flex;
   flex-wrap: wrap;
   width: calc(100% + #{gutter()});
-  margin: 0 -#{gutter()/2};
+  margin: 0 -#{gutter()/2} -1.2rem;
 
   > li {
     flex-basis: 100%;
@@ -18,7 +18,7 @@ ul.grid-5 {
 }
 
 .show-more {
-  margin-bottom: 1.2rem;
+  margin: 1.2rem 0;
   font-size: .9rem;
   text-align: center;
 }
