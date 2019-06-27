@@ -31,4 +31,6 @@ A table organizes information in rows and columns:
 
 The table styling features alternating row colors.
 
-On tablets in portrait mode and mobile resolutions, the table component is rendered as an HTML description list.
+On desktop resolutions, when it is desired, individual rows, columns or even individual cells can be highlighted by overriding the background color. The colors that can be used are `color-success`, `color-warning` en `color-error`.
+
+On tablets in portrait mode and mobile resolutions, the table component is rendered as an HTML description list. Highlighting cannot be used here.
