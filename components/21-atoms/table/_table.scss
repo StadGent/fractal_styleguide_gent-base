@@ -98,10 +98,6 @@ div.table-list {
       &:nth-child(2n) {
         @include theme('background-color', 'color-primary--lighten-5', 'table-list-row-color');
       }
-
-      &:nth-child(n) {
-        @include table-backgrounds;
-      }
     }
   }
 
