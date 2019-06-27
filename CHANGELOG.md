@@ -10,6 +10,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Added rounded corners to modal.
 * Improved responsive behavior for file upload.
+* Removed bold styling when hovering over a menu item.
 
 ### Fixed
 
