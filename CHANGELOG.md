@@ -12,16 +12,20 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Updated
 
+
+* Added rounded corners to modal.
+* Improved responsive behavior for file upload.
 * Added extra wrapper for tables, named `table-wrapper`
+
  > **:warning: BREAKING CHANGE:**: markup for table has changed.
-
-### Removed
-
-* `Crisis communcation block`, since it was too project-specific
 
 ### Fixed
 
 * Video breaking out of container when used in combination with text alignment.
+
+### Removed
+
+* `Crisis communcation block`, since it was too project-specific
 
 ## [3.0.0-beta9]
 
