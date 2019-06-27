@@ -19,6 +19,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * `Crisis communcation block`, since it was too project-specific
 
+### Fixed
+
+* Video breaking out of container when used in combination with text alignment.
+
 ## [3.0.0-beta9]
 
 ### Added
