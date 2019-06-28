@@ -18,11 +18,19 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Added extra wrapper for tables, named `table-wrapper`
 
  > **:warning: BREAKING CHANGE:**: markup for table has changed.
+ 
+* Removed bold styling when hovering over a menu item.
 
 ### Fixed
 
 * Video breaking out of container when used in combination with text alignment.
+* 'Show more' styling not being applied when not placed directly after a
+  collection.
+* Non-collapsing margins for grid, resulting in too much bottom margin.
 
+ > :warning: BREAKING: a wrapper has been added around the grid.
+
+*
 ### Removed
 
 * `Crisis communcation block`, since it was too project-specific
