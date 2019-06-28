@@ -1,14 +1,16 @@
-<ul class="{{ grid }}">
-  {% for i in 0..6 %}
-    {% include '@teaser--teaser--simple' with {
-      "type": 'teaser-underlined',
-      "paragraph_text": paragraph_text,
-      "title": title,
-      "teaser_uid":  teaser_uid ~ i,
-      "link_text": link_text,
-      "link": link,
-      "image_src": image_src,
-      "image_alt_text": image_alt_text
-    } %}
-  {% endfor %}
-</ul>
+<div class="grid-wrapper">
+  <ul class="{{ grid }}">
+    {% for i in 0..6 %}
+      {% include '@teaser--teaser--simple' with {
+        "type": 'teaser-underlined',
+        "paragraph_text": paragraph_text,
+        "title": title,
+        "teaser_uid":  teaser_uid ~ i,
+        "link_text": link_text,
+        "link": link,
+        "image_src": image_src,
+        "image_alt_text": image_alt_text
+      } %}
+    {% endfor %}
+  </ul>
+</div>
