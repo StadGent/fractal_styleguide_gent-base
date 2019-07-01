@@ -21,7 +21,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
  > :warning: BREAKING: a wrapper has been added around the grid.
 
-*
+* Font-size of avatar is now 26px instead of 24px.
+
 ### Removed
 
 * `Crisis communcation block`, since it was too project-specific
