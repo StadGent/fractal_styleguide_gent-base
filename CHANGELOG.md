@@ -6,6 +6,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Added
+
+* Globe icon.
+
 ### Updated
 
 * Added rounded corners to modal.
