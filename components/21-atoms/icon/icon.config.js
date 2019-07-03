@@ -35,6 +35,7 @@ const icons = [
   'fax',
   'filter',
   'flickr',
+  'globe',
   'googleplus',
   'hamburger',
   'heart',
