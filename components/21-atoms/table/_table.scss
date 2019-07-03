@@ -66,6 +66,19 @@ div.responsive-table {
       }
     }
 
+    // Tables with a thead have should have the same color scheme.
+    thead ~ tbody tr {
+      [class*="cs--"] &:nth-of-type(odd) th:not([scope="col"]),
+      [class*="cs--"] &:nth-of-type(odd) td {
+        background-color: transparent;
+      }
+
+      &:nth-of-type(even) th:not([scope="col"]),
+      &:nth-of-type(even) td {
+        @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
+      }
+    }
+
     th,
     td {
       @include theme('color', 'color-tertiary', 'table-content-color');
