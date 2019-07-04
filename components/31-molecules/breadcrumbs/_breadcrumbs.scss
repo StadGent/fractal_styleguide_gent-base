@@ -9,7 +9,7 @@
     li {
       @include icon('chevron-right', 'after');
 
-      display: inline-block;
+      display: inline;
       margin-right: .4rem;
 
       &::after {

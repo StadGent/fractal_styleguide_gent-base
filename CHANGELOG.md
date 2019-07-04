@@ -27,6 +27,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Font-size of avatar is now 26px instead of 24px.
 * Cross-browser behavior for icon buttons.
+* Fixed correct wrapping of breadcrumbs.
 
 ### Removed
 
