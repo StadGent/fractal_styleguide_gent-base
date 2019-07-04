@@ -8,12 +8,18 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Added
 
+* Background colors for table cells
 * Globe icon.
 
 ### Updated
 
+
 * Added rounded corners to modal.
 * Improved responsive behavior for file upload.
+* Added extra wrapper for tables, named `table-wrapper`
+
+ > **:warning: BREAKING CHANGE:**: markup for table has changed.
+ 
 * Removed bold styling when hovering over a menu item.
 
 ### Fixed

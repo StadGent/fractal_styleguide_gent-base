@@ -1,0 +1,34 @@
+///
+/// Apply background colors for tables
+///
+/// @since 3.0.0-beta10
+/// @group tools
+/// @access public
+/// @author Helena Standaert
+///
+/// @param {string} $child-selector [null]
+///   Selector for child elements.
+///
+
+@mixin table-backgrounds($child-selector: null) {
+  &.success #{$child-selector} {
+    @include theme-content('color-success--lighten-4', 'table-success-background') {
+      border-color: $theme-color;
+      background-color: $theme-color;
+    };
+  }
+
+  &.warning #{$child-selector} {
+    @include theme-content('color-warning--lighten-4', 'table-warning-background') {
+      border-color: $theme-color;
+      background-color: $theme-color;
+    };
+  }
+
+  &.error #{$child-selector} {
+    @include theme-content('color-error--lighten-4', 'table-error-background') {
+      border-color: $theme-color;
+      background-color: $theme-color;
+    };
+  }
+}

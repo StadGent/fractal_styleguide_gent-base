@@ -29,7 +29,7 @@ An error status message is used to show an error to the user. The message should
 
 ### Success status message
 
-A success status message is used to provide information about an action or a status that is positive, a succes. The message should have enough information to help the user understand the message, the purpose of the message and to be clear, but should be as short as possible.
+A success status message is used to provide information about an action or a status that is positive, a success. The message should have enough information to help the user understand the message, the purpose of the message and to be clear, but should be as short as possible.
 
 ## Usage in form validation
 
