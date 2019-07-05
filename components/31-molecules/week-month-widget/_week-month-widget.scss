@@ -129,7 +129,7 @@ $week-breakpoint: '(min-width: 750px)';
         }
 
         .openinghours--month {
-          font-weight: 600;
+          @include bold-text;
           line-height: $month-day-size-mobile / 2;
 
           @include phablet {
@@ -140,7 +140,7 @@ $week-breakpoint: '(min-width: 750px)';
 
 
       &--day--day-of-week {
-        font-weight: 600;
+        @include bold-text;
         text-transform: uppercase;
       }
 
@@ -180,7 +180,7 @@ $week-breakpoint: '(min-width: 750px)';
         }
 
         &[tabindex='0'] > span {
-          font-weight: bold;
+          @include bold-text;
         }
 
         &[tabindex='0'] .openinghours--details {
@@ -216,8 +216,8 @@ $week-breakpoint: '(min-width: 750px)';
       }
 
       &--date {
+        @include bold-text;
         margin-bottom: .8rem;
-        font-weight: 600;
       }
 
       &--status {

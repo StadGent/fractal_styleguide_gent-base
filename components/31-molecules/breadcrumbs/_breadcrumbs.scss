@@ -33,7 +33,7 @@
       }
 
       a {
-        font-weight: 600;
+        @include bold-text;
 
         &::after {
           content: none;

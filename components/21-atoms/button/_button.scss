@@ -87,6 +87,7 @@
 ///
 @mixin button {
   @include button-medium; // Default.
+  @include bold-text;
 
   padding: 0 2.6em;
   transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .1s ease-in-out;
@@ -94,7 +95,6 @@
   border-radius: border-radius('radius-1');
   outline: 0;
   font-family: $default-font-family;
-  font-weight: 600;
   text-align: center;
   cursor: pointer;
 

@@ -35,8 +35,9 @@ div.responsive-table {
     caption-side: bottom;
 
     th {
+      @include bold-text;
+
       font-size: .9rem;
-      font-weight: 600;
       line-height: 1.7;
 
       &[scope="col"] {
