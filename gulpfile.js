@@ -540,7 +540,7 @@ gulp.task('favicon:build', (done) => {
 
   let map = [{
     folder: 'cyan',
-    color: '#009DE0'
+    color: '#009de0'
   }];
 
   for (const cs in colormap) {
