@@ -4,12 +4,12 @@ $link-padding: .2em;
 a {
   @include theme('color', 'color-primary', 'link-color');
   @include link-background('color-primary', 'color-primary--lighten-4', 'link-underline-color', 'link-background-color');
+  @include bold-text;
 
   padding: $link-padding 0;
   border-radius: border-radius('radius-1');
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  font-weight: 600;
   text-decoration: none;
   word-wrap: break-word;
 

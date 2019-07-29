@@ -96,7 +96,7 @@
   }
 
   .summary-text {
-    font-weight: 600;
+    @include bold-text;
   }
 
   .openinghours-widget[data-type="month"] {

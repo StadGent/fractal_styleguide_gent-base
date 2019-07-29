@@ -27,7 +27,7 @@ header.header {
 
       label {
         @extend %visually-hidden;
-        font-weight: bold;
+        @include bold-text;
       }
 
       input {
@@ -124,6 +124,7 @@ header.header {
 
   .site-name {
     @include theme('color', 'color-tertiary', 'default-text-color');
+    @include bold-text;
 
     @include tablet {
       display: none;
@@ -131,7 +132,6 @@ header.header {
 
     margin: .8rem 0 .4rem;
     font-size: .9rem;
-    font-weight: 600;
   }
 
   nav.breadcrumb {

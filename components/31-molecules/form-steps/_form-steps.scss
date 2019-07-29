@@ -65,6 +65,7 @@
         @include theme('border-color', 'color-primary--lighten-5', 'form-step--active-border-color');
         @include theme('background-color', 'color-primary--lighten-5', 'form-step--active-border-color');
         @include theme('color', 'color-tertiary', 'default-text-color');
+        @include bold-text;
 
         display: inline-flex;
         align-items: center;
@@ -76,13 +77,12 @@
         border: 2px solid;
         border-radius: 1rem;
         font-size: .8rem;
-        font-weight: 600;
         content: counter(item);
         counter-increment: item;
       }
 
       &.active {
-        font-weight: 600;
+        @include bold-text;
 
         > span::before {
           @include theme('border-color', 'color-primary--darken-1', 'form-step--active-border-color');

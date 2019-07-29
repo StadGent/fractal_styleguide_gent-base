@@ -4,6 +4,8 @@
   justify-content: flex-end;
 
   .avatar {
+    @include bold-text;
+
     flex-shrink: 0;
     width: 2.3rem;
     height: 2.3rem;
@@ -11,7 +13,6 @@
     background-color: #29cfc9;
     color: #fff;
     font-size: 1.3rem;
-    font-weight: 600;
     line-height: 2.3rem;
     text-align: center;
     text-transform: uppercase;
@@ -48,9 +49,10 @@
     }
 
     span {
+      @include bold-text;
+
       display: none;
       padding: 0 .5em;
-      font-weight: 600;
 
       @include tablet {
         display: inline-block;

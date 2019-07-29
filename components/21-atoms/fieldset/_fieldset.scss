@@ -7,9 +7,10 @@ fieldset  {
   border-bottom: 1px solid;
 
   legend {
+    @include bold-text;
+
     padding: 0 .2rem 0 0;
     font-size: .9rem;
-    font-weight: 600;
     line-height: 2;
 
     + .field-message {

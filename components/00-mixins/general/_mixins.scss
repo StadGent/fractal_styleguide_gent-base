@@ -262,6 +262,18 @@
   font-size: .9rem;
 }
 
+///
+/// Defines bold text.
+///
+/// @since 3.0.0
+/// @group tools
+/// @access private
+/// @author Helena Standaert
+///
+@mixin bold-text {
+  font-weight: 600;
+}
+
 
 ///
 /// Displays an element full-width on the page.
