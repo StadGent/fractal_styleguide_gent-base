@@ -19,7 +19,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Added extra wrapper for tables, named `table-wrapper`
 
  > **:warning: BREAKING CHANGE:**: markup for table has changed.
- 
+
 * Removed bold styling when hovering over a menu item.
 
 ### Fixed
@@ -33,6 +33,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Font-size of avatar is now 26px instead of 24px.
 * Cross-browser behavior for icon buttons.
+* Alignment of status messages with 1 line of text.
 
 ### Removed
 
