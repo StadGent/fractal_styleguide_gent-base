@@ -158,7 +158,7 @@ dl {
   }
 
   dt {
-    font-weight: 600;
+    @include bold-text;
   }
 
   dd {
@@ -185,6 +185,6 @@ dl {
   }
 
   a {
-    font-weight: 600;
+    @include bold-text;
   }
 }

@@ -43,6 +43,7 @@
 
   .show-more__content {
     @include theme('color', 'color-secondary', 'image-gallery-show-more-color');
+    @include bold-text;
 
     display: flex;
     position: absolute;
@@ -52,7 +53,6 @@
     width: 100%;
     height: 100%;
     font-size: .9rem;
-    font-weight: 600;
     line-height: 1;
     text-align: center;
 

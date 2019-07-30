@@ -8,8 +8,8 @@
     margin: 0;
 
     time {
+      @include bold-text;
       display: block;
-      font-weight: 600;
     }
   }
 

@@ -14,9 +14,10 @@ $breakpoint-openinghours: '(min-width: 750px)';
     }
 
     .channel-label {
+      @include bold-text;
+
       float: left;
       font-size: 0;
-      font-weight: bold;
 
       &::after {
         display: inline-block;
@@ -83,7 +84,7 @@ $breakpoint-openinghours: '(min-width: 750px)';
 
       &--date,
       &--status {
-        font-weight: bold;
+        @include bold-text;
       }
 
       &--special-day {

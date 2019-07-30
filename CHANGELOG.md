@@ -4,6 +4,41 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta10]
+
+### Added
+
+* Background colors for table cells
+* Globe icon.
+
+### Updated
+
+
+* Added rounded corners to modal.
+* Improved responsive behavior for file upload.
+* Added extra wrapper for tables, named `table-wrapper`
+
+ > **:warning: BREAKING CHANGE:**: markup for table has changed.
+
+* Removed bold styling when hovering over a menu item.
+
+### Fixed
+
+* Video breaking out of container when used in combination with text alignment.
+* 'Show more' styling not being applied when not placed directly after a
+  collection.
+* Non-collapsing margins for grid, resulting in too much bottom margin.
+
+ > :warning: BREAKING: a wrapper has been added around the grid.
+
+* Font-size of avatar is now 26px instead of 24px.
+* Cross-browser behavior for icon buttons.
+* Alignment of status messages with 1 line of text.
+
+### Removed
+
+* `Crisis communcation block`, since it was too project-specific
+
 ## [3.0.0-beta9]
 
 ### Added
@@ -593,6 +628,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta10]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta9...3.0.0-beta10
 [3.0.0-beta9]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta8...3.0.0-beta9
 [3.0.0-beta8]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta7...3.0.0-beta8
 [3.0.0-beta7]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta6...3.0.0-beta7
@@ -613,4 +649,4 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
 [3.0.0-alpha.3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.2...3.0.0-alpha.3
 [3.0.0-alpha.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-alpha.1...3.0.0-alpha.2
 [3.0.0-alpha.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/2.10.0...3.0.0-alpha.1
-[Unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/master...develop
+[Unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.x...3.x-dev

@@ -29,11 +29,15 @@
     font-size: 1.5rem;
     line-height: $status-message-icon-size;
     text-align: center;
+
+    @include phablet {
+      align-self: flex-start;
+    }
   }
 
   @include phablet {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     text-align: initial;
 
     i {
