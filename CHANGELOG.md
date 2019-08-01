@@ -4,6 +4,18 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Updated
+
+* Changed paddings for box with spot image at the top.
+
+### Fixed
+
+* Make show-more class for grid more specific, since "show-more" conflicts with
+  other libraries.
+    > **:warning: BREAKING CHANGE:** Rename "show-more" to "grid__show-more"
+
 ## [3.0.0-beta10]
 
 ### Added
