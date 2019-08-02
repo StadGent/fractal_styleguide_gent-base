@@ -212,7 +212,7 @@
   </article>
 
   <aside class="top">
-    {% include '@document-box' with {
+    {% include '@documents' with {
         unique_id: '1',
         documents: [
           {
@@ -250,13 +250,6 @@
         ]
       }
     %}
-    {% include '@related-box' with {
-    'similar_articles': true,
-    tags: [
-    'Inner city',
-    'Another tag'
-    ]
-    } %}
 
     {% include '@extra-articles' with {
       title: 'More news and events'
