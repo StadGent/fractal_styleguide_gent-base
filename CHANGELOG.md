@@ -16,6 +16,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   other libraries.
     > **:warning: BREAKING CHANGE:** Rename "show-more" to "grid__show-more"
 
+### Removed
+
+* `Related box` component (not generic enough).
+
 ## [3.0.0-beta10]
 
 ### Added
