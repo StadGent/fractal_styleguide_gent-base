@@ -64,7 +64,6 @@ const _sassCompile = () => {
       ]
     }),
     autoprefixer({
-      browsers: ['last 5 versions'],
       grid: true
     })
   ]);
