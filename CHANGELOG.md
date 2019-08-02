@@ -9,6 +9,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Updated
 
 * Changed paddings for box with spot image at the top.
+* Renamed `document-box` to `documents`.
+  > :warning: The `document-box` CSS class is deprecated as from now.
 
 ### Fixed
 
