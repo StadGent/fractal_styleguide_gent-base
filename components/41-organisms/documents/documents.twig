@@ -1,4 +1,4 @@
-<div class="document-box accordion">
+<div class="documents accordion">
   {% include '@heading' with {
     'type': 'h2',
     'heading_text': 'Documents'
@@ -23,13 +23,13 @@
   <h3>
     <button class="accordion--button"
             aria-expanded="false"
-            aria-controls="documents--content--documentbox-{{ unique_id }}">
+            aria-controls="documents--content--documents-{{ unique_id }}">
       {{ 'There are %s other documents available'|format(other_documents|length) }}
     </button>
   </h3>
 
   <div class="accordion--content"
-    id="documents--content--documentbox-{{ unique_id }}">
+    id="documents--content--documents-{{ unique_id }}">
     <ul class="links">
       {% for document in other_documents %}
         <li>
