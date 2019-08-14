@@ -17,6 +17,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Make show-more class for grid more specific, since "show-more" conflicts with
   other libraries.
     > **:warning: BREAKING CHANGE:** Rename "show-more" to "grid__show-more"
+* Blue background when focusing on select element in IE11/Edge.
 
 ### Removed
 
