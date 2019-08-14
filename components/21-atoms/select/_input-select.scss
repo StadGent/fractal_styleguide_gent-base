@@ -21,4 +21,9 @@ select {
   &::-ms-expand { // sass-lint:disable-line no-vendor-prefixes
     display: none;
   }
+
+  &::-ms-value { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('color', 'color-tertiary', 'default-text-color');
+    background: none; // remove blue background on ie10/ie11 when selected
+  }
 }
