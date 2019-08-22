@@ -26,6 +26,11 @@ input[type="password"] {
   }
 }
 
+// Fixes vertical alignment on mobile safari.
+input[type=date] {
+  line-height: 2.4rem;
+}
+
 input[type=date]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
   margin-left: .5rem;
   -webkit-appearance: none;  // sass-lint:disable-line no-vendor-prefixes
