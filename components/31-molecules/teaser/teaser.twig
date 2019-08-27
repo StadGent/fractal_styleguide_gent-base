@@ -68,10 +68,10 @@
 
       {% if image_src or image_placeholders %}
         <div class="figure-wrapper">
-          {% include '@figure' with {
-            figure_image_src: image_src,
-            figure_image_alt_text: image_alt_text,
-            figure_ratio: image_ratio
+          {% include '@image' with {
+            src: image_src,
+            alt_text: image_alt_text,
+            ratio: image_ratio
           } %}
 
           <div class="accolade-inverse bottom-left"></div>
