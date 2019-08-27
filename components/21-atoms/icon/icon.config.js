@@ -10,6 +10,7 @@ const icons = [
   'arrow-left',
   'arrow-right',
   'arrow-up',
+  'broken-link',
   'calendar',
   'chat-round',
   'chat',

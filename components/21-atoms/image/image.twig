@@ -1,14 +1,28 @@
-{% if ratio %}
-  <div class="image-wrapper" data-ratio="{{ ratio }}">
-{% endif %}
-<img
-  src="{{ src }}"
-  alt="{{ alt_text }}"
-  {% if modifier %}
-    class="{{ modifier }}"
-  {% endif %}
-/>
-{% if ratio %}
-  </div>
-{% endif %}
+{% spaceless %}
+  <figure {% if modifier %} class="{{ modifier }}" {% endif %}>
+    {% if ratio %}
+      <div class="image-wrapper" data-ratio="{{ ratio }}">
+    {% endif %}
 
+      {% if src %}
+        <img
+          src="{{ src }}"
+          alt="{{ alt_text }}"
+          {% if modifier %}
+            class="{{ modifier }}"
+          {% endif %}
+        />
+      {% endif %}
+
+    {% if ratio %}
+      </div>
+    {% endif %}
+
+    {% if caption %}
+      {% include '@figcaption' with {
+          'figcaption': caption
+        } %}
+    {% endif %}
+
+  </figure>
+{% endspaceless %}
