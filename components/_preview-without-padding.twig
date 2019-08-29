@@ -1,8 +1,15 @@
 {% extends '_preview.twig' %}
 
 {% block content %}
-  <div class="container">
-    {{ yield | raw }}
+  <div class="container preview-without-padding">
+    {% if _target.isCollated %}
+      <dl class="styleguide">
+        {{ yield | raw }}
+      </dl>
+    {% else %}
+      <div class="content-container">
+        {{ yield | raw }}
+      </div>
+    {% endif %}
   </div>
 {% endblock %}
-
