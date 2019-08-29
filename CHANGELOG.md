@@ -6,12 +6,20 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Added
+
+* `broken-link` icon.
+* Broken image placeholder.
+
 ### Updated
 
 * Changed paddings for box with spot image at the top.
 * Renamed `document-box` to `documents`.
+
   > :warning: The `document-box` CSS class is deprecated as from now.
+
 * Make breadcrumbs collapsible.
+* Empty image placeholder.
 
 ### Fixed
 
@@ -25,6 +33,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Removed
 
 * `Related box` component (not generic enough).
+* `Figure` component, it is renamed to `Image`
 
 ## [3.0.0-beta10]
 
