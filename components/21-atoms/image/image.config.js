@@ -13,20 +13,20 @@ module.exports = {
 
   variants: [
     {
-      name: 'no-caption',
+      name: 'No caption',
       context: {
         caption: false
       }
     },
     {
-      name: 'placeholder',
+      name: 'Image placeholder',
       context: {
         src: false,
         caption: false
       }
     },
     {
-      name: 'broken',
+      name: 'Broken image placeholder',
       context: {
         src: 'http://example.com/broken-url.jpg'
       }
