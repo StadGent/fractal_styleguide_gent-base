@@ -56,18 +56,20 @@
     }
   }
 
-  .expandable a {
-    @include reset-link-background;
-    @include theme('border-color', 'color-primary', 'breadcrumb-expandable-color');
+  .expandable {
+    a {
+      @include reset-link-background;
+      @include theme('border-color', 'color-primary', 'breadcrumb-expandable-color');
 
-    padding: .2rem .2rem .4rem;
-    border: 1px solid;
-    border-radius: border-radius('radius-1');
-    line-height: .15rem;
+      padding: .2rem .3rem .4rem;
+      border: 1px solid;
+      border-radius: border-radius('radius-1');
+      line-height: .3rem;
 
-    &:hover,
-    &:focus {
-      @include theme('background-color', 'color-primary--lighten-4', 'tag-background-color-hover');
+      &:hover,
+      &:focus {
+        @include theme('background-color', 'color-primary--lighten-4', 'tag-background-color-hover');
+      }
     }
   }
 
