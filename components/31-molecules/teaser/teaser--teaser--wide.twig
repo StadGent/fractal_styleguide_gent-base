@@ -57,9 +57,9 @@
     {% if image_src is defined %}
       <div class="content__first">
         <div class="figure-wrapper">
-          {% include '@figure' with {
-            "figure_image_src": image_src,
-            "figure_ratio": '8:5'
+          {% include '@image' with {
+            src: image_src,
+            ratio: '8:5'
           } %}
           <div class="accolade-inverse right-top"></div>
           <div class="accolade-inverse bottom-left"></div>
