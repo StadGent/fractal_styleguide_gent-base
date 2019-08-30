@@ -169,3 +169,13 @@ dl.styleguide {
     margin-bottom: 3rem;
   }
 }
+
+.preview-without-padding {
+  dl dd {
+    padding: 0;
+  }
+
+  .content-container {
+    margin: 0;
+  }
+}
