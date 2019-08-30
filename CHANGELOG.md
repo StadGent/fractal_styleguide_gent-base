@@ -33,7 +33,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Removed
 
 * `Related box` component (not generic enough).
-* `Figure` component, it is renamed to `Image`
+* `Figure` component, it is renamed to `Image`.
+* Font-size override for h2 in Summary box.
 
 ## [3.0.0-beta10]
 
