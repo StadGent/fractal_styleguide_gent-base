@@ -4,6 +4,38 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta11]
+
+### Added
+
+* `broken-link` icon.
+* Broken image placeholder.
+
+### Updated
+
+* Changed paddings for box with spot image at the top.
+* Renamed `document-box` to `documents`.
+
+  > :warning: The `document-box` CSS class is deprecated as from now.
+
+* Make breadcrumbs collapsible.
+* Empty image placeholder.
+
+### Fixed
+
+* Make show-more class for grid more specific, since "show-more" conflicts with
+  other libraries.
+    > **:warning: BREAKING CHANGE:** Rename "show-more" to "grid__show-more"
+* Blue background when focusing on select element in IE11/Edge.
+* DTGB-728: Fixed line height for input date on mobile safari.
+* DTGB-731: Fixed underline color of links in the cs--orange theme.
+
+### Removed
+
+* `Related box` component (not generic enough).
+* `Figure` component, it is renamed to `Image`.
+* Font-size override for h2 in Summary box.
+
 ## [3.0.0-beta10]
 
 ### Added
@@ -628,6 +660,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta10...3.0.0-beta11
 [3.0.0-beta10]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta9...3.0.0-beta10
 [3.0.0-beta9]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta8...3.0.0-beta9
 [3.0.0-beta8]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta7...3.0.0-beta8

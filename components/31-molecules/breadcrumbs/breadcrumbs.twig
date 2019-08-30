@@ -1,7 +1,7 @@
-<nav class="breadcrumb section--default" aria-labelledby="{{ id|default('system-breadcrumb') }}">
+<nav class="breadcrumb section--default" aria-labelledby="{{ id|default('system-breadcrumb--' ~ _self.name) }}">
   <div class="content-container">
-    <h2 id="{{ id|default('system-breadcrumb') }}" class="visually-hidden">{{ 'Breadcrumb' }}</h2>
-    <ol class="breadcrumb no-style">
+    <h2 id="{{ id|default('system-breadcrumb--' ~ _self.name) }}" class="visually-hidden">{{ 'Breadcrumb' }}</h2>
+    <ol class="no-style">
       {% spaceless %}
         {% for item in items %}
           <li>{{ item }}</li>

@@ -8,11 +8,11 @@
         aria-labelledby="image-gallery__open-gallery"
       {% endif %}
        class="gallery-link">
-      {% include '@figure' with {
-        "figure_figcaption": caption,
-        "figure_image_src": src,
-        "figure_image_alt_text": alt,
-        "figure_ratio": '8:5',
+      {% include '@image' with {
+        "caption": caption,
+        "src": src,
+        "alt_text": alt,
+        "ratio": '8:5',
       } %}
     </a>
   </div>

@@ -96,7 +96,7 @@
   }
 
   a.read-more {
-    font-weight: 700;
+    @include bold-text
   }
 
   .teaser-content {
@@ -288,7 +288,7 @@
     }
 
     .location {
-      font-weight: 700;
+      @include bold-text;
 
       i {
         margin-right: .3rem;

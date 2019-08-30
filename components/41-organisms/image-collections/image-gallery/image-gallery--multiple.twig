@@ -10,11 +10,11 @@
             aria-labelledby="image-gallery__open-gallery"
           {% endif %}
           >
-          {% include '@figure' with {
-            "figure_figcaption": item.caption,
-            "figure_image_src": item.src,
-            "figure_image_alt_text": item.alt,
-            "figure_ratio": '8:5'
+          {% include '@image' with {
+            "caption": item.caption,
+            "src": item.src,
+            "alt_text": item.alt,
+            "ratio": '8:5'
           } %}
         </a>
       </li>
