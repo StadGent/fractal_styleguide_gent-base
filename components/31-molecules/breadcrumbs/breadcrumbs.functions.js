@@ -18,7 +18,7 @@
   return function (elem, options) {
     let list = elem.querySelector('ol, ul');
     let items = elem.querySelectorAll('li');
-    let self = this;
+    let expandable;
 
     /**
      * Add an element to the DOM that makes it possible to expand the breadcrumb.
@@ -35,10 +35,10 @@
       a.addEventListener('click', expand);
 
       // Add it to the DOM
-      self.expandable = document.createElement('li');
-      self.expandable.classList.add('expandable');
-      self.expandable.appendChild(a);
-      list.insertBefore(self.expandable, list.children[position]);
+      expandable = document.createElement('li');
+      expandable.classList.add('expandable');
+      expandable.appendChild(a);
+      list.insertBefore(expandable, list.children[position]);
     };
 
     /**
@@ -64,8 +64,8 @@
      * Remove the expandable for the current breadcrumb.
      */
     const removeExpandable = () => {
-      if (self.expandable) {
-        self.expandable.parentNode.removeChild(self.expandable);
+      if (expandable) {
+        expandable.parentNode.removeChild(expandable);
       }
     };
 
