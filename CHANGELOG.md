@@ -27,6 +27,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   other libraries.
     > **:warning: BREAKING CHANGE:** Rename "show-more" to "grid__show-more"
 * Blue background when focusing on select element in IE11/Edge.
+* Z-index of login dropdown has now been increased to 99.
 * DTGB-728: Fixed line height for input date on mobile safari.
 * DTGB-731: Fixed underline color of links in the cs--orange theme.
 
