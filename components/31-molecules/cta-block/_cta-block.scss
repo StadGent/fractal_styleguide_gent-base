@@ -46,6 +46,16 @@
 
       .inner-box {
         height: 100%;
+
+        @include tablet {
+          padding: 5rem 2rem 2rem;
+
+          &::before {
+            top: -3.5rem;
+            right: 0;
+            left: 0;
+          }
+        }
       }
     }
   }

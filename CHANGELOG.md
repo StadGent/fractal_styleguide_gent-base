@@ -4,6 +4,12 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [unreleased]
+
+### Fixed
+
+* Padding of cta-block--multiple.
+
 ## [3.0.0-beta11]
 
 ### Added
@@ -44,7 +50,6 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Globe icon.
 
 ### Updated
-
 
 * Added rounded corners to modal.
 * Improved responsive behavior for file upload.
