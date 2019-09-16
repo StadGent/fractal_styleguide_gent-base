@@ -26,6 +26,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Make breadcrumbs collapsible.
 * Empty image placeholder.
+* Removed icon from breadcrumb links.
+* Removed icon from footer links.
 
 ### Fixed
 
