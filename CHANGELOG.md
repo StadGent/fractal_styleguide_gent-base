@@ -36,6 +36,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Z-index of login dropdown has now been increased to 99.
 * DTGB-728: Fixed line height for input date on mobile safari.
 * DTGB-731: Fixed underline color of links in the cs--orange theme.
+* Alignment of programme component title and teasers.
 
 ### Removed
 
