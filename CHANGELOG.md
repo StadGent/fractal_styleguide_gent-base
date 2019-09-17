@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Padding of cta-block--multiple.
+* Fixed-height modal on IE11.
 
 ## [3.0.0-beta11]
 
