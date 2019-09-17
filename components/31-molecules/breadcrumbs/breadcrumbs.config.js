@@ -16,7 +16,7 @@ const _generate = count => {
 
   while (i < count) {
     text = i === 0 ? 'Home' : `Item ${i}`;
-    tag = 'a href="" class="no-icon"';
+    tag = 'a href=""';
 
     // Last item.
     if (i === count - 1) {
