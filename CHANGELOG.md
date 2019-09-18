@@ -26,6 +26,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Make breadcrumbs collapsible.
 * Empty image placeholder.
+* Fixed translations for footer block.
 
 ### Fixed
 
