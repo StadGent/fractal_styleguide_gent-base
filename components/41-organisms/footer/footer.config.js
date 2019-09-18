@@ -22,8 +22,8 @@ module.exports = {
       title: 'Useful links',
       links: [
         'Vacancies',
-        'City map',
-        'Newsroom City of Ghent',
+        'City plan',
+        'City of Ghent newsroom',
         'Legal information',
         'Privacy'
       ]
@@ -50,7 +50,7 @@ module.exports = {
       preview: '@preview-without-padding',
       context: {
         gentinfo: {
-          description: 'Bereikbaar van maandag tot en met zaterdag van 8 tot 19 uur.',
+          description: 'Gentinfo is beschikbaar van maandag tot en met zaterdag van 8 tot 19 uur.',
           form: 'Contactformulier',
           chat: 'Chat met Gentinfo'
         },
@@ -81,7 +81,7 @@ module.exports = {
       preview: '@preview-without-padding',
       context: {
         gentinfo: {
-          description: 'Joignable du lundi au samedi inclus de 8 à 19 heures.',
+          description: 'Joignable du lundi au samedi de 8 heures à 19 heures.',
           form: 'Formulaire de contact',
           chat: 'Chatter avec Gentinfo'
         },
@@ -91,8 +91,8 @@ module.exports = {
             'Postes vacants',
             'Plan de la ville',
             'Espace presse de la Ville de Gand',
-            'Informations légales',
-            'Vie privée'
+            'Informations juridiques',
+            'Confidentialité'
           ]
         },
         address: {
@@ -120,9 +120,9 @@ module.exports = {
           links: [
             'Stellenangebote',
             'Stadtplan',
-            'Presseraum der Stadt Gent',
+            'Presseinformationen Stadt Gent',
             'Rechtliche Informationen',
-            'Privatsphäre'
+            'Datenschutz'
           ]
         },
         address: {
