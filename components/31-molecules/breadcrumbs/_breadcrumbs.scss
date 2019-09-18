@@ -101,4 +101,13 @@
       }
     }
   }
+
+  ///
+  /// Links in the breadcrumb should never have icons.
+  ///
+  [class*="cs--"] & a {
+    &::after {
+      content: none;
+    }
+  }
 }

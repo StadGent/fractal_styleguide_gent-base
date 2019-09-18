@@ -4,11 +4,20 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
-## [unreleased]
+## [Unreleased]
+
+### Updated
+
+* Fixed translations for footer block.
+* Removed icon from breadcrumb links.
+* Removed icon from footer links.
 
 ### Fixed
 
+* Alignment of programme component title and teasers.
+* Z-index of login dropdown has now been increased to 99.
 * Padding of cta-block--multiple.
+* Fixed-height modal on IE11.
 
 ## [3.0.0-beta11]
 
@@ -26,7 +35,6 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Make breadcrumbs collapsible.
 * Empty image placeholder.
-* Fixed translations for footer block.
 
 ### Fixed
 
@@ -34,10 +42,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   other libraries.
     > **:warning: BREAKING CHANGE:** Rename "show-more" to "grid__show-more"
 * Blue background when focusing on select element in IE11/Edge.
-* Z-index of login dropdown has now been increased to 99.
 * DTGB-728: Fixed line height for input date on mobile safari.
 * DTGB-731: Fixed underline color of links in the cs--orange theme.
-* Alignment of programme component title and teasers.
 
 ### Removed
 

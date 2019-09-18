@@ -136,9 +136,11 @@
   }
 
   ///
-  /// External links other than group Ghent get an indicator.
+  /// Links in the footer should never have icons.
   ///
-  a {
-    @extend %a-remove-indicator;
+  [class*="cs--"] & a {
+    &::after {
+      content: none;
+    }
   }
 }
