@@ -35,7 +35,6 @@ const _generate = count => {
 
 module.exports = {
   status: 'alpha',
-  preview: '@preview-without-padding',
   context: {
     items: _generate(4)
   },
