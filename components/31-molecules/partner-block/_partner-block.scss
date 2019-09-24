@@ -1,0 +1,32 @@
+.partner-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem gutter();
+
+  @include tablet {
+    padding: 2rem 5.5rem;
+  }
+
+  .partners ul.inline {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.2rem;
+
+    li {
+      width: calc(50% - #{gutter()});
+      margin: 0 gutter()/2 gutter();
+
+      @include tablet {
+        width: calc(25% - #{gutter()});
+      }
+    }
+  }
+
+  .single-partner {
+    width: 9rem;
+    max-width: 100%;
+    margin: 1.5rem 0 1.2rem;
+  }
+}

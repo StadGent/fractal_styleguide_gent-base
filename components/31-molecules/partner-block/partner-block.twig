@@ -1,0 +1,79 @@
+<div class="partner-block box-no-icon {{ modifier }}">
+  {% if title %}
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': title
+    } %}
+  {% endif %}
+
+  {% if description %}
+    {% include '@paragraph' with {
+      'text': description
+    } %}
+  {% endif %}
+
+
+  {% if single_partner %}
+    <div class="single-partner">
+      {% include '@image' with {
+        src: '/styleguide/img/stock/ocmw-logo.svg' | path,
+        alt_text: 'Partner logo',
+        ratio: null
+      } %}
+    </div>
+  {% else %}
+    <div class="partners">
+      <ul class="inline">
+        <li>
+          {% include '@image' with {
+            src: '/styleguide/img/stock/partner1.svg' | path,
+            alt_text: 'Partner logo',
+            ratio: null
+          } %}
+        </li>
+        <li>
+          {% include '@image' with {
+            src: '/styleguide/img/stock/partner2.svg' | path,
+            alt_text: 'Partner logo',
+            ratio: null
+          } %}
+        </li>
+        <li>
+          {% include '@image' with {
+            src: '/styleguide/img/stock/partner3.svg' | path,
+            alt_text: 'Partner logo',
+            ratio: null
+          } %}
+        </li>
+        <li>
+          {% include '@image' with {
+            src: '/styleguide/img/stock/partner4.svg' | path,
+            alt_text: 'Partner logo',
+            ratio: null
+          } %}
+        </li>
+        <li>
+          {% include '@image' with {
+            src: '/styleguide/img/stock/partner5.svg' | path,
+            alt_text: 'Partner logo',
+            ratio: null
+          } %}
+        </li>
+        <li>
+          {% include '@image' with {
+            src: '/styleguide/img/stock/partner6.svg' | path,
+            alt_text: 'Partner logo',
+            ratio: null
+          } %}
+        </li>
+        <li>
+          {% include '@image' with {
+            src: '/styleguide/img/stock/partner7.svg' | path,
+            alt_text: 'Partner logo',
+            ratio: null
+          } %}
+        </li>
+      </ul>
+    </div>
+  {% endif %}
+</div>
