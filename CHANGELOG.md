@@ -4,6 +4,12 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Not released]
+
+### Added
+
+* Added partners block component.
+
 ## [3.0.0-beta12]
 
 ### Updated
