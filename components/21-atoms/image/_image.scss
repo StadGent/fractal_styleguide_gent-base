@@ -3,11 +3,34 @@ img {
   height: auto;
 }
 
+figure {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
 .image-wrapper {
   position: relative;
   padding-bottom: calc(100% / 8 * 5); // Default ratio 8:5
-  background: no-repeat center center color('dark-gray', -5) url('#{$styleguide-dir}/img/stock/placeholder.svg');
+  background: no-repeat center center color('cyan', -5);
   background-size: 5rem;
+  overflow: hidden;
+
+  &:empty {
+    &::before {
+      @include spot-image('camera-light');
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -4rem;
+      margin-left: -4rem;
+      border-radius: 50%;
+      box-shadow: 2px 7px 14px 0 rgba(0, 125, 179, .06), 0 4px 12px 0 rgba(0, 125, 179, .1);
+      content: "";
+    }
+  }
 
   &[data-ratio='1:1'] {
     padding-bottom: 100%;
@@ -20,5 +43,44 @@ img {
   img {
     position: absolute;
     width: 100%;
+    min-height: 100%;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: color('cyan', -5);
+      content: "";
+    }
+
+    &::after {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      justify-content: center;
+      padding-top: 1.4rem;
+      transform: translate(-50%, -50%);
+      background: url('#{$styleguide-dir}/img/iconfont/broken-link.svg') no-repeat top center;
+      background-size: 1.2rem auto;
+      color: color('dark-gray', -1);
+      font-size: .6rem;
+      line-height: 1rem;
+      text-align: center;
+      white-space: pre;
+      content: "Image could not be loaded:\A" attr(alt);
+    }
+
+    html[lang="nl"] &::after {
+      content: "Afbeelding kon niet worden geladen:\A"attr(alt);
+    }
+
+    html[lang="fr"] &::after {
+      content: "L\'image n'a pas pu être chargée:\A" attr(alt);
+    }
   }
 }

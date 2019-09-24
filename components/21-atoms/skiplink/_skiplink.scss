@@ -1,7 +1,7 @@
 a.skiplink {
   @include reset-link-background;
   position: absolute;
-  top: -100%;
+  bottom: 100%;
   left: 0;
   padding: .5rem 2rem;
   background-color: color('white');
@@ -9,6 +9,7 @@ a.skiplink {
 
   &:focus {
     top: 0;
+    bottom: auto;
     background-color: color('white');
   }
 }
