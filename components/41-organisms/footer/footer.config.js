@@ -9,7 +9,7 @@ module.exports = {
   context: {
     gentinfo: {
       title: 'gentinfo',
-      description: 'We can be reached from Monday to Saturday, from 8.00 am to 7.00 pm',
+      description: 'We can be reached from Monday to Saturday, from 8.00 am to 7.00 pm.',
       phone: {
         label: '09 210 10 10',
         machine: '+32 9 210 10 10'
@@ -50,7 +50,7 @@ module.exports = {
       preview: '@preview-without-padding',
       context: {
         gentinfo: {
-          description: 'Gentinfo is beschikbaar van maandag tot en met zaterdag van 8 tot 19 uur.',
+          description: 'Bereikbaar van maandag tot en met zaterdag van 8 tot 19 uur.',
           form: 'Contactformulier',
           chat: 'Chat met Gentinfo'
         },
