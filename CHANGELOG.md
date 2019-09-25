@@ -23,6 +23,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Remove hidden overflow from lists to fix missing underline.
+* Fixed max width of Gentinfo logo.
 
 ## [3.0.0-beta12]
 
