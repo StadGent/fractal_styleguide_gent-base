@@ -15,6 +15,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * Multistep form
   * Wizard
 
+* Users, size and wheelchair icons.
+
 ### Updated
 
 * Added more variants to form-actions.
