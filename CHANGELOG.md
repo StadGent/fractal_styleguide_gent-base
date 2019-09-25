@@ -14,6 +14,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * Form (default)
   * Multistep form
   * Wizard
+* Intro component.
+  * The `.intro` class is now not dependent of `.overview-layout` anymore.
 
 ### Updated
 
