@@ -1,10 +1,29 @@
 'use strict';
 
 module.exports = {
-  status: 'beta',
+  context: {
+    primary_button: 'Submit',
+    link: 'Cancel'
+  },
   variants: [
     {
-      name: 'editor'
+      name: 'simple',
+      context: {
+        link: null
+      }
+    },
+    {
+      name: 'secondary-button',
+      context: {
+        secondary_button: 'Save for later',
+        link: null
+      }
+    },
+    {
+      name: 'full',
+      context: {
+        secondary_button: 'Save for later'
+      }
     }
   ]
 };
