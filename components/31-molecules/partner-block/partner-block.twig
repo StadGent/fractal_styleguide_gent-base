@@ -1,4 +1,4 @@
-<div class="partner-block box-no-icon {{ modifier }}">
+<section class="partner-block box-no-icon {{ modifier }}">
   {% if title %}
     {% include '@heading' with {
       'type': 'h3',
@@ -24,56 +24,16 @@
   {% else %}
     <div class="partners">
       <ul class="inline">
-        <li>
-          {% include '@image' with {
-            src: '/styleguide/img/stock/partner1.svg' | path,
-            alt_text: 'Universiteit Gent',
-            ratio: null
-          } %}
-        </li>
-        <li>
-          {% include '@image' with {
-            src: '/styleguide/img/stock/partner2.svg' | path,
-            alt_text: 'HoGent',
-            ratio: null
-          } %}
-        </li>
-        <li>
-          {% include '@image' with {
-            src: '/styleguide/img/stock/partner3.svg' | path,
-            alt_text: 'Artevelde Hogeschool',
-            ratio: null
-          } %}
-        </li>
-        <li>
-          {% include '@image' with {
-            src: '/styleguide/img/stock/partner4.svg' | path,
-            alt_text: 'Odisee',
-            ratio: null
-          } %}
-        </li>
-        <li>
-          {% include '@image' with {
-            src: '/styleguide/img/stock/partner5.svg' | path,
-            alt_text: 'KU Leuven',
-            ratio: null
-          } %}
-        </li>
-        <li>
-          {% include '@image' with {
-            src: '/styleguide/img/stock/partner6.svg' | path,
-            alt_text: 'Luca',
-            ratio: null
-          } %}
-        </li>
-        <li>
-          {% include '@image' with {
-            src: '/styleguide/img/stock/partner7.svg' | path,
-            alt_text: 'Student in Gent',
-            ratio: null
-          } %}
-        </li>
+        {% for item in items %}
+          <li>
+            {% include '@image' with {
+              src: item.link| path,
+              alt_text: item.alt_text,
+              ratio: null
+            } %}
+          </li>
+        {% endfor %}
       </ul>
     </div>
   {% endif %}
-</div>
+</section>
