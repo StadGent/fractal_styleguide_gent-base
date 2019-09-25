@@ -15,6 +15,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * Multistep form
   * Wizard
 
+### Updated
+
+* Added more variants to form-actions.
+
 ## [3.0.0-beta12]
 
 ### Updated
