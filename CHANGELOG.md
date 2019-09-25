@@ -17,6 +17,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Updated
 
+* Added more variants to form-actions.
 * Display icons in gentinfo block in default text color.
 
 ### Fixed
