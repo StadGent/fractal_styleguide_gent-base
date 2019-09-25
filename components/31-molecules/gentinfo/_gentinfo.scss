@@ -43,10 +43,6 @@ $gentinfo-icon-size: 8rem;
   .icon-list.inline {
     > li {
       margin-bottom: .5rem;
-
-      [class*='icon-'] {
-        @include theme('color', 'color-primary', 'link-color');
-      }
     }
   }
 }
