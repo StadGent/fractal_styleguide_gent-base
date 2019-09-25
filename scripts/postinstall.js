@@ -19,6 +19,7 @@ if (fs.existsSync(publicRootPath)) {
   fs.copySync(`${nodeModulesRootPath}/masonry-layout`, `${publicRootPath}/styleguide/vendor/masonry-layout`, {recursive: true});
   fs.copySync(`${nodeModulesRootPath}/imagesloaded`, `${publicRootPath}/styleguide/vendor/imagesloaded`, {recursive: true});
   fs.copySync(`${nodeModulesRootPath}/allietabs/dist`, `${publicRootPath}/styleguide/vendor/allietabs`, {recursive: true});
+  fs.copySync(`${nodeModulesRootPath}/body-scroll-lock/lib`, `${publicRootPath}/styleguide/vendor/body-scroll-lock`, {recursive: true});
 }
 
 /*

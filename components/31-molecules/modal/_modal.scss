@@ -16,6 +16,10 @@ body {
   z-index: z('modal', 'base');
   overflow-y: auto;
 
+  @include tablet {
+    animation: fade .2s ease-in-out;
+  }
+
   // states
   &.visible {
     visibility: visible;
@@ -80,6 +84,9 @@ body {
       height: auto;
       min-height: 0;
       margin: 10vh auto $gutter-width;
+      opacity: 0;
+      animation: fade .2s ease-in-out forwards;
+      animation-delay: .1s;
     }
   }
 
@@ -167,5 +174,15 @@ body {
     &:focus {
       @include theme('background-color', 'color-primary--darken-3', 'modal-overlay-background-color');
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

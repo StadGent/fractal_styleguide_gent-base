@@ -1,6 +1,6 @@
 'use strict';
 
-/* global define, module */
+/* global define, module, bodyScrollLock */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(factory);
@@ -109,21 +109,30 @@
       options.changeHash = true;
     }
 
+    if (typeof bodyScrollLock === 'undefined') {
+      console.warn('bodyScrollLock could not be found.'); // eslint-disable-line no-console
+    }
+
     let triggers = [];
     let activeTrigger;
     let hash;
+    let nextSibling;
+    let parent;
+    let parentModal;
 
     /**
      * A Gent styleguide class to create a tabTrap.
      * @type {TabTrap}
      */
-    const tabTrap = new TabTrap(modal); // eslint-disable-line no-undef
+    const tabTrap = new TabTrap(modal);
 
     /**
      * Initialise the component.
      */
     const init = () => {
       triggers = document.querySelectorAll(`[aria-controls="${modal.id}"], [href="#${modal.id}"]`);
+      nextSibling = modal.nextElementSibling;
+      parent = modal.parentElement;
 
       if (!options.changeHash && triggers.length === 0) {
         return;
@@ -131,8 +140,9 @@
 
       modal.setAttribute('tabindex', '-1');
       modal.setAttribute('aria-hidden', 'true');
+      modal.setAttribute('data-gent-modal', 'true');
 
-      let _open = e => {
+      const _open = e => {
         activeTrigger = e.currentTarget;
 
         if (activeTrigger.hasAttribute('aria-controls')) {
@@ -168,60 +178,82 @@
       }
 
       /*
-      Custom event triggered on resize and on init.
-      For instance for when the modal is not hidden on all screen sizes.
+        Custom event triggered on resize and on init.
+        For instance for when the modal is not hidden on all screen sizes.
        */
       if (options.resizeEvent) {
-        options.resizeEvent();
+        options.resizeEvent(open, close);
         addResizeEvent();
       }
     };
 
     /**
-     * Toggle a scroll lock on a visible parent modal or on the body.
+     * A little helper to get siblings of an element.
      *
-     * @param {Boolean} release Place or remove the lock.
+     * @return {array}
+     *   Array with siblings.
      */
-    const scrollLockParent = (release) => {
-      const parentModal = modal.parentNode.closest('.modal.visible');
-      if (parentModal) {
-        parentModal.style.overflow = release ? '' : 'hidden';
-      }
-      else {
-        document.body.style.overflow = release ? '' : 'hidden';
-      }
+    const getSiblings = () => {
+      return [].slice.call(modal.parentNode.childNodes).filter(n => n.nodeType === 1 && n !== modal);
     };
 
     /**
-     * Open the modal.
-     *
-     * @param {Boolean} changeHash  Whether or not to change the hash in the URI
-     */
+    * Open the modal.
+    *
+    * @param {Boolean} changeHash  Whether or not to change the hash in the URI
+    */
     const open = (changeHash = true) => {
       if (changeHash && options.changeHash !== false) { // change the url
         history.pushState(null, null, `#${modal.id}`);
         hash = `#${modal.id}`;
       }
 
+      parentModal = document.querySelector('body > [data-gent-modal]');
+      if (parentModal) {
+        document.body.replaceChild(modal, parentModal);
+      }
+      else {
+        document.body.appendChild(modal);
+      }
+
       modal.classList.add('visible');
       modal.setAttribute('aria-hidden', 'false');
-      scrollLockParent();
+
+      const scrollable = modal.dataset.scrollable;
+      bodyScrollLock.disableBodyScroll(scrollable ? modal.querySelector(scrollable) : modal);
+
+      const siblings = getSiblings();
+      siblings.forEach(n => n.setAttribute('aria-hidden', true));
+
       document.addEventListener('keydown', handleKeyboardInput);
       if (activeTrigger) {
         activeTrigger.setAttribute('aria-expanded', 'true');
       }
-
-      tabTrap.home();
+      modal.focus();
     };
 
     /**
      * Close the modal.
      */
     const close = () => {
+      const siblings = getSiblings();
+      siblings.forEach(n => n.setAttribute('aria-hidden', false));
+
       modal.classList.remove('visible');
       modal.setAttribute('aria-hidden', 'true');
-      scrollLockParent(true);
-      document.removeEventListener('keydown', handleKeyboardInput);
+
+      if (parentModal) {
+        modal.parentNode.replaceChild(parentModal, modal);
+        bodyScrollLock.enableBodyScroll(modal);
+        const scrollable = parentModal.dataset.scrollable;
+        bodyScrollLock.disableBodyScroll(scrollable ? parentModal.querySelector(scrollable) : parentModal);
+      }
+      else {
+        bodyScrollLock.clearAllBodyScrollLocks();
+        document.removeEventListener('keydown', handleKeyboardInput);
+      }
+
+      parent.insertBefore(modal, nextSibling);
       if (activeTrigger) {
         activeTrigger.setAttribute('aria-expanded', 'false');
         activeTrigger.focus();
@@ -237,7 +269,7 @@
         return;
       }
 
-      let keyCode = e.keyCode || e.which;
+      const keyCode = e.keyCode || e.which;
 
       switch (keyCode) {
         case 9: // tab
