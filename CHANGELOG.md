@@ -15,6 +15,14 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * Multistep form
   * Wizard
 
+### Updated
+
+* Display icons in gentinfo block in default text color.
+
+### Fixed
+
+* Remove hidden overflow from lists to fix missing underline.
+
 ## [3.0.0-beta12]
 
 ### Updated
