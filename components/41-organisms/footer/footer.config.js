@@ -50,7 +50,7 @@ module.exports = {
       preview: '@preview-without-padding',
       context: {
         gentinfo: {
-          description: 'Gentinfo is beschikbaar van maandag tot en met zaterdag van 8 tot 19 uur.',
+          description: 'Bereikbaar van maandag tot en met zaterdag van 8 tot 19 uur.',
           form: 'Contactformulier',
           chat: 'Chat met Gentinfo'
         },
