@@ -1,0 +1,39 @@
+<section class="partner-block box-no-icon {{ modifier }}">
+  {% if title %}
+    {% include '@heading' with {
+      'type': 'h3',
+      'heading_text': title
+    } %}
+  {% endif %}
+
+  {% if description %}
+    {% include '@paragraph' with {
+      'text': description
+    } %}
+  {% endif %}
+
+
+  {% if single_partner %}
+    <div class="single-partner">
+      {% include '@image' with {
+        src: '/styleguide/img/stock/ocmw-logo.svg' | path,
+        alt_text: 'OCMW Gent',
+        ratio: null
+      } %}
+    </div>
+  {% else %}
+    <div class="partners">
+      <ul class="inline">
+        {% for item in items %}
+          <li>
+            {% include '@image' with {
+              src: item.link| path,
+              alt_text: item.alt_text,
+              ratio: null
+            } %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</section>

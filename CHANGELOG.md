@@ -6,8 +6,9 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
-### Updated
+### Added
 
+* Added partners block component.
 * Split `Form` variants into separate components:
 
   * Form (default)
