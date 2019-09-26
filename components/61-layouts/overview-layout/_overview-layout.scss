@@ -18,11 +18,6 @@
   @extend %content-container;
   margin-bottom: 4rem;
 
-  .intro {
-    margin-bottom: 2rem;
-    font-size: .9rem;
-  }
-
   > .full-width,
   > .gentinfo {
     @include full-width;
