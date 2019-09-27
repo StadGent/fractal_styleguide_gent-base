@@ -220,7 +220,9 @@
       modal.setAttribute('aria-hidden', 'false');
 
       const scrollable = modal.dataset.scrollable;
-      bodyScrollLock.disableBodyScroll(scrollable ? modal.querySelector(scrollable) : modal);
+      bodyScrollLock.disableBodyScroll(scrollable ? modal.querySelector(scrollable) : modal, {
+        allowTouchMove: e => true
+      });
 
       const siblings = getSiblings();
       siblings.forEach(n => n.setAttribute('aria-hidden', true));
@@ -246,7 +248,9 @@
         modal.parentNode.replaceChild(parentModal, modal);
         bodyScrollLock.enableBodyScroll(modal);
         const scrollable = parentModal.dataset.scrollable;
-        bodyScrollLock.disableBodyScroll(scrollable ? parentModal.querySelector(scrollable) : parentModal);
+        bodyScrollLock.disableBodyScroll(scrollable ? parentModal.querySelector(scrollable) : parentModal, {
+          allowTouchMove: true
+        });
       }
       else {
         bodyScrollLock.clearAllBodyScrollLocks();
