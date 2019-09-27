@@ -1,0 +1,105 @@
+.highlight,
+.box-left, /// @deprecated
+.box-top, /// @deprecated
+.box-no-icon { /// @deprecated
+  position: relative;
+  font-size: .8rem;
+
+  .highlight__inner,
+  .inner-box { /// @deprecated
+    @include theme('background-color', 'color-primary--lighten-5', 'highlight-background');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem 1.6rem;
+    border-radius: border-radius('radius-2');
+  }
+
+
+  input[type="checkbox"]:not([disabled]) + label::before,
+  input[type="radio"]:not([disabled]) + label::before,
+  input:not([disabled]):not([type="submit"]),
+  select:not([disabled]),
+  textarea:not([disabled]) {
+    @include theme('background-color', 'color-secondary', 'highlight-input-background-color');
+  }
+
+  .accolade {
+    &::before,
+    &::after {
+      @include theme('background', 'color-primary--lighten-5', 'highlight-background');
+    }
+  }
+}
+
+.highlight--left,
+.highlight--top,
+.box-left, /// @deprecated
+.box-top { /// @deprecated
+  padding-top: 3.5rem;
+
+  .highlight__inner,
+  .inner-box { /// @deprecated
+    @include tablet-and-below {
+      padding-top: 5rem;
+    }
+
+    &::before {
+      @include spot-image('lightbulb-light', 7rem);
+      @include theme('color', 'color-primary', 'highlight-spot-shadow');
+
+      position:  absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      border-radius: 50%;
+      box-shadow: 0 10px 35px -25px;
+      z-index: z('boxes', 'spotimage');
+    }
+  }
+}
+
+.highlight--left,
+.box-left { /// @deprecated
+  @include tablet {
+    padding-top: 0;
+  }
+
+  .highlight__inner,
+  .inner-box { /// @deprecated
+
+    @include tablet {
+      min-height: 11rem;
+      padding-left: 11rem;
+
+      &::before {
+        top: calc(50% - 3.5rem);
+        right: auto;
+        bottom: auto;
+        left: 2rem;
+      }
+    }
+  }
+}
+
+.highlight--top,
+.box-top { /// @deprecated
+  .highlight__inner,
+  .inner-box { /// @deprecated
+    @include tablet {
+      padding-right: 9rem;
+
+      &::before {
+        right: 2rem;
+        left: auto;
+      }
+    }
+  }
+}
+
+.box-no-icon { /// @deprecated
+  @include theme('background-color', 'color-primary--lighten-5', 'highlight-background');
+  padding: 2rem 1rem 1.6rem;
+  border-radius: border-radius('radius-2');
+}
