@@ -24,6 +24,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Added more variants to form-actions.
 * Display icons in gentinfo block in default text color.
 * Moved image wall and image gallery components up a directory.
+* Changed border color of links in status messages.
 
 ### Fixed
 
