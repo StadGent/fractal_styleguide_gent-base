@@ -19,11 +19,13 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Added more variants to form-actions.
 * Display icons in gentinfo block in default text color.
+* Move modal to root when it's opened (Accessibility improvement).
 
 ### Fixed
 
 * Remove hidden overflow from lists to fix missing underline.
 * Fixed max width of Gentinfo logo.
+* Incorrect line-height for modal close button.
 
 ## [3.0.0-beta12]
 
