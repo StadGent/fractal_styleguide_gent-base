@@ -20,8 +20,3 @@
   });
 
 })();
-
-
-module.exports = {
-  hidden: true
-};
