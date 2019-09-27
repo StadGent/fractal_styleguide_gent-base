@@ -38,14 +38,6 @@ module.exports = {
       }
     },
     {
-      name: 'textarea',
-      context: {
-        id: 'textarea',
-        label: 'textarea',
-        input_component: 'textarea'
-      }
-    },
-    {
       name: 'date',
       context: {
         id: 'input-date',
