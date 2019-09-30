@@ -1,10 +1,18 @@
 // Needed for smooths scrolling on iphone / ipad inside modals.
 // Placing it on .modal is not sufficient for safari.
-body {
+* {
   -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
 }
 
 .modal {
+  @include tablet-and-below {
+    background-color: color('white');
+  }
+
+  @include tablet {
+    animation: fade .2s ease-in-out;
+  }
+
   display: flex;
   position: fixed;
   top: 0;
@@ -80,6 +88,9 @@ body {
       height: auto;
       min-height: 0;
       margin: 10vh auto $gutter-width;
+      opacity: 0;
+      animation: fade .2s ease-in-out forwards;
+      animation-delay: .1s;
     }
   }
 
@@ -93,7 +104,6 @@ body {
   }
 
   &-header &-close {
-    min-height: 0;
     padding: 0 .4rem;
     border: 0;
     background: transparent;
@@ -167,5 +177,15 @@ body {
     &:focus {
       @include theme('background-color', 'color-primary--darken-3', 'modal-overlay-background-color');
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
