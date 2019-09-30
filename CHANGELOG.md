@@ -14,12 +14,18 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * Form (default)
   * Multistep form
   * Wizard
+  
+* Intro component.
+  * The `.intro` class is now not dependent of `.overview-layout` anymore.
+
+* Users, size and wheelchair icons.
 
 ### Updated
 
 * Added more variants to form-actions.
 * Display icons in gentinfo block in default text color.
 * Move modal to root when it's opened (Accessibility improvement).
+* Changed border color of links in status messages.
 
 ### Fixed
 
