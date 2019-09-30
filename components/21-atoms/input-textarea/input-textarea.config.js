@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  hidden: true,
   status: 'beta',
   context: {
     id: 'textarea_id',
