@@ -14,6 +14,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * Form (default)
   * Multistep form
   * Wizard
+  
 * Intro component.
   * The `.intro` class is now not dependent of `.overview-layout` anymore.
 
@@ -23,14 +24,18 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Added more variants to form-actions.
 * Display icons in gentinfo block in default text color.
+* Move modal to root when it's opened (Accessibility improvement).
 * Moved image wall and image gallery components up a directory.
 * Changed border color of links in status messages.
 * Updated maps component with example maps.
+* Added the slack channel to the docs.
 
 ### Fixed
 
 * Remove hidden overflow from lists to fix missing underline.
 * Fixed max width of Gentinfo logo.
+* Incorrect line-height for modal close button.
+* Fixed position of calendar icon in teasers.
 
 ## [3.0.0-beta12]
 
