@@ -1,4 +1,4 @@
-<section class="partner-block box-no-icon {{ modifier }}">
+{% set content %}
   {% if title %}
     {% include '@heading' with {
       'type': 'h3',
@@ -36,4 +36,9 @@
       </ul>
     </div>
   {% endif %}
-</section>
+{% endset %}
+
+{% include "@highlight--no-image" with {
+  content: content,
+  classes: ['partner-block']
+} %}

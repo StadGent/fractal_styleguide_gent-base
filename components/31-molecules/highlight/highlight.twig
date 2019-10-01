@@ -1,4 +1,4 @@
-<section class="highlight {{ modifier ? 'highlight--' ~ modifier }}">
+<section class="highlight{{ classes ? ' ' ~ classes|join(' ') }}{{ modifier ? ' highlight--' ~ modifier }}">
   <div class="highlight__inner">
     {{ content }}
   </div>

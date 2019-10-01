@@ -52,31 +52,31 @@
 
       {# Newsletter #}
       {% if newsletter %}
-        <div class="newsletter box-left">
-          <div class="inner-box">
-            {% include '@heading' with {
-            'type': 'h3',
-            'heading_text': 'Subscribe to the newsletter of'~ ' ' ~ theme
-            } %}
+        {% set content %}
+          {% include '@heading' with {
+          'type': 'h3',
+          'heading_text': 'Subscribe to the newsletter of'~ ' ' ~ theme
+          } %}
 
-            {% include '@paragraph' with {
-            'text': 'Receive the most important mobility news in your mailbox.'
-            } %}
+          {% include '@paragraph' with {
+          'text': 'Receive the most important mobility news in your mailbox.'
+          } %}
 
-            {% include '@subscribe' with {
-            label: 'Email address',
-            text: 'Subscribe',
-            id: 'subscribe-' ~ _self.name,
-            name: 'subscribe'
-            } %}
+          {% include '@subscribe' with {
+          label: 'Email address',
+          text: 'Subscribe',
+          id: 'subscribe-' ~ _self.name,
+          name: 'subscribe'
+          } %}
 
-            {% include '@link' with {
-              'link': 'javascript:(void);',
-              'text': 'View the list and subscribe to one of our newsletters',
-              'modifier': 'standalone-link'
-            } %}
-          </div>
-        </div>
+          {% include '@link' with {
+            'link': 'javascript:(void);',
+            'text': 'View the list and subscribe to one of our newsletters',
+            'modifier': 'standalone-link'
+          } %}
+        {% endset %}
+
+        {% include "template" %}
       {% endif %}
       {% if social %}
         <div class="social">

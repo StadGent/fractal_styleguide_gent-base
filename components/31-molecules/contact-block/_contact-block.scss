@@ -1,14 +1,14 @@
 .contact-block {
 
-  &.tel .inner-box::before {
+  &.tel .highlight__inner::before {
     @include spot-image('phone-light', 7rem);
   }
 
-  &.mail .inner-box::before {
+  &.mail .highlight__inner::before {
     @include spot-image('mail-light', 7rem);
   }
 
-  .inner-box {
+  .highlight__inner {
     li:last-of-type {
       margin-top: 1rem;
     }

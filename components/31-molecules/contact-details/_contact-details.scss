@@ -1,9 +1,10 @@
 $avatar-width: 14rem;
 
 .contact-details {
-  .inner-box {
-    display: flex;
+  &.highlight .highlight__inner {
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
 
     > h2 {
       width: 100%;
@@ -15,11 +16,14 @@ $avatar-width: 14rem;
   }
 
   &.contact-details-inverted {
-    > .inner-box {
+    > .highlight__inner {
       @include theme('border-color', 'color-primary--lighten-4', 'contact-details-border-color');
       border-width: 2px 0;
       border-style: solid;
-      background-color: transparent;
+
+      [class*="cs--"] & {
+        background-color: transparent;
+      }
 
       &::before {
         @include spot-image('book', 7rem);
