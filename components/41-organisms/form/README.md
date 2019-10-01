@@ -17,7 +17,7 @@ The following form elements can be used in the form component:
 * <a href="{{path './radios.html'}}">Radios</a>
 * <a href="{{path './select.html'}}">Select</a>
 * Textarea <!-- @TODO Add link to the textarea component -->
-* File upload <!-- @TODO Add link to the file upload component -->
+* <a href="{{path './file-upload"'}}">File upload</a>
 
 ### Fieldsets
 
