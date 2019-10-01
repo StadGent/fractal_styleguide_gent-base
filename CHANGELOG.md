@@ -38,6 +38,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Incorrect line-height for modal close button.
 * Fixed position of calendar icon in teasers.
 
+### Removed
+
+* Feedback form (too project specific).
+
 ## [3.0.0-beta12]
 
 ### Updated
