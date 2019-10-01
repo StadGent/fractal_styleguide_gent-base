@@ -33,6 +33,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Remove hidden overflow from lists to fix missing underline.
 * Fixed max width of Gentinfo logo.
+* Added responsive styling to the table of contents component.
 * Incorrect line-height for modal close button.
 * Fixed position of calendar icon in teasers.
 
