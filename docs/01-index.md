@@ -13,6 +13,10 @@ under "Roadmap".
 
 You can find the SASS docs <a href="{{ path '/sassdocs/index.html' }}" target="_blank">here</a>
 
+## Questions?
+
+You can join us on Slack at <a href="https://uxuighent.slack.com/" target="_blank">UX/UI Ghent</a>
+
 ## Implementing this style guide in your own project
 
 This style guide aims to be technology independent. This means you should be

@@ -27,6 +27,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Move modal to root when it's opened (Accessibility improvement).
 * Moved image wall and image gallery components up a directory.
 * Changed border color of links in status messages.
+* Added the slack channel to the docs.
 
 ### Fixed
 
