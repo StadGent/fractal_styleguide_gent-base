@@ -13,6 +13,10 @@
     justify-content: center;
     padding: 2rem 1rem 1.6rem;
     border-radius: border-radius('radius-2');
+
+    @include tablet {
+      padding: 2rem;
+    }
   }
 
 
