@@ -14,7 +14,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * Form (default)
   * Multistep form
   * Wizard
-  
+
 * Intro component.
   * The `.intro` class is now not dependent of `.overview-layout` anymore.
 
@@ -40,7 +40,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Removed
 
-* Feedback form (too project specific).
+* **BREAKING:** Feedback form (too project specific).
 
 ## [3.0.0-beta12]
 
