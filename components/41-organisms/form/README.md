@@ -2,9 +2,27 @@
 
 ## When to use this component
 
-Use the form component to collect user input.
+Use the form component to collect user input to help users perform a certain task.
+
+For example:
+
+* Get in touch
+* Send a message or ask a question
+* Give feedback
+* Enter search or filter criteria
+* Login to a website or web application
+* Send a simple request
+* Subscribe to a newsletter
+
+The form component is used for simple or short forms. When the form becomes too complex or too long, or when splitting up the form into multiple, smaller steps makes it easier for user to fill in, the <a href="{{path './multisteo-form.html'}}">Multistep form</a> component can be used instead.<!-- @TODO maybe mention that a simple form is used for collecting user input in a fast way and that a multistep form can be used in cases where you rather want to slow down the user, for instance if the task or the input is critical -->
 
 ## How it works
+
+A form component contains:
+
+* Form elements
+* Fieldsets
+* Form actions
 
 ### Form elements
 
