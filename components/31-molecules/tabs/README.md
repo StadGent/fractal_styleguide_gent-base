@@ -21,7 +21,7 @@ Furthermore, do not use a tabs component:
 * When users will need to see all sections at once, for instance to compare information in the different sections.
 * When the sections are equally relevant for most users or when users typically are interested in a few specific sections. In this case, use an <a href="{{path './accordion.html'}}">accordion</a> instead.
 * When users have to read through all the related sections of content in order, for example, to understand a process.
-* To show progress or a linear flow. In these cases, use a <a href="{{path './multistep-form.html'}}">multistep form</a> or a <a href="{{path './wizard.html'}}">wizard</a> instead. <!-- @TODO describe in better way in which cases a multistep form or a wizard should be used instead -->
+* To show progress or a linear flow when collecting user input in multiple steps or to guide users through a process. In these cases, use a <a href="{{path './multistep-form.html'}}">multistep form</a> or a <a href="{{path './wizard.html'}}">wizard</a> instead.
 * When the amount of content in the tabs will make the page too long or too slow to load.
 
 Alternatives to using a tabs component:
