@@ -17,7 +17,7 @@ When breadcrumbs are used, breadcrumbs should be included:
 
 Do not use the breadcrumbs component on websites that have a flat website structure, in other words, websites that go only one level deep. In this case, breadcrumbs can be omitted.
 
-Do not use the breadcrumbs component to show progress or a linear flow. In these cases, use a <a href="{{path './multistep-form.html'}}">multistep form</a> or a <a href="{{path './wizard.html'}}">wizard</a> instead. <!-- @TODO describe in better way in which cases a multistep form or a wizard should be used instead -->
+Do not use the breadcrumbs component to show progress or a linear flow when collecting user input in multiple steps or to guide users through a process. In these cases, use a <a href="{{path './multistep-form.html'}}">multistep form</a> or a <a href="{{path './wizard.html'}}">wizard</a> instead.
 
 ## How it works
 
