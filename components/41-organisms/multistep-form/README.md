@@ -14,7 +14,7 @@ For example:
  
 ## When not to use this component
 
-Do not use the multistep form component for simple or short forms. In this case, use the <a href="{{path './form.html'}}">form</a> component instead.<!-- @TODO maybe mention that a simple form is used for collecting user input in a fast way and that a multistep form can be used in cases where you rather want to slow down the user, for instance if the task or the input is critical -->
+Do not use the multistep form component for simple or short forms. In this case, use the <a href="{{path './form.html'}}">form</a> component instead.
 
 Do not use the multistep form component when helping users collect user input is not the main goal, but rather splitting up a complex problem or task that requires user input into multiple steps or multiple subtasks or guiding users through a process. In this case, use the <a href="{{path './wizard.html'}}">wizard</a> component instead.
 
