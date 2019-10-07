@@ -40,6 +40,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ### Removed
 
+* **BREAKING:** Search block (too project specific).
 * **BREAKING:** Feedback form (too project specific).
 
 ## [3.0.0-beta12]
