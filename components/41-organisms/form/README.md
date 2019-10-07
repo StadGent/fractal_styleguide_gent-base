@@ -14,7 +14,7 @@ For example:
 * Send a simple request
 * Subscribe to a newsletter
 
-The form component is used for simple or short forms. When the form becomes too complex or too long, or when splitting up the form into multiple, smaller steps makes it easier for user to fill in, the <a href="{{path './multisteo-form.html'}}">Multistep form</a> component can be used instead.<!-- @TODO maybe mention that a simple form is used for collecting user input in a fast way and that a multistep form can be used in cases where you rather want to slow down the user, for instance if the task or the input is critical -->
+The form component is used for simple or short forms. When the form becomes too complex or too long, or when splitting up the form into multiple, smaller steps makes it easier for user to fill in, the <a href="{{path './multistep-form.html'}}">Multistep form</a> component can be used instead.<!-- @TODO maybe mention that a simple form is used for collecting user input in a fast way and that a multistep form can be used in cases where you rather want to slow down the user, for instance if the task or the input is critical -->
 
 ## How it works
 
