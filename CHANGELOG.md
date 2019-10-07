@@ -29,6 +29,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Changed border color of links in status messages.
 * Updated maps component with example maps.
 * Added the slack channel to the docs.
+* Updated all form font-sizes to .8rem or 16px.
 
 ### Fixed
 
