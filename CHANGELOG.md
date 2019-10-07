@@ -14,7 +14,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * Form (default)
   * Multistep form
   * Wizard
-  
+
 * Intro component.
   * The `.intro` class is now not dependent of `.overview-layout` anymore.
 
@@ -37,6 +37,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Added responsive styling to the table of contents component.
 * Incorrect line-height for modal close button.
 * Fixed position of calendar icon in teasers.
+
+### Removed
+
+* **BREAKING:** Feedback form (too project specific).
 
 ## [3.0.0-beta12]
 
