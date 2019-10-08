@@ -113,8 +113,10 @@
     @include full-width;
   }
 
-  > .box-top {
-    .inner-box {
+  > .highlight--top,
+  > .box-top { /// @deprecated
+    .highlight__inner,
+    .inner-box { /// @deprecated
       @include desktop {
         padding-right: 0;
         padding-left: 0;
