@@ -4,7 +4,7 @@ The highlight component is a general, generic box with a spot illustration.
 
 ## When to use this component
 
-Use the highlight component on web pages to highlight a short text, certain specific information or to show a notification.
+Use the highlight component on a page to highlight a short text, certain specific information or to show a notification.
 
 The highlight component works best with a text with no more than one or a few sentences. The ideal total length of the text is the length of a tweet, meaning between 140 characters and 280 characters.
 
@@ -18,7 +18,7 @@ Do not use the highlight component when another, more specific style guide compo
 
 * To highlight a quote or a part of a quote, use the <a href="{{path './quote.html'}}">quote component</a> instead.
 * To show contact information of an entity, location or person on a detail page, use the <a href="{{path './contact-details.html'}}">contact details component</a> instead.
-* Use the <a href="{{path './call-to-action.html'}}">call to action component</a> instead:
+* Use the <a href="{{path './cta-block.html'}}">call to action component</a> instead:
   * To guide users to the next step to reach a certain goal related to the page.
   * To present specific contact information to get help or to get more information from a specitic service to reach a certain goal.
   * To promote a certain action for the user to take.
