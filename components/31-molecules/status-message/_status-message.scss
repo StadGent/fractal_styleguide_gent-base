@@ -75,6 +75,9 @@
   }
 
   a {
+    @include theme('border-color', 'color-tertiary', 'status-messages-link-border-color');
+
+    padding: .1em 0;
     color: inherit;
   }
 }
