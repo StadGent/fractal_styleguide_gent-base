@@ -19,6 +19,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * The `.intro` class is now not dependent of `.overview-layout` anymore.
 
 * Users, size and wheelchair icons.
+* Highlight component:
+
+  * **BREAKING:** The `box-left`, `box-top` and `box-no-icon` classes are now
+    deprecated. You should replace them with the new highlight component.
 
 ### Updated
 
