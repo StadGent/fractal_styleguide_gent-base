@@ -76,7 +76,12 @@
           } %}
         {% endset %}
 
-        {% include "template" %}
+        {% include "@highlight" with {
+          content: content,
+          modifier: 'left',
+          classes: ['newsletter']
+        } %}
+
       {% endif %}
       {% if social %}
         <div class="social">

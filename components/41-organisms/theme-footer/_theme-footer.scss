@@ -35,6 +35,12 @@
     }
 
     img {
+      @include desktop-and-below {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      width: auto;
       height: 8rem;
     }
 
@@ -120,15 +126,13 @@
       padding-right: 2rem;
     }
 
-    .inner-box {
+    .highlight__inner {
       padding: 9.4rem 0 0;
       background-color: transparent;
 
       &::before {
         @include spot-image('letter-light', 8rem);
-
-        top: 0;
-        bottom: auto;
+        top: 1.4rem;
       }
 
       @include tablet {
@@ -137,6 +141,7 @@
         padding-left: 10rem;
 
         &::before {
+          top: calc(50% - 4rem);
           right: auto;
           left: 0;
         }
@@ -150,7 +155,7 @@
   }
 
   .logo + .newsletter {
-    .inner-box {
+    .highlight__inner {
       padding-top: 0;
 
       &::before {
