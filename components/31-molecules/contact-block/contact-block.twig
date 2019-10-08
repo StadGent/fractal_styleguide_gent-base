@@ -1,5 +1,4 @@
-<div class="contact-block box-left {% if tel %}tel{% endif %}{% if email %}mail{% endif %}">
-  <div class="inner-box">
+{% set content %}
     {%  if title %}
       {% include '@heading' with {
         'type': 'h2',
@@ -41,6 +40,14 @@
         </li>
       {% endif %}
     </ul>
+{% endset %}
 
-  </div>
-</div>
+{% include "@highlight" with {
+  content: content,
+  modifier: 'left',
+  classes: [
+    'contact-block',
+    tel ? 'tel' : '',
+    email ? 'mail' : ''
+  ]
+} %}

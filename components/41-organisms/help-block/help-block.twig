@@ -1,4 +1,4 @@
-<div class="help-block box-no-icon">
+{% set content %}
   {% include '@heading' with {
     'type': 'h2',
     'heading_text': 'How can we help you further?'
@@ -63,4 +63,9 @@
       ]
     } %}
   </div>
-</div>
+{% endset %}
+
+{% include "@highlight--no-image" with {
+  content: content,
+  classes: ['help-block']
+} %}

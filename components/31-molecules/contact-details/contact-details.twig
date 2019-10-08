@@ -1,33 +1,40 @@
-<div class="contact-details box-top {{ modifier }}">
-  <div class="inner-box">
-    {% include '@heading' with {
-      'type': 'h2',
-      'heading_text': 'Contact details'
-    } %}
+{% set content %}
+  {% include '@heading' with {
+    'type': 'h2',
+    'heading_text': 'Contact details'
+  } %}
 
-    <div class="contact-details-column">
-      {% include '@list' with {
-          'type': 'icon-list',
-          'icon_items': [
-            '<i class="icon-marker" aria-hidden="true"></i><span>Stadhuis<br />Botermarkt 1<br /> 9000 Gent</span>',
-            '<i class="icon-normalphone" aria-hidden="true"></i><span><a href="tel:+32 9 266 50 00" alt="Person tel">09 266 50 00</a></span>',
-            '<i class="icon-phone" aria-hidden="true"></i><span><a href="tel:+32 476 23 42 98" alt="Person mobile phone">0476 23 42 98</a></span>',
-            '<i class="icon-fax" aria-hidden="true"></i><span><a href="tel:+32 9 266 50 19" alt="Person fax number">09 266 50 19</a> (Fax)</span>',
-            '<i class="icon-envelope" aria-hidden="true"></i><span><a href="mailto:daniel.termont@stad.gent" alt="Person mail link">daniel.termont@stad.gent</a></span>',
-            '<i class="icon-url" aria-hidden="true"></i><span><a href="http://stad.gent" alt="Website link">http://stad.gent</a></span>'
-          ]
-        }
-      %}
-    </div>
+  <div class="contact-details-column">
+    {% include '@list' with {
+        'type': 'icon-list',
+        'icon_items': [
+          '<i class="icon-marker" aria-hidden="true"></i><span>Stadhuis<br />Botermarkt 1<br /> 9000 Gent</span>',
+          '<i class="icon-normalphone" aria-hidden="true"></i><span><a href="tel:+32 9 266 50 00" alt="Person tel">09 266 50 00</a></span>',
+          '<i class="icon-phone" aria-hidden="true"></i><span><a href="tel:+32 476 23 42 98" alt="Person mobile phone">0476 23 42 98</a></span>',
+          '<i class="icon-fax" aria-hidden="true"></i><span><a href="tel:+32 9 266 50 19" alt="Person fax number">09 266 50 19</a> (Fax)</span>',
+          '<i class="icon-envelope" aria-hidden="true"></i><span><a href="mailto:daniel.termont@stad.gent" alt="Person mail link">daniel.termont@stad.gent</a></span>',
+          '<i class="icon-url" aria-hidden="true"></i><span><a href="http://stad.gent" alt="Website link">http://stad.gent</a></span>'
+        ]
+      }
+    %}
+  </div>
 
-    <div class="contact-details-column">
-      <div class="image-wrapper" data-ratio="1:1">
-        {% include '@image' with {
-          'src': 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
-          'alt_text': 'Person avatar',
-          'ratio': null
-        } %}
-      </div>
+  <div class="contact-details-column">
+    <div class="image-wrapper" data-ratio="1:1">
+      {% include '@image' with {
+        'src': 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
+        'alt_text': 'Person avatar',
+        'ratio': null
+      } %}
     </div>
   </div>
-</div>
+{% endset %}
+
+{% include "@highlight" with {
+  content: content,
+  modifier: 'top',
+  classes: [
+    'contact-details',
+    modifier is defined ? modifier : ''
+  ]
+} %}
