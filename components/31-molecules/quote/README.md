@@ -6,7 +6,7 @@ Use the quote component to highlight a short quote or a part of a quote on detai
 
 ## When not to use this component
 
-Do not use the quote component for long quotes or text. The quote component works best when using quotes with the length of a tweet, meaning between 140 characters and 280 characters. For long or quotes, use a normal text <a href="{{path './paragraph.html'}}">paragraph</a>. 
+Do not use the quote component for long quotes or text. The quote component works best when using quotes with the length of a tweet, meaning between 140 characters and 280 characters. For long or quotes, use a normal text <a href="{{path './paragraph.html'}}">paragraph</a>.
 
 ## How it works
 
