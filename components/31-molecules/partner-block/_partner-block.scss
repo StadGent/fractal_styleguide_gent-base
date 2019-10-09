@@ -1,11 +1,14 @@
 .partner-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem gutter();
 
-  @include tablet {
-    padding: 2rem 5.5rem;
+  .highlight__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem gutter();
+
+    @include tablet {
+      padding: 2rem 5.5rem;
+    }
   }
 
   p {

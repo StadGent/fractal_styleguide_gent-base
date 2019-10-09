@@ -1,4 +1,6 @@
 .summary-box {
+  text-align: center;
+
   ul.icon-list {
     width: 100%;
     margin: 0;
@@ -9,9 +11,24 @@
     }
   }
 
-  // Save room for the accolade
-  .inner-box {
-    margin-bottom: 1.5rem;
+  .highlight__inner {
+    position: relative;
+    margin-bottom: 1.5rem; // Save room for the accolade
+    text-align: left;
+
+    &::before {
+      top: -3.5rem;
+    }
+
+    .accolade {
+      bottom: -1rem;
+      background-color: inherit;
+
+      &::before,
+      &::after {
+        @include theme('background-color', 'color-secondary', 'summary-box-accolade-background');
+      }
+    }
   }
 
   .button {

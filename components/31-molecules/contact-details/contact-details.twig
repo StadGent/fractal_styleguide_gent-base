@@ -1,9 +1,8 @@
-<div class="contact-details box-top {{ modifier }}">
-  <div class="inner-box">
-    {% include '@heading' with {
-      'type': 'h2',
-      'heading_text': 'Contact details'
-    } %}
+{% set content %}
+  {% include '@heading' with {
+    'type': 'h2',
+    'heading_text': 'Contact details'
+  } %}
 
     <div class="contact-details-column">
       {% include '@list' with {
@@ -20,14 +19,22 @@
       %}
     </div>
 
-    <div class="contact-details-column">
-      <div class="image-wrapper" data-ratio="1:1">
-        {% include '@image' with {
-          'src': 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
-          'alt_text': 'Person avatar',
-          'ratio': null
-        } %}
-      </div>
+  <div class="contact-details-column">
+    <div class="image-wrapper" data-ratio="1:1">
+      {% include '@image' with {
+        'src': 'https://via.placeholder.com/280x280&text=1:1+(280x280)',
+        'alt_text': 'Person avatar',
+        'ratio': null
+      } %}
     </div>
   </div>
-</div>
+{% endset %}
+
+{% include "@highlight" with {
+  content: content,
+  modifier: 'top',
+  classes: [
+    'contact-details',
+    modifier is defined ? modifier : ''
+  ]
+} %}

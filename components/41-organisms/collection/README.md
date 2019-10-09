@@ -11,7 +11,7 @@ Use the collection component with teasers:
 
 ## When not to use this component
 
-Do not use the collection component with other components than teasers components.
+Do not use the collection component with other components than teaser components.
 
 ## How it works
 
