@@ -16,7 +16,6 @@ html {
 }
 
 body {
-
   // Since the `cs--` class is set on the body element, the styles should be applied directly to the element.
   @each $theme, $colors in $themes {
     &.cs--#{$theme} {
@@ -33,7 +32,7 @@ body {
   @include theme('color', 'color-secondary', 'text-selection-color');
 }
 
-th>* {
+th > * {
   margin: 0;
 }
 
