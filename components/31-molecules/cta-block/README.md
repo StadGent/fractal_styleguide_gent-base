@@ -34,7 +34,7 @@ The optional secondary action can be one of the following types:
 * A link to a web page (internal or external)
 * A link to a document
 
-Links to a web pages, e-mail addresses and telephone numbers are presented using a <a href="{{path './link.html'}}">link</a>.
+Links to web pages, e-mail addresses and telephone numbers are presented using a <a href="{{path './link.html'}}">link</a>.
 Links to documents are presented using a <a href="{{path './file-download.html'}}">file download</a>.
 
 ## Behavior of this component
