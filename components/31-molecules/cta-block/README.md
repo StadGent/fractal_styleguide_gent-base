@@ -22,20 +22,21 @@ The call to action component consists of the following parts:
 * A primary action (required)
 * A secondary action (optional)
 
-The primary action can be one of the following types:
+The primary action and the optional secondary action can both be one of the following types:
 
 * A link to a web page (internal or external)
 * A link to a document
 * A link to an e-mail address (mailto-link)
 * A link to a telephone number (tel-link)
 
-The optional secondary action can be one of the following types:
-
-* A link to a web page (internal or external)
-* A link to a document
-
 Links to web pages, e-mail addresses and telephone numbers are presented using a <a href="{{path './link.html'}}">link</a>.
 Links to documents are presented using a <a href="{{path './file-download.html'}}">file download</a>.
+
+When using a call to action, please note the following:
+
+* The optional short text explaining the call to action **cannot contain links**. Links can only be added to a call to action using the primary and secondary action of the call to action. **A call to action may never have more than two actions.**
+* Use **clear and distinct labels** for the primary and secondary action of the call to action.
+* Avoid having a primary action and secondary action of the same type. This can be confusing for users.
 
 ## Behavior of this component
 
