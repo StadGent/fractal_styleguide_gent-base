@@ -25,6 +25,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
     deprecated. You should replace them with the new highlight component.
 
 * Focus styling for all components.
+* Language switcher component.
 
 ### Updated
 
