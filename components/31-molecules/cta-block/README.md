@@ -5,7 +5,7 @@
 Use the call to action component on a page:
 
 * To guide users to the next step to reach a certain goal related to the page.
-* To present specific contact information to get help or to get more information from a specitic service to reach a certain goal.
+* To present specific contact information to get help or to get more information from a specific service to reach a certain goal.
 * To promote a certain action for the user to take.
 
 ## When not to use this component
