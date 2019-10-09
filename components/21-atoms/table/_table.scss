@@ -17,7 +17,7 @@ div.table-list {
 }
 
 div.responsive-table {
-  @include focus-style; // @TODO: https://digipolisgent.atlassian.net/browse/DTGB-715
+  @include focus-style;
 
   @include tablet {
     display: inline-block;

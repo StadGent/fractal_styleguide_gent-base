@@ -50,7 +50,6 @@ $field-icon-padding: 2.5rem;
     );
 
     border: 1px solid;
-    outline: 0;
   }
 
   &:disabled {
@@ -306,13 +305,6 @@ $field-icon-padding: 2.5rem;
       &.error + label::before {
         border-color: color("red");
       }
-    }
-
-    //
-    // @TODO: Update when a focus style has been designed.
-    //
-    &:focus + label {
-      outline: 1px dotted;
     }
 
     //
