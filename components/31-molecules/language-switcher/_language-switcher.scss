@@ -1,0 +1,33 @@
+.language-switcher {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+
+  .accordion--button {
+    @include bold-text;
+
+    display: flex;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    font-size: .8rem;
+    cursor: pointer;
+  }
+
+  .accordion--content {
+    @include theme('box-shadow', 'color-box-shadow-secondary-dark');
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: .5rem;
+    transition: max-height .3s ease-in-out;
+    border-radius: border-radius('radius-1');
+    background: color('white');
+    z-index: z('language-switcher');
+  }
+
+  .content {
+    padding: .4rem 1.6rem 0 .8rem;
+  }
+}
