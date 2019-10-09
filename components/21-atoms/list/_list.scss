@@ -86,11 +86,10 @@ ul {
     }
 
     li {
-      display: flex;
-      align-items: flex-start;
+      position: relative;
       margin-bottom: .8rem;
-      padding-left: 0;
-      line-height: 1.6;
+      padding-left: 1.6rem;
+      line-height: 1.5;
 
       &:last-child {
         margin-bottom: 0;
@@ -121,7 +120,9 @@ ul {
 
       i {
         display: block;
-        margin-right: .4em;
+        position: absolute;
+        top: 0;
+        left: 0;
         font-size: 1.5em;
         line-height: 1;
       }
