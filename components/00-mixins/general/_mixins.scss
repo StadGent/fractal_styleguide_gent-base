@@ -301,10 +301,14 @@
 /// @access private
 /// @author Gert-Jan Meire
 ///
+@mixin focus-bare {
+  @include theme('outline-color', 'color-primary', 'focus-outline');
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
 @mixin focus-style {
   &:focus {
-    @include theme('outline-color', 'color-primary', 'focus-outline');
-    outline: 2px solid;
-    outline-offset: 2px;
+    @include focus-bare;
   }
 }

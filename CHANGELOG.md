@@ -24,6 +24,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   * **BREAKING:** The `box-left`, `box-top` and `box-no-icon` classes are now
     deprecated. You should replace them with the new highlight component.
 
+* Focus styling for all components.
+
 ### Updated
 
 * Added more variants to form-actions.
