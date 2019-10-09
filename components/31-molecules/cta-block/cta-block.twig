@@ -1,48 +1,50 @@
 <div class="cta-block box-{{ top ? 'top' : 'left' }} {{ type }}">
   <div class="inner-box">
-    {% if title %}
-      {% include '@heading' with {
-      'type': 'h2',
-      'heading_text': title
-      } %}
-    {% endif %}
-
-    {% if description %}
-      {% include '@paragraph' with {
-      'text': description
-      } %}
-    {% endif %}
-
-    {% if links|length > 1 %}
-    <ul class="links">
-    {% endif %}
-      {% for link in links %}
-        {% set options = {
-          link: link.url,
-          text: link.text,
-          modifier: loop.first ? 'button button-primary' : 'standalone-link'
+    <div>
+      {% if title %}
+        {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': title
         } %}
+      {% endif %}
 
-        {% if link.size|length %}
-          {% set options = options|merge({
-            file: {
-              size: link.size,
-              type: 'pdf'
-            }
-          }) %}
-        {% endif %}
+      {% if description %}
+        {% include '@paragraph' with {
+        'text': description
+        } %}
+      {% endif %}
 
-        {% if links|length > 1 %}
-        <li>
-        {% endif %}
-          {% include '@file-download' with options %}
-        {% if links|length > 1 %}
-        </li>
-        {% endif %}
-      {% endfor %}
+      {% if links|length > 1 %}
+      <ul class="links">
+      {% endif %}
+        {% for link in links %}
+          {% set options = {
+            link: link.url,
+            text: link.text,
+            modifier: loop.first ? 'button button-primary' : 'standalone-link'
+          } %}
+
+          {% if link.size|length %}
+            {% set options = options|merge({
+              file: {
+                size: link.size,
+                type: 'pdf'
+              }
+            }) %}
+          {% endif %}
+
+          {% if links|length > 1 %}
+          <li>
+          {% endif %}
+            {% include '@file-download' with options %}
+          {% if links|length > 1 %}
+          </li>
+          {% endif %}
+        {% endfor %}
 
       {% if links|length > 1 %}
       </ul>
       {% endif %}
+    </div>
   </div>
 </div>

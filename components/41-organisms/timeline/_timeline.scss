@@ -225,11 +225,9 @@ dl.timeline {
       max-width: none;
       margin: 0;
       padding: 0 calc(#{$gutter-width/2}) 0 calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
-      overflow: hidden;
 
       .accordion--content {
         margin-left: 0;
-        overflow: visible;
       }
 
       @include desktop {

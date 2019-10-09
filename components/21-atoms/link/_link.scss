@@ -13,10 +13,6 @@ a {
   text-decoration: none;
   word-wrap: break-word;
 
-  &:focus {
-    outline: thin dotted;
-  }
-
   // Different button link types. These are links styled as a button.
   &.button {
     @include reset-link-background;
