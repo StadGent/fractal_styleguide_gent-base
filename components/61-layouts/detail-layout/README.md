@@ -24,6 +24,6 @@ A detail layout conists of the following parts:
 
 * <a href="{{path './header.html'}}">Header</a> (required)
 * Page title (heading h1, required)
-* Text to speech button (optional, only when the website has a text so speech ability) <!-- @TODO add link to text to speech button component -->
+* <a href="{{path './readspeaker-button.html'}}">Text to speech button</a> (optional, only when the website has a text so speech ability)
 * Detail page content (required)
 * <a href="{{path './footer.html'}}">Footer</a> (required)
