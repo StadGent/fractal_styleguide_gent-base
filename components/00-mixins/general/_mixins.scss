@@ -303,8 +303,8 @@
 ///
 @mixin focus-style {
   &:focus {
-    @include theme('border-color', 'color-primary', 'focus-style');
-
-    border: 2px dotted;
+    @include theme('outline-color', 'color-primary', 'focus-outline');
+    outline: 2px solid;
+    outline-offset: 2px;
   }
 }

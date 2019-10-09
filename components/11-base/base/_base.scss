@@ -16,6 +16,7 @@ html {
 }
 
 body {
+
   // Since the `cs--` class is set on the body element, the styles should be applied directly to the element.
   @each $theme, $colors in $themes {
     &.cs--#{$theme} {
@@ -32,7 +33,7 @@ body {
   @include theme('color', 'color-secondary', 'text-selection-color');
 }
 
-th > * {
+th>* {
   margin: 0;
 }
 
@@ -94,4 +95,18 @@ strong {
 input[type=button],
 button {
   font: $default-font-weight $default-font-size $default-font-family;
+}
+
+a[href],
+area[href],
+input:not([disabled]),
+select:not([disabled]),
+textarea:not([disabled]),
+button:not([disabled]),
+object,
+embed,
+iframe,
+*[tabindex]:not([tabindex="-1"]),
+*[contenteditable] {
+  @include focus-style;
 }
