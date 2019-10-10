@@ -18,4 +18,4 @@ In these cases, do not use any spinner component or similar. The load time is ex
 
 ## Usage
 
-The spinner will center horizontally and vertically in the .spinner container. Make sure the .spinner container gets the appropriate width and height so that the spinner is also visually centered horizontally and vertically in the container where it appears.
+The spinner will center horizontally and vertically in the `.spinner` container. Make sure the `.spinner` container gets the appropriate width and height so that the spinner is also visually centered horizontally and vertically in the container where it appears.
