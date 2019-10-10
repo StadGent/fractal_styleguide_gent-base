@@ -1,6 +1,6 @@
 # Contact block
 
-The contact block component is a specific version of the <a href="{{path './cta-block.html'}}">call to action component</a> that focusses on contacting a specific entity, location or person. The primary action is a telephone number or an e-mail address. The optional secondary action is a link to a page with all contact information of the specific entity, location or person.
+The contact block component is a specific version of the <a href="{{path './cta-block.html'}}">call to action component</a> that focuses on contacting a specific entity, location or person. The primary action is a telephone number or an e-mail address. The optional secondary action is a link to a page with all contact information of the specific entity, location or person.
 
 ## When to use this component
 
