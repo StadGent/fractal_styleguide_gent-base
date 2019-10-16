@@ -75,9 +75,6 @@
     width: 100%;
     min-height: 100%;
     margin: 0 auto;
-    border-radius: border-radius('radius-2');
-    background-clip: content-box;
-    background-color: color('white');
     z-index: z('modal', 'content');
     filter: drop-shadow(0 2px 8px #{color('dark-gray', -4, true)});
 
@@ -87,10 +84,27 @@
       max-width: calc(100% - #{$gutter-width * 2});
       height: auto;
       min-height: 0;
-      margin: 10vh auto $gutter-width;
+      margin: 10vh auto 0;
+      padding-bottom: $gutter-width;
       opacity: 0;
       animation: fade .2s ease-in-out forwards;
       animation-delay: .1s;
+    }
+
+    > * {
+      background-color: color('white');
+
+      &:first-of-type {
+        border-top-left-radius: border-radius('radius-2');
+        border-top-right-radius: border-radius('radius-2');
+        overflow: hidden;
+      }
+
+      &:last-of-type {
+        border-bottom-left-radius: border-radius('radius-2');
+        border-bottom-right-radius: border-radius('radius-2');
+        overflow: hidden;
+      }
     }
   }
 
