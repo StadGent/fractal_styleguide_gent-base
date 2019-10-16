@@ -1,6 +1,5 @@
 # Pagination
 
-
 ## When to use this component
 
 Use pagination to divide the content on overview pages with a big amount of content into multiple pages.
