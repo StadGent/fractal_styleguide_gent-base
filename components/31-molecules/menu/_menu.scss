@@ -39,6 +39,7 @@ nav.menu {
       transition: none;
       background: transparent !important; // sass-lint:disable-line no-important
       box-shadow: none;
+      overflow: visible;
     }
 
     .header {

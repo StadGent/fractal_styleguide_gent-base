@@ -113,8 +113,10 @@
     @include full-width;
   }
 
-  > .box-top {
-    .inner-box {
+  > .highlight--top,
+  > .box-top { /// @deprecated
+    .highlight__inner,
+    .inner-box { /// @deprecated
       @include desktop {
         padding-right: 0;
         padding-left: 0;
@@ -185,19 +187,6 @@ aside.top {
 }
 
 aside.bottom {
-  .feedback-form {
-
-    margin-bottom: 2rem;
-    padding-top: 1.2rem;
-    border-top: 0;
-
-    @include desktop {
-      @include set-layout('width-10', 'offset-1');
-
-      padding-left: span(1 wide of 12);
-    }
-  }
-
   .changed-date {
     @include desktop {
       @include set-layout('width-9', 'offset-2');

@@ -88,9 +88,8 @@ ul {
     li {
       position: relative;
       margin-bottom: .8rem;
-      padding-left: 0;
-      line-height: 1.6;
-      overflow: hidden;
+      padding-left: 1.6rem;
+      line-height: 1.5;
 
       &:last-child {
         margin-bottom: 0;
@@ -105,7 +104,8 @@ ul {
       }
 
       a {
-        line-height: 1;
+        padding: 0;
+        line-height: inherit;
 
         &[href^="mailto:"]:not(.button),
         &[href^="tel:"]:not(.button),
@@ -119,19 +119,12 @@ ul {
       }
 
       i {
-        width: calc(15% - .4em);
-        max-width: 1.2rem;
-        margin-right: .4em;
-        float: left;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
         font-size: 1.5em;
         line-height: 1;
-        vertical-align: middle;
-
-        + span {
-          width: 85%;
-          float: left;
-          word-wrap: break-word;
-        }
       }
     }
   }

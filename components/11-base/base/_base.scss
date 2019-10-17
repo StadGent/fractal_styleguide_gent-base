@@ -95,3 +95,17 @@ input[type=button],
 button {
   font: $default-font-weight $default-font-size $default-font-family;
 }
+
+a[href],
+area[href],
+input:not([disabled]),
+select:not([disabled]),
+textarea:not([disabled]),
+button:not([disabled]),
+object,
+embed,
+iframe,
+*[tabindex]:not([tabindex="-1"]),
+*[contenteditable] {
+  @include focus-style;
+}

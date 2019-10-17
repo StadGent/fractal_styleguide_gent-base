@@ -1,9 +1,6 @@
 .help-block {
   @include theme('background-color', 'color-primary--lighten-5', 'search-block-background');
 
-  margin-bottom: 2rem;
-  padding: 2rem calc(#{$gutter-width} / 2);
-
   ul {
     margin: 0;
     list-style-type: none;

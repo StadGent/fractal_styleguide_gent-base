@@ -67,6 +67,7 @@ $tints: (
 /// @author Gert-Jan Meire
 ///
 $box-shadow-primary: 0 2px 8px 0;
+$box-shadow-secondary: 0 2px 12px 0;
 
 ///
 /// A function to convert a rgba color to a rgb color.
@@ -212,6 +213,7 @@ $themes: (
     'color-box-shadow-hover': $box-shadow-primary color('cyan-wcag', -2),
     'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
     'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
+    'color-box-shadow-secondary-dark': $box-shadow-secondary color('dark-gray', -3),
     'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan-wcag', -4), 1280, 21),
     'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1), 1280, 21),
 
@@ -220,8 +222,9 @@ $themes: (
     'link-color': color('cyan-wcag', 1),
     'link-hover-background': color('cyan-wcag', -4),
     'link-hover-color': color('cyan-wcag', 2),
-
     'link-underlined-hover-color': color('cyan-wcag', 2),
+
+    'focus-outline': color('cyan-wcag'),
 
     'button-primary-background': color('cyan-wcag'),
     'button-primary-border-color': color('cyan-wcag'),
@@ -264,6 +267,7 @@ $themes: (
     'color-box-shadow-hover': $box-shadow-primary color('dark-gray', -2),
     'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
     'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
+    'color-box-shadow-secondary-dark': $box-shadow-secondary color('dark-gray', -3),
     'accolade-stroke-light': svg-as-background('accolade-stroke', color('orange', -4), 1280, 21),
     'accolade-stroke-dark': svg-as-background('accolade-stroke', color('orange', 1), 1280, 21),
 

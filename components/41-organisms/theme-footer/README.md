@@ -47,6 +47,19 @@ The following - and no more - 7 combinations can be used:
 
 The theme footer should be used in one of those 7 combinations. The order of the components in the combinations should be respected.
 
+### Contact information
+
+Contact information in the theme footer can include the following types of contact information, in the following order:
+
+1. Address information (name of location, street, street number, box number, postal code, city, country)
+2. Telephone number
+3. E-mail address
+4. Link to a contact form, website URL or web page
+
+The order is fixed. Each type of contact information is optional, however at least one of them should be included. For each type of contact information, there can be only be one item included, except for links, where multiple items can be included. In other words: there can be zero or one addresses, zero or one telephone numbers, zero or one e-mail addresses and one or more links. The order in which the types of contact information are included always stays the same.
+
+The items are presented in a <a href="{{path './list.html'}}">list</a> with icons. Every item has its icon. The icon that is shown depends on the type of contact information that the item represents.
+
 ## Technical usage
 
 * This organism must be included in a top-level footer landmark.

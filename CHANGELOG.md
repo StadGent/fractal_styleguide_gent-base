@@ -4,6 +4,54 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta13]
+
+### Added
+
+* Added partners block component.
+* Split `Form` variants into separate components:
+
+  * Form (default)
+  * Multistep form
+  * Wizard
+
+* Intro component.
+  * The `.intro` class is now not dependent of `.overview-layout` anymore.
+
+* Users, size and wheelchair icons.
+* Highlight component:
+
+  * **BREAKING:** The `box-left`, `box-top` and `box-no-icon` classes are now
+    deprecated. You should replace them with the new highlight component.
+
+* Focus styling for all components.
+* Language switcher component.
+
+### Updated
+
+* Added more variants to form-actions.
+* Display icons in gentinfo block in default text color.
+* Move modal to root when it's opened (Accessibility improvement).
+* Moved image wall and image gallery components up a directory.
+* Changed border color of links in status messages.
+* Updated maps component with example maps.
+* Added the slack channel to the docs.
+* Updated all form font-sizes to .8rem or 16px.
+* Renamed "Sidebar Layout" to "Filter Layout".
+
+### Fixed
+
+* Remove hidden overflow from lists to fix missing underline.
+* Fixed max width of Gentinfo logo.
+* Added responsive styling to the table of contents component.
+* Incorrect line-height for modal close button.
+* Fixed position of calendar icon in teasers.
+
+### Removed
+
+* **BREAKING:** Search block (too project specific).
+* **BREAKING:** Feedback form (too project specific).
+
 ## [3.0.0-beta12]
 
 ### Updated
@@ -674,6 +722,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta13]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta12...3.0.0-beta13
 [3.0.0-beta12]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta11...3.0.0-beta12
 [3.0.0-beta11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta10...3.0.0-beta11
 [3.0.0-beta10]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta9...3.0.0-beta10

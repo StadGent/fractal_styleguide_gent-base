@@ -95,7 +95,6 @@
   &#{$active-selector},
   &:hover,
   &:focus {
-    outline: 0;
     background: transparent;
 
     &::after {

@@ -60,14 +60,17 @@ const icons = [
   'readspeaker',
   'search',
   'share',
+  'size',
   'star-empty',
   'star-full',
   'star-half',
   'twitter-outline',
   'twitter',
   'user',
+  'users',
   'url',
   'vimeo',
+  'wheelchair',
   'youtube'
 ];
 

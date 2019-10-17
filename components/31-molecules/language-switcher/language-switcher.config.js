@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha'
+  status: 'alpha',
+  hidden: true
 };

@@ -1,10 +1,18 @@
 // Needed for smooths scrolling on iphone / ipad inside modals.
 // Placing it on .modal is not sufficient for safari.
-body {
+* {
   -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
 }
 
 .modal {
+  @include tablet-and-below {
+    background-color: color('white');
+  }
+
+  @include tablet {
+    animation: fade .2s ease-in-out;
+  }
+
   display: flex;
   position: fixed;
   top: 0;
@@ -67,9 +75,6 @@ body {
     width: 100%;
     min-height: 100%;
     margin: 0 auto;
-    border-radius: border-radius('radius-2');
-    background-clip: content-box;
-    background-color: color('white');
     z-index: z('modal', 'content');
     filter: drop-shadow(0 2px 8px #{color('dark-gray', -4, true)});
 
@@ -79,7 +84,27 @@ body {
       max-width: calc(100% - #{$gutter-width * 2});
       height: auto;
       min-height: 0;
-      margin: 10vh auto $gutter-width;
+      margin: 10vh auto 0;
+      padding-bottom: $gutter-width;
+      opacity: 0;
+      animation: fade .2s ease-in-out forwards;
+      animation-delay: .1s;
+    }
+
+    > * {
+      background-color: color('white');
+
+      &:first-of-type {
+        border-top-left-radius: border-radius('radius-2');
+        border-top-right-radius: border-radius('radius-2');
+        overflow: hidden;
+      }
+
+      &:last-of-type {
+        border-bottom-left-radius: border-radius('radius-2');
+        border-bottom-right-radius: border-radius('radius-2');
+        overflow: hidden;
+      }
     }
   }
 
@@ -93,7 +118,6 @@ body {
   }
 
   &-header &-close {
-    min-height: 0;
     padding: 0 .4rem;
     border: 0;
     background: transparent;
@@ -167,5 +191,15 @@ body {
     &:focus {
       @include theme('background-color', 'color-primary--darken-3', 'modal-overlay-background-color');
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

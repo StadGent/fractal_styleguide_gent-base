@@ -2,9 +2,27 @@
 
 ## When to use this component
 
-Use the form component to collect user input.
+Use the form component to collect user input to help users perform a certain task.
+
+For example:
+
+* Get in touch
+* Send a message or ask a question
+* Give feedback
+* Enter search or filter criteria
+* Login to a website or web application
+* Send a simple request
+* Subscribe to a newsletter
+
+The form component is used for simple or short forms. When the form becomes too complex or too long, or when splitting up the form into multiple, smaller steps makes it easier for user to fill in, the <a href="{{path './multistep-form.html'}}">Multistep form</a> component can be used instead.
 
 ## How it works
+
+A form component contains:
+
+* Form elements
+* Fieldsets
+* Form actions
 
 ### Form elements
 
@@ -16,8 +34,8 @@ The following form elements can be used in the form component:
 * <a href="{{path './checkboxes.html'}}">Checkboxes</a>
 * <a href="{{path './radios.html'}}">Radios</a>
 * <a href="{{path './select.html'}}">Select</a>
-* Textarea <!-- @TODO Add link to the textarea component -->
-* File upload <!-- @TODO Add link to the file upload component -->
+* <a href="{{path './textarea.html'}}">Textarea</a>
+* <a href="{{path './file-upload"'}}">File upload</a>
 
 ### Fieldsets
 

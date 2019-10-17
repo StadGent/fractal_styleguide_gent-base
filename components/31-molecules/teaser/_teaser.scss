@@ -175,11 +175,12 @@
       @include icon('calendar');
 
       display: flex;
-      align-items: center;
+      align-items: flex-start;
 
       &::before {
         padding-right: .5rem;
         font-size: 1.2rem;
+        line-height: 1;
       }
     }
 

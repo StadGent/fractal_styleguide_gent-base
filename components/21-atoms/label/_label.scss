@@ -4,11 +4,11 @@ label {
   .label-optional {
     @include theme('color', 'color-tertiary', 'label-color-optional');
 
-    font-size: .7rem;
+    font-size: .8rem;
   }
 
   display: block;
   margin: 0 0 .4rem;
-  font-size: .7rem;
+  font-size: .8rem;
   line-height: 1.2;
 }
