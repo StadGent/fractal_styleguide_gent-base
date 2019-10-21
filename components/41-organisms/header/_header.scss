@@ -6,15 +6,21 @@ header.header {
   // first row
   > .content-container {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    > :not(:first-child) {
+      margin-left: gutter();
+    }
 
     .site-logo {
       margin-right: auto;
 
       &.subsite {
         flex: 1;
-        margin-right: .7rem;
       }
     }
 
@@ -106,18 +112,22 @@ header.header {
     }
 
     .mijn-gent-block {
-      max-width: 10rem;
-      margin-left: 1.2rem;
+      align-items: center;
+      max-width: 210px;
+    }
+
+    .mijn-gent-block,
+    .language-switcher {
+      align-self: stretch;
     }
 
     // Align main menu with site logo and breadcrumb.
     nav.menu {
-      margin-left: 1.2rem;
-
       @include tablet {
         margin-left: 0;
-        padding-left: .2rem;
       }
+
+      line-height: 1;
     }
   }
 
@@ -197,7 +207,8 @@ header.header {
       margin: -1.7rem calc(-1rem + 1px) .3rem;
     }
 
-    .subsite {
+    .subsite, /// @deprecated
+    .theme {
       display: none;
 
       @include tablet {
@@ -250,7 +261,8 @@ header.header {
         border-top-left-radius: border-radius('radius-5');
       }
 
-      .subsite-title {
+      .subsite-title, /// @deprecated
+      .theme-title {
         display: block;
       }
 
@@ -390,7 +402,8 @@ header.header {
       }
     }
 
-    &:not(.hero--subsite) .subsite ~ figcaption { /// @deprecated
+    &:not(.hero--subsite) .subsite ~ figcaption, /// @deprecated
+    &:not(.hero--subsite) .theme ~ figcaption {
       left: 0;
       width: 100%;
       max-width: none;

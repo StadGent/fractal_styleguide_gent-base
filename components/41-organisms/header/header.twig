@@ -2,7 +2,7 @@
   <div class="content-container">
     {% include '@logo' with {
       site_name: site_name,
-      type: subsite ? 'subsite'	
+      type: subsite ? 'subsite'	: ''
     } %}
 
     {% include '@link' with {
@@ -27,6 +27,21 @@
       auth: mijn_gent_block_auth,
       image: mijn_gent_block_image
     } %}
+
+    {% if translate %}
+      {% include '@language-switcher' %}
+    {% endif %}
+
+    {% if menu %}
+      {% include '@menu' with {
+        items: [
+          '<a href="#" class="active">Home</a>',
+          '<a href="#">Menu item 1</a>',
+          '<a href="#">Menu item 2</a>',
+          '<a href="#">Menu item 3</a>',
+        ]
+      }%}
+    {% endif %}
   </div>
 
   {% if subsite %}
@@ -43,9 +58,9 @@
   <hr/>
   {% if hero_image_src %}
     <figure class="hero">
-      {% if subsite %}
-        <div class="subsite">
-          <div class="subsite-title">
+      {% if theme %}
+        <div class="theme">
+          <div class="theme-title">
             {% include '@image' with {
               'src': figure_logo_src_light | path,
               'alt_text': figure_logo_alt_text,
