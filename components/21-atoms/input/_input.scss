@@ -55,7 +55,7 @@ input[type=date]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendo
   }
 
   &:focus + label,
-  input[type="checkbox"]:focus + label {
+  input[type="radio"]:focus + label {
     @include focus-bare;
   }
 }
