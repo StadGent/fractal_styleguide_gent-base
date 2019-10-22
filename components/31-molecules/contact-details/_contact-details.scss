@@ -1,6 +1,7 @@
 $avatar-width: 14rem;
 
 .contact-details {
+  &.highlight .inner-box, /// @deprecated
   &.highlight .highlight__inner {
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,6 +17,7 @@ $avatar-width: 14rem;
   }
 
   &.contact-details-inverted {
+    > .inner-box, /// @deprecated
     > .highlight__inner {
       @include theme('border-color', 'color-primary--lighten-4', 'contact-details-border-color');
       border-width: 2px 0;
