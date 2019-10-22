@@ -124,6 +124,9 @@ header.header {
     // Align main menu with site logo and breadcrumb.
     nav.menu {
       @include tablet {
+        flex-basis: 100%;
+        flex-grow: 1;
+        order: 9999;
         margin-left: 0;
       }
 
@@ -418,6 +421,15 @@ header.header {
       &::before,
       &::after {
         width: 100%;
+      }
+    }
+  }
+
+  &--menu > .content-container {
+    > .mijn-gent-block,
+    > .language-switcher {
+      @include tablet-and-below {
+        display: none;
       }
     }
   }

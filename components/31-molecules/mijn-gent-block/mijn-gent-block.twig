@@ -1,90 +1,116 @@
-<div class="mijn-gent-block accordion">
-
-  {% if auth == 'false' %}
-
-   {% include '@link' with {
-  'modifier': 'login-link',
-  'link': 'javascript:(void);',
-  'text': 'Aanmelden'
-  } %}
-
-  {% else %}
-
-  <button aria-expanded="false"
-          aria-controls="{{ id|default('mijn_gent_content') }}"
-          class="toggle accordion--button">
-    {% if image %}
-      {% include '@image' with {
-      'src': '/styleguide/img/stock/user_avatar.jpg' | path,
-        'alt_text': 'Username',
-        'ratio': null
+{% set Content %}
+  <article class="content">
+    {% include '@heading' with {
+      'type': 'h2',
+      'heading_text': 'Mijn bibliotheek'
+    } %}
+    <section class="profile">
+      {% if image %}
+        {% include '@image' with {
+          'src': '/styleguide/img/stock/user_avatar.jpg' | path,
+          'alt_text': 'Username',
+          'ratio': null
+        } %}
+      {% else %}
+        <span class="avatar">j</span>
+      {% endif %}
+      <div class="profile-info">
+        <span>{{ 'James McGill' }}</span>
+        {% include '@link' with {
+          'link': '#',
+          'text': 'Show profile',
+          'modifier': 'button button-primary button-small'
+        } %}
+      </div>
+    </section>
+    <section>
+      {% include '@list' with {
+        'type': 'unordered',
+        'modifier': 'links',
+        'items': [
+          "<a href='javascript:(void);'>Overzicht</a>",
+          "<a href='javascript:(void);'>Leestips</a>"
+        ]
       } %}
-    {% else %}
-      <span class="avatar">j</span>
-    {% endif %}
-    <span>James McGill</span>
-  </button>
-
-  <div id="{{ id|default('mijn_gent_content') }}" class="accordion--content" aria-hidden="true" hidden>
-    <article class="content">
+    </section>
+    <section>
       {% include '@heading' with {
         'type': 'h2',
-        'heading_text': 'Mijn bibliotheek'
+        'heading_text': 'Mijn gent'
       } %}
-      <section class="profile">
+
+      {% include '@list' with {
+        'type': 'unordered',
+        'modifier': 'links',
+        'items': [
+          "<a href='javascript:(void);'>Mijn profiel</a>",
+          "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+          "<a href='javascript:(void);'>Historiek</a>"
+        ]
+      } %}
+    </section>
+    <footer>
+      {% include '@link' with {
+        'link': 'javascript:(void);',
+        'modifier': 'button button-small button-secondary',
+        'type': 'unordered',
+        'text': 'Afmelden'
+      } %}
+    </footer>
+  </article>
+{% endset %}
+
+{% if accordion %}
+  <div class="mijn-gent-block accordion">
+
+    {% if auth == 'false' %}
+
+      {% include '@link' with {
+        'modifier': 'login-link',
+        'link': 'javascript:(void);',
+        'text': 'Aanmelden'
+      } %}
+
+    {% else %}
+
+      <button aria-expanded="false"
+              aria-controls="{{ id|default('mijn_gent_content') }}"
+              class="toggle accordion--button">
         {% if image %}
-           {% include '@image' with {
-          'src': '/styleguide/img/stock/user_avatar.jpg' | path,
+          {% include '@image' with {
+            'src': '/styleguide/img/stock/user_avatar.jpg' | path,
             'alt_text': 'Username',
             'ratio': null
           } %}
         {% else %}
           <span class="avatar">j</span>
         {% endif %}
-        <div class="profile-info">
-          <span>{{ 'John Doe' }}</span>
-          {% include '@link' with {
-          'link': '#',
-          'text': 'Show profile',
-          'modifier': 'button button-primary button-small'
-          } %}
-        </div>
-      </section>
-      <section>
-        {% include '@list' with {
-        'type': 'unordered',
-        'modifier': 'links',
-        'items': [
-        "<a href='javascript:(void);'>Overzicht</a>",
-        "<a href='javascript:(void);'>Leestips</a>"
-        ]
-        } %}
-      </section>
-      <section>
-         {% include '@heading' with {
-          'type': 'h2',
-          'heading_text': 'Mijn gent'
-        } %}
+        <span>James McGill</span>
+      </button>
 
-        {% include '@list' with {
-        'type': 'unordered',
-        'modifier': 'links',
-        'items': [
-        "<a href='javascript:(void);'>Mijn profiel</a>",
-        "<a href='javascript:(void);'>Nieuwsbrieven</a>",
-        "<a href='javascript:(void);'>Historiek</a>"
-        ]
-        } %}
-      </section>
-      <footer>
-        {% include '@link' with {
-        'link': 'javascript:(void);',
-        'modifier': 'button button-small button-secondary',
-        'type': 'unordered',
-        'text': 'Afmelden'
-        } %}
-      </footer>
-    </article>
+      <div id="{{ id|default('mijn_gent_content') }}" class="accordion--content"
+           aria-hidden="true" hidden>
+        {{ Content }}
+      </div>
+
+    {% endif %}
+
   </div>
-  {% endif %}
-</div>
+
+{% else %}
+
+  <div class="mijn-gent-block">
+    {% if auth == 'false' %}
+
+      {% include '@link' with {
+        'modifier': 'login-link',
+        'link': 'javascript:(void);',
+        'text': 'Aanmelden'
+      } %}
+
+    {% else %}
+      {{ Content }}
+    {% endif %}
+  </div>
+
+{% endif %}

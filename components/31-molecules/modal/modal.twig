@@ -3,7 +3,9 @@
     class="modal{{ modifier ? ' modal--' ~ modifier }}{{ classes ? ' ' ~ classes }}"
     role="dialog"
     aria-modal="true"
+  {% if title %}
     aria-labelledby="{{ id }}-title"
+  {% endif %}
     tabindex="-1">
 
   <div class="modal-inner">
@@ -13,7 +15,9 @@
       </button>
     </div>
     <div class="modal-content">
+      {% if title %}
       <{{ title_heading_level|default('h3') }} id="{{ id }}-title">{{ title }}</{{ title_heading_level|default('h3') }}>
+      {% endif %}
       {{ content }}
     </div>
     {% if actions %}

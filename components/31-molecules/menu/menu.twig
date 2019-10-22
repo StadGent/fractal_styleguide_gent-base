@@ -1,14 +1,36 @@
-<nav class="menu">
-  <button class="toggle">{{ 'Menu' }}</button>
-  <div class="overlay"></div>
-  <div class="drawer" tabindex="-1">
-    <div class="header">
-      {% include '@logo' %}
-      <button class="close">{{ 'Close menu' }}</button>
+{% set modalContent %}
+  <div class="header">
+    {% include '@logo' %}
+  </div>
+  {% if items and items.length > 0 %}
+    <div class="menu-links">
+      {% include '@list' with {
+        type: 'links',
+        items: items
+      } %}
     </div>
+  {% endif %}
+  {{ auth }}
+  {{ translate }}
+{% endset %}
+
+<nav class="menu">
+  <button type="button"
+          class="modal-trigger toggle"
+          aria-expanded="false"
+          aria-controls="{{ id }}">menu
+  </button>
+  {% if items and items.length > 0 %}
     {% include '@list' with {
       type: 'links',
       items: items
     } %}
-  </div>
+  {% endif %}
+
+  {% include "@modal" with {
+    title_heading_level: 'span',
+    id: id,
+    classes: 'has-custom-binding menu',
+    content: modalContent
+  } %}
 </nav>

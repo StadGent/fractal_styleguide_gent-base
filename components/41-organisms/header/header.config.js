@@ -7,6 +7,9 @@ module.exports = {
       '<a href=\'javascript:(void);\'>Nieuwsbrieven</a>',
       '<a href=\'javascript:(void);\'>Historiek</a>'
     ],
+    auth: true,
+    search: true,
+    translate: false,
     mijn_gent_block_auth: 'false',
     header_search_id: 'header-search',
     header_search_label: 'Search',
@@ -25,12 +28,7 @@ module.exports = {
     figure_logo_src_dark: '/styleguide/img/stock/digipolis-dark.svg',
     figure_logo_src_light: '/styleguide/img/stock/digipolis-light.svg',
     site_name: 'Stad Gent',
-    menu_items: [
-      '<a href=\'#\' class=\'active\'>Home</a>',
-      '<a href=\'#\'>News & events</a>',
-      '<a href=\'#\'>Subpage</a>',
-      '<a href=\'#\'>Another page</a>'
-    ]
+    menu_items: []
   },
   variants: [
     {
@@ -78,6 +76,30 @@ module.exports = {
     },
     {
       name: 'seperate_translation_unauth_search',
+      label: 'Seperate multilingual site with synchronous translations + not authenticated',
+      context: {
+        subsite: true,
+        translate: true,
+        site_name: 'ICT Supplier Digipolis Gent',
+        hero_image_src: null,
+        search: false
+      }
+    },
+    {
+      name: 'seperate_translation_unauth_search',
+      label: 'Seperate multilingual site with synchronous translations + authenticated',
+      context: {
+        subsite: true,
+        translate: true,
+        site_name: 'ICT Supplier Digipolis Gent',
+        hero_image_src: null,
+        search: false,
+        mijn_gent_block_auth: true,
+        mijn_gent_block_image: true
+      }
+    },
+    {
+      name: 'seperate_translation_unauth_search',
       label: 'Seperate multilingual site with synchronous translations + not authenticated + search',
       context: {
         subsite: true,
@@ -94,6 +116,7 @@ module.exports = {
         mijn_gent_block_image: false,
         subsite: true,
         translate: true,
+        auth: true,
         site_name: 'ICT Supplier Digipolis Gent',
         hero_image_src: null
       }
@@ -108,7 +131,13 @@ module.exports = {
         translate: true,
         menu: true,
         site_name: 'ICT Supplier Digipolis Gent',
-        hero_image_src: null
+        hero_image_src: null,
+        menu_items: [
+          '<a href=\'#\' class=\'active\'>Home</a>',
+          '<a href=\'#\'>News & events</a>',
+          '<a href=\'#\'>Subpage</a>',
+          '<a href=\'#\'>Another page</a>'
+        ]
       }
     },
     {
@@ -120,7 +149,13 @@ module.exports = {
         subsite: true,
         translate: true,
         menu: true,
-        site_name: 'ICT Supplier Digipolis Gent'
+        site_name: 'ICT Supplier Digipolis Gent',
+        menu_items: [
+          '<a href=\'#\' class=\'active\'>Home</a>',
+          '<a href=\'#\'>News & events</a>',
+          '<a href=\'#\'>Subpage</a>',
+          '<a href=\'#\'>Another page</a>'
+        ]
       }
     }
   ]
