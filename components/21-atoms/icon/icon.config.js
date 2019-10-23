@@ -71,7 +71,9 @@ const icons = [
   'url',
   'vimeo',
   'wheelchair',
-  'youtube'
+  'youtube',
+  'euro',
+  'size'
 ];
 
 /**
