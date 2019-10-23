@@ -75,7 +75,7 @@ module.exports = {
       }
     },
     {
-      name: 'seperate_translation_unauth_search',
+      name: 'seperate_translation_unauth',
       label: 'Seperate multilingual site with synchronous translations + not authenticated',
       context: {
         subsite: true,
@@ -86,7 +86,7 @@ module.exports = {
       }
     },
     {
-      name: 'seperate_translation_unauth_search',
+      name: 'seperate_translation_auth',
       label: 'Seperate multilingual site with synchronous translations + authenticated',
       context: {
         subsite: true,

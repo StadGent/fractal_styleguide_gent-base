@@ -20,12 +20,12 @@
 
 {% if accordion %}
   <div class="language-switcher accordion">
-    <button aria-controls="language_switcher_content"
+    <button aria-controls="{{ id | default('language_switcher_content') }}"
             aria-expanded="false"
             class="toggle accordion--button">
       NL
     </button>
-    <div id="language_switcher_content" class="accordion--content"
+    <div id="{{ id | default('language_switcher_content') }}" class="accordion--content"
          aria-hidden="true">
       {{ Content }}
     </div>

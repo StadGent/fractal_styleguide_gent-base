@@ -17,7 +17,7 @@
 
       {% include '@search' with {
         label: header_search_label,
-        search_id: header_search_id,
+        search_id: _self.name ~ '-header-search',
         placeholder: header_search_placeholder,
         modifier_search: header_search_modifier_search,
         text: header_search_text,
@@ -37,7 +37,8 @@
 
     {% if translate %}
       {% include '@language-switcher' with {
-        accordion: true
+        accordion: true,
+        id: _self.name ~ '-translate'
       } %}
     {% endif %}
 
@@ -58,7 +59,8 @@
       {% set Translate %}
         {% if translate %}
           {% include '@language-switcher' with {
-            accordion: false
+            accordion: false,
+            id: _self.name ~ '-translate-mobile'
           } %}
         {% endif %}
       {% endset %}
@@ -81,7 +83,7 @@
 
   {% include '@breadcrumbs' with {
     items: breadcrumbs_items,
-    id: breadcrumbs_id
+    id: _self.name ~ '-header-crumbs'
   } %}
 
   <hr/>
