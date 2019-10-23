@@ -4,6 +4,14 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Updated
+
+* **BREAKING:** Menu templates have been changed.  
+Check which menu components are used in your project and  
+update your template accordingly.
+
 ## [3.0.0-beta14]
 
 ### Fixed
