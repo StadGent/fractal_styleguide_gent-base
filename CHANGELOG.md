@@ -4,6 +4,13 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta14]
+
+### Fixed
+
+* Focus outline for input type radio without class.
+* Add deprecated classes for boxes so it doesn't break anything.
+
 ## [3.0.0-beta13]
 
 ### Added
@@ -722,6 +729,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta14]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta13...3.0.0-beta14
 [3.0.0-beta13]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta12...3.0.0-beta13
 [3.0.0-beta12]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta11...3.0.0-beta12
 [3.0.0-beta11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta10...3.0.0-beta11
