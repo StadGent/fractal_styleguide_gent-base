@@ -6,6 +6,11 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Added
+
+* Size icon.
+* Euro icon.
+
 ### Updated
 
 * **BREAKING:** Menu templates have been changed.  
