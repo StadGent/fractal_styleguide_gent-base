@@ -5,7 +5,8 @@ module.exports = {
   default: 'logged-in',
   context: {
     auth: false,
-    image: true
+    image: true,
+    accordion: true
   },
   variants: [
     {

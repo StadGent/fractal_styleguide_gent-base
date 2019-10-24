@@ -1,54 +1,81 @@
 nav.menu {
   margin: 0;
 
-  @include tablet {
-    flex-basis: 100%;
-    flex-grow: 1;
-    order: 9999;
-  }
-
-  .drawer {
-    position: fixed;
-    top: 0;
-    left: calc(-100% - 16px);
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    transition: left 500ms cubic-bezier(0, 1, .5, 1);
-    background-color: color('white');
-    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, .5);
-    overflow: auto;
-    z-index: z('menu', 'base');
-
-    @media screen and (min-width: 425px) {
-      left: calc(-66% - 16px);
-      width: 66%;
-    }
-
-    &.js-opened {
-      left: 0;
-    }
+  button {
+    @include button-icon;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: .8rem;
 
     @include tablet {
-      display: block !important; // sass-lint:disable-line no-important
-      position: relative;
-      left: 0;
-      width: auto;
-      height: auto;
-      padding-top: 0;
-      transition: none;
-      background: transparent !important; // sass-lint:disable-line no-important
-      box-shadow: none;
-      overflow: visible;
+      display: none;
     }
+
+    &::before {
+      order: 0;
+      margin-right: .5rem;
+      margin-left: 0;
+    }
+
+    &.toggle {
+      @include icon(hamburger);
+    }
+
+    &.close {
+      @include icon(cross);
+    }
+  }
+
+  ul {
+    @extend %list-no-style;
+    @include tablet-and-below {
+      display: none;
+    }
+
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+
+      a,
+      a[href^="mailto:"],
+      a[download],
+      a[href^="http://"],
+      a[href^="https://"] {
+        @include reset-link-background;
+        @include link-underlined;
+
+        margin-bottom: 0;
+        padding: .5rem 0;
+      }
+    }
+  }
+}
+
+.modal.menu {
+  @include tablet {
+    display: none;
+  }
+
+  .modal-inner {
+    .modal-header {
+      position: absolute;
+      right: 0;
+      margin-top: 1rem;
+      margin-right: .5rem;
+      z-index: 7;
+    }
+  }
+
+  .modal-content {
+    flex: 1;
+    padding: 0;
 
     .header {
       position: relative;
       margin: .6rem $gutter-width 1.6rem;
-
-      @include tablet {
-        display: none;
-      }
 
       &::before,
       &::after {
@@ -84,73 +111,74 @@ nav.menu {
         margin-top: .25rem;
       }
     }
-  }
 
-  .overlay.js-opened {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 2555, .8);
-    z-index: z('menu', 'overlay');
+    .menu-links {
+      ul {
+        @extend %list-no-style;
+        margin: 0;
 
-    @include tablet {
-      display: none;
-    }
-  }
+        li {
+          @include tablet {
+            display: inline-block;
+            margin-right: 1rem;
+          }
 
-  button {
-    @include button-icon;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    font-size: .8rem;
+          margin-bottom: .8rem;
 
-    @include tablet {
-      display: none;
-    }
+          &:first-child {
+            margin-top: .8rem;
+          }
 
-    &::before {
-      order: 0;
-      margin-right: .5rem;
-      margin-left: 0;
-    }
+          a,
+          a[href^="mailto:"],
+          a[download],
+          a[href^="http://"],
+          a[href^="https://"] {
+            @include reset-link-background;
+            @include link-underlined;
 
-    &.toggle {
-      @include icon(hamburger);
-    }
-
-    &.close {
-      @include icon(cross);
-    }
-  }
-
-  ul {
-    @extend %list-no-style;
-    margin: 0;
-
-    li {
-      @include tablet {
-        display: inline-block;
-        margin-right: 1rem;
-      }
-
-      a,
-      a[href^="mailto:"],
-      a[download],
-      a[href^="http://"],
-      a[href^="https://"] {
-        @include reset-link-background;
-        @include link-underlined;
-
-        margin-bottom: 1rem;
-        padding: 1rem;
-
-        @include tablet {
-          margin-bottom: 0;
-          padding: .5rem 0;
+            padding: .5rem 0;
+            line-height: 1.4rem;
+          }
         }
+      }
+    }
+
+    .mijn-gent-block {
+      padding: 1.2rem 0;
+
+      .content {
+        padding: 0;
+      }
+    }
+
+    .language-switcher {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        padding: .6rem 0;
+
+        li {
+          padding: .6rem;
+        }
+      }
+    }
+
+    .mijn-gent-block,
+    .language-switcher {
+      display: block;
+    }
+
+    .menu-links,
+    .mijn-gent-block,
+    .language-switcher {
+      margin: 0 1.2rem;
+
+      &:not(:last-child) {
+        @include theme('border-color', 'color-primary--lighten-4', 'mijn_gent-border-color');
+        border-bottom: 2px solid;
       }
     }
   }
