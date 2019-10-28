@@ -76,7 +76,7 @@ module.exports = {
     },
     {
       name: 'seperate_translation_unauth',
-      label: 'Seperate multilingual site with synchronous translations + not authenticated',
+      label: 'Seperate multilingual site with synchronous translations + not signed in',
       context: {
         subsite: true,
         translate: true,
@@ -87,7 +87,7 @@ module.exports = {
     },
     {
       name: 'seperate_translation_auth',
-      label: 'Seperate multilingual site with synchronous translations + authenticated',
+      label: 'Seperate multilingual site with synchronous translations + signed in',
       context: {
         subsite: true,
         translate: true,
@@ -100,7 +100,7 @@ module.exports = {
     },
     {
       name: 'seperate_translation_unauth_search',
-      label: 'Seperate multilingual site with synchronous translations + not authenticated + search',
+      label: 'Seperate multilingual site with synchronous translations + not signed in + search',
       context: {
         subsite: true,
         translate: true,
@@ -110,7 +110,7 @@ module.exports = {
     },
     {
       name: 'seperate_translation_auth_search',
-      label: 'Seperate multilingual site with synchronous translations + authenticated + search',
+      label: 'Seperate multilingual site with synchronous translations + signed in + search',
       context: {
         mijn_gent_block_auth: true,
         mijn_gent_block_image: false,
@@ -123,7 +123,7 @@ module.exports = {
     },
     {
       name: 'seperate_hmenu_translation_auth_search',
-      label: 'Seperate multilingual site with menu + synchronous translations + authenticated + search',
+      label: 'Seperate multilingual site with menu + synchronous translations + signed in + search',
       context: {
         mijn_gent_block_auth: true,
         mijn_gent_block_image: false,
@@ -142,7 +142,7 @@ module.exports = {
     },
     {
       name: 'seperate_hero_menu_translation_auth_search',
-      label: 'Seperate multilingual site with hero + menu + synchronous translations + authenticated + search',
+      label: 'Seperate multilingual site with hero + menu + synchronous translations + signed in + search',
       context: {
         mijn_gent_block_auth: true,
         mijn_gent_block_image: false,
