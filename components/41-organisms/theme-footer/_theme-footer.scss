@@ -172,6 +172,11 @@
 
   .content-container {
     padding: 0 $gutter-width;
+
+    @media (min-width: $bp-max-content + 54px) {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   .top {
