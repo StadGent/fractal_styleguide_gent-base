@@ -17,6 +17,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 Check which menu components are used in your project and  
 update your template accordingly.
 
+### Fixed
+
+* Filter layout sidebar overflow.
+
 ## [3.0.0-beta14]
 
 ### Fixed
