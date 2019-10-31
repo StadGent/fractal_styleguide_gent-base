@@ -32,7 +32,7 @@ The **top header with Ghent logo** has the following components:
 * Mijn Gent (optional, only if applicable)
 * Language switch (optional, only for **multilingual websites with synchronous translations**)
 
-When there is no header image, the light blue Ghent-style seperator is shown. When there is a header image, the light blue Ghent-style separator is not shown.
+When there is no header image, the Ghent-style seperator is shown. When there is a header image, the Ghent-style separator is not shown.
 
 **Further specific requirements for the City of Ghent website and for separate websites are listed below.**
 
@@ -56,7 +56,7 @@ The **top header** has the following components:
 
 For the **top header** of the mobile header, the following conditions apply:
 
-1. Where there is a **header image**, the header image in the mobile header is **hidden**. The light blue Ghent-style separator is always shown.
+1. Where there is a **header image**, the header image in the mobile header is **hidden**. The Ghent-style separator is always shown.
 
 2. When the website has a **search function**, the search function is **always shown** in the header.
 
