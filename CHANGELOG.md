@@ -20,6 +20,7 @@ update your template accordingly.
 ### Fixed
 
 * Filter layout sidebar overflow.
+* Keyboard bug on checkboxes with filter.
 
 ## [3.0.0-beta14]
 
