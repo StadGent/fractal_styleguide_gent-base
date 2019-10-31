@@ -10,12 +10,18 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Size icon.
 * Euro icon.
+* Update icon.
 
 ### Updated
 
-* **BREAKING:** Menu templates have been changed.  
-Check which menu components are used in your project and  
+* **BREAKING:** Menu templates have been changed.
+Check which menu components are used in your project and
 update your template accordingly.
+
+### Fixed
+
+* Filter layout sidebar overflow.
+* Keyboard bug on checkboxes with filter.
 
 ## [3.0.0-beta14]
 

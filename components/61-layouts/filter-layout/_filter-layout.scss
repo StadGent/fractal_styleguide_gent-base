@@ -12,6 +12,10 @@
       width: span(3 of 12);
       padding-right: gutter();
     }
+
+    &.modal {
+      max-height: none;
+    }
   }
 
   .content {

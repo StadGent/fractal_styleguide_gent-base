@@ -73,8 +73,12 @@ const icons = [
   'wheelchair',
   'youtube',
   'euro',
-  'size'
+  'size',
+  'update'
 ];
+
+// Sort icons alphabetically.
+icons.sort();
 
 /**
  * Helper to convert the list of icon names to a list of icon variants.
