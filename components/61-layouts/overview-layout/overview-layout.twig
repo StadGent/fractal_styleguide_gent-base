@@ -84,5 +84,12 @@
 </main>
 
 <footer>
+  {% include '@theme-footer' with {
+    contact: true,
+    newsletter: true,
+    social: true,
+    logo: true
+  } %}
+
   {% include '@footer' with footerConfig %}
 </footer>
