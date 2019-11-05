@@ -274,7 +274,7 @@
     margin-bottom: gutter();
 
     @include phablet {
-      flex-basis: span(2 of 9);
+      flex-basis: span(5 of 18);
       margin-right: gutter();
       margin-bottom: 0;
     }
@@ -285,7 +285,7 @@
     order: 2;
 
     @include phablet {
-      flex-basis: span(7 of 9);
+      flex-basis: span(13 of 18);
     }
 
     .location {
