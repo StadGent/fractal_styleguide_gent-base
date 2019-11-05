@@ -10,6 +10,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Size icon.
 * Euro icon.
+* Update icon.
 
 ### Updated
 
@@ -20,6 +21,8 @@ update your template accordingly.
 ### Fixed
 
 * Inconsistent alignment between theme-footer and footer component.
+* Filter layout sidebar overflow.
+* Keyboard bug on checkboxes with filter.
 
 ## [3.0.0-beta14]
 
