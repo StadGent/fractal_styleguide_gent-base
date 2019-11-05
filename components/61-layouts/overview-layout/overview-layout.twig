@@ -1,11 +1,13 @@
-{% include '@header--subsite-hero' with {
+{% include '@header' with {
   "site_name": "Stad Gent",
   "mijn_gent_block_items": [
     "<a href='javascript:(void);'>Mijn profiel</a>",
     "<a href='javascript:(void);'>Nieuwsbrieven</a>",
     "<a href='javascript:(void);'>Historiek</a>"
   ],
-  "mijn_gent_block_auth": "true",
+  "auth": true,
+  "search": true,
+  "mijn_gent_block_auth": true,
   "header_search_id": "header-search",
   "header_search_label": "Search",
   "header_search_placeholder": "Search",
@@ -82,5 +84,12 @@
 </main>
 
 <footer>
+  {% include '@theme-footer' with {
+    contact: true,
+    newsletter: true,
+    social: true,
+    logo: true
+  } %}
+
   {% include '@footer' with footerConfig %}
 </footer>

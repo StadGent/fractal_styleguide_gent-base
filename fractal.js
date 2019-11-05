@@ -67,7 +67,7 @@ fractal.web.set('builder.dest', __dirname + '/build');
 */
 fractal.components.set('default.collated', true);
 fractal.components.set('default.collator', function (markup, item) {
-  return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+  return `<!-- Start: @${item.handle} -->\n<dt>${item.label || item.name}</dt><dd>${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
 });
 
 const ghentTheme = mandelbrot({

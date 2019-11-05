@@ -1,32 +1,78 @@
-<header class="header">
+{% set hasMenu = menu or (search and auth and translate) %}
+
+<header class="header{{ hasMenu ? ' header--menu' : '' }}">
   <div class="content-container">
     {% include '@logo' with {
       site_name: site_name,
-      type: subsite ? 'subsite'	
+      type: subsite ? 'subsite'  : ''
     } %}
 
-    {% include '@link' with {
-      link: "#",
-      text: "search",
-      modifier: "search--link",
-      title: "search"
-    } %}
+    {% if search %}
+      {% include '@link' with {
+        link: "#",
+        text: "search",
+        modifier: "search--link",
+        title: "search"
+      } %}
 
-    {% include '@search' with {
-      label: header_search_label,
-      search_id: header_search_id,
-      placeholder: header_search_placeholder,
-      modifier_search: header_search_modifier_search,
-      text: header_search_text,
-      modifier_submit: header_search_modifier_submit
-    } %}
+      {% include '@search' with {
+        label: header_search_label,
+        search_id: _self.name ~ '-header-search',
+        placeholder: header_search_placeholder,
+        modifier_search: header_search_modifier_search,
+        text: header_search_text,
+        modifier_submit: header_search_modifier_submit
+      } %}
+    {% endif %}
 
-    {% include '@mijn-gent-block' with {
-      id: _self.name ~ '-mijn-gent',
-      items: mijn_gent_block_items,
-      auth: mijn_gent_block_auth,
-      image: mijn_gent_block_image
-    } %}
+    {% if auth %}
+      {% include '@mijn-gent-block' with {
+        id: _self.name ~ '-mijn-gent',
+        items: mijn_gent_block_items,
+        auth: mijn_gent_block_auth,
+        image: mijn_gent_block_image,
+        accordion: true
+      } %}
+    {% endif %}
+
+    {% if translate %}
+      {% include '@language-switcher' with {
+        accordion: true,
+        id: _self.name ~ '-translate'
+      } %}
+    {% endif %}
+
+    {% if hasMenu %}
+
+      {% set Auth %}
+        {% if auth %}
+          {% include '@mijn-gent-block' with {
+            id: _self.name ~ '-mijn-gent-mobile',
+            items: mijn_gent_block_items,
+            auth: mijn_gent_block_auth,
+            image: mijn_gent_block_image,
+            accordion: false
+          } %}
+        {% endif %}
+      {% endset %}
+
+      {% set Translate %}
+        {% if translate %}
+          {% include '@language-switcher' with {
+            accordion: false,
+            id: _self.name ~ '-translate-mobile'
+          } %}
+        {% endif %}
+      {% endset %}
+
+      {% include '@menu' with {
+        items: menu_items,
+        auth: Auth,
+        translate: Translate,
+        id: _self.name ~ '-menu',
+      } %}
+
+    {% endif %}
   </div>
 
   {% if subsite %}
@@ -37,15 +83,15 @@
 
   {% include '@breadcrumbs' with {
     items: breadcrumbs_items,
-    id: breadcrumbs_id
+    id: _self.name ~ '-header-crumbs'
   } %}
 
   <hr/>
   {% if hero_image_src %}
     <figure class="hero">
-      {% if subsite %}
-        <div class="subsite">
-          <div class="subsite-title">
+      {% if theme %}
+        <div class="theme">
+          <div class="theme-title">
             {% include '@image' with {
               'src': figure_logo_src_light | path,
               'alt_text': figure_logo_alt_text,

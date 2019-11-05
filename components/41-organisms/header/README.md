@@ -15,58 +15,58 @@ Depending on the device's screen resolution, the header switches to one of the t
 
 ### Desktop header
 
-The desktop header is used on desktop resolutions and tablets in landscape mode.
+The **desktop header** is used on **desktop resolutions and tablets in landscape mode**.
 
 The desktop header can consist of four parts:
 
-1. Top header with Ghent logo (always required)
-2. Menu with main navigation (optional)
-3. Breadcrumbs (required for most websites)
-4. Header image (optional)
+1. **Top header with Ghent logo** (always required)
+2. **Menu with main navigation** (optional)
+3. **Breadcrumbs** (required for most websites)
+4. **Header image** (optional)
 
-The top header with Ghent logo has the following components:
+The **top header with Ghent logo** has the following components:
 
 * Ghent logo (always required)
 * Site title (optional, only for separate websites)
 * Search (optional, only if applicable)
 * Mijn Gent (optional, only if applicable)
-* Language switch (optional, only for multilingual websites with synchronous translations)
+* Language switch (optional, only for **multilingual websites with synchronous translations**)
 
-When there is no header image, the light blue Ghent-style seperator is shown. When there is a header image, the light blue Ghent-style separator is not shown.
+When there is no header image, the Ghent-style seperator is shown. When there is a header image, the Ghent-style separator is not shown.
 
 **Further specific requirements for the City of Ghent website and for separate websites are listed below.**
 
 ### Mobile header
 
-The mobile header is used on tablet in portrait mode and below (mobile resolutions).
+The **mobile header** is used on **tablet in portrait mode and below (mobile resolutions)**.
 
-The mobile header can consist of three parts:
+The mobile header can consist of three parts, from top to bottom:
 
-1. Top header with Ghent logo (always required)
-2. Site title (optional, only for separate websites)
-3. Breadcrumbs (required for most websites)
+1. **Top header** with Ghent logo (always required)
+2. **Site title** (optional, only for separate websites)
+3. **Breadcrumbs** (required for most websites)
 
-The top header with Ghent logo has the following components:
+The **top header** has the following components:
 
 * Ghent logo (always required)
 * Search button with link (optional, only if applicable)
 * Mijn Gent (optional, only if applicable)
 * Menu button (optional, only if applicable)
-* Language switch (optional, only if applicable and for multilingual websites with synchronous translations)
+* Language switch (optional, only if applicable and for **multilingual websites with synchronous translations**)
 
-For the top part of the mobile header, the following conditions apply:
+For the **top header** of the mobile header, the following conditions apply:
 
-1. Where there is a header image, the header image in the mobile header is hidden. The light blue Ghent-style separator is always shown.
+1. Where there is a **header image**, the header image in the mobile header is **hidden**. The Ghent-style separator is always shown.
 
-2. When the website has a search function, the search function is always shown in the header.
+2. When the website has a **search function**, the search function is **always shown** in the header.
 
-3. When the website has main navigation, the menu button is always shown in the header. The menu button opens the mobile menu with the main navigation.
+3. When the website has **main navigation**, the **menu button is always shown** in the header. The menu button opens the mobile menu with the main navigation.
 
-4. When the website has main navigation and also Mijn Gent and/or a language switch, Mijn Gent and/or the language switch are integrated in the menu. The menu button is always shown in the header. The menu button opens the mobile menu with the main navigation and Mijn Gent and/or the language switch. In other words: whenever the website has main navigation, the menu button is used and Mijn Gent and/or the language switch (if applicable) are integrated in the mobile menu.
+4. When the website has **main navigation** and also Mijn Gent and/or a language switch, **Mijn Gent and/or the language switch are integrated in the menu**. In these cases, the menu button is always shown in the header. The menu button opens the mobile menu with the main navigation and Mijn Gent and/or the language switch. In other words: whenever the website has main navigation, the menu button is used and Mijn Gent and/or the language switch (if applicable) are integrated in the mobile menu.
 
-5. When the websites no main navigation, but has a search function *and* Mijn Gent *and* a language switch, the menu button is used and the Mijn Gent and the language switch are integrated in the menu. The search button is always shown in the header.
+5. When the website has **no main navigation**, but has a **search function *and* Mijn Gent *and* a language switch**, the **menu button** is used and the Mijn Gent and the language switch are integrated in the menu. The search button is always shown in the header.
 
-Taking the above conditions into account, only the following combinations of elements are possible in the top part of the mobile header:
+Taking the above conditions into account, only the **following combinations of elements are possible** in the top part of the mobile header:
 
 * Ghent logo + Search button + Menu button
 * Ghent logo + Search button + Language switch

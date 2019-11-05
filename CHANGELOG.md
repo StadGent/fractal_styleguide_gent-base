@@ -4,6 +4,27 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta15]
+
+### Added
+
+* Size icon.
+* Euro icon.
+* Update icon.
+
+### Updated
+
+* **BREAKING:** Menu templates have been changed.
+Check which menu components are used in your project and
+update your template accordingly.
+
+### Fixed
+
+* Inconsistent alignment between theme-footer and footer component.
+* Filter layout sidebar overflow.
+* Keyboard bug on checkboxes with filter.
+* Fixed width of images in wide teasers.
+
 ## [3.0.0-beta14]
 
 ### Fixed
@@ -729,6 +750,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta15]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta14...3.0.0-beta15
 [3.0.0-beta14]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta13...3.0.0-beta14
 [3.0.0-beta13]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta12...3.0.0-beta13
 [3.0.0-beta12]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta11...3.0.0-beta12
