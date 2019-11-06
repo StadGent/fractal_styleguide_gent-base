@@ -4,6 +4,13 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Updated
+
+* Preview for Filter layout
+* Filter modal is now a `fixed-height` modal.
+
 ## [3.0.0-beta15]
 
 ### Added
