@@ -37,9 +37,10 @@ th > * {
 }
 
 hr {
-  margin: 0 0 $default-line-height;
+  margin: 0 0 1.4rem;
   clear: both;
-  border: 1px 0 0 solid color('dark-gray', -2);
+  border: solid color('dark-gray', -2);
+  border-width: 1px 0 0;
 }
 
 //
