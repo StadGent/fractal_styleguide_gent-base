@@ -31,6 +31,7 @@ update your template accordingly.
 * Filter layout sidebar overflow.
 * Keyboard bug on checkboxes with filter.
 * Fixed width of images in wide teasers.
+* Fixed form-columns whitespace.
 
 ## [3.0.0-beta14]
 
