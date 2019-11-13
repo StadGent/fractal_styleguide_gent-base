@@ -10,6 +10,11 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Invalid CSS in hr styling.
 
+### Updated
+
+* Preview for Filter layout
+* Filter modal is now a `fixed-height` modal.
+
 ## [3.0.0-beta15]
 
 ### Added
