@@ -6,6 +6,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Fixed
+
+* Invalid CSS in hr styling.
+
 ### Updated
 
 * Preview for Filter layout
