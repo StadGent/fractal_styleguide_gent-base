@@ -19,7 +19,7 @@
 
   &:not(.stacked) {
     .form-columns {
-      margin-bottom: 1.2rem;
+      margin-bottom: 0;
 
       @include desktop {
         display: flex;
