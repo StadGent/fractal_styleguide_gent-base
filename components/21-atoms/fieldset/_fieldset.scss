@@ -1,3 +1,4 @@
+.fieldset-wrapper,
 fieldset  {
   @include theme('border-color', 'color-primary--lighten-4', 'fieldset-border-color');
 
@@ -8,14 +9,14 @@ fieldset  {
   &.form-item {
     margin-bottom: 0;
     border-bottom: 0;
+  }
 
-    &:only-of-type,
-    &:last-of-type {
-      @include theme('border-color', 'color-primary--lighten-4', 'fieldset-border-color');
+  &:only-of-type,
+  &:last-of-type {
+    @include theme('border-color', 'color-primary--lighten-4', 'fieldset-border-color');
 
-      margin-bottom: 1rem;
-      border-bottom: 1px solid;
-    }
+    margin-bottom: 1rem;
+    border-bottom: 1px solid;
   }
 
   legend {
