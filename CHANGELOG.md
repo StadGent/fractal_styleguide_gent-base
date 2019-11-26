@@ -10,6 +10,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Invalid CSS in hr styling.
 * Fixed form-columns whitespace.
+* Fixed overflow issue for videos in the timeline component.
 
 ### Updated
 
