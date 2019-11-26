@@ -1,4 +1,4 @@
-.fieldset-wrapper,
+.fieldset-wrapper fieldset,
 fieldset  {
   @include theme('border-color', 'color-primary--lighten-4', 'fieldset-border-color');
 
