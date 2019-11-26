@@ -257,14 +257,9 @@ dl.timeline {
       // Video component styling inside a timeline-slot.
       .video-wrapper {
         position: relative;
-        width: calc(100% + 4.6rem + #{$timeline-border});
-        margin-left: calc(-4rem - #{$timeline-border});
+        width: 100%;
+        margin-left: 0;
         padding-bottom: 2rem;
-
-        @include desktop {
-          width: calc(100% + 10rem + #{$timeline-border});
-          margin-left: calc(-10rem - #{$timeline-border});
-        }
 
         // Fix to add whitespace to the video top and bottom areas.
         &::before,
@@ -280,32 +275,6 @@ dl.timeline {
 
         &::after {
           @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
-        }
-
-        .video-inner-wrapper {
-          &::before,
-          &::after {
-            @include theme('border-color', 'color-primary', 'timeline-slot-active-indicator-background');
-
-            position: absolute;
-            left: calc(#{$timeline-m-left-padding} + 1px);
-            height: 1rem;
-            border-left: $timeline-border dotted;
-            content: '';
-            z-index: z('timeline', 'video', 'dots');
-
-            @include desktop {
-              left: calc(#{$timeline-dt-right-padding} + 1px);
-            }
-          }
-
-          &::before {
-            top: .2rem;
-          }
-
-          &::after {
-            bottom: .2rem;
-          }
         }
 
         .video {
