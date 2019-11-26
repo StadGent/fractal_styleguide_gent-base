@@ -4,6 +4,19 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [3.0.0-beta16]
+
+### Fixed
+
+* Invalid CSS in hr styling.
+* Fixed form-columns whitespace.
+* Fixed overflow issue for videos in the timeline component.
+
+### Updated
+
+* Preview for Filter layout
+* Filter modal is now a `fixed-height` modal.
+
 ## [3.0.0-beta15]
 
 ### Added
@@ -750,6 +763,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0-beta16]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta15...3.0.0-beta16
 [3.0.0-beta15]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta14...3.0.0-beta15
 [3.0.0-beta14]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta13...3.0.0-beta14
 [3.0.0-beta13]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta12...3.0.0-beta13

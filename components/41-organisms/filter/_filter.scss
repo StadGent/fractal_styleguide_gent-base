@@ -46,6 +46,15 @@
       > .modal-content {
         @include desktop {
           padding: 0;
+          overflow: visible;
+        }
+      }
+
+      > .modal-actions {
+        @include desktop {
+          padding-right: 0;
+          padding-left: 0;
+          border: 0;
         }
       }
     }

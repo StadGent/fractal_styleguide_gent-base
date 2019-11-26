@@ -2,87 +2,117 @@
   {% set modalContent %}
 
     <form action="#result">
-      <div class="form-item">
-        {% include '@label' with {
-          "label": "Name",
-          "for": "id_name",
-          "label_optional": "Optional"
-        } %}
-        {% include '@input' with {
-          "type": "text",
-          "id": "id_name",
-          "name": "name",
-        } %}
-      </div>
-      <div class="form-item">
-        {% include '@label' with {
-          "label": "Category",
-          "for": "id_category",
-          "label_optional": "Optional"
-        } %}
-        {% include '@input' with {
-          "type": "text",
-          "id": "id_category",
-          "name": "category"
-        } %}
-      </div>
-      {% include '@checkbox-with-filter' with {
-        "label": "Activities",
-        "label_optional": "Optional",
-        "label_count": "activity(ies)",
-        "options": checkboxes,
-        "field_description": null,
-        "stacked": true
+      {% include '@form-item' with {
+        label: "Name",
+        id: _self.name ~ "-name_id",
+        input_component: "input",
+        type: "text",
+        name: _self.name ~ "-name_name",
+        field_description: null,
+        stacked: true
       } %}
-      <div class="form-item">
-        {% include '@label' with {
-          "label": "Type",
-          "for": "id_type",
-          "label_optional": "Optional"
-        } %}
-        {% include '@input' with {
-          "type": "text",
-          "id": "id_type",
-          "name": "type"
-        } %}
-      </div>
-      <div class="form-item">
-        {% include '@label' with {
-          "label": "Extra",
-          "for": "id_extra",
-          "label_optional": "Optional"
-        } %}
-        {% include '@input' with {
-          "type": "text",
-          "id": "id_extra",
-          "name": "type"
-        } %}
-      </div>
-      <div class="form-item">
-        {% include '@label' with {
-          "label": "Extra bis",
-          "for": "id_extra1",
-          "label_optional": "Optional"
-        } %}
-        {% include '@input' with {
-          "type": "text",
-          "id": "id_extra1",
-          "name": "type"
-        } %}
-      </div>
-      <div class="form-item">
-        {% include '@label' with {
-          "label": "Extra tris",
-          "for": "id_extra2",
-          "label_optional": "Optional"
-        } %}
-        {% include '@input' with {
-          "type": "text",
-          "id": "id_extra2",
-          "name": "type"
-        } %}
-      </div>
-      <button type="submit" class="button button-primary filter__submit">Show result</button>
+
+      {% include '@checkboxes' with {
+        input_component: "input",
+        type: "checkbox",
+        label: "Price",
+        id: _self.name ~ "-price",
+        modifier: 'stacked',
+        options: [
+          {
+            "label": "Less than €100",
+            "name": _self.name ~ "-price",
+            "id": _self.name ~ "-price-1"
+          },
+          {
+            "label": "€100 - €249",
+            "name": _self.name ~ "-price",
+            "id": _self.name ~ "-price-2"
+          },
+          {
+            "label": "€250 - €499",
+            "name": _self.name ~ "-price",
+            "id": _self.name ~ "-price-3"
+          },
+          {
+            "label": "€500 - €1000",
+            "name": _self.name ~ "-price",
+            "id": _self.name ~ "-price-4"
+          },
+          {
+            "label": "More than €1000",
+            "name": _self.name ~ "-price",
+            "id": _self.name ~ "-price-5"
+          }
+        ]
+      } %}
+
+      {% include '@checkboxes' with {
+        input_component: "input",
+        type: "checkbox",
+        label: "Category",
+        id: _self.name ~ "-category",
+        modifier: 'stacked',
+        options: [
+          {
+            "label": "Games",
+            "name": _self.name ~ "-checkboxgroup",
+            "id": _self.name ~ "-checkbox-1"
+          },
+          {
+            "label": "Movies",
+            "name": _self.name ~ "-checkboxgroup",
+            "id": _self.name ~ "-checkbox-2"
+          },
+          {
+            "label": "Series",
+            "name": _self.name ~ "-checkboxgroup",
+            "id": _self.name ~ "-checkbox-3"
+          },
+          {
+            "label": "Books",
+            "name": _self.name ~ "-checkboxgroup",
+            "id": _self.name ~ "-checkbox-4"
+          }
+        ]
+      } %}
+
+      {% include '@checkbox-with-filter' with {
+        label: "Activities",
+        label_optional: "Optional",
+        label_count: "activity(ies)",
+        options: checkboxes,
+        field_description: null,
+        stacked: true
+      } %}
+
+      {% include '@select' with {
+        id: 'select',
+        label: 'Store',
+        field_description: null,
+        stacked: true,
+        input_component: 'input-select',
+        options: [
+          {
+            label: 'Option 1'
+          },
+          {
+            label: 'Option 2'
+          },
+          {
+            optgroup: true,
+            label: 'Option group',
+            optgroupoptions: [
+              {
+                label: 'Option 3'
+              },
+              {
+                label: 'Option 4'
+              }
+            ]
+          }
+        ]
+      } %}
 
     </form>
   {% endset %}
@@ -90,8 +120,9 @@
     id: 'filter',
     title: 'Filter the results',
     title_heading_level: 'h2',
-    classes: 'sidebar filter-section has-custom-binding',
-    content: modalContent
+    classes: 'sidebar filter-section has-custom-binding modal--fixed-height',
+    content: modalContent,
+    actions: '<button type="submit" class="button button-primary filter__submit">Show result</button>'
   } %}
 
   <section class="content result-section" id="result">
