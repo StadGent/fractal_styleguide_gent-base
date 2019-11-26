@@ -1,10 +1,22 @@
 fieldset  {
   @include theme('border-color', 'color-primary--lighten-4', 'fieldset-border-color');
 
-  margin-bottom: 1rem;
   padding-top: .8rem;
   border-top: 1px solid;
-  border-bottom: 1px solid;
+
+  &,
+  &.form-item {
+    margin-bottom: 0;
+    border-bottom: 0;
+
+    &:only-of-type,
+    &:last-of-type {
+      @include theme('border-color', 'color-primary--lighten-4', 'fieldset-border-color');
+
+      margin-bottom: 1rem;
+      border-bottom: 1px solid;
+    }
+  }
 
   legend {
     @include bold-text;

@@ -4,6 +4,12 @@ All notable changes to this style guide are documented here.
 
 NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
+## [Unreleased]
+
+### Fixed
+
+* Removed border bottom from fieldsets where necessary.
+
 ## [3.0.0-beta16]
 
 ### Fixed
