@@ -32,3 +32,102 @@
 .no-link-style {
   @include no-link-style;
 }
+
+///
+/// Margin helper classes.
+///
+$directions: top, right, bottom, left;
+@for $i from 0 through 1000 {
+  @each $d in $directions {
+    $ds: str-slice($d, 0, 1); // Get first letter of direction
+
+    .m#{$ds}-#{$i} {
+      margin-#{$d}: $i * .1rem;
+    }
+  }
+}
+
+///
+/// Hiding helper classes.
+///
+@mixin hide($breakpoint: null) {
+  @if ($breakpoint == 'mobile') {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  @if ($breakpoint == 'mobile-only') {
+    @include breakpoint(max-width $bp-mobile - 1) {
+      display: none;
+    }
+  }
+
+  @if ($breakpoint == 'phablet') {
+    @include phablet {
+      display: none;
+    }
+  }
+
+  @if ($breakpoint == 'phablet-only') {
+    @include breakpoint((min-width $bp-mobile) (max-width $bp-phablet - 1)) {
+      display: none;
+    }
+  }
+
+  @if ($breakpoint == 'tablet') {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @if ($breakpoint == 'tablet-only') {
+    @include breakpoint((min-width $bp-phablet) (max-width $bp-tablet - 1)) {
+      display: none;
+    }
+  }
+
+  @if ($breakpoint == 'desktop') {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  @if ($breakpoint == 'desktop-only') {
+    @include breakpoint((min-width $bp-tablet) (max-width $bp-desktop - 1)) {
+      display: none;
+    }
+  }
+}
+
+.hidden-mobile {
+  @include hide('mobile');
+}
+
+.hidden-mobile-only {
+  @include hide('mobile-only');
+}
+
+.hidden-phablet {
+  @include hide('phablet');
+}
+
+.hidden-phablet-only {
+  @include hide('phablet-only');
+}
+
+.hidden-tablet {
+  @include hide('tablet');
+}
+
+.hidden-tablet-only {
+  @include hide('tablet-only');
+}
+
+.hidden-desktop {
+  @include hide('desktop');
+}
+
+.hidden-desktop-only {
+  @include hide('desktop-only');
+}
