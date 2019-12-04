@@ -13,6 +13,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Removed border bottom from fieldsets where necessary.
+* Fixed placeholder image for wide teasers.
 
 ## [3.0.0-beta16]
 
