@@ -6,6 +6,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Added
+
+* Helper classes for margins and to hide elements.
+
 ### Fixed
 
 * Removed border bottom from fieldsets where necessary.
