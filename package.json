@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "3.0.0-beta16",
+  "version": "3.0.0-beta17",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -49,7 +49,10 @@
     "body-scroll-lock": "^2.6.4",
     "breakpoint-sass": "^2.7.1",
     "imagesloaded": "^4.1.4",
+    "lodash": "^4.17.15",
+    "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
+    "set-value": "^3.0.1",
     "susy": "^3.0.1"
   },
   "optionalDependencies": {
