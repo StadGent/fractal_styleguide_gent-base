@@ -19,16 +19,25 @@ figure {
 
   &:empty {
     &::before {
-      @include spot-image('camera-light');
+      @include spot-image('camera-light', auto);
 
       position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -4rem;
-      margin-left: -4rem;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 3rem;
+      max-height: 3rem;
+      margin: auto;
       border-radius: 50%;
+      background-size: contain;
       box-shadow: 2px 7px 14px 0 rgba(0, 125, 179, .06), 0 4px 12px 0 rgba(0, 125, 179, .1);
       content: "";
+
+      @include tablet {
+        max-width: 5rem;
+        max-height: 5rem;
+      }
     }
   }
 
