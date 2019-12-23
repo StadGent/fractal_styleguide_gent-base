@@ -35,7 +35,7 @@
             return;
           }
           if (!e.currentTarget.classList.contains('accordion--expanded')) {
-            e.currentTarget.setAttribute('hidden', 'true');
+            e.currentTarget.setAttribute('hidden', 'hidden');
           }
         },
         resizeEvent: (e, expandedContent) => {
@@ -159,7 +159,7 @@
         accordionContent.classList.remove(options.accordionExpandedClass);
         accordionContent.setAttribute('aria-hidden', 'true');
         if (isInitial) {
-          accordionContent.setAttribute('hidden', 'true');
+          accordionContent.setAttribute('hidden', 'hidden');
         }
         expandedContent.filter(content => content !== accordionContent);
         options.collapse(button, accordionContent);
