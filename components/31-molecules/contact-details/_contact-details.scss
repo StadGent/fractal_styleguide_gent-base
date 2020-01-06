@@ -29,6 +29,7 @@ $avatar-width: 14rem;
 
       &::before {
         @include spot-image('book', 7rem);
+        box-shadow: none;
       }
     }
   }
