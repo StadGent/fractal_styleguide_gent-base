@@ -20,16 +20,20 @@ Do not use the multistep form component when helping users collect user input is
 
 ## How it works
 
-The multistep form component is a collection of <a href="{{path './form.html'}}">form</a> components that each collect certain user input.<!-- @TODO explain further --><!-- @TODO explain what elements can be used, especially form actions -->
+The multistep form component is a collection of <a href="{{path './form.html'}}">form</a> components that each collect certain user input. It uses the <a href="{{path './form-actions.html'}}">form actions</a> component to let users navigate to the next or previous step in the form.
 
 ## Layout
 
 On **desktop resolutions and tablets in landscape mode**, the multistep form has the following layout:
 
-* At the left-hand side, the steps of the multistep form are shown.<!-- @TODO explain how steps are displayed --><!-- @TODO explain how wide the multistep form becomes -->
+* At the left-hand side, the steps of the multistep form are shown.
 * At the right-hand side, the container where the form components are loaded is presented.
 
 On **tablets in portrait mode and mobile resolutions**, the steps of the multistep form are shown above the container where the form components are loaded.
+
+### Steps of the multistep form
+
+ The steps of the multistep form are displayed so that it is clear for the user what is the current, active step, which steps are not active, which steps are enabled or disabled and which steps are clickable. See the example.
 
 ## Validation
 
