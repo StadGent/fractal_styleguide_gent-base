@@ -121,4 +121,3 @@ For multilingual websites with synchronous translations, the language switch is 
 ### Header image
 
 The header can include a header image. When included, the header image is only shown on desktop and tablet resolutions. The header image can have an optional caption tag. See the examples.
-
