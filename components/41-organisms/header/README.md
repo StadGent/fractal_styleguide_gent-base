@@ -117,3 +117,8 @@ The authentication mechanism can be anything from a magic link, to authenticatio
 ### Language switch
 
 For multilingual websites with synchronous translations, the language switch is included in the header. The language switch shows the current language and is a drop-down menu to let the user switch to another language. In the drop-down menu, the current language is shown first (as a label, not a link). After that, the other language in which the current page is available are shown. These other languages are shown as links that each link to the current page in those specific languages. See the examples.
+
+### Header image
+
+The header can include a header image. When included, the header image is only shown on desktop and tablet resolutions. The header image can have an optional caption tag. See the examples.
+
