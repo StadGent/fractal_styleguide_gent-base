@@ -111,12 +111,14 @@ header.header {
       }
     }
 
-    .mijn-gent-block {
+    .mijn-gent-block, /// @deprecated
+    .authentication  {
       align-items: center;
       max-width: 210px;
     }
 
-    .mijn-gent-block,
+    .mijn-gent-block, /// @deprecated
+    .authentication,
     .language-switcher {
       align-self: stretch;
     }
@@ -427,7 +429,8 @@ header.header {
   }
 
   &--menu > .content-container {
-    > .mijn-gent-block,
+    > .mijn-gent-block, /// @deprecated
+    > .authentication,
     > .language-switcher {
       @include tablet-and-below {
         display: none;
