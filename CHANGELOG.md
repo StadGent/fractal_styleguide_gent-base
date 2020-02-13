@@ -10,6 +10,13 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Removed shadow from inverted contact details.
 
+### Updated
+
+* **Deprecated:** 'mijn-gent-block' has been renamed to the more generic 'authentication'
+  in order to match the documentation.  
+  The '.mijn-gent-block' class is still functional but marked as deprecated.
+  Please use '.authentication' from now on.
+
 ## [3.0.0-beta17]
 
 ### Added
