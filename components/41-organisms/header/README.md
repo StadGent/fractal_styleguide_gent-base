@@ -29,7 +29,7 @@ The **top header with Ghent logo** has the following components:
 * Ghent logo (always required)
 * Site title (optional, only for separate websites)
 * Search (optional, only if applicable)
-* Mijn Gent component (optional, only if applicable)
+* Authentication component (optional, only if applicable)
 * Language switch (optional, only for **multilingual websites with synchronous translations**)
 
 When there is no header image, the Ghent-style seperator is shown. When there is a header image, the Ghent-style separator is not shown.
@@ -50,7 +50,7 @@ The **top header** has the following components:
 
 * Ghent logo (always required)
 * Search button with link (optional, only if applicable)
-* Mijn Gent component (optional, only if applicable)
+* Authentication component (optional, only if applicable)
 * Menu button (optional, only if applicable)
 * Language switch (optional, only if applicable and for **multilingual websites with synchronous translations**)
 
@@ -62,20 +62,20 @@ For the **top header** of the mobile header, the following conditions apply:
 
 3. When the website has **main navigation**, the **menu button is always shown** in the header. The menu button opens the mobile menu with the main navigation.
 
-4. When the website has **main navigation** and also the Mijn Gent component and/or a language switch, **the Mijn Gent component and/or the language switch are integrated in the menu**. In these cases, the menu button is always shown in the header. The menu button opens the mobile menu with the main navigation and the Mijn Gent component and/or the language switch. In other words: whenever the website has main navigation, the menu button is used and the Mijn Gent component and/or the language switch (if applicable) are integrated in the mobile menu.
+4. When the website has **main navigation** and also the authentication component and/or a language switch, **the authentication component and/or the language switch are integrated in the menu**. In these cases, the menu button is always shown in the header. The menu button opens the mobile menu with the main navigation and the authentication component and/or the language switch. In other words: whenever the website has main navigation, the menu button is used and the authentication component and/or the language switch (if applicable) are integrated in the mobile menu.
 
-5. When the website has **no main navigation**, but has a **search function *and* the Mijn Gent component *and* a language switch**, the **menu button** is used and the Mijn Gent component and the language switch are integrated in the menu. The search button is always shown in the header.
+5. When the website has **no main navigation**, but has a **search function *and* the authentication component *and* a language switch**, the **menu button** is used and the authentication component and the language switch are integrated in the menu. The search button is always shown in the header.
 
 Taking the above conditions into account, only the **following combinations of elements are possible** in the top part of the mobile header:
 
 * Ghent logo + Search button + Menu button
 * Ghent logo + Search button + Language switch
-* Ghent logo + Search button + Mijn Gent component
+* Ghent logo + Search button + Authentication component
 * Ghent logo + Search button
-* Ghent logo + Mijn Gent component
+* Ghent logo + Authentication component
 * Ghent logo + Language switch
 * Ghent logo + Menu button
-* Ghent logo + Mijn Gent component + Language switch
+* Ghent logo + Authentication component + Language switch
 * Ghent logo only
 
 **Further specific requirements for the City of Ghent website and for separate websites are listed below.**
@@ -85,12 +85,12 @@ Taking the above conditions into account, only the **following combinations of e
 ### City of Ghent website
 
 * The desktop header includes the following elements:
-    * Top header with Ghent logo, Search and Mijn Gent component
+    * Top header with Ghent logo, Search and authentication component
     * Breadcrumbs
     * Header image (optional)
     * The Ghent logo links to the homepage of the City of Ghent general website.
 * The mobile header includes the following elements:
-    * Top header with Ghent loco, Search button and Mijn Gent component
+    * Top header with Ghent loco, Search button and authentication component
     * Breadcrumbs
 * The first item of the breadcrumbs is "Home" and links to the homepage of the City of Ghent general website.
 * The search function searches the content of the whole City of Ghent general website.
@@ -103,13 +103,16 @@ Taking the above conditions into account, only the **following combinations of e
 
 ## Further documentation
 
-### Mijn Gent
+### Authentication component
 
-For websites that use Mijn Gent, the Mijn Gent component is included in the header. The Mijn Gent component shows if the user is currently logged in via Mijn Gent or not.
+For websites that where users can authenticate themselves, the authentication component is included in the header.
 
-When the user *is not logged in* via Mijn Gent, the Mijn Gent component shows a login link. See the examples.
+* When the user *is not authenticated*, the authentication component presents a login link. See the examples.
+* When the user *is authenticated*, the authentication component shows the user name of the user to indicate that the user is authenticated. In this case, the authentication component acts as a drop-down user-menu that includes links to the profile of the user (if applicable) and a logout link. See the examples.
 
-When the user *is logged in* via Mijn Gent, the Mijn Gent component shows the user name of the user to indicate that the user is logged in. In this case, the Mijn Gent component is a drop-down user-menu that includes links to the Mijn Gent profile of the user and a logout link. See the examples.
+The authentication component does not provide authentication itself but it is a way to make accessible authentication for the user and show the authentication status of the user.
+
+The authentication mechanism can be anything from a magic link, to authentication using a user name and password, to strong authentication. The authentication mechanism that is used depends on the functional needs and requirements of the website itself.
 
 ### Language switch
 
