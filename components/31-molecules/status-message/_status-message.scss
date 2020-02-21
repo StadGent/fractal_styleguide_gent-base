@@ -52,6 +52,10 @@
     i {
       color: color('green');
     }
+
+    a {
+      background-image: linear-gradient(to bottom, color('green', -3) 0, color('green', -3) 100%);
+    }
   }
 
   &.messages--error {
@@ -60,13 +64,21 @@
     i {
       color: color('red');
     }
+
+    a {
+      background-image: linear-gradient(to bottom, color('red', -3) 0, color('red', -3) 100%);
+    }
   }
 
   &.messages--warning {
     background-color: color('orange', -4);
 
     i {
-      color: color('red');
+      color: color('orange');
+    }
+
+    a {
+      background-image: linear-gradient(to bottom, color('orange', -3) 0, color('orange', -3) 100%);
     }
   }
 
