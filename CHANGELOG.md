@@ -6,6 +6,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 ## [Unreleased]
 
+### Added
+
+* Added styling so links in list-items can be made bold via WYSIWYG
+
 ### Fixed
 
 * Removed shadow from inverted contact details.
