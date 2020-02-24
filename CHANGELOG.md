@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Removed shadow from inverted contact details.
+* Allowed the use of strong tags around links in list-items.
 
 ### Updated
 
