@@ -19,6 +19,11 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   Please use '.authentication' from now on.
 * Moved `.social-list` styling to the footer and theme-footer components.
 
+### Removed
+
+* **Deprecated** `.help-block` has been marked as deprecated.
+* **Deprecated** `.extra-articles` has been marked as deprecated.
+
 ## [3.0.0-beta17]
 
 ### Added
