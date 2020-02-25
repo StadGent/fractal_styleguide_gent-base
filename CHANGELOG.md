@@ -17,6 +17,11 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   in order to match the documentation.  
   The '.mijn-gent-block' class is still functional but marked as deprecated.
   Please use '.authentication' from now on.
+  
+### Removed
+
+* **Removed:** `.intro` component was unused and has been removed.
+  `.detail-layout` has been using `.summary-text` for the same effect.
 
 ## [3.0.0-beta17]
 
