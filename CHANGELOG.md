@@ -17,6 +17,16 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   in order to match the documentation.  
   The '.mijn-gent-block' class is still functional but marked as deprecated.
   Please use '.authentication' from now on.
+* Updated component names:
+
+  * 'Day Widget' to 'Open Today'
+  * 'Checkbox With Filter' to 'Checkboxes with filter'
+  * 'Menu' to 'Main Menu'
+  * 'Week Month Widget' to 'Opening Hours'
+  * 'Readspeaker Button' to 'Text To Speech Button'
+  * 'Summary Box' to 'Summary'
+  
+  **SCSS classes remain unchanged!**
 
 ## [3.0.0-beta17]
 

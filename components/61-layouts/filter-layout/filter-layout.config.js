@@ -39,7 +39,7 @@ module.exports = {
   preview: '@preview-without-padding',
   context: {
     teasers: generateTeasers('filter-page-teaser'),
-    checkboxes: generateCheckboxes('checkbox-with-filter'),
+    checkboxes: generateCheckboxes('checkboxes-with-filter'),
     footerConfig
   }
 };
