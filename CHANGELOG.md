@@ -17,6 +17,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   in order to match the documentation.  
   The '.mijn-gent-block' class is still functional but marked as deprecated.
   Please use '.authentication' from now on.
+* Moved `.social-list` styling to the footer component.
+  `.social-list` can no longer be used outside of the footer.
 
 ## [3.0.0-beta17]
 
