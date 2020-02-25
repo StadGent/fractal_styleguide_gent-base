@@ -46,6 +46,13 @@
 .box-top { /// @deprecated
   padding-top: 3.5rem;
 
+  $icons: book camera download form letter link loupe mail newsletter phone quote upload whistle;
+  @each $icon in $icons {
+    &.#{$icon} .highlight__inner::before {
+      @include spot-image($icon + '-light', 7rem);
+    }
+  }
+
   .highlight__inner,
   .inner-box { /// @deprecated
     @include tablet-and-below {
