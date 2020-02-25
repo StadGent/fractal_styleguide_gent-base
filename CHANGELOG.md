@@ -17,6 +17,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   in order to match the documentation.  
   The '.mijn-gent-block' class is still functional but marked as deprecated.
   Please use '.authentication' from now on.
+* The `.active` link in the menu should now be bold.  
 
 ## [3.0.0-beta17]
 

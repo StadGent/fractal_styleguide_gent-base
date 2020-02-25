@@ -50,6 +50,10 @@ nav.menu {
         margin-bottom: 0;
         padding: .5rem 0;
       }
+
+      a.active {
+        @include bold-text;
+      }
     }
   }
 }
@@ -139,6 +143,10 @@ nav.menu {
 
             padding: .5rem 0;
             line-height: 1.4rem;
+          }
+
+          a.active {
+            @include bold-text;
           }
         }
       }
