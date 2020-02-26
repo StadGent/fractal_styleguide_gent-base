@@ -80,7 +80,19 @@ module.exports = {
       context: {
         mijn_gent_block_auth: true,
         mijn_gent_block_image: false,
-        theme: true
+        theme: true,
+        theme_title: 'hero_title'
+      }
+    },
+    {
+      name: 'theme_light_mobile_hero_auth',
+      label: 'Theme page - light - with header image on mobile',
+      context: {
+        mijn_gent_block_auth: true,
+        mijn_gent_block_image: false,
+        theme: true,
+        theme_light: true,
+        mobile_hero: true
       }
     },
     {
