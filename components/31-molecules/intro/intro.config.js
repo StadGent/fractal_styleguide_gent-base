@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  status: 'beta',
+  status: 'deprecated',
   context: {
     intro: 'Lorem ipsum'
   },
