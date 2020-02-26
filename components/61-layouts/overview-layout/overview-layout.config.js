@@ -3,7 +3,6 @@
 const footerConfig = require('../../41-organisms/footer/footer.config').context;
 
 module.exports = {
-  status: 'alpha',
   preview: '@preview-overview-without-padding',
   context: {
     articles: [

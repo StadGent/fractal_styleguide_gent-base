@@ -1,7 +1,6 @@
 'use strict';
 
-module.exports = {
-  status: 'alpha',
+module.exports = {,
   context: {
     total: 5555,
     active: 1

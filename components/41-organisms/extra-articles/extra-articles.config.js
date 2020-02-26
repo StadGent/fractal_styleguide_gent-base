@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
+  status: 'deprecated',
   context: {
     title: 'More news and articles'
   }

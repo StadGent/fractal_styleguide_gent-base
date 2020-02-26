@@ -21,7 +21,6 @@ const createItems = (amount) => {
 };
 
 module.exports = {
-  status: 'alpha',
   context: {
     items: createItems(100)
   }
