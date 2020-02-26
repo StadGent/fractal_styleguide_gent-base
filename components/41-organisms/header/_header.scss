@@ -112,7 +112,7 @@ header.header {
     }
 
     .mijn-gent-block, /// @deprecated
-    .authentication  {
+    .authentication {
       align-items: center;
       max-width: 210px;
     }
@@ -204,13 +204,46 @@ header.header {
   figure.hero {
     $span: percentage(2/12);
 
+    display: none;
+    position: relative;
+    min-height: 1.6rem;
+    // Give the image 1px margin relative to the container
+    // so the accolade can overlap the edges
+    // IE error fix
+    margin: -1.7rem calc(-1rem + 1px) .3rem;
+
     @include tablet {
-      position: relative;
-      min-height: 1.6rem;
-      // Give the image 1px margin relative to the container
-      // so the accolade can overlap the edges
-      // IE error fix
-      margin: -1.7rem calc(-1rem + 1px) .3rem;
+      display: block;
+    }
+
+    @supports (object-fit: cover) {
+      &.hero--mobile {
+        display: block;
+
+        @include tablet {
+          margin-bottom: 0;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+        }
+
+        .image-wrapper,
+        img {
+          display: block;
+        }
+
+        .image-wrapper {
+          @include tablet-and-below {
+            padding-bottom: 249px;
+          }
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
     }
 
     .subsite, /// @deprecated
@@ -361,19 +394,25 @@ header.header {
 
     &::before,
     &::after {
+      position: absolute;
+      bottom: -.1rem;
+      height: 1rem;
+      background-color: color('white');
+      content: none;
+      z-index: z('hero', 'accolade');
+
       @include tablet {
-        position: absolute;
-        bottom: -.1rem;
         height: 1.7rem;
-        background-color: color('white');
         content: '';
-        z-index: z('hero', 'accolade');
       }
     }
 
     &::before {
+      left: 0;
+      width: 2.4rem;
+      border-top-right-radius: border-radius('radius-3');
+
       @include tablet {
-        left: 0;
         width: 3rem + $gutter-width;
         border-top-right-radius: border-radius('radius-5');
       }
@@ -389,7 +428,9 @@ header.header {
 
     &::after {
       right: 0;
+      left: 2.4rem;
       width: auto;
+      border-top-left-radius: border-radius('radius-3');
 
       @include tablet {
         left: 3rem + $gutter-width;

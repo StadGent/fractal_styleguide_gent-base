@@ -88,7 +88,7 @@
 
   <hr/>
   {% if hero_image_src %}
-    <figure class="hero">
+    <figure class="hero{{ mobile_hero ? ' hero--mobile' : '' }}">
       {% if theme %}
         <div class="theme">
           <div class="theme-title">

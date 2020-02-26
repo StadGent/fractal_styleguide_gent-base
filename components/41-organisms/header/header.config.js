@@ -56,6 +56,15 @@ module.exports = {
       }
     },
     {
+      name: 'mobile_hero_auth',
+      label: 'Default - with header image on mobile',
+      context: {
+        mijn_gent_block_auth: true,
+        mijn_gent_block_image: false,
+        mobile_hero: true
+      }
+    },
+    {
       name: 'theme_no-hero_auth',
       label: 'Theme page - without header image',
       context: {
