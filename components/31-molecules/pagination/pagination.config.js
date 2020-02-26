@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = {,
+module.exports = {
   context: {
     total: 5555,
     active: 1
