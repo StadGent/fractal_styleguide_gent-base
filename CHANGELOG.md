@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Removed shadow from inverted contact details.
+* Adapted links hover color to status message background color.
 * Allowed the use of strong tags around links in list-items.
 
 ### Updated
@@ -17,6 +18,29 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   in order to match the documentation.  
   The '.mijn-gent-block' class is still functional but marked as deprecated.
   Please use '.authentication' from now on.
+* The `.active` link in the menu should now be bold.
+* Moved `.social-list` styling to the footer and theme-footer components.
+* **Breaking** 'CTA-block' now uses the generic highlight component.
+  The old template and classes will be removed in the next major version.
+* Updated component names:
+
+  * 'Day Widget' to 'Open Today'
+  * 'Checkbox With Filter' to 'Checkboxes with filter'
+  * 'Menu' to 'Main Menu'
+  * 'Week Month Widget' to 'Opening Hours'
+  * 'Readspeaker Button' to 'Text To Speech Button'
+  * 'Summary Box' to 'Summary'
+  
+  **SCSS classes remain unchanged!**
+
+### Removed
+
+* **Deprecated** 'contact-block' has been marked as deprecated in favour of the generic 'CTA-block'.
+  Templates and classes will be removed in the next major version.
+* **Deprecated** `.help-block` has been marked as deprecated.
+* **Deprecated** `.extra-articles` has been marked as deprecated.
+* **Removed:** `.intro` component was unused and has been removed.
+  `.detail-layout` has been using `.summary-text` for the same effect.
 
 ## [3.0.0-beta17]
 

@@ -1,12 +1,12 @@
 <div class="opening-hours-accordion">
   <div class="opening-hours-accordion__item">
     <h3>Appointments</h3>
-    {% include '@day-widget' with {
+    {% include '@open-today' with {
       open: true
     } %}
 
     {% set openingHoursMonth %}
-      {% include '@week-month-widget' %}
+      {% include '@opening-hours' %}
     {% endset %}
 
     {% include '@accordion' with {
