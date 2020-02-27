@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'beta',
   context: {
     id: 'file-upload',
     label: 'Attachment'

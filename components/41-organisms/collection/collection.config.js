@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
   default: 'grid-4',
   context: {
     image_src: 'https://via.placeholder.com/528x330&text=16:10+(528x330)',
