@@ -91,5 +91,9 @@
 
     padding: .1em 0;
     color: inherit;
+
+    &:hover {
+      @include theme('color', 'color-tertiary', 'status-messages-link-hover-color');
+    }
   }
 }
