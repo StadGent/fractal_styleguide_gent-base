@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = {
-  hidden: true
+  hidden: true,
+  status: 'deprecated'
 };
