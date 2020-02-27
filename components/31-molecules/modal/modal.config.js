@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'beta',
   collator: function (markup, item) {
     return `<!-- Start: @${item.name} -->
             <dt>${item.name}</dt>

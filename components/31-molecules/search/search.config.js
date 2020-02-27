@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
   context: {
     label: 'What are you looking for?',
     label_optional: '',

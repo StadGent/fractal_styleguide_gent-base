@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
   context: {
     unique_id: '1',
     documents: [

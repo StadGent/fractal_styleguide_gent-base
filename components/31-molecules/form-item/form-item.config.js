@@ -2,7 +2,6 @@
 
 module.exports = {
   label: 'Input',
-  status: 'beta',
   context: {
     label: 'input-text',
     id: 'input_id',
