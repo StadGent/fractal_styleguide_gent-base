@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
   context: {
     items: [
       '<a href="#" class="active">Home</a>',

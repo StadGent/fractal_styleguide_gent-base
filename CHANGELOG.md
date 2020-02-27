@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Removed shadow from inverted contact details.
+* Adapted links hover color to status message background color.
 * Allowed the use of strong tags around links in list-items.
 
 ### Updated
@@ -18,6 +19,13 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   The '.mijn-gent-block' class is still functional but marked as deprecated.
   Please use '.authentication' from now on.
 * The `.active` link in the menu should now be bold.  
+* **Breaking** 'CTA-block' now uses the generic highlight component.
+  The old template and classes will be removed in the next major version.
+  
+### Removed
+
+* **Deprecated** 'contact-block' has been marked as deprecated in favour of the generic 'CTA-block'.
+  Templates and classes will be removed in the next major version.
 
 ## [3.0.0-beta17]
 

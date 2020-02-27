@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
   context: {
     open: true
   },
