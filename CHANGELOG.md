@@ -29,6 +29,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   Templates and classes will be removed in the next major version.
 * **Deprecated** `.help-block` has been marked as deprecated.
 * **Deprecated** `.extra-articles` has been marked as deprecated.
+* **Removed:** `.intro` component was unused and has been removed.
+  `.detail-layout` has been using `.summary-text` for the same effect.
 
 ## [3.0.0-beta17]
 
