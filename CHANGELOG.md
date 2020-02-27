@@ -10,6 +10,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 
 * Removed shadow from inverted contact details.
 * Allowed the use of strong tags around links in list-items.
+* added "about" to read more link value
 
 ### Updated
 
