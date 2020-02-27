@@ -9,6 +9,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 ### Fixed
 
 * Removed shadow from inverted contact details.
+* Adapted links hover color to status message background color.
 * Allowed the use of strong tags around links in list-items.
 
 ### Updated
