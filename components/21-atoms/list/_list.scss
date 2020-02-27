@@ -29,6 +29,10 @@ ol {
   a {
     font-weight: normal;
   }
+
+  strong > a {
+    @include bold-text;
+  }
 }
 
 ul {
