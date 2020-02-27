@@ -51,7 +51,7 @@ module.exports = {
   hidden: true,
   preview: '@preview-without-padding',
   context: {
-    checkboxes: generateCheckboxes('checkbox-with-filter'),
+    checkboxes: generateCheckboxes('checkboxes-with-filter'),
     results: generateTeasers('search teasers')
   }
 };
