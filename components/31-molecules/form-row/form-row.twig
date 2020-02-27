@@ -1,24 +1,4 @@
 <div class='form-row'>
-  {% include '@form-item' with {
-    label: 'Postal code',
-    id: id ~ '-postal-code_id',
-    input_component: 'input',
-    type: 'text',
-    modifier: 'error',
-    field_message: 'Almost there!',
-    field_description: 'Wrap form items in a .form-row element.',
-    name: id ~ '-postal-code_name',
-    stacked: true
-  } %}
-  {% include '@form-item' with {
-    label: 'Municipality',
-    id: id ~ '-municipality_id',
-    input_component: 'input',
-    type: 'text',
-    modifier: 'success',
-    field_message: 'Very good!',
-    field_description: 'Place modifier .stacked on the form-items.',
-    name: id ~ '-municipality_name',
-    stacked: true
-  } %}
+  {% include '@form-item' with first|merge({'stacked': true}) %}
+  {% include '@form-item' with second|merge({'stacked': true}) %}
 </div>
