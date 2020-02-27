@@ -68,12 +68,9 @@
       ]
     } %}
 
-    <fieldset>
-      <legend>Form row</legend>
-      {% include '@form-row' with {
-        id: _self.name
-      }%}
-    </fieldset>
+    {% include '@address' with {
+      id: _self.name
+    }%}
 
     <fieldset>
       <legend>Another fieldset</legend>
