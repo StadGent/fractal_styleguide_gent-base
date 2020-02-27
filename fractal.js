@@ -31,7 +31,7 @@ fractal.components.set('statuses', {
   deprecated: {
     label: 'deprecated',
     description: 'Deprecated.',
-    color: '#dd5e01'
+    color: 'rgb(182, 11, 41)'
   },
   alpha: {
     label: 'alpha',
