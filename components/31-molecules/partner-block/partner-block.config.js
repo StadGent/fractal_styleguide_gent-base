@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
   context: {
     title: 'Partners',
     description: 'Here comes information about the partners. The logos in this block are not predefined and can be changed per project.',

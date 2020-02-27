@@ -28,7 +28,6 @@ const generateCheckboxes = (uid) =>{
 
 module.exports = {
   title: 'Checkbox with filter',
-  status: 'beta',
   context: {
     label: 'Label checkbox',
     label_optional: 'Optional',

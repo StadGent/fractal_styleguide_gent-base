@@ -35,7 +35,6 @@ const generateTeasers = (uid)=>{
 };
 
 module.exports = {
-  status: 'alpha',
   preview: '@preview-without-padding',
   context: {
     teasers: generateTeasers('filter-page-teaser'),

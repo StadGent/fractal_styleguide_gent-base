@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
+  status: 'beta',
   context: {
     modifier: 'dark',
     tabs: [
