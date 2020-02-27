@@ -88,20 +88,22 @@
 
   <hr/>
   {% if hero_image_src %}
-    <figure class="hero">
+    <figure class="hero{{ mobile_hero ? ' hero--mobile' : '' }}">
       {% if theme %}
-        <div class="theme">
+        <div class="theme{{ theme_light ? ' theme--light' : '' }}">
           <div class="theme-title">
             {% include '@image' with {
-              'src': figure_logo_src_light | path,
+              'src': (theme_light ? figure_logo_src_dark : figure_logo_src_light) | path,
               'alt_text': figure_logo_alt_text,
               'modifier': null,
               'ratio': null
             } %}
+            {% if theme_title %}
             {% include '@heading' with {
               'type': 'h1',
               'heading_text': hero_title
             } %}
+            {% endif %}
           </div>
         </div>
       {% endif %}
