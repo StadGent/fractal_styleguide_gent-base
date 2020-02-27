@@ -1,46 +1,35 @@
 .fieldset-wrapper fieldset,
 fieldset  {
-  @include theme('border-color', 'color-primary--lighten-4', 'fieldset-border-color');
+  @include theme('border-color', 'color-tertiary--lighten-2', 'fieldset-border-color');
 
+  margin-bottom: 1.2rem;
   padding-top: .8rem;
+  padding-bottom: .4rem;
   border-top: 1px solid;
+  border-bottom: 1px solid;
 
-  &,
-  &.form-item {
-    margin-bottom: 0;
-    border-bottom: 0;
-  }
-
-  &:only-of-type,
-  &:last-of-type {
-    @include theme('border-color', 'color-primary--lighten-4', 'fieldset-border-color');
-
-    margin-bottom: 1rem;
-    border-bottom: 1px solid;
+  .form-item {
+    margin-bottom: .8rem;
   }
 
   legend {
     @include bold-text;
 
-    padding: 0 .2rem 0 0;
-    font-size: .9rem;
+    padding: 0 .4rem 0 0;
+    font-size: .8rem;
     line-height: 2;
 
-    + .field-message {
+    + .field-message,
+    + .form-item > .field-message:first-child {
       margin-top: -1rem;
       margin-bottom: 1rem;
     }
   }
 
   fieldset {
-    &:last-child {
-      margin-bottom: 0;
-      border-bottom: 0;
-    }
-
     legend {
       margin-left: 1.8rem;
-      padding: 0 .2rem;
+      padding: 0 .4rem;
     }
   }
 }
