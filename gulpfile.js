@@ -703,7 +703,6 @@ gulp.task('compile:dev', gulp.series(
   'fractal:build',
   gulp.parallel(
     'styles:dist',
-    'sassdoc',
     'js:dist',
     'images:minify'
   )
