@@ -97,34 +97,10 @@
 
     {% include '@address' with {
       id: _self.name
-    }%}
+    } %}
 
     <fieldset>
       <legend>Another fieldset</legend>
-      {% include '@form-item' with {
-        "label": "Label textfield",
-        "for": "textfield_id",
-        "label_optional": "Optional",
-        "input_component": "input",
-        "type": "text",
-        "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
-        "field_error": "",
-        "description": "Description textfield.",
-        "id": _self.name ~ "-textfield_id",
-        "name": _self.name ~ "-textfield_name",
-        "modifier": "error",
-        "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam."
-      } %}
-      {% include '@form-item' with {
-        "label": "Label textfield",
-        "for": "textfield_id--1",
-        "input_component": "input",
-        "type": "text",
-        "id": _self.name ~ "-textfield_id--1",
-        "name": _self.name ~ "-textfield_name--1",
-        "field_description": null
-      } %}
-
       <fieldset>
         <legend>Nested fieldset</legend>
         {% include '@form-item' with {
@@ -143,6 +119,32 @@
           "type": "text",
           "id": _self.name ~ "-textfield_id--3",
           "name": _self.name ~ "-textfield_name--3",
+          "field_description": null
+        } %}
+      </fieldset>
+      <fieldset>
+        <legend>And another one</legend>
+        {% include '@form-item' with {
+          "label": "Label textfield",
+          "for": "textfield_id",
+          "label_optional": "Optional",
+          "input_component": "input",
+          "type": "text",
+          "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
+          "field_error": "",
+          "description": "Description textfield.",
+          "id": _self.name ~ "-textfield_id",
+          "name": _self.name ~ "-textfield_name",
+          "modifier": "error",
+          "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam."
+        } %}
+        {% include '@form-item' with {
+          "label": "Label textfield",
+          "for": "textfield_id--1",
+          "input_component": "input",
+          "type": "text",
+          "id": _self.name ~ "-textfield_id--1",
+          "name": _self.name ~ "-textfield_name--1",
           "field_description": null
         } %}
       </fieldset>
@@ -166,7 +168,10 @@
       id: _self.name ~ "-file"
     } %}
 
-    {% include '@form-actions' %}
-
+    {% include '@form-actions' with {
+      primary_button: 'Submit',
+      secondary_button: 'Save for later',
+      link: 'Cancel'
+    } %}
   </form>
 {% endblock %}
