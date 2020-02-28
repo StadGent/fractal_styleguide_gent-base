@@ -39,6 +39,7 @@
       expandable.classList.add('expandable');
       expandable.appendChild(a);
       list.insertBefore(expandable, list.children[position]);
+      list.tabIndex = -1;
     };
 
     /**
@@ -78,6 +79,7 @@
     const expand = e => {
       removeExpandable();
       elem.setAttribute('aria-expanded', true);
+      list.focus();
     };
 
     /**
