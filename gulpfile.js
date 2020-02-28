@@ -678,13 +678,13 @@ gulp.task('validate', gulp.parallel('styles:validate', 'js:validate'), callback 
 gulp.task('compile', gulp.series(
   gulp.parallel(
     'iconfont',
-    'spotimages'
+    'spotimages',
+    'sassdoc'
   ),
   'fractal:build',
   gulp.parallel(
     'styles:build',
     'styles:dist',
-    'sassdoc',
     'js:build',
     'js:dist',
     'images:minify'
@@ -697,7 +697,8 @@ gulp.task('compile', gulp.series(
 gulp.task('compile:dev', gulp.series(
   gulp.parallel(
     'iconfont',
-    'spotimages'
+    'spotimages',
+    'sassdoc'
   ),
   'fractal:build',
   gulp.parallel(
