@@ -6,13 +6,12 @@ Use the call to action component on a page:
 
 * To guide users to the next step to reach a certain goal related to the page.
 * To present specific contact information to get help or to get more information from a specific service to reach a certain goal.
+* To let users contact a specific entity, location or peron using a telephone number or e-mail address.
 * To promote a certain action for the user to take.
 
 ## When not to use this component
 
 Do not use the call to action component for other uses than the uses listed above.
-
-When the focus is on contacting a specific entity, location or person using a telephone number or e-mail address, the <a href="{{path './contact-block.html'}}">contact block component</a> can also be used instead. 
 
 ## How it works
 
