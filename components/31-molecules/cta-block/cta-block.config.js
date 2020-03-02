@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'beta',
   label: 'Call To Action',
   context: {
     type: 'link',
