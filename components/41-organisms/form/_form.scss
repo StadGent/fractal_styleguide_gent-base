@@ -1,0 +1,14 @@
+form {
+  .form-actions {
+    margin-top: 1.6rem;
+  }
+
+  .privacy-disclaimer {
+    margin-top: -4rem;
+    padding-top: 6rem;
+
+    &:not(:target) {
+      display: none;
+    }
+  }
+}

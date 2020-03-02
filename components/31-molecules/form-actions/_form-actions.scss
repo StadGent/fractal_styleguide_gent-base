@@ -1,8 +1,12 @@
 .form-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  margin: 0 -.6rem;
 
-  > * {
-    margin-right: $gutter-width;
+  > input,
+  > button,
+  > a[href] {
+    margin: 0 .6rem .6rem;
   }
 }
