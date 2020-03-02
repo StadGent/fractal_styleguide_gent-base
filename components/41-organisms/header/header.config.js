@@ -1,6 +1,10 @@
 'use strict';
 
 module.exports = {
+  preview: '@preview-description-list-without-padding',
+  collator: function (markup, item) {
+    return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 100%; padding: 0;">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+  },
   context: {
     mijn_gent_block_items: [
       '<a href=\'javascript:(void);\'>Mijn profiel</a>',

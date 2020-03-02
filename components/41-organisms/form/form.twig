@@ -70,34 +70,10 @@
 
     {% include '@address' with {
       id: _self.name
-    }%}
+    } %}
 
     <fieldset>
       <legend>Another fieldset</legend>
-      {% include '@form-item' with {
-        "label": "Label textfield",
-        "for": "textfield_id",
-        "label_optional": "Optional",
-        "input_component": "input",
-        "type": "text",
-        "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
-        "field_error": "",
-        "description": "Description textfield.",
-        "id": _self.name ~ "-textfield_id",
-        "name": _self.name ~ "-textfield_name",
-        "modifier": "error",
-        "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam."
-      } %}
-      {% include '@form-item' with {
-        "label": "Label textfield",
-        "for": "textfield_id--1",
-        "input_component": "input",
-        "type": "text",
-        "id": _self.name ~ "-textfield_id--1",
-        "name": _self.name ~ "-textfield_name--1",
-        "field_description": null
-      } %}
-
       <fieldset>
         <legend>Nested fieldset</legend>
         {% include '@form-item' with {
@@ -116,6 +92,32 @@
           "type": "text",
           "id": _self.name ~ "-textfield_id--3",
           "name": _self.name ~ "-textfield_name--3",
+          "field_description": null
+        } %}
+      </fieldset>
+      <fieldset>
+        <legend>And another one</legend>
+        {% include '@form-item' with {
+          "label": "Label textfield",
+          "for": "textfield_id",
+          "label_optional": "Optional",
+          "input_component": "input",
+          "type": "text",
+          "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
+          "field_error": "",
+          "description": "Description textfield.",
+          "id": _self.name ~ "-textfield_id",
+          "name": _self.name ~ "-textfield_name",
+          "modifier": "error",
+          "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam."
+        } %}
+        {% include '@form-item' with {
+          "label": "Label textfield",
+          "for": "textfield_id--1",
+          "input_component": "input",
+          "type": "text",
+          "id": _self.name ~ "-textfield_id--1",
+          "name": _self.name ~ "-textfield_name--1",
           "field_description": null
         } %}
       </fieldset>
@@ -139,7 +141,82 @@
       id: _self.name ~ "-file"
     } %}
 
-    {% include '@form-actions' %}
+    {% set target %}
+      <strong>
+        The City of Ghent treats the personal data you fill in with respect for
+        your
+        {% include '@link' with {
+          'link': '#privacy',
+          'text': 'privacy'
+        } %}.
+      </strong>
+    {% endset %}
+    {% include '@paragraph' with {
+      'text': target
+    } %}
 
+    {% include '@form-actions' with {
+      primary_button: 'Submit',
+      secondary_button: 'Save for later',
+      link: 'Cancel'
+    } %}
+
+    <div class="privacy-disclaimer" id="privacy">
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': 'With respect for your privacy'
+      } %}
+      {% set GDPR %}
+        <strong>
+          The City of Ghent treats the personal data you fill in with respect
+          for your privacy. For this purpose, we follow the
+          {% include '@link' with {
+            'link': 'https://#',
+            'text': 'General Data Protection Ordinance'
+          } %}.
+        </strong>
+      {% endset %}
+      {% include '@paragraph' with {
+        'text': GDPR
+      } %}
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'For what, with whom and for how long?'
+      } %}
+      {% include '@paragraph' with {
+        'text': 'This is a short text describing what the personal data entered in the form above are for, with whom they are shared and for how long they are kept. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales nisi in mi fringilla malesuada. Donec sapien nibh, facilisis id enim a, malesuada lacinia magna. Aenean at sagittis ipsum, nec condimentum quam. Etiam interdum convallis justo, eu sodales erat.'
+      } %}
+      {% include '@heading' with {
+        'type': 'h3',
+        'heading_text': 'Your rights'
+      } %}
+      {% include '@paragraph' with {
+        'text': 'This is a short text describing the rights. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales nisi in mi fringilla malesuada. Donec sapien nibh, facilisis id enim a, malesuada lacinia magna. Aenean at sagittis ipsum, nec condimentum quam.'
+      } %}
+      {% set reportText %}
+        Do you suspect someone is using your personal information illegally? Report it to us at
+        {% include '@link' with {
+          'link': 'mailto:#',
+          'text': 'privacy@stad.gent'
+        } %}.
+        You also have the right to complain to the
+        {% include '@link' with {
+          'link': 'https://#',
+          'text': 'Flemish Supervisory Commission for the processing of personal data'
+        } %}.
+      {% endset %}
+      {% include '@paragraph' with {
+        'text': reportText
+      } %}
+      {% set link %}
+        {% include '@link' with {
+          'link': '#',
+          'text': 'Learn more about your rights and privacy'
+        } %}
+      {% endset %}
+      {% include '@paragraph' with {
+        'text': link
+      } %}
+    </div>
   </form>
 {% endblock %}
