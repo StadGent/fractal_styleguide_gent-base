@@ -23,6 +23,7 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   in order to match the documentation.  
   The '.mijn-gent-block' class is still functional but marked as deprecated.
   Please use '.authentication' from now on.
+* Reduced spinner size.
 * The `.active` link in the menu should now be bold.
 * Moved `.social-list` styling to the footer and theme-footer components.
 * **Breaking** 'CTA-block' now uses the generic highlight component.
