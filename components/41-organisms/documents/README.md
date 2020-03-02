@@ -12,4 +12,4 @@ Do not use the documents component to show other related information than docume
 
 The documents component uses the <a href="{{path './file-download.html'}}">file download component</a> to show and link to documents. The default *standalone* link style is used. The file download components are placed in a <a href="{{path './list.html'}}">list</a>. 
 
-When there are more than 3 documents to show, only the first 3 documents are shown. The remaining documents are in a second list that is hidden using an <a href="{{path './accordion.html'}}">accordion component</a>.
+When there are more than 2 documents to show, only the first 2 documents are shown. The remaining documents are in a second list that is hidden using an <a href="{{path './accordion.html'}}">accordion component</a>.
