@@ -35,7 +35,8 @@ The following form elements can be used in the form component:
 * <a href="{{path './radios.html'}}">Radios</a>
 * <a href="{{path './select.html'}}">Select</a>
 * <a href="{{path './textarea.html'}}">Textarea</a>
-* <a href="{{path './file-upload"'}}">File upload</a>
+* <a href="{{path './file-upload.html'}}">File upload</a>
+* <a href="{{path './address.html'}}">Address</a>
 
 ### Fieldsets
 
