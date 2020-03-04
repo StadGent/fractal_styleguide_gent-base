@@ -35,7 +35,8 @@ The following form elements can be used in the form component:
 * <a href="{{path './radios.html'}}">Radios</a>
 * <a href="{{path './select.html'}}">Select</a>
 * <a href="{{path './textarea.html'}}">Textarea</a>
-* <a href="{{path './file-upload"'}}">File upload</a>
+* <a href="{{path './file-upload.html'}}">File upload</a>
+* <a href="{{path './address.html'}}">Address</a>
 
 ### Fieldsets
 
@@ -110,3 +111,14 @@ For each invalid field in the form the following two pieces of information shoul
 * **Be useful.** Help the user move forward. Tell the user what to do. Give the solution or a clue. Link the error message to the corresponding next action or step.
 * **Avoid technical jargon.**
 * **Avoid negative words.**
+
+## Privacy
+
+For GDPR and privacy reasons, **every form should include a specific GDPR privacy disclaimer**.
+
+The specific GDPR privacy disclaimer should be included as follows (also see the example):
+
+* Just before the form actions of the form, a line of text is shown "The City of Ghent treats the personal data you fill in with respect for your privacy." where the word "privacy" is a link.
+* The link on the word "privacy" is an anchor link that, when clicked, shows the specific GDPR privacy disclaimer for that specific form. The specific GDPR privacy disclaimer is shown below the form actions.
+
+The content of the GDPR privacy disclaimer should follow a certain structure. See the example.
