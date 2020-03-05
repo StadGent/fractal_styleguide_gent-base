@@ -1,6 +1,6 @@
 .field-message {
-  @include theme("color", "color-tertiary--lighten-1", "field-messages-color");
-  @include theme("background-color", "color-primary--lighten-4", "field-description-background");
+  @include theme('color', 'color-tertiary--lighten-1', 'field-messages-color');
+  @include theme('background-color', 'color-primary--lighten-4', 'field-description-background');
 
   $field-message-icon-size: 1.5rem;
   $field-message-icon-margin: 1.5rem;
@@ -11,7 +11,7 @@
   max-width: 40rem;
   min-height: 2.5rem;
   padding: 1.7rem 1.2rem .7rem;
-  border-radius: border-radius("radius-1");
+  border-radius: border-radius('radius-1');
   font-size: .8rem;
   overflow: hidden;
 
@@ -24,7 +24,7 @@
     height: $field-message-icon-size;
     margin: auto $field-message-icon-margin auto auto;
     border-radius: 100%;
-    background-color: color("white");
+    background-color: color('white');
     font-size: 1.1rem;
     line-height: $field-message-icon-size;
     text-align: center;
@@ -46,7 +46,7 @@
   }
 
   a {
-    @include theme("color", "color-tertiary--lighten-1", "field-messages-color");
+    @include theme('color', 'color-tertiary--lighten-1', 'field-messages-color');
     @include link-background('color-tertiary', 'color-primary--lighten-3', 'field-messages-link-border-color', 'link-background-color');
 
     &:hover {
@@ -55,13 +55,13 @@
   }
 
   &.success {
-    @include icon("checkmark");
-    @include theme("background-color", "color-success--lighten-4", "field-description-background");
+    @include icon('checkmark');
+    @include theme('background-color', 'color-success--lighten-4', 'field-description-background');
 
     padding-left: 2.9rem;
 
     &::before {
-      @include theme("color", "color-success", "field-description-icon");
+      @include theme('color', 'color-success', 'field-description-icon');
     }
 
     a {
@@ -70,13 +70,13 @@
   }
 
   &.error {
-    @include icon("cross");
-    @include theme("background-color", "color-error--lighten-4", "field-description-background");
+    @include icon('cross');
+    @include theme('background-color', 'color-error--lighten-4', 'field-description-background');
 
     padding-left: 2.9rem;
 
     &::before {
-      @include theme("color", "color-error", "field-description-icon");
+      @include theme('color', 'color-error', 'field-description-icon');
     }
 
     a {
