@@ -2,6 +2,7 @@
 fieldset  {
   @include theme('border-color', 'color-tertiary--lighten-2', 'fieldset-border-color');
 
+  max-width: 41rem;
   margin-bottom: 1.2rem;
   padding-top: .8rem;
   padding-bottom: .4rem;
