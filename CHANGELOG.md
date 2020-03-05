@@ -39,6 +39,10 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
   
   **SCSS classes remain unchanged!**
 
+* Updated fieldset styling and form-item margins.
+* Radios and checkboxes template has been updated to fix the bottom margin.
+  Add a **form-item** wrapper around the form-columns, just like for any other form field.
+
 ### Removed
 
 * **Deprecated** 'contact-block' has been marked as deprecated in favour of the generic 'CTA-block'.

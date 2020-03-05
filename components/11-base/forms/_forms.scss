@@ -183,12 +183,17 @@ $field-icon-padding: 2.5rem;
   position: relative;
   margin-bottom: .5rem;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   label {
     position: absolute;
     top: 0;
     left: 0;
     padding-left: 1.4rem;
-    line-height: 1.6;
+    font-weight: normal;
+    line-height: 1.2rem;
     overflow: unset;
 
     &::before,

@@ -6,6 +6,31 @@
       'modifier': 'form-disclaimer'
     } %}
 
+    {% include '@form-item' with {
+      "label": "Some input field",
+      "id": _self.name ~ "-input1_id",
+      "input_component": "input",
+      "type": "text",
+      "name": _self.name ~ "-input1_name",
+      "field_description": null
+    } %}
+    {% include '@form-item' with {
+      "label": "Some more input",
+      "input_component": "input",
+      "type": "text",
+      "id": _self.name ~ "-input2_id",
+      "name": _self.name ~ "-input2_name",
+      "field_description": null
+    } %}
+    {% include '@form-item' with {
+      "label": "How do you feel about fieldsets?",
+      "input_component": "input",
+      "type": "text",
+      "id": _self.name ~ "-input3_id",
+      "name": _self.name ~ "-input3_name",
+      "field_description": null
+    } %}
+
     <fieldset>
       <legend>Contact details</legend>
       {% include '@form-item' with {
@@ -44,11 +69,13 @@
       } %}
     </fieldset>
 
-    {% include '@radios--with-error' with {
+    {% include '@radios' with {
       "input_component": "input",
       "type": "radio",
       "label": "Date",
-      "field_description": null,
+      "modifier": "error",
+      "field_description": "You can add an optional field description here.",
+      "field_message": "Lorem ipsum dolor sit amet.",
       "options": [
         {
           "label": "Wednesday 6 june 2018",
