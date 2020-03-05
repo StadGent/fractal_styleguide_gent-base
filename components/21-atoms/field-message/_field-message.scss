@@ -1,10 +1,6 @@
 .field-message {
   @include theme("color", "color-tertiary--lighten-1", "field-messages-color");
-  @include theme(
-    "background-color",
-    "color-primary--lighten-4",
-    "field-description-background"
-  );
+  @include theme("background-color", "color-primary--lighten-4", "field-description-background");
 
   $field-message-icon-size: 1.5rem;
   $field-message-icon-margin: 1.5rem;
@@ -49,29 +45,42 @@
     }
   }
 
+  a {
+    @include theme("color", "color-tertiary--lighten-1", "field-messages-color");
+    @include link-background('color-tertiary', 'color-primary--lighten-3', 'field-messages-link-border-color', 'link-background-color');
+
+    &:hover {
+      @include theme('color', 'color-tertiary', 'field-messages-link-hover-color');
+    }
+  }
+
   &.success {
     @include icon("checkmark");
+    @include theme("background-color", "color-success--lighten-4", "field-description-background");
 
     padding-left: 2.9rem;
-    background-color: color("green", -4);
 
     &::before {
-      color: color('green');
+      @include theme("color", "color-success", "field-description-icon");
+    }
+
+    a {
+      @include link-background('color-tertiary', 'color-success--lighten-3', 'field-messages-link-border-color', 'field-messages-success-background-color');
     }
   }
 
   &.error {
     @include icon("cross");
+    @include theme("background-color", "color-error--lighten-4", "field-description-background");
 
     padding-left: 2.9rem;
-    background-color: color("red", -4);
 
     &::before {
-      color: color('red');
+      @include theme("color", "color-error", "field-description-icon");
     }
-  }
 
-  a {
-    color: inherit;
+    a {
+      @include link-background('color-tertiary', 'color-error--lighten-3', 'field-messages-link-border-color', 'field-messages-error-background-color');
+    }
   }
 }
