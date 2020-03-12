@@ -51,6 +51,8 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * **Deprecated** `.extra-articles` has been marked as deprecated.
 * **Removed:** `.intro` component was unused and has been removed.
   `.detail-layout` has been using `.summary-text` for the same effect.
+* **Deprecated** `modal.functions.js`has been marked as deprecated.
+  Use modal/index.js from the vendor directory or install**@digipolis-gent/modal** as dependency.
 
 ## [3.0.0-beta17]
 

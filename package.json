@@ -5,7 +5,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
-    "@frctl/fractal": "^1.1.7",
+    "@frctl/fractal": "^1.2.1",
     "@frctl/twig": "^1.0.0-beta.5",
     "cssnano": "^4.1.10",
     "fs-extra": "^7.0.1",
@@ -44,9 +44,9 @@
   ],
   "license": "GPL-2.0",
   "dependencies": {
+    "@digipolis-gent/modal": "git+https://github.com/StadGent/npm_package_modal.git",
     "allietabs": "^1.2.2",
     "baguettebox.js": "^1.11.0",
-    "body-scroll-lock": "^2.6.4",
     "breakpoint-sass": "^2.7.1",
     "imagesloaded": "^4.1.4",
     "lodash": "^4.17.15",
