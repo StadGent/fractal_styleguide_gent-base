@@ -47,6 +47,7 @@
     "@digipolis-gent/modal": "git+https://github.com/StadGent/npm_package_modal.git",
     "allietabs": "^1.2.2",
     "baguettebox.js": "^1.11.0",
+    "body-scroll-lock": "^2.6.4",
     "breakpoint-sass": "^2.7.1",
     "imagesloaded": "^4.1.4",
     "lodash": "^4.17.15",
