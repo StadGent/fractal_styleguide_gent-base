@@ -78,6 +78,10 @@ const ghentTheme = mandelbrot({
   ],
   panels: [
     'notes', 'view', 'info', 'html', 'context', 'resources'
+  ],
+  styles: [
+    'default',
+    '/css/fractal.css'
   ]
 });
 
