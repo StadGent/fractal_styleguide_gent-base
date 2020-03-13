@@ -623,9 +623,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@digipolis-gent/modal@git+https://github.com/StadGent/npm_package_modal.git":
+"@digipolis-gent/modal@^1.0.0":
   version "1.0.0"
-  resolved "git+https://github.com/StadGent/npm_package_modal.git#58b183fb873484bae75f872bb37abff23507dabc"
+  resolved "https://registry.yarnpkg.com/@digipolis-gent/modal/-/modal-1.0.0.tgz#32d91430e5ab919bf5025f40cd1bba7dc27679ec"
+  integrity sha512-YDciL1kg2MKC5govkbsdzJpAgV1SQyEioYIMD8+gJKRzzvjz6mWW/v7xAFnzeXekdwtFH2v4MV99DjaMaQCMMw==
 
 "@frctl/fractal@^1.1.0-alpha.0":
   version "1.1.7"

@@ -44,7 +44,7 @@
   ],
   "license": "GPL-2.0",
   "dependencies": {
-    "@digipolis-gent/modal": "git+https://github.com/StadGent/npm_package_modal.git",
+    "@digipolis-gent/modal": "^1.0.0",
     "allietabs": "^1.2.2",
     "baguettebox.js": "^1.11.0",
     "body-scroll-lock": "^2.6.4",
