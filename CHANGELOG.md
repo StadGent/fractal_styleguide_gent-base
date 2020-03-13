@@ -2,8 +2,6 @@
 
 All notable changes to this style guide are documented here.
 
-NOTE: Refer to upcoming changes in our README.md under "Roadmap"
-
 ## [Unreleased]
 
 ### Added

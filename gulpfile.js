@@ -634,6 +634,15 @@ gulp.task('sassdoc', () => {
 });
 
 /**
+ * Add changelog to the documentation.
+ */
+gulp.task('changelog', () => {
+  return gulp.src('./CHANGELOG.md')
+    .pipe(rename({basename: 'changelog'}))
+    .pipe(gulp.dest('./docs'))
+});
+
+/**
  * Default tasks:
  * Usage:
  *  gulp
@@ -679,7 +688,8 @@ gulp.task('compile', gulp.series(
   gulp.parallel(
     'iconfont',
     'spotimages',
-    'sassdoc'
+    'sassdoc',
+    'changelog'
   ),
   'fractal:build',
   gulp.parallel(

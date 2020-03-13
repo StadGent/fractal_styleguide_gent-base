@@ -71,7 +71,7 @@ fractal.components.set('default.collator', function (markup, item) {
 });
 
 const ghentTheme = mandelbrot({
-  nav: ['search', 'components', 'docs'],
+  nav: ['search', 'docs', 'components'],
   scripts: [
     'default',
     '/js/search.js'
