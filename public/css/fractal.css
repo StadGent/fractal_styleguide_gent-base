@@ -30,6 +30,9 @@ body {
     min-height: 60px;
     background-color: #005C86;
 }
+.Frame-body {
+    height: calc(100% - 60px);
+}
 .Tree-title {
     font-size: 1rem;
 }
