@@ -780,7 +780,7 @@ gulp.task('axe:components', callback => {
   return axe(Object.assign({}, axeOptions, {
     saveOutputIn: 'components.json',
     urls: [
-      'build/components/preview/!(input*|*layout*|preview*|textarea*|teaser--*).html'
+      'build/components/preview/!(input*|file|*layout*|preview*|textarea*|teaser--*|*--*).html'
     ],
     a11yCheckOptions
   }));
