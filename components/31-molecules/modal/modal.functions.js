@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * @deprecated since version 3.0.0
+ * Use styleguide/vendor/modal or npm package @digipolis-gent/modal
+ */
 /* global define, module, bodyScrollLock */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
