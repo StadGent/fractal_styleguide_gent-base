@@ -5,6 +5,12 @@ body {
     color: #041c27;
     font-size: 16px;
 }
+.Frame-panel--sidebar {
+    background-color: transparent;
+}
+[dir="ltr"] .Frame-panel--sidebar {
+    border: 0;
+}
 .Prose h1,
 .Prose h2,
 .prose h3,
