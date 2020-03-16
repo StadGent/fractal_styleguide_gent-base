@@ -2,8 +2,6 @@
 
 All notable changes to this style guide are documented here.
 
-NOTE: Refer to upcoming changes in our README.md under "Roadmap"
-
 ## [Unreleased]
 
 ### Added
@@ -15,7 +13,9 @@ NOTE: Refer to upcoming changes in our README.md under "Roadmap"
 * Removed shadow from inverted contact details.
 * Adapted links hover color to status message background color.
 * Allowed the use of strong tags around links in list-items.
-* added "about" to read more link value
+* Added "about" to read more link value
+* Fixed table bindings. Bind table functions to `'.responsive-table .table-wrapper'`
+  instead of `'.responsive-table'` to fix WCAG scrollable content violation.
 
 ### Updated
 

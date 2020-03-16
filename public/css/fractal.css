@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700&display=swap');
+body {
+    font-family: Montserrat, "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #041c27;
+    font-size: 16px;
+}
+.Frame-panel--sidebar {
+    background-color: transparent;
+}
+[dir="ltr"] .Frame-panel--sidebar {
+    border: 0;
+}
+.Prose h1,
+.Prose h2,
+.prose h3,
+.prose h4 {
+    color: #041c27;
+}
+.Prose h1 {
+    font-size: 2.8rem;
+}
+.Prose h2+h3 {
+    margin-top: 1.25em;
+}
+.Prose li {
+    margin-bottom: .5em;
+}
+.Header {
+    min-height: 60px;
+    background-color: #005C86;
+}
+.Frame-body {
+    height: calc(100% - 60px);
+}
+.Tree-title {
+    font-size: 1rem;
+}
+.Tree-title,
+.Tree-collectionLabel,
+.Tree-collectionLabel > span::before {
+    color: #444;
+}
+.Tree-depth-2 {
+    padding-left: 1rem;
+}
+.Tree-depth-2:last-of-type {
+    margin-bottom: 2rem;
+}
+.Browser-panel h1 {
+    font-size: 2.2rem;
+}
