@@ -3,7 +3,7 @@
 'use strict';
 
 (function () {
-  var tablesNodeList = document.querySelectorAll('.responsive-table');
+  var tablesNodeList = document.querySelectorAll('.responsive-table .table-wrapper');
 
   // Optimise all tables with a wrapper div.responsive-table
   for (var i = 0; i < tablesNodeList.length; i++) {
