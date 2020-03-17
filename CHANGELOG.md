@@ -42,6 +42,7 @@ All notable changes to this style guide are documented here.
 * Updated fieldset styling and form-item margins.
 * Radios and checkboxes template has been updated to fix the bottom margin.
   Add a **form-item** wrapper around the form-columns, just like for any other form field.
+* Changed book.svg fill color so that it is able to transform to the different theme colors  
 
 ### Removed
 
