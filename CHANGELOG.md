@@ -16,6 +16,8 @@ All notable changes to this style guide are documented here.
 * Added "about" to read more link value
 * Fixed table bindings. Bind table functions to `'.responsive-table .table-wrapper'`
   instead of `'.responsive-table'` to fix WCAG scrollable content violation.
+* Fixed fieldset styling in filter layout modal. Make sure the `.filter-section`
+  also has class `sidebar`.
 
 ### Updated
 
