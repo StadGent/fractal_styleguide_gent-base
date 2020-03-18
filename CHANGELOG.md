@@ -18,6 +18,9 @@ All notable changes to this style guide are documented here.
   instead of `'.responsive-table'` to fix WCAG scrollable content violation.
 * Fixed fieldset styling in filter layout modal. Make sure the `.filter-section`
   also has class `sidebar`.
+* Modal fixed-height had a scrollable region without keyboard access.
+  The template has been updated, make sure to add `tabindex=0` on all your
+  `.modal--fixed-height` templates in your project too.
 
 ### Updated
 

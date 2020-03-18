@@ -49,6 +49,7 @@
       > .modal-content {
         flex-grow: 1;
         margin-bottom: 3.8rem;
+        z-index: z('modal', 'inner');
         overflow-y: auto;
       }
 
