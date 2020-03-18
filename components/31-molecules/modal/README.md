@@ -37,7 +37,9 @@ The default modal has a modal box whose height automatically adapts to the lengt
 
 The fixed-height modal has a modal box whose height is fixed to a height relative to the height of the viewport. The position of the modal box is fixed. The modal box is always centered in the viewport.
 
-When the content or functionality inside the modal box is too long to be shown all in the available height, scrolling of the content or functionality *inside* the modal box is enabled. In this case, only the modal content scrolls, the modal header and the model actions panel stay are pinned to the modal box and stay in place.
+When the content or functionality inside the modal box is too long to be shown all in the available height, scrolling of the content or functionality *inside* the modal box is enabled. In this case, only the modal content scrolls, the modal header and the model actions panel stay are pinned to the modal box and stay in place.  
+
+**Make sure to add `tabindex=0` to the `.modal--fixed-height` element to enable the scrollable region with keyboard access.**
 
 ## Usage within the style guide
 

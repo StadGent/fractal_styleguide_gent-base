@@ -95,7 +95,8 @@ $z-layers: (
     'base': 6, // creates new stacking context
     'overlay': -1,
     'content': 1,
-    'actions': 2 // iOS fix
+    'actions': 2, // iOS fix
+    'inner': 3
   )
 ) !default;
 
