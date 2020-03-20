@@ -216,37 +216,17 @@ header.header {
       display: block;
     }
 
-    @supports (object-fit: cover) {
-      &.hero--mobile {
+    &.hero--mobile {
+      display: block;
+
+      &::before,
+      &::after {
+        content: '';
+      }
+
+      .image-wrapper,
+      img {
         display: block;
-
-        @include tablet {
-          margin-bottom: 0;
-        }
-
-        &::before,
-        &::after {
-          content: '';
-        }
-
-        .image-wrapper,
-        img {
-          display: block;
-        }
-
-        .image-wrapper {
-          @include tablet-and-below {
-            padding-bottom: 249px;
-          }
-
-          img {
-            object-fit: cover;
-          }
-        }
-
-        .theme {
-          display: flex;
-        }
       }
     }
 
@@ -317,17 +297,6 @@ header.header {
         top: 50%;
         bottom: 0;
         border-top-left-radius: border-radius('radius-5');
-      }
-
-      @include tablet-and-below {
-        &::before {
-          bottom: 0;
-          border-radius: 0;
-        }
-
-        &::after {
-          content: none;
-        }
       }
 
       .subsite-title, /// @deprecated

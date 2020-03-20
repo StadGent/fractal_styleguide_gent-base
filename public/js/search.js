@@ -31,6 +31,7 @@
     }
     else {
       elem.removeAttribute('hidden');
+      elem.classList.remove('is-closed');
       elem.parentNode.querySelectorAll('li:not([hidden=true])').length > 0 ? show(elem.parentNode, next) : next();
     }
   };

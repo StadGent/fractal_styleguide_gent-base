@@ -722,10 +722,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@digipolis-gent/modal@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@digipolis-gent/modal/-/modal-1.0.0.tgz#32d91430e5ab919bf5025f40cd1bba7dc27679ec"
-  integrity sha512-YDciL1kg2MKC5govkbsdzJpAgV1SQyEioYIMD8+gJKRzzvjz6mWW/v7xAFnzeXekdwtFH2v4MV99DjaMaQCMMw==
+"@digipolis-gent/modal@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@digipolis-gent/modal/-/modal-1.0.2.tgz#5d10e24557e6be53b4d7d9146de144d873bd5593"
+  integrity sha512-oYYT0Cv+tsO/g41S23SAQAbzD361G5uJW8EKDX8xNey/n5ILFRKs7BXLbDVMn6R3raeVHVpFifo8guhdA767TQ==
 
 "@frctl/fractal@^1.1.0-alpha.0":
   version "1.1.7"
