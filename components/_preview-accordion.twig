@@ -1,0 +1,34 @@
+{% extends '_preview.twig' %}
+
+{% block content %}
+  <div class="container">
+    <div class="preview-container">
+      {% if _target.isCollated %}
+        <dl class="styleguide">
+          {{ yield | raw }}
+        </dl>
+      {% else %}
+        <div class="content-container">
+          {{ yield | raw }}
+        </div>
+      {% endif %}
+
+      <p class="form-disclaimer">The accordion component uses the hash in you URL to show the relevant content.<br>
+      The below table of contents is not part of the accordion template,
+      but allows you to play with this hash functionality.</p>
+      {% include '@table-of-contents' with {
+        list: [
+          '<a href="#accordion--single--content--1">single accordion</a>',
+          '<a href="#accordion--multiple--content--1">first item</a>',
+          '<a href="#accordion--multiple--content--2">second item</a>',
+          '<a href="#accordion--multiple--content--3">third item</a>',
+          '<a href="#accordion--multiple--content--4">forth item</a>',
+          '<a href="#just_some_random_hash">non existing item</a>'
+        ]
+      } %}
+    </div>
+  </div>
+
+
+{% endblock %}
+

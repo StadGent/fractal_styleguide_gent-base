@@ -75,7 +75,9 @@ And a collapsible element with:
 
 By default, the accordion will initiate automatically
 and hide or show the content
-according to the aria-expanded attribute.
+according to the aria-expanded attribute.  
+If the hash in the URL contains a matching ID,
+this element will also be expanded.
 
 For instance:
 
