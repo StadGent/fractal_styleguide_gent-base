@@ -210,8 +210,11 @@
      */
     const hashEvent = () => {
       let hash = window.location.hash.replace('#', '');
+      if (!hash) {
+        return;
+      }
       const trigger = elem.querySelector(`[aria-controls=${hash}]`);
-      if (hash && trigger) {
+      if (trigger) {
         open(trigger);
         trigger.focus();
       }
