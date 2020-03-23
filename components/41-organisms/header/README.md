@@ -57,7 +57,7 @@ The **top header** has the following components:
 
 For the **top header** of the mobile header, the following conditions apply:
 
-1. Where there is a **header image**, the header image in het mobile header can be **shown or not shown**. See the examples.
+1. Where there is a **header image**, the header image in the mobile header can be **shown or not shown**. See the examples.
 
 2. When the website has a **search function**, the search function is **always shown** in the header.
 
