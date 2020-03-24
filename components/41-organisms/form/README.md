@@ -80,7 +80,7 @@ The second message is **what needs fixing**. This is about wat will make the for
 
 ### General error message
 
-When the user clicks the submit button of the form to try to submit the form, we need to check if there are any errors. If there are, we need to surpress form submission temporarily. At this point, all we want to communicate is the prsesence of errors and that they need attention.
+When the user clicks the submit button of the form to try to submit the form, we need to check if there are any errors. If there are, we need to surpress form submission temporarily. At this point, all we want to communicate is the presence of errors and that they need attention.
 
 * The text of the general error message is fixed and should say something like: "Errors were found. Correct them to continue.".
 * The general error message should appear right after checking if there are errors in the form after the user tried to submit the form.
