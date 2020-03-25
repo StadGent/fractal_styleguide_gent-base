@@ -2,20 +2,20 @@
 
 ## Changelog
 
-The CHANGELOG is available through our [GitHub repo](https://github.com/StadGent/fractal_styleguide_gent-base/)
-or on our [changelog page]({{path '/docs/changelog'}})
+The changelog is available through our [GitHub repo](https://github.com/StadGent/fractal_styleguide_gent-base/)
+or on our [changelog page]({{path '/docs/changelog'}}).
 
 ## SASS documentation (for contributors)
 
-You can find the SASS docs <a href="{{ path '/sassdocs/index.html' }}" target="_blank">here</a>
+You can find the SASS docs <a href="{{ path '/sassdocs/index.html' }}" target="_blank">here</a>.
 
 ## Questions?
 
-You can join us on Slack at <a href="https://uxuighent.slack.com/" target="_blank">UX/UI Ghent</a>
+You can join us on Slack at <a href="https://uxuighent.slack.com/" target="_blank">UX/UI Ghent</a>.
 
-## Implementing this style guide in your own project
+## Implementing the City of Ghent Style Guide in your own project
 
-This style guide aims to be technology independent. This means you should be
+This City of Ghent Style Guide aims to be technology independent. This means you should be
 able to use it inside your project with any technology you want. It utilizes
 SASS to style its components, so you will have to use that in your project.
 
@@ -25,7 +25,7 @@ Example implementations in open source projects are:
 * **Vue**: [vue_site_lod-visualisation](https://github.com/StadGent/vue_site_lod-visualisation)
 * **Nuxt**: [nuxt_site_verwerkingsregister](https://github.com/StadGent/nuxt_site_verwerkingsregister)
 
-Have a look at other projects using this style guide on [github](https://github.com/StadGent/fractal_styleguide_gent-base/network/dependents?package_id=UGFja2FnZS0xODQ5OTYzOQ%3D%3D).
+Have a look at other projects using the City of Ghent Style Guide on [github](https://github.com/StadGent/fractal_styleguide_gent-base/network/dependents?package_id=UGFja2FnZS0xODQ5OTYzOQ%3D%3D).
 
 ### TL;DR
 
@@ -51,7 +51,7 @@ $styleguide-dir: '../../../node_modules/gent_styleguide/build/styleguide' !defau
 @import "sass/main_cli";
 ```
 
-## Running the style guide in development mode
+## Running the City of Ghent Style Guide in development mode
 
 ```bash
 # Install dependencies
