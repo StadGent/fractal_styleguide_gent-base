@@ -2,8 +2,8 @@
 
 ## Important
 
-Before you start using this style guide in your project you should read this
-section!
+**Before you start using the City of Ghent Style Guide in your project you should read this
+section.**
 
 ## Component variables and sections
 
@@ -15,13 +15,15 @@ In the `components/00-settings/_vars.scss` file you will find a SASS map
 Atoms then base their styling on the section they are in.
 
 ## How to define a new component
-So you're looking to use this style guide but find that one of the components in your design isn't defined yet?
+
+So you're looking to use the City of Ghent Style Guide but find that one of the components in your design isn't defined yet?
  
-1. Make sure you checked everything of the [Can-I-define-a-new-component checklist](#can-i-define-a-new-component-checklist)
-2. Categorize your component following [atomic design](/docs/folder-structure) and determine whether you're dealing with a atom, molecule or organism.
+1. Make sure you checked everything of the checklist [Can I define a new component?](#can-i-define-a-new-component-checklist)
+2. Categorize your component following [Atomic Design principles](/docs/folder-structure) and determine whether you're dealing with a atom, molecule or organism.
 3. Start writing your code.
 
-#### Can-I-define-a-new-component checklist
+#### Checklist: Can I define a new component?
+
 Here's a checklist with things you need to consider before defining a new component. If you can check **ALL** boxes, then yaay: go ahead and create a new component.
 
 <input type="checkbox"> I've read the `CONTRIBUTING.md` file in the root of the GIT repo.  
@@ -34,22 +36,24 @@ Here's a checklist with things you need to consider before defining a new compon
 
 ## Folder structure
 
-ⓘ All components defined within this styleguide are categorized following the [atomic design](http://atomicdesign.bradfrost.com/table-of-contents/) pattern by Brad Frost.   
+ⓘ All components defined within the City of Ghent Style Guide are categorized following the [atomic design principles](http://atomicdesign.bradfrost.com/table-of-contents/) by Brad Frost.
 
 ### Component categorization
 Components are always defined as one of these
 
 - **Base**:  Contains global configuration (ex.: colors or fonts used in theme).
 - **Atoms**: Smallest possible components; can’t be broken down any further without ceasing to be functional.
-- **Molecules**: Relatively simple groups of UI elements functioning together as a unit
-- **Organisms**: Relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms
+- **Molecules**: Relatively simple groups of UI elements functioning together as a unit.
+- **Organisms**: Relatively complex UI components composed of groups of Molecules and/or Atoms and/or other Organisms.
 - **Pages**: specific instances of templates that show what a UI looks like with real representative content in place.
 
 ### Component folder structure
+
 Since the goal is to make a healthy mix between functional components and keeping our code DRY when defining components, some components will share code but still be defined as separate components.
 
 #### Share code between components
-Sometimes a component has a similar technical logic, but an entirely different functional meaning. For example: an alert box and a CTA could look the same, but they're to separate components that can be used elsewhere on the page.
+
+Sometimes a component has a similar technical logic, but an entirely different functional meaning. For example: an alert box and a call to action (CTA) could look the same, but they're to separate components that can be used elsewhere on the page.
 
 When you bump into a situation like that, do this:  
 
