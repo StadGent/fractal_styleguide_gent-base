@@ -2,7 +2,7 @@
 
 All notable changes to this style guide are documented here.
 
-## [Unreleased]
+## [3.0.0]
 
 ### Added
 
@@ -28,11 +28,11 @@ All notable changes to this style guide are documented here.
   in order to match the documentation.  
   The '.mijn-gent-block' class is still functional but marked as deprecated.
   Please use '.authentication' from now on.
-* Reduced spinner size.
-* The `.active` link in the menu should now be bold.
-* Moved `.social-list` styling to the footer and theme-footer components.
 * **Breaking** 'CTA-block' now uses the generic highlight component.
-  The old template and classes will be removed in the next major version.
+  The old template and classes will be removed in the next major version.  
+  Make sure your templates use `.highlight` and `.highlight__inner`.
+* Radios and checkboxes template has been updated to fix the bottom margin.
+  Add a **form-item** wrapper around the form-columns, just like for any other form field.
 * Updated component names:
 
   * 'Day Widget' to 'Open Today'
@@ -45,10 +45,11 @@ All notable changes to this style guide are documented here.
   **SCSS classes remain unchanged!**
 
 * Updated fieldset styling and form-item margins.
-* Radios and checkboxes template has been updated to fix the bottom margin.
-  Add a **form-item** wrapper around the form-columns, just like for any other form field.
 * Changed book.svg fill color so that it is able to transform to the different theme colors.
 * You can now also trigger opening the accordion component by using the URL hash.
+* Reduced spinner size.
+* The `.active` link in the menu should now be bold.
+* Moved `.social-list` styling to the footer and theme-footer components.
 
 ### Removed
 
@@ -56,10 +57,10 @@ All notable changes to this style guide are documented here.
   Templates and classes will be removed in the next major version.
 * **Deprecated** `.help-block` has been marked as deprecated.
 * **Deprecated** `.extra-articles` has been marked as deprecated.
-* **Removed:** `.intro` component was unused and has been removed.
-  `.detail-layout` has been using `.summary-text` for the same effect.
 * **Deprecated** `modal.functions.js`has been marked as deprecated.
   Use modal/index.js from the vendor directory or install**@digipolis-gent/modal** as dependency.
+* **Removed:** `.intro` component was unused and has been removed.
+  `.detail-layout` has been using `.summary-text` for the same effect.
 
 ## [3.0.0-beta17]
 
@@ -831,6 +832,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta17...3.0.0
 [3.0.0-beta17]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta16...3.0.0-beta17
 [3.0.0-beta16]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta15...3.0.0-beta16
 [3.0.0-beta15]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta14...3.0.0-beta15
