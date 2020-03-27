@@ -16,7 +16,7 @@ Examples of detail pages of content:
 
 ## When not to use this layout
 
-Do not use the detail layout to present an overview of content.
+Do not use the detail layout to present an overview of content. In this case, use the <a href="{{path './overview-layout.html'}}">overview layout</a> instead.
 
 ## How it works
 
