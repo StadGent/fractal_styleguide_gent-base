@@ -32,7 +32,7 @@ The **top header with Ghent logo** has the following components:
 * Authentication component (optional, only if applicable)
 * Language switch (optional, only for **multilingual websites with synchronous translations**)
 
-When there is no header image, the Ghent-style seperator is shown. When there is a header image, the Ghent-style separator is not shown.
+To get an idea of different combinations for the desktop header, how they look and how they work, see the examples.
 
 **Further specific requirements for the City of Ghent website and for separate websites are listed below.**
 
@@ -45,6 +45,7 @@ The mobile header can consist of three parts, from top to bottom:
 1. **Top header** with Ghent logo (always required)
 2. **Site title** (optional, only for separate websites)
 3. **Breadcrumbs** (required for most websites)
+4. **Header image** (optional)
 
 The **top header** has the following components:
 
@@ -56,7 +57,7 @@ The **top header** has the following components:
 
 For the **top header** of the mobile header, the following conditions apply:
 
-1. Where there is a **header image**, the header image in the mobile header is **hidden**. The Ghent-style separator is always shown.
+1. Where there is a **header image**, the header image in the mobile header can be **shown or not shown**. See the examples.
 
 2. When the website has a **search function**, the search function is **always shown** in the header.
 
@@ -78,6 +79,8 @@ Taking the above conditions into account, only the **following combinations of e
 * Ghent logo + Authentication component + Language switch
 * Ghent logo only
 
+To get an idea of different combinations for the mobile header, how they look and how they work, see the examples.
+
 **Further specific requirements for the City of Ghent website and for separate websites are listed below.**
 
 ## Requirements
@@ -92,6 +95,7 @@ Taking the above conditions into account, only the **following combinations of e
 * The mobile header includes the following elements:
     * Top header with Ghent loco, Search button and authentication component
     * Breadcrumbs
+    * Header image (optional, can be shown or not shown independently from the desktop header)
 * The first item of the breadcrumbs is "Home" and links to the homepage of the City of Ghent general website.
 * The search function searches the content of the whole City of Ghent general website.
 
@@ -120,4 +124,4 @@ For multilingual websites with synchronous translations, the language switch is 
 
 ### Header image
 
-The header can include a header image. When included, the header image is only shown on desktop and tablet resolutions. The header image can have an optional caption tag. See the examples.
+The header can include a header image When included, the header image is always shown on desktop and tablet resolutions. The header image can have an optional caption tag. On mobile resolutions, the header image can be shown or not shown. This is a functional decision specific for the website or even for certain web pages within a website. The optional caption for the header image is never shown in the mobile header. See the examples.
