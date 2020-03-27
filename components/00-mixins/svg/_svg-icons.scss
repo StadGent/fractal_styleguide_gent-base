@@ -93,10 +93,9 @@
 ///
 @function svg-icon($icon, $fill-color, $width, $height) {
   @if $icon == 'cross' {
-    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 32 32">
-    <path fill="#{$fill-color}" fill-rule="evenodd" d="M18.121 16l6.44-6.439a1.5 1.5 0 0 0-2.122-2.122L16 13.879l-6.44-6.44a1.501 1.501 0 0 0-2.12 2.122L13.88 16l-6.44 6.439a1.5 1.5 0 0 0 2.12 2.122l6.44-6.44 6.44 6.44c.292.293.676.439 1.06.439s.767-.146 1.06-.439a1.5 1.5 0 0 0 0-2.122L18.121 16z"/>
-</svg>
-';
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 32 32">\
+      <path fill="#{$fill-color}" fill-rule="evenodd" d="M18.121 16l6.44-6.439a1.5 1.5 0 0 0-2.122-2.122L16 13.879l-6.44-6.44a1.501 1.501 0 0 0-2.12 2.122L13.88 16l-6.44 6.439a1.5 1.5 0 0 0 2.12 2.122l6.44-6.44 6.44 6.44c.292.293.676.439 1.06.439s.767-.146 1.06-.439a1.5 1.5 0 0 0 0-2.122L18.121 16z"/>\
+      </svg>';
   }
 
   @if $icon == 'lock-closed' {
@@ -104,9 +103,9 @@
   }
 
   @if $icon == 'cross' {
-    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$width}" viewBox="0 0 32 32">
-    <path fill="#{$fill-color}" fill-rule="evenodd" d="M18.121 16l6.44-6.439a1.5 1.5 0 0 0-2.122-2.122L16 13.879l-6.44-6.44a1.501 1.501 0 0 0-2.12 2.122L13.88 16l-6.44 6.439a1.5 1.5 0 0 0 2.12 2.122l6.44-6.44 6.44 6.44c.292.293.676.439 1.06.439s.767-.146 1.06-.439a1.5 1.5 0 0 0 0-2.122L18.121 16z"/>
-</svg>';
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$width}" viewBox="0 0 32 32">\
+      <path fill="#{$fill-color}" fill-rule="evenodd" d="M18.121 16l6.44-6.439a1.5 1.5 0 0 0-2.122-2.122L16 13.879l-6.44-6.44a1.501 1.501 0 0 0-2.12 2.122L13.88 16l-6.44 6.439a1.5 1.5 0 0 0 2.12 2.122l6.44-6.44 6.44 6.44c.292.293.676.439 1.06.439s.767-.146 1.06-.439a1.5 1.5 0 0 0 0-2.122L18.121 16z"/>\
+      </svg>';
   }
 
   @if $icon == 'checkmark' {
@@ -114,10 +113,9 @@
   }
 
   @if $icon == 'checkmark-circle' {
-    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 32 32">
-    <path fill="#{$fill-color}" fill-rule="evenodd" d="M15.06 21.06l8-8a1.5 1.5 0 1 0-2.12-2.12L14 17.879l-2.94-2.94a1.5 1.5 0 1 0-2.12 2.122l4 4c.292.293.676.439 1.06.439.383 0 .767-.146 1.06-.44M16 2C8.267 2 2 8.269 2 16c0 7.732 6.268 14 14 14 7.731 0 14-6.268 14-14C30 8.269 23.73 2 16 2m0 3c6.065 0 11 4.935 11 11 0 6.066-4.935 11-11 11-6.066 0-11-4.934-11-11C5 9.935 9.933 5 16 5"/>
-</svg>
-';
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 32 32">\
+      <path fill="#{$fill-color}" fill-rule="evenodd" d="M15.06 21.06l8-8a1.5 1.5 0 1 0-2.12-2.12L14 17.879l-2.94-2.94a1.5 1.5 0 1 0-2.12 2.122l4 4c.292.293.676.439 1.06.439.383 0 .767-.146 1.06-.44M16 2C8.267 2 2 8.269 2 16c0 7.732 6.268 14 14 14 7.731 0 14-6.268 14-14C30 8.269 23.73 2 16 2m0 3c6.065 0 11 4.935 11 11 0 6.066-4.935 11-11 11-6.066 0-11-4.934-11-11C5 9.935 9.933 5 16 5"/>\
+      </svg>';
   }
 
   @if $icon == 'exclamation-circle' {
@@ -133,8 +131,8 @@
   }
 
   @if $icon == 'accolade-inverse' {
-    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 40 18">
-    <path fill="#{$fill-color}" fill-rule="nonzero" d="M20 0c-.219 5.005-1.73 8.973-5.115 12.536C11.505 16.093 6.797 18 2.023 18H0V0h20zm0 0h20v18h-2.023c-4.774 0-9.482-1.907-12.862-5.464C21.73 8.973 20.219 5.005 20 0z"/></svg>';
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 40 18">\
+      <path fill="#{$fill-color}" fill-rule="nonzero" d="M20 0c-.219 5.005-1.73 8.973-5.115 12.536C11.505 16.093 6.797 18 2.023 18H0V0h20zm0 0h20v18h-2.023c-4.774 0-9.482-1.907-12.862-5.464C21.73 8.973 20.219 5.005 20 0z"/></svg>';
   }
 
   @if $icon == 'accolade-stroke' {
@@ -142,10 +140,9 @@
   }
 
   @if $icon == 'search' {
-    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 32 32">
-    <path fill="#{$fill-color}" fill-rule="evenodd" d="M15 22c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7m12.061 2.939l-4.017-4.016A9.94 9.94 0 0 0 25 15c0-5.523-4.477-10-10-10S5 9.477 5 15s4.477 10 10 10a9.94 9.94 0 0 0 5.923-1.956l4.016 4.017c.293.293.677.439 1.061.439a1.502 1.502 0 0 0 1.061-2.561"/>
-</svg>
-';
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 32 32">\
+      <path fill="#{$fill-color}" fill-rule="evenodd" d="M15 22c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7m12.061 2.939l-4.017-4.016A9.94 9.94 0 0 0 25 15c0-5.523-4.477-10-10-10S5 9.477 5 15s4.477 10 10 10a9.94 9.94 0 0 0 5.923-1.956l4.016 4.017c.293.293.677.439 1.061.439a1.502 1.502 0 0 0 1.061-2.561"/>\
+      </svg>';
   }
 }
 
