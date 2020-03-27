@@ -83,6 +83,8 @@ get a folder structure like this:
 Now, to use the style guide SASS partials you just need to import them into your
 main SASS file at the top so they get loaded before your own code.
 
+#### With Sass globbing
+
 ```scss
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
 @import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
@@ -93,6 +95,19 @@ main SASS file at the top so they get loaded before your own code.
 @import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
 ```
 
+#### Without Sass globbing
+
+```scss
+@import 'node_modules/gent_styleguide/build/sass/settings';
+@import 'node_modules/gent_styleguide/build/sass/mixins';
+@import 'node_modules/gent_styleguide/build/sass/base';
+@import 'node_modules/gent_styleguide/build/sass/atoms';
+@import 'node_modules/gent_styleguide/build/sass/molecules';
+@import 'node_modules/gent_styleguide/build/sass/organisms';
+@import 'node_modules/gent_styleguide/build/sass/layouts';
+
+```
+
 Note: we use this structure to allow you to override anything you wish in your
 own custom project.
 The way to do this, is to add the imports above to your main SASS file and add
@@ -100,8 +115,8 @@ imports of your own overriding files in between.
 
 If you don't need to be able to change the molecules for your project and
 instead just want to import the style guide
-and use it as it is, you can use the `main.scss` file instead of using the
-following approach.
+and use it as it is, you can use the `main.scss` or `main_cli.scss`(without Sass globbing)
+file instead of using the following approach.
 
 Example:
 
@@ -153,15 +168,3 @@ To prevent FOUT, we advise using webfontLoader.
   });
 </script>
 ```
-
-## Third party support
-
-### AngularJS CLI support (no SASS globbing)
-
-We provide a `main_cli.scss` file that is essentially the same as `main.scss`,
-but includes all SASS partials the style guide needs without SASS globbing.
-
-#### IMPORTANT
-
-We recommend using the `main_cli.scss` file only when you need to support
-Angular CLI.

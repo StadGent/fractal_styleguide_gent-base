@@ -4,10 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700'); // sass-lint:disable-line no-url-protocols
 
-//// WebfontLoader
-/// Bypass the FOUT.
-/// Placed on the container to enable loading bars etc.
-////
+// WebfontLoader
+// Bypass the FOUT.
+// Placed on the container to enable loading bars etc.
 html.wf-loading {
   .container {
     opacity: 0;
