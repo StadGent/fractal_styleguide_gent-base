@@ -1,23 +1,7 @@
-// inject:settings
-// endinject
-
-// inject:mixins
-// endinject
-
-// inject:base
-// endinject
-
-// inject:atoms
-// endinject
-
-// inject:molecules
-// endinject
-
-// inject:organisms
-// endinject
-
-// inject:layouts
-// endinject
-
-// inject:pages
-// endinject
+@import "settings";
+@import "mixins";
+@import "base";
+@import "atoms";
+@import "molecules";
+@import "organisms";
+@import "layouts";
