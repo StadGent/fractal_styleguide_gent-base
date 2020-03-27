@@ -1,5 +1,6 @@
 label {
   @include theme('color', 'color-tertiary', 'label-color');
+  @include bold-text;
 
   .label-optional {
     @include theme('color', 'color-tertiary', 'label-color-optional');
@@ -8,7 +9,7 @@ label {
   }
 
   display: block;
-  margin: 0 0 .4rem;
+  //margin: 0 0 .4rem;
   font-size: .8rem;
-  line-height: 1.2;
+  line-height: 1.2rem;
 }

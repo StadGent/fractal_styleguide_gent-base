@@ -31,7 +31,7 @@ fractal.components.set('statuses', {
   deprecated: {
     label: 'deprecated',
     description: 'Deprecated.',
-    color: '#dd5e01'
+    color: 'rgb(182, 11, 41)'
   },
   alpha: {
     label: 'alpha',
@@ -71,13 +71,17 @@ fractal.components.set('default.collator', function (markup, item) {
 });
 
 const ghentTheme = mandelbrot({
-  nav: ['search', 'components', 'docs'],
+  nav: ['search', 'docs', 'components'],
   scripts: [
     'default',
     '/js/search.js'
   ],
   panels: [
     'notes', 'view', 'info', 'html', 'context', 'resources'
+  ],
+  styles: [
+    'default',
+    '/css/fractal.css'
   ]
 });
 

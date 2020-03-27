@@ -19,14 +19,9 @@ if (fs.existsSync(publicRootPath)) {
   fs.copySync(`${nodeModulesRootPath}/masonry-layout`, `${publicRootPath}/styleguide/vendor/masonry-layout`, {recursive: true});
   fs.copySync(`${nodeModulesRootPath}/imagesloaded`, `${publicRootPath}/styleguide/vendor/imagesloaded`, {recursive: true});
   fs.copySync(`${nodeModulesRootPath}/allietabs/dist`, `${publicRootPath}/styleguide/vendor/allietabs`, {recursive: true});
+  fs.copySync(`${nodeModulesRootPath}/@digipolis-gent/modal/dist`, `${publicRootPath}/styleguide/vendor/modal`, {recursive: true});
+  /*
+   * @deprecated since version 3.0.0
+   */
   fs.copySync(`${nodeModulesRootPath}/body-scroll-lock/lib`, `${publicRootPath}/styleguide/vendor/body-scroll-lock`, {recursive: true});
-}
-
-/*
-* This step is only used by Digipolis while building the style guide
-* When downloading the NPM package and running npm install or yarn install the "components" directory
-* does not exist, so we don't have to create this file here.
-*/
-if (fs.existsSync(componentsRootPath)) {
-  fs.copyFileSync(path.resolve(__dirname, 'main_cli.scss'), `${componentsRootPath}/main_cli.scss`);
 }

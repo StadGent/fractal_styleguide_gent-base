@@ -2,7 +2,65 @@
 
 All notable changes to this style guide are documented here.
 
-NOTE: Refer to upcoming changes in our README.md under "Roadmap"
+## [3.0.0]
+
+### Added
+
+* Privacy disclaimer in the form template.
+
+### Fixed
+
+* Removed shadow from inverted contact details.
+* Adapted links hover color to status message background color.
+* Allowed the use of strong tags around links in list-items.
+* Added "about" to read more link value
+* Fixed table bindings. Bind table functions to `'.responsive-table .table-wrapper'`
+  instead of `'.responsive-table'` to fix WCAG scrollable content violation.
+* Fixed fieldset styling in filter layout modal. Make sure the `.filter-section`
+  also has class `sidebar`.
+* Modal fixed-height had a scrollable region without keyboard access.
+  The template has been updated, make sure to add `tabindex=0` on all your
+  `.modal--fixed-height` templates in your project too.
+
+### Updated
+
+* **Deprecated:** 'mijn-gent-block' has been renamed to the more generic 'authentication'
+  in order to match the documentation.  
+  The '.mijn-gent-block' class is still functional but marked as deprecated.
+  Please use '.authentication' from now on.
+* **Breaking** 'CTA-block' now uses the generic highlight component.
+  The old template and classes will be removed in the next major version.  
+  Make sure your templates use `.highlight` and `.highlight__inner`.
+* Radios and checkboxes template has been updated to fix the bottom margin.
+  Add a **form-item** wrapper around the form-columns, just like for any other form field.
+* Updated component names:
+
+  * 'Day Widget' to 'Open Today'
+  * 'Checkbox With Filter' to 'Checkboxes with filter'
+  * 'Menu' to 'Main Menu'
+  * 'Week Month Widget' to 'Opening Hours'
+  * 'Readspeaker Button' to 'Text To Speech Button'
+  * 'Summary Box' to 'Summary'
+  
+  **SCSS classes remain unchanged!**
+
+* Updated fieldset styling and form-item margins.
+* Changed book.svg fill color so that it is able to transform to the different theme colors.
+* You can now also trigger opening the accordion component by using the URL hash.
+* Reduced spinner size.
+* The `.active` link in the menu should now be bold.
+* Moved `.social-list` styling to the footer and theme-footer components.
+
+### Removed
+
+* **Deprecated** 'contact-block' has been marked as deprecated in favour of the generic 'CTA-block'.
+  Templates and classes will be removed in the next major version.
+* **Deprecated** `.help-block` has been marked as deprecated.
+* **Deprecated** `.extra-articles` has been marked as deprecated.
+* **Deprecated** `modal.functions.js`has been marked as deprecated.
+  Use modal/index.js from the vendor directory or install**@digipolis-gent/modal** as dependency.
+* **Removed:** `.intro` component was unused and has been removed.
+  `.detail-layout` has been using `.summary-text` for the same effect.
 
 ## [3.0.0-beta17]
 
@@ -774,6 +832,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta17...3.0.0
 [3.0.0-beta17]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta16...3.0.0-beta17
 [3.0.0-beta16]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta15...3.0.0-beta16
 [3.0.0-beta15]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta14...3.0.0-beta15

@@ -1,0 +1,44 @@
+.social-list {
+  $social-media-link-width: 1.6rem;
+  display: inline-block;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+
+    li {
+      padding: 0 .4rem;
+    }
+
+    a {
+      @include reset-link-background;
+
+      &,
+      &[download]:not(.button),
+      &[href^="http://"]:not(.button),
+      &[href^="https://"]:not(.button) {
+        @include theme('background-color', 'color-primary--lighten-5', 'social-media-icon-background');
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $social-media-link-width;
+        height: $social-media-link-width;
+        border-radius: $social-media-link-width;
+        text-decoration: none;
+
+        &::after {
+          display: none;
+          content: '';
+        }
+      }
+    }
+
+    i {
+      font-size: 1.4rem;
+    }
+  }
+}

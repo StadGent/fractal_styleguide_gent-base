@@ -14,8 +14,7 @@
   margin-bottom: 1rem;
   padding: 1rem 1.2rem;
   border-radius: border-radius('radius-1');
-  font-size: .7rem;
-  line-height: 1.43;
+  font-size: .8rem;
   text-align: center;
 
   i {
@@ -47,26 +46,38 @@
   }
 
   &.messages--status {
-    background-color: color('green', -4);
+    @include theme('background-color', 'color-success--lighten-4', 'status-messages-success-background-color');
 
     i {
-      color: color('green');
+      @include theme('color', 'color-success', 'status-messages-success-icon');
+    }
+
+    a {
+      @include link-background('color-tertiary', 'color-success--lighten-3', 'status-messages-link-border-color', 'status-messages-success-link-background-color');
     }
   }
 
   &.messages--error {
-    background-color: color('red', -4);
+    @include theme('background-color', 'color-error--lighten-4', 'status-messages-error-background-color');
 
     i {
-      color: color('red');
+      @include theme('color', 'color-error', 'status-messages-error-icon');
+    }
+
+    a {
+      @include link-background('color-tertiary', 'color-error--lighten-3', 'status-messages-link-border-color', 'status-messages-error-link-background-color');
     }
   }
 
   &.messages--warning {
-    background-color: color('orange', -4);
+    @include theme('background-color', 'color-warning--lighten-4', 'status-messages-warning-background-color');
 
     i {
-      color: color('red');
+      @include theme('color', 'color-warning', 'status-messages-warning-icon');
+    }
+
+    a {
+      @include link-background('color-tertiary', 'color-warning--lighten-3', 'status-messages-link-border-color', 'status-messages-warning-link-background-color');
     }
   }
 
@@ -76,8 +87,10 @@
 
   a {
     @include theme('border-color', 'color-tertiary', 'status-messages-link-border-color');
+    @include theme('color', 'color-tertiary--lighten-1', 'status-messages-color');
 
-    padding: .1em 0;
-    color: inherit;
+    &:hover {
+      @include theme('color', 'color-tertiary', 'status-messages-link-hover-color');
+    }
   }
 }

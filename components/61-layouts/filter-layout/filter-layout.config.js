@@ -27,7 +27,7 @@ const generateTeasers = (uid)=>{
       paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet et impedit neque nobis ratione, totam unde? A asperiores, nam nihil quam repellat voluptatibus?',
       title: 'Search result',
       link: '#',
-      link_text: 'read more',
+      link_text: 'Read more',
       tag: 'some tag'
     });
   }
@@ -35,11 +35,10 @@ const generateTeasers = (uid)=>{
 };
 
 module.exports = {
-  status: 'alpha',
   preview: '@preview-without-padding',
   context: {
     teasers: generateTeasers('filter-page-teaser'),
-    checkboxes: generateCheckboxes('checkbox-with-filter'),
+    checkboxes: generateCheckboxes('checkboxes-with-filter'),
     footerConfig
   }
 };

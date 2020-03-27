@@ -23,7 +23,7 @@
 {% endif %}
 
 {% if type == 'links' %}
-  <ul class="links {{ modifier }}">
+  <ul class="{{ modifier }}">
     {% for item in items %}
       <li>{{ item }}</li>
     {% endfor %}

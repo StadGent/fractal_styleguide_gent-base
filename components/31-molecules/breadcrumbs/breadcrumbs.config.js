@@ -34,7 +34,6 @@ const _generate = count => {
 };
 
 module.exports = {
-  status: 'alpha',
   context: {
     items: _generate(4)
   },

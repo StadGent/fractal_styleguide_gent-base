@@ -1,91 +1,4 @@
 .filter {
-  .filter-section {
-    padding-top: .7rem;
-    visibility: hidden;
-
-    @include desktop {
-      position: static;
-      height: auto;
-      box-shadow: none;
-      overflow: visible;
-      visibility: visible;
-      z-index: auto;
-    }
-
-    &.visible {
-      @include breakpoint(max-width $bp-desktop) {
-        padding: 0;
-        visibility: visible;
-
-        > .modal-inner > .modal-header {
-          display: block;
-        }
-      }
-    }
-
-    > .modal-inner {
-      width: 100%;
-      max-width: initial;
-      min-height: 100%;
-      margin: 0;
-      padding: 0;
-
-      @include desktop {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        z-index: auto;
-        filter: none;
-      }
-
-      > .modal-header {
-        display: none;
-      }
-
-      > .modal-content {
-        @include desktop {
-          padding: 0;
-          overflow: visible;
-        }
-      }
-
-      > .modal-actions {
-        @include desktop {
-          padding-right: 0;
-          padding-left: 0;
-          border: 0;
-        }
-      }
-    }
-
-    > .modal-overlay {
-      display: none;
-    }
-
-    form {
-      // style first level labels as headings
-      > .form-item > label,
-      > fieldset.form-item > legend {
-        @extend %h3;
-      }
-
-      > fieldset {
-        padding: 0;
-        border: 0;
-      }
-    }
-
-    .label-optional {
-      display: none;
-    }
-
-    .filter__submit {
-      margin-top: .8rem;
-      margin-bottom: .8rem;
-    }
-  }
-
   .result-section {
 
     .selected-filters,
@@ -147,5 +60,94 @@
         }
       }
     }
+  }
+}
+
+// On mobile the filter-section is moved to the body root because it is converted to a modal.
+// This means it's no longer a child of .filter.
+.sidebar.filter-section {
+  padding-top: .7rem;
+  visibility: hidden;
+
+  @include desktop {
+    position: static;
+    height: auto;
+    box-shadow: none;
+    overflow: visible;
+    visibility: visible;
+    z-index: auto;
+  }
+
+  &.visible {
+    @include breakpoint(max-width $bp-desktop) {
+      padding: 0;
+      visibility: visible;
+
+      > .modal-inner > .modal-header {
+        display: block;
+      }
+    }
+  }
+
+  > .modal-inner {
+    width: 100%;
+    max-width: initial;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    @include desktop {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      z-index: auto;
+      filter: none;
+    }
+
+    > .modal-header {
+      display: none;
+    }
+
+    > .modal-content {
+      @include desktop {
+        padding: 0;
+        overflow: visible;
+      }
+    }
+
+    > .modal-actions {
+      @include desktop {
+        padding-right: 0;
+        padding-left: 0;
+        border: 0;
+      }
+    }
+  }
+
+  > .modal-overlay {
+    display: none;
+  }
+
+  form {
+    // style first level labels as headings
+    > .form-item > label,
+    > fieldset.form-item > legend {
+      @extend %h3;
+    }
+
+    > fieldset {
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  .label-optional {
+    display: none;
+  }
+
+  .filter__submit {
+    margin-top: .8rem;
+    margin-bottom: .8rem;
   }
 }

@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  preview: '@preview-accordion',
   variants: [
     {
       name: 'default',

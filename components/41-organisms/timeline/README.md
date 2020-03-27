@@ -13,8 +13,6 @@ For instance:
 
 Do not use the timeline component to present the programme of a current event. In this case use the <a href="{{path './programme.html'}}">programme component</a> instead.
 
-Do not use the timeline component to show progress or a linear flow. In these cases, use a <a href="{{path './multistep-form.html'}}">multistep form</a> or a <a href="{{path './wizard.html'}}">wizard</a> instead. <!-- @TODO describe in better way in which cases a multistep form or a wizard should be used instead -->
-
 Do not use the timeline component on overview pages or filter pages. Only use the timeline component on detail pages.
 
 ## How it works

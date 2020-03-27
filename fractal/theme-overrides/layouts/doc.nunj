@@ -1,0 +1,15 @@
+{% extends "layouts/pjax.nunj" if request.isPjax else "layouts/frame.nunj" %}
+
+{% block content %}
+
+<div class="Document">
+
+    <div class="Document-content">
+
+    {% block docContent %}{% endblock %}
+
+    </div>
+
+</div>
+
+{% endblock %}

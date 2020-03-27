@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
+  label: 'Call To Action',
   context: {
     type: 'link',
     title: 'This is a title',
@@ -14,20 +14,7 @@ module.exports = {
         description: false,
         links: [
           {
-            text: 'When the weather is hot',
-            url: '#'
-          }
-        ]
-      }
-    },
-    {
-      name: 'default with long title',
-      context: {
-        description: false,
-        title: 'Dit is een titel. Liquorice chocolate ice cream cheesecake jelly beans marzipan chocolate.',
-        links: [
-          {
-            text: 'When the weather is hot',
+            text: 'An internal link',
             url: '#'
           }
         ]
@@ -45,33 +32,52 @@ module.exports = {
       }
     },
     {
-      name: 'with secondary action (link)',
+      name: 'with secondary action',
       context: {
         links: [
           {
-            text: 'In the summertime',
+            text: 'Internal link',
             url: '#'
           },
           {
-            text: 'When the weather is hot',
+            text: 'Internal link',
             url: '#'
           }
         ]
       }
     },
     {
-      name: 'with secondary action (download)',
+      name: 'phone',
       context: {
+        type: 'phone',
+        title: 'Contact us',
+        description: 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.',
         links: [
           {
-            text: 'In the summertime',
-            url: '#'
+            text: '09 123 123',
+            url: 'tel:#'
           },
           {
-            text: 'When the weather is hot',
-            url: '#',
-            document: 'document',
-            size: '102kb'
+            text: 'Check all contact details',
+            url: '#'
+          }
+        ]
+      }
+    },
+    {
+      name: 'e-mail',
+      context: {
+        type: 'mail',
+        title: 'Contact us',
+        description: 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.',
+        links: [
+          {
+            text: 'info@stad.gent',
+            url: 'mailto:#'
+          },
+          {
+            text: 'Check all contact details',
+            url: '#'
           }
         ]
       }
@@ -82,48 +88,14 @@ module.exports = {
         type: 'download',
         links: [
           {
-            text: 'When the weather is hot',
-            url: '#',
-            document: 'document',
-            size: '102kb'
-          }
-        ]
-      }
-    },
-    {
-      name: 'download with secondary action (link)',
-      context: {
-        type: 'download',
-        links: [
-          {
-            text: 'In the summertime',
+            text: 'A download link',
             url: '#',
             document: 'document',
             size: '102kb'
           },
           {
-            text: 'When the weather is hot',
+            text: 'An internal link',
             url: '#'
-          }
-        ]
-      }
-    },
-    {
-      name: 'download with secondary action (download)',
-      context: {
-        type: 'download',
-        links: [
-          {
-            text: 'In the summertime',
-            url: '#',
-            document: 'document',
-            size: '102kb'
-          },
-          {
-            text: 'When the weather is hot',
-            url: '#',
-            document: 'document',
-            size: '102kb'
           }
         ]
       }
@@ -137,13 +109,13 @@ module.exports = {
             type: 'download',
             links: [
               {
-                text: 'In the summertime',
+                text: 'A download link',
                 url: '#',
                 document: 'document',
                 size: '102kb'
               },
               {
-                text: 'When the weather is hot',
+                text: 'Another download link',
                 url: '#',
                 document: 'document',
                 size: '102kb'
@@ -153,11 +125,11 @@ module.exports = {
           {
             links: [
               {
-                text: 'In the summertime',
+                text: 'An internal link',
                 url: '#'
               },
               {
-                text: 'When the weather is hot',
+                text: 'A download link',
                 url: '#',
                 document: 'document',
                 size: '102kb'
@@ -165,7 +137,6 @@ module.exports = {
             ]
           }
         ]
-
       }
     }
   ]

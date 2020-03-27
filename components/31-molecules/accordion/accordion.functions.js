@@ -35,7 +35,7 @@
             return;
           }
           if (!e.currentTarget.classList.contains('accordion--expanded')) {
-            e.currentTarget.setAttribute('hidden', 'true');
+            e.currentTarget.setAttribute('hidden', 'hidden');
           }
         },
         resizeEvent: (e, expandedContent) => {
@@ -132,14 +132,16 @@
           window.addEventListener('resize', onResize);
         }
       }
+
+      window.addEventListener('hashchange', hashEvent);
     };
 
     /**
      * Hide or show the accordion content.
      *
      * @param {Object} button  The accordion button.
-     * @param {boolean|false} isInitial  True if this is the first run triggered by
-     *   init().
+     * @param {boolean|false} isInitial  True if this is the first run
+     *   triggered by init().
      */
     const setVisibility = (button, isInitial) => {
 
@@ -159,7 +161,7 @@
         accordionContent.classList.remove(options.accordionExpandedClass);
         accordionContent.setAttribute('aria-hidden', 'true');
         if (isInitial) {
-          accordionContent.setAttribute('hidden', 'true');
+          accordionContent.setAttribute('hidden', 'hidden');
         }
         expandedContent.filter(content => content !== accordionContent);
         options.collapse(button, accordionContent);
@@ -175,14 +177,23 @@
       }
     };
 
+    const close = (button) => {
+      button.setAttribute('aria-expanded', 'false');
+      setVisibility(button);
+    };
+
     /**
      * Closes all accordion items.
      */
     const closeAll = () => {
       for (let i = buttons.length; i--;) {
-        buttons[i].setAttribute('aria-expanded', 'false');
-        setVisibility(buttons[i]);
+        close(buttons[i]);
       }
+    };
+
+    const open = (button) => {
+      button.setAttribute('aria-expanded', 'true');
+      setVisibility(button);
     };
 
     /**
@@ -190,8 +201,22 @@
      */
     const openAll = () => {
       for (let i = buttons.length; i--;) {
-        buttons[i].setAttribute('aria-expanded', 'true');
-        setVisibility(buttons[i]);
+        open(buttons[i]);
+      }
+    };
+
+    /**
+     * Open the accordion-content related to the location hash.
+     */
+    const hashEvent = () => {
+      let hash = window.location.hash.replace('#', '');
+      if (!hash) {
+        return;
+      }
+      const trigger = elem.querySelector(`[aria-controls=${hash}]`);
+      if (trigger) {
+        open(trigger);
+        trigger.focus();
       }
     };
 
@@ -201,6 +226,7 @@
     const init = () => {
       setInitial();
       addEvents();
+      hashEvent();
     };
 
     if (options.init !== false) {

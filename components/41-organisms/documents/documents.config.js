@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-  status: 'alpha',
   context: {
     unique_id: '1',
     documents: [
@@ -14,26 +13,21 @@ module.exports = {
         text: 'When the weather is hot',
         type: 'PDF',
         size: '102kb'
-      },
-      {
-        text: 'You can stretch right up and touch the sky',
-        type: 'PDF',
-        size: '102kb'
       }
     ],
     other_documents: [
       {
-        text: 'In the summertime',
+        text: 'And another one',
         type: 'PDF',
         size: '102kb'
       },
       {
-        text: 'When the weather is hot',
+        text: 'And another one',
         type: 'PDF',
         size: '102kb'
       },
       {
-        text: 'You can stretch right up and touch the sky',
+        text: 'And another one bites the dust',
         type: 'PDF',
         size: '102kb'
       }

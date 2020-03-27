@@ -1,11 +1,11 @@
 {
   "name": "gent_styleguide",
-  "version": "3.0.0-beta17",
+  "version": "3.0.0",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
-    "@frctl/fractal": "^1.1.7",
+    "@frctl/fractal": "^1.2.1",
     "@frctl/twig": "^1.0.0-beta.5",
     "cssnano": "^4.1.10",
     "fs-extra": "^7.0.1",
@@ -44,6 +44,7 @@
   ],
   "license": "GPL-2.0",
   "dependencies": {
+    "@digipolis-gent/modal": "^1.0.2",
     "allietabs": "^1.2.2",
     "baguettebox.js": "^1.11.0",
     "body-scroll-lock": "^2.6.4",
@@ -56,7 +57,7 @@
     "susy": "^3.0.1"
   },
   "optionalDependencies": {
-    "gulp-axe-webdriver": "^3.1.0"
+    "gulp-axe-webdriver": "^3.1.3"
   },
   "resolutions": {
     "**/cli": "^1.0.0",

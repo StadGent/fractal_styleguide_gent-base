@@ -105,7 +105,7 @@ h2.styleguide-title {
 }
 
 h3.styleguide-title {
-  @include theme('color', 'color-primary', 'styleguide-h3-color');
+  @include theme('color', 'color-primary--darken-2', 'styleguide-h3-color');
   @include theme('border-color', 'color-primary--lighten-1', 'styleguide-h3-border-bottom');
 
   border-bottom: 1px dotted;

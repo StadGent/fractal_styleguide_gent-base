@@ -26,8 +26,8 @@
     {% endif %}
 
     {% if auth %}
-      {% include '@mijn-gent-block' with {
-        id: _self.name ~ '-mijn-gent',
+      {% include '@authentication' with {
+        id: _self.name ~ '-authentication',
         items: mijn_gent_block_items,
         auth: mijn_gent_block_auth,
         image: mijn_gent_block_image,
@@ -46,8 +46,8 @@
 
       {% set Auth %}
         {% if auth %}
-          {% include '@mijn-gent-block' with {
-            id: _self.name ~ '-mijn-gent-mobile',
+          {% include '@authentication' with {
+            id: _self.name ~ '-authentication-mobile',
             items: mijn_gent_block_items,
             auth: mijn_gent_block_auth,
             image: mijn_gent_block_image,
@@ -65,7 +65,7 @@
         {% endif %}
       {% endset %}
 
-      {% include '@menu' with {
+      {% include '@main-menu' with {
         items: menu_items,
         auth: Auth,
         translate: Translate,
@@ -88,20 +88,22 @@
 
   <hr/>
   {% if hero_image_src %}
-    <figure class="hero">
+    <figure class="hero{{ mobile_hero ? ' hero--mobile' : '' }}">
       {% if theme %}
-        <div class="theme">
+        <div class="theme{{ theme_light ? ' theme--light' : '' }}">
           <div class="theme-title">
             {% include '@image' with {
-              'src': figure_logo_src_light | path,
+              'src': (theme_light ? figure_logo_src_dark : figure_logo_src_light) | path,
               'alt_text': figure_logo_alt_text,
               'modifier': null,
               'ratio': null
             } %}
+            {% if theme_title %}
             {% include '@heading' with {
               'type': 'h1',
               'heading_text': hero_title
             } %}
+            {% endif %}
           </div>
         </div>
       {% endif %}
