@@ -31,6 +31,6 @@ if (fs.existsSync(publicRootPath)) {
 * When downloading the NPM package and running npm install or yarn install the "components" directory
 * does not exist, so we don't have to create this file here.
 */
-if (fs.existsSync(componentsRootPath)) {
-  fs.copyFileSync(path.resolve(__dirname, 'main_cli.scss'), `${componentsRootPath}/main_cli.scss`);
-}
+//if (fs.existsSync(componentsRootPath)) {
+//  fs.copyFileSync(path.resolve(__dirname, 'main_cli.scss'), `${componentsRootPath}/main_cli.scss`);
+//}
