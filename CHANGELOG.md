@@ -6,7 +6,7 @@ All notable changes to this style guide are documented here.
 
 ### Fixed
 
-* Added check to make sure checkbox input element is loaded.
+* Checkbox_filter.functions.js: added check to make sure checkbox input element is loaded.
 
 
 ## [3.0.0]
