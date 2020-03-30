@@ -242,9 +242,11 @@
     const checkboxLoop = next => {
       for (let i = checkboxes.length; i--;) {
         let checkboxWrapper = checkboxes[i];
-        let checkbox = checkboxWrapper.querySelector('input[type=checkbox]');
-        let label = checkboxWrapper.querySelector('label');
-        next({checkboxWrapper, checkbox, label});
+        if (checkboxWrapper.querySelector('input[type=checkbox]')) {
+          let checkbox = checkboxWrapper.querySelector('input[type=checkbox]');
+          let label = checkboxWrapper.querySelector('label');
+          next({checkboxWrapper, checkbox, label});
+        }
       }
     };
 
@@ -282,7 +284,6 @@
       });
 
       updateCount();
-
       filter(true);
     };
 
@@ -322,13 +323,16 @@
       if (openBtn) {
         openBtn.addEventListener('click', (e) => {
           selectedFilters = [];
+          let count = 0;
 
           checkboxLoop(({checkbox}) => {
             if (checkbox.checked) {
               selectedFilters.push(checkbox);
             }
+            count++;
           });
 
+          updateResult(count);
           document.addEventListener('keydown', handleKeyboardInput);
         });
       }
