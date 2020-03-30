@@ -242,9 +242,11 @@
     const checkboxLoop = next => {
       for (let i = checkboxes.length; i--;) {
         let checkboxWrapper = checkboxes[i];
-        if (checkboxWrapper.querySelector('input[type=checkbox]')) {
-          let checkbox = checkboxWrapper.querySelector('input[type=checkbox]');
-          let label = checkboxWrapper.querySelector('label');
+        let checkbox = checkboxWrapper.querySelector('input[type=checkbox]');
+        let label = checkboxWrapper.querySelector('label');
+
+        // Sometimes the input element isn't rendered at this point.
+        if (checkbox && label) {
           next({checkboxWrapper, checkbox, label});
         }
       }
