@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [3.0.1]
+
+### Fixed
+
+* Checkbox_filter.functions.js: added check to make sure checkbox input element is loaded.
+
 ## [3.0.0]
 
 ### Added
@@ -832,6 +838,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0...3.0.1
 [3.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta17...3.0.0
 [3.0.0-beta17]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta16...3.0.0-beta17
 [3.0.0-beta16]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta15...3.0.0-beta16
