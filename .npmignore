@@ -30,3 +30,5 @@ gulpfile.js
 package-lock.json
 *.tgz
 INSTALL.md
+
+**/.htaccess
