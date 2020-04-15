@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Fixed
+
+* Fixed SVG for link, loupe, mail, newsletter and phone.
+
 ## [3.0.1]
 
 ### Fixed
