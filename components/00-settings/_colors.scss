@@ -292,5 +292,81 @@ $themes: (
     'button-secondary-focus-color': color('dark-gray', 3),
     'button-secondary-focus-background': color('dark-gray', -4),
     'button-secondary-focus-border-color': color('dark-gray', -1),
+  ),
+  'blue': (
+    // Required colors!
+    'color-primary': color('blue', 3),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
+    'color-success': color('green'),
+    'color-warning': color('blue', 3),
+    'color-error': color('red'),
+    'color-box-shadow': $box-shadow-primary color('dark-gray', -3),
+    'color-box-shadow-hover': $box-shadow-primary color('dark-gray', -2),
+    'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
+    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
+    'color-box-shadow-secondary-dark': $box-shadow-secondary color('dark-gray', -3),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('blue', -4), 1280, 21),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('blue', 1), 1280, 21),
+
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
+    'link-color': color('dark-gray'),
+    'link-hover-color': color('dark-gray', 2),
+    'link-underline-color': color('dark-gray', 2),
+
+    'button-primary-background': color('dark-gray'),
+    'button-primary-border-color': color('dark-gray'),
+    'button-primary-hover-background': color('dark-gray', 1),
+    'button-primary-hover-border-color': color('dark-gray', 1),
+    'button-primary-focus-background': color('dark-gray', 3),
+    'button-primary-focus-border-color': color('dark-gray', 3),
+
+    'button-secondary-border-color': color('dark-gray', -2),
+    'button-secondary-color': color('dark-gray'),
+    'button-secondary-hover-color': color('dark-gray', 1),
+    'button-secondary-hover-background': color('dark-gray', -4),
+    'button-secondary-hover-border-color': color('dark-gray', -1),
+    'button-secondary-focus-color': color('dark-gray', 3),
+    'button-secondary-focus-background': color('dark-gray', -4),
+    'button-secondary-focus-border-color': color('dark-gray', -1),
+  ),
+  'teal': (
+    // Required colors!
+    'color-primary': color('teal'),
+    'color-secondary': color('white'),
+    'color-tertiary': color('dark-gray'),
+    'color-success': color('green'),
+    'color-warning': color('teal'),
+    'color-error': color('red'),
+    'color-box-shadow': $box-shadow-primary color('dark-gray', -3),
+    'color-box-shadow-hover': $box-shadow-primary color('dark-gray', -2),
+    'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
+    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
+    'color-box-shadow-secondary-dark': $box-shadow-secondary color('dark-gray', -3),
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('teal', -4), 1280, 21),
+    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('teal', 1), 1280, 21),
+
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
+    'link-color': color('dark-gray'),
+    'link-hover-color': color('dark-gray', 2),
+    'link-underline-color': color('dark-gray', 2),
+
+    'button-primary-background': color('dark-gray'),
+    'button-primary-border-color': color('dark-gray'),
+    'button-primary-hover-background': color('dark-gray', 1),
+    'button-primary-hover-border-color': color('dark-gray', 1),
+    'button-primary-focus-background': color('dark-gray', 3),
+    'button-primary-focus-border-color': color('dark-gray', 3),
+
+    'button-secondary-border-color': color('dark-gray', -2),
+    'button-secondary-color': color('dark-gray'),
+    'button-secondary-hover-color': color('dark-gray', 1),
+    'button-secondary-hover-background': color('dark-gray', -4),
+    'button-secondary-hover-border-color': color('dark-gray', -1),
+    'button-secondary-focus-color': color('dark-gray', 3),
+    'button-secondary-focus-background': color('dark-gray', -4),
+    'button-secondary-focus-border-color': color('dark-gray', -1),
   )
 ) !default;
