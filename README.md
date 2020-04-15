@@ -168,3 +168,16 @@ To prevent FOUT, we advise using webfontLoader.
   });
 </script>
 ```
+
+### Supported browsers
+
+- todo
+
+### Breakpoints
+
+- Mobile: 320px
+- Phablet: 576px
+- Tablet: 768px
+- Desktop: 960px
+- Desktop XL: 1680px
+- Max content: 1280px
