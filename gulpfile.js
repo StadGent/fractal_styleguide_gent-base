@@ -79,6 +79,9 @@ const _getColors = () => {
   if (!colors) {
     return [];
   }
+  // Blue theme wants the 'darken-3' variant for
+  // spot images, favicons and logo.
+  colors.context.secondary.blue = '#022064';
 
   return colors.context.secondary;
 };
