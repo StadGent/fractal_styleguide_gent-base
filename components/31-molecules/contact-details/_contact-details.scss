@@ -32,6 +32,13 @@ $avatar-width: 14rem;
         box-shadow: none;
       }
     }
+
+    .accolade {
+      &::before,
+      &::after {
+        @include theme('background', 'color-secondary', 'highlight-background');
+      }
+    }
   }
 
   &-column {
