@@ -35,7 +35,7 @@
   .accolade {
     &::before,
     &::after {
-      @include theme('background', 'color-primary--lighten-5', 'highlight-background');
+      @include theme('background', 'color-primary--lighten-5', 'highlight-inverted-background');
     }
   }
 }

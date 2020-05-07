@@ -2,7 +2,7 @@
 
 All notable changes to this style guide are documented here.
 
-## [3.0.3]
+## [Unreleased]
 
 ### Fixed
 
