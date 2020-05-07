@@ -36,7 +36,7 @@ $avatar-width: 14rem;
     .accolade {
       &::before,
       &::after {
-        @include theme('background', 'color-secondary', 'highlight-background');
+        @include theme('background', 'color-secondary', 'contact-details-inverted-background-color');
       }
     }
   }
