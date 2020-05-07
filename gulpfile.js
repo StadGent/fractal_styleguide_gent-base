@@ -758,8 +758,61 @@ gulp.task('axe:components', callback => {
   }));
 });
 
+//gulp.task('axe', gulp.series('build', gulp.series('axe:input', 'axe:layout', 'axe:components')));
 
-gulp.task('axe', gulp.series('build', gulp.series('axe:input', 'axe:layout', 'axe:components')));
+gulp.task('axe',
+  gulp.series(
+    callback => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Run first build');
+      callback();
+    },
+    'build',
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing default colour scheme CYAN');
+      callback();
+    },
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components'),
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing colour scheme ORANGE');
+      fractal.components.set('default.meta.cs', {
+        color: 'orange',
+        hex: '#f95706',
+      });
+      callback();
+    },
+    'fractal:build',
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components'),
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing colour scheme BLUE');
+      fractal.components.set('default.meta.cs', {
+        color: 'blue',
+        hex: '#0340c7',
+      });
+      callback();
+    },
+    'fractal:build',
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components'),
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing colour scheme TEAL');
+      fractal.components.set('default.meta.cs', {
+        color: 'teal',
+        hex: '#29cfc9',
+      });
+      callback();
+    },
+    'fractal:build',
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components'),
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing colour scheme GREEN');
+      fractal.components.set('default.meta.cs', {
+        color: 'green',
+        hex: '#38ab30',
+      });
+      callback();
+    },
+    'fractal:build',
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components')
+  ));
 
 /**
  * Publish task:

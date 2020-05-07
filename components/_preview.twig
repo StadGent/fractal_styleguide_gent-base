@@ -1,8 +1,10 @@
-{% if scheme is empty %}
-   {% set scheme = {
-     color: 'cyan',
-     hex: '#009DE0',
-   } %}
+{% if _target.meta.cs is empty %}
+  {% set scheme = {
+    color: 'cyan',
+    hex: '#009DE0',
+  } %}
+{% else %}
+  {% set scheme = _target.meta.cs %}
 {% endif %}
 
 <!DOCTYPE html>
