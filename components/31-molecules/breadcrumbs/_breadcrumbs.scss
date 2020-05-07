@@ -61,7 +61,7 @@
   .expandable {
     a {
       @include reset-link-background;
-      @include theme('border-color', 'color-primary', 'breadcrumb-expandable-color');
+      @include theme('border-color', 'color-tertiary', 'breadcrumb-expandable-color');
 
       padding: .2rem .3rem .4rem;
       border: 1px solid;
@@ -70,7 +70,7 @@
 
       &:hover,
       &:focus {
-        @include theme('background-color', 'color-primary--lighten-4', 'tag-background-color-hover');
+        @include theme('background-color', 'color-tertiary--lighten-4', 'breadcrumb-expandable-background-color-hover');
       }
     }
   }

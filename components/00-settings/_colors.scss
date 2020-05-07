@@ -226,6 +226,9 @@ $themes: (
 
     'focus-outline': color('cyan-wcag'),
 
+    'breadcrumb-expandable-color': color('cyan'),
+    'breadcrumb-expandable-background-color-hover': color('cyan', -4),
+
     'button-primary-background': color('cyan-wcag'),
     'button-primary-border-color': color('cyan-wcag'),
     'button-primary-hover-background': color('cyan-wcag', 1),
