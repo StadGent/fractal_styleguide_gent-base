@@ -243,6 +243,22 @@ $themes: (
 
     'image-gallery-show-more-background-color': color('cyan-wcag', 3),
 
+    'radio-background-color-checked': color('cyan', -5),
+    'radio-border-color-checked': color('cyan'),
+    'radio-checkmark-color': color('cyan'),
+
+    'radio-background-color-hover-and-checked': color('cyan', -3),
+    'radio-border-color-hover-and-checked': color('cyan', 3),
+    'radio-color-hover-and-checked': color('cyan', 3),
+
+    'checkbox-background-color-checked': color('cyan', -5),
+    'checkbox-border-color-checked': color('cyan'),
+    'checkbox-checkmark-color': color('cyan'),
+
+    'checkbox-background-color-hover-and-checked': color('cyan', -3),
+    'checkbox-border-color-hover-and-checked': color('cyan', 3),
+    'checkbox-color-hover-and-checked': color('cyan', 3),
+
     'readspeaker-icon-color': color('cyan-wcag'),
     'readspeaker-icon-border-color': color('cyan-wcag', -2),
 
