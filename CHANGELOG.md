@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Fixed
+
+* Fixed background accolade in contact-details context.
+
 ## [3.0.2]
 
 ### Fixed
