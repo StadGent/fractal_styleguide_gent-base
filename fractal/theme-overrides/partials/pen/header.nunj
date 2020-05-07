@@ -11,6 +11,7 @@
           <option value="cs--cyan">Default</option>
           <option value="cs--blue">Blue</option>
           <option value="cs--teal">Teal</option>
+          <option value="cs--green">Green</option>
           <option value="cs--orange">Orange</option>
         </select>
     </div>
