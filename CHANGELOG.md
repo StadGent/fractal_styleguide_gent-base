@@ -7,6 +7,17 @@ All notable changes to this style guide are documented here.
 ### Fixed
 
 * Fixed background accolade in contact-details context.
+* Fixed teaser hidden read more text order.  
+  'Read more' links should be **followed** by a hidden text, not preceded.  
+  This was incorrect in our templates.  
+  Please check your projects to see if you had copied this error.  
+  The correct template is:
+  ```html
+     <a href="#" class="read-more standalone-link">
+       Read more
+       <span class="visually-hidden">about {{ usually the title of the teaser }}</span>
+     </a>
+  ```
 
 ## [3.0.2]
 
