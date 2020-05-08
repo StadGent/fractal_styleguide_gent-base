@@ -15,8 +15,20 @@ All notable changes to this style guide are documented here.
   ```html
      <a href="#" class="read-more standalone-link">
        Read more
-       <span class="visually-hidden">about {{ usually the title of the teaser }}</span>
+       <span class="visually-hidden">about _usually the title of the teaser_</span>
      </a>
+  ```
+* Fixed filter layout template.  
+  The form actions ('show result') were outside of the filter form tag.  
+  **This template fix will not break the styling of the previous template,  
+  but it is advisable to check your projects.**  
+  The form tag should be placed on the .modal-inner element if used as a filter form. 
+  ```html
+     <form class="modal-inner" action="">
+       <div class="modal-header"></div>
+       <div class="modal-content"></div>
+       <div class="modal-actions"></div>
+     </form>  
   ```
 
 ## [3.0.2]
