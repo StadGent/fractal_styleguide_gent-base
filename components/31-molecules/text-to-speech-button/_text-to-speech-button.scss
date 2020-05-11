@@ -10,17 +10,15 @@
   &:focus,
   &:hover {
     i {
-      @include theme('background-color', 'color-primary', 'readspeaker-icon-color');
-
-      [class*='cs--'] & {
-        color: color('white');
-      }
+      @include theme('background-color', 'color-primary--lighten-5', 'button-secondary-hover-background');
+      @include theme('color', 'color-primary', 'button-secondary-hover-color');
+      @include theme('border-color', 'color-primary--lighten-2', 'button-secondary-hover-border-color');
     }
   }
 
   i {
-    @include theme('color', 'color-primary', 'readspeaker-icon-color');
-    @include theme('border-color', 'color-primary', 'readspeaker-icon-border-color');
+    @include theme('color', 'color-primary', 'button-secondary-color');
+    @include theme('border-color', 'color-primary--lighten-1', 'button-secondary-border-color');
 
     display: inline-block;
     margin-right: .3rem;

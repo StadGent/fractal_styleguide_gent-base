@@ -1,8 +1,10 @@
-{% if scheme is empty %}
-   {% set scheme = {
-     color: 'cyan',
-     hex: '#009DE0',
-   } %}
+{% if _target.meta.cs is empty %}
+  {% set scheme = {
+    color: 'cyan',
+    hex: '#009DE0',
+  } %}
+{% else %}
+  {% set scheme = _target.meta.cs %}
 {% endif %}
 
 <!DOCTYPE html>
@@ -87,5 +89,28 @@
     <script type="text/javascript" src="{{ '/styleguide/js/file.bindings-min.js' | path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/breadcrumbs.bindings-min.js' | path }}"></script>
 
+    <script>
+      var cs = getCookie('cs');
+
+      if (cs) {
+        document.body.className = cs;
+      }
+
+      function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return null;
+      }
+    </script>
   </body>
 </html>
