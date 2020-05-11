@@ -758,7 +758,6 @@ gulp.task('axe:components', callback => {
   }));
 });
 
-//gulp.task('axe', gulp.series('build', gulp.series('axe:input', 'axe:layout', 'axe:components')));
 
 gulp.task('axe',
   gulp.series(
