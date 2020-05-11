@@ -56,7 +56,7 @@
         }
 
         > span {
-          @include link-background('color-primary', null, 'link-background-color');
+          @include link-background('color-primary', null, 'link-underline-color');
         }
       }
 
