@@ -4,6 +4,11 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
+## Updated
+
+* Updated the header search background and border colors.
+* Updated the authentication link; added a black user icon.
+
 ### Fixed
 
 * Fixed background accolade in contact-details context.
