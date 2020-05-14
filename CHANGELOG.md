@@ -15,6 +15,8 @@ All notable changes to this style guide are documented here.
   unless you decided to override the variables or used the `theme` mixin yourself.**  
   For a detailed overview of all affected components,
   check out the git compare for this release and look for the `theme`mixin.
+* Updated the header search background and border colors.
+* Updated the authentication link; added a black user icon.
 
 ### Fixed
 
