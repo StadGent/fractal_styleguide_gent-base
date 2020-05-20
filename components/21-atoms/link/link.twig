@@ -15,12 +15,12 @@
   {% if title %}
    title="{{ title }}"
   {% endif %} >
-  {% if labeled_by %}
-    <span class="visually-hidden">
-      {{ labeled_by }}
-    </span>
-  {% endif %}
   {% spaceless %}
       {{ text }}
   {% endspaceless %}
+  {% if hidden_read_more %}
+      <span class="visually-hidden">
+          {{ hidden_read_more }}
+      </span>
+  {% endif %}
 </a>

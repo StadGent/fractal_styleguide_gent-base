@@ -35,6 +35,8 @@
 
   &,
   &:focus {
-    background: svg-as-background('search', color('cyan-wcag'), 32, 32) no-repeat left .4rem center;
+    @include theme-content('color-primary', 'link-color') {
+      background: svg-as-background('search', $theme-color, 32, 32) no-repeat left .4rem center;
+    };
   }
 }

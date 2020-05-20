@@ -1,7 +1,5 @@
 <div class="sidebar-layout filter">
   {% set modalContent %}
-
-    <form action="#result">
       {% include '@form-item' with {
         label: "Name",
         id: _self.name ~ "-name_id",
@@ -113,8 +111,6 @@
           }
         ]
       } %}
-
-    </form>
   {% endset %}
   {% include "@modal" with {
     id: 'filter',
@@ -122,7 +118,9 @@
     title_heading_level: 'h2',
     classes: 'sidebar filter-section has-custom-binding modal--fixed-height',
     content: modalContent,
-    actions: '<button type="submit" class="button button-primary filter__submit">Show result</button>'
+    actions: '<button type="submit" class="button button-primary filter__submit">Show result</button>',
+    modal_inner_tag: 'form',
+    modal_inner_action: '#result'
   } %}
 
   <section class="content result-section" id="result">

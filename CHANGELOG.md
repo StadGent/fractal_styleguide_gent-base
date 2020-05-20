@@ -2,6 +2,49 @@
 
 All notable changes to this style guide are documented here.
 
+## [3.1.0]
+
+### Added
+
+* Added blue, teal and green themes.
+
+### Updated
+
+* Updated themeable color variables.  
+  **This should not impact your applications
+  unless you decided to override the variables or used the `theme` mixin yourself.**  
+  For a detailed overview of all affected components,
+  check out the git compare for this release and look for the `theme`mixin.
+* Updated the header search background and border colors.
+* Updated the authentication link; added a black user icon.
+
+### Fixed
+
+* Fixed background accolade in contact-details context.
+* Fixed teaser hidden read more text order.  
+  'Read more' links should be **followed** by a hidden text, not preceded.  
+  This was incorrect in our templates.  
+  Please check your projects to see if you had copied this error.  
+  The correct template is:
+  ```html
+     <a href="#" class="read-more standalone-link">
+       Read more
+       <span class="visually-hidden">about _usually the title of the teaser_</span>
+     </a>
+  ```
+* Fixed filter layout template.  
+  The form actions ('show result') were outside of the filter form tag.  
+  **This template fix will not break the styling of the previous template,  
+  but it is advisable to check your projects.**  
+  The form tag should be placed on the .modal-inner element if used as a filter form. 
+  ```html
+     <form class="modal-inner" action="">
+       <div class="modal-header"></div>
+       <div class="modal-content"></div>
+       <div class="modal-actions"></div>
+     </form>  
+  ```
+
 ## [3.0.2]
 
 ### Fixed
@@ -844,6 +887,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.2...3.1.0
 [3.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.1...3.0.2
 [3.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0...3.0.1
 [3.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0-beta17...3.0.0

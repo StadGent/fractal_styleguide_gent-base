@@ -129,7 +129,8 @@
     display: none;
   }
 
-  form {
+  form,
+  form .modal-content {
     // style first level labels as headings
     > .form-item > label,
     > fieldset.form-item > legend {

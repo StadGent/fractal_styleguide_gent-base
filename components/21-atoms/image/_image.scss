@@ -11,15 +11,16 @@ figure {
 }
 
 .image-wrapper {
+  @include theme('background-color', 'color-primary--lighten-5', 'form-step--active-border-color');
+
   position: relative;
   padding-bottom: calc(100% / 8 * 5); // Default ratio 8:5
-  background: no-repeat center center color('cyan', -5);
-  background-size: 5rem;
   overflow: hidden;
 
   &:empty {
     &::before {
       @include spot-image('camera-light', auto);
+      @include theme('color', 'color-primary', 'image-spot-shadow');
 
       position: absolute;
       top: 0;
@@ -31,7 +32,7 @@ figure {
       margin: auto;
       border-radius: 50%;
       background-size: contain;
-      box-shadow: 2px 7px 14px 0 rgba(0, 125, 179, .06), 0 4px 12px 0 rgba(0, 125, 179, .1);
+      box-shadow: 0 10px 35px -25px;
       content: "";
 
       @include tablet {
@@ -55,13 +56,14 @@ figure {
     min-height: 100%;
 
     &::before {
+      @include theme('background-color', 'color-primary--lighten-5', 'form-step--active-border-color');
+
       display: block;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: color('cyan', -5);
       content: "";
     }
 
