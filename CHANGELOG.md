@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Fixed
+
+* STIJ-324: Unified icon labels in teasers.
+
 ## [3.1.0]
 
 ### Added
