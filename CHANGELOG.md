@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Added
+
+* STIJ-333: Added button with icon on the left side variation.
+
 ## [3.1.0]
 
 ### Added
