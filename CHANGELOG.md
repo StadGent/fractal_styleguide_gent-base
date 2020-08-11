@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Fixed
+
+* STIJ-357: Unified multistep form links with link atom.
+
 ## [3.1.0]
 
 ### Added
