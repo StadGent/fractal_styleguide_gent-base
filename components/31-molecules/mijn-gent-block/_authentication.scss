@@ -20,11 +20,20 @@
   }
 
   .login-link {
-    text-overflow: ellipsis;
-    overflow: hidden;
+    @include icon(user, before);
 
-    &::after {
-      content: none;
+    position: relative;
+    margin-left: 1.6rem;
+    line-height: 1;
+    text-overflow: ellipsis;
+
+    &::before {
+      @include theme('color', 'color-tertiary', 'login-link-icon-color');
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -1.6rem;
     }
   }
 

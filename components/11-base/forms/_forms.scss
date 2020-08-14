@@ -259,17 +259,6 @@ $field-icon-padding: 2.5rem;
       }
 
       &::after {
-        @include theme(
-          "background-color",
-          "color-primary--lighten-1",
-          "radio-background-color"
-        );
-        @include theme(
-          "border-color",
-          "color-primary--lighten-1",
-          "radio-border-color"
-        );
-
         top: .3rem;
         left: .3rem;
         width: .4rem;
@@ -360,18 +349,18 @@ $field-icon-padding: 2.5rem;
         + label::before {
           @include theme(
             "background-color",
-            "color-primary--lighten-5",
+            "color-tertiary--lighten-5",
             "checkbox-background-color-checked"
           );
           @include theme(
             "border-color",
-            "color-primary",
+            "color-tertiary",
             "checkbox-border-color-checked"
           );
         }
 
         + label::after {
-          @include theme("color", "color-primary", "checkbox-checkmark-color");
+          @include theme("color", "color-tertiary", "checkbox-checkmark-color");
         }
       }
     }
@@ -390,18 +379,18 @@ $field-icon-padding: 2.5rem;
         + label::before {
           @include theme(
             "background-color",
-            "color-primary--lighten-5",
+            "color-tertiary--lighten-5",
             "radio-background-color-checked"
           );
           @include theme(
             "border-color",
-            "color-primary",
+            "color-tertiary",
             "radio-border-color-checked"
           );
         }
 
         + label::after {
-          @include theme("color", "color-primary", "radio-checkmark-color");
+          @include theme("background-color", "color-tertiary", "radio-checkmark-color");
           content: "";
         }
       }

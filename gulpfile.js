@@ -79,6 +79,9 @@ const _getColors = () => {
   if (!colors) {
     return [];
   }
+  // Blue theme wants the 'darken-3' variant for
+  // spot images, favicons and logo.
+  colors.context.secondary.blue = '#022064';
 
   return colors.context.secondary;
 };
@@ -135,7 +138,7 @@ const axeOptions = {
 /**
  * Inject SASS partial paths as imports in main_cli.scss.
  */
-gulp.task('styles:inject', () => {
+gulp.task('styles:inject', (done) => {
   const injectSettingsFiles = gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
   const injectMixinsFiles = gulp.src('components/00-mixins/**/*.s+(a|c)ss', {read: false});
   const injectBaseFiles = gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
@@ -144,67 +147,37 @@ gulp.task('styles:inject', () => {
   const injectOrganismsFiles = gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
   const injectLayoutsFiles = gulp.src('components/61-layouts/**/*.s+(a|c)ss', {read: false});
 
-  const transformFilepath = (filepath) => `@import "${filepath}";`;
-
-  const injectSettingsOptions = {
-    transform: transformFilepath,
-    starttag: '// inject:settings',
-    endtag: '// endinject',
-    addRootSlash: false,
-    relative: true
-  };
-  const injectMixinsOptions = {
-    transform: transformFilepath,
-    starttag: '// inject:mixins',
-    endtag: '// endinject',
-    addRootSlash: false,
-    relative: true
-  };
-  const injectBaseOptions = {
-    transform: transformFilepath,
-    starttag: '// inject:base',
-    endtag: '// endinject',
-    addRootSlash: false,
-    relative: true
-  };
-  const injectAtomsOptions = {
-    transform: transformFilepath,
-    starttag: '// inject:atoms',
-    endtag: '// endinject',
-    addRootSlash: false,
-    relative: true
-  };
-  const injectMoleculesOptions = {
-    transform: transformFilepath,
-    starttag: '// inject:molecules',
-    endtag: '// endinject',
-    addRootSlash: false,
-    relative: true
-  };
-  const injectOrganismsOptions = {
-    transform: transformFilepath,
-    starttag: '// inject:organisms',
-    endtag: '// endinject',
-    addRootSlash: false,
-    relative: true
-  };
-  const injectLayoutsOptions = {
-    transform: transformFilepath,
-    starttag: '// inject:layouts',
+  const injectOptions = {
+    transform: (filepath) => `@import "${filepath}";`,
+    starttag: '// inject',
     endtag: '// endinject',
     addRootSlash: false,
     relative: true
   };
 
-  return gulp.src('components/main_cli.scss', {allowEmpty: true})
-    .pipe(inject(injectSettingsFiles, injectSettingsOptions))
-    .pipe(inject(injectMixinsFiles, injectMixinsOptions))
-    .pipe(inject(injectBaseFiles, injectBaseOptions))
-    .pipe(inject(injectAtomsFiles, injectAtomsOptions))
-    .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
-    .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
-    .pipe(inject(injectLayoutsFiles, injectLayoutsOptions))
-    .pipe(gulp.dest('build/styleguide/sass/'));
+  return gulp.parallel(
+    () => gulp.src('components/settings.scss', {allowEmpty: true})
+      .pipe(inject(injectSettingsFiles, injectOptions))
+      .pipe(gulp.dest('build/styleguide/sass/')),
+    () => gulp.src('components/mixins.scss', {allowEmpty: true})
+      .pipe(inject(injectMixinsFiles, injectOptions))
+      .pipe(gulp.dest('build/styleguide/sass/')),
+    () => gulp.src('components/base.scss', {allowEmpty: true})
+      .pipe(inject(injectBaseFiles, injectOptions))
+      .pipe(gulp.dest('build/styleguide/sass/')),
+    () => gulp.src('components/atoms.scss', {allowEmpty: true})
+      .pipe(inject(injectAtomsFiles, injectOptions))
+      .pipe(gulp.dest('build/styleguide/sass/')),
+    () => gulp.src('components/molecules.scss', {allowEmpty: true})
+      .pipe(inject(injectMoleculesFiles, injectOptions))
+      .pipe(gulp.dest('build/styleguide/sass/')),
+    () => gulp.src('components/organisms.scss', {allowEmpty: true})
+      .pipe(inject(injectOrganismsFiles, injectOptions))
+      .pipe(gulp.dest('build/styleguide/sass/')),
+    () => gulp.src('components/layouts.scss', {allowEmpty: true})
+      .pipe(inject(injectLayoutsFiles, injectOptions))
+      .pipe(gulp.dest('build/styleguide/sass/')),
+  )(done);
 });
 
 /**
@@ -273,7 +246,7 @@ gulp.task('styles:watch', () => {
  * Extract SCSS from the components folder.
  */
 gulp.task('styles:extract', () => {
-  return gulp.src(['components/**/*.s+(a|c)ss', '!components/main_cli.scss', '!components/styleguide.scss'])
+  return gulp.src(['components/**/*.s+(a|c)ss', '!components/styleguide.scss'])
     .pipe(gulp.dest('./build/styleguide/sass/'));
 });
 
@@ -698,10 +671,9 @@ gulp.task('compile', gulp.series(
     'js:build',
     'js:dist',
     'images:minify'
-  )
-  , gulp.parallel(
-    'styles:extract',
-    'styles:inject')
+  ),
+  'styles:extract',
+  'styles:inject'
 ), callback => callback());
 
 gulp.task('compile:dev', gulp.series(
@@ -787,7 +759,59 @@ gulp.task('axe:components', callback => {
 });
 
 
-gulp.task('axe', gulp.series('build', gulp.series('axe:input', 'axe:layout', 'axe:components')));
+gulp.task('axe',
+  gulp.series(
+    callback => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Run first build');
+      callback();
+    },
+    'build',
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing default colour scheme CYAN');
+      callback();
+    },
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components'),
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing colour scheme ORANGE');
+      fractal.components.set('default.meta.cs', {
+        color: 'orange',
+        hex: '#f95706',
+      });
+      callback();
+    },
+    'fractal:build',
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components'),
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing colour scheme BLUE');
+      fractal.components.set('default.meta.cs', {
+        color: 'blue',
+        hex: '#0340c7',
+      });
+      callback();
+    },
+    'fractal:build',
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components'),
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing colour scheme TEAL');
+      fractal.components.set('default.meta.cs', {
+        color: 'teal',
+        hex: '#29cfc9',
+      });
+      callback();
+    },
+    'fractal:build',
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components'),
+    (callback) => {
+      console.log('\x1b[32m%s\x1b[0m', 'AXE : Testing colour scheme GREEN');
+      fractal.components.set('default.meta.cs', {
+        color: 'green',
+        hex: '#38ab30',
+      });
+      callback();
+    },
+    'fractal:build',
+    gulp.parallel('axe:input', 'axe:layout', 'axe:components')
+  ));
 
 /**
  * Publish task:
