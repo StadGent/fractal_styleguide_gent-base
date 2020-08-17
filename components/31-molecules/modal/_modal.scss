@@ -98,13 +98,11 @@
       &:first-of-type {
         border-top-left-radius: border-radius('radius-2');
         border-top-right-radius: border-radius('radius-2');
-        overflow: hidden;
       }
 
       &:last-of-type {
         border-bottom-left-radius: border-radius('radius-2');
         border-bottom-right-radius: border-radius('radius-2');
-        overflow: hidden;
       }
     }
   }

@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Fixed
+
+* Content of the mobile menu was not visible when using Internet Explorer.
+
 ## [3.1.0]
 
 ### Added
