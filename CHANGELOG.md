@@ -7,6 +7,8 @@ All notable changes to this style guide are documented here.
 ### Fixed
 
 * STIJ-357: Unified multistep form links with link atom.
+* STIJ-324: Unified icon labels in teasers.
+* STIJ-352: Changed programme spoticon size.
 
 ## [3.1.0]
 
