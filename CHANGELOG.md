@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Fixed
+
+* STIJ-352: Changed programme spoticon size.
+
 ## [3.1.0]
 
 ### Added
