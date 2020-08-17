@@ -154,8 +154,8 @@
       z-index: z('teaser', 'label');
 
       i {
-        margin-right: .2em;
-        font-size: 1.1rem;
+        margin-right: .4em;
+        font-size: 1.2rem;
       }
     }
 
@@ -178,7 +178,7 @@
       align-items: flex-start;
 
       &::before {
-        padding-right: .5rem;
+        padding-right: .4rem;
         font-size: 1.2rem;
         line-height: 1;
       }

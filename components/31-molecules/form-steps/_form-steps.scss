@@ -57,6 +57,7 @@
 
         > span {
           @include link-background('color-primary', null, 'link-underline-color');
+          padding: 0 0 .2rem;
         }
       }
 
