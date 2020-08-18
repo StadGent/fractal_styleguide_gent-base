@@ -29,8 +29,13 @@
   [role='tablist'] {
 
     display: flex;
+    flex-direction: column;
     margin: 0;
     list-style: none;
+
+    @include desktop {
+      flex-direction: row;
+    }
 
     > li[role='presentation'] {
       flex: 0 0 auto;
@@ -43,11 +48,19 @@
         @include reset-link-background;
         @include theme('color', 'color-tertiary', 'default-text-color');
         display: inline-block;
+        width: 100%;
         padding: .3rem .8rem;
         border-top-left-radius: border-radius('radius-1');
         border-top-right-radius: border-radius('radius-1');
         font-weight: 400;
+        text-align: center;
         text-decoration: none;
+
+
+        @include desktop {
+          width: auto;
+          text-align: left;
+        }
 
         &::after {
           @include theme('color', 'color-primary', 'link-underlined-hover-color');
@@ -66,12 +79,20 @@
           background: transparent;
 
           &::after {
-            width: 70%;
+            width: 1.5rem;
+
+            @include desktop {
+              width: 70%;
+            }
           }
         }
 
         &[role='tab'][aria-selected='true']:focus::after {
-          width: 100%;
+          width: 1.5rem;
+
+          @include desktop {
+            width: 100%;
+          }
         }
       }
 
