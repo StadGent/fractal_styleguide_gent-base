@@ -10,6 +10,7 @@ All notable changes to this style guide are documented here.
 * STIJ-357: Unified multistep form links with link atom.
 * STIJ-324: Unified icon labels in teasers.
 * STIJ-352: Changed programme spoticon size.
+* STIJ-316: Added mobile/tablet styling for tabs.
 
 ## [3.1.0]
 
