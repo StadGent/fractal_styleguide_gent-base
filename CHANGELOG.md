@@ -2,6 +2,16 @@
 
 All notable changes to this style guide are documented here.
 
+## [3.1.1]
+
+### Fixed
+
+* STIJ-361: Content of the mobile menu was not visible when using Internet Explorer.
+* STIJ-357: Unified multistep form links with link atom.
+* STIJ-324: Unified icon labels in teasers.
+* STIJ-352: Changed programme spoticon size.
+* STIJ-316: Added mobile/tablet styling for tabs.
+
 ## [3.1.0]
 
 ### Added
@@ -887,6 +897,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[3.1.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.1.0...3.1.1
 [3.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.2...3.1.0
 [3.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.1...3.0.2
 [3.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0...3.0.1

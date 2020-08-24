@@ -48,7 +48,7 @@ A success field message is used to inform the user that the field or fieldset is
  in case of ajax- or frontend validation.
 * Error messages should be as specific as possible, the item that is in error is
  identified and the error is described to the user in text.
- [See WCAG 2.0 success criterion 3.3.1. error identification](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
+ [See WCAG 2.0 Success Criterion 3.3.1 Error Identification](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
 * The field that causes an error message has the aria-invalid=true attribute.
 
 ## Usage in form validation
