@@ -6,7 +6,7 @@ All notable changes to this style guide are documented here.
 
 ### Removed
 
-Following items had bene marked as deprecated in the last major release.  
+Following items had been marked as deprecated in the last major release.  
 They have now been removed.
 
 * ‘contact-block’ has been removed in favour of the generic ‘CTA-block’.
