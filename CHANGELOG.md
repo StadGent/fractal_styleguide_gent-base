@@ -4,6 +4,10 @@ All notable changes to this style guide are documented here.
 
 ## [4.0.0] 
 
+### Added
+
+* STIJ-333: Added button with icon on the left side variation.
+
 ### Removed
 
 Following items had been marked as deprecated in the last major release.  
