@@ -36,17 +36,14 @@
     padding-left: 2rem;
   }
 
-  > .help-block,
   > .search-block {
     @include desktop {
       @include set-layout('width-9', 'offset-1');
     }
   }
 
-  > .box-top,
   > .summary-box,
   > .cta-block,
-  > .contact-block,
   > .contact-details,
   > .highlight,
   > .image-gallery--wrapper.multiple,
@@ -63,12 +60,6 @@
 
     .accordion--content p {
       line-height: 1.75;
-    }
-  }
-
-  > .help-block {
-    @include desktop {
-      padding-left: span(1 wide of 12);
     }
   }
 
@@ -113,10 +104,8 @@
     @include full-width;
   }
 
-  > .highlight--top,
-  > .box-top { /// @deprecated
-    .highlight__inner,
-    .inner-box { /// @deprecated
+  > .highlight--top {
+    .highlight__inner {
       @include desktop {
         padding-right: 0;
         padding-left: 0;

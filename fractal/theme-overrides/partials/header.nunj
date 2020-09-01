@@ -1,0 +1,21 @@
+<div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <div class="Header-navToggleIcon Header-navToggleIcon--open">
+            {% include 'icons/close.svg' %}
+        </div>
+        <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+            {% include 'icons/burger.svg' %}
+        </div>
+    </button>
+    <a href="{{ path('/') }}" class="Header-title" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
+    <div id="version">
+      <button id="version-toggle" aria-controls="version-list" aria-expanded="false">Version - {{ frctl.get('project.version') }}</button>
+      <div id="version-list" aria-hidden="true">
+        <ul>
+          <li><a href="/v4">Version - 4.x</a></li>
+          <li><a href="/v3">Version - 3.x</a></li>
+          <li><a href="/v2">Version - 2.x</a></li>
+        </ul>
+      </div>
+    </div>
+</div>

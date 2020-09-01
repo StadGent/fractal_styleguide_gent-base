@@ -37,7 +37,7 @@
 /// Margin helper classes.
 ///
 $directions: top, right, bottom, left;
-@for $i from 0 through 1000 {
+@for $i from 0 through 40 {
   @each $d in $directions {
     $ds: str-slice($d, 0, 1); // Get first letter of direction
 

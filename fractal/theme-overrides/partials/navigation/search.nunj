@@ -1,4 +1,6 @@
-    <label for="search" class="Tree-title" style="display:inline-block">Filter</label>
+    <div class="Tree-header">
+        <label for="search" class="Tree-title" style="display:inline-block">Filter</label>
+    </div>
     <div style="padding:0 1rem; margin-bottom: .5rem;">
         <input id="search" type="text" autocomplete="off" style="width:100%"/>
     </div>

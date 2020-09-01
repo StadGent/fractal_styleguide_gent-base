@@ -2,11 +2,47 @@
 
 All notable changes to this style guide are documented here.
 
-## [Unreleased]
+## [4.0.0] 
 
 ### Added
 
 * STIJ-333: Added button with icon on the left side variation.
+
+### Removed
+
+Following items had been marked as deprecated in the last major release.  
+They have now been removed.
+
+* ‘contact-block’ has been removed in favour of the generic ‘CTA-block’.
+  Your project should no longer use classes `.inner-box, .box-left, .box-top, .box-no-icon`.  
+  This includes it's usage in `_detail-layout.scss`.  
+* ‘help-block’ has been removed.  
+  This includes it's usage in `_detail-layout.scss`.
+* ‘extra-articles’ has been removed.  
+* `modal.functions.js` has been removed.  
+   Use modal/index.js from the vendor directory  
+   or install**@digipolis-gent/modal** as dependency.
+* Dependency body-scroll-lock has been removed (it's usage has been moved to @digipolis-gent/modal). 
+* Class `.mijn-gent-block` has been removed in favour of `.authentication`.  
+* Classes `.subsite .subsite-title` have been removed from the **header hero**
+  in favour of `.theme` and `.theme-title`.  
+  The class `.subsite` still exists to display the site name in the header.
+  (deprecated since 3.0.0-beta9)
+* Class `.wizard-steps` has been removed in favour of `.form-steps`.  
+  (deprecated since 3.0.0-beta4)
+* Classes `.teaser-programme .teaser-topic .teaser-topic-links .teaser-contact-info .teaser-search
+  .teaser-search-wide .content__top .content__bottom .content__left .content__right` have been removed.  
+  (deprecated since 3.0.0-beta1)
+
+## [3.1.1]
+
+### Fixed
+
+* STIJ-361: Content of the mobile menu was not visible when using Internet Explorer.
+* STIJ-357: Unified multistep form links with link atom.
+* STIJ-324: Unified icon labels in teasers.
+* STIJ-352: Changed programme spoticon size.
+* STIJ-316: Added mobile/tablet styling for tabs.
 
 ## [3.1.0]
 
@@ -893,6 +929,8 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[4.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.1.1...4.0.0
+[3.1.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.1.0...3.1.1
 [3.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.2...3.1.0
 [3.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.1...3.0.2
 [3.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.0...3.0.1
