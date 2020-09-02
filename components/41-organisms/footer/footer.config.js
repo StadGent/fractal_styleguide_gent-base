@@ -32,11 +32,11 @@ module.exports = {
     bottom: {
       partnership: 'In cooperation with Digipolis',
       links: [
-        'Gebruiksvoorwaarden',
+        'Terms of use',
         'Privacy',
         'Responsible disclosure',
-        'Toegankelijkheidsverklaring',
-        'Cookie-instellingen'
+        'Accessibility statement',
+        'Cookie settings'
       ]
     }
   },
@@ -64,19 +64,16 @@ module.exports = {
           ]
         },
         social: {
-          title: 'Volg de stad Gent',
-          name: 'Stad Gent',
-          street: 'Botermarkt 1',
-          city: '9000 Gent'
+          title: 'Volg de stad Gent'
         },
         bottom: {
           partnership: 'In samenwerking met Digipolis',
           links: [
-            'Terms of use',
+            'Gebruiksvoorwaarden',
             'Privacy',
             'Responsible disclosure',
-            'Accessibility statement',
-            'Cookie settings'
+            'Toegankelijkheidsverklaring',
+            'Cookie-instellingen'
           ]
         }
       }
