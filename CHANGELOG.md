@@ -8,6 +8,14 @@ All notable changes to this style guide are documented here.
 
 * STIJ-333: Added button with icon on the left side variation.
 
+### Updated
+
+* STIJ-358: **Breaking**  
+  The template, styling and content of the footer component have been updated.  
+  Make sure to read the component documentation, it contains details about which parts are
+  optional or custom for each site.  
+  Do not simply copy all hyperlinks! They are mostly for demo purposes only.
+
 ### Removed
 
 Following items had been marked as deprecated in the last major release.  

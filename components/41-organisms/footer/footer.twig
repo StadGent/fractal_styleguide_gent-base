@@ -2,7 +2,6 @@
   <h2 class="visually-hidden">{{ 'Footer' }}</h2>
   <div class="footer-top">
     <div class="content-container">
-
       {# Gentinfo #}
       <div class="footer--column">
         <div class="gentinfo-block">
@@ -32,61 +31,30 @@
         </div>
       </div>
 
-      {# Disclaimer #}
+      {# Useful links #}
       <div class="footer--column">
-        <div class="dg-block-disclaimer">
-          {% include '@heading' with {
-            'type': 'h2',
-            'heading_text': disclaimer.title
-          } %}
-
-          {% include "@list" with
-            {
-              "type": 'unordered',
-              "items": [
-                '<a href="https://jobs.gent.be/">' ~ disclaimer.links[0] ~ '</a>',
-                '<a href="https://stad.gent/over-gent-en-het-stadsbestuur/over-gent/kaarten-cijfers-en-data/gent-kaart/stadsplan">' ~ disclaimer.links[1] ~ '</a>',
-                '<a href="https://persruimte.stad.gent/nl">' ~ disclaimer.links[2] ~ '</a>',
-                '<a href="https://stad.gent/over-gent-en-het-stadsbestuur/vragen-suggesties-en-meldingen/juridische-info">' ~ disclaimer.links[3] ~ '</a>',
-                '<a href="https://stad.gent/over-gent-en-het-stadsbestuur/vragen-suggesties-en-meldingen/met-respect-voor-uw-privacy">' ~ disclaimer.links[4] ~ '</a>',
-              ]
-            }
-          %}
-        </div>
-      </div>
-
-      {# Post address #}
-      <div class="footer--column">
-        <div class="dg-block-post-address">
-          {% include '@heading' with {
-            'type': 'h2',
-            'heading_text': address.title
-          } %}
-          <address>
-            {{ address.name }}<br/>
-            {{ address.street }}<br/>
-            {{ address.city }}
-          </address>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom content-container">
-
-    {# Partnership #}
-    <div class="footer--column">
-      <div class="db-block-partnership">
-        {% include '@paragraph' with {
-          'text': bottom.partnership
+        {% include '@heading' with {
+          'type': 'h2',
+          'heading_text': disclaimer.title
         } %}
-        <i aria-hidden="true" class="icon-digipolis"></i>
-      </div>
-    </div>
 
-    {# Social media #}
-    <div class="footer--column">
-      <div class="dg-blocks-social">
-        <span>{{ bottom.social }}</span>
+        {% include "@list" with
+          {
+            "type": 'unordered',
+            "items": [
+            '<a href="https://jobs.gent.be/">' ~ disclaimer.links[0] ~ '</a>',
+            '<a href="https://stad.gent/over-gent-en-het-stadsbestuur/over-gent/kaarten-cijfers-en-data/gent-kaart/stadsplan">' ~ disclaimer.links[1] ~ '</a>',
+            '<a href="https://persruimte.stad.gent/nl">' ~ disclaimer.links[2] ~ '</a>'
+          ]
+          } %}
+      </div>
+
+      {# Social #}
+      <div class="footer--column">
+        {% include '@heading' with {
+          'type': 'h2',
+          'heading_text': social.title
+        } %}
         <div class="social-list">
           {% include "@list" with
             {
@@ -98,10 +66,30 @@
               '<a href="https://www.youtube.com/channel/UCmJLf8SFG0D0GTd6LSSTQLw"><i aria-hidden="true" class="icon-youtube"></i><span class="visually-hidden">Youtube</span></a>',
               '<a href="https://www.instagram.com/stadgent/"><i aria-hidden="true" class="icon-instagram"></i><span class="visually-hidden">Instagram</span></a>'
             ]
-            }
-          %}
+            } %}
         </div>
       </div>
+    </div>
+  </div>
+  <div class="footer-bottom content-container">
+
+    <div class="footer--column">
+      {% include "@list" with
+        {
+          "type": 'unordered',
+          "items": [
+          '<a href="https://stad.gent/nl/over-gent-en-het-stadsbestuur/juridische-info/gebruiksvoorwaarden-website-stad-gent">' ~ bottom.links[0] ~ '</a>',
+          '<a href="https://stad.gent/nl/over-gent-en-het-stadsbestuur/juridische-info/met-respect-voor-uw-privacy">' ~ bottom.links[1] ~ '</a>',
+          '<a href="https://stad.gent/nl/responsible-disclosure">' ~ bottom.links[2] ~ '</a>',
+          '<a href="https://stad.gent/nl/over-gent-en-het-stadsbestuur/juridische-info/toegankelijkheidsverklaring-stad-gent">' ~ bottom.links[3] ~ '</a>',
+          '<a href="#">' ~ bottom.links[4] ~ '</a>',
+        ]
+        } %}
+    </div>
+
+    {# Partnership #}
+    <div class="footer--column partnership">
+      <span>{{ bottom.partnership }}</span><i aria-hidden="true" class="icon-digipolis"></i>
     </div>
   </div>
 </section>
