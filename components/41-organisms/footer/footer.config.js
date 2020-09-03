@@ -23,20 +23,21 @@ module.exports = {
       links: [
         'Vacancies',
         'City plan',
-        'City of Ghent newsroom',
-        'Legal information',
-        'Privacy'
+        'City of Ghent newsroom'
       ]
     },
-    address: {
-      title: 'Postal address',
-      name: 'City of Ghent',
-      street: 'Botermarkt 1',
-      city: '9000 Ghent'
+    social: {
+      title: 'Follow the city of Ghent'
     },
     bottom: {
       partnership: 'In cooperation with Digipolis',
-      social: 'Follow the City of Ghent on social media'
+      links: [
+        'Terms of use',
+        'Privacy',
+        'Responsible disclosure',
+        'Accessibility statement',
+        'Cookie settings'
+      ]
     }
   },
 
@@ -59,20 +60,21 @@ module.exports = {
           links: [
             'Vacatures',
             'Stadsplan',
-            'Persruimte Stad Gent',
-            'Juridische info',
-            'Privacy'
+            'Persruimte Stad Gent'
           ]
         },
-        address: {
-          title: 'Postadres',
-          name: 'Stad Gent',
-          street: 'Botermarkt 1',
-          city: '9000 Gent'
+        social: {
+          title: 'Volg de stad Gent'
         },
         bottom: {
           partnership: 'In samenwerking met Digipolis',
-          social: 'Volg de Stad Gent op sociale media'
+          links: [
+            'Gebruiksvoorwaarden',
+            'Privacy',
+            'Responsible disclosure',
+            'Toegankelijkheidsverklaring',
+            'Cookie-instellingen'
+          ]
         }
       }
     },
@@ -90,20 +92,21 @@ module.exports = {
           links: [
             'Postes vacants',
             'Plan de la ville',
-            'Espace presse de la Ville de Gand',
-            'Informations juridiques',
-            'Confidentialité'
+            'Espace presse de la Ville de Gand'
           ]
         },
-        address: {
-          title: 'Adresse postale',
-          name: 'Ville de Gand',
-          street: 'Botermarkt 1',
-          city: '9000 Gand'
+        social: {
+          title: 'Suivez la ville de Gand'
         },
         bottom: {
           partnership: 'En collaboration avec Digipolis',
-          social: 'Suivez la Ville de Gand sur les réseaux sociaux'
+          links: [
+            'Conditions d\'utilisation',
+            'Vie privée',
+            'Divulgation responsable',
+            'Déclaration d\'accessibilité',
+            'Paramètres des cookies'
+          ]
         }
       }
     }, {
@@ -120,20 +123,21 @@ module.exports = {
           links: [
             'Stellenangebote',
             'Stadtplan',
-            'Presseinformationen Stadt Gent',
-            'Rechtliche Informationen',
-            'Datenschutz'
+            'Presseinformationen Stadt Gent'
           ]
         },
-        address: {
-          title: 'Postanschrift',
-          name: 'Der Stadt Gent',
-          street: 'Botermarkt 1',
-          city: '9000 Gent'
+        social: {
+          title: 'Der Stadt Gent folgen '
         },
         bottom: {
           partnership: 'In Zusammenarbeit mit Digipolis',
-          social: 'Der Stadt Gent in den sozialen Medien folgen'
+          links: [
+            'Nutzungsbedingungen',
+            'Datenschutz',
+            'Verantwortungsvolle Offenlegung',
+            'Erklärung zur Zugänglichkeit der Website',
+            'Cookie-Einstellungen'
+          ]
         }
       }
     }

@@ -2,7 +2,7 @@
   @include theme('background-color', 'color-primary--lighten-5', 'theme-footer-background-color');
   @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
 
-  width: calc(100% + 2rem);
+  width: calc(100% + (2 * #{$gutter-width}));
   margin-right: -1rem;
   margin-left: -1rem;
   padding: 0;

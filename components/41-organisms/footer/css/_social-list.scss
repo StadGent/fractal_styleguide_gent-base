@@ -1,16 +1,15 @@
 .social-list {
   $social-media-link-width: 1.6rem;
-  display: inline-block;
 
   ul {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    margin: 0;
+    width: calc(100% + 1rem);
+    margin: 0 -.5rem;
     list-style: none;
 
     li {
-      padding: 0 .4rem;
+      padding: .4rem;
     }
 
     a {
@@ -20,7 +19,7 @@
       &[download]:not(.button),
       &[href^="http://"]:not(.button),
       &[href^="https://"]:not(.button) {
-        @include theme('background-color', 'color-primary--lighten-5', 'social-media-icon-background');
+        @include theme('background-color', 'color-secondary', 'social-media-icon-background');
 
         display: flex;
         align-items: center;
