@@ -1,11 +1,17 @@
-.tag-list-wrapper .tag-list {
+.tag-list-wrapper {
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -.2rem;
+    list-style: none;
 
-  display: flex;
-  flex-wrap: wrap;
-  margin: -.2rem -.4rem;
-  list-style: none;
+    li {
+      margin: .2rem;
+    }
 
-  li {
-    margin: .2rem .4rem;
+    a {
+      @include bold-text;
+      white-space: nowrap;
+    }
   }
 }

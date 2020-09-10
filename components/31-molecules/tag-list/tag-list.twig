@@ -1,13 +1,21 @@
 <div class="tag-list-wrapper">
-    <ul class="tag-list">
-        {% for tag in tags %}
-            <li>
-                {% include '@tag' with {
-                    tag_text: tag.tag_text,
-                    type: tag.type
-                } %}
-            </li>
-        {% endfor %}
-    </ul>
+  <ul class="tag-list{{  modifier ? ' ' ~ modifier : ''}}">
+    {% for tag in tags %}
+      <li>
+        {% include '@tag' with {
+          tag_text: tag.text,
+          type: tag.type
+        } %}
+      </li>
+    {% endfor %}
+    {% if link %}
+      <li>
+        {% include '@link' with {
+          text: link.text,
+          link: link.link
+        } %}
+      </li>
+    {% endif %}
+  </ul>
 </div>
 

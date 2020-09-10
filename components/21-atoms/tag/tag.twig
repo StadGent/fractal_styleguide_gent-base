@@ -7,7 +7,7 @@
 {% if type == 'filter-tag' %}
   <span class="tag filter {{ modifier }}">
     {{ tag_text }}
-    <button><span class="visually-hidden">{{ 'Remove tag' }}</span></button>
+    <button><span class="visually-hidden">{{ 'Remove ' ~ tag_text }}</span></button>
   </span>
 {% endif %}
 

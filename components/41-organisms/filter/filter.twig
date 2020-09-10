@@ -133,15 +133,14 @@
 
     <div class="selected-filters">
       <h2>You have selected:</h2>
-      <span :key="filter.key" class="tag filter">
-        Filter one
-        <button><span class="visually-hidden">Remove this filter</span></button>
-      </span>
-      <span :key="filter.key" class="tag filter">
-        Filter two
-        <button><span class="visually-hidden">Remove this filter</span></button>
-      </span>
-      <a href="#">Remove all filters</a>
+      {% include '@tag-list' with {
+        tags: [
+          { text: 'Filter one', type: 'filter-tag' },
+          { text: 'Filter two', type: 'filter-tag' },
+          { text: 'Filter three', type: 'filter-tag' }
+        ],
+        link: { text: 'Remove all filters', link: '#' }
+      } %}
     </div>
 
     <div class="filter__result-count">

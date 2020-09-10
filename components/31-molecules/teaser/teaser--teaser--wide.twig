@@ -1,19 +1,20 @@
+{% if tag %}
+  {% set myTags = [{text: tag, type: 'span-tag'}] %}
+{% endif %}
+{% if tag2 %}
+  {% set myTags = myTags|merge([{text: tag2, type: 'span-tag'}]) %}
+{% endif %}
+
 <li class="teaser {% if type %} {{ type }} {% endif %} {% if modifier %} {{ modifier }} {% endif %}">
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__second">
       <h3>{{ title }}</h3>
 
-      {% if tag %}
-        {% include '@tag' with {
-          "tag_text": tag,
-          "type": 'span-tag'
-        } %}
-      {% endif %}
-      {% if tag2 %}
-        {% include '@tag' with {
-          "tag_text": tag2,
-          "type": 'span-tag'
+      {% if myTags %}
+        {% include '@tag-list' with {
+          tags: myTags,
+          link: null
         } %}
       {% endif %}
 

@@ -2,21 +2,22 @@
 
 module.exports = {
   context: {
+    modifier: null,
     tags: [
       {
-        tag_text: 'In the',
+        text: 'In the',
         type: 'span-tag'
       },
       {
-        tag_text: 'summer time',
+        text: 'summer time',
         type: 'span-tag'
       },
       {
-        tag_text: 'when the weather',
+        text: 'when the weather',
         type: 'span-tag'
       },
       {
-        tag_text: 'is fine',
+        text: 'is fine',
         type: 'span-tag'
       }
     ]
@@ -27,22 +28,49 @@ module.exports = {
       context: {
         tags: [
           {
-            tag_text: 'In the',
+            text: 'In the',
             type: 'tag'
           },
           {
-            tag_text: 'summer time',
+            text: 'summer time',
             type: 'tag'
           },
           {
-            tag_text: 'when the weather',
+            text: 'when the weather',
             type: 'tag'
           },
           {
-            tag_text: 'is fine',
+            text: 'is fine',
             type: 'tag'
           }
         ]
+      }
+    },
+    {
+      name: 'filter',
+      context: {
+        tags: [
+          {
+            text: 'In the',
+            type: 'filter-tag'
+          },
+          {
+            text: 'summer time',
+            type: 'filter-tag'
+          },
+          {
+            text: 'when the weather',
+            type: 'filter-tag'
+          },
+          {
+            text: 'is fine',
+            type: 'filter-tag'
+          }
+        ],
+        link: {
+          link: '#',
+          text: 'Remove all filters'
+        }
       }
     }
   ]
