@@ -1,8 +1,8 @@
 {% if tag %}
-  {% set myTags = [{text: tag, type: 'span-tag'}] %}
+  {% set tagList = [{text: tag, type: 'span-tag'}] %}
 {% endif %}
 {% if tag2 %}
-  {% set myTags = myTags|merge([{text: tag2, type: 'span-tag'}]) %}
+  {% set tagList = tagList|merge([{text: tag2, type: 'span-tag'}]) %}
 {% endif %}
 
 <li class="teaser {% if type %} {{ type }} {% endif %} {% if modifier %} {{ modifier }} {% endif %}">
@@ -11,9 +11,9 @@
     <div class="content__second">
       <h3>{{ title }}</h3>
 
-      {% if myTags %}
+      {% if tagList %}
         {% include '@tag-list' with {
-          tags: myTags,
+          tags: tagList,
           link: null
         } %}
       {% endif %}
