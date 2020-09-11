@@ -18,7 +18,7 @@
 
   .footer-top {
     @include theme('background-color', 'color-primary--lighten-5', 'footer-background-color');
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 
     .content-container {
       padding-top: 2rem;
@@ -102,6 +102,10 @@
       @include tablet {
         display: inline-block;
         padding: 0 .4rem;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
       }
     }
 
@@ -111,19 +115,19 @@
       i.icon-digipolis {
         margin-left: .5rem;
         font-size: 1.3rem;
+        line-height: 1.6rem;
         vertical-align: middle;
       }
     }
 
     .footer--column {
       width: 100%;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.2rem;
       text-align: center;
 
       @include desktop {
         order: 2;
         width: auto;
-        margin-bottom: 0;
 
         &.partnership {
           order: 1;
