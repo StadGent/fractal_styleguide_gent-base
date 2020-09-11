@@ -12,6 +12,8 @@ All notable changes to this style guide are documented here.
 
 * STIJ-333: Added button with icon on the left side variation.
 * STIJ-286: Added tag-list component; a collection of tags.
+* STIJ-306: Added `.w10-o1` helper class to give direct children of the detail-layout
+  a width of ten columns and offset of one.
 
 ### Updated
 
