@@ -39,7 +39,7 @@ const generateTeasers = (uid)=>{
       title: 'Search result',
       link: '#',
       link_text: 'Read more',
-      tag: 'some tag'
+      tags: ['some tag']
     });
   }
   return result;
