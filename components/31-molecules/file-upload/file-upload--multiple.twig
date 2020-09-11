@@ -14,12 +14,14 @@
           multiple: true
         } %}
 
-        <ul class="inline">
-          <li>{% render '@tag--filter-tag' with { tag_text: 'my uploaded file.pdf' } %}</li>
-          <li>{% render '@tag--filter-tag' with { tag_text: 'another_file.pdf' }  %}</li>
-          <li>{% render '@tag--filter-tag' with { tag_text: 'my_image.jpg' }  %}</li>
-          <li>{% render '@tag--filter-tag' with { tag_text: 'super_secret.txt' }  %}</li>
-        </ul>
+        {% include '@tag-list' with {
+          tags: [
+            {text: 'my uploaded file.pdf', type: 'filter-tag'},
+            {text: 'another_file.pdf', type: 'filter-tag'},
+            {text: 'my_image.jpg', type: 'filter-tag'},
+            {text: 'super_secret.txt', type: 'filter-tag'}
+          ]
+        } %}
       </div>
       <div class="form-item-column"></div>
     </div>

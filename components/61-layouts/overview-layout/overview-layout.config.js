@@ -38,7 +38,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag',
+        tags: ['Just some tag'],
         label_text: 'Event'
       },
       {
@@ -72,7 +72,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag',
+        tags: ['Just some tag'],
         label_text: 'Event'
       },
       {
@@ -106,7 +106,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag'
+        tags: ['Just some tag']
       },
       {
         teaser_uid: 'uid',
@@ -140,7 +140,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag',
+        tags: ['Just some tag'],
         label_text: 'Event'
       },
       {
@@ -174,7 +174,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag'
+        tags: ['Just some tag']
       },
       {
         teaser_uid: 'uid',
@@ -191,7 +191,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag',
+        tags: ['Just some tag'],
         label_text: 'Event'
       },
       {
@@ -209,7 +209,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag',
+        tags: ['Just some tag'],
         label_text: 'Event'
       },
       {
@@ -227,7 +227,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag',
+        tags: ['Just some tag'],
         label_text: 'Event'
       },
       {
@@ -245,7 +245,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag',
+        tags: ['Just some tag'],
         label_text: 'Event'
       },
       {
@@ -263,7 +263,7 @@ module.exports = {
         image_src: 'https://loremflickr.com/800/500/ghent',
         image_alt_text: 'alt text',
         image_ratio: '8:5',
-        tag: 'Just some tag'
+        tags: ['Just some tag']
       }
     ],
     footerConfig
