@@ -4,6 +4,10 @@ All notable changes to this style guide are documented here.
 
 ## [4.0.0] 
 
+### Fixed
+
+* STIJ-279: Fixed text overflow for large names in the authentication component.
+
 ### Added
 
 * STIJ-333: Added button with icon on the left side variation.
