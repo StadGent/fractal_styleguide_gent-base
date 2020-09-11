@@ -7,9 +7,15 @@ All notable changes to this style guide are documented here.
 ### Added
 
 * STIJ-333: Added button with icon on the left side variation.
+* STIJ-286: Added tag-list component; a collection of tags.
 
 ### Updated
 
+* STIJ-286: All ‘teaser‘ variants now use the ‘tab-list' component.
+* STIJ-286: **Breaking** ‘file upload - multiple‘ now uses the ‘tab-list‘ component.  
+  Support for the old template with selector `ul.inline` will drop in the next major release.
+* STIJ-286: **Breaking** the filter layout now uses ‘tab-list‘ to display the selected filters.  
+  Update your templates accordingly, or the selected filters will lose their margins.
 * STIJ-358: **Breaking**  
   The template, styling and content of the footer component have been updated.  
   Make sure to read the component documentation, it contains details about which parts are

@@ -50,7 +50,7 @@
               "image_src": article.image_src ~ '?random=' ~ key,
               "image_alt_text": article.image_alt_text,
               "image_ratio": article.image_ratio,
-              "tag": article.tag,
+              "tags": article.tags,
               "label_text": article.label_text
             } %}
           {% else %}
@@ -66,7 +66,7 @@
             "image_src": article.image_src ~ '?random=' ~ key,
             "image_alt_text": article.image_alt_text,
             "image_ratio": article.image_ratio,
-            "tag": article.tag
+            "tags": article.tags,
           } %}
           {% endif %}
         {% endfor %}

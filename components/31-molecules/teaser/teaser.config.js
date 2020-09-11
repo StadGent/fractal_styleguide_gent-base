@@ -22,8 +22,7 @@ module.exports = {
     link: '#',
     image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
     image_alt_text: 'alt text',
-    tag: 'Optional tag',
-    tag2: 'Optional tag 2',
+    tags: ['Optional tag', 'Optional tag 2'],
     event_date: {
       text_1: 'From the 7th',
       datetime_1: '2019-01-07',
@@ -53,8 +52,7 @@ module.exports = {
       hidden: true,
       context: {
         event_date: null,
-        tag: null,
-        tag2: null,
+        tags: null,
         telephone: null,
         label_text: null
       }
@@ -81,8 +79,7 @@ module.exports = {
         title: 'This is a wide teaser, usually used with the sidebar layout',
         link_text: 'Read more',
         link: '#',
-        tag: 'Optional tag',
-        tag2: 'More optional tags',
+        tags: ['Optional tag', 'More optional tags'],
         address_location: 'Lakenhalle',
         address: 'Botermarkt 18A, 9000 Gent',
         list: [
