@@ -20,7 +20,7 @@ Do not use the detail layout to present an overview of content. In this case, us
 
 ## How it works
 
-A detail layout conists of the following parts:
+A detail layout consists of the following parts:
 
 * <a href="{{path './header.html'}}">Header</a> (required)
 * Page title (heading h1, required)
@@ -28,7 +28,24 @@ A detail layout conists of the following parts:
 * Detail page content (required)
 * <a href="{{path './footer.html'}}">Footer</a> (required)
 
-As you can see, some direct children of the page content are allowed to break out of the default 7 column width.  
-Examples are the summary, call to action, contact details and image gallery.  
-If you are unable to place these components as direct children of the page content,
-you can use the helper class `.w10-o1` on whatever wrapper element you are dealing with.
+### Layout of the detail page content and its children
+
+The detail page content gets a default width of 7/12 based on the container.
+
+However, as also shown in the example, some direct children of the detail page content break out of the default 7 column width.
+
+The following components in the detail page content get a width of 10/12 based on the container:
+
+* <a href="{{path './contact-details.html'}}">Contact details</a>
+* <a href="{{path './cta-block.html'}}">Call to action</a>
+* <a href="{{path './highlight.html'}}">Highlight</a>
+* <a href="{{path './partner-block.html'}}">Partner Block</a>
+* <a href="{{path './quote.html'}}">Quote</a>
+* <a href="{{path './summary.html'}}">Summary</a>
+
+The following component in the detail page content get a width of 12/12 based on the container:
+
+* <a href="{{path './gentinfo.html'}}">Gentinfo</a>
+* <a href="{{path './timeline.html'}}">Timeline</a>
+  
+If you are unable to place these components as direct children of the page content, you can use the helper class `.w10-o1` on whatever wrapper element you are dealing with.
