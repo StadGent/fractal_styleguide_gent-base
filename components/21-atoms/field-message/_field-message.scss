@@ -1,5 +1,6 @@
 .field-message {
   @include theme('color', 'color-tertiary--lighten-1', 'field-messages-color');
+  @include theme('background-color', 'color-info--lighten-5', 'field-messages-info-background');
 
   $field-message-icon-size: 1.5rem;
   $field-message-icon-margin: 1.5rem;
@@ -11,7 +12,6 @@
   min-height: 2.5rem;
   padding: 1.7rem 1.2rem .7rem;
   border-radius: border-radius('radius-1');
-  background-color: color('cyan', -5);
   font-size: .8rem;
   overflow: hidden;
 
