@@ -42,10 +42,13 @@ The following components in the detail page content get a width of 10/12 based o
 * <a href="{{path './partner-block.html'}}">Partner Block</a>
 * <a href="{{path './quote.html'}}">Quote</a>
 * <a href="{{path './summary.html'}}">Summary</a>
+* <a href="{{path './image-gallery.html'}}">Image gallery (for multiple images)</a>
 
 The following component in the detail page content get a width of 12/12 based on the container:
 
 * <a href="{{path './gentinfo.html'}}">Gentinfo</a>
 * <a href="{{path './timeline.html'}}">Timeline</a>
+* <a href="{{path './programme.html'}}">Programme</a>
   
-If you are unable to place these components as direct children of the page content, you can use the helper class `.w10-o1` on whatever wrapper element you are dealing with.
+If you are unable to place these components as direct children of the page content,  
+you can use the helper classes `.w7-o2`, `.w9-o1`, `.w10-o1` and `.w12` on whatever wrapper element you are dealing with.
