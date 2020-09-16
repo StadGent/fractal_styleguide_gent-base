@@ -7,11 +7,13 @@ All notable changes to this style guide are documented here.
 ### Fixed
 
 * STIJ-279: Fixed text overflow for large names in the authentication component.
+* STIJ-364: Fixed warning color for themes blue, teal and green.
 
 ### Added
 
 * STIJ-333: Added button with icon on the left side variation.
 * STIJ-286: Added tag-list component; a collection of tags.
+* STIJ-364: Added field-message info variant.
 
 ### Updated
 
