@@ -98,3 +98,16 @@ body {
 #version-list li a:focus {
     border-bottom-color: transparent;
 }
+
+.Browser-tab:first-child a {
+    background-color: #005C86;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.Browser-tab.is-active a {
+    border-bottom-color: #005C86;
+}
+.Browser-notes {
+    background: none;
+    padding-top: 2rem;
+}

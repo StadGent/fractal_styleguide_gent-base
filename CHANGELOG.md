@@ -7,11 +7,15 @@ All notable changes to this style guide are documented here.
 ### Fixed
 
 * STIJ-279: Fixed text overflow for large names in the authentication component.
+* STIJ-365: Fixed warning color for themes blue, teal and green.
 
 ### Added
 
 * STIJ-333: Added button with icon on the left side variation.
 * STIJ-286: Added tag-list component; a collection of tags.
+* STIJ-364: Added field-message info variant.
+* STIJ-306: Added `.w7-o2`, `.w9-o1`, `.w10-o1` and `.w12` helper classes to give children of the detail-layout
+  a column width and offset.
 
 ### Updated
 
@@ -27,6 +31,10 @@ All notable changes to this style guide are documented here.
   Do not simply copy all hyperlinks! They are mostly for demo purposes only.
 
 ### Removed
+
+* The positioning of `.search-block` and `.contact-box` has been removed from the detail layout.  
+  These components don't exist within this styleguide.  
+  If your project does have these components: position them using classes `.w9-o1` and `.w10-o1` respectively.
 
 Following items had been marked as deprecated in the last major release.  
 They have now been removed.

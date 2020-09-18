@@ -6,6 +6,7 @@
 
   // Give each direct child a specific width.
   // This is a fallback width given to all children of the detail layout.
+  .w7-o2,
   > * {
     @include desktop {
       @include set-layout('width-7', 'offset-2');
@@ -36,18 +37,15 @@
     padding-left: 2rem;
   }
 
-  > .search-block {
+  .w9-o1 {
     @include desktop {
       @include set-layout('width-9', 'offset-1');
     }
   }
 
-  > .summary-box,
-  > .cta-block,
-  > .contact-details,
+  .w10-o1,
   > .highlight,
-  > .image-gallery--wrapper.multiple,
-  > .contact-box {
+  > .image-gallery--wrapper.multiple {
     @include desktop {
       @include set-layout('width-10', 'offset-1');
     }
@@ -73,6 +71,7 @@
     }
   }
 
+  .w12,
   > .timeline-wrapper,
   > .programme-wrapper {
     @include set-layout();
