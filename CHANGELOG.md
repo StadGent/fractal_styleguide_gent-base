@@ -25,7 +25,7 @@ All notable changes to this style guide are documented here.
 * STIJ-286: **Breaking** the filter layout now uses ‘tab-list‘ to display the selected filters.  
   Update your templates accordingly, or the selected filters will lose their margins.
 * STIJ-358: **Breaking**  
-  The template, styling and content of the footer component have been updated.  
+  The template, styling, heading levels and content of the footer component have been updated.  
   Make sure to read the component documentation, it contains details about which parts are
   optional or custom for each site.  
   Do not simply copy all hyperlinks! They are mostly for demo purposes only.
