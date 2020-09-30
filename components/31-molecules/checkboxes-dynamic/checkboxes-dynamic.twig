@@ -9,7 +9,7 @@
     {% if field_description %}
       {% include '@field-message' with {
         "field_message": field_description,
-        "id": id ~ '-description',
+        "id": modifier ~ '-description',
         "modifier": null
       } %}
     {% endif %}
@@ -130,14 +130,14 @@
       <div class="form-item-column">
         {% if modifier == 'error' %}
           {% include '@field-message' with {
-            "id": id ~ '-validation',
+            "id": modifier ~ '-validation',
             "modifier": "error"
           } %}
         {% endif %}
 
         {% if modifier == 'success' %}
           {% include '@field-message' with {
-            "id": id ~ '-validation',
+            "id": modifier ~ '-validation',
             "modifier": "success"
           } %}
         {% endif %}
