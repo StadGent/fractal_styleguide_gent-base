@@ -16,6 +16,7 @@ All notable changes to this style guide are documented here.
 * STIJ-364: Added field-message info variant.
 * STIJ-306: Added `.w7-o2`, `.w9-o1`, `.w10-o1` and `.w12` helper classes to give children of the detail-layout
   a column width and offset.
+* STIJ-353: Added the dynamic checkboxes component.
 
 ### Updated
 

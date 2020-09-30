@@ -1,0 +1,147 @@
+<fieldset class="form-item {{ modifier }} checkbox-filter-dynamic">
+  <legend>
+    {{ label }}
+    {% if label_optional %}
+      <span class="label-optional">({{ label_optional }})</span>
+    {% endif %}
+  </legend>
+  <div class="form-item">
+    {% if field_description %}
+      {% include '@field-message' with {
+        "field_message": field_description,
+        "id": id ~ '-description',
+        "modifier": null
+      } %}
+    {% endif %}
+    <div class="form-columns">
+      <div class="form-item-column">
+
+        {% if options|length < 6 %}
+
+          {% for option in options %}
+            {% include '@input' with {
+              "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+              "type": 'checkbox',
+              "name": option.name,
+              "label": option.label,
+              "modifier": modifier
+            } %}
+          {% endfor %}
+
+        {% elseif options|length < 21 %}
+
+          {% for option in options|slice(0, 3) %}
+            {% include '@input' with {
+              "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+              "type": 'checkbox',
+              "name": option.name,
+              "label": option.label,
+              "modifier": modifier
+            } %}
+          {% endfor %}
+
+          <div class="accordion">
+
+
+            <div class="accordion--content" aria-hidden="true" hidden="hidden" id="hidden-options">
+              {% for option in options|slice(3, 21) %}
+                {% include '@input' with {
+                  "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+                  "type": 'checkbox',
+                  "name": option.name,
+                  "label": option.label,
+                  "modifier": modifier
+                } %}
+              {% endfor %}
+            </div>
+
+            <button type="button" class="accordion--button button button-secondary button-small icon-arrow-down icon-left checkbox-filter-dynamic__reveal"
+                    aria-expanded="false" aria-controls="hidden-options">
+              Show more
+            </button>
+          </div>
+
+
+        {% else %}
+          {% set modalTitle = label %}
+          {% if label_optional %}
+            {% set modalTitle = modalTitle ~ '<span class="label-optional">(' ~ label_optional ~ ')</span>' %}
+          {% endif %}
+
+          {% set modalContent %}
+            <div class="checkbox-filter-dynamic__selected"></div>
+            <div class="form-item">
+              <label for="checkboxes__filter_id_{{ modifier }}">Filter the list
+                below</label>
+              <div class="form-item checkbox-filter-dynamic__filter__search-wrapper">
+                <input type="search" id="checkboxes__filter_id_{{ modifier }}" class="checkbox-filter-dynamic__filter">
+                <p aria-live="polite" aria-atomic="true" class="checkbox-filter-dynamic__result-wrapper">
+                  <span class="checkbox-filter-dynamic__result">#</span> filter(s) found
+                </p>
+              </div>
+            </div>
+            <div class="checkbox-filter-dynamic__checkboxes">
+              {% for option in options %}
+                {% include '@input' with {
+                  "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+                  "type": 'checkbox',
+                  "name": option.name,
+                  "label": option.label,
+                  "modifier": modifier
+                } %}
+              {% endfor %}
+            </div>
+          {% endset %}
+          {% set modalActions %}
+            <button type="button"
+                    class="button button-primary checkbox-filter-dynamic__submit modal-close"
+                    data-target="{{ 'modal' ~ modifier }}">Confirm selection
+            </button>
+          {% endset %}
+
+          {% for option in options|slice(0, 3) %}
+            {% include '@input' with {
+              "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+              "type": 'checkbox',
+              "name": option.name,
+              "label": option.label,
+              "modifier": modifier
+            } %}
+          {% endfor %}
+
+          {% include "@modal" with {
+            id: 'modal' ~ modifier,
+            title: modalTitle,
+            classes: 'checkbox-filter__modal',
+            cancelClasses: 'checkbox-filter__close',
+            modifier: 'fixed-height',
+            content: modalContent,
+            actions: modalActions
+          } %}
+
+          <button type="button"
+                  class="button button-secondary button-small icon-search icon-left checkbox-filter-dynamic__open"
+                  aria-controls="{{ 'modal' ~ modifier }}" aria-expanded="false">
+            Show more
+          </button>
+
+        {% endif %}
+      </div>
+      <div class="form-item-column">
+        {% if modifier == 'error' %}
+          {% include '@field-message' with {
+            "id": id ~ '-validation',
+            "modifier": "error"
+          } %}
+        {% endif %}
+
+        {% if modifier == 'success' %}
+          {% include '@field-message' with {
+            "id": id ~ '-validation',
+            "modifier": "success"
+          } %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</fieldset>
