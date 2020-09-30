@@ -11,6 +11,13 @@
 }
 
 ///
+/// Add bold styling
+///
+.bold {
+  @include bold-text;
+}
+
+///
 /// Visually hidden
 ///
 %visually-hidden,
@@ -130,4 +137,10 @@ $directions: top, right, bottom, left;
 
 .hidden-desktop-only {
   @include hide('desktop-only');
+}
+
+.show-desktop-only {
+  @include desktop-and-below {
+    display: none;
+  }
 }
