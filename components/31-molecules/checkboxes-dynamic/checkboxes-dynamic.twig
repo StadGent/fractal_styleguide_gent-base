@@ -101,7 +101,7 @@
 
           {% for option in options|slice(0, 3) %}
             {% include '@input' with {
-              "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+              "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id ~ "-visible",
               "type": 'checkbox',
               "name": option.name,
               "label": option.label,
