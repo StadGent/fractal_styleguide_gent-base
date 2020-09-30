@@ -16,7 +16,6 @@ const generateCheckboxes = (uid, i) =>{
 module.exports = {
   title: 'Checkbox dynamic',
   context: {
-    id: 'input-checkbox',
     label: 'Checkboxes',
     field_description: 'Optional field description.<br> --- <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur eveniet illo porro quis sint.',
     field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.',
@@ -27,13 +26,13 @@ module.exports = {
     {
       name: 'more-then-6',
       context: {
-        options: generateCheckboxes('default', 20)
+        options: generateCheckboxes('default-6-plus', 20)
       }
     },
     {
       name: 'more-then-20',
       context: {
-        options: generateCheckboxes('default', 21)
+        options: generateCheckboxes('default-20-plus', 21)
       }
     },
     {
