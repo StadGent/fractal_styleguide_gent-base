@@ -20,17 +20,20 @@ module.exports = {
     field_description: 'Optional field description.<br> --- <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur eveniet illo porro quis sint.',
     field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.',
     description: 'Description checkboxes.',
+    modifier: 'default',
     options: generateCheckboxes('default', 2)
   },
   variants: [
     {
       name: 'more-then-6',
+      modifier: 'more-then-6',
       context: {
         options: generateCheckboxes('default-6-plus', 20)
       }
     },
     {
       name: 'more-then-20',
+      modifier: 'more-then-20',
       context: {
         options: generateCheckboxes('default-20-plus', 21)
       }
