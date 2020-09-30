@@ -5,18 +5,18 @@
       <span class="label-optional">({{ label_optional }})</span>
     {% endif %}
   </legend>
+
+  {% if options|length < 6 %}
   <div class="form-item">
     {% if field_description %}
       {% include '@field-message' with {
         "field_message": field_description,
-        "id": modifier ~ '-description',
+        "id": id ~ '-description',
         "modifier": null
       } %}
     {% endif %}
     <div class="form-columns">
       <div class="form-item-column">
-
-        {% if options|length < 6 %}
 
           {% for option in options %}
             {% include '@input' with {
@@ -29,7 +29,16 @@
           {% endfor %}
 
         {% elseif options|length < 21 %}
-
+        <div class="form-item">
+          {% if field_description %}
+            {% include '@field-message' with {
+              "field_message": field_description,
+              "id": 'more-then-6-description',
+              "modifier": null
+            } %}
+          {% endif %}
+          <div class="form-columns">
+            <div class="form-item-column">
           {% for option in options|slice(0, 3) %}
             {% include '@input' with {
               "id": "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
@@ -63,6 +72,16 @@
 
 
         {% else %}
+        <div class="form-item">
+          {% if field_description %}
+            {% include '@field-message' with {
+              "field_message": field_description,
+              "id": 'more-then-20-description',
+              "modifier": null
+            } %}
+          {% endif %}
+          <div class="form-columns">
+            <div class="form-item-column">
           {% set modalTitle = label %}
           {% if label_optional %}
             {% set modalTitle = modalTitle ~ '<span class="label-optional">(' ~ label_optional ~ ')</span>' %}
