@@ -15,7 +15,6 @@ const generateCheckboxes = (uid, i) =>{
 };
 
 module.exports = {
-  title: 'Checkbox dynamic',
   status: 'beta',
   context: {
     label: 'Checkboxes',

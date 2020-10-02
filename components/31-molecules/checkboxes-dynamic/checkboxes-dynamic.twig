@@ -2,7 +2,7 @@
 
   {% include '@checkboxes' %}
 
-{% elseif options | length < 21 %}
+{% else %}
 
   <fieldset class="form-item {{ modifier }} checkbox-filter-dynamic">
     <legend>
@@ -23,39 +23,112 @@
       <div class="form-columns">
         <div class="form-item-column">
 
-          {% for option in options|slice(0, 3) %}
-            {% include '@input' with {
-              id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
-              type: 'checkbox',
-              name: option.name,
-              label: option.label,
-              modifier: modifier
-            } %}
-          {% endfor %}
+          {% if options | length < 21 %}
 
-          <div class="checkbox-accordion">
-            <div class="accordion--content" aria-hidden="true"
-                 hidden="hidden" id="hidden-options">
+            {% for option in options|slice(0, 3) %}
+              {% include '@input' with {
+                id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+                type: 'checkbox',
+                name: option.name,
+                label: option.label,
+                modifier: modifier
+              } %}
+            {% endfor %}
 
-              {% for option in options|slice(3, 21) %}
-                {% include '@input' with {
-                  id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
-                  type: 'checkbox',
-                  name: option.name,
-                  label: option.label,
-                  modifier: modifier
-                } %}
-              {% endfor %}
+            <div class="checkbox-accordion">
+              <div class="accordion--content" aria-hidden="true"
+                   hidden="hidden" id="hidden-options">
 
+                {% for option in options|slice(3, 21) %}
+                  {% include '@input' with {
+                    id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+                    type: 'checkbox',
+                    name: option.name,
+                    label: option.label,
+                    modifier: modifier
+                  } %}
+                {% endfor %}
+
+              </div>
+
+              <button type="button"
+                      class="accordion--button button button-secondary button-small icon-left"
+                      aria-expanded="false"
+                      aria-controls="hidden-options">
+                Show more
+              </button>
             </div>
 
+          {% else %}
+
+            {% for option in options|slice(0, 3) %}
+
+              {% include '@input' with {
+                id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id ~ "preview",
+                type: 'checkbox',
+                name: null,
+                attributes: 'data-original="' ~ "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id ~ '"',
+                label: option.label,
+                modifier: modifier,
+                modifierWrapper: "preview",
+                value: option.value
+              } %}
+
+            {% endfor %}
+
+            {% set modalTitle = label %}
+
+            {% if label_optional %}
+              {% set modalTitle = modalTitle ~ '<span class="label-optional">(' ~ label_optional ~ ')</span>' %}
+            {% endif %}
+
+            {% set modalContent %}
+
+              <div class="form-item checkbox-filter__filter__search-wrapper">
+                <input type="search" id="checkboxes__filter_id_{{ modifier }}"
+                       class="checkbox-filter__filter"
+                       aria-label="Filter the list below">
+
+                <div aria-live="polite" aria-atomic="true"
+                     class="checkbox-filter__result-wrapper">
+                  <span class="checkbox-filter__result">#</span> filter(s) found
+                </div>
+              </div>
+
+              {% include '@tag-list' with { modifier: 'checkbox-filter__selected' } %}
+
+              {% include '@checkboxes' %}
+
+            {% endset %}
+
+            {% set modalActions %}
+              <button type="button"
+                      class="button button-primary checkbox-filter__submit modal-close"
+                      data-target="{{ 'modal' ~ modifier }}">Confirm selection
+              </button>
+            {% endset %}
+
+            {% include "@modal" with {
+              id: 'modal' ~ modifier,
+              title: modalTitle,
+              title_heading_level: 'h2',
+              classes: 'checkbox-filter__modal',
+              cancelClasses: 'checkbox-filter__close',
+              modifier: 'fixed-height',
+              content: modalContent,
+              actions: modalActions,
+              hasFocusables: true
+            } %}
+
             <button type="button"
-                    class="accordion--button button button-secondary button-small icon-left"
-                    aria-expanded="false"
-                    aria-controls="hidden-options">
+                    class="button button-secondary button-small icon-left icon-search checkbox-filter__open"
+                    aria-controls="{{ 'modal' ~ modifier }}"
+                    aria-expanded="false">
               Show more
             </button>
-          </div>
+
+          {% endif %}
+
         </div>
         <div class="form-item-column">
 
@@ -75,106 +148,4 @@
       </div>
     </div>
   </fieldset>
-
-{% else %}
-
-  {% set modalTitle = label %}
-
-  {% if label_optional %}
-    {% set modalTitle = modalTitle ~ '<span class="label-optional">(' ~ label_optional ~ ')</span>' %}
-  {% endif %}
-
-  {% set modalContent %}
-
-    <div class="form-item checkbox-filter__filter__search-wrapper">
-      <input type="search" id="checkboxes__filter_id_{{ modifier }}"
-             class="checkbox-filter__filter" aria-label="Filter the list below">
-
-      <div aria-live="polite" aria-atomic="true"
-           class="checkbox-filter__result-wrapper">
-        <span class="checkbox-filter__result">#</span> filter(s) found
-      </div>
-    </div>
-
-    {% include '@tag-list' with { modifier: 'checkbox-filter__selected' } %}
-
-    {% include '@checkboxes' %}
-
-  {% endset %}
-
-  {% set modalActions %}
-    <button type="button"
-            class="button button-primary checkbox-filter__submit modal-close"
-            data-target="{{ 'modal' ~ modifier }}">Confirm selection
-    </button>
-  {% endset %}
-
-  <fieldset
-    class="form-item {{ modifier }} {{ stacked ? 'stacked' : '' }} checkbox-filter-dynamic">
-    <legend>
-      {{ label }}
-      {% if label_optional %}
-        <span class="label-optional">({{ label_optional }})</span>
-      {% endif %}
-    </legend>
-    {% include '@field-message' with {
-      "field_message": field_description,
-      "modifier": null
-    } %}
-    <div class="form-columns">
-      <div class="form-item-column">
-
-        {% for option in options|slice(0, 3) %}
-
-          {% include '@input' with {
-            id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id ~ "preview",
-            type: 'checkbox',
-            name: null,
-            attributes: 'data-original="' ~ "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id ~ '"',
-            label: option.label,
-            modifier: modifier,
-            modifierWrapper: "preview",
-            value: option.value
-          } %}
-
-        {% endfor %}
-
-        {% include "@modal" with {
-          id: 'modal' ~ modifier,
-          title: modalTitle,
-          title_heading_level: 'h2',
-          classes: 'checkbox-filter__modal',
-          cancelClasses: 'checkbox-filter__close',
-          modifier: 'fixed-height',
-          content: modalContent,
-          actions: modalActions,
-          hasFocusables: true
-        } %}
-
-        <button type="button"
-                class="button button-secondary button-small icon-left icon-search checkbox-filter__open"
-                aria-controls="{{ 'modal' ~ modifier }}"
-                aria-expanded="false">
-          Show more
-        </button>
-
-      </div>
-      <div class="form-item-column">
-
-        {% if modifier == 'error' %}
-          {% include '@field-message' with {
-            "modifier": "error"
-          } %}
-        {% endif %}
-
-        {% if modifier == 'success' %}
-          {% include '@field-message' with {
-            "modifier": "success"
-          } %}
-        {% endif %}
-
-      </div>
-    </div>
-  </fieldset>
-
 {% endif %}
