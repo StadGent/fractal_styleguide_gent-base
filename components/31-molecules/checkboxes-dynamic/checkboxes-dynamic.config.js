@@ -19,27 +19,24 @@ module.exports = {
   status: 'beta',
   context: {
     label: 'Checkboxes',
+    id: 'default',
     field_description: 'Optional field description.<br> --- <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur eveniet illo porro quis sint.',
     field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.',
     description: 'Description checkboxes.',
-    modifier: 'default',
-    id: 'default',
     options: generateCheckboxes('default', 2)
   },
   variants: [
     {
       name: 'more-than-6',
-      modifier: 'more-than-6',
-      id: 'more-than-6',
       context: {
+        id: 'more-than-6',
         options: generateCheckboxes('default-6-plus', 20)
       }
     },
     {
       name: 'more-than-20',
-      modifier: 'more-than-20',
-      id: 'more-than-20',
       context: {
+        id: 'more-than-20',
         options: generateCheckboxes('default-20-plus', 21)
       }
     },
@@ -47,6 +44,7 @@ module.exports = {
       name: 'with-error',
       context: {
         modifier: 'error',
+        id: 'with-error',
         options: generateCheckboxes('default-20-plus', 21),
         field_description: null
       }
