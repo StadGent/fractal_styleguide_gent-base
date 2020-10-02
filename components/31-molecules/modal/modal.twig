@@ -14,7 +14,7 @@
         <span>Close</span>
       </button>
     </div>
-    <div class="modal-content" {{ modifier == "fixed-height" ? 'tabindex="0"' : '' }}>
+    <div class="modal-content" {{ modifier == "fixed-height" and hasFocusables != true ? 'tabindex="0"' : '' }}>
       {% if title %}
       <{{ title_heading_level|default('h3') }} id="{{ id }}-title">{{ title }}</{{ title_heading_level|default('h3') }}>
       {% endif %}

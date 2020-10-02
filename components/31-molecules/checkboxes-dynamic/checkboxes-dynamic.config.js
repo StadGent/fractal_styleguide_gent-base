@@ -6,7 +6,8 @@ const generateCheckboxes = (uid, i) =>{
     result.push({
       label: `Checkbox option ${j}`,
       id: `checkbox-${+j}-${uid}`,
-      value: j
+      value: j,
+      name: 'checkboxes-dynamic'
     });
   }
 
@@ -15,6 +16,7 @@ const generateCheckboxes = (uid, i) =>{
 
 module.exports = {
   title: 'Checkbox dynamic',
+  status: 'beta',
   context: {
     label: 'Checkboxes',
     field_description: 'Optional field description.<br> --- <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur eveniet illo porro quis sint.',
@@ -26,17 +28,17 @@ module.exports = {
   },
   variants: [
     {
-      name: 'more-then-6',
-      modifier: 'more-then-6',
-      id: 'more-then-6',
+      name: 'more-than-6',
+      modifier: 'more-than-6',
+      id: 'more-than-6',
       context: {
         options: generateCheckboxes('default-6-plus', 20)
       }
     },
     {
-      name: 'more-then-20',
-      modifier: 'more-then-20',
-      id: 'more-then-20',
+      name: 'more-than-20',
+      modifier: 'more-than-20',
+      id: 'more-than-20',
       context: {
         options: generateCheckboxes('default-20-plus', 21)
       }
@@ -44,19 +46,9 @@ module.exports = {
     {
       name: 'with-error',
       context: {
-        id: 'input_text--error',
-        label: 'input-text',
         modifier: 'error',
-        options: generateCheckboxes('with-error', 2)
-      }
-    },
-    {
-      name: 'with-success',
-      context: {
-        id: 'input-text--success',
-        label: 'input-text',
-        modifier: 'success',
-        options: generateCheckboxes('with-success', 2)
+        options: generateCheckboxes('default-20-plus', 21),
+        field_description: null
       }
     }
   ]

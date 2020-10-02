@@ -10,7 +10,7 @@
       module.exports = factory();
     }
     else {
-      root.CheckboxFilter = factory();
+      root.CheckboxFilterDynamic = factory();
     }
   }
 })(this || window, function () {
@@ -24,22 +24,25 @@
      * @type {Element}
      */
     const filterfield = elem.querySelector(
-      options.filterfield || '.checkbox-filter-dynamic__filter'
+      options.filterfield || '.checkbox-filter__filter'
     );
+
+    const previewCheckboxes =
+      elem.querySelectorAll(options.previewCheckboxes || 'div.checkbox.preview') || [];
 
     /**
      * List of checkboxwrappers, each containing a checkbox and a label.
      * @type {NodeList|Array}
      */
     const checkboxes =
-      elem.querySelectorAll(options.checkboxes || '.checkbox-filter-dynamic div.checkbox') || [];
+      elem.querySelectorAll(options.checkboxes || '.checkbox-filter__modal div.checkbox') || [];
 
     /**
      * Container to display the selected items.
      * @type {Element}
      */
     const selectedContainer = elem.querySelector(
-      options.selectedContainer || '.checkbox-filter-dynamic__selected'
+      options.selectedContainer || '.checkbox-filter__selected'
     );
 
     /**
@@ -47,7 +50,7 @@
      * @type {Element}
      */
     const checkboxContainers = elem.querySelectorAll(
-      options.checkboxContainers || '.checkbox-filter-dynamic__checkboxes'
+      options.checkboxContainers || '.checkbox-filter__checkboxes'
     );
 
     /**
@@ -55,7 +58,7 @@
      * @type {Element}
      */
     const openBtn = elem.querySelector(
-      options.openBtn || '.checkbox-filter-dynamic__open'
+      options.openBtn || '.checkbox-filter__open'
     );
 
     /**
@@ -63,7 +66,7 @@
      * @type {Element}
      */
     const submitBtn = elem.querySelector(
-      options.submitBtn || '.checkbox-filter-dynamic__submit'
+      options.submitBtn || '.checkbox-filter__submit'
     );
 
     /**
@@ -72,7 +75,7 @@
      * @type {NodeList}
      */
     const closeBtns = elem.querySelectorAll(
-      options.closeBtns || '.checkbox-filter-dynamic__close'
+      options.closeBtns || '.checkbox-filter__close'
     );
 
     /**
@@ -80,23 +83,7 @@
      * @type {Element}
      */
     const resultSpan = elem.querySelector(
-      options.resultSpan || '.checkbox-filter-dynamic__result'
-    );
-
-    /**
-     * Container wrapping the countspan.
-     * @type {Element}
-     */
-    const countSpanWrapper = elem.querySelector(
-      options.countSpanWrapper || '.checkbox-filter-dynamic__count-wrapper'
-    );
-
-    /**
-     * Container to display the number of selected values.
-     * @type {Element}
-     */
-    const countSpan = elem.querySelector(
-      options.countSpan || '.checkbox-filter-dynamic__count'
+      options.resultSpan || '.checkbox-filter__result'
     );
 
     /**
@@ -159,79 +146,51 @@
         }
       });
 
-      updateResult(count);
+      if (resultSpan) {
+        resultSpan.textContent = '' + count;
+      }
     };
 
     /**
      * Make a tag.
-     * @param {Element} checkbox Input type checkbox.
+     * @param {HTMLInputElement} checkbox Input type checkbox.
      * @param {Element} label Label for the input type checkbox.
      * @return {Element} A gent styleguide tag component.
      */
     const makeTag = (checkbox, label) => {
-      let tag = document.createElement('span');
+
+      const li = document.createElement('li');
+
+      const tag = document.createElement('span');
       tag.className = 'tag filter';
       tag.textContent = label.textContent;
       tag.setAttribute('data-value', checkbox.value);
 
-      let button = document.createElement('button');
+      const button = document.createElement('button');
       button.type = 'button';
-      button.innerHTML = `<span class="visually-hidden">${options.hiddenTagText ||
-      'Remove tag'}</span>`;
-
-      button.addEventListener('click', () => {
-        checkbox.checked = false;
-        selectedContainer.removeChild(tag);
-
-        if (typeof options.onRemoveTag === 'function') {
-          options.onRemoveTag(checkbox, tag);
-        }
-      });
+      button.innerHTML = `<span class="visually-hidden">
+        ${options.hiddenTagText || 'Remove tag'} ${label.textContent}</span>`;
+      button.addEventListener('click', () => checkbox.click());
 
       tag.appendChild(button);
+      li.appendChild(tag);
 
-      return tag;
+      return li;
     };
 
     /**
      * Remove a tag from the selectedContainer.
-     * @param {Element} checkbox Input type checkbox.
+     * @param {HTMLInputElement} checkbox Input type checkbox.
      */
     const removeTag = checkbox => {
       let test = selectedContainer.querySelectorAll('.filter');
       for (let i = test.length; i--;) {
         if (test[i].getAttribute('data-value') === checkbox.value) {
-          selectedContainer.removeChild(test[i]);
+          selectedContainer.removeChild(test[i].parentElement);
+          if (typeof options.onRemoveTag === 'function') {
+            options.onRemoveTag(checkbox, test);
+          }
         }
-      }
-    };
-
-    /**
-     * Update the count display.
-     */
-    const updateCount = () => {
-      const selectedCount = selectedContainer.children.length;
-
-      if (countSpan) {
-        countSpan.textContent = selectedCount;
-      }
-      if (countSpanWrapper) {
-        if (selectedCount > 0) {
-          countSpanWrapper.classList.remove('hidden');
-        }
-        else {
-          countSpanWrapper.classList.add('hidden');
-        }
-      }
-    };
-
-    /**
-     * Update the result display.
-     * @param {number} resultCount The number of results after filter.
-     */
-    const updateResult = (resultCount) => {
-      if (resultSpan) {
-        resultSpan.textContent = resultCount;
       }
     };
 
@@ -256,19 +215,10 @@
      * Reset the component to it's stored value.
      */
     const reset = () => {
-      if (makeTags) {
-        selectedContainer.innerHTML = '';
-      }
-
-      checkboxLoop(({checkbox, label}) => {
-        if (selectedFilters.indexOf(checkbox) !== -1) {
-          checkbox.checked = true;
-        }
-        else {
-          checkbox.checked = false;
-        }
-        if (checkbox.checked && makeTags) {
-          selectedContainer.appendChild(makeTag(checkbox, label));
+      checkboxLoop(({checkbox}) => {
+        const isSelected = selectedFilters.indexOf(checkbox) !== -1;
+        if ((isSelected && !checkbox.checked) || (!isSelected && checkbox.checked)) {
+          checkbox.click();
         }
       });
     };
@@ -285,8 +235,30 @@
         }
       });
 
-      updateCount();
       filter(true);
+    };
+
+    /**
+     * Bind the preview checkboxes to their original counterpart in the modal.
+     */
+    const addPreviewCheckboxesEvent = () => {
+
+      const updateState = (a, b) => {
+        if (a.checked !== b.checked) {
+          a.click();
+        }
+      };
+
+      for (let i = previewCheckboxes.length; i--;) {
+        const checkboxWrapper = previewCheckboxes[i];
+        const checkbox = checkboxWrapper.querySelector('input[type=checkbox]');
+        const original = elem.querySelector('#' + checkbox.getAttribute('data-original'));
+
+        if (checkbox) {
+          checkbox.addEventListener('change', () => updateState(original, checkbox));
+          original.addEventListener('change', () => updateState(checkbox, original));
+        }
+      }
     };
 
     /**
@@ -303,6 +275,10 @@
           }
           filterTimeOut = setTimeout(filter, 200);
         });
+      }
+
+      if (previewCheckboxes.length) {
+        addPreviewCheckboxesEvent();
       }
 
       // Add events for all checkboxes.
@@ -325,16 +301,13 @@
       if (openBtn) {
         openBtn.addEventListener('click', (e) => {
           selectedFilters = [];
-          let count = 0;
 
           checkboxLoop(({checkbox}) => {
             if (checkbox.checked) {
               selectedFilters.push(checkbox);
             }
-            count++;
           });
 
-          updateResult(count);
           document.addEventListener('keydown', handleKeyboardInput);
         });
       }
@@ -344,7 +317,6 @@
         for (let i = closeBtns.length; i--;) {
           closeBtns[i].addEventListener('click', () => {
             reset();
-            updateCount();
             document.removeEventListener('keydown', handleKeyboardInput);
           });
         }
@@ -353,7 +325,6 @@
       // Update selectedFilters and close.
       if (submitBtn) {
         submitBtn.addEventListener('click', () => {
-          updateCount();
           document.removeEventListener('keydown', handleKeyboardInput);
         });
       }
@@ -368,7 +339,6 @@
       if (keyCode === 27) {
         e.preventDefault();
         reset();
-        updateCount();
       }
     };
 

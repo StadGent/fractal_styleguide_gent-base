@@ -10,44 +10,7 @@
       stacked: true
     } %}
 
-    {% include '@checkboxes' with {
-      input_component: "input",
-      type: "checkbox",
-      label: "Price",
-      id: _self.name ~ "-price",
-      modifier: 'stacked',
-      options: [
-        {
-          "label": "Less than €100",
-          "name": _self.name ~ "-price",
-          "id": _self.name ~ "-price-1"
-        },
-        {
-          "label": "€100 - €249",
-          "name": _self.name ~ "-price",
-          "id": _self.name ~ "-price-2"
-        },
-        {
-          "label": "€250 - €499",
-          "name": _self.name ~ "-price",
-          "id": _self.name ~ "-price-3"
-        },
-        {
-          "label": "€500 - €1000",
-          "name": _self.name ~ "-price",
-          "id": _self.name ~ "-price-4"
-        },
-        {
-          "label": "More than €1000",
-          "name": _self.name ~ "-price",
-          "id": _self.name ~ "-price-5"
-        }
-      ]
-    } %}
-
-    {% include '@checkboxes' with {
-      input_component: "input",
-      type: "checkbox",
+    {% include '@checkboxes-dynamic' with {
       label: "Category",
       id: _self.name ~ "-category",
       modifier: 'stacked',
@@ -75,13 +38,64 @@
       ]
     } %}
 
-    {% include '@checkboxes-with-filter' with {
+    {% include '@checkboxes-dynamic' with {
+      label: "Price",
+      id: _self.name ~ "-price",
+      modifier: 'stacked',
+      options: [
+        {
+          "label": "Less than €100",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-1"
+        },
+        {
+          "label": "€100 - €249",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-2"
+        },
+        {
+          "label": "€250 - €499",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-3"
+        },
+        {
+          "label": "€500 - €999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-4"
+        },
+        {
+          "label": "€1000 - €1999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-5"
+        },
+        {
+          "label": "€2000 - €2999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-6"
+        },
+        {
+          "label": "€3000 - €3999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-7"
+        },
+        {
+          "label": "€4000 - €4999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-8"
+        },
+        {
+          "label": "€5000 or more",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-9"
+        }
+      ]
+    } %}
+
+    {% include '@checkboxes-dynamic' with {
       label: "Activities",
-      label_optional: "Optional",
-      label_count: "activity(ies)",
-      options: checkboxes,
-      field_description: null,
-      stacked: true
+      id: _self.name ~ "-filter",
+      modifier: 'stacked',
+      options: checkboxes
     } %}
 
     {% include '@select' with {

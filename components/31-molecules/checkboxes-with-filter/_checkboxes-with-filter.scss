@@ -27,6 +27,11 @@
     @include desktop {
       display: flex;
     }
+
+    input,
+    p {
+      margin-bottom: 0;
+    }
   }
 
   .checkbox-filter__filter {

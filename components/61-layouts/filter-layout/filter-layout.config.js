@@ -2,17 +2,18 @@
 
 const footerConfig = require('../../41-organisms/footer/footer.config').context;
 
-const generateCheckboxes = (uid)=>{
+const generateCheckboxes = (uid, i) => {
   let result = [];
-  for (let i = 100; i--;) {
+  for (let j = i; j--;) {
     result.push({
-      label_checkbox: `Checkbox option ${i}`,
-      checkbox_name: 'checkboxgroup[]',
-      checkbox_id: `checkbox-${i}-${uid}`,
-      checkbox_value: i
+      label: `Checkbox option ${j}`,
+      id: `checkbox-${+j}-${uid}`,
+      value: j,
+      name: 'checkboxes-dynamic'
     });
   }
-  return [{items: result}];
+
+  return result;
 };
 
 const generateTeasers = (uid)=>{
@@ -38,7 +39,7 @@ module.exports = {
   preview: '@preview-without-padding',
   context: {
     teasers: generateTeasers('filter-page-teaser'),
-    checkboxes: generateCheckboxes('checkboxes-with-filter'),
+    checkboxes: generateCheckboxes('checkboxes-with-filter', 100),
     footerConfig
   }
 };
