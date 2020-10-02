@@ -86,8 +86,6 @@
 
   {% set modalContent %}
 
-    {% include '@tag-list' with { modifier: 'checkbox-filter__selected' } %}
-
     <div class="form-item checkbox-filter__filter__search-wrapper">
       <input type="search" id="checkboxes__filter_id_{{ modifier }}"
              class="checkbox-filter__filter" aria-label="Filter the list below">
@@ -97,6 +95,8 @@
         <span class="checkbox-filter__result">#</span> filter(s) found
       </div>
     </div>
+
+    {% include '@tag-list' with { modifier: 'checkbox-filter__selected' } %}
 
     {% include '@checkboxes' %}
 

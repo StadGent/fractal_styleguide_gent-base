@@ -23,13 +23,14 @@
 }
 
 .checkbox-filter__modal {
+  .tag-list-wrapper {
+    min-height: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
   .tag-list {
     .tag {
       margin: 0;
-    }
-
-    li:last-of-type {
-      margin-bottom: 1.2rem;
     }
   }
 }
