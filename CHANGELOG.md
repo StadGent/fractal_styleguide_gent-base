@@ -21,7 +21,6 @@ All notable changes to this style guide are documented here.
   If your project uses the checkboxes with filter component, please plan your transition to the new dynamic component.
 * STIJ-326: Added optional introductory text in the filter layout.  
 
-
 ### Updated
 
 * STIJ-286: All ‘teaser‘ variants now use the ‘tab-list' component.
