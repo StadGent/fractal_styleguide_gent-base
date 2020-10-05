@@ -1,13 +1,11 @@
 # City of Ghent Style Guide
 
-## Changelog
+## Versioning and releases
 
+We plan biannual releases, please see our
+[versioning and releases page]({{path '/docs/versioning-and-releases'}}) for details.  
 The changelog is available through our [GitHub repo](https://github.com/StadGent/fractal_styleguide_gent-base/)
-or on our [changelog page]({{path '/docs/changelog'}}).
-
-## SASS documentation (for contributors)
-
-You can find the SASS docs <a href="{{ path '/sassdocs/index.html' }}" target="_blank">here</a>.
+or on our [changelog page]({{path '/docs/changelog'}}).  
 
 ## Questions?
 
@@ -50,6 +48,10 @@ command to compile the SASS into a working CSS file.
 $styleguide-dir: '../../../node_modules/gent_styleguide/build/styleguide' !default;
 @import "sass/main_cli";
 ```
+
+## SASS documentation (for contributors)
+
+You can find the SASS docs <a href="{{ path '/sassdocs/index.html' }}" target="_blank">here</a>.
 
 ## Running the City of Ghent Style Guide in development mode
 
