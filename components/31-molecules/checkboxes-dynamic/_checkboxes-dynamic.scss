@@ -1,0 +1,36 @@
+.checkbox-filter-dynamic {
+  .checkbox-accordion {
+
+    .checkbox:last-child {
+      margin-bottom: .5rem;
+    }
+
+    .accordion--content {
+      transition: max-height .5s ease-in-out;
+      overflow: hidden;
+    }
+
+    .accordion--button {
+      &[aria-expanded=false] {
+        @include icon(chevron-down);
+      }
+
+      &[aria-expanded=true] {
+        @include icon(chevron-up);
+      }
+    }
+  }
+}
+
+.checkbox-filter__modal {
+  .tag-list-wrapper {
+    min-height: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .tag-list {
+    .tag {
+      margin: 0;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # Checkboxes with filter
 
+**DEPRECATED: do no longer use this component. It has been replaced by <a href="{{path './checkboxes-dynamic.html'}}">checkboxes dynamic</a>**
+
 ## When to use this component
 
 Use the checkboxes with filter component when you need to help users select one or more options from a long list of options.
