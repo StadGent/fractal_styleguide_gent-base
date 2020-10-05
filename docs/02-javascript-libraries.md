@@ -45,5 +45,7 @@ Inside this stylguide we have the following Javascript enabled components:
   Style guide implementation of the
   <a href="{{path '/components/detail/breadcrumbs'}}">breadcrumbs molecule</a>.
 * Table  
-  Provides accessibility features for a responsive <a href="{{path '/components/detail/table'}}">table molecule</a>.  
-
+  Provides accessibility features for a responsive <a href="{{path '/components/detail/table'}}">table molecule</a>.
+* Checkboxes dynamic    
+  On top of using the accordion and modal, this component has it's own JS to link the preview checkboxes to their
+  modal counterpart, the modal checkboxes to the filter tags and so on.

@@ -8,7 +8,7 @@ For instance, if a piece of content is related to recycling, a tag could be used
 
 A tag allows to quickly scan on overviews which pieces of content are or aren't related to a certain subject. It also allows to generate specific overviews with all content about a certain subject. On detail pages, a tag shows what subject the page is about.
 
-## How it works
+## Types of tags and their usage within the style guide
 
 There are three types of tags, each with a unique use and presentation:
 * Default tag

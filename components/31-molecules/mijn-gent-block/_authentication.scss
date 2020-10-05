@@ -1,4 +1,3 @@
-.mijn-gent-block, /// @deprecated
 .authentication {
   display: flex;
   position: relative;
@@ -63,7 +62,10 @@
       @include bold-text;
 
       display: none;
+      max-width: 160px;
       padding: 0 .5em;
+      text-overflow: ellipsis;
+      overflow: hidden;
 
       @include tablet {
         display: inline-block;

@@ -1,6 +1,7 @@
 .file-upload {
 
-  ul.inline {
+  ul.inline, /// @deprecated since 4.0.0
+  .tag-list-wrapper {
     margin-top: .8rem;
 
     li {

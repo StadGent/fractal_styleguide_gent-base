@@ -1,12 +1,8 @@
-.highlight,
-.box-left, /// @deprecated
-.box-top, /// @deprecated
-.box-no-icon { /// @deprecated
+.highlight {
   position: relative;
   font-size: .8rem;
 
-  .highlight__inner,
-  .inner-box { /// @deprecated
+  .highlight__inner {
     @include theme('background-color', 'color-primary--lighten-5', 'highlight-background');
     display: flex;
     flex-direction: column;
@@ -41,9 +37,7 @@
 }
 
 .highlight--left,
-.highlight--top,
-.box-left, /// @deprecated
-.box-top { /// @deprecated
+.highlight--top {
   padding-top: 3.5rem;
 
   $icons: book camera download form letter link loupe mail newsletter phone quote upload whistle;
@@ -53,8 +47,7 @@
     }
   }
 
-  .highlight__inner,
-  .inner-box { /// @deprecated
+  .highlight__inner {
     @include tablet-and-below {
       padding-top: 5rem;
     }
@@ -75,14 +68,12 @@
   }
 }
 
-.highlight--left,
-.box-left { /// @deprecated
+.highlight--left {
   @include tablet {
     padding-top: 0;
   }
 
-  .highlight__inner,
-  .inner-box { /// @deprecated
+  .highlight__inner {
 
     @include tablet {
       min-height: 11rem;
@@ -98,10 +89,8 @@
   }
 }
 
-.highlight--top,
-.box-top { /// @deprecated
-  .highlight__inner,
-  .inner-box { /// @deprecated
+.highlight--top {
+  .highlight__inner {
     @include tablet {
       padding-right: 9rem;
 
@@ -111,10 +100,4 @@
       }
     }
   }
-}
-
-.box-no-icon { /// @deprecated
-  @include theme('background-color', 'color-primary--lighten-5', 'highlight-background');
-  padding: 2rem 1rem 1.6rem;
-  border-radius: border-radius('radius-2');
 }

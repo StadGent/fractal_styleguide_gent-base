@@ -2,6 +2,68 @@
 
 All notable changes to this style guide are documented here.
 
+## [4.0.0] 
+
+### Fixed
+
+* STIJ-279: Fixed text overflow for large names in the authentication component.
+* STIJ-365: Fixed warning color for themes blue, teal and green.
+
+### Added
+
+* STIJ-333: Added button with icon on the left side variation.
+* STIJ-286: Added tag-list component; a collection of tags.
+* STIJ-364: Added field-message info variant.
+* STIJ-306: Added `.w7-o2`, `.w9-o1`, `.w10-o1` and `.w12` helper classes to give children of the detail-layout
+  a column width and offset.
+* STIJ-353: **Beta** Added the `checkboxes dynamic` component,  
+  This component will replace the `checkboxes with filter` component.  
+  If your project uses the checkboxes with filter component, please plan your transition to the new dynamic component.
+* STIJ-326: Added optional introductory text in the filter layout.  
+
+### Updated
+
+* STIJ-286: All ‘teaser‘ variants now use the ‘tab-list' component.
+* STIJ-286: **Breaking** ‘file upload - multiple‘ now uses the ‘tab-list‘ component.  
+  Support for the old template with selector `ul.inline` will drop in the next major release.
+* STIJ-286: **Breaking** the filter layout now uses ‘tab-list‘ to display the selected filters.  
+  Update your templates accordingly, or the selected filters will lose their margins.
+* STIJ-358: **Breaking**  
+  The template, styling, heading levels and content of the footer component have been updated.  
+  Make sure to read the component documentation, it contains details about which parts are
+  optional or custom for each site.  
+  Do not simply copy all hyperlinks! They are mostly for demo purposes only.
+
+### Removed
+
+* The positioning of `.search-block` and `.contact-box` has been removed from the detail layout.  
+  These components don't exist within this styleguide.  
+  If your project does have these components: position them using classes `.w9-o1` and `.w10-o1` respectively.
+
+Following items had been marked as deprecated in the last major release.  
+They have now been removed.
+
+* ‘contact-block’ has been removed in favour of the generic ‘CTA-block’.
+  Your project should no longer use classes `.inner-box, .box-left, .box-top, .box-no-icon`.  
+  This includes it's usage in `_detail-layout.scss`.  
+* ‘help-block’ has been removed.  
+  This includes it's usage in `_detail-layout.scss`.
+* ‘extra-articles’ has been removed.  
+* `modal.functions.js` has been removed.  
+   Use modal/index.js from the vendor directory  
+   or install**@digipolis-gent/modal** as dependency.
+* Dependency body-scroll-lock has been removed (it's usage has been moved to @digipolis-gent/modal). 
+* Class `.mijn-gent-block` has been removed in favour of `.authentication`.  
+* Classes `.subsite .subsite-title` have been removed from the **header hero**
+  in favour of `.theme` and `.theme-title`.  
+  The class `.subsite` still exists to display the site name in the header.
+  (deprecated since 3.0.0-beta9)
+* Class `.wizard-steps` has been removed in favour of `.form-steps`.  
+  (deprecated since 3.0.0-beta4)
+* Classes `.teaser-programme .teaser-topic .teaser-topic-links .teaser-contact-info .teaser-search
+  .teaser-search-wide .content__top .content__bottom .content__left .content__right` have been removed.  
+  (deprecated since 3.0.0-beta1)
+
 ## [3.1.1]
 
 ### Fixed
@@ -897,6 +959,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[4.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.1.1...4.0.0
 [3.1.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.1.0...3.1.1
 [3.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.2...3.1.0
 [3.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.1...3.0.2

@@ -1,6 +1,7 @@
 %messages,
 .messages {
   @include theme('color', 'color-tertiary--lighten-1', 'status-messages-color');
+  @include theme('background-color', 'color-info--lighten-5', 'status-messages-info-background');
 
   $status-message-icon-size: 2.1rem;
 
@@ -18,6 +19,8 @@
   text-align: center;
 
   i {
+    @include theme('color', 'color-info', 'status-messages-info-icon');
+
     display: block;
     flex: 0 0 $status-message-icon-size;
     width: $status-message-icon-size;
@@ -86,6 +89,7 @@
   }
 
   a {
+    @include link-background('color-tertiary', 'color-info--lighten-4', 'status-messages-link-border-color', 'status-messages-info-link-background-color');
     @include theme('border-color', 'color-tertiary', 'status-messages-link-border-color');
     @include theme('color', 'color-tertiary--lighten-1', 'status-messages-color');
 

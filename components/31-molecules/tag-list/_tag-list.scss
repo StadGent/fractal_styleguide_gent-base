@@ -1,0 +1,17 @@
+.tag-list-wrapper {
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -.2rem;
+    list-style: none;
+
+    li {
+      margin: .2rem;
+    }
+
+    a {
+      @include bold-text;
+      white-space: nowrap;
+    }
+  }
+}

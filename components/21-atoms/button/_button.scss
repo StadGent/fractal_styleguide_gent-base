@@ -119,6 +119,10 @@
 
   &[class*="icon-"] {
     @include button-icon;
+
+    &.icon-left {
+      @include button-icon-left;
+    }
   }
 }
 
@@ -159,7 +163,7 @@
   }
 
   &::before {
-    order: 2;
+    order: 1;
     margin-left: .5rem;
     // Fix for IE11 flex order property.
     float: right;
@@ -176,6 +180,21 @@
     content: '';
   }
 }
+
+///
+/// Define a button with an icon on the left side.
+///
+
+@mixin button-icon-left {
+  &::before {
+    order: unset;
+    margin-right: .5rem;
+    margin-left: 0;
+    // Fix for IE11 flex order property.
+    float: left;
+  }
+}
+
 
 .button,
 input[type="button"],

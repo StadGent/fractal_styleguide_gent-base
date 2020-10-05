@@ -10,14 +10,14 @@ Status messages are mostly used in the context of a form as a feedback mechanism
 
 There are four types of status messages:
 
-1. Normal (or default) status message
+1. Info (or default) status message
 2. Warning status message
 3. Error status message
 4. Success status message
 
-### Normal (or default) status message
+### Info (or default) status message
 
-A normal status message is used to provide general information or help to the user. The message should have enough information to help the user understand the message, the purpose of the message and to be clear, but should be as short as possible.
+A info status message is used to provide general information or help to the user. The message should have enough information to help the user understand the message, the purpose of the message and to be clear, but should be as short as possible.
 
 ### Warning status message
 

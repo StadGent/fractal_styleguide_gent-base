@@ -6,6 +6,7 @@
 
   // Give each direct child a specific width.
   // This is a fallback width given to all children of the detail layout.
+  .w7-o2,
   > * {
     @include desktop {
       @include set-layout('width-7', 'offset-2');
@@ -36,21 +37,15 @@
     padding-left: 2rem;
   }
 
-  > .help-block,
-  > .search-block {
+  .w9-o1 {
     @include desktop {
       @include set-layout('width-9', 'offset-1');
     }
   }
 
-  > .box-top,
-  > .summary-box,
-  > .cta-block,
-  > .contact-block,
-  > .contact-details,
+  .w10-o1,
   > .highlight,
-  > .image-gallery--wrapper.multiple,
-  > .contact-box {
+  > .image-gallery--wrapper.multiple {
     @include desktop {
       @include set-layout('width-10', 'offset-1');
     }
@@ -66,12 +61,6 @@
     }
   }
 
-  > .help-block {
-    @include desktop {
-      padding-left: span(1 wide of 12);
-    }
-  }
-
   > .quote-wrapper {
     @include desktop {
       @include set-layout();
@@ -82,6 +71,7 @@
     }
   }
 
+  .w12,
   > .timeline-wrapper,
   > .programme-wrapper {
     @include set-layout();
@@ -113,10 +103,8 @@
     @include full-width;
   }
 
-  > .highlight--top,
-  > .box-top { /// @deprecated
-    .highlight__inner,
-    .inner-box { /// @deprecated
+  > .highlight--top {
+    .highlight__inner {
       @include desktop {
         padding-right: 0;
         padding-left: 0;

@@ -1,25 +1,13 @@
 'use strict';
 
-const generateCheckboxes = (uid) =>{
+const generateCheckboxes = (uid, i) => {
   let result = [];
-  for (let i = 2; i--;) {
-    var title = 'Category ' + (10 - i);
-    var value = 'category_ ' + (10 - i);
-    var items = [];
-
-    for (let j = 100; j--;) {
-      items.push({
-        label_checkbox: `Checkbox option ${i.toString() + j}`,
-        checkbox_name: 'checkboxgroup[]',
-        checkbox_id: `checkbox-${i.toString() + j}-${uid}`,
-        checkbox_value: i.toString() + j
-      });
-    }
-
+  for (let j = i; j--;) {
     result.push({
-      title,
-      value,
-      items
+      label: `Checkbox option ${j}`,
+      id: `checkbox-${+j}-${uid}`,
+      value: j,
+      name: 'checkboxes-dynamic'
     });
   }
 
@@ -39,7 +27,7 @@ const generateTeasers = (uid)=>{
       title: 'Search result',
       link: '#',
       link_text: 'Read more',
-      tag: 'some tag'
+      tags: ['some tag']
     });
   }
   return result;
@@ -47,11 +35,10 @@ const generateTeasers = (uid)=>{
 
 
 module.exports = {
-  status: 'alpha',
   hidden: true,
   preview: '@preview-without-padding',
   context: {
-    checkboxes: generateCheckboxes('checkboxes-with-filter'),
+    checkboxes: generateCheckboxes('checkboxes-with-filter', 100),
     results: generateTeasers('search teasers')
   }
 };

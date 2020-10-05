@@ -4,6 +4,9 @@
 {% endif %}
 
   <input type="{{ type }}" id="{{ id }}"
+     {% if attributes %}
+       {{ attributes }}
+    {% endif %}
     {% if ariaDescribedBy %}
       aria-describedby="{{ ariaDescribedBy }}"
     {% endif %}

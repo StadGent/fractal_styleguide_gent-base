@@ -13,8 +13,9 @@ const twigAdapter = require('@frctl/twig');
 /*
 * Give your project a title.
 */
-fractal.set('project.title', 'City of Ghent Style Guide - Version ' + packageInfo.version);
+fractal.set('project.title', 'City of Ghent Style Guide');
 fractal.set('plugins.web.build.root', 'v3');
+fractal.set('project.version', packageInfo.version)
 
 /*
 * Tell Fractal where to look for components.
@@ -74,7 +75,8 @@ const ghentTheme = mandelbrot({
   nav: ['search', 'docs', 'components'],
   scripts: [
     'default',
-    '/js/search.js'
+    '/js/search.js',
+    '/js/version-switch.js'
   ],
   panels: [
     'notes', 'view', 'info', 'html', 'context', 'resources'

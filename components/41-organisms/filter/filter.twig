@@ -1,116 +1,130 @@
 <div class="sidebar-layout filter">
   {% set modalContent %}
-      {% include '@form-item' with {
-        label: "Name",
-        id: _self.name ~ "-name_id",
-        input_component: "input",
-        type: "text",
-        name: _self.name ~ "-name_name",
-        field_description: null,
-        stacked: true
-      } %}
+    {% include '@form-item' with {
+      label: "Name",
+      id: _self.name ~ "-name_id",
+      input_component: "input",
+      type: "text",
+      name: _self.name ~ "-name_name",
+      field_description: null,
+      stacked: true
+    } %}
 
-      {% include '@checkboxes' with {
-        input_component: "input",
-        type: "checkbox",
-        label: "Price",
-        id: _self.name ~ "-price",
-        modifier: 'stacked',
-        options: [
+    {% include '@checkboxes-dynamic' with {
+      label: "Category",
+      id: _self.name ~ "-category",
+      modifier: 'stacked',
+      options: [
+        {
+          "label": "Games",
+          "name": _self.name ~ "-checkboxgroup",
+          "id": _self.name ~ "-checkbox-1"
+        },
+        {
+          "label": "Movies",
+          "name": _self.name ~ "-checkboxgroup",
+          "id": _self.name ~ "-checkbox-2"
+        },
+        {
+          "label": "Series",
+          "name": _self.name ~ "-checkboxgroup",
+          "id": _self.name ~ "-checkbox-3"
+        },
+        {
+          "label": "Books",
+          "name": _self.name ~ "-checkboxgroup",
+          "id": _self.name ~ "-checkbox-4"
+        }
+      ]
+    } %}
+
+    {% include '@checkboxes-dynamic' with {
+      label: "Price",
+      id: _self.name ~ "-price",
+      modifier: 'stacked',
+      options: [
+        {
+          "label": "Less than €100",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-1"
+        },
+        {
+          "label": "€100 - €249",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-2"
+        },
+        {
+          "label": "€250 - €499",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-3"
+        },
+        {
+          "label": "€500 - €999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-4"
+        },
+        {
+          "label": "€1000 - €1999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-5"
+        },
+        {
+          "label": "€2000 - €2999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-6"
+        },
+        {
+          "label": "€3000 - €3999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-7"
+        },
+        {
+          "label": "€4000 - €4999",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-8"
+        },
+        {
+          "label": "€5000 or more",
+          "name": _self.name ~ "-price",
+          "id": _self.name ~ "-price-9"
+        }
+      ]
+    } %}
+
+    {% include '@checkboxes-dynamic' with {
+      label: "Activities",
+      id: _self.name ~ "-filter",
+      modifier: 'stacked',
+      options: checkboxes
+    } %}
+
+    {% include '@select' with {
+      id: 'select',
+      label: 'Store',
+      field_description: null,
+      stacked: true,
+      input_component: 'input-select',
+      options: [
+        {
+          label: 'Option 1'
+        },
+        {
+          label: 'Option 2'
+        },
+        {
+          optgroup: true,
+          label: 'Option group',
+          optgroupoptions: [
           {
-            "label": "Less than €100",
-            "name": _self.name ~ "-price",
-            "id": _self.name ~ "-price-1"
+            label: 'Option 3'
           },
           {
-            "label": "€100 - €249",
-            "name": _self.name ~ "-price",
-            "id": _self.name ~ "-price-2"
-          },
-          {
-            "label": "€250 - €499",
-            "name": _self.name ~ "-price",
-            "id": _self.name ~ "-price-3"
-          },
-          {
-            "label": "€500 - €1000",
-            "name": _self.name ~ "-price",
-            "id": _self.name ~ "-price-4"
-          },
-          {
-            "label": "More than €1000",
-            "name": _self.name ~ "-price",
-            "id": _self.name ~ "-price-5"
+            label: 'Option 4'
           }
         ]
-      } %}
-
-      {% include '@checkboxes' with {
-        input_component: "input",
-        type: "checkbox",
-        label: "Category",
-        id: _self.name ~ "-category",
-        modifier: 'stacked',
-        options: [
-          {
-            "label": "Games",
-            "name": _self.name ~ "-checkboxgroup",
-            "id": _self.name ~ "-checkbox-1"
-          },
-          {
-            "label": "Movies",
-            "name": _self.name ~ "-checkboxgroup",
-            "id": _self.name ~ "-checkbox-2"
-          },
-          {
-            "label": "Series",
-            "name": _self.name ~ "-checkboxgroup",
-            "id": _self.name ~ "-checkbox-3"
-          },
-          {
-            "label": "Books",
-            "name": _self.name ~ "-checkboxgroup",
-            "id": _self.name ~ "-checkbox-4"
-          }
-        ]
-      } %}
-
-      {% include '@checkboxes-with-filter' with {
-        label: "Activities",
-        label_optional: "Optional",
-        label_count: "activity(ies)",
-        options: checkboxes,
-        field_description: null,
-        stacked: true
-      } %}
-
-      {% include '@select' with {
-        id: 'select',
-        label: 'Store',
-        field_description: null,
-        stacked: true,
-        input_component: 'input-select',
-        options: [
-          {
-            label: 'Option 1'
-          },
-          {
-            label: 'Option 2'
-          },
-          {
-            optgroup: true,
-            label: 'Option group',
-            optgroupoptions: [
-              {
-                label: 'Option 3'
-              },
-              {
-                label: 'Option 4'
-              }
-            ]
-          }
-        ]
-      } %}
+        }
+      ]
+    } %}
   {% endset %}
   {% include "@modal" with {
     id: 'filter',
@@ -129,19 +143,25 @@
       "heading_text": "Filtercomponent"
     } %}
 
-    {% include '@text-to-speech-button' %}
+    <div class="bold show-desktop-only mb-20">
+      {% include '@paragraph' with {
+        text: 'This is an optional introductory text. If this text is present, it is never shown below desktop width!'
+      } %}
+      {% include '@paragraph' with {
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam dignissimos itaque. Ad autem consequuntur deleniti doloremque, impedit maxime praesentium provident quaerat reiciendis repudiandae vero?'
+      } %}
+    </div>
 
     <div class="selected-filters">
       <h2>You have selected:</h2>
-      <span :key="filter.key" class="tag filter">
-        Filter one
-        <button><span class="visually-hidden">Remove this filter</span></button>
-      </span>
-      <span :key="filter.key" class="tag filter">
-        Filter two
-        <button><span class="visually-hidden">Remove this filter</span></button>
-      </span>
-      <a href="#">Remove all filters</a>
+      {% include '@tag-list' with {
+        tags: [
+          { text: 'Filter one', type: 'filter-tag' },
+          { text: 'Filter two', type: 'filter-tag' },
+          { text: 'Filter three', type: 'filter-tag' }
+        ],
+        link: { text: 'Remove all filters', link: '#' }
+      } %}
     </div>
 
     <div class="filter__result-count">
@@ -149,7 +169,8 @@
       <button type="button"
               class="button button-secondary icon-filter result__show-filters modal-trigger"
               aria-expanded="false"
-              aria-controls="filter">Filters</button>
+              aria-controls="filter">Filters
+      </button>
     </div>
 
     <ul class="filter__results">
@@ -164,8 +185,7 @@
           "title": result.title,
           "link_text": result.link_text,
           "link": result.link,
-          "tag": result.tag,
-          "tag2": null,
+          "tags": result.tags,
           "address_location": null,
           "address": null,
           "list": null
@@ -176,7 +196,7 @@
     {% include '@pagination' with {
       total: 20,
       active: 17
-    }%}
+    } %}
 
   </section>
 

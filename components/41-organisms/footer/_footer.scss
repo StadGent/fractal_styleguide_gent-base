@@ -1,137 +1,135 @@
-// General footer styling.
 .footer {
   margin-top: 4rem;
+  margin-right: -$gutter-width;
+  margin-left: -$gutter-width;
+
+  .content-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calc(#{$bp-max-content} + 54px);
+    padding: 0 $gutter-width;
+
+    @media (min-width: $bp-max-content + 54px) {
+      max-width: $bp-max-content;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 
   .footer-top {
     @include theme('background-color', 'color-primary--lighten-5', 'footer-background-color');
+    margin-bottom: 1.2rem;
 
-    width: calc(100% + 2 * #{$gutter-width});
-    margin-right: -$gutter-width;
-    margin-left: -$gutter-width;
-
-    > .content-container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: calc(#{$bp-max-content} + 54px);
-      margin-bottom: 1rem;
-      padding: 0 $gutter-width 1.5rem;
+    .content-container {
+      padding-top: 2rem;
 
       @include desktop {
         padding-top: 4rem;
         padding-bottom: 4rem;
       }
-
-      @media (min-width: $bp-max-content + 54px) {
-        max-width: $bp-max-content;
-        padding: 4rem 0;
-      }
     }
 
     .footer--column {
-      width: 100%;
+      flex: 0 0 auto;
+      width: span(12 of 12);
+      margin-bottom: 2.6rem;
 
-      @include phablet {
-        flex: 1 0 auto;
+      @include tablet {
         width: span(6 of 12);
+
+        &:nth-of-type(2) {
+          margin-right: $gutter-width;
+        }
+
+        &:first-of-type {
+          width: span(12 of 12);
+        }
       }
 
       @include desktop {
-        width: span(2 of 12);
-      }
+        width: span(3 of 12);
+        margin-top: 1.4rem;
+        margin-bottom: 0;
 
-      &:nth-of-type(3) {
-        display: flex;
-
-        @include desktop {
-          justify-content: center;
-          width: span(2 of 12);
-        }
-      }
-
-      &:first-of-type {
-        width: 100%;
-
-        @include phablet {
-          width: span(12 of 12);
-          margin-top: 1.2rem;
-          margin-bottom: .4rem;
+        &:nth-of-type(3) {
+          margin-right: $gutter-width;
         }
 
-        @include desktop {
+        &:first-of-type {
           order: 1;
-          width: span(7 of 12);
+          width: span(6 of 12);
           margin-top: 0;
         }
       }
     }
+
+    ul {
+      margin: 0;
+      list-style: none;
+    }
+
+    .social-list ul {
+      width: calc(100% + 1rem);
+      margin: 0 -.5rem;
+    }
+
   }
 
   .footer-bottom {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: .8rem;
-    overflow: hidden;
+    align-items: baseline;
+    justify-content: center;
 
     @include desktop {
-      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+
+    ul {
+      margin: 0;
+      font-size: .6rem;
+      list-style: none;
+      text-align: center;
+    }
+
+    li {
+      margin-bottom: .2rem;
+
+      @include tablet {
+        display: inline-block;
+        padding: 0 .4rem;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .partnership {
+      font-size: .7rem;
+
+      i.icon-digipolis {
+        margin-left: .5rem;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        vertical-align: middle;
+      }
     }
 
     .footer--column {
       width: 100%;
-      line-height: 1rem;
+      margin-bottom: 1.2rem;
+      text-align: center;
 
-      // Left column.
-      &:first-child {
+      @include desktop {
         order: 2;
+        width: auto;
 
-        @include desktop {
+        &.partnership {
           order: 1;
-          width: span(4 of 12);
+          margin-right: $gutter-width;
         }
       }
-
-      // Right column.
-      &:last-child {
-        order: 1;
-        margin-bottom: 1.8rem;
-
-        @include phablet {
-          margin-bottom: 0;
-        }
-
-        @include desktop {
-          width: span(8 of 12);
-        }
-      }
-    }
-  }
-
-  .dg-block-post-address,
-  .dg-block-disclaimer {
-    margin-top: 2.2rem;
-    margin-left: 1.2rem;
-
-    @include desktop {
-      margin-left: 0;
-    }
-  }
-
-  .dg-blocks-social,
-  .db-block-partnership {
-    height: 2rem;
-
-    @include phablet {
-      margin-bottom: .4rem;
-    }
-  }
-
-  .db-block-partnership {
-    justify-content: center;
-    width: 100%;
-
-    @include desktop {
-      justify-content: flex-start;
     }
   }
 

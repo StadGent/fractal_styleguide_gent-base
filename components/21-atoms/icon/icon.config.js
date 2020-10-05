@@ -42,6 +42,7 @@ const icons = [
   'heart',
   'home',
   'image',
+  'info',
   'instagram',
   'lightning',
   'linkedin',

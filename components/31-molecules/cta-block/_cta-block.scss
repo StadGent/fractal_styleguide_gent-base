@@ -1,21 +1,8 @@
 .cta-block {
 
-  /// @deprecated
-  &.link .inner-box::before {
-    @include spot-image('link-light', 7rem);
-  }
-
-  /// @deprecated
-  &.download .inner-box::before {
-    @include spot-image('download-light', 7rem);
-  }
-
-  .inner-box, /// @deprecated
   .highlight__inner {
-    min-height: 11rem; /// @deprecated
 
     li {
-      width: 100%; /// @deprecated
       margin-top: .8rem;
 
       &:first-of-type a {
@@ -46,7 +33,6 @@
       margin-right: 1rem;
       margin-left: 1rem;
 
-      .inner-box, /// @deprecated
       .highlight__inner {
         height: 100%;
 
