@@ -5,10 +5,6 @@
 The changelog is available through our [GitHub repo](https://github.com/StadGent/fractal_styleguide_gent-base/)
 or on our [changelog page]({{path '/docs/changelog'}}).
 
-## SASS documentation (for contributors)
-
-You can find the SASS docs <a href="{{ path '/sassdocs/index.html' }}" target="_blank">here</a>.
-
 ## Questions?
 
 You can join us on Slack at <a href="https://uxuighent.slack.com/" target="_blank">UX/UI Ghent</a>.
@@ -50,6 +46,10 @@ command to compile the SASS into a working CSS file.
 $styleguide-dir: '../../../node_modules/gent_styleguide/build/styleguide' !default;
 @import "sass/main_cli";
 ```
+
+## SASS documentation (for contributors)
+
+You can find the SASS docs <a href="{{ path '/sassdocs/index.html' }}" target="_blank">here</a>.
 
 ## Running the City of Ghent Style Guide in development mode
 
