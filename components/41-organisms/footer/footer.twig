@@ -20,8 +20,8 @@
             {% include '@list' with {
               'type': 'icon-list',
               'icon_items': [
-                '<i class="icon-phone" aria-hidden="true"></i><a href="tel:' ~ gentinfo.phone.machine ~ '" alt="Gentinfo tel link">' ~ gentinfo.phone.label ~ '</a>',
-                '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:' ~ gentinfo.email ~ '" alt="Gentinfo mail link">' ~ gentinfo.email ~ '</a>',
+                '<i class="icon-phone" aria-hidden="true"></i><a href="tel:' ~ gentinfo.phone.machine ~ '">' ~ gentinfo.phone.label ~ '</a>',
+                '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:' ~ gentinfo.email ~ '">' ~ gentinfo.email ~ '</a>',
                 '<i class="icon-document" aria-hidden="true"></i><a href="https://stad.gent/contact">' ~ gentinfo.form ~ '</a>'
               ]
             } %}
