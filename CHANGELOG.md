@@ -4,6 +4,8 @@ All notable changes to this style guide are documented here.
 
 ## [4.0.1] 
 
+### Fixed
+
 ** Updated modal-actions z-index.
 
 ## [4.0.0] 
