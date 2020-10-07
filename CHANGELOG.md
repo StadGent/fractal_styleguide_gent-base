@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [4.0.1] 
+
+### Fixed
+
+* Updated modal-actions z-index.
+
 ## [4.0.0] 
 
 ### Fixed
@@ -23,10 +29,10 @@ All notable changes to this style guide are documented here.
 
 ### Updated
 
-* STIJ-286: All ‘teaser‘ variants now use the ‘tab-list' component.
-* STIJ-286: **Breaking** ‘file upload - multiple‘ now uses the ‘tab-list‘ component.  
+* STIJ-286: All ‘teaser‘ variants now use the ‘tag-list' component.
+* STIJ-286: **Breaking** ‘file upload - multiple‘ now uses the ‘tag-list‘ component.  
   Support for the old template with selector `ul.inline` will drop in the next major release.
-* STIJ-286: **Breaking** the filter layout now uses ‘tab-list‘ to display the selected filters.  
+* STIJ-286: **Breaking** the filter layout now uses ‘tag-list‘ to display the selected filters.  
   Update your templates accordingly, or the selected filters will lose their margins.
 * STIJ-358: **Breaking**  
   The template, styling, heading levels and content of the footer component have been updated.  
@@ -959,6 +965,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[4.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.1.1...4.0.0
 [3.1.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.1.0...3.1.1
 [3.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.0.2...3.1.0
