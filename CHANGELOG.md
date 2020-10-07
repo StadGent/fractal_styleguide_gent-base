@@ -6,7 +6,7 @@ All notable changes to this style guide are documented here.
 
 ### Fixed
 
-** Updated modal-actions z-index.
+* Updated modal-actions z-index.
 
 ## [4.0.0] 
 
