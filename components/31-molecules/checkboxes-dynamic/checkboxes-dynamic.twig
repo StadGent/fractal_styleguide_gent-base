@@ -23,17 +23,24 @@
       <div class="form-columns">
         <div class="form-item-column">
 
+          <p class="checkbox-filter__count-wrapper hidden">
+            <span class="checkbox-filter__count">0</span> {{ label_count }}
+            selected
+          </p>
+
           {% if options | length < 21 %}
 
-            {% for option in options|slice(0, 3) %}
-              {% include '@input' with {
-                id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
-                type: 'checkbox',
-                name: option.name,
-                label: option.label,
-                modifier: modifier
-              } %}
-            {% endfor %}
+            <div class="accordion-preview">
+              {% for option in options|slice(0, 3) %}
+                {% include '@input' with {
+                  id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id,
+                  type: 'checkbox',
+                  name: option.name,
+                  label: option.label,
+                  modifier: modifier
+                } %}
+              {% endfor %}
+            </div>
 
             <div class="checkbox-accordion">
               <div class="accordion--content" aria-hidden="true"
@@ -61,20 +68,20 @@
 
           {% else %}
 
-            {% for option in options|slice(0, 3) %}
-
-              {% include '@input' with {
-                id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id ~ "preview",
-                type: 'checkbox',
-                name: null,
-                attributes: 'data-original="' ~ "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id ~ '"',
-                label: option.label,
-                modifier: modifier,
-                modifierWrapper: "preview",
-                value: option.value
-              } %}
-
-            {% endfor %}
+            <div class="modal-preview">
+              {% for option in options|slice(0, 3) %}
+                {% include '@input' with {
+                  id: "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id ~ "preview",
+                  type: 'checkbox',
+                  name: null,
+                  attributes: 'data-original="' ~ "input-" ~ id ~ "-" ~ modifier ~ "-" ~ option.id ~ '"',
+                  label: option.label,
+                  modifier: modifier,
+                  modifierWrapper: "preview",
+                  value: option.value
+                } %}
+              {% endfor %}
+            </div>
 
             {% set modalTitle = label %}
 
