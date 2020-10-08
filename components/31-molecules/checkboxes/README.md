@@ -4,14 +4,14 @@
 
 Use the checkboxes component to help users:
 
-* Select one or more options from a list a short list of options.
 * Toggle a single option on or off.
+* Select one or more options from a fixed, short list of options.
 
 ## When not to use this component
 
-Do not use the checkboxes component when you need to help users select one or more options from a long list of options. In this case, use <a href="{{path './checkboxes-with-filter.html'}}">checkboxes with filter component</a> instead.
+Do not use the checkboxes component when you need to help users select one or more options from a long list of options. In this case, use <a href="{{path './checkboxes-dynamic.html'}}">checkboxes dynamic</a> component instead.
 
-Do not use the checkboxes component when users should only be able to select one option and no more. In this case, use the <a href="{{path './radios.html'}}">radios component</a> instead.
+Do not use the checkboxes component when users should only be able to select one option and no more. In this case, use the <a href="{{path './radios.html'}}">radios</a> component instead.
 
 ## How it works
 
