@@ -230,7 +230,7 @@
      * @param {function} next The callback function.
      */
     const checkboxLoop = next => {
-      for (let i = checkboxes.length; i--;) {
+      for (let i = 0; i < checkboxes.length; i++) {
         let checkboxWrapper = checkboxes[i];
         let checkbox = checkboxWrapper.querySelector('input[type=checkbox]');
         let label = checkboxWrapper.querySelector('label');
