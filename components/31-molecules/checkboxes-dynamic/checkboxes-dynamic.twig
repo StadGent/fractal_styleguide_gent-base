@@ -39,7 +39,7 @@
 
             <div class="checkbox-accordion">
               <div class="accordion--content" aria-hidden="true"
-                   hidden="hidden" id="hidden-options">
+                   hidden="hidden" id="{{ "hidden-options-" ~ id ~ "-" ~ modifier }}">
 
                 {% for option in options|slice(3, 21) %}
                   {% include '@input' with {
@@ -56,7 +56,7 @@
               <button type="button"
                       class="accordion--button button button-secondary button-small icon-left"
                       aria-expanded="false"
-                      aria-controls="hidden-options">
+                      aria-controls="{{ "hidden-options-" ~ id ~ "-" ~ modifier }}">
                 Show more
               </button>
             </div>
