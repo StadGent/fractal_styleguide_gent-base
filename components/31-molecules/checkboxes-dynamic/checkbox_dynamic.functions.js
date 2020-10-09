@@ -15,76 +15,96 @@
   }
 })(this || window, function () {
   return function (elem, options) {
-    if (!options) {
-      options = {};
-    }
+
+    options = options || {};
+    options.filterField = options.filterField || '.checkbox-filter__filter';
+    options.modalPreview = options.modalPreview || '.modal-preview';
+    options.accordionPreview = options.accordionPreview || '.accordion-preview';
+    options.accordionBtn = options.accordionBtn || 'button.accordion--button';
+    options.previewCheckboxes = options.previewCheckboxes || 'div.checkbox.preview';
+    options.checkboxes = options.checkboxes || 'div.checkbox:not(.preview)';
+    options.selectedContainer = options.selectedContainer || '.checkbox-filter__selected';
+    options.checkboxContainers = options.checkboxContainers || '.checkbox-filter__checkboxes';
+    options.openBtn = options.openBtn || '.checkbox-filter__open';
+    options.submitBtn = options.submitBtn || '.checkbox-filter__submit';
+    options.closeBtns = options.closeBtns || '.checkbox-filter__close';
+    options.resultSpan = options.resultSpan || '.checkbox-filter__result';
+    options.makeTags = options.makeTags !== false;
+    options.hiddenTagText = options.hiddenTagText || 'remove tag';
+    options.onRemoveTag = options.onRemoveTag || function () {};
 
     /**
      * Filter input field.
-     * @type {Element}
+     * @type {HTMLInputElement}
      */
-    const filterfield = elem.querySelector(
-      options.filterfield || '.checkbox-filter__filter'
-    );
+    const filterField = elem.querySelector(options.filterField);
 
-    const previewCheckboxes =
-      elem.querySelectorAll(options.previewCheckboxes || 'div.checkbox.preview') || [];
+    /**
+     * Container for the modal preview checkboxes.
+     * @type {HTMLElement}
+     */
+    const modalPreview = elem.querySelector(options.modalPreview);
+
+    /**
+     * Container for the accordion preview checkboxes.
+     * @type {HTMLElement}
+     */
+    const accordionPreview = elem.querySelector(options.accordionPreview);
+
+    /**
+     * Button to toggle the accordion.
+     * @type {HTMLElement}
+     */
+    const accordionBtn = elem.querySelector(options.accordionBtn);
+
+    /**
+     * List of preview checkboxes, these exist outside of the modal.
+     * @type {NodeList|Array}
+     */
+    const previewCheckboxes = elem.querySelectorAll(options.previewCheckboxes) || [];
 
     /**
      * List of checkboxwrappers, each containing a checkbox and a label.
      * @type {NodeList|Array}
      */
-    const checkboxes =
-      elem.querySelectorAll(options.checkboxes || '.checkbox-filter__modal div.checkbox') || [];
+    const checkboxes = elem.querySelectorAll(options.checkboxes) || [];
 
     /**
      * Container to display the selected items.
-     * @type {Element}
+     * @type {HTMLElement}
      */
-    const selectedContainer = elem.querySelector(
-      options.selectedContainer || '.checkbox-filter__selected'
-    );
+    const selectedContainer = elem.querySelector(options.selectedContainer);
 
     /**
      * Container for the checkboxes.
-     * @type {Element}
+     * @type {HTMLElement}
      */
-    const checkboxContainers = elem.querySelectorAll(
-      options.checkboxContainers || '.checkbox-filter__checkboxes'
-    );
+    const checkboxContainers = elem.querySelectorAll(options.checkboxContainers);
 
     /**
      * Button to trigger opening the modal.
-     * @type {Element}
+     * @type {HTMLElement}
      */
-    const openBtn = elem.querySelector(
-      options.openBtn || '.checkbox-filter__open'
-    );
+    const openBtn = elem.querySelector(options.openBtn);
 
     /**
      * Button to confirm the selection and close the modal.
      * @type {Element}
      */
-    const submitBtn = elem.querySelector(
-      options.submitBtn || '.checkbox-filter__submit'
-    );
+    const submitBtn = elem.querySelector(options.submitBtn);
 
     /**
      * A list of elements to trigger closing the modal.
      * At least one must have the button role.
      * @type {NodeList}
      */
-    const closeBtns = elem.querySelectorAll(
-      options.closeBtns || '.checkbox-filter__close'
-    );
+    const closeBtns = elem.querySelectorAll(options.closeBtns);
 
     /**
      * Container to display the number of search results.
-     * @type {Element}
+     * @type {HTMLElement}
      */
-    const resultSpan = elem.querySelector(
-      options.resultSpan || '.checkbox-filter__result'
-    );
+    const resultSpan = elem.querySelector(options.resultSpan);
 
     /**
      * Store the checked checkboxes prior to making changes.
@@ -93,27 +113,16 @@
     let selectedFilters = [];
 
     /**
-     * Check to prevent the class from making selected item tags.
-     * @type {boolean}
-     */
-    const makeTags = (() => {
-      if (options.makeTags === false) {
-        return options.makeTags;
-      }
-      return true;
-    })();
-
-    /**
      * Filter the displayed checkboxes.
      * @param {boolean} clear Clear the filtervalue if true.
      */
     const filter = clear => {
-      if (!filterfield) {
+      if (!filterField) {
         return;
       }
 
       if (clear) {
-        filterfield.value = '';
+        filterField.value = '';
       }
 
       let count = 0;
@@ -127,7 +136,7 @@
           !label ||
           label.textContent
             .toUpperCase()
-            .indexOf(filterfield.value.toUpperCase()) === -1
+            .indexOf(filterField.value.toUpperCase()) === -1
         ) {
           checkboxWrapper.setAttribute('hidden', 'true');
           checkbox.setAttribute('hidden', 'true');
@@ -140,7 +149,7 @@
       });
 
       [].slice.call(checkboxContainers).forEach(container => {
-        let displayedCount = container.querySelectorAll(`${options.checkboxes || 'div.checkbox'}:not([hidden])`).length;
+        let displayedCount = container.querySelectorAll(`${options.checkboxes}:not([hidden])`).length;
         if (displayedCount) {
           container.style.display = '';
         }
@@ -168,8 +177,7 @@
 
       const button = document.createElement('button');
       button.type = 'button';
-      button.innerHTML = `<span class="visually-hidden">
-        ${options.hiddenTagText || 'Remove tag'} ${label.textContent}</span>`;
+      button.innerHTML = `<span class="visually-hidden">${options.hiddenTagText} ${label.textContent}</span>`;
       button.addEventListener('click', () => checkbox.click());
 
       tag.appendChild(button);
@@ -183,14 +191,18 @@
      * @param {HTMLInputElement} checkbox Input type checkbox.
      */
     const removeTag = checkbox => {
-      let test = selectedContainer.querySelectorAll('.filter');
-      for (let i = test.length; i--;) {
-        if (test[i].getAttribute('data-value') === checkbox.value) {
-          selectedContainer.removeChild(test[i].parentElement);
-          if (typeof options.onRemoveTag === 'function') {
-            options.onRemoveTag(checkbox, test);
-          }
+      if (options.makeTags && selectedContainer) {
+        const tag = selectedContainer.querySelector('.filter[data-value="' + checkbox.value + '"]');
+        if (tag) {
+          selectedContainer.removeChild(tag.parentElement);
+          options.onRemoveTag(checkbox, tag);
         }
+      }
+    };
+
+    const addTag = (checkbox, label) => {
+      if (options.makeTags && selectedContainer) {
+        selectedContainer.appendChild(makeTag(checkbox, label));
       }
     };
 
@@ -199,7 +211,7 @@
      * @param {function} next The callback function.
      */
     const checkboxLoop = next => {
-      for (let i = checkboxes.length; i--;) {
+      for (let i = 0; i < checkboxes.length; i++) {
         let checkboxWrapper = checkboxes[i];
         let checkbox = checkboxWrapper.querySelector('input[type=checkbox]');
         let label = checkboxWrapper.querySelector('label');
@@ -227,27 +239,32 @@
      * Initialise the component.
      */
     const init = () => {
-      selectedFilters = [];
-
       checkboxLoop(({checkbox, label}) => {
-        if (checkbox.checked && !checkbox.indeterminate && makeTags) {
-          selectedContainer.appendChild(makeTag(checkbox, label));
+        if (checkbox.checked && !checkbox.indeterminate) {
+          addTag(checkbox, label);
         }
       });
-
       filter(true);
+    };
+
+    /**
+     * Bind two checkboxes
+     * @param {HTMLInputElement} a A checkbox.
+     * @param {HTMLInputElement} b Another checkbox.
+     */
+    const bindState = (a, b) => {
+      if (a.checked !== b.checked) {
+        a.click();
+      }
     };
 
     /**
      * Bind the preview checkboxes to their original counterpart in the modal.
      */
     const addPreviewCheckboxesEvent = () => {
-
-      const updateState = (a, b) => {
-        if (a.checked !== b.checked) {
-          a.click();
-        }
-      };
+      if (!previewCheckboxes.length) {
+        return;
+      }
 
       for (let i = previewCheckboxes.length; i--;) {
         const checkboxWrapper = previewCheckboxes[i];
@@ -255,51 +272,16 @@
         const original = elem.querySelector('#' + checkbox.getAttribute('data-original'));
 
         if (checkbox) {
-          checkbox.addEventListener('change', () => updateState(original, checkbox));
-          original.addEventListener('change', () => updateState(checkbox, original));
+          checkbox.addEventListener('change', () => bindState(original, checkbox));
+          original.addEventListener('change', () => bindState(checkbox, original));
         }
       }
     };
 
-    /**
-     * Add all events.
-     */
-    const addEvents = () => {
-      // Make sure the filter method is not repeated while typing.
-      if (filterfield) {
-        let filterTimeOut = null;
-
-        filterfield.addEventListener('input', () => {
-          if (filterTimeOut) {
-            clearTimeout(filterTimeOut);
-          }
-          filterTimeOut = setTimeout(filter, 200);
-        });
-      }
-
-      if (previewCheckboxes.length) {
-        addPreviewCheckboxesEvent();
-      }
-
-      // Add events for all checkboxes.
-      checkboxLoop(({checkbox, label}) => {
-        checkbox.addEventListener('change', () => {
-          if (checkbox.checked) {
-            if (makeTags) {
-              selectedContainer.appendChild(makeTag(checkbox, label));
-            }
-          }
-          else {
-            if (makeTags) {
-              removeTag(checkbox);
-            }
-          }
-        });
-      });
-
+    const addModalEvents = () => {
       // Enable opening the modal.
       if (openBtn) {
-        openBtn.addEventListener('click', (e) => {
+        openBtn.addEventListener('click', () => {
           selectedFilters = [];
 
           checkboxLoop(({checkbox}) => {
@@ -328,6 +310,75 @@
           document.removeEventListener('keydown', handleKeyboardInput);
         });
       }
+
+      // Make sure the filter method is not repeated while typing.
+      if (filterField) {
+        let filterTimeOut = null;
+        filterField.addEventListener('input', () => {
+          if (filterTimeOut) {
+            clearTimeout(filterTimeOut);
+          }
+          filterTimeOut = setTimeout(filter, 200);
+        });
+      }
+    };
+
+    const createPreviewClone = (checkboxWrapper, checkbox) => {
+      if (!modalPreview) {
+        return;
+      }
+      if (modalPreview.querySelector('#' + checkbox.id + '-preview')) {
+        return;
+      }
+
+      const wrapperClone = checkboxWrapper.cloneNode(true);
+      const checkboxClone = wrapperClone.querySelector('input');
+      const labelClone = wrapperClone.querySelector('label');
+
+      checkboxClone.name = null;
+      checkboxClone.id += '-preview';
+      labelClone.for += '-preview';
+
+      checkbox.addEventListener('change', () => bindState(checkboxClone, checkbox));
+      checkboxClone.addEventListener('change', () => bindState(checkbox, checkboxClone));
+      modalPreview.appendChild(wrapperClone);
+    };
+
+    const addAccordionEvent = () => {
+      if (!accordionBtn || !accordionPreview) {
+        return;
+      }
+
+      accordionBtn.addEventListener('click', () =>
+        checkboxLoop(({checkboxWrapper, checkbox}) => {
+          if (checkbox.checked && !accordionPreview.contains(checkboxWrapper)) {
+            accordionPreview.appendChild(checkboxWrapper);
+          }
+        })
+      );
+    };
+
+    /**
+     * Add all events.
+     */
+    const addEvents = () => {
+
+      addModalEvents();
+      addPreviewCheckboxesEvent();
+      addAccordionEvent();
+
+      // Add events for all checkboxes.
+      checkboxLoop(({checkboxWrapper, checkbox, label}) => {
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) {
+            addTag(checkbox, label);
+            createPreviewClone(checkboxWrapper, checkbox);
+          }
+          else {
+            removeTag(checkbox);
+          }
+        });
+      });
     };
 
     /**
