@@ -17,7 +17,7 @@
   return function (elem, options) {
 
     options = options || {};
-    options.filterfield = options.filterfield || '.checkbox-filter__filter';
+    options.filterField = options.filterField || '.checkbox-filter__filter';
     options.modalPreview = options.modalPreview || '.modal-preview';
     options.accordionPreview = options.accordionPreview || '.accordion-preview';
     options.accordionBtn = options.accordionBtn || 'button.accordion--button';
@@ -29,17 +29,15 @@
     options.submitBtn = options.submitBtn || '.checkbox-filter__submit';
     options.closeBtns = options.closeBtns || '.checkbox-filter__close';
     options.resultSpan = options.resultSpan || '.checkbox-filter__result';
-    options.countSpan = options.countSpan || '.checkbox-filter__count';
     options.makeTags = options.makeTags !== false;
-    options.makePreviews = options.makePreviews !== false;
     options.hiddenTagText = options.hiddenTagText || 'remove tag';
     options.onRemoveTag = options.onRemoveTag || function () {};
 
     /**
      * Filter input field.
-     * @type {HTMLElement}
+     * @type {HTMLInputElement}
      */
-    const filterfield = elem.querySelector(options.filterfield);
+    const filterField = elem.querySelector(options.filterField);
 
     /**
      * Container for the modal preview checkboxes.
@@ -109,39 +107,22 @@
     const resultSpan = elem.querySelector(options.resultSpan);
 
     /**
-     * Container to display the number of selected values.
-     * @type {Element}
-     */
-    const countSpan = elem.querySelector(options.countSpan);
-
-    /**
      * Store the checked checkboxes prior to making changes.
      * @type {Array}
      */
     let selectedFilters = [];
-
-    let selectedCount = 0;
-    const updateSelectedCount = (up) => {
-      if (up) {
-        selectedCount++;
-      }
-      else {
-        selectedCount--;
-      }
-      countSpan.innerText = selectedCount;
-    };
 
     /**
      * Filter the displayed checkboxes.
      * @param {boolean} clear Clear the filtervalue if true.
      */
     const filter = clear => {
-      if (!filterfield) {
+      if (!filterField) {
         return;
       }
 
       if (clear) {
-        filterfield.value = '';
+        filterField.value = '';
       }
 
       let count = 0;
@@ -155,7 +136,7 @@
           !label ||
           label.textContent
             .toUpperCase()
-            .indexOf(filterfield.value.toUpperCase()) === -1
+            .indexOf(filterField.value.toUpperCase()) === -1
         ) {
           checkboxWrapper.setAttribute('hidden', 'true');
           checkbox.setAttribute('hidden', 'true');
@@ -260,11 +241,9 @@
     const init = () => {
       checkboxLoop(({checkbox, label}) => {
         if (checkbox.checked && !checkbox.indeterminate) {
-          updateSelectedCount(true);
           addTag(checkbox, label);
         }
       });
-
       filter(true);
     };
 
@@ -333,9 +312,9 @@
       }
 
       // Make sure the filter method is not repeated while typing.
-      if (filterfield) {
+      if (filterField) {
         let filterTimeOut = null;
-        filterfield.addEventListener('input', () => {
+        filterField.addEventListener('input', () => {
           if (filterTimeOut) {
             clearTimeout(filterTimeOut);
           }
@@ -391,7 +370,6 @@
       // Add events for all checkboxes.
       checkboxLoop(({checkboxWrapper, checkbox, label}) => {
         checkbox.addEventListener('change', () => {
-          updateSelectedCount(checkbox.checked);
           if (checkbox.checked) {
             addTag(checkbox, label);
             createPreviewClone(checkboxWrapper, checkbox);

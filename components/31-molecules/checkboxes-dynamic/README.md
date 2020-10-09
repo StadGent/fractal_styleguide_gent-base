@@ -47,15 +47,18 @@ new CheckboxFilterDynamic(element, {hiddenTagText: 'Remove tag'})
 
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `filterfield` | `String` | `.checkbox-filter__filter` | Queryselector for the filterfield. |
-| `previewCheckboxes` | `String` | `div.checkbox.preview` | Queryselector for the preview checkboxes. |
-| `checkboxes` | `String` | `.checkbox-filter__modal div.checkbox` | Queryselector for the checkboxes. |
-| `selectedContainer` | `String` | `.checkbox-filter__selected` | Queryselector for the container holding the selected filter tags. |
-| `checkboxContainers` | `String` | `.checkbox-filter__checkboxes` | Queryselector for the container holding the checkboxes. |
-| `openBtn` | `String` | `.checkbox-filter__open` | Queryselector for the button used to open the modal. |
-| `submitBtn` | `String` | `.checkbox-filter__submit` | Queryselector for the button used to confirm the selection and close the modal. |
-| `closeBtns` | `String` | `.checkbox-filter__close` | Queryselector for a list of buttons used to close the modal. |
-| `resultSpan` | `String` | `.checkbox-filter__result` | Queryselector for the container to display the number of search results. |
+| `filterField` | `String` | `.checkbox-filter__filter` | QuerySelector for the filter input field. |
+| `modalPreview` | `String` | `.modal-preview` | QuerySelector for the wrapper containing modal preview checkboxes. |
+| `accordionPreview` | `String` | `.accordion-preview` | QuerySelector for the wrapper containing accordion preview checkboxes. |
+| `accordionBtn` | `String` | `button.accordion--button` | QuerySelector for the button that toggles the accordion. |
+| `previewCheckboxes` | `String` | `div.checkbox.preview` | QuerySelector for the preview checkboxes. |
+| `checkboxes` | `String` | `div.checkbox:not(.preview)` | QuerySelector for the checkboxes. |
+| `selectedContainer` | `String` | `.checkbox-filter__selected` | QuerySelector for the container holding the selected filter tags. |
+| `checkboxContainers` | `String` | `.checkbox-filter__checkboxes` | QuerySelector for the container holding the checkboxes. |
+| `openBtn` | `String` | `.checkbox-filter__open` | QuerySelector for the button used to open the modal. |
+| `submitBtn` | `String` | `.checkbox-filter__submit` | QuerySelector for the button used to confirm the selection and close the modal. |
+| `closeBtns` | `String` | `.checkbox-filter__close` | QuerySelector for a list of buttons used to close the modal. |
+| `resultSpan` | `String` | `.checkbox-filter__result` | QuerySelector for the container to display the number of search results. |
 | `makeTags` | `Boolean` | `true` | Prevent creation of tags, in case you have your own implementation. |
 | `hiddenTagText` | `String` | `Remove tag` | Text used behind the remove-tag button, insert your translation here. |
 | `onRemoveTag` | `function` | `function(checkbox, tag){}` | A hook to append your own logic after a tag has been removed. |
