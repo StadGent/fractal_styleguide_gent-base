@@ -1,11 +1,19 @@
 .checkbox-filter-dynamic {
-  .checkbox-accordion {
 
+  .modal-preview,
+  .accordion-preview,
+  .checkbox-accordion {
     .checkbox:last-child {
       margin-bottom: .5rem;
     }
+  }
 
+  .checkbox-accordion {
     .accordion--content {
+      // Adjust for checkbox focus outline.
+      margin: -4px -4px 0;
+      padding: 4px 4px 0;
+
       transition: max-height .5s ease-in-out;
       overflow: hidden;
     }
