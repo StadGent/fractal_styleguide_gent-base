@@ -327,7 +327,7 @@
       if (!modalPreview) {
         return;
       }
-      if (modalPreview.querySelector('#' + checkbox.id + 'preview')) {
+      if (modalPreview.querySelector('#' + checkbox.id + '-preview')) {
         return;
       }
 
@@ -336,8 +336,8 @@
       const labelClone = wrapperClone.querySelector('label');
 
       checkboxClone.name = null;
-      checkboxClone.id += 'preview';
-      labelClone.for += 'preview';
+      checkboxClone.id += '-preview';
+      labelClone.for += '-preview';
 
       checkbox.addEventListener('change', () => bindState(checkboxClone, checkbox));
       checkboxClone.addEventListener('change', () => bindState(checkbox, checkboxClone));
