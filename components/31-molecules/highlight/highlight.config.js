@@ -21,6 +21,17 @@ module.exports = {
     {
       name: 'no-image',
       hidden: true
-    }
+    },
+    ...[
+      'camera',
+      'form',
+      'letter',
+      'loupe',
+      'mail',
+      'newsletter',
+      'upload',
+      'whistle',
+      'checklist'
+    ].map(h => ({name: h, context: {modifier: 'top', classes: [h]}}))
   ]
 };

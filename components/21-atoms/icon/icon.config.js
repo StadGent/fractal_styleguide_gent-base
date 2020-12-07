@@ -23,7 +23,7 @@ const icons = [
   'chevron-up',
   'clock',
   'cross',
-  'digipolis',
+  'district09',
   'document',
   'download',
   'envelope',
