@@ -109,7 +109,8 @@ module.exports = {
           ]
         }
       }
-    }, {
+    },
+    {
       name: 'de',
       preview: '@preview-without-padding',
       context: {

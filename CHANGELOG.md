@@ -7,6 +7,7 @@ All notable changes to this style guide are documented here.
 ### Added 
 
 * Added checklist spot icon.
+* Added GentInfo language variants.
 
 ### Updated
 
