@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [4.1.0]
+
+### Added 
+
+* Added checklist spot icon.
+
 ## [4.0.2] 
 
 ### Updated
@@ -971,6 +977,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[4.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.2.0...4.1.0
 [4.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.0.1...4.0.2
 [4.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.1.1...4.0.0
