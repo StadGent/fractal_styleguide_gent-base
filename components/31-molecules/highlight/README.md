@@ -32,7 +32,10 @@ Do not use the highlight component when another, more specific style guide compo
 
 The highlight component consists of two parts:
 
-* A spot illustration
+* A spot illustration, add one of these classNames:
+  'camera', 'form', 'letter', 'loupe', 'mail', 'newsletter', 'upload', 'whistle' or 'checklist'.  
+  For 'link', 'phone', 'email' or 'download' always use the
+  <a href="{{path './cta-block.html'}}">call to action component</a> instead.
 * A short text, specific information or notification text
 
 ## Layout
