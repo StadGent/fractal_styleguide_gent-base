@@ -13,6 +13,10 @@ All notable changes to this style guide are documented here.
 
 * **Updated the footer template** to replace Digipolis by our new name: 'District09'.
 
+### Fixed
+
+* Fixed spacing for inline icon list.
+
 ## [4.0.2] 
 
 ### Updated
