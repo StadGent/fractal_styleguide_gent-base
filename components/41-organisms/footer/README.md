@@ -12,7 +12,7 @@ The footer component contains the following elements:
 * Useful links
 * Social media links
 * Legal links
-* Mention of Digipolis
+* Mention of District09
 
 The Gentinfo contact information in itself contains the following elements:
 
@@ -39,7 +39,7 @@ Within a website, the footer always stays the same.
   We remind you that every city of Ghent website is legally required to have it's own accessibility statement.
 
 All other elements in the footer are fixed and should be included *as is*.
-The Gentinfo contact information, social media links and the mention of Digipolis
+The Gentinfo contact information, social media links and the mention of District09
 should stay the same for every website using the City of Ghent Style Guide.
 
 The style and the layout cannot be changed in anyway.

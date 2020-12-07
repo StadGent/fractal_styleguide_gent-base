@@ -8,6 +8,10 @@ All notable changes to this style guide are documented here.
 
 * Added checklist spot icon.
 
+### Updated
+
+* **Updated the footer template** to replace Digipolis by our new name: 'District09'.
+
 ## [4.0.2] 
 
 ### Updated

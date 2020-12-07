@@ -30,7 +30,7 @@ module.exports = {
       title: 'Follow the city of Ghent'
     },
     bottom: {
-      partnership: 'In cooperation with Digipolis',
+      partnership: 'In cooperation with District09',
       links: [
         'Terms of use',
         'Privacy',
@@ -67,7 +67,7 @@ module.exports = {
           title: 'Volg de stad Gent'
         },
         bottom: {
-          partnership: 'In samenwerking met Digipolis',
+          partnership: 'In samenwerking met District09',
           links: [
             'Gebruiksvoorwaarden',
             'Privacy',
@@ -99,7 +99,7 @@ module.exports = {
           title: 'Suivez la ville de Gand'
         },
         bottom: {
-          partnership: 'En collaboration avec Digipolis',
+          partnership: 'En collaboration avec District09',
           links: [
             'Conditions d\'utilisation',
             'Vie privée',
@@ -130,7 +130,7 @@ module.exports = {
           title: 'Der Stadt Gent folgen '
         },
         bottom: {
-          partnership: 'In Zusammenarbeit mit Digipolis',
+          partnership: 'In Zusammenarbeit mit District09',
           links: [
             'Nutzungsbedingungen',
             'Datenschutz',

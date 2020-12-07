@@ -28,9 +28,9 @@ module.exports = {
     ],
     hero_image_src: 'https://via.placeholder.com/1600x400&text=4:1+(1600x400)',
     hero_image_description: 'Caption text comes here.',
-    hero_title: 'ICT Supplier <span>Digipolis Gent</span>',
-    figure_logo_src_dark: '/styleguide/img/stock/digipolis-dark.svg',
-    figure_logo_src_light: '/styleguide/img/stock/digipolis-light.svg',
+    hero_title: 'ICT Supplier <span>District 09</span>',
+    figure_logo_src_dark: '/styleguide/img/stock/district09-dark.svg',
+    figure_logo_src_light: '/styleguide/img/stock/district09-light.svg',
     site_name: 'Stad Gent',
     menu_items: []
   },
@@ -105,7 +105,7 @@ module.exports = {
       context: {
         subsite: true,
         translate: true,
-        site_name: 'ICT Supplier Digipolis Gent',
+        site_name: 'ICT Supplier District09',
         hero_image_src: null,
         search: false
       }
@@ -116,7 +116,7 @@ module.exports = {
       context: {
         subsite: true,
         translate: true,
-        site_name: 'ICT Supplier Digipolis Gent',
+        site_name: 'ICT Supplier District09',
         hero_image_src: null,
         search: false,
         mijn_gent_block_auth: true,
@@ -129,7 +129,7 @@ module.exports = {
       context: {
         subsite: true,
         translate: true,
-        site_name: 'ICT Supplier Digipolis Gent',
+        site_name: 'ICT Supplier District09',
         hero_image_src: null
       }
     },
@@ -142,7 +142,7 @@ module.exports = {
         subsite: true,
         translate: true,
         auth: true,
-        site_name: 'ICT Supplier Digipolis Gent',
+        site_name: 'ICT Supplier District09',
         hero_image_src: null
       }
     },
@@ -155,7 +155,7 @@ module.exports = {
         subsite: true,
         translate: true,
         menu: true,
-        site_name: 'ICT Supplier Digipolis Gent',
+        site_name: 'ICT Supplier District09',
         hero_image_src: null,
         menu_items: [
           '<a href=\'#\' class=\'active\'>Home</a>',
@@ -174,7 +174,7 @@ module.exports = {
         subsite: true,
         translate: true,
         menu: true,
-        site_name: 'ICT Supplier Digipolis Gent',
+        site_name: 'ICT Supplier District09',
         menu_items: [
           '<a href=\'#\' class=\'active\'>Home</a>',
           '<a href=\'#\'>News & events</a>',

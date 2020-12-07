@@ -10,7 +10,7 @@ module.exports = {
       name: 'subsite',
       context: {
         type: 'subsite',
-        site_name: 'ICT supplier Digipolis Gent'
+        site_name: 'ICT supplier District09'
       }
     }
   ]
