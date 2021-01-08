@@ -213,11 +213,14 @@
       if (!hash) {
         return;
       }
-      const trigger = elem.querySelector(`[aria-controls=${hash}]`);
-      if (trigger) {
-        open(trigger);
-        trigger.focus();
+      try {
+        const trigger = elem.querySelector(`[aria-controls=${hash}]`);
+        if (trigger) {
+          open(trigger);
+          trigger.focus();
+        }
       }
+      catch (e) { }
     };
 
     /**
