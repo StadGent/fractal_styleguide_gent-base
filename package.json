@@ -5,8 +5,8 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.11.0",
-    "@frctl/fractal": "^1.3.0",
-    "@frctl/twig": "^1.0.0-beta.5",
+    "@frctl/fractal": "^1.5.3",
+    "@frctl/twig": "^1.2.5",
     "cssnano": "^4.1.10",
     "fs-extra": "^7.0.1",
     "gulp": "^4.0.2",
@@ -45,15 +45,17 @@
   "license": "GPL-2.0",
   "dependencies": {
     "@digipolis-gent/modal": "^1.0.2",
+    "acorn": "^8.0.1",
     "allietabs": "^1.2.2",
     "baguettebox.js": "^1.11.0",
     "breakpoint-sass": "^2.7.1",
+    "debug": "^3.1.0",
     "imagesloaded": "^4.1.4",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.11",
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
     "set-value": "^3.0.1",
-    "susy": "^3.0.1"
+    "susy": "^3.0.6"
   },
   "optionalDependencies": {
     "gulp-axe-webdriver": "^3.1.3"
