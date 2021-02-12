@@ -8,9 +8,23 @@ body {
 .Frame-panel--sidebar {
     background-color: transparent;
 }
+
+.Pen {
+    height: unset;
+}
+
+.Pen .Browser {
+    position: relative;
+}
+
 [dir="ltr"] .Frame-panel--sidebar {
     border: 0;
 }
+
+.Prose.notes {
+    max-width: 66rem;
+}
+
 .Prose h1,
 .Prose h2,
 .prose h3,
@@ -99,11 +113,6 @@ body {
     border-bottom-color: transparent;
 }
 
-.Browser-tab:first-child a {
-    background-color: #005C86;
-    color: #FFFFFF;
-    font-weight: bold;
-}
 .Browser-tab.is-active a {
     border-bottom-color: #005C86;
 }
