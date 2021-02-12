@@ -9,6 +9,7 @@
     </button>
     <a href="{{ path('/') }}" class="Header-title" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
     <div id="version">
+      <script>window.frctl = window.frctl || {}; window.frctl.projectVersion = '{{ frctl.get('project.version') }}';</script>
       <button id="version-toggle" aria-controls="version-list" aria-expanded="false">Version - {{ frctl.get('project.version') }}</button>
       <div id="version-list" aria-hidden="true">
         <ul>
