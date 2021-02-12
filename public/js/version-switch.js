@@ -46,9 +46,10 @@
     projectVersion = window.frctl.projectVersion.split('.')[0]
   }
 
-  fetch('https://api.github.com/repos/StadGent/fractal_styleguide_gent-base/releases/latest')
+  fetch('https://api.npms.io/v2/package/gent_styleguide')
     .then(response => response.json())
-    .then(release => release.name.split('.')[0])
+    .then(response => response.collected.metadata)
+    .then(metadata => metadata.version.split('.')[0])
     .then(releasedVersion => {
       if(+releasedVersion > +projectVersion &&
         window.confirm('This is an outdated version of Ghent Styleguide \nDo you want to browse the current version instead?')) {
