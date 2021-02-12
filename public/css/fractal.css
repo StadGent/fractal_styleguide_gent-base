@@ -120,11 +120,3 @@ body {
     background: none;
     padding-top: 2rem;
 }
-
-.flex {
-    display: flex;
-}
-
-.wrap {
-    flex-wrap: wrap;
-}
