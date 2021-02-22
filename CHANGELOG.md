@@ -5,6 +5,7 @@ All notable changes to this style guide are documented here.
 ## [5.0.0]
 
 * STIJ-287: Updated button size within .form-actions.
+* STIJ-366: Removed table column min-width.
 
 ## [4.1.1]
 
