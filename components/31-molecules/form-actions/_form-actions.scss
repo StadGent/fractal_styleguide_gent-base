@@ -5,6 +5,11 @@
   margin: 0 -.6rem;
 
   > input,
+  > button {
+    @include button-large;
+  }
+
+  > input,
   > button,
   > a[href] {
     margin: 0 .6rem .6rem;

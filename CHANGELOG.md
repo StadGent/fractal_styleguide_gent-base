@@ -2,6 +2,10 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.0]
+
+* STIJ-287: Updated button size within .form-actions.
+
 ## [4.1.1]
 
 * Fixed accordion.js: catch invalid URL hash.
