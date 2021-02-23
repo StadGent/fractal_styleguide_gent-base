@@ -6,6 +6,7 @@ All notable changes to this style guide are documented here.
 
 * STIJ-287: Updated button size within .form-actions.
 * STIJ-366: Removed table column min-width.
+* STIJ-375: Allow HTML in field-message without generating extra margin.
 
 ## [4.1.1]
 
