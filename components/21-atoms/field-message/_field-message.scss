@@ -15,6 +15,10 @@
   font-size: .8rem;
   overflow: hidden;
 
+  :nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
   &::before {
     display: block;
     position: absolute;
