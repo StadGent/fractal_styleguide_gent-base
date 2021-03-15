@@ -4,6 +4,13 @@ All notable changes to this style guide are documented here.
 
 ## [5.0.0]
 
+### General
+
+* Changed the build output! See package.json "files" array for details.
+
+### Updated
+
+* STIJ-369: Updated the icon font to include versioning, cfr: gent-icons-v5.woff2.
 * STIJ-287: Updated button size within .form-actions.
 
 ## [4.1.1]

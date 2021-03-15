@@ -441,7 +441,8 @@ gulp.task('bump', () => {
  *  gulp iconfont
  */
 gulp.task('iconfont', () => {
-  const fontName = 'gent-icons';
+  const version = require('./package.json').version.split('.')[0];
+  const fontName = `gent-icons-v${version}`;
   const runTimestamp = Math.round(Date.now() / 1000);
 
   return gulp.src(['./public/styleguide/img/iconfont/*.svg'])

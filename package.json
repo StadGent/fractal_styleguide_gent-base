@@ -85,6 +85,16 @@
     "start": "gulp watch",
     "build": "gulp build"
   },
+  "files": [
+    "scripts/postinstall.js",
+    "build/css/**/*",
+    "build/styleguide/fonts/**/*",
+    "build/styleguide/img/favicon/build/**/*",
+    "build/styleguide/img/iconfont/**/*",
+    "build/styleguide/img/svg/**/*",
+    "build/styleguide/js/**/*",
+    "build/styleguide/sass/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/StadGent/fractal_styleguide_gent-base.git"
