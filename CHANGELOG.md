@@ -13,6 +13,10 @@ All notable changes to this style guide are documented here.
 * STIJ-369: Updated the icon font to include versioning, cfr: gent-icons-v5.woff2.
 * STIJ-287: Updated button size within .form-actions.
 
+### Fixed
+
+* STIJ-381: Enabled list style within the accordion component.
+
 ## [4.1.1]
 
 * Fixed accordion.js: catch invalid URL hash.
