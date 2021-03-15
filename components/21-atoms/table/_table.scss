@@ -83,8 +83,6 @@ div.responsive-table {
     th,
     td {
       @include theme('color', 'color-tertiary', 'table-content-color');
-
-      min-width: 8rem;
       padding: .3rem .2rem;
       text-align: left;
     }
