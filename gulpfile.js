@@ -116,7 +116,7 @@ const _spotimagesMap = () => {
 const axeOptions = {
   errorOnViolation: true,
   showOnlyViolations: true,
-  headless: true,
+  headless: false,
   a11yCheckOptions: {
     runOnly: {
       type: 'tag',
