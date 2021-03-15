@@ -37,7 +37,7 @@ const babel = require('gulp-babel');
 const Color = require('color');
 const RecolorSvg = require('gulp-recolor-svg');
 const realFavicon = require('gulp-real-favicon');
-const axe = require('gulp-axe-webdriver');
+const axeCli = require('gulp-axe-cli');
 // require our configurated fractal module.
 const fractal = require('./fractal');
 
@@ -111,28 +111,6 @@ const _spotimagesMap = () => {
   }
 
   return map;
-};
-
-const axeOptions = {
-  errorOnViolation: true,
-  showOnlyViolations: true,
-  headless: true,
-  a11yCheckOptions: {
-    runOnly: {
-      type: 'tag',
-      values: ['wcag2a', 'wcag2aa']
-    },
-    // Todo: remove after axe-core issue #262 fix.
-    rules: {
-      'definition-list': {
-        enabled: false
-      },
-      'dlitem': {
-        enabled: false
-      }
-    },
-    iframes: false
-  }
 };
 
 /**
@@ -441,7 +419,8 @@ gulp.task('bump', () => {
  *  gulp iconfont
  */
 gulp.task('iconfont', () => {
-  const fontName = 'gent-icons';
+  const version = require('./package.json').version.split('.')[0];
+  const fontName = `gent-icons-v${version}`;
   const runTimestamp = Math.round(Date.now() / 1000);
 
   return gulp.src(['./public/styleguide/img/iconfont/*.svg'])
@@ -711,19 +690,14 @@ gulp.task('build', gulp.series((callback) => {
  *   - wcag2a
  *   - wcag2aa
  */
-gulp.task('axe:input', callback => {
-  let a11yCheckOptions = Object.assign({}, axeOptions.a11yCheckOptions);
-  a11yCheckOptions.rules.label = {enabled: false};
-  a11yCheckOptions.rules.bypass = {enabled: false};
-
-  return axe(Object.assign({}, axeOptions, {
-    saveOutputIn: 'inputAtoms.json',
-    urls: [
+gulp.task('axe:input', () => {
+  return gulp
+    .src([
       'build/components/preview/input*.html',
       'build/components/preview/textarea*.html'
-    ],
-    a11yCheckOptions
-  }));
+      ]
+    )
+    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'label', 'bypass']}))
 });
 
 /**
@@ -732,12 +706,9 @@ gulp.task('axe:input', callback => {
  *   - wcag2aa
  */
 gulp.task('axe:layout', callback => {
-  return axe(Object.assign({}, axeOptions, {
-    saveOutputIn: 'layouts.json',
-    urls: [
-      'build/components/preview/*layout*.html'
-    ]
-  }));
+  return gulp
+    .src(['build/components/preview/*layout*.html'])
+    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem']}))
 });
 
 /**
@@ -746,18 +717,10 @@ gulp.task('axe:layout', callback => {
  *   - wcag2aa
  */
 gulp.task('axe:components', callback => {
-  let a11yCheckOptions = Object.assign({}, axeOptions.a11yCheckOptions);
-  a11yCheckOptions.rules.bypass = {enabled: false};
-
-  return axe(Object.assign({}, axeOptions, {
-    saveOutputIn: 'components.json',
-    urls: [
-      'build/components/preview/!(input*|file|*layout*|preview*|textarea*|teaser--*|*--*).html'
-    ],
-    a11yCheckOptions
-  }));
+  return gulp
+    .src(['build/components/preview/!(input*|file|*layout*|preview*|textarea*|teaser--*|*--*).html'])
+    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'bypass']}))
 });
-
 
 gulp.task('axe',
   gulp.series(

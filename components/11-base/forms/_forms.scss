@@ -21,8 +21,6 @@ $field-icon-padding: 2.5rem;
 /// @require svg-icon
 /// @require svg-url
 /// @require border-radius
-/// @require field-base
-/// @require theme
 ///
 @mixin field-base {
   @include theme(
