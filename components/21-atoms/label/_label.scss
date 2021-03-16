@@ -3,8 +3,8 @@ label {
   @include bold-text;
 
   .label-optional {
-    @include theme('color', 'color-primary--darken-2', 'field-messages-color');
-    @include theme('background-color', 'color-primary--lighten-5', 'field-messages-info-background');
+    @include theme('color', 'color-primary--darken-2', 'label-optional-color');
+    @include theme('background-color', 'color-primary--lighten-5', 'label-optional-background');
 
     padding: 0 .2rem;
     float: right;
