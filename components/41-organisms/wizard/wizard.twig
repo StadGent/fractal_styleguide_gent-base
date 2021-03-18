@@ -1,8 +1,8 @@
-{% extends '@form' %}
+{% render '@form-steps' %}
 
-{% block content %}
-  {% render '@form-steps' %}
+<h2>Active step</h2>
 
-  <h2>Active step</h2>
-  {{ parent() }}
-{% endblock %}
+{% include '@form' with {
+  primary_button: 'Confirm and continue',
+  secondary_button: 'Return to the previous step'
+} %}

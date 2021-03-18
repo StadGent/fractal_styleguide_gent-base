@@ -3,13 +3,16 @@
 
   > * {
     max-width: 20.5rem;
+  }
 
-    @include desktop {
+  @include desktop {
+    > * {
       max-width: 41rem;
+    }
 
-      &.field-message {
-        max-width: 20.5rem;
-      }
+    > .field-message,
+    > label {
+      max-width: 50%;
     }
   }
 
