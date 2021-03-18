@@ -3,9 +3,14 @@ label {
   @include bold-text;
 
   .label-optional {
-    @include theme('color', 'color-tertiary', 'label-color-optional');
+    @include theme('color', 'color-primary--darken-2', 'label-optional-color');
+    @include theme('background-color', 'color-primary--lighten-5', 'label-optional-background');
 
-    font-size: .8rem;
+    padding: 0 .2rem;
+    float: right;
+    border-top-left-radius: border-radius('radius-1');
+    border-top-right-radius: border-radius('radius-1');
+    font-size: .6rem;
   }
 
   display: block;
