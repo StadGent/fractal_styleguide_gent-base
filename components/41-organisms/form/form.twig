@@ -182,11 +182,7 @@
       'text': target
     } %}
 
-    {% include '@form-actions' with {
-      primary_button: 'Submit',
-      secondary_button: 'Save for later',
-      link: 'Cancel'
-    } %}
+    {% include '@form-actions' %}
 
     <div class="privacy-disclaimer" id="privacy">
       {% include '@heading' with {
