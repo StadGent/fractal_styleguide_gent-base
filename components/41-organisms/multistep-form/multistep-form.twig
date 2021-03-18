@@ -1,12 +1,12 @@
-{% extends '@form' %}
 
-{% block content %}
   <div class="form--multistep">
     {% render '@form-steps--vertical' %}
 
     <div class="form-content">
       <h2>Active step</h2>
-      {{ parent() }}
+      {% include '@form' with {
+        primary_button: 'Confirm and continue',
+        secondary_button: 'Return to the previous step'
+      } %}
     </div>
   </div>
-{% endblock %}
