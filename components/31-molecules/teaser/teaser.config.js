@@ -48,16 +48,6 @@ module.exports = {
       }
     },
     {
-      name: 'teaser--simple',
-      hidden: true,
-      context: {
-        event_date: null,
-        tags: null,
-        telephone: null,
-        label_text: null
-      }
-    },
-    {
       name: 'teaser--inverted',
       context: {
         modifier: 'teaser--inverted',
@@ -67,6 +57,15 @@ module.exports = {
         link: '#',
         image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         image_alt_text: 'alt text'
+      }
+    },
+    {
+      name: 'teaser--simple',
+      context: {
+        event_date: null,
+        label_text: null,
+        image_src: null,
+        published_date: null
       }
     },
     {
