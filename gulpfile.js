@@ -37,9 +37,18 @@ const babel = require('gulp-babel');
 const Color = require('color');
 const RecolorSvg = require('gulp-recolor-svg');
 const realFavicon = require('gulp-real-favicon');
-const axeCli = require('gulp-axe-cli');
 // require our configurated fractal module.
 const fractal = require('./fractal');
+
+// optional dependency
+let axeCli;
+try {
+  axeCli = require('gulp-axe-cli');
+} catch (e) {
+  if (e.code !== 'MODULE_NOT_FOUND') {
+    throw e;
+  }
+}
 
 let build = false;
 
