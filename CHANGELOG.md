@@ -8,6 +8,12 @@ All notable changes to this style guide are documented here.
 
 * Changed the build output! See package.json "files" array for details.
 
+### Added
+
+* STIJ-386: Card molecule.
+* STIJ-387: Status atom.
+* Added .no-style modifier for lists to remove padding, margin and list-style.
+
 ### Updated
 
 * STIJ-369: Updated the icon font to include versioning, cfr: gent-icons-v5.woff2.
