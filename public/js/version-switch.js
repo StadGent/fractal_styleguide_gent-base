@@ -35,3 +35,25 @@
 
   btn.addEventListener('click', toggle);
 })();
+
+(function (){
+  'use strict'
+
+  var projectVersion = 0;
+
+  // ProjectVersion is added to the window in header.nunj.
+  if (window.frctl && window.frctl.projectVersion) {
+    projectVersion = window.frctl.projectVersion.split('.')[0]
+  }
+
+  fetch('https://api.npms.io/v2/package/gent_styleguide')
+    .then(response => response.json())
+    .then(response => response.collected.metadata)
+    .then(metadata => metadata.version.split('.')[0])
+    .then(releasedVersion => {
+      if(+releasedVersion > +projectVersion &&
+        window.confirm('This is an outdated version of Ghent Styleguide \nDo you want to browse the current version instead?')) {
+        window.location = '/v' + releasedVersion;
+      }
+    })
+})()

@@ -9,6 +9,7 @@
     </button>
     <a href="{{ path('/') }}" class="Header-title" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
     <div id="version">
+      <script>window.frctl = window.frctl || {}; window.frctl.projectVersion = '{{ frctl.get('project.version') }}';</script>
       <button id="version-toggle" aria-controls="version-list" aria-expanded="false">Version - {{ frctl.get('project.version') }}</button>
       <div id="version-list" aria-hidden="true">
         <ul>
@@ -18,4 +19,53 @@
         </ul>
       </div>
     </div>
+    <div class="cs-wrapper" style="margin-left: 1rem">
+        <label for="cs" style="margin-right: .5rem">Theme: </label>
+           <select id="cs">
+              <option value="cs--cyan">Default</option>
+              <option value="cs--blue">Blue</option>
+              <option value="cs--teal">Teal</option>
+              <option value="cs--green">Green</option>
+              <option value="cs--orange">Orange</option>
+           </select>
+    </div>
 </div>
+<script>
+(function(){
+  'use strict';
+  var select = document.getElementById('cs');
+  if (!select) {
+    return;
+  }
+  var cs = getCookie('cs');
+  if (cs) {
+    select.value = cs;
+  }
+
+  select.addEventListener('change', function () {
+    console.debug(select.value);
+    setCookie('cs', select.value);
+    location.reload();
+  })
+
+  function setCookie (cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = 'expires=' + d.toUTCString();
+    document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+  }
+  function getCookie (cname) {
+    var name = cname + '=';
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return null;
+  }})()
+</script>

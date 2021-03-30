@@ -1,22 +1,22 @@
 <div class="form-actions">
   {% if primary_button %}
     {% include '@input-submit' with {
-      'value': 'Submit',
+      value: primary_button,
     } %}
   {% endif %}
 
   {% if secondary_button %}
     {% include '@button' with {
-      'text': secondary_button,
-      'type': 'secondary'
+      text: secondary_button,
+      type: 'secondary'
     } %}
   {% endif %}
 
   {% if link %}
     {% include '@link' with {
-      'text': 'Cancel',
-      'link': '#',
-      'modifier': 'standalone-link back'
+      text: link,
+      link: '#',
+      modifier: 'standalone-link back'
     } %}
   {% endif %}
 

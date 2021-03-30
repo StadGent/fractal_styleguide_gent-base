@@ -26,6 +26,12 @@ ol {
     }
   }
 
+  &.no-style {
+    max-width: 41rem;
+    margin: 0;
+    list-style: none;
+  }
+
   a {
     font-weight: normal;
   }

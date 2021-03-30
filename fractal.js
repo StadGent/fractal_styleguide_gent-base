@@ -75,11 +75,10 @@ const ghentTheme = mandelbrot({
   nav: ['search', 'docs', 'components'],
   scripts: [
     'default',
-    '/js/search.js',
     '/js/version-switch.js'
   ],
   panels: [
-    'notes', 'view', 'info', 'html', 'context', 'resources'
+    'view', 'info', 'html', 'context', 'resources'
   ],
   styles: [
     'default',

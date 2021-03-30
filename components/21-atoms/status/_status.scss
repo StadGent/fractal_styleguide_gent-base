@@ -1,0 +1,35 @@
+@mixin status {
+  &::before {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: .4rem;
+    border-radius: 50%;
+    content: '';
+    vertical-align: middle;
+  }
+}
+
+.status--warning {
+  @include status;
+
+  &::before {
+    background-color: color('yellow');
+  }
+}
+
+.status--success {
+  @include status;
+
+  &::before {
+    background-color: color('green');
+  }
+}
+
+.status--error {
+  @include status;
+
+  &::before {
+    background-color: color('red');
+  }
+}

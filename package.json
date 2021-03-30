@@ -1,12 +1,12 @@
 {
   "name": "gent_styleguide",
-  "version": "4.1.1",
+  "version": "5.0.0",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.11.0",
-    "@frctl/fractal": "^1.3.0",
-    "@frctl/twig": "^1.0.0-beta.5",
+    "@frctl/fractal": "^1.5.3",
+    "@frctl/twig": "^1.2.5",
     "cssnano": "^4.1.10",
     "fs-extra": "^7.0.1",
     "gulp": "^4.0.2",
@@ -43,20 +43,22 @@
     "Bart Delrue"
   ],
   "license": "GPL-2.0",
+  "optionalDependencies": {
+    "gulp-axe-cli": "^1.0.1"
+  },
   "dependencies": {
     "@digipolis-gent/modal": "^1.0.2",
+    "acorn": "^8.0.1",
     "allietabs": "^1.2.2",
     "baguettebox.js": "^1.11.0",
     "breakpoint-sass": "^2.7.1",
+    "debug": "^3.1.0",
     "imagesloaded": "^4.1.4",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.11",
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
     "set-value": "^3.0.1",
-    "susy": "^3.0.1"
-  },
-  "optionalDependencies": {
-    "gulp-axe-webdriver": "^3.1.3"
+    "susy": "^3.0.6"
   },
   "resolutions": {
     "**/cli": "^1.0.0",
@@ -83,6 +85,16 @@
     "start": "gulp watch",
     "build": "gulp build"
   },
+  "files": [
+    "scripts/postinstall.js",
+    "build/css/**/*",
+    "build/styleguide/fonts/**/*",
+    "build/styleguide/img/favicon/build/**/*",
+    "build/styleguide/img/iconfont/**/*",
+    "build/styleguide/img/svg/**/*",
+    "build/styleguide/js/**/*",
+    "build/styleguide/sass/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/StadGent/fractal_styleguide_gent-base.git"
