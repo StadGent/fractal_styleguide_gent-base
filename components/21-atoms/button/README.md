@@ -6,7 +6,7 @@ A button is used to trigger an action.
 
 ## When not to use this component
 
-Do not use a button to trigger navigation. In this case, use a <a href="{{path './link.html'}}">link</a>.
+Do not use a button to trigger navigation. In this case, use a <a href="{{path './link'}}">link</a>.
 
 ## How it works
 
@@ -27,7 +27,7 @@ By default, the width of a button is automatically resized depending on the leng
 
 ### Icons
 
-Buttons can have an <a href="{{path './icon.html'}}">icon</a>, aligned at the right-hand side or at the left-hand side. The icon can help the user identify a certain action. However, the icon should not be *needed* to understand the action. In all cases, the label of the button itself should be clear by itself and should represent the corresponding action.
+Buttons can have an <a href="{{path './icon'}}">icon</a>, aligned at the right-hand side or at the left-hand side. The icon can help the user identify a certain action. However, the icon should not be *needed* to understand the action. In all cases, the label of the button itself should be clear by itself and should represent the corresponding action.
 
 ## Web accessibility
 

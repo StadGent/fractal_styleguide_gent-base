@@ -7,7 +7,7 @@ Use the modal component to show longer content or more complex functionality tha
 * Needs more screen space to be readable and/or usable
 * Is typically advanced or only necessary for a minority of users (progressive disclosure principle)
 
-The modal component can also be used instead of a <a href="{{path './link.html'}}">link</a> that opens in a new window to show content or functionality that is necessary to users but cannot interrupt them in an ongoing process:
+The modal component can also be used instead of a <a href="{{path './link'}}">link</a> that opens in a new window to show content or functionality that is necessary to users but cannot interrupt them in an ongoing process:
   * The user is filling out a form or a checkout process and needs to review, say, terms of service
   * The user is watching video or listening to audio
 
@@ -43,4 +43,4 @@ When the content or functionality inside the modal box is too long to be shown a
 
 ## Usage within the style guide
 
-The modal component is used in the <a href="{{path './checkboxes-with-filter.html'}}">checkboxes with filter</a> component.
+The modal component is used in the <a href="{{path './checkboxes-with-filter'}}">checkboxes with filter</a> component.

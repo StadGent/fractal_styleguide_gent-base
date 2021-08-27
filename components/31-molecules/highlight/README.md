@@ -16,13 +16,13 @@ Do not use the highlight component to show long text or complex content.
 
 Do not use the highlight component when another, more specific style guide component is more applicable:
 
-* To highlight a quote or a part of a quote, use the <a href="{{path './quote.html'}}">quote component</a> instead.
-* To show contact information of an entity, location or person on a detail page, use the <a href="{{path './contact-details.html'}}">contact details component</a> instead.
-* Use the <a href="{{path './cta-block.html'}}">call to action component</a> instead:
+* To highlight a quote or a part of a quote, use the <a href="{{path './quote'}}">quote component</a> instead.
+* To show contact information of an entity, location or person on a detail page, use the <a href="{{path './contact-details'}}">contact details component</a> instead.
+* Use the <a href="{{path './cta-block'}}">call to action component</a> instead:
   * To guide users to the next step to reach a certain goal related to the page.
   * To present specific contact information to get help or to get more information from a specitic service to reach a certain goal.
   * To promote a certain action for the user to take.
-* Use the <a href="{{path './summary.html'}}">summary component</a> instead:
+* Use the <a href="{{path './summary'}}">summary component</a> instead:
   * To highlight a key takeaway or a short conclusion.
   * To present metadata.
   * When a call-to-action button is required.
@@ -35,7 +35,7 @@ The highlight component consists of two parts:
 * A spot illustration, add one of these classNames:
   'camera', 'form', 'letter', 'loupe', 'mail', 'newsletter', 'upload', 'whistle' or 'checklist'.  
   For 'link', 'phone', 'email' or 'download' always use the
-  <a href="{{path './cta-block.html'}}">call to action component</a> instead.
+  <a href="{{path './cta-block'}}">call to action component</a> instead.
 * A short text, specific information or notification text
 
 ## Layout

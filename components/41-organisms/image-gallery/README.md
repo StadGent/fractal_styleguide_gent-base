@@ -12,7 +12,7 @@ Do not use the image gallery component on overview pages or filter pages. Only u
 
 ## How it works
 
-* An image gallery is a list of images presented by using <a href="{{path './figure.html'}}">figures</a>.
+* An image gallery is a list of images presented by using <a href="{{path './figure'}}">figures</a>.
 * The images can have different aspect ratios.
 * Thumbnails are used to preview the set of images.
 * The thumbnails must have aspect ratio 8:5.

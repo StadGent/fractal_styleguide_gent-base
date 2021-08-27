@@ -2,7 +2,7 @@
 
 ## Colors
 
-Always use colors defined within the <a href="{{path '../components/detail/colors.html'}}">City of Ghent colors palette</a>.
+Always use colors defined within the <a href="{{path '../components/detail/colors'}}">City of Ghent colors palette</a>.
 
 ### Color contrast
 
@@ -14,18 +14,18 @@ You must make sure that the contrast ratio of text and interactive elements meet
 
 ### Font
 
-The default text font of the City of Ghent Style Guide is Google font “Fira Sans”. For a more detailed explanation, see <a href="{{path '../components/detail/fonts.html'}}">Fonts</a>.
+The default text font of the City of Ghent Style Guide is Google font “Fira Sans”. For a more detailed explanation, see <a href="{{path '../components/detail/fonts'}}">Fonts</a>.
 
 ### Headings
 
-Headings create structure. They provide a quick way to scan the main sections of a website. Use them consistently and correctly. For more information, see <a href="{{path '../components/detail/heading.html'}}">Heading</a>.
+Headings create structure. They provide a quick way to scan the main sections of a website. Use them consistently and correctly. For more information, see <a href="{{path '../components/detail/heading'}}">Heading</a>.
 
 ## Layout
 
 The City of Ghent Style Guide supports the following layouts:
 
-* <a href="{{path '../components/detail/detail-layout.html'}}">Detail layout</a>
-* <a href="{{path '../components/detail/overview.html'}}">Overview layout</a>
-* <a href="{{path '../components/detail/filter-layout.html'}}">Filter layout</a>
+* <a href="{{path '../components/detail/detail-layout'}}">Detail layout</a>
+* <a href="{{path '../components/detail/overview'}}">Overview layout</a>
+* <a href="{{path '../components/detail/filter-layout'}}">Filter layout</a>
 
 Always use one of these layouts for the web pages in your website. See the documentation for each layout to learn what the layout is for.

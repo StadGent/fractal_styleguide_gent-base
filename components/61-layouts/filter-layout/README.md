@@ -1,6 +1,6 @@
 # Filter layout
 
-The filter layout is a two-column layout version of the <a href="{{path './overview-layout.html'}}">overview layout</a> with a left-side column to show filters.
+The filter layout is a two-column layout version of the <a href="{{path './overview-layout'}}">overview layout</a> with a left-side column to show filters.
 
 ## When to use this layout
 
@@ -13,7 +13,7 @@ Examples of overview pages of content with filters:
 
 ## When not to use this layout
 
-Do not use the filter layout to present an overview of content where it should not be possible to filter the overview of content. In this case, use the default <a href="{{path './overview-layout.html'}}">overview layout</a> instead.
+Do not use the filter layout to present an overview of content where it should not be possible to filter the overview of content. In this case, use the default <a href="{{path './overview-layout'}}">overview layout</a> instead.
 
 Do not use the filter layout for other uses than to show an overview of content.
 
@@ -23,20 +23,20 @@ Do not use the filter layout when the left-side column will be used for other us
 
 A filter layout conists of the following parts:
 
-* <a href="{{path './header.html'}}">Header</a> (required)
+* <a href="{{path './header'}}">Header</a> (required)
 * Left-side column with filters (required)
 * Main content column on the right (required) with:
   * Page title (heading h1, with City of Ghent colon icon, required)
-  * <a href="{{path './readspeaker-button.html'}}">Text to speech button</a> (optional, only when the website has a text so speech ability)
+  * <a href="{{path './readspeaker-button'}}">Text to speech button</a> (optional, only when the website has a text so speech ability)
   * Top filter page content (optional) with:
     * Introduction text for SEO reasons (optional, only shown on desktop and tablet resolutions).
     * Other content such as a general search form (exceptional).
   * Selected filters with label "You have selected:" showing the current active/selected filters with an option to clear all (required, only visible when there is at least one current actice/selected filter)
   * Number of results (required) using label "We have found XXX results"
-  * Overview of results using a <a href="{{path './collection.html'}}">collection</a> of <a href="{{path './teaser.html'}}">teasers</a> (required)
-  * <a href="{{path './pagination.html'}}">Pagination</a> (if applicable)
-  * Bottom filter page content (exceptional), for instance a <a href="{{path './cta-block.html'}}">call to action component</a>.
-* <a href="{{path './footer.html'}}">Footer</a> (required)
+  * Overview of results using a <a href="{{path './collection'}}">collection</a> of <a href="{{path './teaser'}}">teasers</a> (required)
+  * <a href="{{path './pagination'}}">Pagination</a> (if applicable)
+  * Bottom filter page content (exceptional), for instance a <a href="{{path './cta-block'}}">call to action component</a>.
+* <a href="{{path './footer'}}">Footer</a> (required)
 
 On **desktop resolutions and tablets in landscape mode**, this two-column layout is used.
 
@@ -46,17 +46,17 @@ See the example for the responsive behavior of the filter layout on various scre
 
 # How the filters work
 
-The filters are represented in a filter form using the <a href="{{path './cta-block.html'}}">form component</a>.
+The filters are represented in a filter form using the <a href="{{path './cta-block'}}">form component</a>.
 
 Each filter in the filter form is created and presented as a fieldset.
 
 Inside each the filter fieldset, one of the following form elements can be used:
 
-* <a href="{{path './formitem.html'}}">Input</a>
-* <a href="{{path './checkboxes.html'}}">Checkboxes</a>
-* <a href="{{path './checkboxes-with-filter.html'}}">Checkboxes with Filter</a>
-* <a href="{{path './radios.html'}}">Radios</a>
-* <a href="{{path './select.html'}}">Select</a>
+* <a href="{{path './formitem'}}">Input</a>
+* <a href="{{path './checkboxes'}}">Checkboxes</a>
+* <a href="{{path './checkboxes-with-filter'}}">Checkboxes with Filter</a>
+* <a href="{{path './radios'}}">Radios</a>
+* <a href="{{path './select'}}">Select</a>
 
 The filter form has one form action and this is the submit button of the form.
 

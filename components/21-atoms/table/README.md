@@ -19,7 +19,7 @@ Furthermore, do not use a table component:
 * To present simple, non-tabular data.
 * To present information that users typically do not have to compare.
 
-For presenting simple, non-tabular data, consider using a <a href="{{path './list.html'}}">list</a> instead. For presenting teasers of content, use the <a href="{{path './collection.html'}}">collection</a> of <a href="{{path './teaser.html'}}">teasers</a> instead.
+For presenting simple, non-tabular data, consider using a <a href="{{path './list'}}">list</a> instead. For presenting teasers of content, use the <a href="{{path './collection'}}">collection</a> of <a href="{{path './teaser'}}">teasers</a> instead.
 
 ## How it works
 

@@ -13,23 +13,23 @@ Use the tabs component when:
 
 ## When not to use this component
 
-Do **not** use the tabs component when **a page reload** is triggered. In this case, use the <a href="{{path './display-switcher.html'}}">display switcher component</a> instead.
+Do **not** use the tabs component when **a page reload** is triggered. In this case, use the <a href="{{path './display-switcher'}}">display switcher component</a> instead.
 
 Furthermore, do not use a tabs component:
 
 * To hide content that is essential to all users.
 * When users will need to see all sections at once, for instance to compare information in the different sections.
-* When the sections are equally relevant for most users or when users typically are interested in a few specific sections. In this case, use an <a href="{{path './accordion.html'}}">accordion</a> instead.
+* When the sections are equally relevant for most users or when users typically are interested in a few specific sections. In this case, use an <a href="{{path './accordion'}}">accordion</a> instead.
 * When users have to read through all the related sections of content in order, for example, to understand a process.
-* To show progress or a linear flow when collecting user input in multiple steps or to guide users through a process. In these cases, use a <a href="{{path './multistep-form.html'}}">multistep form</a> or a <a href="{{path './wizard.html'}}">wizard</a> instead.
+* To show progress or a linear flow when collecting user input in multiple steps or to guide users through a process. In these cases, use a <a href="{{path './multistep-form'}}">multistep form</a> or a <a href="{{path './wizard'}}">wizard</a> instead.
 * When the amount of content in the tabs will make the page too long or too slow to load.
 
 Alternatives to using a tabs component:
 
 * Reduce and simplify the content so that it can be placed as is on the page, without hiding it or the need for an tabs component.
-* Split the content accross multiple pages. In this case, the <a href="{{path './display-switcher.html'}}">display switcher component</a> can be used to let users switch between the pages.
+* Split the content accross multiple pages. In this case, the <a href="{{path './display-switcher'}}">display switcher component</a> can be used to let users switch between the pages.
 * Keep the content as is on the page, separate the content by headings.
-* Use a <a href="{{path './table-of-contents.html'}}">table of contents component</a> to let users navigate quickly to specific sections of content.
+* Use a <a href="{{path './table-of-contents'}}">table of contents component</a> to let users navigate quickly to specific sections of content.
 
 ## Accessibility
 

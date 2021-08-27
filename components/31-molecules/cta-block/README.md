@@ -30,8 +30,8 @@ The primary action and the optional secondary action can both be one of the foll
 * A link to an e-mail address (mailto-link)
 * A link to a telephone number (tel-link)
 
-Links to web pages, e-mail addresses and telephone numbers are presented using a <a href="{{path './link.html'}}">link</a>.
-Links to documents are presented using a <a href="{{path './file-download.html'}}">file download</a>.
+Links to web pages, e-mail addresses and telephone numbers are presented using a <a href="{{path './link'}}">link</a>.
+Links to documents are presented using a <a href="{{path './file-download'}}">file download</a>.
 
 When using a call to action, please note the following:
 

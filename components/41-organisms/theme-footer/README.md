@@ -11,13 +11,13 @@ Use the theme footer when the following conditions apply:
 
 When these conditions apply, the theme footer can be used on all types of pages about the specific City of Ghent theme or on all types of pages on the separate website.
 
-If used, the theme footer should always be placed just above the <a href="{{path './footer.html'}}">general footer</a>.
+If used, the theme footer should always be placed just above the <a href="{{path './footer'}}">general footer</a>.
 
 ## When not to use this component
 
 Do not use the theme footer when the above conditions don't apply.
 
-Do not use the theme footer to present general contact information or general social media links for the City of Ghent. This information is already included in the general <a href="{{path './footer.html'}}">footer</a>.
+Do not use the theme footer to present general contact information or general social media links for the City of Ghent. This information is already included in the general <a href="{{path './footer'}}">footer</a>.
 
 ## Components
 
@@ -58,7 +58,7 @@ Contact information in the theme footer can include the following types of conta
 
 The order is fixed. Each type of contact information is optional, however at least one of them should be included. For each type of contact information, there can be only be one item included, except for links, where multiple items can be included. In other words: there can be zero or one addresses, zero or one telephone numbers, zero or one e-mail addresses and one or more links. The order in which the types of contact information are included always stays the same.
 
-The items are presented in a <a href="{{path './list.html'}}">list</a> with icons. Every item has its icon. The icon that is shown depends on the type of contact information that the item represents.
+The items are presented in a <a href="{{path './list'}}">list</a> with icons. Every item has its icon. The icon that is shown depends on the type of contact information that the item represents.
 
 ## Technical usage
 

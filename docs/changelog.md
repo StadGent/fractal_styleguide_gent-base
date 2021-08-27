@@ -2,49 +2,6 @@
 
 All notable changes to this style guide are documented here.
 
-## [5.0.1]
-
-### Added
-
-* STIJ-389: Added new sidebar layout.
-
-### Fixed
-
-* STIJ-389: Fix broken links in readmes.
-* STIJ-389: Fix security vulnerabilities
-
-## [5.0.0]
-
-### General
-
-* Changed the build output! See package.json "files" array for details.
-
-### Added
-
-* STIJ-386: Card molecule.
-* STIJ-387: Status atom.
-* Added .no-style modifier for lists to remove padding, margin and list-style.
-
-### Updated
-
-* STIJ-369: Updated the icon font to include versioning, cfr: gent-icons-v5.woff2.
-* STIJ-287: Updated button size within .form-actions.
-* STIJ-366: Removed table column min-width.
-* STIJ-375: Allow HTML in field-message without generating extra margin.
-* STIJ-384: Updated fieldset styling: padding and borders.
-* STIJ-384: Updated label 'optional' styling.   
-  **Template updated: remove parentheses around 'optional'!**
-* STIJ-384: Updated wizard and multistep form button texts.  
-  
-### Fixed
-
-* STIJ-381: Enabled list style within the accordion component.
-* STIJ-384: Fixed with of the label and field-description, should not exceed the with of the input field.
-
-## [4.1.1]
-
-* Fixed accordion.js: catch invalid URL hash.
-
 ## [4.1.0]
 
 ### Added 
@@ -1029,9 +986,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
-[5.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.1.1...5.0.0
-[4.1.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.1.0...4.1.1
-[4.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.0.2...4.1.0
+[4.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.2.0...4.1.0
 [4.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.0.1...4.0.2
 [4.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/3.1.1...4.0.0

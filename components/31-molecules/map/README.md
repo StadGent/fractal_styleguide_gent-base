@@ -25,7 +25,7 @@ There should be at least one map layer. There can also be multiple map layers. I
 
 ### Legend with data layers
 
-The legend shows what data layers can be seen on the map. The legend can be expanded or collapsed. By default, the legend is collapsed. The data layers are shown using an <a href="{{path './accordion.html'}}">accordion</a> with multiple expandable items. Each item contains a list of data layers using <a href="{{path './checkboxes.html'}}">checkboxes</a>. By selecting or deselecting the checkboxes, the corresponding data layers are shown or hidden.
+The legend shows what data layers can be seen on the map. The legend can be expanded or collapsed. By default, the legend is collapsed. The data layers are shown using an <a href="{{path './accordion'}}">accordion</a> with multiple expandable items. Each item contains a list of data layers using <a href="{{path './checkboxes'}}">checkboxes</a>. By selecting or deselecting the checkboxes, the corresponding data layers are shown or hidden.
 
 ### Location markers
 

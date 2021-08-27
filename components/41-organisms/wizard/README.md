@@ -9,13 +9,13 @@ Use the wizard component:
 
 ## When not to use this component
 
-Do not use the wizard component when the main goal is collecting user input and when a single or short form can be used. In this case, use the <a href="{{path './form.html'}}">form</a> component instead.
+Do not use the wizard component when the main goal is collecting user input and when a single or short form can be used. In this case, use the <a href="{{path './form'}}">form</a> component instead.
 
-Do not use the wizard component when the steps or subtasks can only be presented using form components and no other elements. In this case, use the <a href="{{path './multistep-form.html'}}">form</a> component instead.
+Do not use the wizard component when the steps or subtasks can only be presented using form components and no other elements. In this case, use the <a href="{{path './multistep-form'}}">form</a> component instead.
 
 ## How it works
 
-The wizard component is a collection of <a href="{{path './form.html'}}">form</a> components that each collect certain user input. It uses the <a href="{{path './form-actions.html'}}">form actions</a> component to let users navigate to the next or previous step in the wizard.
+The wizard component is a collection of <a href="{{path './form'}}">form</a> components that each collect certain user input. It uses the <a href="{{path './form-actions'}}">form actions</a> component to let users navigate to the next or previous step in the wizard.
 
 ## Layout
 
@@ -30,4 +30,4 @@ The steps are displayed so that it is clear for the user what is the current, ac
 
 ## Validation
 
-The validation of user input in the form components in each step of a wizard works as it does for simple or short forms. See the documentation of the <a href="{{path './form.html'}}">form</a> component.
+The validation of user input in the form components in each step of a wizard works as it does for simple or short forms. See the documentation of the <a href="{{path './form'}}">form</a> component.
