@@ -11,21 +11,21 @@ Do not use the checkboxes dynamic component when you need to help users:
 * Toggle a single option on or off.
 * Select one or more options from a fixed, short list of options.
 
-In these cases, use (non-dynamic) <a href="{{path './checkboxes.html'}}">checkboxes</a> instead.
+In these cases, use (non-dynamic) <a href="{{path './checkboxes'}}">checkboxes</a> instead.
 
 ## How it works
 
-The checkboxes dynamic component is an adapted version of the <a href="{{path './checkboxes.html'}}">checkboxes</a> component that can handle various numbers of checkboxes, both short lists of checkboxes as well as average-length lists as long lists of checkboxes.
+The checkboxes dynamic component is an adapted version of the <a href="{{path './checkboxes'}}">checkboxes</a> component that can handle various numbers of checkboxes, both short lists of checkboxes as well as average-length lists as long lists of checkboxes.
 
 Depending on the number of checkboxes, the checkboxes dynamic component presents the checkboxes in a different way:
 
 * **Up to 6 checkboxes**: A normal list of checkboxes where all checkboxes are visible. This is the default view.
-* **From 6 to 20 checkboxes**: The first 3 checkboxes are shown. The following checkboxes are in an <a href="{{path './accordion.html'}}">accordion</a>  with a "Show more" button to show or to hide them.
-* **More than 20 checkboxes**: The first 3 checkboxes are shown. The full list of checkboxes is placed in a <a href="{{path './modal.html'}}">modal</a> that can be opened using a "Show more" button.
+* **From 6 to 20 checkboxes**: The first 3 checkboxes are shown. The following checkboxes are in an <a href="{{path './accordion'}}">accordion</a>  with a "Show more" button to show or to hide them.
+* **More than 20 checkboxes**: The first 3 checkboxes are shown. The full list of checkboxes is placed in a <a href="{{path './modal'}}">modal</a> that can be opened using a "Show more" button.
 
 ### Behavior with more than 20 checkboxes
 
-When there are more than 20 checkboxes, what would normally be a long list of checkboxes, is replaced by showing only the first 3 checkboxes with a "Show more" button that opens a <a href="{{path './modal.html'}}">modal</a> where the list of checkboxes is placed instead.
+When there are more than 20 checkboxes, what would normally be a long list of checkboxes, is replaced by showing only the first 3 checkboxes with a "Show more" button that opens a <a href="{{path './modal'}}">modal</a> where the list of checkboxes is placed instead.
 
 The behavior is as follows:
 
@@ -41,12 +41,12 @@ When the user selects one or more of the first 3 checkboxes that are already vis
 When one or more checkboxes are selected, inside or outside the modal, the user can see this both:
 
 * In the default view, outside the modal: When one or more of the first 3 checkboxes are selected, this is shown. When one or more of the checkboxes that are inside the modal but not one of the first 3 checkboxes, those checkboxes are added to the first 3 checkboxes and it is shown that they are selected.
-* Inside the modal: The corresponding checkboxes are selected. Below the filter field, the selected options are also shown using filter tags. The user can also deselect options here. <a href="{{path './tag.html'}}">Read more about how tags work.</a>
+* Inside the modal: The corresponding checkboxes are selected. Below the filter field, the selected options are also shown using filter tags. The user can also deselect options here. <a href="{{path './tag'}}">Read more about how tags work.</a>
 
 ## Accessibility
 
-* See our <a href="{{path './accordion.html'}}">accordion</a>
-  and <a href="{{path './modal.html'}}">modal</a> components.
+* See our <a href="{{path './accordion'}}">accordion</a>
+  and <a href="{{path './modal'}}">modal</a> components.
 * The aria-label for the filter field inside the modal indicates that the
   filtering will happen on input.  
 * The result count of the filtering is wrapped in an aria-live region.
@@ -54,8 +54,8 @@ When one or more checkboxes are selected, inside or outside the modal, the user 
 ## Javascript
 
 This display uses the accordion JS and @digipolis-gent/modal.  
-We refer you to the <a href="{{path './accordion.html'}}">accordion</a> and
-<a href="{{path './modal.html'}}">modal</a> components for a detailed account on how to use these libraries.
+We refer you to the <a href="{{path './accordion'}}">accordion</a> and
+<a href="{{path './modal'}}">modal</a> components for a detailed account on how to use these libraries.
 
 Create new accordions for each element with className `.checkbox-accordion`.
 

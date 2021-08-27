@@ -6,7 +6,7 @@ Use the programme component on detail pages to present the programme of a curren
 
 ## When not to use this component
 
-Do not use the programme component to present a series of milestones or events in a certain period of time in the past or in the future. Do not use the programme component when there are milestones or events that lead to a certain end result or a specific end goal. In these cases, use the <a href="{{path './timeline.html'}}">timeline component</a> instead.
+Do not use the programme component to present a series of milestones or events in a certain period of time in the past or in the future. Do not use the programme component when there are milestones or events that lead to a certain end result or a specific end goal. In these cases, use the <a href="{{path './timeline'}}">timeline component</a> instead.
 
 Do not use the programme component on overview pages or filter pages. Only use the programme component on detail pages.
 
@@ -22,7 +22,7 @@ A slot is typically:
 
 For each slot, the correspondig term there is one description linked with the corresponding term. This description contains the events that take place in that particular slot.
 
-The events that take place in a particular slot are shown using a <a href="{{path './collection.html'}}">collection</a> of <a href="{{path './teaser.html'}}">teasers</a>, shown in a grid of maximum 3 columns. For the teasers, the inverted styling is used.
+The events that take place in a particular slot are shown using a <a href="{{path './collection'}}">collection</a> of <a href="{{path './teaser'}}">teasers</a>, shown in a grid of maximum 3 columns. For the teasers, the inverted styling is used.
 
 Each teaser represents an event that takes place in a slot and can consist of the following elements:
 
@@ -32,7 +32,7 @@ Each teaser represents an event that takes place in a slot and can consist of th
 * Summary text (optional)
 * Link (required)
 
-When clicking the link of the teaser, a <a href="{{path './modal.html'}}">modal</a> opens containing all information regarding the event:
+When clicking the link of the teaser, a <a href="{{path './modal'}}">modal</a> opens containing all information regarding the event:
 
 * Title (required)
 * Date or subtitle (optional)

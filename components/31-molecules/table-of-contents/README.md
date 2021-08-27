@@ -6,9 +6,9 @@ The table of contents component helps users understand the content and the struc
 
 Use the table of contents component on a web page when:
 
-* The web page contains a lot of text (web page mainly consists of <a href="{{path './paragraph.html'}}">paragraphs</a>)
+* The web page contains a lot of text (web page mainly consists of <a href="{{path './paragraph'}}">paragraphs</a>)
 * The content of the page has a specific structure
-* The content of the page is clearly separated by headings (typically h2 <a href="{{path './heading.html'}}">headings</a>)
+* The content of the page is clearly separated by headings (typically h2 <a href="{{path './heading'}}">headings</a>)
 
 ## When not to use this component
 

@@ -16,8 +16,8 @@ Do not use the textarea component to let users enter:
 * An email
 * A telephone number
 
-In these cases, use <a href="{{path './form-item.html'}}">input component</a> instead.
+In these cases, use <a href="{{path './form-item'}}">input component</a> instead.
 
 ## Usage, behavior, layout and validation
 
-The textarea component is a form element that should always be used in a form. For a description of the usage, the behavior, the layout and validation of form elements, see the <a href="{{path './form.html'}}">form component documentation</a>.
+The textarea component is a form element that should always be used in a form. For a description of the usage, the behavior, the layout and validation of form elements, see the <a href="{{path './form'}}">form component documentation</a>.

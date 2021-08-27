@@ -24,4 +24,4 @@ There are two ways of using and presenting the file upload component in a fields
 
 ## Usage, behavior, layout and validation
 
-The file upload component is a form element that should always be used in a form. For a description of the usage, the behavior, the layout and validation of form elements, see the <a href="{{path './form.html'}}">form component documentation</a>.
+The file upload component is a form element that should always be used in a form. For a description of the usage, the behavior, the layout and validation of form elements, see the <a href="{{path './form'}}">form component documentation</a>.

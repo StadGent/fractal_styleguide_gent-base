@@ -9,9 +9,9 @@ Use the checkboxes component to help users:
 
 ## When not to use this component
 
-Do not use the checkboxes component when you need to help users select one or more options from a long list of options. In this case, use <a href="{{path './checkboxes-dynamic.html'}}">checkboxes dynamic</a> component instead.
+Do not use the checkboxes component when you need to help users select one or more options from a long list of options. In this case, use <a href="{{path './checkboxes-dynamic'}}">checkboxes dynamic</a> component instead.
 
-Do not use the checkboxes component when users should only be able to select one option and no more. In this case, use the <a href="{{path './radios.html'}}">radios</a> component instead.
+Do not use the checkboxes component when users should only be able to select one option and no more. In this case, use the <a href="{{path './radios'}}">radios</a> component instead.
 
 ## How it works
 
@@ -23,4 +23,4 @@ Do not use the checkboxes component when users should only be able to select one
 
 ## Usage, behavior, layout and validation
 
-The checkboxes component is a form element that should always be used in a form. For a description of the usage, the behavior, the layout and validation of form elements, see the <a href="{{path './form.html'}}">form component examples and documentation</a>.
+The checkboxes component is a form element that should always be used in a form. For a description of the usage, the behavior, the layout and validation of form elements, see the <a href="{{path './form'}}">form component examples and documentation</a>.

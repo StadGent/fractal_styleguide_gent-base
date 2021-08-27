@@ -13,7 +13,7 @@ Example usages of the partner block are:
 
 ## When not to use this component
 
-Do not use the partner block to present a set of images. In this case, use the <a href="{{path './image-gallery.html'}}">image gallery component</a> or the <a href="{{path './image-wall.html'}}">image wall component</a> instead.
+Do not use the partner block to present a set of images. In this case, use the <a href="{{path './image-gallery'}}">image gallery component</a> or the <a href="{{path './image-wall'}}">image wall component</a> instead.
 
 ## How it works
 
@@ -27,4 +27,4 @@ Each logo of a partner, organization or company can optionally link to another w
 
 The partner block works best:
 * When it is placed at the bottom of the content of web pages.
-* When the logos of the partners, organizations or companies are SVGs with a transparant background and are unicolor using one of the Style Guide <a href="{{path './colors.html'}}">colors</a>.
+* When the logos of the partners, organizations or companies are SVGs with a transparant background and are unicolor using one of the Style Guide <a href="{{path './colors'}}">colors</a>.

@@ -20,7 +20,7 @@ The image components also adds the benefit of providing an optional caption tag.
 
 The image component is used in the:
 
-* <a href="{{path './teaser.html'}}">Teaser component</a>
-* <a href="{{path './header.html'}}">Header component</a>
-* <a href="{{path './image-gallery.html'}}">Image gallery component</a>
-* <a href="{{path './image-wall.html'}}">Image wall component</a>
+* <a href="{{path './teaser'}}">Teaser component</a>
+* <a href="{{path './header'}}">Header component</a>
+* <a href="{{path './image-gallery'}}">Image gallery component</a>
+* <a href="{{path './image-wall'}}">Image wall component</a>

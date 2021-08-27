@@ -1,6 +1,6 @@
 # Collection
 
-A collection is a list of <a href="{{path './teaser.html'}}">teasers</a> used to show teasers of content.
+A collection is a list of <a href="{{path './teaser'}}">teasers</a> used to show teasers of content.
 
 ## When to use this component
 
@@ -15,9 +15,9 @@ Do not use the collection component with other components than teaser components
 
 ## How it works
 
-A collection is a <a href="{{path './list.html'}}">list</a> of teaser components that can be shown in a grid of maximum 2, 3, 4 or 5 columns. Depending on the screen resolution, less columns are shown.
+A collection is a <a href="{{path './list'}}">list</a> of teaser components that can be shown in a grid of maximum 2, 3, 4 or 5 columns. Depending on the screen resolution, less columns are shown.
 
-On overview and filter pages, <a href="{{path './pagination.html'}}">pagination</a> can be used to divide the content on overview pages with a big amount of content into multiple pages.
+On overview and filter pages, <a href="{{path './pagination'}}">pagination</a> can be used to divide the content on overview pages with a big amount of content into multiple pages.
 
 On detail pages, an optional "Show more" link can be included, as seen in the example, to link to more related content. The "Show more" always links to another page where more content is shown in an overview, typically an overview or filter page.
 

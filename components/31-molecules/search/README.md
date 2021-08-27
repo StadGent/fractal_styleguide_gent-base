@@ -21,4 +21,4 @@ When clicking the search button, the search function of the website is triggerd.
 
 ## Usage within the style guide
 
-The search component is used in the <a href="{{path './header.html'}}">header</a> component. Here, as an exception, the textfield has a placeholder instead of label, because in the header component, a label is not possible.
+The search component is used in the <a href="{{path './header'}}">header</a> component. Here, as an exception, the textfield has a placeholder instead of label, because in the header component, a label is not possible.

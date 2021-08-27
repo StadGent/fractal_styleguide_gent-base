@@ -6,7 +6,7 @@ A link is used to trigger navigation. A link is used to link a web page (interna
 
 ## When not to use this component
 
-Do not use a link to trigger an action. In this case, use a <a href="{{path './button.html'}}">button</a>.
+Do not use a link to trigger an action. In this case, use a <a href="{{path './button'}}">button</a>.
 
 ## How it works
 
@@ -19,11 +19,11 @@ The only exception that could be made is when opening the link would otherwise i
 * The user is filling out a form or a checkout process and needs to click on a link to review, say, terms of service
 * The user is watching video or listening to audio
 
-..., using a <a href="{{path './modal.html'}}">modal</a> could be a better solution.
+..., using a <a href="{{path './modal'}}">modal</a> could be a better solution.
 
 ### Styling
 
-By default, a link is shown as a link. Links can also by styled as a button. This can be particulary useful in <a href="{{path './cta-block.html'}}">call-to-actions</a>. Note that while a link can be styled as a button, it is important that it remains a link and not a button.
+By default, a link is shown as a link. Links can also by styled as a button. This can be particulary useful in <a href="{{path './cta-block'}}">call-to-actions</a>. Note that while a link can be styled as a button, it is important that it remains a link and not a button.
 
 ### Icons
 

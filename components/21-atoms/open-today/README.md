@@ -18,4 +18,4 @@ In case the location has multiple ways of being open, for instance, free entranc
 
 ## Usage within the style guide
 
-The open today component is used in the <a href="{{path './opening-hours-accordion.html'}}">opening hours accordion component</a>.
+The open today component is used in the <a href="{{path './opening-hours-accordion'}}">opening hours accordion component</a>.

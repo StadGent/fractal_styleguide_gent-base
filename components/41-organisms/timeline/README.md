@@ -11,7 +11,7 @@ For instance:
 
 ## When not to use this component
 
-Do not use the timeline component to present the programme of a current event. In this case use the <a href="{{path './programme.html'}}">programme component</a> instead.
+Do not use the timeline component to present the programme of a current event. In this case use the <a href="{{path './programme'}}">programme component</a> instead.
 
 Do not use the timeline component on overview pages or filter pages. Only use the timeline component on detail pages.
 
@@ -21,7 +21,7 @@ A timeline is divided in phases using an HTML description list.
 
 The terms of the description list represent the names of the phases in time. The descriptions (one or more) per term represent the milestones or events in the specific period of time of the phase.
 
-The descriptions per term are shown using an <a href="{{path './accordion.html'}}">accordion component</a> with multiple expandable items, one for each milestone or event in the specific period of time of the phase.
+The descriptions per term are shown using an <a href="{{path './accordion'}}">accordion component</a> with multiple expandable items, one for each milestone or event in the specific period of time of the phase.
 
 Each description can consist of the following elements:
 

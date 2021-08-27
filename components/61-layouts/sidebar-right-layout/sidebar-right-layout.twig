@@ -1,0 +1,38 @@
+{% include '@header' with {
+  "site_name": "Stad Gent",
+  "mijn_gent_block_items": [
+    "<a href='javascript:(void);'>Mijn profiel</a>",
+    "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+    "<a href='javascript:(void);'>Historiek</a>"
+  ],
+  "auth": true,
+  "search": true,
+  "mijn_gent_block_auth": true,
+  "header_search_id": "header-search",
+  "header_search_label": "Search",
+  "header_search_placeholder": "Search",
+  "header_search_text": "Search",
+  "breadcrumbs_items": [
+    "<a href='#'>Home</a>",
+    "<a href='#'>Overview</a>",
+    "<a href='#'>Theme</a>",
+    "<a href='#'>Subpage</a>",
+    "<span>Page title</span>"
+  ]
+} %}
+
+<main class="filter-page">
+  <div class="sidebar-right-layout">
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+    </div>
+    <div class="sidebar">
+      {% include '@highlight' with {
+        "content": "<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur.</p>"
+        } %}
+    </div>
+</main>
+
+<footer>
+  {% include '@footer' with footerConfig %}
+</footer>

@@ -54,7 +54,7 @@
     "breakpoint-sass": "^2.7.1",
     "debug": "^3.1.0",
     "imagesloaded": "^4.1.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
     "set-value": "^3.0.1",
