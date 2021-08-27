@@ -2,13 +2,13 @@
 
 ## When to use this component
 
-Use the teaser component in a <a href="{{path './collection.html'}}">collection</a> to show teasers of content.
+Use the teaser component in a <a href="{{path './collection'}}">collection</a> to show teasers of content.
 
 The teaser component is used in collections on overview and on filter pages to show the overview of the content with links to the content. The teaser component can also be used in a collection on detail pages to show and link to related content.
 
 ## When not to use this component
 
-Do not use the teaser component as a standalone component. Always use the teaser component in a <a href="{{path './collection.html'}}">collection</a>.
+Do not use the teaser component as a standalone component. Always use the teaser component in a <a href="{{path './collection'}}">collection</a>.
 
 ## How it works
 

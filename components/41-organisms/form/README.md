@@ -14,7 +14,7 @@ For example:
 * Send a simple request
 * Subscribe to a newsletter
 
-The form component is used for simple or short forms. When the form becomes too complex or too long, or when splitting up the form into multiple, smaller steps makes it easier for user to fill in, the <a href="{{path './multistep-form.html'}}">Multistep form</a> component can be used instead.
+The form component is used for simple or short forms. When the form becomes too complex or too long, or when splitting up the form into multiple, smaller steps makes it easier for user to fill in, the <a href="{{path './multistep-form'}}">Multistep form</a> component can be used instead.
 
 ## How it works
 
@@ -30,13 +30,13 @@ A form component contains form elements. Form elements are different types of in
  
 The following form elements can be used in the form component:
 
-* <a href="{{path './formitem.html'}}">Input</a>
-* <a href="{{path './checkboxes.html'}}">Checkboxes</a>
-* <a href="{{path './radios.html'}}">Radios</a>
-* <a href="{{path './select.html'}}">Select</a>
-* <a href="{{path './textarea.html'}}">Textarea</a>
-* <a href="{{path './file-upload.html'}}">File upload</a>
-* <a href="{{path './address.html'}}">Address</a>
+* <a href="{{path './formitem'}}">Input</a>
+* <a href="{{path './checkboxes'}}">Checkboxes</a>
+* <a href="{{path './radios'}}">Radios</a>
+* <a href="{{path './select'}}">Select</a>
+* <a href="{{path './textarea'}}">Textarea</a>
+* <a href="{{path './file-upload'}}">File upload</a>
+* <a href="{{path './address'}}">Address</a>
 
 ### Fieldsets
 
@@ -50,7 +50,7 @@ Every form requires at least one form action. Form actions should be placed **in
 
 The **primary form action** is the first action of the form and is typically the submit button of the form. A submit button is required for every form.
 
-For more information, see the <a href="{{path './form-actions.html'}}">form actions component</a>.
+For more information, see the <a href="{{path './form-actions'}}">form actions component</a>.
 
 ## Layout
 
@@ -85,7 +85,7 @@ When the user clicks the submit button of the form to try to submit the form, we
 * The text of the general error message is fixed and should say something like: "Errors were found. Correct them to continue.".
 * The general error message should appear right after checking if there are errors in the form after the user tried to submit the form.
 * The general error message should be placed as close as possible and just below the submit button.
-* For the general error message, the <a href="{{path './status-message.html'}}">error status message</a> is used.
+* For the general error message, the <a href="{{path './status-message'}}">error status message</a> is used.
 
 ### Specific error message per field
 
@@ -95,7 +95,7 @@ Now that the user knows something is broken, we need to help the user with what 
 * The specific error messages should appear at the same moment as the general error message, right after checking if there are errors in the form after the user tried to submit the form.
 * The specific error message should be placed as close as possible and directly at the right next to the fields.
  * In the responsive layout, when there is too little horizontal space, the specific error message move to directy below the fields.
-* For the specific error messages, the <a href="{{path './field-message.html'}}">error field message</a> is used.
+* For the specific error messages, the <a href="{{path './field-message'}}">error field message</a> is used.
 
 #### What text to use for the specific error message per field?
 

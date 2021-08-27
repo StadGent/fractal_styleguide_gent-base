@@ -19,8 +19,8 @@ Headings create structure. They provide a quick way to scan the main sections of
 
 There a few style variants for headings:
 
-* **Overview title:** Style variant that is used above an overview as the page title. This variant is always styled as a heading 1 (h1). Examples of its usage can be found in the <a href="{{path './overview-layout.html'}}">overview layout</a> and the <a href="{{path './filter-layout.html'}}">filter layout</a>.
-* **Collection title:** Style variant that can be used above a <a href="{{path './collection.html'}}">collection</a> of <a href="{{path './teaser.html'}}">teasers</a>. This variant is always styled as a heading 2 (h2). 
+* **Overview title:** Style variant that is used above an overview as the page title. This variant is always styled as a heading 1 (h1). Examples of its usage can be found in the <a href="{{path './overview-layout'}}">overview layout</a> and the <a href="{{path './filter-layout'}}">filter layout</a>.
+* **Collection title:** Style variant that can be used above a <a href="{{path './collection'}}">collection</a> of <a href="{{path './teaser'}}">teasers</a>. This variant is always styled as a heading 2 (h2). 
 
 Simply add the title class on any heading element (according SEO guidelines) to
 apply this style. It isn't required to use these classes on the default heading

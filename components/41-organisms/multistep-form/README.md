@@ -14,13 +14,13 @@ For example:
  
 ## When not to use this component
 
-Do not use the multistep form component for simple or short forms. In this case, use the <a href="{{path './form.html'}}">form</a> component instead.
+Do not use the multistep form component for simple or short forms. In this case, use the <a href="{{path './form'}}">form</a> component instead.
 
-Do not use the multistep form component when helping users collect user input is not the main goal, but rather splitting up a complex problem or task that requires user input into multiple steps or multiple subtasks or guiding users through a process. In this case, use the <a href="{{path './wizard.html'}}">wizard</a> component instead.
+Do not use the multistep form component when helping users collect user input is not the main goal, but rather splitting up a complex problem or task that requires user input into multiple steps or multiple subtasks or guiding users through a process. In this case, use the <a href="{{path './wizard'}}">wizard</a> component instead.
 
 ## How it works
 
-The multistep form component is a collection of <a href="{{path './form.html'}}">form</a> components that each collect certain user input. It uses the <a href="{{path './form-actions.html'}}">form actions</a> component to let users navigate to the next or previous step in the form.
+The multistep form component is a collection of <a href="{{path './form'}}">form</a> components that each collect certain user input. It uses the <a href="{{path './form-actions'}}">form actions</a> component to let users navigate to the next or previous step in the form.
 
 ## Layout
 
@@ -37,4 +37,4 @@ On **tablets in portrait mode and mobile resolutions**, the steps of the multist
 
 ## Validation
 
-The validation of user input in the form components in each step of a multistep form works as it does for simple or short forms. See the documentation of the <a href="{{path './form.html'}}">form</a> component.
+The validation of user input in the form components in each step of a multistep form works as it does for simple or short forms. See the documentation of the <a href="{{path './form'}}">form</a> component.

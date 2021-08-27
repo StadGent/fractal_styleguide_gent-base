@@ -33,4 +33,4 @@ A success status message is used to provide information about an action or a sta
 
 ## Usage in form validation
 
-For more information about the usage of the status message component in the context of a form and form validation, see the <a href="{{path './form.html'}}">form component documentation</a>.
+For more information about the usage of the status message component in the context of a form and form validation, see the <a href="{{path './form'}}">form component documentation</a>.

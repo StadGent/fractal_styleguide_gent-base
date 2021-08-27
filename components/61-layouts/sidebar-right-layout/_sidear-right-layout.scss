@@ -1,0 +1,28 @@
+.sidebar-right-layout {
+  @extend %content-container;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+
+  .sidebar {
+    width: 100%;
+
+    @include desktop {
+      width: span(4 of 12);
+      padding-right: gutter();
+    }
+
+    &.modal {
+      max-height: none;
+    }
+  }
+
+  .content {
+    width: 100%;
+
+    @include desktop {
+      width: span(8 wide of 12);
+    }
+  }
+}

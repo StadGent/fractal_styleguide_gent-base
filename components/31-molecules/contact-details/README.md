@@ -21,7 +21,7 @@ The contact details component can include the following types of contact informa
 
 The order is fixed. Each type of contact information is optional, however at least one of them should be included. For each type of contact information, there can be one or more items included when applicable. For instance: there can be multiple addresses or multiple telephone numbers. The order in which the types of contact information are included always stays the same.
 
-The items are presented in a <a href="{{path './list.html'}}">list</a> with icons. Every item has its icon. The icon that is shown depends on the type of contact information that the item represents.
+The items are presented in a <a href="{{path './list'}}">list</a> with icons. Every item has its icon. The icon that is shown depends on the type of contact information that the item represents.
 
 The contact details component can also optionally include an image of the entity, location or person. The image must be a square image.
 
