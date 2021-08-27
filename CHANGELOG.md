@@ -2,6 +2,17 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.1]
+
+### Added
+
+* STIJ-389: Added new sidebar layout.
+
+### Fixed
+
+* STIJ-389: Fix broken links in readmes.
+* STIJ-389: Fix security vulnerabilities
+
 ## [5.0.0]
 
 ### General

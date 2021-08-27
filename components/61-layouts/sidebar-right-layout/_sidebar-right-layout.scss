@@ -10,11 +10,6 @@
 
     @include desktop {
       width: span(4 of 12);
-      padding-right: gutter();
-    }
-
-    &.modal {
-      max-height: none;
     }
   }
 
@@ -23,6 +18,7 @@
 
     @include desktop {
       width: span(8 wide of 12);
+      padding-right: gutter();
     }
   }
 }
