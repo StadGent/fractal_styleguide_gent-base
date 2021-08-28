@@ -2,6 +2,13 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.2]
+
+### Fixed
+
+* Fix postinstall script, readd check on publicRootPath. 
+  Fix warnings in jenkins job after using 5.x in gent_base.
+
 ## [5.0.1]
 
 ### Added
@@ -1029,6 +1036,8 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[5.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.0...5.0.2
+[5.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.1.1...5.0.0
 [4.1.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.1.0...4.1.1
 [4.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.0.2...4.1.0
