@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.3]
+
+### Fixed
+
+* Fix postinstall script: revert change in version 5.0.2.
+
 ## [5.0.2]
 
 ### Fixed
