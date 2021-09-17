@@ -54,7 +54,7 @@ Inside each the filter fieldset, one of the following form elements can be used:
 
 * <a href="{{path './formitem'}}">Input</a>
 * <a href="{{path './checkboxes'}}">Checkboxes</a>
-* <a href="{{path './checkboxes-with-filter'}}">Checkboxes with Filter</a>
+* <a href="{{path './checkboxes-dynamic'}}">Checkboxes Dynamic</a>
 * <a href="{{path './radios'}}">Radios</a>
 * <a href="{{path './select'}}">Select</a>
 
