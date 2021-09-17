@@ -16,7 +16,7 @@ const generateCheckboxes = (uid, i) => {
   return result;
 };
 
-const generateTeasers = (uid)=>{
+const generateTeasers = (uid) => {
   let result = [];
   for (let i = 10; i--;) {
     result.push({
@@ -25,7 +25,8 @@ const generateTeasers = (uid)=>{
       image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
       image_alt_text: 'alt text',
       type: 'teaser--wide',
-      paragraph_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet et impedit neque nobis ratione, totam unde? A asperiores, nam nihil quam repellat voluptatibus?',
+      paragraph_text:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet et impedit neque nobis ratione, totam unde? A asperiores, nam nihil quam repellat voluptatibus?',
       title: 'Search result',
       link: '#',
       link_text: 'Read more',

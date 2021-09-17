@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.4]
+
+### Fixed
+
+* STIJ-393: Fix wrong padding on filter labels in filter/sidebar layout
+
 ## [5.0.3]
 
 ### Fixed

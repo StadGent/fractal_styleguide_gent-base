@@ -43,4 +43,4 @@ When the content or functionality inside the modal box is too long to be shown a
 
 ## Usage within the style guide
 
-The modal component is used in the <a href="{{path './checkboxes-with-filter'}}">checkboxes with filter</a> component.
+The modal component is used in the <a href="{{path './checkboxes-dynamic'}}">checkboxes dynamic</a> component.

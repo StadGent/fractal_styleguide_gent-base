@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -57,7 +57,7 @@
     "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
-    "set-value": "^3.0.1",
+    "set-value": "^4.0.1",
     "susy": "^3.0.6"
   },
   "resolutions": {
