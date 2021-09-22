@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.5]
+
+### Fixed
+
+* STIJ-394: Fix too strict selectors for sidebar components
+
 ## [5.0.4]
 
 ### Fixed
