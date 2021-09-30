@@ -18,25 +18,25 @@ fs.ensureDirSync(`${publicRootPath}/styleguide/vendor`);
 fs.copySync(
   `${nodeModulesRootPath}/baguettebox.js`,
   `${publicRootPath}/styleguide/vendor/baguettebox`,
-  { recursive: true }
+  {recursive: true}
 );
 fs.copySync(
   `${nodeModulesRootPath}/masonry-layout`,
   `${publicRootPath}/styleguide/vendor/masonry-layout`,
-  { recursive: true }
+  {recursive: true}
 );
 fs.copySync(
   `${nodeModulesRootPath}/imagesloaded`,
   `${publicRootPath}/styleguide/vendor/imagesloaded`,
-  { recursive: true }
+  {recursive: true}
 );
 fs.copySync(
   `${nodeModulesRootPath}/allietabs/dist`,
   `${publicRootPath}/styleguide/vendor/allietabs`,
-  { recursive: true }
+  {recursive: true}
 );
 fs.copySync(
   `${nodeModulesRootPath}/@digipolis-gent/modal/dist`,
   `${publicRootPath}/styleguide/vendor/modal`,
-  { recursive: true }
+  {recursive: true}
 );
