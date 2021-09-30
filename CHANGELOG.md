@@ -2,6 +2,10 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.10]
+
+* Fix missing vendor folder in build directory in npm package
+
 ## [5.0.5]
 
 ### Fixed
@@ -1054,7 +1058,10 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
-[5.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.0...5.0.2
+[5.0.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.3...5.0.5
+[5.0.4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.3...5.0.4
+[5.0.3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.2...5.0.3
+[5.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.1...5.0.2
 [5.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.1.1...5.0.0
 [4.1.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/4.1.0...4.1.1
