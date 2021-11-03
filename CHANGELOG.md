@@ -2,6 +2,10 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.11]
+
+* Add lock open icon.
+
 ## [5.0.10]
 
 * Fix missing vendor folder in build directory in npm package
@@ -1058,6 +1062,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[5.0.11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.10...5.0.11
 [5.0.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.5...5.0.10
 [5.0.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.4...5.0.5
 [5.0.4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.3...5.0.4
