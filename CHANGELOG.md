@@ -2,6 +2,10 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.11]
+
+* Add lock open icon.
+
 ## [5.0.10]
 
 * Fix missing vendor folder in build directory in npm package
