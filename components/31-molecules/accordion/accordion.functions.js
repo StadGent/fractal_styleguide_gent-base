@@ -169,6 +169,36 @@
     };
 
     /**
+     * Hide dropdowns when clicking outside the element.
+     *
+     * @param {Object} event  The js event.
+     */
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropdown button')) {
+        var dropdowns = document.getElementsByClassName('dropdown');
+        for (var i = 0; i < dropdowns.length; i++) {
+          var button = dropdowns[i].querySelector('button');
+
+          if (button.getAttribute('aria-expanded') === 'false') {
+            return;
+          }
+
+          const accordionContent = dropdowns[i].querySelector(`#${button.getAttribute('aria-controls')}`);
+          if (!accordionContent) {
+            return;
+          }
+
+          accordionContent.classList.remove(options.accordionExpandedClass);
+          accordionContent.setAttribute('aria-hidden', 'true');
+          accordionContent.setAttribute('hidden', 'hidden');
+          expandedContent.filter(content => content !== accordionContent);
+          options.collapse(button, accordionContent);
+          button.setAttribute('aria-expanded', 'false');
+        }
+      }
+    };
+
+    /**
      * Set all attributes and toggle visibility accordingly.
      */
     const setInitial = () => {
