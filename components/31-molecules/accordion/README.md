@@ -25,6 +25,8 @@ There are two types of accordions:
 * Single expandable item
 * Multiple expandable items
 
+Adding the class 'dropdown' will add the following behaviour: when you click on an element that isn't a dropdown, all dropdowns will be closed. This behaviour is used in the case of an application that doesn't refresh when clicking a button or link.
+
 ### Single expandable item
 
 Accordions with one single expandable item are displayed with a chevron on the right-hand side.
