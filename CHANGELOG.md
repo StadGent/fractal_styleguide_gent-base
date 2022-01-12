@@ -2,6 +2,10 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.13]
+
+* Add cart icon
+
 ## [5.0.12]
 
 * Add click outside behaviour to accordion component
