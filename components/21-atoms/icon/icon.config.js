@@ -11,6 +11,7 @@ const icons = [
   'arrow-right',
   'arrow-up',
   'broken-link',
+  'cart',
   'calendar',
   'chat-round',
   'chat',
