@@ -76,9 +76,11 @@ $breakpoint-openinghours: '(min-width: 750px)';
         display: inline;
       }
 
-      &--time time:last-of-type {
-        &::before {
-          content: "-";
+      &--time {
+        &:not(.all-day) time:last-of-type {
+          &::before {
+            content: "-";
+          }
         }
       }
 

@@ -2,6 +2,10 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.15]
+
+* STIJ-397: Fix openinghours styling so embedded CSS can then be removed
+
 ## [5.0.13]
 
 * Add cart icon
