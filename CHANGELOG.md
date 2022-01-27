@@ -2,6 +2,10 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.14]
+
+* STIJ-396: Change partner logo's to space evenly
+
 ## [5.0.13]
 
 * Add cart icon
