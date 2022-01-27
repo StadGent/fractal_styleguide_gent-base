@@ -18,12 +18,13 @@
   .partners ul.inline {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 2.2rem;
 
     li {
       width: calc(50% - #{gutter()});
       margin: 0 gutter()/2 gutter();
+      text-align: center;
 
       @include tablet {
         width: calc(25% - #{gutter()});
