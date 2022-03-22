@@ -4,6 +4,7 @@ All notable changes to this style guide are documented here.
 
 ## [5.0.14]
 
+* STIJ-399: Fix wcag color contrast for selected text
 * STIJ-397: Fix openinghours styling so embedded CSS can then be removed
 * STIJ-396: Change partner logo's to space evenly
 
