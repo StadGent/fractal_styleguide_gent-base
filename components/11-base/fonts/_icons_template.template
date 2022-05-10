@@ -17,6 +17,7 @@ $id: random(1000);
   url('#{$styleguide-dir}/fonts/<%= fontName %>.woff?v=#{$id}') format('woff'),
   url('#{$styleguide-dir}/fonts/<%= fontName %>.ttf?v=#{$id}') format('truetype'),
   url('#{$styleguide-dir}/fonts/<%= fontName %>.svg#<%= fontName %>?v=#{$id}') format('svg');
+  font-display: swap;
 }
 
 @mixin <%= cssClass%>-styles {
