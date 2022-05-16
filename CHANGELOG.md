@@ -2,26 +2,47 @@
 
 All notable changes to this style guide are documented here.
 
-## [5.0.14]
+## [5.0.15]
+
+### Fix
 
 * STIJ-399: Fix WCAG color contrast for selected text
+
+### Add
+
 * STIJ-409: Add font-display: swap
+
+## [5.0.14]
+
+### Fix
+
 * STIJ-397: Fix openinghours styling so embedded CSS can then be removed
+
+### Change
+
 * STIJ-396: Change partner logo's to space evenly
 
 ## [5.0.13]
+
+### Add
 
 * Add cart icon
 
 ## [5.0.12]
 
+### Add
+
 * Add click outside behaviour to accordion component
 
 ## [5.0.11]
 
+### Add
+
 * Add lock open icon.
 
 ## [5.0.10]
+
+### Fix
 
 * Fix missing vendor folder in build directory in npm package
 
@@ -1077,6 +1098,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[5.0.15]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.14...5.0.15
 [5.0.14]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.13...5.0.14
 [5.0.13]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.12...5.0.13
 [5.0.12]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.11...5.0.12
