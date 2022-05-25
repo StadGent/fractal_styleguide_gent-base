@@ -17,7 +17,8 @@ There are four types of styling for buttons:
 1. Primary button styling, for the primary and most common actions
 2. Secondary button styling, for less common actions
 3. Alert button styling, for actions that need attention and that might be destructive and result in loss of data
-4. Success button styling, for actions where you want to highlight success
+4. Secondary alert buton styling, for actions that need attention and that might be destructive and result in loss of data
+5. Success button styling, for actions where you want to highlight success
 
 ### Size
 
