@@ -57,6 +57,7 @@ const icons = [
   'marker',
   'minus',
   'normalphone',
+  'pencil',
   'phone',
   'plus',
   'readspeaker',
