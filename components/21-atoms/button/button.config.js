@@ -7,6 +7,8 @@ const versions = [
   'button-large',
   'icon-download',
   'icon-download icon-left',
+  'icon-plus',
+  'icon-pencil',
   'disabled',
   'button-block',
   'button-block icon-download'
