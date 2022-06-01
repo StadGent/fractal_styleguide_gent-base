@@ -1,7 +1,7 @@
 # Styleguide Gent Base
 
 This style guide contains the SASS library and needed assets to be able to style
-a web application in the corporate identity for the city of Ghent..
+a web application in the corporate identity for the City of Ghent..
 
 [![NPM version](https://img.shields.io/npm/v/gent_styleguide.svg)](https://www.npmjs.com/package/gent_styleguide)
 [![Downloads](https://img.shields.io/npm/dt/gent_styleguide.svg)](https://www.npmjs.com/package/gent_styleguide)
