@@ -1,12 +1,13 @@
 'use strict';
 let previous;
-const types = ['primary', 'secondary', 'alert', 'success'];
+const types = ['primary', 'secondary', 'alert', 'secondary-alert', 'success'];
 const versions = [
   'button-small',
   'button-default',
   'button-large',
   'icon-download',
   'icon-download icon-left',
+  'icon-trashcan',
   'disabled',
   'button-block',
   'button-block icon-download'

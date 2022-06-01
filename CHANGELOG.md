@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.16]
+
+### Add
+
+* STIJ-406: Add secondary alert button
+
 ## [5.0.15]
 
 ### Fix
