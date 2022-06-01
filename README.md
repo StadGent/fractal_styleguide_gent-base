@@ -8,6 +8,7 @@ a web application in the corporate identity for the city of Ghent..
 [![License](https://img.shields.io/github/license/StadGent/fractal_styleguide_gent-base.svg)](https://www.npmjs.com/package/gent_styleguide)
 
 ## Contributing
+
 To contribute to the style guide please refer to the
 [contributing document](CONTRIBUTING.md)
 
