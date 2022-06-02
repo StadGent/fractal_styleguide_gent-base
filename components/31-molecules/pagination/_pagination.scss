@@ -29,6 +29,13 @@
       justify-content: center;
       min-width: 1.6rem;
       text-align: center;
+
+      a {
+        &:hover,
+        &:focus {
+          @include theme('color', 'color-tertiary', 'pagination-active-color');
+        }
+      }
     }
 
     a,
@@ -92,6 +99,7 @@
 
         &:hover,
         &:focus {
+          @include theme('color', 'color-tertiary', 'pagination-active-color');
           background: transparent;
         }
       }
