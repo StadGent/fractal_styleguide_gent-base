@@ -1,0 +1,34 @@
+///
+/// Alert button type.
+///
+/// @since 3.0.0
+/// @access public
+/// @author Gert-Jan Meire
+/// @require $box-shadow-primary
+/// @require color
+///
+%button-alert,
+.button-secondary-alert {
+  @include button-icon;
+
+  border-color: color('red', -2);
+  background-color: color('white');
+  color: color('red', 1);
+
+  &.button-block {
+    @include button-icon;
+ }
+
+  &:hover,
+  &:focus {
+    border-color: color('red', -1);
+    background-color: color('red', -5);
+    color: color('red', 2);
+  }
+
+  &:active {
+    border-color: color('red', -1);
+    background-color: color('red', -4);
+    color: color('red', 3);
+  }
+}
