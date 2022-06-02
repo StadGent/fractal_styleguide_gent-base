@@ -67,6 +67,7 @@ const icons = [
   'star-empty',
   'star-full',
   'star-half',
+  'trashcan',
   'twitter-outline',
   'twitter',
   'user',
