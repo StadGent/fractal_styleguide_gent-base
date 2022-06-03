@@ -6,7 +6,7 @@ options:
   merge-default-rules: false
 files:
   ignore:
-    - 'components/11-base/fonts/_icons_template.scss'
+    - 'components/11-base/fonts/templates/_icons.template'
     - 'components/11-base/fonts/_icons.scss'
 rules:
   # Extends

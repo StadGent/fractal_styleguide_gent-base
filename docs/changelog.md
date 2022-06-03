@@ -2,6 +2,18 @@
 
 All notable changes to this style guide are documented here.
 
+## Unreleased
+
+### Add
+
+* STIJ-408: Pagination - Hover states
+
+## [5.0.16]
+
+### Add
+
+* STIJ-406: Add secondary alert button
+
 ## [5.0.15]
 
 ### Fix

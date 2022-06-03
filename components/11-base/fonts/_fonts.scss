@@ -4,7 +4,8 @@
 /// This is enough to support all European languages when using the translate function in the browser
 ////
 
-//@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700&display=swap'); // sass-lint:disable-line no-url-protocols
+// 03-06-2022 : switching to locally hosted fonts in favor of GDPR - see : https://district09.atlassian.net/browse/DTGB-874
+// @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700&display=swap'); // sass-lint:disable-line no-url-protocols
 
 // fira-sans-regular - latin-ext_latin //
 @font-face {
