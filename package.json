@@ -52,6 +52,7 @@
     "allietabs": "^1.2.2",
     "baguettebox.js": "^1.11.0",
     "breakpoint-sass": "^2.7.1",
+    "chromedriver": "^101.0.0",
     "debug": "^3.1.0",
     "imagesloaded": "^4.1.4",
     "lodash": "^4.17.21",

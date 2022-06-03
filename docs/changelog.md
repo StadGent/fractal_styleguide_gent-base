@@ -2,19 +2,6 @@
 
 All notable changes to this style guide are documented here.
 
-## [5.0.17]
-
-### Add
-
-* STIJ-407: Edit & Add Button varianten
-* STIJ-408: Pagination - Hover states
-
-## [5.0.16]
-
-### Add
-
-* STIJ-406: Add secondary alert button
-
 ## [5.0.15]
 
 ### Fix
