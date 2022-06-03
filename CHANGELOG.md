@@ -2,10 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
-## Unreleased
+## [5.0.17]
 
 ### Add
 
+* STIJ-407: Edit & Add Button varianten
 * STIJ-408: Pagination - Hover states
 
 ## [5.0.16]
