@@ -4,9 +4,11 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
-### Add
+### Change
 
 * DTGB-874: Selfhost webfonts
+  
+### Add
 * GENERAL: Add .nvmrc file - at the terminal prompt type `nvm use`
 
 ## [5.0.17]
