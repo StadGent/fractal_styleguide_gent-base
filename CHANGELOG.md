@@ -9,6 +9,10 @@ All notable changes to this style guide are documented here.
 * STIJ-407: Edit & Add Button varianten
 * STIJ-408: Pagination - Hover states
 
+### Fix
+
+* STIJ-410: Fix build error on ttf2woff
+
 ## [5.0.16]
 
 ### Add
