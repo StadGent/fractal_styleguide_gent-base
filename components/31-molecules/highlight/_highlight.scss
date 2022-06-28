@@ -40,7 +40,7 @@
 .highlight--top {
   padding-top: 3.5rem;
 
-  $icons: book camera download form letter link loupe mail newsletter phone upload whistle checklist;
+  $icons: book camera download form letter link loupe mail newsletter phone upload whistle checklist ball question badminton;
   @each $icon in $icons {
     &.#{$icon} .highlight__inner::before {
       @include spot-image($icon + '-light', 7rem);

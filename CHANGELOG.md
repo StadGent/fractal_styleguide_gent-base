@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Add
+
+* STIJ-412: Add spotimages question / ball / badminton / paperclip
+
 ## [5.0.17]
 
 ### Add
