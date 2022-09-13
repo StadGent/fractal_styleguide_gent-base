@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [unreleased]
+
+### Add
+
+* STIJ-413: Add Label list atom
+
 ## [5.0.17]
 
 ### Add
