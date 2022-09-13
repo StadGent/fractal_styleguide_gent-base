@@ -152,6 +152,28 @@ ul {
       content: "\2014";
     }
   }
+
+  &.label-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -.2rem;
+    list-style: none;
+
+    li {
+      @include theme('background-color', 'color-primary--lighten-4', 'tag-filter-background-color');
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: .2rem;
+      padding: .7em .8em;
+      border: 1px solid transparent;
+      border-radius: border-radius('radius-1');
+      font-size: .7rem;
+      line-height: 1.1;
+      text-decoration: none;
+    }
+  }
 }
 
 dl {
