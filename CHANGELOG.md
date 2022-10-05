@@ -7,6 +7,7 @@ All notable changes to this style guide are documented here.
 ### Add
 
 * STIJ-413: Add Label list atom
+* STIJ-416: Add grid display to timeline
 
 ## [5.0.17]
 
