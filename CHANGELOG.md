@@ -8,6 +8,10 @@ All notable changes to this style guide are documented here.
 
 * STIJ-413: Add Label list atom
 
+### Fix
+
+* STIJ-415: Fix prevent floating prefix & suffix
+
 ## [5.0.17]
 
 ### Add
