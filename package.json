@@ -58,6 +58,7 @@
     "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
+    "selenium-webdriver": "3.6.0",
     "set-value": "^4.0.1",
     "susy": "^3.0.6",
     "ttf2woff2": "^4.0.5"
