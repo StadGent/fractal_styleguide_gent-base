@@ -1038,9 +1038,9 @@
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
 "@types/node@*":
-  version "18.7.23"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.23.tgz#75c580983846181ebe5f4abc40fe9dfb2d65665f"
-  integrity sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==
+  version "18.8.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.8.2.tgz#17d42c6322d917764dd3d2d3a10d7884925de067"
+  integrity sha512-cRMwIgdDN43GO4xMWAfJAecYn8wV4JbsOGHNfNUIDiuYkUYAR5ec4Rj7IO2SAhFPEfpPtLtUTbbny/TCT7aDwA==
 
 "@types/q@^1.5.1":
   version "1.5.5"
@@ -2436,7 +2436,7 @@ chroma-js@^1.2.2:
   resolved "https://registry.yarnpkg.com/chroma-js/-/chroma-js-1.4.1.tgz#eb2d9c4d1ff24616be84b35119f4d26f8205f134"
   integrity sha512-jTwQiT859RTFN/vIf7s+Vl/Z2LcMrvMv3WUFmd/4u76AdlFC0NTNgqEEFPcRiHmAswPsMiQEDZLM8vX8qXpZNQ==
 
-chromedriver@^106.0.1:
+chromedriver@^106.0.1, chromedriver@latest:
   version "106.0.1"
   resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-106.0.1.tgz#f3850cc0a6904336b552d1b13a8ae1705d127bbe"
   integrity sha512-thaBvbDEPgGocSp4/SBIajQz3G7UQfUqCOHZBp9TVhRJv7c91eZrUGcjeJUaNF4p9CfSjCYNYzs4EVVryqmddA==
@@ -2444,19 +2444,6 @@ chromedriver@^106.0.1:
     "@testim/chrome-version" "^1.1.3"
     axios "^0.27.2"
     compare-versions "^5.0.1"
-    del "^6.1.1"
-    extract-zip "^2.0.1"
-    https-proxy-agent "^5.0.1"
-    proxy-from-env "^1.1.0"
-    tcp-port-used "^1.0.1"
-
-chromedriver@latest:
-  version "105.0.1"
-  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-105.0.1.tgz#325cf05aca200328176438991d236ddb6c61711b"
-  integrity sha512-QqylH9mvl4Ybq3mmHsym7jeq/LhEi2sPtD8ffd9ixiDFdPRlh2F4vzrzK+myj1MiXb0TYJK7+OCcMEmsB3Sm/Q==
-  dependencies:
-    "@testim/chrome-version" "^1.1.3"
-    axios "^0.27.2"
     del "^6.1.1"
     extract-zip "^2.0.1"
     https-proxy-agent "^5.0.1"
