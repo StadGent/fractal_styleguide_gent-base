@@ -2,6 +2,39 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.19]
+
+### Add
+
+* STIJ-416: Add grid display to timeline
+
+### Fix
+
+* STIJ-415: Fix prevent floating prefix & suffix
+
+## [5.0.18]
+
+### Add
+
+* STIJ-413: Add Label list atom
+
+## [5.0.17]
+
+### Add
+
+* STIJ-407: Edit & Add Button varianten
+* STIJ-408: Pagination - Hover states
+
+### Fix
+
+* STIJ-410: Fix build error on ttf2woff
+
+## [5.0.16]
+
+### Add
+
+* STIJ-406: Add secondary alert button
+
 ## [5.0.15]
 
 ### Fix
