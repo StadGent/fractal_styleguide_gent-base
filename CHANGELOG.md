@@ -2,6 +2,7 @@
 
 All notable changes to this style guide are documented here.
 
+
 ## [5.0.19]
 
 ### Add
@@ -11,6 +12,8 @@ All notable changes to this style guide are documented here.
 ### Fix
 
 * STIJ-415: Fix prevent floating prefix & suffix
+
+=======
 
 ## [5.0.18]
 
