@@ -16,6 +16,11 @@
     }
   }
 
+  .field-prefix,
+  .field-suffix {
+    display: block;
+  }
+
   .field-message:not(.error):not(.success) {
     margin-bottom: .4rem;
   }
