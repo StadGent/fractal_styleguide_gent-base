@@ -13,8 +13,6 @@ All notable changes to this style guide are documented here.
 
 * STIJ-415: Fix prevent floating prefix & suffix
 
-=======
-
 ## [5.0.18]
 
 ### Add
