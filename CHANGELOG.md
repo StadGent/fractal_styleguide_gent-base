@@ -2,12 +2,22 @@
 
 All notable changes to this style guide are documented here.
 
-## [unreleased]
+
+## [5.0.19]
+
+### Add
+
+* STIJ-416: Add grid display to timeline
+
+### Fix
+
+* STIJ-415: Fix prevent floating prefix & suffix
+
+## [5.0.18]
 
 ### Add
 
 * STIJ-413: Add Label list atom
-* STIJ-416: Add grid display to timeline
 
 ## [5.0.17]
 
