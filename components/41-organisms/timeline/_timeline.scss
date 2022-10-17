@@ -20,7 +20,7 @@ dl.timeline {
     }
 
     // Alternating timeline-slots get another background color.
-    &:nth-child(2n+1) {
+    &:nth-child(2n+1):not(.modifiers-has-background) {
       @include theme('background-color', 'color-primary--lighten-5', 'timeline-slot-alternating-background');
 
       // Fix for video on alternating timeline-slots.
