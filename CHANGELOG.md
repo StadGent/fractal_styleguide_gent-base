@@ -2,6 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Add
+
+* STIJ-421: Add icons : sportclub - subscribe
 
 ## [5.0.19]
 
