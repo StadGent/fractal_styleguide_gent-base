@@ -31,12 +31,12 @@ dl.timeline {
 
     // First timeline-slot specific styling.
     &:first-of-type {
-      padding-top: 2rem;
 
       // First definition description inside the first timeline-slot.
       > dd:first-of-type {
-        margin-top: -.4rem;
-        padding-top: 0;
+        @include desktop {
+          padding-top: 2rem;
+        }
 
         // Fix whitespace.
         .timeline-slot-header {
@@ -46,13 +46,11 @@ dl.timeline {
       }
 
       > dt:first-of-type {
-        margin-top: -.8rem;
-        margin-bottom: .4rem;
         padding-bottom: 1.2rem;
 
         @include desktop {
           margin-bottom: 0;
-          padding-top: 0;
+          padding-top: 1.6rem;
         }
 
         &::before {
@@ -63,16 +61,15 @@ dl.timeline {
 
     // Last timeline-slot last definition description specific styling.
     &:last-of-type {
-      padding-bottom: 2rem;
-
       > dd:last-of-type {
+        padding-bottom: 2rem;
 
         // Horizontal timeline end.
         &::before {
           @include theme('border-color', 'color-primary', 'timeline-line-color');
 
           position: absolute;
-          bottom: 0;
+          bottom: 2rem;
           left: calc(#{$timeline-m-left-padding} - .5rem - 1px);
           width: 1rem;
           border-bottom: $timeline-border solid;
@@ -81,6 +78,10 @@ dl.timeline {
           @include desktop {
             left: calc(#{$timeline-dt-left-padding} - .5rem - 1px);
           }
+        }
+
+        &::after {
+          bottom: 2rem;
         }
       }
     }

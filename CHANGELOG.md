@@ -3,6 +3,12 @@
 All notable changes to this style guide are documented here.
 
 
+## [Unreleased]
+
+### Fix
+
+* STIJ-422: Fix no Timeline paddings to fix SG modifiers
+
 ## [5.0.20]
 
 ### Add
