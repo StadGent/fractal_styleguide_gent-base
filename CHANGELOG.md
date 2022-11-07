@@ -2,11 +2,13 @@
 
 All notable changes to this style guide are documented here.
 
+
 ## [5.0.20]
 
 ### Add
 
 * STIJ-421: Add icons : sportclub - subscribe
+
 
 ## [5.0.19]
 
@@ -18,7 +20,6 @@ All notable changes to this style guide are documented here.
 
 * STIJ-415: Fix prevent floating prefix & suffix
 
-=======
 
 ## [5.0.18]
 
