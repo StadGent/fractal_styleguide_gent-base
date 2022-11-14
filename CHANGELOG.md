@@ -5,13 +5,10 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
-### Add
-
-* STIJ-403: Fix large button min-height
-
 ### Fix
 
 * STIJ-422: Fix no Timeline paddings to fix SG modifiers
+* STIJ-403: Fix large button min-height
 
 ## [5.0.20]
 
