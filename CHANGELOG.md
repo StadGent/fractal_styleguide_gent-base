@@ -8,6 +8,7 @@ All notable changes to this style guide are documented here.
 ### Fix
 
 * STIJ-422: Fix no Timeline paddings to fix SG modifiers
+* STIJ-400: Fix extra top spacing for field-message
 
 ## [5.0.20]
 
