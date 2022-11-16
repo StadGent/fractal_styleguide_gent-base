@@ -56,8 +56,8 @@ div.responsive-table {
     }
 
     tr {
-      &:nth-of-type(odd) th:not([scope="col"]),
-      &:nth-of-type(odd) td {
+      &:nth-of-type(even) th:not([scope="col"]),
+      &:nth-of-type(even) td {
         @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
       }
 
@@ -69,13 +69,13 @@ div.responsive-table {
 
     // Tables with a thead have should have the same color scheme.
     thead ~ tbody tr {
-      [class*="cs--"] &:nth-of-type(odd) th:not([scope="col"]),
-      [class*="cs--"] &:nth-of-type(odd) td {
+      [class*="cs--"] &:nth-of-type(even) th:not([scope="col"]),
+      [class*="cs--"] &:nth-of-type(even) td {
         background-color: transparent;
       }
 
-      &:nth-of-type(even) th:not([scope="col"]),
-      &:nth-of-type(even) td {
+      &:nth-of-type(odd) th:not([scope="col"]),
+      &:nth-of-type(odd) td {
         @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
       }
     }
@@ -107,7 +107,7 @@ div.table-list {
       padding: .6rem .3rem;
       font-size: .9rem;
 
-      &:nth-child(2n) {
+      &:nth-child(even) {
         @include theme('background-color', 'color-primary--lighten-5', 'table-list-row-color');
       }
     }
