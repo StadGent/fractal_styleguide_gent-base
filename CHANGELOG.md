@@ -5,6 +5,10 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
+### Add
+
+* STIJ-414: Add extra large button
+
 ### Fix
 
 * STIJ-422: Fix no Timeline paddings to fix SG modifiers
