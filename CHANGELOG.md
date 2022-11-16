@@ -8,6 +8,7 @@ All notable changes to this style guide are documented here.
 ### Fix
 
 * STIJ-422: Fix no Timeline paddings to fix SG modifiers
+* STIJ-391: Fix change Slack reference to email
 
 ## [5.0.20]
 

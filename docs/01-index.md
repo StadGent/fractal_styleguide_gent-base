@@ -9,7 +9,7 @@ or on our [changelog page]({{path '/docs/changelog'}}).
 
 ## Questions?
 
-You can join us on Slack at <a href="https://uxuighent.slack.com/" target="_blank">UX/UI Ghent</a>.
+Please contact us by [email](mailto:ttweb@district09.gent).
 
 ## Implementing the City of Ghent Style Guide in your own project
 
