@@ -7979,14 +7979,14 @@ min-indent@^1.0.0:
   resolved "https://registry.yarnpkg.com/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
-minimatch@3.0.x, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@~3.0.2:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
-  integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
+minimatch@3.0.x, minimatch@~3.0.2:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.8.tgz#5e6a59bd11e2ab0de1cfb843eb2d82e546c321c1"
+  integrity sha512-6FsRAQsxQ61mw+qP1ZzbL9Bc78x2p5OqNgNpnoAFLTrX8n5Kxph0CsnhmKKNXTWjXqU5L0pGPR7hYk+XWZr60Q==
   dependencies:
     brace-expansion "^1.1.7"
 
-minimatch@^3.0.4, minimatch@^3.1.1:
+minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4, minimatch@^3.1.1:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
@@ -10648,9 +10648,9 @@ snapdragon@^0.8.1:
     use "^3.1.0"
 
 snyk@^1.91.0:
-  version "1.692.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.692.0.tgz#af64a8555dbe1e7dd35e5f96cfb109b092ca83da"
-  integrity sha512-N/hfiyccrQRwiU1fFzG1uxKU0ODRTi7UtcZJhtRidE/DT3Vs35pWU/y4vVfXP/OegtihAwGjEirxNeL8o632mQ==
+  version "1.1060.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.1060.0.tgz#42ecc48cee64167cc29321cb9fc4a75c3f54ad5a"
+  integrity sha512-WAYComfIYczRf/BnXNOTnmboGuyX6zkYznqJReKxb+h6AbG6IzC5O9qOWe6ws3v3BXDpfi4AjcaaBeo4WHOxMw==
 
 socket.io-adapter@~1.1.0:
   version "1.1.2"

@@ -8,6 +8,7 @@ All notable changes to this style guide are documented here.
 ### Add
 
 * STIJ-414: Add extra large button
+* STIJ-423: Add resolutions component
 
 ### Fix
 
