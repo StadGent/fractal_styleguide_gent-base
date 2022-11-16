@@ -1,0 +1,50 @@
+<div class="resolutions-list">
+
+  {% set content %}
+    {% include '@heading' with {
+      'type': 'h2',
+      'heading_text': title
+    } %}
+
+    <ul class="resolutions-list__items">
+
+      {% for i in 0..2 %}
+        <li>
+          <div class="resolutions-detail">
+            <h3 class="resolutions-detail__title">
+              {% include '@link' with {
+                'link': item.link,
+                'text': item.title,
+                'modifier': 'resolutions-detail__link',
+                'title': null
+              } %}
+            </h3>
+            <dl class="resolutions-detail__list">
+              <dt>{{ item.organ.label }}:</dt>
+              <dd>{{ item.organ.value }}</dd>
+              <dt>{{ item.date.label }}:</dt>
+              <dd>{{ item.date.value }}</dd>
+            </dl>
+            <span class="resolutions-detail__status resolutions-detail__status--{{ item.status }}" >{{ item.label }}</span>
+          </div>
+        </li>
+      {% endfor %}
+
+    </ul>
+
+    {% include '@link' with {
+      'link': cta.link,
+      'text': cta.text,
+      'modifier': 'button button-primary',
+      'title': null
+    } %}
+
+  {% endset %}
+
+  {% include "@highlight" with {
+    content: content,
+    modifier: 'top',
+    classes: ['hammer']
+  } %}
+
+</div>
