@@ -3,7 +3,7 @@
 All notable changes to this style guide are documented here.
 
 
-## [Unreleased]
+## [Unreleased] 
 
 ### Add
 
@@ -13,6 +13,7 @@ All notable changes to this style guide are documented here.
 ### Fix
 
 * STIJ-422: Fix no Timeline paddings to fix SG modifiers
+* STIJ-421: Fix icons
 * STIJ-391: Fix change Slack reference to email
 * STIJ-400: Fix extra top spacing for field-message
 * STIJ-390: Fix reverse striped rows behaviour on tables
