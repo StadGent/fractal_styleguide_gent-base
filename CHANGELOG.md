@@ -5,10 +5,19 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
+### Add
+
+* STIJ-414: Add extra large button
+* STIJ-423: Add resolutions component
+
 ### Fix
 
 * STIJ-422: Fix no Timeline paddings to fix SG modifiers
 * STIJ-391: Fix change Slack reference to email
+* STIJ-390: Fix reverse striped rows behaviour on tables
+* STIJ-403: Fix large button min-height
+* STIJ-395: Fix disabled state for select elements
+
 
 ## [5.0.20]
 
