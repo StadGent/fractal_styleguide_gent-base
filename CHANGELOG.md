@@ -13,6 +13,7 @@ All notable changes to this style guide are documented here.
 ### Fix
 
 * STIJ-422: Fix no Timeline paddings to fix SG modifiers
+* STIJ-391: Fix change Slack reference to email
 * STIJ-400: Fix extra top spacing for field-message
 * STIJ-390: Fix reverse striped rows behaviour on tables
 * STIJ-403: Fix large button min-height
