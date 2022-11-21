@@ -25,6 +25,7 @@ module.exports = {
     ...[
       'camera',
       'form',
+      'hammer',
       'letter',
       'loupe',
       'mail',
