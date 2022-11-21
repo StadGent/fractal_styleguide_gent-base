@@ -46,6 +46,7 @@ const icons = [
   'image',
   'info',
   'instagram',
+  'level',
   'lightning',
   'linkedin',
   'lock-closed',
