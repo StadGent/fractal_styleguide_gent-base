@@ -23,16 +23,23 @@ module.exports = {
       hidden: true
     },
     ...[
+      'badminton',
+      'ball',
+      'book',
       'camera',
+      'checklist',
+      'download',
       'form',
       'hammer',
       'letter',
+      'link',
       'loupe',
       'mail',
       'newsletter',
+      'phone',
+      'question',
       'upload',
-      'whistle',
-      'checklist'
+      'whistle'
     ].map(h => ({name: h, context: {modifier: 'top', classes: [h]}}))
   ]
 };
