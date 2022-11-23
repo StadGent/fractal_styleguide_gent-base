@@ -8,6 +8,7 @@ All notable changes to this style guide are documented here.
 
 * GENERAL: Add .nvmrc file - at the terminal prompt type `nvm use`
 * STIJ-412: Add spotimages question / ball / badminton / paperclip
+* STIJ-425: Add visualisation to disabled form states
 
 ### Change
 
