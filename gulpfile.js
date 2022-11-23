@@ -435,7 +435,7 @@ gulp.task('iconfont', () => {
   return gulp.src(['./public/styleguide/img/iconfont/*.svg'])
     .pipe(iconfontCss({
       fontName: fontName,
-      path: './components/11-base/fonts/_icons_template.template',
+      path: './components/11-base/fonts/templates/_icons.template',
       targetPath: '../../../components/11-base/fonts/_icons.scss',
       fontPath: '../styleguide/fonts/'
     }))
