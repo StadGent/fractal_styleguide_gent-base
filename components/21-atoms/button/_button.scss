@@ -48,8 +48,26 @@
 @mixin button-large {
   @include large-text;
 
-  min-height: 2.5rem;
+  min-height: 2.4rem;
   letter-spacing: .03em;
+}
+
+
+///
+/// Button - extra large variant.
+///
+/// @since 5.0.20
+/// @group buttons
+/// @access public
+/// @author Thomas De Vriese
+///
+@mixin button-extra-large {
+  @include extra-large-text;
+
+  min-height: 3.6rem;
+  padding: 1.2em 3.6em;
+  letter-spacing: .03em;
+  line-height: 1.7;
 }
 
 ///
@@ -111,6 +129,10 @@
 
   &.button-large {
     @include button-large;
+  }
+
+  &.button-extra-large {
+    @include button-extra-large;
   }
 
   &.button-block {

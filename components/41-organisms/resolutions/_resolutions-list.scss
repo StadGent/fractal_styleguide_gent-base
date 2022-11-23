@@ -1,0 +1,22 @@
+// sass-lint:disable no-important
+.resolutions-list {
+  .highlight__inner {
+    padding-right: 2rem !important;
+  }
+
+  h2 {
+    @include tablet {
+      max-width: calc(100% - 8rem);
+    }
+  }
+
+  .button {
+    align-self: start;
+  }
+
+  &__items {
+    @extend %list-no-style;
+
+    margin-block: 1rem;
+  }
+}

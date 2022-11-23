@@ -6,6 +6,7 @@
  * @type {string[]}
  */
 const icons = [
+  'age',
   'arrow-down',
   'arrow-left',
   'arrow-right',
@@ -45,6 +46,7 @@ const icons = [
   'image',
   'info',
   'instagram',
+  'level',
   'lightning',
   'linkedin',
   'lock-closed',
@@ -64,9 +66,11 @@ const icons = [
   'search',
   'share',
   'size',
+  'sportclub',
   'star-empty',
   'star-full',
   'star-half',
+  'subscribe',
   'trashcan',
   'twitter-outline',
   'twitter',
