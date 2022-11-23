@@ -108,6 +108,18 @@ module.exports = {
           'item 6'
         ]
       }
+    },
+    {
+      name: 'Label list',
+      handle: 'label-list',
+      context: {
+        type: 'label-list',
+        items: [
+          'item 1',
+          'item 2',
+          'item 3'
+        ]
+      }
     }
   ]
 };

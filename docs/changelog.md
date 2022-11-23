@@ -2,17 +2,6 @@
 
 All notable changes to this style guide are documented here.
 
-## [Unreleased]
-
-### Add
-
-* GENERAL: Add .nvmrc file - at the terminal prompt type `nvm use`
-* STIJ-412: Add spotimages question / ball / badminton / paperclip
-
-### Change
-
-* DTGB-874: Selfhost webfonts
-
 
 ## [5.0.21]
 
@@ -55,7 +44,6 @@ All notable changes to this style guide are documented here.
 ### Add
 
 * STIJ-413: Add Label list atom
-
 
 ## [5.0.17]
 

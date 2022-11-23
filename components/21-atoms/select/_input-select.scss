@@ -15,6 +15,15 @@ select {
         background-repeat: no-repeat;
         background-position: right .75rem center, right 2.8rem center;
       }
+
+      &:disabled {
+        background-image: svg-as-background(
+          "lock-closed",
+          color("dark-gray", -2),
+          20,
+          20
+        );
+      }
     }
   }
 
