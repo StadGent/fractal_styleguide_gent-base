@@ -25,13 +25,18 @@ module.exports = {
     ...[
       'badminton',
       'ball',
+      'book',
       'camera',
       'checklist',
+      'download',
       'form',
+      'hammer',
       'letter',
+      'link',
       'loupe',
       'mail',
       'newsletter',
+      'phone',
       'question',
       'upload',
       'whistle'

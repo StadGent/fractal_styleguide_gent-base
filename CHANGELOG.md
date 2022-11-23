@@ -8,12 +8,59 @@ All notable changes to this style guide are documented here.
 
 * STIJ-412: Add spotimages question / ball / badminton / paperclip
 
+
+## [5.0.21]
+
+### Add
+
+* STIJ-414: Add extra large button
+* STIJ-423: Add resolutions component
+
+### Fix
+
+* STIJ-422: Fix no Timeline paddings to fix SG modifiers
+* STIJ-421: Fix icons
+* STIJ-391: Fix change Slack reference to email
+* STIJ-400: Fix extra top spacing for field-message
+* STIJ-390: Fix reverse striped rows behaviour on tables
+* STIJ-403: Fix large button min-height
+* STIJ-395: Fix disabled state for select elements
+
+
+## [5.0.20]
+
+### Add
+
+* STIJ-421: Add icons : sportclub - subscribe
+
+
+## [5.0.19]
+
+### Add
+
+* STIJ-416: Add grid display to timeline
+
+### Fix
+
+* STIJ-415: Fix prevent floating prefix & suffix
+
+
+## [5.0.18]
+
+### Add
+
+* STIJ-413: Add Label list atom
+
 ## [5.0.17]
 
 ### Add
 
 * STIJ-407: Edit & Add Button varianten
 * STIJ-408: Pagination - Hover states
+
+### Fix
+
+* STIJ-410: Fix build error on ttf2woff
 
 ## [5.0.16]
 
