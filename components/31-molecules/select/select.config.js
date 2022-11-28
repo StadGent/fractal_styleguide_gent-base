@@ -25,5 +25,15 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  variants: [
+    {
+      name: 'disabled',
+      context: {
+        id: 'select--disabled',
+        label: 'disabled',
+        disabled: true
+      }
+    }
+  ]
 };

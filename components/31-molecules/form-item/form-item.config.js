@@ -82,6 +82,14 @@ module.exports = {
       }
     },
     {
+      name: 'disabled',
+      context: {
+        id: 'input--disabled',
+        label: 'disabled',
+        disabled: true
+      }
+    },
+    {
       name: 'file',
       context: {
         id: 'input-file',
