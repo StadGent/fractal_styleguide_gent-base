@@ -2,7 +2,7 @@
 
 All notable changes to this style guide are documented here.
 
-## [Unreleased]
+## [5.0.22]
 
 ### Add
 
