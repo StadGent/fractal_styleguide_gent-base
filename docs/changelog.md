@@ -10,6 +10,10 @@ All notable changes to this style guide are documented here.
 * STIJ-412: Add spotimages question / ball / badminton / paperclip
 * STIJ-425: Add visualisation to disabled form states
 
+### Fix
+
+* STIJ-426: Fix uniform font-sizes in lists
+
 ### Change
 
 * DTGB-874: Selfhost webfonts
