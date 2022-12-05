@@ -67,6 +67,37 @@
         "name": _self.name ~ "-tel_name",
         "field_description": null
       } %}
+      {% include '@form-item' with {
+        "label": "Select",
+        "for": "input_select",
+        "input_component": "input-select",
+        "type": "select",
+        "id": _self.name ~ "-input_select",
+        "name": _self.name ~ "-input_select",
+        "field_description": null,
+        "options": [
+          {
+            "label": "Option 1",
+            "name": _self.name ~ "-select",
+            "id": _self.name ~ "-select-option-1"
+          },
+          {
+            "label": "Option 2",
+            "name": _self.name ~ "-select",
+            "id": _self.name ~ "-select-option-2"
+          }
+        ]
+      } %}
+      {% include '@form-item' with {
+        "label": "Disabled",
+        "for": "input_disabled",
+        "input_component": "input",
+        "type": "text",
+        "id": _self.name ~ "-input_disabled",
+        "name": _self.name ~ "-input_disabled",
+        "field_description": null,
+        "disabled": true
+      } %}
     </fieldset>
 
     {% include '@radios' with {

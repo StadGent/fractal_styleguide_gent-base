@@ -3,8 +3,8 @@
 ## Default text font
 
 The style guide uses the Google font "Fira Sans" for all text.
-This gets loaded in the `_fonts.scss` SASSS partial through a SASS `@import`
-statement.
+This gets loaded in the `_fonts.scss` SASSS partial. Used Gooogle fonts are
+loaded locally instead of using a CDN to comply with GDPR issues.
 
 ## The Ghent icon font
 

@@ -1,4 +1,5 @@
 .sass-cache
+.vscode
 node_modules
 build
 scss
@@ -9,3 +10,4 @@ public/styleguide/vendor
 public/styleguide/fonts
 axeReports
 docs/changelog.md
+.vscode

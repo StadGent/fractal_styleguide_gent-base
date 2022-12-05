@@ -2,6 +2,40 @@
 
 All notable changes to this style guide are documented here.
 
+## [5.0.22]
+
+### Add
+
+* GENERAL: Add .nvmrc file - at the terminal prompt type `nvm use`
+* STIJ-412: Add spotimages question / ball / badminton / paperclip
+* STIJ-425: Add visualisation to disabled form states
+
+### Fix
+
+* STIJ-426: Fix uniform font-sizes in lists
+
+### Change
+
+* DTGB-874: Selfhost webfonts
+
+
+## [5.0.21]
+
+### Add
+
+* STIJ-414: Add extra large button
+* STIJ-423: Add resolutions component
+
+### Fix
+
+* STIJ-422: Fix no Timeline paddings to fix SG modifiers
+* STIJ-421: Fix icons
+* STIJ-391: Fix change Slack reference to email
+* STIJ-400: Fix extra top spacing for field-message
+* STIJ-390: Fix reverse striped rows behaviour on tables
+* STIJ-403: Fix large button min-height
+* STIJ-395: Fix disabled state for select elements
+
 
 ## [5.0.21]
 
@@ -44,6 +78,7 @@ All notable changes to this style guide are documented here.
 ### Add
 
 * STIJ-413: Add Label list atom
+
 
 ## [5.0.17]
 
