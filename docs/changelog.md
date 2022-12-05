@@ -3,6 +3,13 @@
 All notable changes to this style guide are documented here.
 
 
+## [5.0.24]
+
+### Add
+
+* STIJ-427: Add G-sport icon to font
+
+
 ## [5.0.22]
 
 ### Add
