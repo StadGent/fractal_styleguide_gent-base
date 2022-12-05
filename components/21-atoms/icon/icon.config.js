@@ -40,6 +40,7 @@ const icons = [
   'flickr',
   'globe',
   'googleplus',
+  'gsport',
   'hamburger',
   'heart',
   'home',
