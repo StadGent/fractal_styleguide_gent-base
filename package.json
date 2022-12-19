@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "5.0.24",
+  "version": "5.0.25",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -92,6 +92,7 @@
     "scripts/postinstall.js",
     "build/css/**/*",
     "build/styleguide/fonts/**/*",
+    "build/styleguide/googlefonts/**/*",
     "build/styleguide/img/favicon/build/**/*",
     "build/styleguide/img/iconfont/**/*",
     "build/styleguide/img/svg/**/*",
