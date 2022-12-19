@@ -3,7 +3,14 @@
 All notable changes to this style guide are documented here.
 
 
-## [Unreleased]
+## [5.0.25]
+
+### Fix
+
+* STIJ-430: Fix allow export googlefonts folder
+
+
+## [5.0.24]
 
 ### Fix
 
