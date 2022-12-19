@@ -3,7 +3,7 @@
 All notable changes to this style guide are documented here.
 
 
-## [Unreleased]
+## [5.0.25]
 
 ### Fix
 
