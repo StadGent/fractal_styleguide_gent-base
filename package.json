@@ -92,6 +92,7 @@
     "scripts/postinstall.js",
     "build/css/**/*",
     "build/styleguide/fonts/**/*",
+    "build/styleguide/googlefonts/**/*",
     "build/styleguide/img/favicon/build/**/*",
     "build/styleguide/img/iconfont/**/*",
     "build/styleguide/img/svg/**/*",
