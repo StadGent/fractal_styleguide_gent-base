@@ -12,6 +12,13 @@ All notable changes to this style guide are documented here.
 
 ## [5.0.24]
 
+### Fix
+
+* STIJ-430: Fix allow export googlefonts folder
+
+
+## [5.0.24]
+
 ### Add
 
 * STIJ-427: Add G-sport icon to font
