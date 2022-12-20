@@ -3,6 +3,11 @@
 All notable changes to this style guide are documented here.
 
 
+## [Unreleased]
+### Fix
+
+* STIJ-433: Fix corrupt fira semibold webfont
+
 
 ## [5.0.26]
 
@@ -17,26 +22,6 @@ All notable changes to this style guide are documented here.
 
 * STIJ-430: Fix allow export googlefonts folder
 
-
-## [5.0.24]
-
-### Fix
-
-* STIJ-432: Fix webfonts weights
-
-
-## [5.0.25]
-
-### Fix
-
-* STIJ-430: Fix allow export googlefonts folder
-
-
-## [5.0.24]
-
-### Fix
-
-* STIJ-430: Fix allow export googlefonts folder
 
 
 ## [5.0.24]
