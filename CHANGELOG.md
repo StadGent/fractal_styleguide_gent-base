@@ -3,6 +3,14 @@
 All notable changes to this style guide are documented here.
 
 
+
+## [5.0.26]
+
+### Fix
+
+* STIJ-432: Fix webfonts weights
+
+
 ## [5.0.25]
 
 ### Fix
