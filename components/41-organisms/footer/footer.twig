@@ -6,13 +6,7 @@
       <div class="footer--column">
         <div class="gentinfo-block">
           <div class="gentinfo-block-content">
-            <h3 class="visually-hidden">Gentinfo</h3>
-            {% include '@image' with {
-              src: '/styleguide/img/svg/gentinfo-logo.svg' | path,
-              modifier: 'gentinfo-logo',
-              alt_text: 'Gentinfo',
-              ratio: null
-            } %}
+            <h3 class="gentinfo-title">Gent<strong>info</strong></h3>
 
             {% include '@paragraph' with {
               'text': gentinfo.description
