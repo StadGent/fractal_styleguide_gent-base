@@ -3,6 +3,13 @@
 All notable changes to this style guide are documented here.
 
 
+## [5.0.28]
+
+### Change
+
+* SGD8-2444: Update gentinfo logo
+
+
 ## [5.0.27]
 ### Fix
 
