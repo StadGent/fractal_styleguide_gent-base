@@ -1,7 +1,14 @@
 h4,
 .h4,
 %h4 {
-  @include theme('color', 'color-tertiary', 'heading-4-color');
+  @include theme('color', 'color-zero', 'heading-4-color');
+  @include semi-bold-text;
 
   font-size: .9rem;
+  line-height: 1.15rem;
+  
+  @include tablet {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
 }
