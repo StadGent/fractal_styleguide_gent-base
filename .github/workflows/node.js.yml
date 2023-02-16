@@ -3,11 +3,7 @@
 
 name: Node.js CI
 
-on:
-  push:
-    branches: [ 5.x, 5.x-dev, feature/* ]
-  pull_request:
-    branches: [ 5.x, 5.x-dev, feature/* ]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
