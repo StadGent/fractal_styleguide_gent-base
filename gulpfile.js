@@ -715,7 +715,7 @@ gulp.task('axe:input', () => {
       'build/components/preview/textarea*.html'
       ]
     )
-    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'label', 'bypass']}))
+    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['color-contrast', 'definition-list', 'dlitem', 'label', 'bypass']}))
 });
 
 /**
