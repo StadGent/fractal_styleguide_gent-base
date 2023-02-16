@@ -5,7 +5,7 @@
 ////
 
 // 03-06-2022 : switching to locally hosted fonts in favor of GDPR - see : https://district09.atlassian.net/browse/DTGB-874
-// @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700&display=swap'); // sass-lint:disable-line no-url-protocols
+// @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700;800&display=swap'); // sass-lint:disable-line no-url-protocols
 
 // fira-sans-regular - latin-ext_latin //
 @font-face {
@@ -52,6 +52,20 @@
   font-display: swap;
 }
 
+// fira-sans-800 - latin-ext_latin //
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-800.eot'),
+  local('Fira Sans'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-800.eot?#iefix') format('embedded-opentype'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-800.woff2') format('woff2'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-800.woff') format('woff'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-800.ttf') format('truetype'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-800.svg#FiraSans') format('svg');
+  font-display: swap;
+}
 
 // WebfontLoader
 // Bypass the FOUT.
