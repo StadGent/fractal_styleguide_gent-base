@@ -203,14 +203,14 @@ $accolade-height: 1rem;
   &.left-top,
   &.left-center,
   &.left-bottom {
-    left: -($accolade-height*0.5);
+    left: -($accolade-height*.5);
     transform: rotate(90deg);
   }
 
   &.right-top,
   &.right-center,
   &.right-bottom {
-    right: -($accolade-height*0.5);
+    right: -($accolade-height*.5);
     transform: rotate(-90deg);
   }
 
