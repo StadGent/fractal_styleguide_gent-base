@@ -166,7 +166,7 @@ aside.top {
 
       @include tablet {
         position: absolute;
-        top: -($bulb-image-width/2);
+        top: -($bulb-image-width*.5);
         right: span(1 of 12);
         margin: 0;
       }
