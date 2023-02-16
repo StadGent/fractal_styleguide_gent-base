@@ -7,7 +7,7 @@ on:
   push:
     branches: [ 5.x, 5.x-dev ]
   pull_request:
-    branches: [ 5.x, 5.x-dev ]
+    branches: [ 5.x, 5.x-dev, feature/* ]
   workflow_dispatch
 
 jobs:
