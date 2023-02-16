@@ -25,6 +25,8 @@
 /// @param {string} $replace ['']
 ///   The separator.
 ///
+@use "sass:math";
+
 @function str-replace($string, $search, $replace: '') {
   $index: str-index($string, $search);
   @return if($index,
@@ -207,7 +209,7 @@
     }
     @else {
       $digits: $digits * 10;
-      $result: $result + map-get($numbers, $character) / $digits;
+      $result: $result + math.div(map-get($numbers, $character), $digits);
     }
   }
 
