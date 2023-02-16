@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $gentinfo-icon-size: 8rem;
 
 .gentinfo {
@@ -29,9 +31,9 @@ $gentinfo-icon-size: 8rem;
         position: absolute;
         top: 50%;
         left: 10rem;
-        margin-top: $gentinfo-icon-size / -2;
+        margin-top: math.div($gentinfo-icon-size, -2);
         margin-bottom: 0;
-        margin-left: $gentinfo-icon-size / -2;
+        margin-left: math.div($gentinfo-icon-size, -2);
       }
     }
   }

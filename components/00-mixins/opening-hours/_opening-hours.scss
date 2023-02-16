@@ -7,16 +7,16 @@
 
   > .openinghours {
     padding-right: 0;
-    padding-bottom: $month-day-size-mobile / 2;
+    padding-bottom: $month-day-size-mobile * 0.5;
     border: 0;
   }
 
   .openinghours--details {
     @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
 
-    top: calc(100% + #{$month-day-size-mobile / 2});
-    left: $month-day-size-mobile / 4;
-    padding-top: $month-day-size-mobile / 2;
+    top: calc(100% + #{$month-day-size-mobile * 0.5});
+    left: $month-day-size-mobile * 0.25;
+    padding-top: $month-day-size-mobile * 0.5;
     border-top: 2px solid;
   }
 }
@@ -28,14 +28,14 @@
   > .openinghours {
     @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
 
-    padding-right: $month-day-size / 2;
+    padding-right: $month-day-size * 0.5;
     padding-bottom: 0;
     border-right: 2px solid;
   }
 
   .openinghours--details {
 
-    top: -$month-day-size / 2;
+    top: -$month-day-size * 0.5;
     left: calc(100% + #{$month-day-size});
     padding-top: 0;
     border-top: 0;

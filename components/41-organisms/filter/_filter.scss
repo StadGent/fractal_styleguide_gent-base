@@ -29,7 +29,7 @@
       }
 
       > * + * {
-        margin-left: gutter() / 2;
+        margin-left: gutter() * 0.5;
       }
     }
 
