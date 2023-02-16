@@ -1,7 +1,13 @@
 h3,
 .h3,
 %h3 {
-  @include theme('color', 'color-tertiary', 'heading-3-color');
+  @include theme('color', 'color-zero', 'heading-3-color');
 
-  font-size: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.55rem;
+
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 1.95rem;
+  }
 }

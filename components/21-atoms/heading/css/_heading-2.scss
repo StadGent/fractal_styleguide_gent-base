@@ -1,7 +1,13 @@
 h2,
 .h2,
 %h2 {
-  @include theme('color', 'color-tertiary', 'heading-2-color');
+  @include theme('color', 'color-zero', 'heading-2-color');
 
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+
+  @include tablet {
+    font-size: 2rem;
+    line-height: 2.1rem;
+  }
 }

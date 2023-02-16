@@ -270,8 +270,16 @@
 /// @access private
 /// @author Helena Standaert
 ///
-@mixin bold-text {
+@mixin semi-bold-text {
   font-weight: 600;
+}
+
+@mixin bold-text {
+  font-weight: 700;
+}
+
+@mixin extra-bold-text {
+  font-weight: 800;
 }
 
 
