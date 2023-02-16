@@ -28,4 +28,3 @@ jobs:
     - run: npm test
       env:
         CHROMIUM_BIN=$(which chrome)
-
