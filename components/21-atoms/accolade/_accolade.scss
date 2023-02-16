@@ -1,5 +1,7 @@
-$span: percentage(6 / 12);
-$span-end: percentage(3 / 12);
+@use "sass:math";
+
+$span: percentage(math.div(6, 12));
+$span-end: percentage(math.div(3, 12));
 
 .accolade {
   position: absolute;
@@ -154,7 +156,7 @@ $span-end: percentage(3 / 12);
 }
 
 
-$span-inverse: percentage(2 / 12);
+$span-inverse: percentage(math.div(2, 12));
 $accolade-width: 2rem;
 $accolade-height: 1rem;
 
@@ -201,14 +203,14 @@ $accolade-height: 1rem;
   &.left-top,
   &.left-center,
   &.left-bottom {
-    left: -($accolade-height/2);
+    left: -($accolade-height*.5);
     transform: rotate(90deg);
   }
 
   &.right-top,
   &.right-center,
   &.right-bottom {
-    right: -($accolade-height/2);
+    right: -($accolade-height*.5);
     transform: rotate(-90deg);
   }
 

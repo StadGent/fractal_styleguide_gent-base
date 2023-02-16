@@ -23,7 +23,7 @@
 
     li {
       width: calc(50% - #{gutter()});
-      margin: 0 gutter()/2 gutter();
+      margin: 0 gutter()*.5 gutter();
       text-align: center;
 
       @include tablet {
