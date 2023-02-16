@@ -31,4 +31,4 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
       env:
-        CHROMIUM_BIN=$(which chrome)
+        CHROMIUM_BIN: $(which chrome)
