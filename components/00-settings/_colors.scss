@@ -208,11 +208,13 @@ $themes: (
     'color-success': color('green'),
     'color-warning': color('orange'), // Deprecated color.
     'color-error': color('red'),
-    'color-box-shadow': $box-shadow-primary color('gray', -4),
-    'color-box-shadow-hover': $box-shadow-primary color('gray', -3),
-    'color-box-shadow-dark': $box-shadow-primary color('gray', -4),
-    'color-box-shadow-dark-hover': $box-shadow-primary color('gray', -3),
-    'color-box-shadow-secondary-dark': $box-shadow-secondary color('gray', -4),
+    'color-box-shadow': $box-shadow-primary color('gray', -4), // @todo Remove shadow.
+    'color-box-shadow-hover': $box-shadow-primary color('gray', -3), // @todo Remove shadow.
+    'color-box-shadow-dark': $box-shadow-primary color('gray', -4), // @todo Remove shadow.
+    'color-box-shadow-dark-hover': $box-shadow-primary color('gray', -3), // @todo Remove shadow.
+    'color-box-shadow-secondary-dark': $box-shadow-secondary color('gray', -4), // @todo Remove shadow.
+
+    'default-text-color': color('gray'),
 
     'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan', -5), 1280, 21),
     'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1), 1280, 21),
@@ -220,7 +222,7 @@ $themes: (
     // Exceptions to colors go here...
     // These should be as limited as possible though!
     'heading-inverse-primary-background-color': color('blue'),
-    
+
     'link-color': color('cyan-wcag', 1),
     'link-hover-background': color('cyan', -5),
     'link-hover-color': color('cyan', 2),
@@ -237,9 +239,9 @@ $themes: (
     'button-primary-hover-background': color('gray', -2),
     'button-primary-hover-color': color('white'),
     'button-primary-hover-border-color': color('gray', -2), // @todo Remove border.
-    'button-primary-focus-background': color('gray', 1),
-    'button-primary-focus-color': color('white'),
-    'button-primary-focus-border-color': color('gray', 1), // @todo Remove border.
+    'button-primary-active-background': color('white'),
+    'button-primary-active-color': color('gray'),
+    'button-primary-active-border-color': color('gray'), // @todo Remove border.
 
     'button-secondary-background': color('cyan', -3),
     'button-secondary-border-color': color('cyan', -3), // @todo Remove border.
@@ -247,9 +249,9 @@ $themes: (
     'button-secondary-hover-background': color('cyan-hover'),
     'button-secondary-hover-color': color('gray'),
     'button-secondary-hover-border-color': color('cyan-hover'), // @todo Remove border.
-    'button-secondary-focus-color': color('gray'),
-    'button-secondary-focus-background': color('cyan-hover'),
-    'button-secondary-focus-border-color': color('cyan-hover'), // @todo Remove border.
+    'button-secondary-active-color': color('gray'),
+    'button-secondary-active-background': color('white'),
+    'button-secondary-active-border-color': color('cyan-hover'), // @todo Remove border.
 
     'image-gallery-show-more-background-color': color('cyan', 3),
 

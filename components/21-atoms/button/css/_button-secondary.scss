@@ -19,10 +19,8 @@
   }
 
   &:active {
-    @include theme('background-color', 'color-primary--lighten-3', 'button-secondary-focus-background');
-    @include theme('color', 'color-primary--darken-3', 'button-secondary-focus-color');
-    @include theme('border-color', 'color-primary', 'button-secondary-focus-border-color');
-
-    box-shadow: none;
+    @include theme('background-color', 'color-primary--lighten-3', 'button-secondary-active-background');
+    @include theme('color', 'color-primary--darken-3', 'button-secondary-active-color');
+    @include theme('border-color', 'color-primary', 'button-secondary-active-border-color');
   }
 }
