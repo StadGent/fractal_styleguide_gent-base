@@ -10,7 +10,7 @@ const fs = require('fs');
  * NPM based modules
  */
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
 const sourcemaps = require('gulp-sourcemaps');
 const sassLint = require('gulp-sass-lint');
@@ -20,7 +20,7 @@ const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
-const imagemin = require('gulp-imagemin');
+let /** @type {import("gulp-imagemin")} */ imagemin;
 const pngquant = require('imagemin-pngquant');
 const uglify = require('gulp-uglify');
 const npmLogin = require('npm-cli-login');
@@ -39,6 +39,13 @@ const RecolorSvg = require('gulp-recolor-svg');
 const realFavicon = require('gulp-real-favicon');
 // require our configurated fractal module.
 const fractal = require('./fractal');
+
+const startup = async () => {
+  // @ts-ignore
+  imagemin = (await import("gulp-imagemin")).default;
+  // @ts-ignore
+};
+
 
 // optional dependency
 let axeCli;
@@ -66,7 +73,7 @@ const _sassFiles = () => {
 const _sassCompile = () => {
   const combined = combiner.obj([
     sass({
-      outputStyle: 'nested',
+      outputStyle: 'compressed',
       includePaths: [
         'node_modules/breakpoint-sass/stylesheets',
         'node_modules/susy/sass'
@@ -303,8 +310,10 @@ gulp.task('js:watch', () => {
 /**
  * Minify images.
  */
-gulp.task('images:minify', () => {
-  return gulp.src([
+gulp.task('images:minify', async () => {
+    await startup();
+
+    return gulp.src([
     'components/**/*.png',
     'components/**/*.jpg',
     'components/**/*.gif',

@@ -1,10 +1,9 @@
 ////
 ///
-/// This file defines all color settings, mixins and fucntions necessary
+/// This file defines all color settings, mixins and functions necessary
 /// to provide the themify engine the style guide is based on.
 ///
 /// @group colors
-/// @author Gert-Jan Meire
 ///
 ////
 
@@ -15,20 +14,24 @@
 /// @group colors
 /// @access public
 /// @type map
-/// @author Gert-Jan Meire
 ///
 $colors: (
+  // 6.x colors
+  'gray': #001823,
+  'blue': #005ba9,
+  'yellow': #ffdb5a,
   'cyan': #009de0,
+  'cyan-hover': #1abcff,
+  'red': #ea0d33,
+  'green': #2c8726,
+  'white': #fff,
+
+  // 5.x colors legacy
   'cyan-wcag': #007db3,
   'dark-gray': #23333a,
-  'white': #fff,
-  'blue': #0340c7,
   'teal': #29cfc9,
-  'green': #38ab30,
   'lemon': #f5d605,
-  'yellow': #fab600,
   'orange': #f95706,
-  'red': #f20f36,
   'pink': #f09,
   'purple': #5a0ec4,
 ) !default;
@@ -42,18 +45,18 @@ $colors: (
 /// @group colors
 /// @access public
 /// @type map
-/// @author Gert-Jan Meire
 ///
 $tints: (
   1: 10%,
   2: 25%,
   3: 50%,
   -1: .75,
-  -2: .5,
-  -3: .25,
-  -4: .1,
-  -5: .06,
-  -6: .02,
+  -2: .6,
+  -3: .5,
+  -4: .25,
+  -5: .1,
+  -6: .06,
+  -7: .02,
 ) !default;
 
 ///
@@ -64,7 +67,6 @@ $tints: (
 /// @group colors
 /// @access public
 /// @type string
-/// @author Gert-Jan Meire
 ///
 $box-shadow-primary: 0 2px 8px 0;
 $box-shadow-secondary: 0 2px 12px 0;
@@ -75,8 +77,6 @@ $box-shadow-secondary: 0 2px 12px 0;
 /// @since 3.0.0
 /// @group colors
 /// @access public
-/// @author Jeroen Goossens
-/// @require $colors
 ///
 /// @param {color} $base-color
 ///   The key of the color in the $colors map.
@@ -94,7 +94,6 @@ $box-shadow-secondary: 0 2px 12px 0;
 /// @since 3.0.0
 /// @group colors
 /// @access public
-/// @author Gert-Jan Meire
 /// @require $colors
 ///
 /// @param {color} $base-color
@@ -141,7 +140,6 @@ $box-shadow-secondary: 0 2px 12px 0;
 /// @since 3.0.0
 /// @group colors
 /// @access public
-/// @author Gert-Jan Meire
 /// @require $tints
 /// @require $colors
 ///
@@ -168,7 +166,6 @@ $box-shadow-secondary: 0 2px 12px 0;
 /// @since 3.0.0
 /// @group colors
 /// @access public
-/// @author Gert-Jan Meire
 /// @require $tints
 /// @require $colors
 ///
@@ -198,251 +195,92 @@ $box-shadow-secondary: 0 2px 12px 0;
 /// @group colors
 /// @access public
 /// @type map
-/// @author Gert-Jan Meire
 ///
 $themes: (
-  'cyan': (
+  'blue': (
     // Required colors!
-    'color-primary': color('cyan'),
-    'color-secondary': color('white'),
-    'color-tertiary': color('dark-gray'),
+    'color-zero': color('gray'),
+    'color-none': color('white'),
+    'color-primary': color('blue'),
+    'color-secondary': color('yellow'),
+    'color-tertiary': color('cyan'),
     'color-info': color('cyan'),
     'color-success': color('green'),
-    'color-warning': color('orange'),
+    'color-warning': color('orange'), // Deprecated color.
     'color-error': color('red'),
-    'color-box-shadow': $box-shadow-primary color('cyan-wcag', -3),
-    'color-box-shadow-hover': $box-shadow-primary color('cyan-wcag', -2),
-    'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-box-shadow-secondary-dark': $box-shadow-secondary color('dark-gray', -3),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan-wcag', -4), 1280, 21),
+    'color-box-shadow': $box-shadow-primary color('gray', -4), // @todo Remove shadow.
+    'color-box-shadow-hover': $box-shadow-primary color('gray', -3), // @todo Remove shadow.
+    'color-box-shadow-dark': $box-shadow-primary color('gray', -4), // @todo Remove shadow.
+    'color-box-shadow-dark-hover': $box-shadow-primary color('gray', -3), // @todo Remove shadow.
+    'color-box-shadow-secondary-dark': $box-shadow-secondary color('gray', -4), // @todo Remove shadow.
+
+    'default-text-color': color('gray'),
+
+    'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan', -5), 1280, 21),
     'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1), 1280, 21),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
-    'link-color': color('cyan-wcag', 1),
-    'link-hover-background': color('cyan-wcag', -4),
-    'link-hover-color': color('cyan-wcag', 2),
-    'link-underlined-hover-color': color('cyan-wcag', 2),
+    'heading-inverse-primary-background-color': color('blue'),
 
-    'focus-outline': color('cyan-wcag'),
+    'link-color': color('cyan-wcag', 1),
+    'link-hover-background': color('cyan', -5),
+    'link-hover-color': color('cyan', 2),
+    'link-underlined-hover-color': color('cyan', 2),
+
+    'focus-outline': color('cyan'),
 
     'breadcrumb-expandable-color': color('cyan'),
-    'breadcrumb-expandable-background-color-hover': color('cyan', -4),
+    'breadcrumb-expandable-background-color-hover': color('cyan', -5),
 
-    'button-primary-background': color('cyan-wcag'),
-    'button-primary-border-color': color('cyan-wcag'),
-    'button-primary-hover-background': color('cyan-wcag', 1),
-    'button-primary-hover-border-color': color('cyan-wcag', 1),
-    'button-primary-focus-background': color('cyan-wcag', 3),
-    'button-primary-focus-border-color': color('cyan-wcag', 3),
+    'button-primary-background': color('gray'),
+    'button-primary-color': color('white'),
+    'button-primary-border-color': color('gray'), // @todo Remove border.
+    'button-primary-hover-background': color('gray', -2),
+    'button-primary-hover-color': color('white'),
+    'button-primary-hover-border-color': color('gray', -2), // @todo Remove border.
+    'button-primary-active-background': color('white'),
+    'button-primary-active-color': color('gray'),
+    'button-primary-active-border-color': color('gray'), // @todo Remove border.
 
-    'button-secondary-border-color': color('cyan-wcag', -2),
-    'button-secondary-color': color('cyan-wcag'),
-    'button-secondary-hover-color': color('cyan-wcag', 1),
-    'button-secondary-hover-border-color': color('cyan', -1),
-    'button-secondary-focus-color': color('cyan-wcag', 3),
-    'button-secondary-focus-background': color('cyan-wcag', -4),
-    'button-secondary-focus-border-color': color('cyan-wcag', -1),
+    'button-secondary-background': color('cyan', -3),
+    'button-secondary-border-color': color('cyan', -3), // @todo Remove border.
+    'button-secondary-color': color('gray'),
+    'button-secondary-hover-background': color('cyan-hover'),
+    'button-secondary-hover-color': color('gray'),
+    'button-secondary-hover-border-color': color('cyan-hover'), // @todo Remove border.
+    'button-secondary-active-color': color('gray'),
+    'button-secondary-active-background': color('white'),
+    'button-secondary-active-border-color': color('cyan-hover'), // @todo Remove border.
 
-    'image-gallery-show-more-background-color': color('cyan-wcag', 3),
+    'image-gallery-show-more-background-color': color('cyan', 3),
 
-    'radio-background-color-checked': color('cyan', -5),
+    'radio-background-color-checked': color('cyan', -6),
     'radio-border-color-checked': color('cyan'),
     'radio-checkmark-color': color('cyan'),
 
-    'radio-background-color-hover-and-checked': color('cyan', -3),
+    'radio-background-color-hover-and-checked': color('cyan', -4),
     'radio-border-color-hover-and-checked': color('cyan', 3),
     'radio-color-hover-and-checked': color('cyan', 3),
 
-    'checkbox-background-color-checked': color('cyan', -5),
+    'checkbox-background-color-checked': color('cyan', -6),
     'checkbox-border-color-checked': color('cyan'),
     'checkbox-checkmark-color': color('cyan'),
 
-    'checkbox-background-color-hover-and-checked': color('cyan', -3),
+    'checkbox-background-color-hover-and-checked': color('cyan', -4),
     'checkbox-border-color-hover-and-checked': color('cyan', 3),
     'checkbox-color-hover-and-checked': color('cyan', 3),
 
-    'readspeaker-icon-color': color('cyan-wcag'),
-    'readspeaker-icon-border-color': color('cyan-wcag', -2),
+    'readspeaker-icon-color': color('cyan'),
+    'readspeaker-icon-border-color': color('cyan', -3),
 
-    'tag-border-color-hover': color('cyan-wcag', -2),
-    'tag-close-button-background-hover': color('cyan-wcag', -4),
-    'teaser-label-icon-color': color('cyan-wcag'),
+    'tag-border-color-hover': color('cyan', -3),
+    'tag-close-button-background-hover': color('cyan', -5),
+    'teaser-label-icon-color': color('cyan'),
 
-    'gentinfo-content-shadow': color('cyan-wcag', -5),
+    'gentinfo-content-shadow': color('cyan', -6),
 
-    'tag-border-color': color('cyan-wcag', -2),
-    'tag-span-border-color': color('cyan-wcag', -3),
-  ),
-  'orange': (
-    // Required colors!
-    'color-primary': color('orange'),
-    'color-secondary': color('white'),
-    'color-tertiary': color('dark-gray'),
-    'color-info': color('cyan'),
-    'color-success': color('green'),
-    'color-warning': color('orange'),
-    'color-error': color('red'),
-    'color-box-shadow': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-box-shadow-secondary-dark': $box-shadow-secondary color('dark-gray', -3),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('orange', -4), 1280, 21),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('orange', 1), 1280, 21),
-
-    // Exceptions to colors go here...
-    // These should be as limited as possible though!
-    'link-color': color('dark-gray'),
-    'link-hover-color': color('dark-gray', 2),
-    'link-underline-color': color('dark-gray', 2),
-
-    'button-primary-background': color('dark-gray'),
-    'button-primary-border-color': color('dark-gray'),
-    'button-primary-hover-background': color('dark-gray', 1),
-    'button-primary-hover-border-color': color('dark-gray', 1),
-    'button-primary-focus-background': color('dark-gray', 3),
-    'button-primary-focus-border-color': color('dark-gray', 3),
-
-    'button-secondary-border-color': color('dark-gray', -2),
-    'button-secondary-color': color('dark-gray'),
-    'button-secondary-hover-color': color('dark-gray', 1),
-    'button-secondary-hover-background': color('dark-gray', -4),
-    'button-secondary-hover-border-color': color('dark-gray', -1),
-    'button-secondary-focus-color': color('dark-gray', 3),
-    'button-secondary-focus-background': color('dark-gray', -4),
-    'button-secondary-focus-border-color': color('dark-gray', -1),
-  ),
-  'blue': (
-    // Required colors!
-    'color-primary': color('blue', 3),
-    'color-secondary': color('white'),
-    'color-tertiary': color('dark-gray'),
-    'color-info': color('cyan'),
-    'color-success': color('green'),
-    'color-warning': color('orange'),
-    'color-error': color('red'),
-    'color-box-shadow': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-box-shadow-secondary-dark': $box-shadow-secondary color('dark-gray', -3),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('blue', -4), 1280, 21),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('blue', 1), 1280, 21),
-
-    // Exceptions to colors go here...
-    // These should be as limited as possible though!
-    'link-color': color('dark-gray'),
-    'link-hover-color': color('dark-gray', 2),
-    'link-underline-color': color('dark-gray', 2),
-
-    'button-primary-background': color('dark-gray'),
-    'button-primary-border-color': color('dark-gray'),
-    'button-primary-hover-background': color('dark-gray', 1),
-    'button-primary-hover-border-color': color('dark-gray', 1),
-    'button-primary-focus-background': color('dark-gray', 3),
-    'button-primary-focus-border-color': color('dark-gray', 3),
-
-    'button-secondary-border-color': color('dark-gray', -2),
-    'button-secondary-color': color('dark-gray'),
-    'button-secondary-hover-color': color('dark-gray', 1),
-    'button-secondary-hover-background': color('dark-gray', -4),
-    'button-secondary-hover-border-color': color('dark-gray', -1),
-    'button-secondary-focus-color': color('dark-gray', 3),
-    'button-secondary-focus-background': color('dark-gray', -4),
-    'button-secondary-focus-border-color': color('dark-gray', -1),
-  ),
-  'teal': (
-    // Required colors!
-    'color-primary': color('teal'),
-    'color-secondary': color('white'),
-    'color-tertiary': color('dark-gray'),
-    'color-info': color('cyan'),
-    'color-success': color('green'),
-    'color-warning': color('orange'),
-    'color-error': color('red'),
-    'color-box-shadow': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-box-shadow-secondary-dark': $box-shadow-secondary color('dark-gray', -3),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('teal', -4), 1280, 21),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('teal', 1), 1280, 21),
-
-    // Exceptions to colors go here...
-    // These should be as limited as possible though!
-    'link-color': color('dark-gray'),
-    'link-hover-color': color('dark-gray', 2),
-    'link-underline-color': color('dark-gray', 2),
-
-    'button-primary-background': color('dark-gray'),
-    'button-primary-border-color': color('dark-gray'),
-    'button-primary-hover-background': color('dark-gray', 1),
-    'button-primary-hover-border-color': color('dark-gray', 1),
-    'button-primary-focus-background': color('dark-gray', 3),
-    'button-primary-focus-border-color': color('dark-gray', 3),
-
-    'button-secondary-border-color': color('dark-gray', -2),
-    'button-secondary-color': color('dark-gray'),
-    'button-secondary-hover-color': color('dark-gray', 1),
-    'button-secondary-hover-background': color('dark-gray', -4),
-    'button-secondary-hover-border-color': color('dark-gray', -1),
-    'button-secondary-focus-color': color('dark-gray', 3),
-    'button-secondary-focus-background': color('dark-gray', -4),
-    'button-secondary-focus-border-color': color('dark-gray', -1),
-
-    'heading-1-color': color('dark-gray'),
-    'hero-background-color': color('teal', 2),
-
-    'label-optional-color': color('teal', 3)
-  ),
-  'green': (
-    // Required colors!
-    'color-primary': color('green'),
-    'color-secondary': color('white'),
-    'color-tertiary': color('dark-gray'),
-    'color-info': color('cyan'),
-    'color-success': color('green'),
-    'color-warning': color('orange'),
-    'color-error': color('red'),
-    'color-box-shadow': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-box-shadow-dark': $box-shadow-primary color('dark-gray', -3),
-    'color-box-shadow-dark-hover': $box-shadow-primary color('dark-gray', -2),
-    'color-box-shadow-secondary-dark': $box-shadow-secondary color('dark-gray', -3),
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('green', -4), 1280, 21),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('green', 1), 1280, 21),
-
-    // Exceptions to colors go here...
-    // These should be as limited as possible though!
-    'link-color': color('dark-gray'),
-    'link-hover-color': color('dark-gray', 2),
-    'link-underline-color': color('dark-gray', 2),
-
-    'button-primary-background': color('dark-gray'),
-    'button-primary-border-color': color('dark-gray'),
-    'button-primary-hover-background': color('dark-gray', 1),
-    'button-primary-hover-border-color': color('dark-gray', 1),
-    'button-primary-focus-background': color('dark-gray', 3),
-    'button-primary-focus-border-color': color('dark-gray', 3),
-
-    'button-secondary-border-color': color('dark-gray', -2),
-    'button-secondary-color': color('dark-gray'),
-    'button-secondary-hover-color': color('dark-gray', 1),
-    'button-secondary-hover-background': color('dark-gray', -4),
-    'button-secondary-hover-border-color': color('dark-gray', -1),
-    'button-secondary-focus-color': color('dark-gray', 3),
-    'button-secondary-focus-background': color('dark-gray', -4),
-    'button-secondary-focus-border-color': color('dark-gray', -1),
-
-    'paragraph-type-background-color': color('green', -5),
-    'paragraph-type-color': color('green'),
-    'paragraph-course-background-color': color('green'),
-    'paragraph-course-color': color('white'),
-
-    'heading-1-color': color('dark-gray'),
-    'tag-span-border-color': color('dark-gray', -2),
-    'tag-border-color': color('dark-gray', -2),
+    'tag-border-color': color('cyan', -3),
+    'tag-span-border-color': color('cyan', -4),
   )
 ) !default;

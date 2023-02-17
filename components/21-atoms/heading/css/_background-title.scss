@@ -1,0 +1,21 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.bg-primary {
+    span {
+      padding: 0 .75rem;
+      background-color: color('blue');
+      color: color('white');
+    }
+  }
+
+  &.bg-none {
+    span {
+      padding: 0 .75rem;
+      background-color: color('white');
+    }
+  }
+}

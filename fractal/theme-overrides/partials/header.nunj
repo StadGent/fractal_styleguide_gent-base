@@ -13,6 +13,8 @@
       <button id="version-toggle" aria-controls="version-list" aria-expanded="false">Version - {{ frctl.get('project.version') }}</button>
       <div id="version-list" aria-hidden="true">
         <ul>
+          <li><a href="/v6">Version - 6.x</a></li>
+          <li><a href="/v5">Version - 5.x</a></li>
           <li><a href="/v4">Version - 4.x</a></li>
           <li><a href="/v3">Version - 3.x</a></li>
           <li><a href="/v2">Version - 2.x</a></li>
@@ -22,11 +24,8 @@
     <div class="cs-wrapper" style="margin-left: 1rem">
         <label for="cs" style="margin-right: .5rem">Theme: </label>
            <select id="cs">
-              <option value="cs--cyan">Default</option>
+              <option value="0">Select</option>
               <option value="cs--blue">Blue</option>
-              <option value="cs--teal">Teal</option>
-              <option value="cs--green">Green</option>
-              <option value="cs--orange">Orange</option>
            </select>
     </div>
 </div>

@@ -46,6 +46,36 @@ module.exports = {
         heading_text: 'Collection title',
         type: 'collection-title'
       }
+    },
+    {
+      name: 'Background Primary',
+      handle: 'bg-primary',
+      context: {
+        heading_h1: 'h1',
+        heading_h2: 'h2',
+        heading_h3: 'h3',
+        heading_h4: 'h4',
+        heading_text_h1: 'Background Primary H1 title',
+        heading_text_h2: 'Background Primary H2 title',
+        heading_text_h3: 'Background Primary H3 title',
+        heading_text_h4: 'Background Primary H4 title',
+        type: 'bg-primary'
+      }
+    },
+    {
+      name: 'Background none',
+      handle: 'bg-none',
+      context: {
+        heading_h1: 'h1',
+        heading_h2: 'h2',
+        heading_h3: 'h3',
+        heading_h4: 'h4',
+        heading_text_h1: 'Background None H1 title',
+        heading_text_h2: 'Background None H2 title',
+        heading_text_h3: 'Background None H3 title',
+        heading_text_h4: 'Background None H4 title',
+        type: 'bg-none'
+      }
     }
   ]
 };

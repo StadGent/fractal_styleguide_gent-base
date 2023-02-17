@@ -82,14 +82,12 @@
 @mixin button-disabled {
   [class*='cs--'] & {
     border: 0;
-    background-color: color('dark-gray', -3);
-    color: color('white');
-    box-shadow: none;
+    background-color: color('gray', -5);
+    color: color('gray', -2);
 
     &:hover {
-      background-color: color('dark-gray', -3);
-      color: color('white');
-      box-shadow: none;
+      background-color: color('gray', -5);
+      color: color('gray', -2);
       cursor: not-allowed;
     }
   }
@@ -108,9 +106,8 @@
   @include bold-text;
 
   padding: 0 2.6em;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .1s ease-in-out;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out;
   border: 2px solid;
-  border-radius: border-radius('radius-1');
   font-family: $default-font-family;
   text-align: center;
   cursor: pointer;
