@@ -1,4 +1,3 @@
-/* global File */
 'use strict';
 
 (function () {

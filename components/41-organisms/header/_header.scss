@@ -1,3 +1,5 @@
+@use "sass:math";
+
 header.header {
   position: relative;
   margin-bottom: .3rem;
@@ -149,7 +151,7 @@ header.header {
   }
 
   hr {
-    $span: percentage(2 / 12);
+    $span: percentage(math.div(2, 12));
 
     position: relative;
     max-width: $bp-max-content;
@@ -198,7 +200,7 @@ header.header {
 
   // Hero image, overlaps and hides breadcrumb accolade.
   figure.hero {
-    $span: percentage(2/12);
+    $span: percentage(math.div(2, 12));
 
     display: none;
     position: relative;

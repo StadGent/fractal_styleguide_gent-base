@@ -40,7 +40,7 @@
             align-items: flex-start;
 
             .field-message {
-              margin: 0 0 gutter()/2 .2rem;
+              margin: 0 0 gutter()*.5 .2rem;
               padding: .7rem 1.2rem .7rem 3.9rem;
 
               &::before {
