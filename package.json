@@ -7,6 +7,7 @@
     "@babel/preset-env": "^7.20.2",
     "@frctl/fractal": "^1.5.15",
     "@frctl/twig": "^1.2.13",
+    "chromedriver": "^109.0.0",
     "cssnano": "^5.1.14",
     "fs-extra": "^11.1.0",
     "gulp": "^4.0.2",
