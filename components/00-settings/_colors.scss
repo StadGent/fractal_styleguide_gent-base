@@ -22,6 +22,7 @@ $colors: (
   'yellow': #ffdb5a,
   'cyan': #009de0,
   'cyan-hover': #1abcff,
+  'cyan-pastel': #7ed9ff,
   'red': #ea0d33,
   'green': #2c8726,
   'white': #fff,
@@ -223,10 +224,10 @@ $themes: (
     // These should be as limited as possible though!
     'heading-inverse-primary-background-color': color('blue'),
 
-    'link-color': color('cyan-wcag', 1),
-    'link-hover-background': color('cyan', -5),
-    'link-hover-color': color('cyan', 2),
-    'link-underlined-hover-color': color('cyan', 2),
+    'link-color': color('blue'),
+    'link-hover-color': color('blue'),
+    'link-hover-background': color('cyan-pastel'),
+    'link-underlined-hover-color': color('blue'),
 
     'focus-outline': color('cyan'),
 
