@@ -62,7 +62,6 @@ a {
 
   &::before,
   &::after {
-    position: absolute;
     transition: margin .1s ease-in;
     border: 0;
     font-size: 1.5em;
@@ -71,6 +70,7 @@ a {
   }
 
   &:not(.button)::after {
+    position: absolute;
     margin-left: .2rem;
   }
 
@@ -139,6 +139,7 @@ a {
     padding-left: 0;
 
     &::after {
+      position: relative;
       margin-left: -.2rem;
       padding-right: .2rem;
       padding-left: .4rem;
