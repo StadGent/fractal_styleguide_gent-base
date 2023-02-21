@@ -25,7 +25,7 @@
         <label for="cs" style="margin-right: .5rem">Theme: </label>
            <select id="cs">
               <option value="0">Select</option>
-              <option value="cs--blue" selected>Blue</option>
+              <option value="cs--blue">Blue</option>
            </select>
     </div>
 </div>
