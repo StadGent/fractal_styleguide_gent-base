@@ -191,6 +191,12 @@ a {
 }
 
 %a-arrow-animation--left {
+  &::after,
+  &::before {
+    animation: arrow-left-reverse .5s 1;
+    animation-fill-mode: reverse;
+  }
+
   &:focus,
   &:hover {
     &::after,
@@ -216,6 +222,19 @@ a {
       padding-left: .2rem;
     }
   }
+
+  @keyframes arrow-left-reverse {
+    0% {
+      padding-right: .4rem;
+      padding-left: .2rem;
+    }
+
+    100% {
+      padding-right: .2rem;
+      padding-left: .4rem;
+    }
+  }
+
 }
 
 ///
