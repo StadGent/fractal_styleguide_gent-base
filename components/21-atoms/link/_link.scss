@@ -6,6 +6,7 @@ a {
   @include link-background('color-primary', 'link-hover-background', 'link-underline-color', 'link-background-color');
   @include bold-text;
 
+  position: relative;
   padding: $link-padding 0;
   text-decoration: none;
   word-wrap: break-word;
@@ -61,7 +62,9 @@ a {
 
   &::before,
   &::after {
+    position: absolute;
     transition: margin .1s ease-in;
+    border: 0;
     font-size: 1.5em;
     line-height: 1em;
     vertical-align: -25%;
