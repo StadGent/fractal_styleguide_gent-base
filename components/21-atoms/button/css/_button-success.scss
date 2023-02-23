@@ -14,7 +14,6 @@
 
   &:hover {
     border-color: color('green');
-    background-color: color('green', -5);
     color: color('green', 2);
   }
 
@@ -23,5 +22,13 @@
     border-color: color('green');
     background-color: color('green', -4);
     color: color('green', 2);
+
+    &::after {
+      background-color: color('green', -4);
+    }
+  }
+
+  &::after {
+    background-color: color('green', -5);
   }
 }
