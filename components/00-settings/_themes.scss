@@ -45,23 +45,17 @@ $themes: (
 
     'button-primary-background': color('gray'),
     'button-primary-color': color('white'),
-    'button-primary-border-color': color('gray'), // @todo Remove border.
     'button-primary-hover-background': color('gray', -2),
     'button-primary-hover-color': color('white'),
-    'button-primary-hover-border-color': color('gray', -2), // @todo Remove border.
-    'button-primary-active-background': color('white'),
-    'button-primary-active-color': color('gray'),
-    'button-primary-active-border-color': color('gray'), // @todo Remove border.
+    'button-primary-active-background': color('gray', -2),
+    'button-primary-active-color': color('white'),
 
     'button-secondary-background': color('cyan', -3),
-    'button-secondary-border-color': color('cyan', -3), // @todo Remove border.
     'button-secondary-color': color('gray'),
     'button-secondary-hover-background': color('cyan-hover'),
     'button-secondary-hover-color': color('gray'),
-    'button-secondary-hover-border-color': color('cyan-hover'), // @todo Remove border.
+    'button-secondary-active-background': color('cyan-hover', 1),
     'button-secondary-active-color': color('gray'),
-    'button-secondary-active-background': color('white'),
-    'button-secondary-active-border-color': color('cyan-hover'), // @todo Remove border.
 
     'image-gallery-show-more-background-color': color('cyan', 3),
 

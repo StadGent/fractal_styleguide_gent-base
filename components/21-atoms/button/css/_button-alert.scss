@@ -10,7 +10,7 @@
 .button-alert {
   @include button-icon;
 
-  border-color: color('red', 1);
+  border: 0;
   background-color: color('red', 1);
   color: color('white');
 
@@ -22,7 +22,6 @@
     @include button-icon;
  }
 
-  &:hover,
   &:focus {
     border-color: color('red', 2);
     background-color: color('red', 2);
@@ -33,5 +32,13 @@
     border-color: color('red', 3);
     background-color: color('red', 3);
     color: color('white');
+
+    &::after {
+      background-color: color('red', 3);
+    }
+  }
+
+  &::after {
+    background-color: color('red', 2);
   }
 }

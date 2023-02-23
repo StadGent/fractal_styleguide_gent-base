@@ -89,6 +89,14 @@
       background-color: color('gray', -5);
       color: color('gray', -2);
       cursor: not-allowed;
+
+      &::after {
+        background-color: transparent;
+      }
+    }
+
+    &::after {
+      background-color: transparent;
     }
   }
 }
@@ -142,6 +150,39 @@
     &.icon-left {
       @include button-icon-left;
     }
+  }
+}
+
+///
+/// Defines hover behavior for a button.
+///
+/// @since 6.0.0
+/// @group buttons
+/// @access public
+/// @author Lennart Van Vaerenbergh
+///
+@mixin button-hover {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: -100%;
+    transition: all .25s ease-out; // sass-lint:disable-line no-transition-all
+    content: "";
+    z-index: -1;
+  }
+
+  &:hover::after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 
@@ -219,6 +260,7 @@
 input[type="button"],
 input[type="submit"] {
   @include button;
+  @include button-hover;
 
   -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
 }
