@@ -22,7 +22,6 @@ $colors: (
   'yellow': #ffdb5a,
   'cyan': #009de0,
   'cyan-hover': #1abcff,
-  'cyan-pastel': #7ed9ff,
   'red': #ea0d33,
   'green': #2c8726,
   'white': #fff,
@@ -226,7 +225,7 @@ $themes: (
 
     'link-color': color('blue'),
     'link-hover-color': color('blue'),
-    'link-hover-background': color('cyan-pastel'),
+    'link-hover-background': color('cyan', -3),
     'link-underlined-hover-color': color('blue'),
 
     'focus-outline': color('cyan'),
