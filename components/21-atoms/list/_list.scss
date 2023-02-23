@@ -1,10 +1,10 @@
 ul,
 ol {
   position: relative;
-  margin-left: 1rem;
 
   li,
   li > a {
+    margin-bottom: .5rem;
     font-family: $default-font-family;
     line-height: 2.1;
   }
@@ -42,6 +42,9 @@ ol {
 }
 
 ul {
+  margin-left: 1rem;
+  list-style-type: square;
+
   &.checkmark-list,
   &.checkmark-list-small {
     @extend %list-no-style;
@@ -173,6 +176,28 @@ ul {
       line-height: 1.1;
       text-decoration: none;
     }
+  }
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+
+  li {
+    position: relative;
+    counter-increment: item;
+  }
+
+  li::before {
+    @include semi-bold-text;
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: .5rem;
+    background-color: color('cyan', -3);
+    line-height: 1.5rem;
+    text-align: center;
+    content: counter(item);
   }
 }
 
