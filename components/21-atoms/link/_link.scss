@@ -12,7 +12,8 @@ a {
   word-wrap: break-word;
 
   // Different button link types. These are links styled as a button.
-  &.button {
+  &.button,
+  &.tag {
     @include reset-link-background;
     @include button;
     @include button-icon;
@@ -69,7 +70,7 @@ a {
     vertical-align: -25%;
   }
 
-  &:not(.button)::after {
+  &:not(.button):not(.tag)::after {
     position: absolute;
     margin-left: .2rem;
   }

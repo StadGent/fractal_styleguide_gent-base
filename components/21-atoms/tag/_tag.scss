@@ -1,14 +1,11 @@
 .tag {
-  @include theme('border-color', 'color-primary--lighten-3', 'tag-span-border-color');
   @include theme('background-color', 'color-secondary', 'tag-background-color');
+  @include medium-text();
 
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   padding: .7em .8em;
-  border: 1px solid;
-  border-radius: border-radius('radius-1');
-  font-size: .7rem;
   line-height: 1.1;
   text-decoration: none;
 
@@ -16,7 +13,6 @@
     @include theme('background-color', 'color-primary--lighten-4', 'tag-filter-background-color');
 
     padding: .4em .8em .4em 1.2em;
-    border-color: transparent;
 
     &:hover button {
       @include theme('background-color', 'color-primary--lighten-4', 'tag-close-button-background-hover');
@@ -39,28 +35,18 @@
 }
 
 a.tag {
-  @include theme('border-color', 'color-primary--lighten-2', 'button-secondary-border-color');
+  @include theme('color', 'color-zero', 'tag-color');
   @include icon(arrow-right, after);
+  @include normal-text();
 
   padding: .4em .8em;
-  border-width: 2px;
+  border: 0;
 
-  &::after {
-    width: 1.1rem;
-    height: 1.1rem;
-    margin-left: .5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-  }
-
-  &,
-  &:focus,
-  &:hover {
-    background-image: none;
+  &:not([class*=icon])::before {
+    margin-left: 0;
   }
 
   &:hover {
-    @include theme('background-color', 'color-primary--lighten-4', 'button-secondary-hover-background');
-    @include theme('border-color', 'color-primary--lighten-2', 'button-secondary-hover-border-color');
+    @include theme('background-color', 'color-secondary--lighten-1', 'tag-hover-background');
   }
 }

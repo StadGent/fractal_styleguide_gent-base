@@ -238,6 +238,18 @@
 }
 
 ///
+/// Defines normal text weight.
+///
+/// @since 6.0.0
+/// @group tools
+/// @access private
+/// @author Lennart Van Vaerenbergh
+///
+@mixin normal-text {
+  font-weight: 400;
+}
+
+///
 /// Defines semi bold text.
 ///
 /// @since 6.0.0
