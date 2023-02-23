@@ -1,13 +1,11 @@
 ////
-///
 /// This file defines SVG related functions and mixins.
 ///
 /// @group tools
 /// @author Gert-Jan Meire
-///
 ////
+@use "sass:math";
 
-///
 ///  Function to create an optimized svg url.
 ///
 /// @since 3.0.0
@@ -16,11 +14,7 @@
 /// @author Gert-Jan Meire
 /// @require str-replace
 ///
-/// @param {string} $svg
-///   The SVG code string to be converted for use in SASS.
-///
-@use "sass:math";
-
+/// @param {string} $svg - The SVG code string to be converted for use in SASS.
 @function svg-url($svg) {
   //
   //  Add missing namespace
@@ -73,7 +67,6 @@
   @return url("data:image/svg+xml,#{$encoded}");
 }
 
-///
 /// Return a colored svg icon.
 ///
 /// @since 3.0.0
@@ -92,7 +85,6 @@
 ///
 /// @param {int} $height
 ///   The height of the bounding box of the icon.
-///
 @function svg-icon($icon, $fill-color, $width, $height) {
   @if $icon == 'cross' {
     @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 32 32"><path fill="#{$fill-color}" fill-rule="evenodd" d="M18.121 16l6.44-6.439a1.5 1.5 0 0 0-2.122-2.122L16 13.879l-6.44-6.44a1.501 1.501 0 0 0-2.12 2.122L13.88 16l-6.44 6.439a1.5 1.5 0 0 0 2.12 2.122l6.44-6.44 6.44 6.44c.292.293.676.439 1.06.439s.767-.146 1.06-.439a1.5 1.5 0 0 0 0-2.122L18.121 16z"/></svg>';
@@ -143,7 +135,6 @@
   }
 }
 
-///
 /// Return a colored svg icon as a background image.
 ///
 /// @since 3.0.0
@@ -163,7 +154,6 @@
 ///
 /// @param {int} $height
 ///   The height of the bounding box of the icon.
-///
 @function svg-as-background($svg, $fill-color, $width, $height) {
   @return svg-url(svg-icon($svg, $fill-color, $width, $height));
 }

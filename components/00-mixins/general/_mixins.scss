@@ -1,32 +1,21 @@
 ////
-///
 /// Globally defined general purpose mixins.
 /// These mixins can be used by multiple components.
 ///
 /// @group tools
 /// @author Gert-Jan Meire
-///
 ////
+@use "sass:math";
 
-///
 ///  Helper function to replace characters in a string.
-///
 /// @since 3.0.0
 /// @group tools
 /// @access public
 /// @author Gert-Jan Meire
 ///
-/// @param {string} $string
-///   The needle.
-///
-/// @param {string} $search
-///   The haystack.
-///
-/// @param {string} $replace ['']
-///   The separator.
-///
-@use "sass:math";
-
+/// @param {string} $string - The needle
+/// @param {string} $search - The haystack
+/// @param {string} $replace [''] - The separator
 @function str-replace($string, $search, $replace: '') {
   $index: str-index($string, $search);
   @return if($index,
@@ -34,21 +23,14 @@
     $string);
 }
 
-///
 ///  Helper function to get a border radius.
-///
 /// @since 3.0.0
 /// @group tools
 /// @access public
 /// @author Gert-Jan Meire
 ///
-/// @param {string} $name
-///   The name of the requested border radius.
-///
-/// @param {map} $border-radius [$border-radius]
-///   The map with border radiuses defined in it.
-///
-///
+/// @param {string} $name - The name of the requested border radius.
+/// @param {map} $border-radius [$border-radius] - The map with border radiuses defined in it.
 @function border-radius($name, $border-radius: $border-radius) {
   @return map-get($border-radius, $name);
 }
@@ -91,14 +73,9 @@
 /// @access public
 /// @author Gert-Jan Meire
 ///
-/// @param {string} $state
-///   The default state of the element.
-///
-/// @param {string} $state-hover
-///   The hover state of the element.
-///
-/// @param {string} $property
-///   The property to be styled.
+/// @param {string} $state - The default state of the element.
+/// @param {string} $state-hover - The hover state of the element.
+/// @param {string} $property - The property to be styled.
 ///
 @mixin element-states($state, $state-hover, $property: "color") {
   #{$property}: $state;
@@ -136,11 +113,8 @@
 /// @access private
 /// @author Gert-Jan Meire
 ///
-/// @param {string} $string
-///   The string to be split.
-///
-/// @param {string} $separator
-///   The separator by which to split the $string.
+/// @param {string} $string - The string to be split.
+/// @param {string} $separator - The separator by which to split the $string.
 ///
 @function str-split($string, $separator: '--') {
   // empty array/list
@@ -179,8 +153,7 @@
 /// @access private
 /// @author Gert-Jan Meire
 ///
-/// @param {string} $value
-///   The string to turn into a number.
+/// @param {string} $value - The string to turn into a number.
 ///
 @function number($value) {
   @if type-of($value) == 'number' {
@@ -265,21 +238,37 @@
 }
 
 ///
-/// Defines bold text.
+/// Defines semi bold text.
+///
+/// @since 6.0.0
+/// @group tools
+/// @access private
+/// @author Dimitri Baudonck
+///
+@mixin semi-bold-text {
+  font-weight: 600;
+}
+
+///
+/// Defines semi bold text.
 ///
 /// @since 3.0.0
 /// @group tools
 /// @access private
 /// @author Helena Standaert
 ///
-@mixin semi-bold-text {
-  font-weight: 600;
-}
-
 @mixin bold-text {
   font-weight: 700;
 }
 
+///
+/// Defines semi bold text.
+///
+/// @since 6.0.0
+/// @group tools
+/// @access private
+/// @author Dimitri Baudonck
+///
 @mixin extra-bold-text {
   font-weight: 800;
 }

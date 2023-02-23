@@ -10,6 +10,7 @@ const icons = [
   'arrow-down',
   'arrow-left',
   'arrow-right',
+  'arrow-right-top',
   'arrow-up',
   'broken-link',
   'cart',

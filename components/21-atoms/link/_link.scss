@@ -3,13 +3,11 @@ $link-padding: .2em;
 %a,
 a {
   @include theme('color', 'color-primary', 'link-color');
-  @include link-background('color-primary', 'color-primary--lighten-4', 'link-underline-color', 'link-background-color');
+  @include link-background('color-primary', 'link-hover-background', 'link-underline-color', 'link-background-color');
   @include bold-text;
 
+  position: relative;
   padding: $link-padding 0;
-  border-radius: border-radius('radius-1');
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   text-decoration: none;
   word-wrap: break-word;
 
@@ -65,12 +63,14 @@ a {
   &::before,
   &::after {
     transition: margin .1s ease-in;
+    border: 0;
     font-size: 1.5em;
     line-height: 1em;
     vertical-align: -25%;
   }
 
   &:not(.button)::after {
+    position: absolute;
     margin-left: .2rem;
   }
 
@@ -78,7 +78,6 @@ a {
   /// Stand alone links.
   ///
   &.standalone-link:not(.no-icon) {
-    @include reset-link-background;
     margin-left: 0;
     padding-left: 0;
 
@@ -124,7 +123,7 @@ a {
   ///
   &[href^="http://"]:not(.no-icon),
   &[href^="https://"]:not(.no-icon) {
-    @include icon(external-link, after);
+    @include icon(arrow-right-top, after);
 
     &[download]:not(.button):not(.no-icon) {
       @include icon(download, after);
@@ -140,6 +139,7 @@ a {
     padding-left: 0;
 
     &::after {
+      position: relative;
       margin-left: -.2rem;
       padding-right: .2rem;
       padding-left: .4rem;
@@ -151,13 +151,16 @@ a {
   &::after,
   &::before {
     padding-right: .2rem;
+    animation: arrow-reverse .5s 1;
+    animation-fill-mode: reverse;
   }
 
   &:focus,
   &:hover {
     &::after,
     &::before {
-      animation: arrow 1s 2;
+      animation: arrow .5s 1;
+      animation-fill-mode: forwards;
 
       // Animation causes pointer flickering in IE.
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
@@ -172,7 +175,14 @@ a {
       padding-left: 0;
     }
 
-    40% {
+    100% {
+      padding-right: 0;
+      padding-left: .2rem;
+    }
+  }
+
+  @keyframes arrow-reverse {
+    0% {
       padding-right: 0;
       padding-left: .2rem;
     }
@@ -185,11 +195,18 @@ a {
 }
 
 %a-arrow-animation--left {
+  &::after,
+  &::before {
+    animation: arrow-left-reverse .5s 1;
+    animation-fill-mode: reverse;
+  }
+
   &:focus,
   &:hover {
     &::after,
     &::before {
-      animation: arrow-left 1s 2;
+      animation: arrow-left .5s 1;
+      animation-fill-mode: forwards;
 
       // Animation causes pointer flickering in IE.
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
@@ -204,7 +221,14 @@ a {
       padding-left: .4rem;
     }
 
-    40% {
+    100% {
+      padding-right: .4rem;
+      padding-left: .2rem;
+    }
+  }
+
+  @keyframes arrow-left-reverse {
+    0% {
       padding-right: .4rem;
       padding-left: .2rem;
     }
@@ -214,6 +238,7 @@ a {
       padding-left: .4rem;
     }
   }
+
 }
 
 ///
