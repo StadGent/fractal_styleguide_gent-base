@@ -5,7 +5,7 @@ div.table-list {
 
   .list-description,
   caption {
-    @include theme('color', 'color-tertiary--lighten-1', 'table-caption-color');
+    @include theme('color', 'color-zero--lighten-3', 'table-caption-color');
 
     position: absolute;
     bottom: 0;
@@ -32,19 +32,14 @@ div.responsive-table {
 
 
   table {
+    border-collapse: collapse;
+    border-bottom: 1px solid color('gray', -5);
     caption-side: bottom;
 
     th {
-      @include bold-text;
+      @include semi-bold-text;
 
       font-size: .9rem;
-      line-height: 1.7;
-
-      &[scope="col"] {
-        @include theme('border-color', 'color-primary--lighten-5', 'table-header-border-color');
-
-        border-bottom: 2px solid;
-      }
     }
 
     td {
@@ -56,18 +51,21 @@ div.responsive-table {
     }
 
     tr {
-      &:nth-of-type(even) th:not([scope="col"]),
+      &:nth-of-type(even) th:not([scope="col"]) th:not([scope="row"]),
       &:nth-of-type(even) td {
-        @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
+        @include theme('background-color', 'color-secondary--lighten-4', 'table-row-color');
       }
 
       &:nth-of-type(n) {
-        @include table-backgrounds(th);
         @include table-backgrounds(td);
+      }
+
+      th {
+        @include theme('background-color', 'color-secondary', 'table-header-color');
       }
     }
 
-    // Tables with a thead have should have the same color scheme.
+    // Tables with a thead should have the same color scheme.
     thead ~ tbody tr {
       [class*="cs--"] &:nth-of-type(even) th:not([scope="col"]),
       [class*="cs--"] &:nth-of-type(even) td {
@@ -82,8 +80,8 @@ div.responsive-table {
 
     th,
     td {
-      @include theme('color', 'color-tertiary', 'table-content-color');
-      padding: .3rem .2rem;
+      @include theme('color', 'color-zero', 'table-content-color');
+      padding: 1rem;
       text-align: left;
     }
   }
@@ -108,7 +106,7 @@ div.table-list {
       font-size: .9rem;
 
       &:nth-child(even) {
-        @include theme('background-color', 'color-primary--lighten-5', 'table-list-row-color');
+        @include theme('background-color', 'color-secondary--lighten-5', 'table-list-row-color');
       }
     }
   }
