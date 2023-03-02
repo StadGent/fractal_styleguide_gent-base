@@ -110,6 +110,21 @@ module.exports = {
       }
     },
     {
+      name: 'Comma-separated list',
+      handle: 'comma-separated-list',
+      context: {
+        type: 'comma-separated-list',
+        items: [
+          'item 1',
+          'item 2',
+          'item 3',
+          'item 4',
+          'item 5',
+          'item 6'
+        ]
+      }
+    },
+    {
       name: 'Label list',
       handle: 'label-list',
       context: {

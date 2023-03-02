@@ -71,6 +71,14 @@
   </ul>
 {% endif %}
 
+{% if type == 'comma-separated-list' %}
+  <ul class="comma-separated-list {{ modifier }}">
+    {% for key, item in items %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
 {% if type == 'label-list' %}
   <ul class="label-list {{ modifier }}">
     {% for key, item in items %}
