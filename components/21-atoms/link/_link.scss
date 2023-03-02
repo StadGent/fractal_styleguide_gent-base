@@ -96,6 +96,7 @@ a {
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back) {
     @include icon(arrow-right, after);
+    margin-right: 1.6rem;
   }
 
   ///
@@ -103,6 +104,7 @@ a {
   ///
   &[download]:not(.no-icon) {
     @include icon(download, after);
+    margin-right: 1.6rem;
   }
 
   ///
@@ -110,6 +112,7 @@ a {
   ///
   &[href^="mailto:"]:not(.no-icon) {
     @include icon(envelope, after);
+    margin-right: 1.6rem;
   }
 
   ///
@@ -117,6 +120,7 @@ a {
   ///
   &[href^="tel:"]:not(.no-icon) {
     @include icon(phone, after);
+    margin-right: 1.6rem;
   }
 
   ///
@@ -125,6 +129,7 @@ a {
   &[href^="http://"]:not(.no-icon),
   &[href^="https://"]:not(.no-icon) {
     @include icon(arrow-right-top, after);
+    margin-right: 1.6rem;
 
     &[download]:not(.button):not(.no-icon) {
       @include icon(download, after);
@@ -134,6 +139,7 @@ a {
   &.back:not(.no-icon) {
     @extend %a-arrow-animation--left;
     @include icon(fancyback, after);
+    margin-right: 1.6rem;
 
     display: inline-flex;
     flex-direction: row-reverse;

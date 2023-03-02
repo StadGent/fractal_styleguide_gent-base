@@ -24,7 +24,7 @@ body {
   }
 
   position: relative;
-  font-size: .8rem;
+  @include large-text();
 }
 
 ::selection {
