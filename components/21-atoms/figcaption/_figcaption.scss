@@ -1,7 +1,31 @@
-figcaption {
-  @include theme('color', 'color-tertiary--lighten-1', 'figcaption-color');
+$accolade-width: 2.25rem;
+$accolade-height: .9rem;
 
-  margin: .4rem 0;
-  font-size: .6rem;
-  text-align: right;
+figcaption {
+  @include theme('color', 'color-zero', 'figcaption-color');
+  @include theme('background-color', 'color-secondary', 'figcaption-background-color');
+  @include medium-text();
+
+  display: inline-block;
+  position: relative;
+  margin: -.8rem 1rem 0 0;
+  padding: .1rem .5rem;
+  float: right;
+  z-index: 1;
+
+  &::before {
+    @include theme-content('color-secondary', 'figcaption-background-color') {
+      background: transparent svg-as-background('accolade', $theme-color, $accolade-width, $accolade-height);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 100%;
+    }
+
+    position: absolute;
+    top: -$accolade-height;
+    right: 0;
+    width: $accolade-width;
+    height: $accolade-height;
+    content: '';
+  }
 }
