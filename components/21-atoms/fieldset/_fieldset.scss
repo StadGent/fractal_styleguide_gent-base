@@ -1,12 +1,11 @@
 .fieldset-wrapper fieldset,
 fieldset  {
-  @include theme('border-color', 'color-tertiary--lighten-2', 'fieldset-border-color');
+  @include theme('border-color', 'color-zero--lighten-1', 'fieldset-border-color');
 
   max-width: 41rem;
   margin-bottom: 1.2rem;
   padding: .8rem .8rem .4rem;
   border: 1px solid;
-  border-radius: border-radius("radius-1");
 
   @include tablet {
     padding: .8rem 1.2rem .4rem;
@@ -17,11 +16,13 @@ fieldset  {
   }
 
   legend {
-    @include bold-text;
+    @include semi-bold-text;
+    @include medium-text;
+    @include theme('color', 'color-none', 'fieldset-legend-color');
+    @include theme('background-color', 'color-primary', 'fieldset-legend-background-color');
 
-    padding: 0 .4rem;
-    font-size: .8rem;
-    line-height: 2;
+    margin-bottom: .2rem;
+    padding: .1rem .4rem;
 
     + .field-message,
     + .form-item > .field-message:first-child {
