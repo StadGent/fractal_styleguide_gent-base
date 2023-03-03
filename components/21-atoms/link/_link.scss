@@ -139,10 +139,9 @@ a {
   &.back:not(.no-icon) {
     @extend %a-arrow-animation--left;
     @include icon(fancyback, after);
-    margin-right: 1.6rem;
-
     display: inline-flex;
     flex-direction: row-reverse;
+    margin-right: 1.6rem;
     padding-left: 0;
 
     &::after {
