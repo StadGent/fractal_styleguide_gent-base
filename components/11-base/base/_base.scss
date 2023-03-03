@@ -16,6 +16,7 @@ html {
 }
 
 body {
+  @include large-text();
   // Since the `cs--` class is set on the body element, the styles should be applied directly to the element.
   @each $theme, $colors in $themes {
     &.cs--#{$theme} {
@@ -24,7 +25,6 @@ body {
   }
 
   position: relative;
-  @include large-text();
 }
 
 ::selection {
