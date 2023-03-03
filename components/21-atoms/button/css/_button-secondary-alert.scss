@@ -21,7 +21,6 @@
   &:hover,
   &:focus {
     border-color: color('red', -1);
-    background-color: color('red', -5);
     color: color('red', 2);
   }
 
@@ -29,5 +28,13 @@
     border-color: color('red', -1);
     background-color: color('red', -4);
     color: color('red', 3);
+
+    &::after {
+      background-color: color('red', -4);
+    }
+  }
+
+  &::after {
+    background-color: color('red', -5);
   }
 }

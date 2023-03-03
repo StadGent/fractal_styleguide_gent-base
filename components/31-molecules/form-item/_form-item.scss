@@ -22,7 +22,7 @@
   }
 
   .field-message:not(.error):not(.success) {
-    margin-bottom: .4rem;
+    margin-bottom: 1rem;
   }
 
   &:not(.stacked) {
@@ -73,7 +73,7 @@
                   top: 1.2rem;
                   right: 0;
                   bottom: -1px;
-                  height: auto;
+                  height: calc(100% - 1.1rem);
                   border-radius: 0 border-radius("radius-4") 0 0;
                 }
               }

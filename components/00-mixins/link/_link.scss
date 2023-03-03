@@ -24,8 +24,8 @@
 @mixin link-background($underline, $hover: null, $underline-exception: null, $hover-exception: null) {
   @include theme('border-color', $underline, $underline-exception);
   transition: background-image 1s;
-  border-bottom: 1px solid;
-  background-repeat: repeat-x;
+  border-bottom: 2px solid;
+  background-repeat: repeat-y;
   background-position: 0 100%;
 
   @if $hover {
@@ -35,11 +35,11 @@
         $theme-color 100%);
     }
     transition: background-size .2s;
-    background-size: 1px 0;
+    background-size: 0 100%;
 
     &:hover,
     &:focus {
-      background-size: 1px 100%;
+      background-size: 100% 100%;
     }
   }
 }
