@@ -39,6 +39,9 @@
   if (cs) {
     select.value = cs;
   }
+  else {
+    setCookie('cs', select.value);
+  }
 
   select.addEventListener('change', function () {
     console.debug(select.value);
