@@ -3,13 +3,7 @@
 }
 
 .quote {
-  @include theme('border-color', 'color-primary--lighten-4', 'quote-border-color');
-  margin-top: 3.5rem;
-  border-top: 2px solid;
-
-  @include desktop {
-    margin-top: 0;
-  }
+  margin: 2rem 0;
 }
 
 blockquote {
@@ -18,25 +12,23 @@ blockquote {
   display: flex;
   position: relative;
   flex-direction: column;
-  font-size: .8rem;
-  text-align: center;
+  padding-top: 3.5rem;
+  font-size: 1.2rem;
 
   @include desktop {
-    padding-top: 1.5rem;
-    padding-left: 11.2rem;
-    font-size: .9rem;
-    text-align: left;
+    padding-top: 3.5rem;
+    font-size: 1.5rem;
   }
 
   &::before {
-    @include spot-image('quote', 7rem);
-    margin: -3.5rem auto .8rem;
+    @include spot-image('quote', 2rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
 
     @include desktop {
-      position: absolute;
-      top: 1.5rem;
-      left: 1rem;
-      margin: 0;
+      @include spot-image('quote', 2.75rem);
     }
   }
 
@@ -51,36 +43,8 @@ blockquote {
     }
   }
 
-  p {
-    &:first-of-type::before {
-      content: '\201C';
-    }
-
-    &:last-of-type::after {
-      content: '\201D';
-    }
-  }
-
-
   footer {
-    position: relative;
-    padding-top: 1.6rem;
-    font-style: italic;
-    font-weight: 500;
-    text-align: center;
-
-    &::before {
-      @include theme('background-image', 'accolade-stroke-light', 'quote-accolade-stroke');
-
-      display: block;
-      position: absolute;
-      top: -.1rem;
-      right: 0;
-      left: 0;
-      height: 1.1rem;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      content: '';
-    }
+    @include accolade("top", "left");
+    @include medium-text;
   }
 }
