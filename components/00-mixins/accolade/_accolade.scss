@@ -1,0 +1,52 @@
+
+///
+/// Convert an element to a box with outside accolade.
+///
+/// @since 6.0.0
+/// @group tools
+/// @access public
+/// @author Lennart Van Vaerenbergh
+///
+/// @param {string} $v-position - The vertical position of the accolade.
+/// @param {string} $h-position - The horizontal position of the accolade.
+/// @param {string} $color - Text theme color.
+/// @param {string} $background-color - The background theme color.
+///
+@mixin accolade($v-position: "top", $h-position: "right", $color: "color-zero", $background-color: "color-secondary") {
+  $accolade-width: 2.25rem;
+  $accolade-height: .9rem;
+
+  @include theme('color', $color, 'caption-color');
+  @include theme('background-color', $background-color, 'caption-background-color');
+  @include medium-text;
+  @include normal-text;
+
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  padding: .1rem .5rem;
+  z-index: 1;
+
+  @if $v-position == bottom {
+    margin-bottom: $accolade-height;
+  }
+
+  &::before {
+    @include theme-content($background-color, 'caption-background-color') {
+      background: transparent svg-as-background('accolade', $theme-color, $accolade-width, $accolade-height);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 100%;
+    }
+
+    position: absolute;
+    #{$v-position}: -$accolade-height;
+    #{$h-position}: 0;
+    width: $accolade-width;
+    height: $accolade-height;
+    content: '';
+    @if $v-position == bottom {
+      transform: rotate(180deg);
+    }
+  }
+}
