@@ -19,8 +19,8 @@
     // Prevent columns from collapsing when empty
     min-height: 1px;
     // Inner gutter via padding
-    padding-right: $gutter-width * 0.5;
-    padding-left:  $gutter-width * 0.5;
+    padding-right: $gutter-width * .5;
+    padding-left:  $gutter-width * .5;
   }
 }
 

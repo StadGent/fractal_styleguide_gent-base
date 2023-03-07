@@ -14,8 +14,8 @@
 
 @mixin make-row($gutter: $gutter-width) {
   @include clearfix();
-  margin-right: -($gutter * 0.5);
-  margin-left: -($gutter * 0.5);
+  margin-right: -($gutter * .5);
+  margin-left: -($gutter * .5);
 }
 
 //
@@ -30,8 +30,8 @@
   position: relative;
   width: percentage(math.div($columns, $grid-columns));
   min-height: 1px;
-  padding-right: ($gutter * 0.5);
-  padding-left:  ($gutter * 0.5);
+  padding-right: ($gutter * .5);
+  padding-left:  ($gutter * .5);
   float: left;
 }
 
@@ -79,8 +79,8 @@
 @mixin make-tablet-column($columns, $gutter: $gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-right: ($gutter * 0.5);
-  padding-left:  ($gutter * 0.5);
+  padding-right: ($gutter * .5);
+  padding-left:  ($gutter * .5);
 
   @media (min-width: $bp-tablet) {
     width: percentage(math.div($columns, $grid-columns));
@@ -138,8 +138,8 @@
 @mixin make-desktop-column($columns, $gutter: $gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-right: ($gutter * 0.5);
-  padding-left:  ($gutter * 0.5);
+  padding-right: ($gutter * .5);
+  padding-left:  ($gutter * .5);
 
   @media (min-width: $bp-desktop) {
     width: percentage(math.div($columns, $grid-columns));

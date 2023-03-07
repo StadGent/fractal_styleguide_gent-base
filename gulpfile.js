@@ -13,7 +13,7 @@ const path = require('path');
 * NPM based modules
 */
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
 const sourcemaps = require('gulp-sourcemaps');
 const sassLint = require('gulp-sass-lint');
@@ -112,12 +112,12 @@ fractal.web.set('builder.dest', __dirname + '/build');
  *
  */
 gulp.task('styles:inject', () => {
-  const injectSettingsFiles = gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
-  const injectMixinsFiles = gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
-  const injectBaseFiles = gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
-  const injectAtomsFiles = gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
-  const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
-  const injectOrganismsFiles = gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
+  const injectSettingsFiles = gulp.src('components/00-settings/**/*.scss', {read: false});
+  const injectMixinsFiles = gulp.src('components/01-mixins/**/*.scss', {read: false});
+  const injectBaseFiles = gulp.src('components/11-base/**/*.scss', {read: false});
+  const injectAtomsFiles = gulp.src('components/21-atoms/**/*.scss', {read: false});
+  const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.scss', {read: false});
+  const injectOrganismsFiles = gulp.src('components/41-organisms/**/*.scss', {read: false});
 
   var transformFilepath = (filepath) => `@import "${filepath}";`;
 
@@ -185,15 +185,15 @@ gulp.task('styles:inject', () => {
  * Includes:
  *  Sass globbing
  *  SCSS linting
- *  Nested output style
+ *  Compact output style
  *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
-gulp.task('styles:dist', (callback) => {
-  _sassLint(false)
+gulp.task('styles:dist', () => {
+  return _sassLint(false)
     .pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'nested',
+      outputStyle: 'expanded',
       includePaths: [
         'node_modules/breakpoint-sass/stylesheets',
         'node_modules/susy/sass'
@@ -204,7 +204,25 @@ gulp.task('styles:dist', (callback) => {
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'));
-  callback();
+});
+
+/*
+ * Run a static export of the project web UI.
+ *
+ * This task will report on progress using the 'progress' event emitted by the
+ * builder instance, and log any errors to the terminal.
+ *
+ * The build destination will be the directory specified in the 'builder.dest'
+ * configuration option set above.
+ */
+gulp.task('fractal:build', () => {
+  const builder = fractal.web.builder();
+  const logger = fractal.cli.console;
+  builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
+  builder.on('error', err => logger.error(err.message));
+  return builder.build().then(() => {
+    logger.success('Fractal build completed!');
+  }).catch(() => logger.error('Fractal server failed to start'));
 });
 
 /*
@@ -217,7 +235,7 @@ gulp.task('styles:dist', (callback) => {
  *  Autoprefixer
  *
  */
-gulp.task('styles:build', ['styles:inject', 'fractal:build'], (callback) => {
+gulp.task('styles:build', gulp.series('styles:inject', 'fractal:build', (callback) => {
   _sassLint(true)
     .pipe(sass({
       outputStyle: 'compressed',
@@ -233,7 +251,7 @@ gulp.task('styles:build', ['styles:inject', 'fractal:build'], (callback) => {
     .pipe(cssnano())
     .pipe(gulp.dest('./build/css/'));
   callback();
-});
+}));
 
 /*
  *
@@ -250,9 +268,8 @@ gulp.task('styles:validate', (callback) => {
  * Watch SCSS files For Changes.
  *
  */
-gulp.task('styles:watch', (callback) => {
-  gulp.watch('./components/**/*.scss', ['styles:dist']);
-  callback();
+gulp.task('styles:watch', () => {
+  return gulp.watch('./components/**/*.scss', ['styles:dist']);
 });
 
 /*
@@ -260,60 +277,56 @@ gulp.task('styles:watch', (callback) => {
  * Extract SCSS and their assets (like fonts) from the components folder.
  *
  */
-gulp.task('styles:extract', [
+gulp.task('styles:extract', gulp.series(
   'fractal:build',
   'styles:build',
   'styles:dist'
-], (callback) => {
-  gulp.src('components/**/*.s+(a|c)ss')
+, () => {
+  return gulp.src('components/**/*.scss')
     .pipe(gulp.dest('./build/styleguide/sass/'));
-  callback();
-});
+}));
 
 /*
  *
  * Copy JS files during development.
  *
  */
-gulp.task('js:dist', ['styles:dist'], (callback) => {
-  gulp.src('components/**/*.js')
+gulp.task('js:dist', gulp.series('styles:dist', (callback) => {
+  return gulp.src('components/**/*.js')
     .pipe(rename({
       dirname: '',
       suffix: '-min'
     }))
     .pipe(gulp.dest('./public/styleguide/js/'));
   callback();
-});
+}));
 
 /*
  *
  * Copy JS files during Fractal build.
  *
  */
-gulp.task('js:build', ['fractal:build'], (callback) => {
-  gulp.src('components/**/*.js')
+gulp.task('js:build', gulp.series('fractal:build', () => {
+  return gulp.src('components/**/*.js')
     .pipe(rename({dirname: ''}))
     .pipe(minify({
       noSource: true
     }))
-    .pipe(gulp.dest('./build/styleguide/js/'))
-  callback();
-});
+    .pipe(gulp.dest('./build/styleguide/js/'));
+}));
 
 /*
  *
  * Validate JS files.
  *
  */
-gulp.task('js:validate', (callback) => {
-  gulp.src('components/**/*.js')
+gulp.task('js:validate', () => {
+  return gulp.src('components/**/*.js')
     .pipe(eslint({
       configFile: './.eslintrc'
     }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
-
-  callback();
 });
 
 /*
@@ -321,9 +334,8 @@ gulp.task('js:validate', (callback) => {
  * Watch JS files For Changes.
  *
  */
-gulp.task('js:watch', (callback) => {
-  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
-  callback();
+gulp.task('js:watch', () => {
+  return gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
 });
 
 /*
@@ -331,12 +343,12 @@ gulp.task('js:watch', (callback) => {
  * Minify images.
  *
  */
-gulp.task('images:minify', [
+gulp.task('images:minify', gulp.series(
   'fractal:build',
   'styles:build',
-  'styles:dist'
-], (cb) =>
-  gulp.src([
+  'styles:dist',
+  () => {
+  return gulp.src([
     'components/**/*.png',
     'components/**/*.jpg',
     'components/**/*.gif',
@@ -347,7 +359,8 @@ gulp.task('images:minify', [
       progressive: true,
       use: [pngquant()]
     })).pipe(gulp.dest('build/styleguide/sass'))
-);
+  }
+));
 
 /*
  * Start the Fractal server
@@ -365,25 +378,6 @@ gulp.task('fractal:start', () => {
   server.on('error', err => logger.error(err.message));
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
-  }).catch(() => logger.error('Fractal server failed to start'));
-});
-
-/*
- * Run a static export of the project web UI.
- *
- * This task will report on progress using the 'progress' event emitted by the
- * builder instance, and log any errors to the terminal.
- *
- * The build destination will be the directory specified in the 'builder.dest'
- * configuration option set above.
- */
-gulp.task('fractal:build', () => {
-  const builder = fractal.web.builder();
-  // builder.on('progress', (completed, total) => logger.update(`Exported
-  // ${completed} of ${total} items`, 'info'));
-  builder.on('error', err => logger.error(err.message));
-  return builder.build().then(() => {
-    logger.success('Fractal build completed!');
   }).catch(() => logger.error('Fractal server failed to start'));
 });
 
@@ -492,7 +486,7 @@ gulp.task('bump', () => {
     .argv;
 
   // Change version number of package.json file.
-  gulp.src('./package.json')
+  return gulp.src('./package.json')
     .pipe(bump({
       type: argv.type
     }))
@@ -509,8 +503,8 @@ gulp.task('bump', () => {
  * Used for local development to compile and validate after every change.
  *
  */
-gulp.task('default', ['fractal:start', 'styles:watch', 'js:watch']);
-gulp.task('watch', ['default']);
+gulp.task('default', gulp.parallel('fractal:start', 'styles:watch', 'js:watch'));
+gulp.task('watch', gulp.series('default'));
 
 /*
  *
@@ -521,10 +515,10 @@ gulp.task('watch', ['default']);
  *  Used to only validate the SCSS and JS code.
  *
  */
-gulp.task('validate', [
+gulp.task('validate', gulp.parallel(
   'styles:validate',
   'js:validate'
-], callback => callback());
+));
 
 /*
  *
@@ -537,21 +531,21 @@ gulp.task('validate', [
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', [
+gulp.task('compile', gulp.series(
   'fractal:build',
   'styles:build',
   'styles:dist',
   'styles:extract',
   'js:build',
   'js:dist',
-  'images:minify'
-], callback => callback());
-gulp.task('compile:dev', [
+  'images:minify',
+  callback => callback()));
+gulp.task('compile:dev', gulp.series(
   'fractal:build',
   'styles:dist',
   'js:dist',
   'images:minify'
-]);
+));
 
 /*
  *
@@ -562,10 +556,10 @@ gulp.task('compile:dev', [
  *  Used to validate and build production ready code.
  *
  */
-gulp.task('build', ['validate', 'compile'], () => {
-  return gulp.src('components/**/*.s+(a|c)ss')
+gulp.task('build', gulp.series('validate', 'compile', () => {
+  return gulp.src('components/**/*.scss')
     .pipe(gulp.dest('./build/styleguide/sass/'));
-});
+}));
 
 /*
  *
@@ -576,4 +570,4 @@ gulp.task('build', ['validate', 'compile'], () => {
  *  Used to publish to the public NPM registry.
  *
  */
-gulp.task('publish', ['publish:npm']);
+gulp.task('publish', gulp.series('publish:npm'));

@@ -107,7 +107,7 @@ header.header {
           left: 0;
           width: 100%;
           margin: 0;
-          padding: .35rem $gutter-width*0.5;
+          padding: .35rem $gutter-width*.5;
           background-color: $color-darkest-blue;
 
           input[type="submit"] {
@@ -130,7 +130,7 @@ header.header {
           display: none;
           position: absolute;
           top: .35rem;
-          right: $gutter-width*0.5;
+          right: $gutter-width*.5;
 
           &.js-form-search-opened {
             display: block;
