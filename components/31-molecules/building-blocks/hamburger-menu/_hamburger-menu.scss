@@ -35,7 +35,7 @@
     width: $hamburger-menu-width;
     max-width: 100%;
     height: 100%;
-    transition: left.5s cubic-bezier(0, 1, .5, 1);
+    transition: left .5s cubic-bezier(0, 1, .5, 1);
     overflow: auto;
     z-index: 9999;
 

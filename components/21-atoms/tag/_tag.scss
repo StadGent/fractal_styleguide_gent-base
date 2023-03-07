@@ -17,11 +17,6 @@
   @at-root a#{&} {
     text-decoration: none;
 
-    &:active,
-    &:visited {
-      @content;
-    }
-
     &:hover,
     &:focus {
       cursor: pointer;

@@ -1,8 +1,12 @@
 <nav class="breadcrumb section--default" aria-labelledby="system-breadcrumb">
-  <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb' }}</h2>
-  <ol class="content-container breadcrumb">
-    {% for item in items %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ol>
+  <div class="content-container">
+    <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb' }}</h2>
+    <ol class="breadcrumb no-style">
+      {% spaceless %}
+        {% for item in items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      {% endspaceless %}
+    </ol>
+  </div>
 </nav>

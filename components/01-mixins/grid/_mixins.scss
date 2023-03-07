@@ -10,10 +10,12 @@
 //
 // @param $gutter [$gutter-width] - The width of grid gutters in rems.
 //
+@use "sass:math";
+
 @mixin make-row($gutter: $gutter-width) {
   @include clearfix();
-  margin-right: -($gutter / 2);
-  margin-left: -($gutter / 2);
+  margin-right: -($gutter * 0.5);
+  margin-left: -($gutter * 0.5);
 }
 
 //
@@ -26,10 +28,10 @@
 //
 @mixin make-mobile-column($columns, $gutter: $gutter-width) {
   position: relative;
-  width: percentage(($columns / $grid-columns));
+  width: percentage(math.div($columns, $grid-columns));
   min-height: 1px;
-  padding-right: ($gutter / 2);
-  padding-left:  ($gutter / 2);
+  padding-right: ($gutter * 0.5);
+  padding-left:  ($gutter * 0.5);
   float: left;
 }
 
@@ -41,7 +43,7 @@
 // @param $columns - The number of columns for the offset of this element.
 //
 @mixin make-mobile-column-offset($columns) {
-  margin-left: percentage(($columns / $grid-columns));
+  margin-left: percentage(math.div($columns, $grid-columns));
 }
 
 //
@@ -52,7 +54,7 @@
 // @param $columns - The number of columns to push this element.
 //
 @mixin make-mobile-column-push($columns) {
-  left: percentage(($columns / $grid-columns));
+  left: percentage(math.div($columns, $grid-columns));
 }
 
 //
@@ -63,7 +65,7 @@
 // @param $columns - The number of columns to pull this element.
 //
 @mixin make-mobile-column-pull($columns) {
-  right: percentage(($columns / $grid-columns));
+  right: percentage(math.div($columns, $grid-columns));
 }
 
 //
@@ -77,11 +79,11 @@
 @mixin make-tablet-column($columns, $gutter: $gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-right: ($gutter / 2);
-  padding-left:  ($gutter / 2);
+  padding-right: ($gutter * 0.5);
+  padding-left:  ($gutter * 0.5);
 
   @media (min-width: $bp-tablet) {
-    width: percentage(($columns / $grid-columns));
+    width: percentage(math.div($columns, $grid-columns));
     float: left;
   }
 }
@@ -95,7 +97,7 @@
 //
 @mixin make-tablet-column-offset($columns) {
   @media (min-width: $bp-tablet) {
-    margin-left: percentage(($columns / $grid-columns));
+    margin-left: percentage(math.div($columns, $grid-columns));
   }
 }
 
@@ -108,7 +110,7 @@
 //
 @mixin make-tablet-column-push($columns) {
   @media (min-width: $bp-tablet) {
-    left: percentage(($columns / $grid-columns));
+    left: percentage(math.div($columns, $grid-columns));
   }
 }
 
@@ -121,7 +123,7 @@
 //
 @mixin make-tablet-column-pull($columns) {
   @media (min-width: $bp-tablet) {
-    right: percentage(($columns / $grid-columns));
+    right: percentage(math.div($columns, $grid-columns));
   }
 }
 
@@ -136,11 +138,11 @@
 @mixin make-desktop-column($columns, $gutter: $gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-right: ($gutter / 2);
-  padding-left:  ($gutter / 2);
+  padding-right: ($gutter * 0.5);
+  padding-left:  ($gutter * 0.5);
 
   @media (min-width: $bp-desktop) {
-    width: percentage(($columns / $grid-columns));
+    width: percentage(math.div($columns, $grid-columns));
     float: left;
   }
 }
@@ -150,7 +152,7 @@
 //
 @mixin make-desktop-column-offset($columns) {
   @media (min-width: $bp-desktop) {
-    margin-left: percentage(($columns / $grid-columns));
+    margin-left: percentage(math.div($columns, $grid-columns));
   }
 }
 
@@ -163,7 +165,7 @@
 //
 @mixin make-desktop-column-push($columns) {
   @media (min-width: $bp-desktop) {
-    left: percentage(($columns / $grid-columns));
+    left: percentage(math.div($columns, $grid-columns));
   }
 }
 
@@ -172,6 +174,6 @@
 //
 @mixin make-desktop-column-pull($columns) {
   @media (min-width: $bp-desktop) {
-    right: percentage(($columns / $grid-columns));
+    right: percentage(math.div($columns, $grid-columns));
   }
 }

@@ -21,10 +21,10 @@ $susy: (
 .content-container {
   max-width: $bp-max-content;
   margin: 0 auto;
-  padding: 0 ($gutter-width / 2);
+  padding: 0 ($gutter-width * 0.5);
 
   @include tablet {
-    padding: 0 $gutter-width + ($gutter-width / 2); // gutter + padding cols
+    padding: 0 $gutter-width + ($gutter-width * 0.5); // gutter + padding cols
   }
 }
 
