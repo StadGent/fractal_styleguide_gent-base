@@ -1,0 +1,57 @@
+
+///
+/// Add an abstract shadow to an element (different-colored element below).
+///
+/// Note that the element can't have a defined z-index.
+/// The parent element should have a z-index of at least 0.
+///
+/// @since 6.0.0
+/// @group tools
+/// @access public
+/// @author Lennart Van Vaerenbergh
+///
+/// @param {string} $v-position - The vertical position of the accolade.
+/// @param {string} $h-position - The horizontal position of the accolade.
+/// @param {string} $background-color - The background theme color.
+/// @param {string} $offset - The offset of the shadow, defaults to 1rem mobile and 1.5rem from tablet and up.
+///
+@mixin abstract-shadow($v-position: "bottom", $h-position: "right", $background-color: "color-secondary", $offset: null) {
+  position: relative;
+  z-index: auto;
+
+  @if $offset {
+    margin-#{$h-position}: $offset;
+    margin-#{$v-position}: $offset;
+  }
+  @else {
+    margin-#{$h-position}: 1rem;
+    margin-#{$v-position}: 1rem;
+
+    @include tablet {
+      margin-#{$h-position}: 1.5rem;
+      margin-#{$v-position}: 1.5rem;
+    }
+  }
+
+  &::after {
+    @if $offset {
+      #{$v-position}: -$offset;
+      #{$h-position}: -$offset;
+    }
+    @else {
+      #{$v-position}: -1rem;
+      #{$h-position}: -1rem;
+
+      @include tablet {
+        #{$v-position}: -1.5rem;
+        #{$h-position}: -1.5rem;
+      }
+    }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $background-color;
+    content: "";
+    z-index: -1;
+  }
+}

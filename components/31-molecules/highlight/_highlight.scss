@@ -1,103 +1,37 @@
 .highlight {
   position: relative;
-  font-size: .8rem;
+  z-index: 0;
 
   .highlight__inner {
-    @include theme('background-color', 'color-primary--lighten-5', 'highlight-background');
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem 1rem 1.6rem;
-    border-radius: border-radius('radius-2');
+    @include theme('background-color', 'color-tertiary--lighten-5', 'highlight-background');
+    @include theme-content('color-tertiary--lighten-3', 'highlight-shadow-background') {
+      @include abstract-shadow('bottom', 'right', $theme-color);
+    }
+
+    padding: 3rem;
 
     @include tablet {
       padding: 2rem;
     }
 
+    > i {
+      @include theme('color', 'color-tertiary', 'highlight-icon-color');
+
+      &::before {
+        position: relative;
+        top: .5rem;
+        margin: 0 .4rem 0 0;
+        font-size: 2rem;
+      }
+    }
+
+    h3 {
+      display: inline-block;
+      margin-top: 0;
+    }
+
     > *:last-child {
       margin-bottom: 0;
-    }
-  }
-
-
-  input[type="checkbox"]:not([disabled]) + label::before,
-  input[type="radio"]:not([disabled]) + label::before,
-  input:not([disabled]):not([type="submit"]),
-  select:not([disabled]),
-  textarea:not([disabled]) {
-    @include theme('background-color', 'color-secondary', 'highlight-input-background-color');
-  }
-
-  .accolade {
-    &::before,
-    &::after {
-      @include theme('background', 'color-primary--lighten-5', 'highlight-background');
-    }
-  }
-}
-
-.highlight--left,
-.highlight--top {
-  padding-top: 3.5rem;
-
-  $icons: badminton ball book camera checklist download form hammer letter link loupe mail newsletter phone question upload whistle;
-  @each $icon in $icons {
-    &.#{$icon} .highlight__inner::before {
-      @include spot-image($icon + '-light', 7rem);
-    }
-  }
-
-  .highlight__inner {
-    @include tablet-and-below {
-      padding-top: 5rem;
-    }
-
-    &::before {
-      @include spot-image('lightbulb-light', 7rem);
-      @include theme('color', 'color-primary', 'highlight-spot-shadow');
-
-      position:  absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-      border-radius: 50%;
-      box-shadow: 0 10px 35px -25px;
-      z-index: z('boxes', 'spotimage');
-    }
-  }
-}
-
-.highlight--left {
-  @include tablet {
-    padding-top: 0;
-  }
-
-  .highlight__inner {
-
-    @include tablet {
-      min-height: 11rem;
-      padding-left: 11rem;
-
-      &::before {
-        top: calc(50% - 3.5rem);
-        right: auto;
-        bottom: auto;
-        left: 2rem;
-      }
-    }
-  }
-}
-
-.highlight--top {
-  .highlight__inner {
-    @include tablet {
-      padding-right: 9rem;
-
-      &::before {
-        right: 2rem;
-        left: auto;
-      }
     }
   }
 }
