@@ -7,9 +7,23 @@ All notable changes to this style guide are documented here.
 
 * New Stad Gent style.
 
-### HTML markup changes
+## New mixins
 
-#### Image gallery multiple
+### Accolade element
+`@include accolade;`
+
+Add an outside accolade to an element and add a color to it.
+For example the 
+
+### Abstract shadow
+`@include abstract-shadow;`
+
+Add an underlying container of the same size under the chosen element.
+For example the highlight molecule.
+
+## HTML markup changes
+
+### Image gallery multiple organism
 ```
 <span>Show all photos <i class="icon-arrow-right" aria-hidden="true"></i></span>
 ```
@@ -18,6 +32,9 @@ Becomes
 <span>Show all photos <i class="icon-size" aria-hidden="true"></i></span>
 ```
 
+### Highlight molecule
+No more spot images via classes. The icon can be changed in HTML markup.
+An H3 title has been added.
 
 
 ## [5.x and older]
