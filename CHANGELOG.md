@@ -5,9 +5,20 @@ All notable changes to this style guide are documented here.
 
 ## [6.x-dev unreleased]
 
-### Change
-
 * New Stad Gent style.
+
+### HTML markup changes
+
+#### Image gallery multiple
+```
+<span>Show all photos <i class="icon-arrow-right" aria-hidden="true"></i></span>
+```
+Becomes
+```
+<span>Show all photos <i class="icon-size" aria-hidden="true"></i></span>
+```
+
+
 
 ## [5.x and older]
 
