@@ -1,0 +1,14 @@
+<div class="feature-block {{ type }}">
+  {% if title %}
+    {% include '@heading' with {
+      'type': 'h1',
+      'heading_text': title
+    } %}
+  {% endif %}
+
+  {% if content %}
+    {% include '@paragraph' with {
+      'text': content
+    } %}
+  {% endif %}
+</div>

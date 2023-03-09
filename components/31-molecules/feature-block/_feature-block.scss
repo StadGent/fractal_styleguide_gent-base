@@ -1,0 +1,27 @@
+.feature-block {
+  @include theme('color', 'color-none', 'feature-block-primary-color');
+  @include theme('background-color', 'color-primary', 'feature-block-primary-background-color');
+
+  padding: 3rem;
+
+  h1 {
+    @include theme('color', 'color-none', 'feature-block-primary-color');
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  &.secondary {
+    @include theme('color', 'color-zero', 'feature-block-secondary-color');
+    @include theme('background-color', 'color-secondary', 'feature-block-secondary-background-color');
+
+    h1 {
+      @include theme('color', 'color-zero', 'feature-block-secondary-color');
+    }
+  }
+}

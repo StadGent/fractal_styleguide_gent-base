@@ -33,8 +33,13 @@ Becomes
 ```
 
 ### Highlight molecule
-No more spot images via classes. The icon can be changed in HTML markup.
+No more spot images via classes. The icon can be changed in HTML markup via
+the proper icon name in the `<i>` element.
 An H3 title has been added.
+
+### Call to action molecule
+The Call to action molecule is not based on Highlight molecule anymore.
+Instead there is new markup, including the option for an image (1:1).
 
 
 ## [5.x and older]

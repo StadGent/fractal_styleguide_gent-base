@@ -1,4 +1,11 @@
 {% set content %}
+  {% if title %}
+    {% include '@heading' with {
+      'type': 'h2',
+      'heading_text': title
+    } %}
+  {% endif %}
+
   {% if description %}
     {% include '@paragraph' with {
       'text': description
@@ -10,7 +17,7 @@
     {% set options = {
       link: link.url,
       text: link.text,
-      modifier: loop.first ? 'button button-secondary' : 'standalone-link'
+      modifier: loop.first ? 'button button-primary' : 'standalone-link'
     } %}
 
     {% if link.size|length %}
@@ -33,17 +40,11 @@
   <{{ links|length > 1 ? '/ul' : '/div'}} class="links">
 {% endset %}
 
-<section class="cta-block {{ layout }}">
-  {% if layout != 'image-none' %}
-    <div class="cta-block__image">
-      <img src="{{ src }}" alt="{{ alt_text }}" />
-    </div>
-  {% endif %}
-  <div class="cta-block__content">
-    {% include '@feature-block' with {
-      'type': 'secondary',
-      'title': title,
-      'content': content
-    } %}
-  </div>
-</section>
+{% include "@highlight" with {
+  content: content,
+  modifier: top ? 'top' : 'left',
+  classes: [
+    'cta-block',
+    type
+  ]
+} %}

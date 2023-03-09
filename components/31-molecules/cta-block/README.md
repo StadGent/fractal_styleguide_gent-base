@@ -17,8 +17,8 @@ Do not use the call to action component for other uses than the uses listed abov
 
 The call to action component consists of the following parts:
 
+* An image (optional)
 * A title representing the call to action (required)
-* A spot illustration (required and fixed, depending on the type of the primary action)
 * A short text explaining the call to action (optional)
 * A primary action (required)
 * A secondary action (optional)
@@ -46,6 +46,5 @@ A call to action has a certain behavior:
 * On **desktop resolutions and tablet in landscape mode**, a call to action should always have a width of 10/12 based on the container. This means the container needs to make sure that call to actions can never be bigger then 10/12 of itself.
 * On **tablet in portrait mode and mobile resolutions**, a call to action should always be the full width of the container.
 * The **text** in a call to action:
-   * Should always have a max-width of 40 rems.
    * Can **never** be centered.
    * Can **never** be justified.
