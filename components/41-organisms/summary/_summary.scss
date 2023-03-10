@@ -1,33 +1,14 @@
 .summary-box {
-  text-align: center;
+  @include theme('background-color', 'color-secondary--lighten-4', 'summary-box-background-color');
+  padding: 1.5rem;
 
   ul.icon-list {
     width: 100%;
-    margin: 0;
+    margin: 0 0 1rem 0;
 
     time {
       @include bold-text;
       display: block;
-    }
-  }
-
-  .highlight__inner {
-    position: relative;
-    margin-bottom: 1.5rem; // Save room for the accolade
-    text-align: left;
-
-    &::before {
-      top: -3.5rem;
-    }
-
-    .accolade {
-      bottom: -1rem;
-      background-color: inherit;
-
-      &::before,
-      &::after {
-        @include theme('background-color', 'color-secondary', 'summary-box-accolade-background');
-      }
     }
   }
 

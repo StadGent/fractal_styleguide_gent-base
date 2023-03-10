@@ -38,12 +38,22 @@ the proper icon name in the `<i>` element.
 An H3 title has been added.
 
 ### Call to action molecule
-The Call to action molecule is not based on Highlight molecule anymore.
-Instead there is new markup, including the option for an image (1:1).
+Not based on Highlight molecule anymore.
+Instead, there is new markup, including the option for an image (1:1).
 
 ### Table of contents molecule
 The H2 heading changed to H4 and is visible. The heading text changed as well.
 A class is added to the `<ul>` element to define 2 or 3 columns.
+
+### Summary box organism
+Not based on Highlight molecule anymore.
+The HTML markup has been simplified.
+```
+<aside class="summary-box">
+  ...
+</aside>
+```
+
 
 
 ## [5.x and older]
