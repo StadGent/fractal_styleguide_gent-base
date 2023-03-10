@@ -20,8 +20,7 @@ Do not use the summary component on overview or filter pages. Only use the summa
 
 ## How it works
 
-The summary component consists of three parts:
+The summary component consists of 2 parts:
 
-* A spot illustration
-* A container where to put the data to highlight
+* A list containing the data.
 * An optional call-to-action button, for instance to subscribe for an event on an event detail page
