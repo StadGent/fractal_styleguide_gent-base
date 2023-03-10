@@ -3,7 +3,7 @@
 module.exports = {
   label: 'Call To Action',
   context: {
-    type: 'link',
+    layout: 'image-none',
     title: 'This is a title',
     description: 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis.'
   },
@@ -21,8 +21,11 @@ module.exports = {
       }
     },
     {
-      name: 'default with optional information',
+      name: 'image left with optional information',
       context: {
+        layout: 'image-left',
+        src: 'https://via.placeholder.com/570x570&text=1:1+(570x570)',
+        alt_text: 'Image alt text',
         links: [
           {
             text: 'An external link',
@@ -32,8 +35,11 @@ module.exports = {
       }
     },
     {
-      name: 'with secondary action',
+      name: 'image right with secondary action',
       context: {
+        layout: 'image-right',
+        src: 'https://via.placeholder.com/570x570&text=1:1+(570x570)',
+        alt_text: 'Image alt text',
         links: [
           {
             text: 'Internal link',
@@ -49,7 +55,6 @@ module.exports = {
     {
       name: 'phone',
       context: {
-        type: 'phone',
         title: 'Contact us',
         description: 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.',
         links: [
@@ -67,7 +72,6 @@ module.exports = {
     {
       name: 'e-mail',
       context: {
-        type: 'mail',
         title: 'Contact us',
         description: 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.',
         links: [
@@ -85,7 +89,6 @@ module.exports = {
     {
       name: 'download',
       context: {
-        type: 'download',
         links: [
           {
             text: 'A download link',
@@ -106,7 +109,6 @@ module.exports = {
         double: true,
         items: [
           {
-            type: 'download',
             links: [
               {
                 text: 'A download link',

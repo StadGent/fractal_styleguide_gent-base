@@ -1,28 +1,25 @@
 .table-of-contents {
-  margin-bottom: 2rem;
+  @include theme('background-color', 'color-tertiary--lighten-5', 'table-of-contents-background-color');
+  @include medium-text;
+  padding: 1.5rem;
+
+  ul {
+    margin: 0;
+    columns: 1;
+
+    @include phablet {
+      &.two-column {
+        columns: 2;
+      }
+
+      &.three-column {
+        columns: 3;
+      }
+    }
+  }
 
   ul > li {
     display: block;
     width: 100%;
-    margin-right: 0;
-
-    @include phablet {
-      display: inline-block;
-      width: auto;
-    }
-
-    &::after {
-      @include phablet {
-        @include theme('color', 'color-primary--lighten-3', 'filter-nav-longdash-color');
-
-        display: inline-block;
-        padding: 0 .2rem;
-        content: '—';
-      }
-    }
-
-    &:last-child::after {
-      content: '';
-    }
   }
 }

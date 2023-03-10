@@ -26,6 +26,6 @@ The table of contents component is a list of anchor links. Each anchor link poin
 
 ### Responsive behavior
 
-On desktop and tablet resolutions, the anchor links are shown in a horizontal way with a separator between them. When necessary, the anchor links are wrapped to new lines.
+On desktop and tablet resolutions, the anchor links are shown in columns. When necessary, the anchor links are wrapped to new lines.
 
-On mobile resolutions, the anchor links are shown in a vertical way.
+On mobile resolutions, the anchor links are shown in a vertical way, single column.

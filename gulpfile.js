@@ -466,7 +466,7 @@ gulp.task('iconfont', () => {
 });
 
 /**
- * Create spotiamges.
+ * Create spot images.
  *
  * Usage:
  *   gulp spotimages

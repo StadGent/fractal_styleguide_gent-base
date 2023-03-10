@@ -17,14 +17,7 @@
 {# Component #}
 <div class="gentinfo {{ modifier }}">
   <div class="gentinfo-content">
-    <h2 class="visually-hidden">Gent info</h2>
-
-    {% include '@image' with {
-      src: '/styleguide/img/svg/gentinfo-logo.svg' | path,
-      modifier: 'gentinfo-logo',
-      alt_text: 'Gent info',
-      ratio: null
-    } %}
+    <h3 class="gentinfo-title">Gent<strong>info</strong></h3>
 
     {% include '@paragraph' with {
       text: paragraphs[0]

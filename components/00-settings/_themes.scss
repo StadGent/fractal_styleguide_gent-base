@@ -40,9 +40,6 @@ $themes: (
 
     'focus-outline': color('gray'),
 
-    'breadcrumb-expandable-color': color('cyan'),
-    'breadcrumb-expandable-background-color-hover': color('cyan', -5),
-
     'button-primary-background': color('gray'),
     'button-primary-color': color('white'),
     'button-primary-hover-background': color('gray', -2),
@@ -56,8 +53,6 @@ $themes: (
     'button-secondary-hover-color': color('gray'),
     'button-secondary-active-background': color('cyan-hover', 1),
     'button-secondary-active-color': color('gray'),
-
-    'image-gallery-show-more-background-color': color('cyan', 3),
 
     'radio-background-color-checked': color('cyan', -6),
     'radio-border-color-checked': color('cyan'),
