@@ -13,7 +13,7 @@
   min-height: 2.5rem;
   margin-top: .2rem;
   padding: 1.7rem 1.2rem .7rem;
-  border-bottom: 2px solid;
+  border-bottom: 3px solid;
   font-size: .8rem;
 
   :nth-last-child(2) {
@@ -28,9 +28,7 @@
     width: $field-message-icon-size;
     height: $field-message-icon-size;
     margin: auto $field-message-icon-margin auto auto;
-    border-radius: 100%;
-    background-color: color('white');
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: $field-message-icon-size;
     text-align: center;
   }
@@ -51,16 +49,12 @@
   }
 
   a {
-    @include theme('color', 'color-tertiary--lighten-1', 'field-messages-color');
-    @include link-background('color-tertiary', 'color-primary--lighten-4', 'field-messages-link-border-color', 'link-background-color');
-
-    &:hover {
-      @include theme('color', 'color-tertiary', 'field-messages-link-hover-color');
-    }
+    @include theme('color', 'color-zero', 'field-messages-color');
+    @include link-background('color-zero', 'color-primary--lighten-4', 'field-messages-link-border-color', 'link-background-color');
   }
 
   &.success {
-    @include icon('checkmark');
+    @include icon('checkmark-circle');
     @include theme('background-color', 'color-success--lighten-5', 'field-description-background');
     @include theme('border-color', 'color-success', 'field-description-background');
 
@@ -71,12 +65,12 @@
     }
 
     a {
-      @include link-background('color-tertiary', 'color-success--lighten-4', 'field-messages-link-border-color', 'field-messages-success-background-color');
+      @include link-background('color-zero', 'color-success--lighten-4', 'field-messages-link-border-color', 'field-messages-success-background-color');
     }
   }
 
   &.error {
-    @include icon('cross');
+    @include icon('cross-circle');
     @include theme('background-color', 'color-error--lighten-5', 'field-description-background');
     @include theme('border-color', 'color-error', 'field-description-background');
 
@@ -87,7 +81,7 @@
     }
 
     a {
-      @include link-background('color-tertiary', 'color-error--lighten-4', 'field-messages-link-border-color', 'field-messages-error-background-color');
+      @include link-background('color-zero', 'color-error--lighten-4', 'field-messages-link-border-color', 'field-messages-error-background-color');
     }
   }
 }
