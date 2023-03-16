@@ -40,7 +40,7 @@ Some icons have been updated, using the same machine name.
 ```
 Becomes
 ```
-<span>Show all photos <i class="icon-size" aria-hidden="true"></i></span>
+<span>Show all photos <i class="icon-fullscreen-enter" aria-hidden="true"></i></span>
 ```
 
 ### Highlight molecule
