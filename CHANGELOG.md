@@ -56,6 +56,9 @@ Instead, there is new markup, including the option for an image (1:1).
 The H2 heading changed to H4 and is visible. The heading text changed as well.
 A class is added to the `<ul>` element to define 2 or 3 columns.
 
+### Status messages molecule
+The icon classes have changed to the circle variants.
+
 ### Summary box organism
 Not based on Highlight molecule anymore.
 The HTML markup has been simplified.
