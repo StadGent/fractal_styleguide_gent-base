@@ -23,6 +23,17 @@ For example the highlight molecule.
 
 ## HTML markup changes
 
+### Icon atom
+**Removed icons:** external-link, fancyback
+
+**Added icons:** basket, civil-affairs, contact, cross-circle, culture, education,
+environment, fullscreen-enter, fullscreen-exit, ghent, health, info-circle,
+layers, link, living, map, mobility, next, pause, pinterest, play, previous,
+question, question-circle, refresh, settings, shopping, stop, tag, target,
+view-grid, view-list, virus, whatsapp, wheelchair-no, work
+
+Some icons have been updated, using the same machine name.
+
 ### Image gallery multiple organism
 ```
 <span>Show all photos <i class="icon-arrow-right" aria-hidden="true"></i></span>
