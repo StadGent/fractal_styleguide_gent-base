@@ -1,39 +1,41 @@
-{% set content %}
-  {% if description %}
-    {% include '@paragraph' with {
-      'text': description
-    } %}
-  {% endif %}
-
-  <{{ links|length > 1 ? 'ul' : 'div'}} class="links">
-  {% for link in links %}
-    {% set options = {
-      link: link.url,
-      text: link.text,
-      modifier: loop.first ? 'button button-secondary' : 'standalone-link'
-    } %}
-
-    {% if link.size|length %}
-      {% set options = options|merge({
-        file: {
-          size: link.size,
-          type: 'pdf'
-        }
-      }) %}
+{% if content is not defined %}
+  {% set content %}
+    {% if description %}
+      {% include '@paragraph' with {
+        'text': description
+      } %}
     {% endif %}
 
-    {% if links|length > 1 %}
-      <li>
-    {% endif %}
-    {% include '@file-download' with options %}
-    {% if links|length > 1 %}
-      </li>
-    {% endif %}
-  {% endfor %}
-  <{{ links|length > 1 ? '/ul' : '/div'}} class="links">
-{% endset %}
+    <{{ links|length > 1 ? 'ul' : 'div'}} class="links">
+    {% for link in links %}
+      {% set options = {
+        link: link.url,
+        text: link.text,
+        modifier: loop.first ? 'button button-secondary' : 'standalone-link'
+      } %}
 
-<section class="cta-block {{ layout }}">
+      {% if link.size|length %}
+        {% set options = options|merge({
+          file: {
+            size: link.size,
+            type: 'pdf'
+          }
+        }) %}
+      {% endif %}
+
+      {% if links|length > 1 %}
+        <li>
+      {% endif %}
+      {% include '@file-download' with options %}
+      {% if links|length > 1 %}
+        </li>
+      {% endif %}
+    {% endfor %}
+    <{{ links|length > 1 ? '/ul' : '/div'}} class="links">
+  {% endset %}
+{% endif %}
+
+<section class="cta-block {{ modifier }} {{ layout }}">
   {% if layout != 'image-none' %}
     <div class="cta-block__image">
       <img src="{{ src }}" alt="{{ alt_text }}" />
@@ -41,7 +43,7 @@
   {% endif %}
   <div class="cta-block__content">
     {% include '@feature-block' with {
-      'type': 'secondary',
+      'color': color,
       'title': title,
       'content': content
     } %}
