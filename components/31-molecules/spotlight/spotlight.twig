@@ -1,0 +1,26 @@
+{% if content is not defined %}
+  {% set content %}
+    {% if description %}
+      {% include '@paragraph' with {
+        'text': description
+      } %}
+    {% endif %}
+
+    <{{ links|length > 1 ? 'ul' : 'div'}} class="links">
+    {% for link in links %}
+      {% set options = {
+        title: 'Link title',
+        link: link.url,
+        text: link.text
+      } %}
+      {% include '@file-download' with options %}
+    {% endfor %}
+    <{{ links|length > 1 ? '/ul' : '/div'}} class="links">
+  {% endset %}
+{% endif %}
+
+{% include '@cta-block' with {
+  'modifier': 'spotlight',
+  'color': 'primary',
+  'content': content
+} %}
