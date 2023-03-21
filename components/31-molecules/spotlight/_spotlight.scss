@@ -40,7 +40,7 @@
 
   &.image-right {
     margin-bottom: 2rem;
-    
+
     @include phablet {
       flex-direction: row-reverse;
     }
