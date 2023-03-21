@@ -16,6 +16,8 @@
   }
 
   &.image-left {
+    margin-bottom: 2rem;
+
     .cta-block__image {
       margin-right: 0;
     }
@@ -37,6 +39,8 @@
   }
 
   &.image-right {
+    margin-bottom: 2rem;
+    
     @include phablet {
       flex-direction: row-reverse;
     }
