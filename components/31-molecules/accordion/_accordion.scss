@@ -1,11 +1,11 @@
 .accordion {
-
   .accordion--button {
+    @include extra-large-text;
     @include icon(chevron-down);
     position: relative;
     padding-right: 1.6rem;
-    padding-left: 0;
     color: inherit;
+    line-height: 2rem;
     text-align: left;
 
     &::before {
@@ -13,7 +13,6 @@
       right: 0;
       transition: transform .2s ease-in-out;
       font-size: 1.4rem;
-      line-height: 1.1;
     }
 
     &[aria-expanded=true] {
@@ -36,18 +35,30 @@
 
 ul.accordion,
 dl.accordion {
+  li {
+    @include theme('border-color', 'color-primary--lighten-4', 'accordion-border-color');
+
+    border-bottom: 2px solid;
+
+    h3 {
+      margin: .75rem 0;
+    }
+  }
 
   .accordion--button {
-
     width: 100%;
     padding: 0;
     overflow: visible;
 
     &::before {
+      @include theme('background-color', 'color-tertiary--lighten-3', 'accordion-logo-background-color');
+
       position: relative;
       right: auto;
       left: 0;
       min-width: 1.6rem;
+      margin: 0 .75rem 0 0;
+      padding: .25rem;
       transition: transform .2s ease-in-out;
       font-size: 1.2rem;
       line-height: 1.2;
@@ -66,16 +77,12 @@ dl.accordion {
       @include icon(plus);
     }
   }
-
-  .accordion--content {
-    margin-left: 1.6rem;
-  }
 }
 
 ul.accordion {
   margin: 0;
 
-  >li {
+  > li {
     list-style: none;
   }
 }

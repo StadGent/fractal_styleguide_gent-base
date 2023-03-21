@@ -23,13 +23,24 @@ For example the highlight molecule.
 
 ## HTML markup changes
 
+### Icon atom
+**Removed icons:** external-link, fancyback
+
+**Added icons:** basket, civil-affairs, contact, cross-circle, culture, education,
+environment, fullscreen-enter, fullscreen-exit, ghent, health, info-circle,
+layers, link, living, map, mobility, next, pause, pinterest, play, previous,
+question, question-circle, refresh, settings, shopping, stop, tag, target,
+view-grid, view-list, virus, whatsapp, wheelchair-no, work
+
+Some icons have been updated, using the same machine name.
+
 ### Image gallery multiple organism
 ```
 <span>Show all photos <i class="icon-arrow-right" aria-hidden="true"></i></span>
 ```
 Becomes
 ```
-<span>Show all photos <i class="icon-size" aria-hidden="true"></i></span>
+<span>Show all photos <i class="icon-fullscreen-enter" aria-hidden="true"></i></span>
 ```
 
 ### Highlight molecule
@@ -44,6 +55,9 @@ Instead, there is new markup, including the option for an image (1:1).
 ### Table of contents molecule
 The H2 heading changed to H4 and is visible. The heading text changed as well.
 A class is added to the `<ul>` element to define 2 or 3 columns.
+
+### Status messages molecule
+The icon classes have changed to the circle variants.
 
 ### Summary box organism
 Not based on Highlight molecule anymore.

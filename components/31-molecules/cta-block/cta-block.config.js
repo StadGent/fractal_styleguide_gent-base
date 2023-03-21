@@ -5,7 +5,8 @@ module.exports = {
   context: {
     layout: 'image-none',
     title: 'This is a title',
-    description: 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis.'
+    description: 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis.',
+    color: 'secondary'
   },
   variants: [
     {

@@ -1,89 +1,50 @@
 .cta-block {
-  @include clearfix;
-
+  display: flex;
   position: relative;
+  flex-flow: column;
   max-width: $bp-max-content;
+  margin: 2rem 0;
+
+  @include phablet {
+    flex-flow: row;
+  }
 
   &.image-none {
     max-width: 48.5rem;
+    z-index: 1;
+
+    .cta-block__content {
+      @include theme-content('color-tertiary--lighten-3', 'cta-shadow-color') {
+        @include abstract-shadow('bottom', 'left', $theme-color, null, 13.5rem, 13.5rem);
+      }
+    }
   }
 
   &.image-left,
   &.image-right {
-    min-height: 570px;
+    @include phablet {
+      margin-bottom: 6.5rem;
+    }
   }
 
   .cta-block__image {
-    position: absolute;
-  }
-
-  &.image-left {
-    .cta-block__image {
-      left: 0;
-      width: 100%;
-      padding-right: 1rem;
-
-      img {
-        width: 100%;
-        height: auto;
-
-        @include desktop {
-          width: auto;
-          height: auto;
-        }
-      }
-
-      @include desktop {
-        width: auto;
-        padding-right: 0;
-      }
+    @include phablet {
+      flex-shrink: .3;
     }
 
-    .cta-block__content {
-      margin: 80% 0 0 1rem;
-
-      @include desktop {
-        width: auto;
-        margin: 8rem 0 0 24rem;
-      }
-    }
-  }
-
-  &.image-right {
-    .cta-block__image {
-      right: 0;
-      width: 100%;
-      padding-left: 1rem;
-
-      img {
-        width: 100%;
-        height: auto;
-
-        @include desktop {
-          width: auto;
-          height: auto;
-        }
-      }
-
-      @include desktop {
-        width: auto;
-        padding-left: 0;
-      }
-    }
-
-    .cta-block__content {
-      margin: 80% 1rem 0 0;
-
-      @include desktop {
-        width: auto;
-        margin: 8rem 24rem 0 0;
-      }
+    @include desktop {
+      min-width: 570px;
+      min-height: 570px;
     }
   }
 
   .cta-block__content {
     position: relative;
     z-index: 1;
+
+    @include phablet {
+      margin-top: auto;
+    }
 
     li {
       margin-top: .8rem;
@@ -92,6 +53,60 @@
         @extend %button-secondary;
         @include button;
         @include button-icon;
+      }
+    }
+  }
+
+  &.image-left {
+    .cta-block__image {
+      margin-right: 1rem;
+
+      @include phablet {
+        margin-right: inherit;
+      }
+    }
+
+    .cta-block__content {
+      top: -1rem;
+      left: 1rem;
+
+      @include phablet {
+        top: auto;
+        bottom: -4.5rem;
+        left: -4.5rem;
+
+        .feature-block {
+          width: calc(100% + 4.5rem);
+        }
+      }
+    }
+  }
+
+  &.image-right {
+    @include phablet {
+      flex-direction: row-reverse;
+    }
+
+    .cta-block__image {
+      margin-left: 1rem;
+
+      @include phablet {
+        margin-left: inherit;
+      }
+    }
+
+    .cta-block__content {
+      top: -1rem;
+      margin-right: 1rem;
+
+      @include phablet {
+        top: auto;
+        bottom: -4.5rem;
+        margin-right: inherit;
+
+        .feature-block {
+          width: calc(100% + 4.5rem);
+        }
       }
     }
   }

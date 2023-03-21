@@ -4,18 +4,28 @@
 ///
 /// Note that the element can't have a defined z-index.
 /// The parent element should have a z-index of at least 0.
+/// The default values will produce something like this:
+///
+///   --------------------------------------
+///   |                                    |
+///   |                                    |---
+///   -------------------------------------   |
+///        |__________________________________|
+///
 ///
 /// @since 6.0.0
 /// @group tools
 /// @access public
 /// @author Lennart Van Vaerenbergh
 ///
-/// @param {string} $v-position - The vertical position of the accolade.
-/// @param {string} $h-position - The horizontal position of the accolade.
+/// @param {string} $v-position - The vertical position of the shadow.
+/// @param {string} $h-position - The horizontal position of the shadow.
 /// @param {string} $background-color - The background theme color.
 /// @param {string} $offset - The offset of the shadow, defaults to 1rem mobile and 1.5rem from tablet and up.
+/// @param {string} $width - The width of the shadow, defaults to 100%.
+/// @param {string} $height - The height: of the shadow, defaults to 100%.
 ///
-@mixin abstract-shadow($v-position: "bottom", $h-position: "right", $background-color: "color-secondary", $offset: null) {
+@mixin abstract-shadow($v-position: "bottom", $h-position: "right", $background-color: "color-secondary", $offset: null, $width: 100%, $height: 100%) {
   position: relative;
   z-index: auto;
 
@@ -48,8 +58,10 @@
       }
     }
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: $width;
+    max-width: 100%;
+    height: $height;
+    max-height: 100%;
     background-color: $background-color;
     content: "";
     z-index: -1;
