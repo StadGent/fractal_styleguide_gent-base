@@ -21,7 +21,7 @@ $field-icon-padding: 2.5rem;
 /// @require svg-url
 ///
 @mixin field-base {
-  @include theme("border-color", "color-zero", "fields-border-color");
+  @include theme("border-color", "color-zero--lighten-2", "fields-border-color");
   @include theme("background", "color-none", "fields-background");
   @include theme("color", "color-zero", "fields-color");
 
@@ -94,7 +94,7 @@ $field-icon-padding: 2.5rem;
   &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
     @include theme(
       "color",
-      "color-tertiary--lighten-1",
+      "color-zero--lighten-2",
       "fields-placeholder-color"
     );
     font-style: italic;
@@ -104,7 +104,7 @@ $field-icon-padding: 2.5rem;
   &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
     @include theme(
       "color",
-      "color-tertiary--lighten-1",
+      "color-zero--lighten-2",
       "fields-placeholder-color"
     );
     font-style: italic;
@@ -114,7 +114,7 @@ $field-icon-padding: 2.5rem;
   &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
     @include theme(
       "color",
-      "color-tertiary--lighten-1",
+      "color-zero--lighten-2",
       "fields-placeholder-color"
     );
     font-style: italic;
@@ -124,7 +124,7 @@ $field-icon-padding: 2.5rem;
   &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
     @include theme(
       "color",
-      "color-tertiary--lighten-1",
+      "color-zero--lighten-2",
       "fields-placeholder-color"
     );
     font-style: italic;
@@ -132,7 +132,7 @@ $field-icon-padding: 2.5rem;
   }
 
   &::placeholder {
-    @include theme("color", "color-tertiary", "fields-placeholder-color");
+    @include theme("color", "color-zero--lighten-2", "fields-placeholder-color");
     font-style: italic;
     font-weight: normal;
   }

@@ -1,5 +1,6 @@
 select {
   @include field-base;
+  $svg-shevron-down: svg-icon('shevron-down', color('gray'), 24, 24);
 
   @each $theme, $colors in $themes {
     // Apply the default section as default color scheme if there is no section
@@ -7,13 +8,18 @@ select {
     .cs--#{$theme} & {
       &,
       &:focus {
-        $fill-color: set-themified-property($colors, 'color-primary', 'link-color');
-        $svg-shevron-down: svg-icon('shevron-down', $fill-color, 24, 24);
+        $button-color: set-themified-property($colors, 'color-tertiary', 'button-secondary-background');
 
-        padding-right: 3.8rem;
-        background-image: svg-url($svg-shevron-down), url('#{$styleguide-dir}/img/svg/separator.svg');
+        padding-right: 3rem;
+        background-image: svg-url($svg-shevron-down), svg-as-background("square", $button-color, 44, 44);
         background-repeat: no-repeat;
-        background-position: right .75rem center, right 2.8rem center;
+        background-position: right .5rem center, right 0 center;
+      }
+
+      &:hover {
+        $button-hover-color: set-themified-property($colors, 'color-tertiary', 'button-secondary-hover-background');
+        background-image: svg-url($svg-shevron-down), svg-as-background("square", $button-hover-color, 44, 44);
+        cursor: pointer;
       }
 
       &:disabled {
