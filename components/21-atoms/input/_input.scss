@@ -63,8 +63,8 @@ input[type=date] {
     // Checked and hovered.
     input[type="radio"]:checked + label::before {
       @include theme('background-color', 'color-zero--lighten-5', 'radio-background-color-hover-and-checked');
-      @include theme('border-color', 'color-zero--lighten-2', 'radio-border-color-hover-and-checked');
-      @include theme('color', 'color-tertiary--darken-3', 'radio-color-hover-and-checked');
+      @include theme('border-color', 'color-primary', 'radio-border-color-hover-and-checked');
+      @include theme('color', 'color-primary', 'radio-color-hover-and-checked');
     }
   }
 
