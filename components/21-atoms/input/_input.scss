@@ -26,9 +26,9 @@ input[type="password"] {
   }
 }
 
-// Fixes vertical alignment on mobile safari.
 input[type=date] {
   padding-right: 0;
+  // Fixes vertical alignment on mobile safari.
   line-height: 2.4rem;
 
   &::-webkit-calendar-picker-indicator { // sass-lint:disable-line no-vendor-prefixes
