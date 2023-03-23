@@ -224,12 +224,12 @@ $field-icon-padding: 2.5rem;
       &::before {
         @include theme(
           "background-color",
-          "color-tertiary--lighten-6",
+          "color-none",
           "radio-background-color"
         );
         @include theme(
           "border-color",
-          "color-tertiary--lighten-2",
+          "color-zero--lighten-2",
           "radio-border-color"
         );
 
@@ -284,24 +284,27 @@ $field-icon-padding: 2.5rem;
     //
     &:disabled {
       + label {
+        color: color('gray', -3);
         font-weight: normal !important; // sass-lint:disable-line no-important
         cursor: not-allowed;
 
         &::before {
           border-color: color(
-            "dark-gray",
-            -4
+            "gray",
+            -5
           ) !important; // sass-lint:disable-line no-important
           background: color(
-            "dark-gray",
-            -4
+            "gray",
+            -5
           ) !important; // sass-lint:disable-line no-important
         }
 
         &::after {
           color: color(
-            "dark-gray"
+            "gray",
+            -2
           ) !important; // sass-lint:disable-line no-important
+
         }
       }
     }
@@ -348,27 +351,33 @@ $field-icon-padding: 2.5rem;
     @if $type == "radio" {
       // Checked state.
       &:checked {
-        // Show checkmark on checked.
-        + label {
-          @include bold-text;
-        }
-
         + label::before {
           @include theme(
             "background-color",
-            "color-tertiary--lighten-5",
+            "color-none",
             "radio-background-color-checked"
           );
           @include theme(
             "border-color",
-            "color-tertiary",
+            "color-primary",
             "radio-border-color-checked"
           );
         }
 
         + label::after {
-          @include theme("background-color", "color-tertiary", "radio-checkmark-color");
+          @include theme("background-color", "color-primary", "radio-checkmark-color");
           content: "";
+        }
+
+        &:disabled {
+          + label {
+            &::after {
+              background-color: color(
+                  "gray",
+                  -2
+              ) !important; // sass-lint:disable-line no-important
+            }
+          }
         }
       }
     }
