@@ -16,36 +16,18 @@ $field-icon-padding: 2.5rem;
 /// @group theming
 /// @access public
 /// @author Gert-Jan Meire
-/// @require $border-radius
 /// @require color
 /// @require svg-icon
 /// @require svg-url
-/// @require border-radius
 ///
 @mixin field-base {
-  @include theme(
-    "border-color",
-    "color-tertiary--lighten-2",
-    "fields-border-color"
-  );
-  @include theme(
-    "background",
-    "color-tertiary--lighten-6",
-    "fields-background"
-  );
-  @include theme("color", "color-tertiary", "fields-color");
+  @include theme("border-color", "color-zero", "fields-border-color");
+  @include theme("background", "color-none", "fields-background");
+  @include theme("color", "color-zero", "fields-color");
 
   &:focus {
-    @include theme(
-      "border-color",
-      "color-primary--lighten-2",
-      "fields-border-focus-color"
-    );
-    @include theme(
-      "background",
-      "color-primary--lighten-5",
-      "fields-focus-background"
-    );
+    @include theme("border-color", "color-zero", "fields-border-focus-color");
+    @include theme("background", "color-none", "fields-focus-background");
 
     border: 1px solid;
   }
@@ -57,8 +39,8 @@ $field-icon-padding: 2.5rem;
     background-image: svg-as-background(
       "lock-closed",
       color("dark-gray", -2),
-      20,
-      20
+      24,
+      24
     );
     cursor: not-allowed;
   }
@@ -66,7 +48,7 @@ $field-icon-padding: 2.5rem;
   &.success {
     padding-right: $field-icon-padding;
     border: 1px solid color("green");
-    background: color("green", -6) $field-icon-position;
+    background: color("green-pastel", -4) $field-icon-position;
     background-image: svg-as-background(
       "checkmark-circle",
       color("green"),
@@ -76,7 +58,7 @@ $field-icon-padding: 2.5rem;
 
     &:focus {
       border-color: color("green");
-      background: color("green", -6) $field-icon-position;
+      background: color("green-pastel", -4) $field-icon-position;
       background-image: svg-as-background(
         "checkmark-circle",
         color("green"),
@@ -157,10 +139,9 @@ $field-icon-padding: 2.5rem;
 
   display: block;
   width: 100%;
-  height: 2.4rem;
+  height: 2.2rem;
   padding: 0 .8rem;
   border: 1px solid;
-  border-radius: border-radius("radius-1");
   font-family: $default-font-family;
   font-size: .8rem;
   font-weight: normal;
@@ -206,7 +187,6 @@ $field-icon-padding: 2.5rem;
       width: 1rem;
       height: 1rem;
       border: 1px solid;
-      border-radius: border-radius("radius-1");
       content: "";
     }
 
@@ -275,7 +255,7 @@ $field-icon-padding: 2.5rem;
     // Styling of the label.
     //
     + label {
-      @include theme("color", "color-tertiary", "label-color");
+      @include theme("color", "color-primary", "label-color");
 
       position: relative;
 

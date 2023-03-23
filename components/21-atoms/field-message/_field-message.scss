@@ -55,7 +55,7 @@
 
   &.success {
     @include icon('checkmark-circle');
-    @include theme('background-color', 'color-success--lighten-5', 'field-description-background');
+    @include theme('background-color', 'color-success-pastel--lighten-4', 'field-description-background');
     @include theme('border-color', 'color-success', 'field-description-background');
 
     padding-left: 2.9rem;

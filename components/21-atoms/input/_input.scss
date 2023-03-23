@@ -15,12 +15,12 @@ input[type="password"] {
     &,
     &:focus {
       padding-right: $field-icon-padding;
-      background-image: svg-as-background('lock-closed', color('dark-gray'), 30, 26);
+      background-image: svg-as-background('lock-closed', color('dark-gray'), 24, 24);
       background-repeat: no-repeat;
       background-position: right .75rem center;
 
       &:disabled {
-        background-image: svg-as-background('lock-closed', color('dark-gray', -2), 30, 26);
+        background-image: svg-as-background('lock-closed', color('dark-gray', -2), 24, 24);
       }
     }
   }
@@ -28,12 +28,26 @@ input[type="password"] {
 
 // Fixes vertical alignment on mobile safari.
 input[type=date] {
+  padding-right: 0;
   line-height: 2.4rem;
-}
 
-input[type=date]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
-  margin-left: .5rem;
-  -webkit-appearance: none;  // sass-lint:disable-line no-vendor-prefixes
+  &::-webkit-calendar-picker-indicator { // sass-lint:disable-line no-vendor-prefixes
+    @include theme('background-color', 'button-secondary-background');
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: .5rem;
+    background-image: svg-as-background('calendar', color('dark-gray'), 30, 30);
+
+    &:hover {
+      @include theme('background-color', 'button-secondary-hover-background');
+      cursor: pointer;
+    }
+  }
+
+  &::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
+    margin-left: .5rem;
+    -webkit-appearance: none;  // sass-lint:disable-line no-vendor-prefixes
+  }
 }
 
 .radio {
