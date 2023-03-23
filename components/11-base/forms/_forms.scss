@@ -172,7 +172,7 @@ $field-icon-padding: 2.5rem;
     left: 0;
     padding-left: 1.4rem;
     font-weight: normal;
-    line-height: 1.2rem;
+    line-height: 1rem;
     overflow: unset;
 
     &::before,
@@ -186,7 +186,7 @@ $field-icon-padding: 2.5rem;
       left: 0;
       width: 1rem;
       height: 1rem;
-      border: 1px solid;
+      border: 2px solid;
       content: "";
     }
 
@@ -200,12 +200,12 @@ $field-icon-padding: 2.5rem;
       &::before {
         @include theme(
           "background-color",
-          "color-tertiary--lighten-6",
+          "color-none",
           "checkbox-background-color"
         );
         @include theme(
           "border-color",
-          "color-tertiary--lighten-2",
+          "color-zero--lighten-2",
           "checkbox-border-color"
         );
       }
@@ -255,7 +255,7 @@ $field-icon-padding: 2.5rem;
     // Styling of the label.
     //
     + label {
-      @include theme("color", "color-primary", "label-color");
+      @include theme("color", "color-zero", "label-color");
 
       position: relative;
 
@@ -314,12 +314,11 @@ $field-icon-padding: 2.5rem;
       &:checked {
         // Show checkmark on checked.
         + label {
-          @include icon("checkmark", "after");
-
-          @include bold-text;
+          @include icon("checkmark-checkbox", "after");
 
           &::after {
-            font-size: 1.2rem;
+            padding-left: .05rem;
+            font-size: 1.1rem;
             line-height: 1;
           }
         }
@@ -327,18 +326,18 @@ $field-icon-padding: 2.5rem;
         + label::before {
           @include theme(
             "background-color",
-            "color-tertiary--lighten-5",
+            "color-none",
             "checkbox-background-color-checked"
           );
           @include theme(
             "border-color",
-            "color-tertiary",
+            "color-primary",
             "checkbox-border-color-checked"
           );
         }
 
         + label::after {
-          @include theme("color", "color-tertiary", "checkbox-checkmark-color");
+          @include theme("color", "color-primary", "checkbox-checkmark-color");
         }
       }
     }

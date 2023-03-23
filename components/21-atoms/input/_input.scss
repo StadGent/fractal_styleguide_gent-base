@@ -56,14 +56,14 @@ input[type=date] {
   &:hover {
     // Unchecked and hovered.
     label::before {
-      @include theme('background-color', 'color-tertiary--lighten-4', 'radio-background-color-hover');
-      @include theme('border-color', 'color-tertiary--lighten-1', 'radio-border-color-hover');
+      @include theme('background-color', 'color-zero--lighten-5', 'radio-background-color-hover');
+      @include theme('border-color', 'color-zero--lighten-2', 'radio-border-color-hover');
     }
 
     // Checked and hovered.
     input[type="radio"]:checked + label::before {
-      @include theme('background-color', 'color-tertiary--lighten-3', 'radio-background-color-hover-and-checked');
-      @include theme('border-color', 'color-tertiary--darken-3', 'radio-border-color-hover-and-checked');
+      @include theme('background-color', 'color-zero--lighten-5', 'radio-background-color-hover-and-checked');
+      @include theme('border-color', 'color-zero--lighten-2', 'radio-border-color-hover-and-checked');
       @include theme('color', 'color-tertiary--darken-3', 'radio-color-hover-and-checked');
     }
   }
@@ -80,15 +80,14 @@ input[type=date] {
   &:hover {
     // Unchecked and hovered.
     label::before {
-      @include theme('background-color', 'color-tertiary--lighten-4', 'checkbox-background-color-hover');
-      @include theme('border-color', 'color-tertiary--lighten-1', 'checkbox-border-color-hover');
+      @include theme('background-color', 'color-zero--lighten-5', 'checkbox-background-color-hover');
     }
 
     // Checked and hovered.
     input[type="checkbox"]:checked + label::before {
-      @include theme('background-color', 'color-tertiary--lighten-3', 'checkbox-background-color-hover-and-checked');
-      @include theme('border-color', 'color-tertiary--darken-2', 'checkbox-border-color-hover-and-checked');
-      @include theme('color', 'color-tertiary--darken-3', 'checkbox-color-hover-and-checked');
+      @include theme('background-color', 'color-zero--lighten-5', 'checkbox-background-color-hover-and-checked');
+      @include theme('border-color', 'color-primary', 'checkbox-border-color-hover-and-checked');
+      @include theme('color', 'color-zero', 'checkbox-color-hover-and-checked');
     }
   }
 
