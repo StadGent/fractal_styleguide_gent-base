@@ -133,6 +133,10 @@
   @if $icon == 'search' {
     @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 32 32"><path fill="#{$fill-color}" fill-rule="evenodd" d="M15 22c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7m12.061 2.939l-4.017-4.016A9.94 9.94 0 0 0 25 15c0-5.523-4.477-10-10-10S5 9.477 5 15s4.477 10 10 10a9.94 9.94 0 0 0 5.923-1.956l4.016 4.017c.293.293.677.439 1.061.439a1.502 1.502 0 0 0 1.061-2.561"/></svg>';
   }
+
+  @if $icon == 'calendar' {
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 32 32"><path fill="#{$fill-color}" fill-rule="evenodd" d="M18 22.084a1.5 1.5 0 0 1-1.5 1.5h-5a1.5 1.5 0 1 1 0-3h5a1.5 1.5 0 0 1 1.5 1.5zM22.5 17a1.5 1.5 0 0 1-1.5 1.5h-9.5a1.5 1.5 0 1 1 0-3H21a1.5 1.5 0 0 1 1.5 1.5zm2.5 8.5H8c-.542 0-1-.459-1-1v-11h19v11c0 .541-.458 1-1 1zM7 8.5c0-.542.458-1 1-1h2a1.5 1.5 0 1 0 3 0h7.5a1.5 1.5 0 1 0 3 0H25c.542 0 1 .458 1 1v2H7v-2zm18-4h-1.5a1.5 1.5 0 1 0-3 0H13a1.5 1.5 0 1 0-3 0H8c-2.2 0-4 1.8-4 4v16c0 2.2 1.8 4 4 4h17c2.2 0 4-1.8 4-4v-16c0-2.2-1.8-4-4-4z"/></svg>';
+  }
 }
 
 /// Return a colored svg icon as a background image.

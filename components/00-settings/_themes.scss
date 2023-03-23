@@ -16,12 +16,9 @@ $themes: (
     'color-tertiary': color('cyan'),
     'color-info': color('cyan'),
     'color-success': color('green'),
-    'color-warning': color('orange'), // Deprecated color.
+    'color-success-pastel': color('green-pastel'),
+    'color-warning': color('orange'),
     'color-error': color('red'),
-    'color-box-shadow': $box-shadow-primary color('gray', -4), // @todo Remove shadow.
-    'color-box-shadow-hover': $box-shadow-primary color('gray', -3), // @todo Remove shadow.
-    'color-box-shadow-dark': $box-shadow-primary color('gray', -4), // @todo Remove shadow.
-    'color-box-shadow-dark-hover': $box-shadow-primary color('gray', -3), // @todo Remove shadow.
     'color-box-shadow-secondary-dark': $box-shadow-secondary color('gray', -4), // @todo Remove shadow.
 
     'default-text-color': color('gray'),
@@ -47,7 +44,7 @@ $themes: (
     'button-primary-active-background': color('gray', -2),
     'button-primary-active-color': color('white'),
 
-    'button-secondary-background': color('cyan', -3),
+    'button-secondary-background': color('cyan-hover', -2),
     'button-secondary-color': color('gray'),
     'button-secondary-hover-background': color('cyan-hover'),
     'button-secondary-hover-color': color('gray'),
