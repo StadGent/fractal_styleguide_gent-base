@@ -9,6 +9,9 @@
 .button-secondary {
   @include theme('background-color', 'color-tertiary', 'button-secondary-background');
   @include theme('color', 'color-primary', 'button-secondary-color');
+  @include theme-content('color-tertiary', 'button-secondary-hover-background') {
+    background-image: linear-gradient(0, $theme-color, $theme-color);
+  };
   border: 0;
 
   &:focus {
@@ -19,9 +22,5 @@
   &:active {
     @include theme('background-color', 'color-tertiary--lighten-1', 'button-secondary-active-background');
     @include theme('color', 'color-primary--darken-3', 'button-secondary-active-color');
-  }
-
-  &::after {
-    @include theme('background-color', 'color-tertiary', 'button-secondary-hover-background');
   }
 }
