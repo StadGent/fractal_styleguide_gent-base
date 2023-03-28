@@ -83,20 +83,13 @@
   [class*='cs--'] & {
     border: 0;
     background-color: color('gray', -5);
+    background-image: none;
     color: color('gray', -2);
 
     &:hover {
       background-color: color('gray', -5);
       color: color('gray', -2);
       cursor: not-allowed;
-
-      &::after {
-        background-color: transparent;
-      }
-    }
-
-    &::after {
-      background-color: transparent;
     }
   }
 }
@@ -160,27 +153,12 @@
 /// @author Lennart Van Vaerenbergh
 ///
 @mixin button-hover {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+  transition: .3s;
+  background-repeat: no-repeat;
+  background-size: 0;
 
-  &::after {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    bottom: 0;
-    left: -100%;
-    transition: all .25s ease-out; // sass-lint:disable-line no-transition-all
-    content: "";
-    z-index: -1;
-  }
-
-  &:hover::after {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  &:hover {
+    background-size: 100%;
   }
 }
 

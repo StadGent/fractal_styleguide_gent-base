@@ -12,11 +12,8 @@
   }
 
   input {
-    margin-bottom: .5rem;
-
     &:not([type="submit"]) {
       flex: 1 1 $bp-mobile;
-      margin-right: .4rem;
     }
   }
 
@@ -25,8 +22,7 @@
   }
 
   input[type="submit"] {
-    @include button-large;
-    margin-right: 0;
+    @include button-medium;
   }
 }
 
@@ -35,7 +31,7 @@
 
   &,
   &:focus {
-    @include theme-content('color-primary', 'link-color') {
+    @include theme-content('color-zero') {
       background: svg-as-background('search', $theme-color, 32, 32) no-repeat left .4rem center;
     };
   }
