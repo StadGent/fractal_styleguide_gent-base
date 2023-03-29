@@ -11,7 +11,7 @@ figure {
 }
 
 .image-wrapper {
-  @include theme('background-color', 'color-primary--lighten-5', 'form-step--active-border-color');
+  @include theme('background-color', 'color-tertiary--lighten-5', 'image-placeholder-background-color');
 
   position: relative;
   padding-bottom: calc(100% / 8 * 5); // Default ratio 8:5
@@ -19,8 +19,8 @@ figure {
 
   &:empty {
     &::before {
-      @include spot-image('camera-light', auto);
       @include theme('color', 'color-primary', 'image-spot-shadow');
+      $image-icon-svg: svg-icon('image', color('cyan'), 70, 70);
 
       position: absolute;
       top: 0;
@@ -30,9 +30,8 @@ figure {
       max-width: 3rem;
       max-height: 3rem;
       margin: auto;
-      border-radius: 50%;
+      background-image: svg-url($image-icon-svg);
       background-size: contain;
-      box-shadow: 0 10px 35px -25px;
       content: "";
 
       @include tablet {
@@ -56,7 +55,7 @@ figure {
     min-height: 100%;
 
     &::before {
-      @include theme('background-color', 'color-primary--lighten-5', 'form-step--active-border-color');
+      @include theme('background-color', 'color-zero--lighten-5', 'broken-image-background-color');
 
       display: block;
       position: absolute;
@@ -78,7 +77,7 @@ figure {
       transform: translate(-50%, -50%);
       background: url('#{$styleguide-dir}/img/iconfont/broken-link.svg') no-repeat top center;
       background-size: 1.2rem auto;
-      color: color('dark-gray', -1);
+      color: color('gray', -1);
       font-size: .6rem;
       line-height: 1rem;
       text-align: center;
