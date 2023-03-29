@@ -16,12 +16,9 @@ $themes: (
     'color-tertiary': color('cyan'),
     'color-info': color('cyan'),
     'color-success': color('green'),
-    'color-warning': color('orange'), // Deprecated color.
+    'color-success-pastel': color('green-pastel'),
+    'color-warning': color('orange'),
     'color-error': color('red'),
-    'color-box-shadow': $box-shadow-primary color('gray', -4), // @todo Remove shadow.
-    'color-box-shadow-hover': $box-shadow-primary color('gray', -3), // @todo Remove shadow.
-    'color-box-shadow-dark': $box-shadow-primary color('gray', -4), // @todo Remove shadow.
-    'color-box-shadow-dark-hover': $box-shadow-primary color('gray', -3), // @todo Remove shadow.
     'color-box-shadow-secondary-dark': $box-shadow-secondary color('gray', -4), // @todo Remove shadow.
 
     'default-text-color': color('gray'),
@@ -34,6 +31,7 @@ $themes: (
     'heading-inverse-primary-background-color': color('blue'),
 
     'link-color': color('cyan-wcag', 1),
+    'link-underline-color': color('cyan-wcag', 1),
     'link-hover-background': color('cyan', -5),
     'link-hover-color': color('cyan', 2),
     'link-underlined-hover-color': color('cyan', 2),
@@ -47,28 +45,12 @@ $themes: (
     'button-primary-active-background': color('gray', -2),
     'button-primary-active-color': color('white'),
 
-    'button-secondary-background': color('cyan', -3),
+    'button-secondary-background': color('cyan-hover', -2),
     'button-secondary-color': color('gray'),
     'button-secondary-hover-background': color('cyan-hover'),
     'button-secondary-hover-color': color('gray'),
     'button-secondary-active-background': color('cyan-hover', 1),
     'button-secondary-active-color': color('gray'),
-
-    'radio-background-color-checked': color('cyan', -6),
-    'radio-border-color-checked': color('cyan'),
-    'radio-checkmark-color': color('cyan'),
-
-    'radio-background-color-hover-and-checked': color('cyan', -4),
-    'radio-border-color-hover-and-checked': color('cyan', 3),
-    'radio-color-hover-and-checked': color('cyan', 3),
-
-    'checkbox-background-color-checked': color('cyan', -6),
-    'checkbox-border-color-checked': color('cyan'),
-    'checkbox-checkmark-color': color('cyan'),
-
-    'checkbox-background-color-hover-and-checked': color('cyan', -4),
-    'checkbox-border-color-hover-and-checked': color('cyan', 3),
-    'checkbox-color-hover-and-checked': color('cyan', 3),
 
     'readspeaker-icon-color': color('cyan'),
     'readspeaker-icon-border-color': color('cyan', -3),

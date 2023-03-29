@@ -10,10 +10,11 @@ module.exports = {
       'white': '#ffffff'
     },
     secondary: {
-      gray: '#001823',
-      red: '#ea0d33',
-      orange: '#e06c00',
-      green: '#2c8726'
+      'gray': '#001823',
+      'red': '#ea0d33',
+      'orange': '#e06c00',
+      'green': '#2c8726',
+      'green-pastel': '#8ee088'
     },
     tints: {
       '1': '10%',

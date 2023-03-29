@@ -13,7 +13,8 @@ module.exports = {
       {
         label: 'checkbox option 2',
         name: 'checkboxgroup-error',
-        id: 'checkbox-error-2'
+        id: 'checkbox-error-2',
+        attributes: 'checked="checked"'
       }
     ]
   },
@@ -21,8 +22,8 @@ module.exports = {
     {
       name: 'with-error',
       context: {
-        id: 'input_text--error',
-        label: 'input-text',
+        id: 'input-checkbox--error',
+        label: 'input-checkbox',
         modifier: 'error',
         field_description: 'You can add an optional field description here.',
         field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
@@ -31,10 +32,20 @@ module.exports = {
     {
       name: 'with-success',
       context: {
-        id: 'input-text--success',
+        id: 'input-checkbox--success',
         label: 'input-text',
         modifier: 'success',
         field_description: 'You can add an optional field description here.',
+        field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
+      }
+    },
+    {
+      name: 'disabled',
+      context: {
+        id: 'input-checkbox--disabled',
+        label: 'input-text',
+        modifier: 'disabled',
+        disabled: true,
         field_message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex.'
       }
     }

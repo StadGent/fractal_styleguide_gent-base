@@ -2,8 +2,8 @@ $link-padding: .2em;
 
 %a,
 a {
-  @include theme('color', 'color-primary', 'link-color');
-  @include link-background('color-primary', 'link-hover-background', 'link-underline-color', 'link-background-color');
+  @include theme('color', 'color-tertiary', 'link-color');
+  @include link-background('color-tertiary', 'link-hover-background', 'link-underline-color', 'link-background-color');
   @include bold-text;
 
   position: relative;
@@ -20,6 +20,7 @@ a {
     // Overrule flex for IE
     align-items: flex-start;
     padding-top: .6em;
+    background-image: inherit;
 
     &::before,
     &::after {
@@ -138,15 +139,13 @@ a {
 
   &.back:not(.no-icon) {
     @extend %a-arrow-animation--left;
-    @include icon(fancyback, after);
-    display: inline-flex;
-    flex-direction: row-reverse;
-    margin-right: 1.6rem;
+    @include icon(arrow-left, after);
+    margin-left: 1.6rem;
     padding-left: 0;
 
     &::after {
-      position: relative;
-      margin-left: -.2rem;
+      position: absolute;
+      left: -2.2rem;
       padding-right: .2rem;
       padding-left: .4rem;
     }
