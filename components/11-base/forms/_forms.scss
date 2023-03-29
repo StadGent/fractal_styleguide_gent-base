@@ -373,8 +373,8 @@ $field-icon-padding: 2.5rem;
           + label {
             &::after {
               background-color: color(
-                  "gray",
-                  -2
+                "gray",
+                -2
               ) !important; // sass-lint:disable-line no-important
             }
           }

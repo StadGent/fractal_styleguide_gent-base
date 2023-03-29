@@ -5,7 +5,6 @@
     position: relative;
     padding-right: 1.6rem;
     color: inherit;
-    line-height: 2rem;
     text-align: left;
 
     &::before {
@@ -58,7 +57,7 @@ dl.accordion {
       left: 0;
       min-width: 1.6rem;
       margin: 0 .75rem 0 0;
-      padding: .25rem;
+      padding: .13rem .25rem;
       transition: transform .2s ease-in-out;
       font-size: 1.2rem;
       line-height: 1.2;
