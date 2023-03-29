@@ -44,13 +44,12 @@ header.header {
       input[type=submit] {
         max-width: 0;
         padding: 0;
-        transition: opacity .2s ease-in-out, max-width .2s ease-in-out, padding .2s ease-in-out;
+        transition: opacity .2s ease-in-out, max-width .2s ease-in-out, padding .2s ease-in-out, background-size .3s;
         box-shadow: none;
         opacity: 0;
 
         &:focus {
           max-width: 9999px;
-          margin-left: .4rem;
           padding: 0 1rem;
           opacity: 1;
         }
@@ -76,7 +75,6 @@ header.header {
 
           ~ input[type=submit] {
             max-width: 9999px;
-            margin-left: .4rem;
             padding: 0 1rem;
             opacity: 1;
           }
@@ -159,43 +157,6 @@ header.header {
     margin-bottom: 2.3rem;
     border: 0;
     overflow: visible;
-
-    &::before,
-    &::after {
-      @include theme('border-color', 'color-primary--lighten-4', 'header-border-bottom');
-
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      height: 1rem;
-      margin-top: .3rem;
-      border-top: 2px solid;
-      content: '';
-    }
-
-    &::before {
-      left: -$gutter-width;
-      width: 3rem + $gutter-width;
-      border-right: 2px solid;
-      border-top-right-radius: border-radius('radius-4');
-
-      @include desktop {
-        left: 0;
-        width: calc(#{$span} + 2rem);
-      }
-    }
-
-    &::after {
-      right: -$gutter-width;
-      width: calc(100% - 3rem + 2px + #{$gutter-width});
-      border-left: 2px solid;
-      border-top-left-radius: border-radius('radius-4');
-
-      @include desktop {
-        right: 0;
-        width: calc(100% - #{$span} - 2rem + 2px);
-      }
-    }
   }
 
   // Hero image, overlaps and hides breadcrumb accolade.
@@ -399,63 +360,6 @@ header.header {
         right: calc((100% - #{$bp-max-content}) / 2);
         left: calc(#{$span} + 2rem + (100% - #{$bp-max-content}) / 2);
         padding-right: 0;
-      }
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-      bottom: -.1rem;
-      height: 1rem;
-      background-color: color('white');
-      content: none;
-      z-index: z('hero', 'accolade');
-
-      @include tablet {
-        height: 1.7rem;
-        content: '';
-      }
-    }
-
-    &::before {
-      left: 0;
-      width: 4rem;
-      border-top-right-radius: border-radius('radius-3');
-
-      @include tablet {
-        width: 3rem + $gutter-width;
-        border-top-right-radius: border-radius('radius-5');
-      }
-
-      @include desktop {
-        width: calc(#{$span} + 2rem);
-      }
-
-      @media (min-width: $bp-max-content) {
-        width: calc(#{$span} + 2rem + ((100% - #{$bp-max-content}) / 2));
-      }
-    }
-
-    &::after {
-      right: 0;
-      left: 4rem;
-      width: auto;
-      border-top-left-radius: border-radius('radius-3');
-
-      @include tablet {
-        left: 3rem + $gutter-width;
-        border-top-left-radius: border-radius('radius-5');
-      }
-
-      @include desktop {
-        left: calc(#{$span} + 2rem);
-      }
-
-      @media (min-width: $bp-max-content) {
-        // Make sure it overlaps the image edges.
-        // IE error fix
-        right: -1px;
-        left: calc(#{$span} + 2rem + ((100% - #{$bp-max-content}) / 2));
       }
     }
 

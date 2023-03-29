@@ -40,7 +40,7 @@ Some icons have been updated, using the same machine name.
 ```
 Becomes
 ```
-<span>Show all photos <i class="icon-size" aria-hidden="true"></i></span>
+<span>Show all photos <i class="icon-fullscreen-enter" aria-hidden="true"></i></span>
 ```
 
 ### Highlight molecule
@@ -55,6 +55,9 @@ Instead, there is new markup, including the option for an image (1:1).
 ### Table of contents molecule
 The H2 heading changed to H4 and is visible. The heading text changed as well.
 A class is added to the `<ul>` element to define 2 or 3 columns.
+
+### Status messages molecule
+The icon classes have changed to the circle variants.
 
 ### Summary box organism
 Not based on Highlight molecule anymore.
