@@ -54,6 +54,12 @@
 ///
 @mixin reset-link-background() {
   border-bottom: 0;
+
+  &,
+  &:focus,
+  &:hover {
+    background-image: none;
+  }
 }
 
 ///

@@ -51,6 +51,12 @@
       span {
         display: inline-block;
       }
+
+      &:last-child {
+        span {
+          margin-bottom: .5rem;
+        }
+      }
     }
 
     &.nav--mobile-breadcrumb {
