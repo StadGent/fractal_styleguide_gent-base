@@ -3,7 +3,7 @@
   position: relative;
   flex-flow: column;
   max-width: $bp-max-content;
-  margin: 2rem 0;
+  margin: 3rem 0;
 
   @include phablet {
     flex-flow: row;
@@ -69,6 +69,7 @@
     .cta-block__content {
       top: -1rem;
       left: 1rem;
+      margin-right: 1rem;
 
       @include phablet {
         top: auto;

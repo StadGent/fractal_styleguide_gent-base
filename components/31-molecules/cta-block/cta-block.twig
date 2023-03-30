@@ -35,8 +35,16 @@
   {% endset %}
 {% endif %}
 
+{% if color is not defined %}
+  {% set color = 'secondary' %}
+{% endif %}
+
+{% if layout is not defined %}
+  {% set layout = 'image-none' %}
+{% endif %}
+
 <section class="cta-block {{ modifier }} {{ layout }}">
-  {% if layout != 'image-none' %}
+  {% if layout != 'image-none' and src is defined %}
     <div class="cta-block__image">
       <img src="{{ src }}" alt="{{ alt_text }}" />
     </div>

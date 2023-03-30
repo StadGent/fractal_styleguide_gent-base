@@ -1,3 +1,4 @@
+// sass-lint:disable no-important
 .image-gallery {
   @include clearfix();
 
@@ -66,7 +67,7 @@
     text-decoration: none;
 
     &::after {
-      content: none;
+      content: none !important;
     }
 
     &:hover,

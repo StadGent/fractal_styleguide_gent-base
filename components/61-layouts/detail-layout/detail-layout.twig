@@ -36,8 +36,13 @@
       {% include '@summary' %}
 
       {% include '@paragraph' with {
-      "text": "Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus.",
-      "modifier": "summary-text"
+      'text': 'Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus.',
+      'modifier': 'summary-text'
+      } %}
+
+      {% include '@highlight' with {
+        'title': '<h3>Highlight</h3>',
+        'content': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet vestibulum ex, id tincidunt nulla porttitor nec.</p>'
       } %}
 
       {% include '@heading' with {
@@ -61,8 +66,26 @@
       } %}
 
       {% include '@cta-block' with {
-        'type': 'link',
-          'description': 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.',
+        'description': 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.',
+        'links': [
+          {
+            'text': 'In the summertime',
+            'url': '#',
+            'modifier': 'standalone-link'
+          },
+          {
+            'text': 'When the weather is hot',
+            'url': '#',
+            'modifier': 'standalone-link'
+          }
+        ]
+      } %}
+
+      {% include '@cta-block' with {
+        'layout': 'image-left',
+        'src': 'https://via.placeholder.com/570x570&text=1:1+(570x570)',
+        'alt_text': 'Image alt text',
+        'description': 'Nulla nec eros lorem. Morbi at augue eu purus congue auctor. Sed id volutpat odio. Nunc congue diam vel diam venenatis, ut consequat urna dapibus. Vivamus at lobortis odio. Sed felis mauris, mattis eget purus at, pharetra ullamcorper risus.',
         'links': [
           {
             'text': 'In the summertime',

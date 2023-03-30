@@ -20,7 +20,7 @@ div.responsive-table {
   @include focus-style;
 
   @include tablet {
-    display: inline-block;
+    display: block;
     max-width: 100%;
   }
 

@@ -14,12 +14,12 @@ a {
   // Different button link types. These are links styled as a button.
   &.button,
   &.tag {
-    @include reset-link-background;
     @include button;
     @include button-icon;
     // Overrule flex for IE
     align-items: flex-start;
     padding-top: .6em;
+    border-bottom: 0;
     background-image: inherit;
 
     &::before,
@@ -127,8 +127,8 @@ a {
   ///
   /// External links get an indicator.
   ///
-  &[href^="http://"]:not(.no-icon),
-  &[href^="https://"]:not(.no-icon) {
+  &[href^="http://"]:not(.no-icon):not(.tag),
+  &[href^="https://"]:not(.no-icon):not(.tag) {
     @include icon(arrow-right-top, after);
     margin-right: 1.6rem;
 

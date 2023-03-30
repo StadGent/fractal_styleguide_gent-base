@@ -1,3 +1,4 @@
+// sass-lint:disable no-important
 ul.image-wall,
 ul.image-gallery {
   list-style: none;
@@ -15,7 +16,7 @@ ul.image-gallery {
     text-decoration: none;
 
     &::after {
-      content: none;
+      content: none !important;
     }
 
     &:hover,
