@@ -28,8 +28,8 @@
   > section,
   > aside,
   > article {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   > ul,
@@ -51,6 +51,10 @@
     }
   }
 
+  > .highlight {
+    margin-bottom: 4.5rem;
+  }
+
   > ul.accordion {
     @include desktop {
       @include set-layout('width-7', 'offset-2');
@@ -66,8 +70,19 @@
       @include set-layout();
 
       > .quote {
-        @include set-layout('width-9', 'offset-1');
+        @include set-layout('width-7', 'offset-4');
       }
+    }
+  }
+
+  > .cta-block {
+    @include desktop {
+      @include set-layout('width-11', 'offset-1');
+    }
+
+    &.image-left,
+    &.image-right {
+      @include set-layout('width-12');
     }
   }
 
@@ -102,21 +117,6 @@
   > .full-width {
     @include full-width;
   }
-
-  > .highlight--top {
-    .highlight__inner {
-      @include desktop {
-        padding-right: 0;
-        padding-left: 0;
-
-        > *:not(.accolade) {
-          width: span(7 of 10);
-          margin-left: span(1 wide of 10);
-        }
-      }
-    }
-  }
-
 }
 
 $bulb-image-width: 6rem;
