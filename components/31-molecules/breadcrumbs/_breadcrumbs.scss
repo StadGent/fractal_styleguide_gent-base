@@ -20,7 +20,7 @@
       &::after {
         @include theme('color', 'color-primary', 'breadcrumb-arrows-color');
 
-        margin: -.5rem 0 0 .4rem;
+        margin: 0 0 0 .4rem;
       }
 
       &:last-of-type {
@@ -50,12 +50,6 @@
       a,
       span {
         display: inline-block;
-      }
-
-      &:last-child {
-        span {
-          margin-bottom: .5rem;
-        }
       }
     }
 
