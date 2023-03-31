@@ -4,7 +4,6 @@ ol {
 
   li,
   li > a {
-    margin-bottom: .5rem;
     font-family: $default-font-family;
     line-height: 2.1;
   }
@@ -185,18 +184,23 @@ ul {
     list-style: none;
 
     li {
-      @include theme('background-color', 'color-primary--lighten-4', 'tag-filter-background-color');
+      @include theme('background-color', 'color-none', 'tag-filter-background-color');
+      @include icon('tag');
 
       display: inline-flex;
       align-items: center;
       justify-content: space-between;
       margin: .2rem;
-      padding: .7em .8em;
-      border: 1px solid transparent;
-      border-radius: border-radius('radius-1');
+      padding: .5em .8em;
+      border: 1px solid color('gray');
       font-size: .7rem;
       line-height: 1.1;
       text-decoration: none;
+
+      &::before {
+        margin-right: .3rem;
+        font-size: 1rem;
+      }
     }
   }
 }
