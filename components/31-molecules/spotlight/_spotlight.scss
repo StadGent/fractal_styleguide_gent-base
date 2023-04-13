@@ -1,4 +1,12 @@
 .cta-block.spotlight {
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .links {
+    margin-top: 1.5rem;
+  }
+
   .cta-block__content {
     a {
       @include reset-link-background;
