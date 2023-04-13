@@ -155,10 +155,10 @@
 @mixin button-hover {
   transition: .3s;
   background-repeat: no-repeat;
-  background-size: 0;
+  background-size: 0 100%;
 
   &:hover {
-    background-size: 100%;
+    background-size: 100% 100%;
   }
 }
 
