@@ -15,7 +15,7 @@
 
     .cta-block__content {
       @include theme-content('color-tertiary--lighten-3', 'cta-shadow-color') {
-        @include abstract-shadow('bottom', 'left', $theme-color, null, 13.5rem, 13.5rem);
+        @include abstract-shadow('bottom', 'left', $theme-color, null, 13rem, 13rem);
       }
     }
   }
