@@ -65,21 +65,21 @@ module.exports = {
       }
     },
     {
-      name: 'button',
+      name: 'link styled as button',
       context: {
         link: '#',
         modifier: 'button button-primary'
       }
     },
     {
-      name: 'button mailto',
+      name: 'link styled as button mailto',
       context: {
         link: 'mailto:info@stad.gent',
         modifier: 'button button-primary'
       }
     },
     {
-      name: 'button download',
+      name: 'link styled as button download',
       context: {
         link: '#',
         modifier: 'button button-primary',
@@ -87,28 +87,28 @@ module.exports = {
       }
     },
     {
-      name: 'button external',
+      name: 'link styled as button external',
       context: {
         link: 'https://stad.gent',
         modifier: 'button button-primary'
       }
     },
     {
-      name: 'button block',
+      name: 'link styled as button block',
       context: {
         link: '#',
         modifier: 'button button-primary button-block'
       }
     },
     {
-      name: 'button block mailto',
+      name: 'link styled as button block mailto',
       context: {
         link: 'mailto:info@stad.gent',
         modifier: 'button button-primary button-block'
       }
     },
     {
-      name: 'button block download',
+      name: 'link styled as button block download',
       context: {
         link: '#',
         modifier: 'button button-primary button-block',
@@ -116,7 +116,7 @@ module.exports = {
       }
     },
     {
-      name: 'button block custom icon',
+      name: 'link styled as button block custom icon',
       context: {
         link: '#',
         modifier: 'button button-primary button-block icon-favicon'

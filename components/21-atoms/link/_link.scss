@@ -3,11 +3,10 @@ $link-padding: .2em;
 %a,
 a {
   @include theme('color', 'color-tertiary', 'link-color');
-  @include link-background('color-tertiary', 'link-hover-background', 'link-underline-color', 'link-background-color');
+  @include link-background('color-primary', 'color-primary--lighten-4', 'link-underline-color', 'link-hover-background');
   @include bold-text;
 
   position: relative;
-  padding: $link-padding 0;
   text-decoration: none;
   word-wrap: break-word;
 
@@ -66,8 +65,8 @@ a {
   &::after {
     transition: margin .1s ease-in;
     border: 0;
-    font-size: 1.5em;
-    line-height: 1em;
+    font-size: 1.3em;
+    line-height: 1.4em;
     vertical-align: -25%;
   }
 
