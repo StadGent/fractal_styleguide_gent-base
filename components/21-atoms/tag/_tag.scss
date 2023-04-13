@@ -11,8 +11,10 @@
 
   &.filter {
     @include theme('background-color', 'color-tertiary--lighten-3', 'tag-filter-background-color');
+    @include small-text();
 
-    padding: .4em .8em .4em 1.2em;
+    padding: .4em .5rem .4em .5rem;
+    height: 1.5rem;
 
     &:hover button {
       @include theme('background-color', 'color-primary--lighten-4', 'tag-close-button-background-hover');
@@ -49,4 +51,12 @@ a.tag {
   &:hover {
     @include theme('background-color', 'color-secondary--lighten-1', 'tag-hover-background');
   }
+}
+
+span.tag {
+  @include small-text();
+
+  padding-left: .5rem;
+  padding-right: .5rem;
+  height: 1.5rem;
 }
