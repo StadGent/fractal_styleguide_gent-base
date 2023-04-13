@@ -6,7 +6,7 @@ h5,
 h6 {
   &.bg-primary {
     span {
-      padding: 0 .75rem;
+      padding: 0 .5rem;
       background-color: color('blue');
       color: color('white');
     }
@@ -14,8 +14,22 @@ h6 {
 
   &.bg-none {
     span {
-      padding: 0 .75rem;
+      padding: 0 .5rem;
       background-color: color('white');
+    }
+  }
+}
+
+h1 {
+  &.bg-primary {
+    span {
+      padding: 0 .75rem;
+    }
+  }
+
+  &.bg-none {
+    span {
+      padding: 0 .75rem;
     }
   }
 }
