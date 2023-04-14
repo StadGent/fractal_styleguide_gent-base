@@ -30,16 +30,12 @@
     {% endif %}
   </a>
 {% endset %}
-{#
-  Check if the place where the atom is used is in the style guide,
-  this to add a dark background for display purposes.
-#}
-{% if not isExample %}
-    {{ content }}
-  {% elseif background == 'dark-background' %}
-    {% include '@feature-block' with {
-      'color': 'primary',
-      'title': title,
-      'content': content
-    } %}
+{% if not addDarkBackground %}
+  {{ content }}
+{% else %}
+  {% include '@feature-block' with {
+    'color': 'primary',
+    'title': title,
+    'content': content
+  } %}
 {% endif %}
