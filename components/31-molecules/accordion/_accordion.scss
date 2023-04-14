@@ -45,11 +45,11 @@ dl.accordion {
   }
 
   .accordion--button {
+    display: flex;
+    align-items: center;
     width: 100%;
     padding: 0;
     overflow: visible;
-    display: flex;
-    align-items: center;
 
     &::before {
       @include theme('background-color', 'color-tertiary--lighten-3', 'accordion-logo-background-color');
