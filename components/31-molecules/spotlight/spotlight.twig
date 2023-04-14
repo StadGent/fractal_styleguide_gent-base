@@ -11,7 +11,8 @@
       {% set options = {
         title: 'Link title',
         link: link.url,
-        text: link.text
+        text: link.text,
+        background: 'dark-background'
       } %}
       {% include '@file-download' with options %}
     {% endfor %}
