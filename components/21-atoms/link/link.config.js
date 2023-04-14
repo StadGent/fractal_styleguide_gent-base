@@ -77,7 +77,8 @@ module.exports = {
       context: {
         link: '#',
         download: true,
-        background: 'dark-background'
+        background: 'dark-background',
+        isExample: true
       }
     },
     {
