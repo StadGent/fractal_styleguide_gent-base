@@ -1,15 +1,18 @@
+{% set classes = [] %}
+{% if modifier %}
+  {% set classes = classes|merge([modifier]) %}
+{% endif %}
+{% if background %}
+  {% set classes = classes|merge([background]) %}
+{% endif %}
 {% set content %}
   <a
     {% if rel %}
       rel="{{ rel }}"
     {% endif %}
     href='{{ link }}'
-    {% if modifier and background %}
-      class="{{ modifier }} {{ background }}"
-    {% elseif modifier %}
-      class="{{ modifier }}"
-    {% elseif background %}
-      class="{{ background }}"
+    {% if classes %}
+      class="{{ classes|join(' ') }}"
     {% endif %}
     {% if aria_label %}
       aria-label="{{ aria_label }}"
