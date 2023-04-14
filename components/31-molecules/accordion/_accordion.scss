@@ -40,7 +40,7 @@ dl.accordion {
     border-bottom: 2px solid;
 
     h3 {
-      margin: .75rem 0;
+      margin: 1rem 0;
     }
   }
 
@@ -48,6 +48,8 @@ dl.accordion {
     width: 100%;
     padding: 0;
     overflow: visible;
+    display: flex;
+    align-items: center;
 
     &::before {
       @include theme('background-color', 'color-tertiary--lighten-3', 'accordion-logo-background-color');
