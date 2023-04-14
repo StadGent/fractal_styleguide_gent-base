@@ -151,7 +151,7 @@ a {
     }
   }
 
-  &.dark-background {
+  .dark-background & {
     @include reset-link-background;
     @include link-background('color-none', 'color-none', 'spotlight-link-border-color', 'spotlight-link-background-color');
     @include theme('color', 'color-none');

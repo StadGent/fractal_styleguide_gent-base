@@ -1,37 +1,38 @@
-{% set classes = [] %}
-{% if modifier %}
-  {% set classes = classes|merge([modifier]) %}
-{% endif %}
-{% if background %}
-  {% set classes = classes|merge([background]) %}
-{% endif %}
 {% set content %}
-  <a
-    {% if rel %}
-      rel="{{ rel }}"
+  <div
+    {% if background %}
+      class="{{ background }}"
+      {% else %}
+      class="light-background"
     {% endif %}
-    href='{{ link }}'
-    {% if classes %}
-      class="{{ classes|join(' ') }}"
-    {% endif %}
-    {% if aria_label %}
-      aria-label="{{ aria_label }}"
-    {% endif %}
-    {% if download %}
-      download
-    {% endif %}
-    {% if title %}
-      title="{{ title }}"
-    {% endif %} >
-    {% spaceless %}
-      {{ text }}
-    {% endspaceless %}
-    {% if hidden_read_more %}
-      <span class="visually-hidden">
+  >
+    <a
+      {% if rel %}
+        rel="{{ rel }}"
+      {% endif %}
+      href='{{ link }}'
+      {% if modifier %}
+        class="{{ modifier }}"
+      {% endif %}
+      {% if aria_label %}
+        aria-label="{{ aria_label }}"
+      {% endif %}
+      {% if download %}
+        download
+      {% endif %}
+      {% if title %}
+        title="{{ title }}"
+      {% endif %} >
+      {% spaceless %}
+        {{ text }}
+      {% endspaceless %}
+      {% if hidden_read_more %}
+        <span class="visually-hidden">
       {{ hidden_read_more }}
     </span>
-    {% endif %}
-  </a>
+      {% endif %}
+    </a>
+  </div>
 {% endset %}
 {% if not addDarkBackground %}
   {{ content }}
