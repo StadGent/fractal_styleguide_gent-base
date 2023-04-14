@@ -156,7 +156,8 @@ a {
     @include link-background('color-none', 'color-none', 'spotlight-link-border-color', 'spotlight-link-background-color');
     @include theme('color', 'color-none');
 
-  &:hover, &:focus {
+    &:hover,
+    &:focus {
       @include theme('color', 'color-primary');
 
       &::after {
