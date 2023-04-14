@@ -12,12 +12,7 @@
       }
     }
 
-    padding: 1rem;
-    min-height: 22rem;
-
-    @include phablet {
-      min-height: 13.8rem;
-    }
+    padding: 1.5rem;
 
     @include tablet {
       padding: 3rem;
@@ -37,6 +32,7 @@
     h3 {
       display: inline-block;
       margin-top: 0;
+      margin-bottom: 1rem;
     }
 
     > *:last-child {
