@@ -1,26 +1,45 @@
-<a
-   {% if rel %}
-     rel="{{ rel }}"
-   {% endif %}
-   href='{{ link }}'
-   {% if modifier %}
-     class="{{ modifier }}"
-   {% endif %}
-   {% if aria_label %}
-       aria-label="{{ aria_label }}"
-   {% endif %}
-  {% if download %}
+{% set content %}
+  <a
+    {% if rel %}
+      rel="{{ rel }}"
+    {% endif %}
+    href='{{ link }}'
+    {% if modifier and background %}
+      class="{{ modifier }} {{ background }}"
+    {% elseif modifier %}
+      class="{{ modifier }}"
+    {% elseif background %}
+      class="{{ background }}"
+    {% endif %}
+    {% if aria_label %}
+      aria-label="{{ aria_label }}"
+    {% endif %}
+    {% if download %}
       download
-  {% endif %}
-  {% if title %}
-   title="{{ title }}"
-  {% endif %} >
-  {% spaceless %}
+    {% endif %}
+    {% if title %}
+      title="{{ title }}"
+    {% endif %} >
+    {% spaceless %}
       {{ text }}
-  {% endspaceless %}
-  {% if hidden_read_more %}
+    {% endspaceless %}
+    {% if hidden_read_more %}
       <span class="visually-hidden">
-          {{ hidden_read_more }}
-      </span>
-  {% endif %}
-</a>
+      {{ hidden_read_more }}
+    </span>
+    {% endif %}
+  </a>
+{% endset %}
+{#
+  Check if the place where the atom is used is in the style guide,
+  this to add a dark background for display purposes.
+#}
+{% if not isExample %}
+    {{ content }}
+  {% elseif background == 'dark-background' %}
+    {% include '@feature-block' with {
+      'color': 'primary',
+      'title': title,
+      'content': content
+    } %}
+{% endif %}
