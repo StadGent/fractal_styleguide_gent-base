@@ -1,4 +1,15 @@
 .file-upload {
+  &.multiple {
+    .file {
+      &::after {
+        display: none;
+      }
+    }
+
+    .tag-list-wrapper {
+      margin-top: .25rem;
+    }
+  }
 
   ul.inline, /// @deprecated since 4.0.0
   .tag-list-wrapper {
@@ -12,5 +23,9 @@
 
   .button {
     margin-bottom: .8rem;
+  }
+
+  label {
+    margin-bottom: 0;
   }
 }

@@ -13,9 +13,8 @@
     @include button-hover;
 
     max-width: 100%;
-    margin: 0 .75rem 0 .5rem;
-    padding-top: .6rem;
-    padding-bottom: .6rem;
+    margin: 0 .75rem 0 .6rem;
+    padding: .4rem .75rem;
     content: attr(data-text);
   }
 
@@ -23,7 +22,6 @@
     @include theme('color', 'default-text-color--darken-1', 'file-selection');
 
     max-width: 100%;
-    //margin: .5rem .5rem 0 .75rem;
     margin: .5rem .5rem 0;
     font-size: .7rem;
     font-style: italic;
