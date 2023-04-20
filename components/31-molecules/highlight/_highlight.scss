@@ -5,13 +5,17 @@
   .highlight__inner {
     @include theme('background-color', 'color-tertiary--lighten-5', 'highlight-background');
     @include theme-content('color-tertiary--lighten-3', 'highlight-shadow-color') {
-      @include abstract-shadow('bottom', 'right', $theme-color);
+      @include abstract-shadow('bottom', 'right', $theme-color, null, 9.5rem, 9.5rem);
+
+      @include phablet {
+        @include abstract-shadow('bottom', 'right', $theme-color, null, 11rem, 11rem);
+      }
     }
 
-    padding: 3rem;
+    padding: 1.5rem;
 
     @include tablet {
-      padding: 2rem;
+      padding: 3rem;
     }
 
     > i {
@@ -28,6 +32,7 @@
     h3 {
       display: inline-block;
       margin-top: 0;
+      margin-bottom: 1rem;
     }
 
     > *:last-child {

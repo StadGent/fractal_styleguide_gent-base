@@ -1,14 +1,14 @@
 .fieldset-wrapper fieldset,
 fieldset  {
-  @include theme('border-color', 'color-zero--lighten-1', 'fieldset-border-color');
+  @include theme('border-color', 'color-primary', 'fieldset-border-color');
 
   max-width: 41rem;
   margin-bottom: 1.2rem;
   padding: .8rem .8rem .4rem;
-  border: 1px solid;
+  border: 2px solid;
 
   @include tablet {
-    padding: .8rem 1.2rem .4rem;
+    padding: .8rem 1.5rem .4rem;
   }
 
   .form-item {
@@ -22,7 +22,7 @@ fieldset  {
     @include theme('background-color', 'color-primary', 'fieldset-legend-background-color');
 
     margin-bottom: .2rem;
-    padding: .1rem .4rem;
+    padding: .1rem .5rem;
 
     + .field-message,
     + .form-item > .field-message:first-child {
@@ -32,8 +32,12 @@ fieldset  {
   }
 
   fieldset {
+    @include theme('border-color', 'color-zero', 'inner-fieldset-border-color');
+    border: 1px dashed;
+
     legend {
-      margin-left: 1.8rem;
+      @include theme('color', 'color-zero', 'inner-fieldset-legend-color');
+      @include theme('background-color', 'color-none', 'inner-fieldset-legend-background-color');
       padding: 0 .4rem;
     }
   }

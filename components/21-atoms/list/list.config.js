@@ -135,6 +135,19 @@ module.exports = {
           'item 3'
         ]
       }
+    },
+    {
+      name: 'Label list with colors',
+      handle: 'label-list-colors',
+      context: {
+        type: 'label-list-colors',
+        items: [
+          'item 1',
+          'item 2',
+          'item 3',
+          'item 4'
+        ]
+      }
     }
   ]
 };
