@@ -59,6 +59,11 @@ A class is added to the `<ul>` element to define 2 or 3 columns.
 ### Status messages molecule
 The icon classes have changed to the circle variants.
 
+### File upload molecule
+The file upload molecule (variation multiple) has the new class multiple added on the section. 
+`<section class="file-upload multiple">`.
+This change is needed to hide the 'No file chosen.' text on this variation.
+
 ### Summary box organism
 Not based on Highlight molecule anymore.
 The HTML markup has been simplified.
