@@ -1,44 +1,36 @@
 {% set content %}
-  <div
-    {% if background %}
-      class="{{ background }}"
-      {% else %}
-      class="light-background"
+  <a
+    {% if rel %}
+      rel="{{ rel }}"
     {% endif %}
-  >
-    <a
-      {% if rel %}
-        rel="{{ rel }}"
-      {% endif %}
-      href='{{ link }}'
-      {% if modifier %}
-        class="{{ modifier }}"
-      {% endif %}
-      {% if aria_label %}
-        aria-label="{{ aria_label }}"
-      {% endif %}
-      {% if download %}
-        download
-      {% endif %}
-      {% if title %}
-        title="{{ title }}"
-      {% endif %} >
-      {% spaceless %}
-        {{ text }}
-      {% endspaceless %}
-      {% if hidden_read_more %}
-        <span class="visually-hidden">
-          {{ hidden_read_more }}
-        </span>
-      {% endif %}
-    </a>
-  </div>
+    href='{{ link }}'
+    {% if modifier %}
+      class="{{ modifier }}"
+    {% endif %}
+    {% if aria_label %}
+      aria-label="{{ aria_label }}"
+    {% endif %}
+    {% if download %}
+      download
+    {% endif %}
+    {% if title %}
+      title="{{ title }}"
+    {% endif %} >
+    {% spaceless %}
+      {{ text }}
+    {% endspaceless %}
+    {% if hidden_read_more %}
+      <span class="visually-hidden">
+        {{ hidden_read_more }}
+      </span>
+    {% endif %}
+  </a>
 {% endset %}
-{% if not addDarkBackground %}
+{% if not add_dark_background %}
   {{ content }}
 {% else %}
   {% include '@feature-block' with {
-    'color': 'primary',
+    'modifier': 'primary dark-background',
     'title': title,
     'content': content
   } %}
