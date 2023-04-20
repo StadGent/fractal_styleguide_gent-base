@@ -68,7 +68,6 @@ module.exports = {
       name: 'external-link-background-dark',
       context: {
         link: 'https://stad.gent',
-        background: 'dark-background',
         add_dark_background: true
       }
     },
@@ -77,7 +76,6 @@ module.exports = {
       context: {
         link: '#',
         download: true,
-        background: 'dark-background',
         add_dark_background: true
       }
     },
@@ -85,7 +83,6 @@ module.exports = {
       name: 'mailto-link-background-dark',
       context: {
         link: 'mailto:info@stad.gent',
-        background: 'dark-background',
         add_dark_background: true
       }
     },
@@ -94,7 +91,6 @@ module.exports = {
       context: {
         link: '#',
         modifier: 'standalone-link',
-        background: 'dark-background',
         add_dark_background: true
       }
     },
@@ -103,7 +99,6 @@ module.exports = {
       context: {
         link: 'https://stad.gent',
         modifier: 'standalone-link',
-        background: 'dark-background',
         add_dark_background: true
       }
     },
@@ -112,7 +107,6 @@ module.exports = {
       context: {
         link: 'mailto:info@stad.gent',
         modifier: 'standalone-link',
-        background: 'dark-background',
         add_dark_background: true
       }
     },
@@ -122,7 +116,6 @@ module.exports = {
         link: '#',
         modifier: 'standalone-link',
         download: true,
-        background: 'dark-background',
         add_dark_background: true
       }
     },
@@ -132,7 +125,6 @@ module.exports = {
         link: '#',
         text: 'back',
         modifier: 'standalone-link back',
-        background: 'dark-background',
         add_dark_background: true
       }
     },
