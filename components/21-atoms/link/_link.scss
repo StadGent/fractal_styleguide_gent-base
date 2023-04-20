@@ -149,6 +149,21 @@ a {
       padding-left: .4rem;
     }
   }
+
+  .dark-background & {
+    @include reset-link-background;
+    @include link-background('color-none', 'color-none', 'spotlight-link-border-color', 'spotlight-link-background-color');
+    @include theme('color', 'color-none');
+
+    &:hover,
+    &:focus {
+      @include theme('color', 'color-primary');
+
+      &::after {
+        @include theme('color', 'color-none');
+      }
+    }
+  }
 }
 
 %a-arrow-animation {
