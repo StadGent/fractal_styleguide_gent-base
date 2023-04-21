@@ -2,7 +2,7 @@ $accolade-width: 2.25rem;
 $accolade-height: .9rem;
 
 figcaption {
-  @include accolade;
+  @include accolade();
 
   margin: -.8rem 1rem 0 0;
   float: right;

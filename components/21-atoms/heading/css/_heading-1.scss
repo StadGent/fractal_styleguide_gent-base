@@ -11,4 +11,8 @@ h1,
     font-size: 2.5rem;
     line-height: 3.25rem;
   }
+
+  .dark-background & {
+    @include theme('color', 'color-none', 'heading-1-color-inverse');
+  }
 }

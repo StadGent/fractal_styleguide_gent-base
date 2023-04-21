@@ -9,13 +9,12 @@
 ///
 /// @param {string} $v-position - The vertical position of the accolade.
 /// @param {string} $h-position - The horizontal position of the accolade.
+/// @param {string} $width - The accolade width.
+/// @param {string} $height - The accolade height.
 /// @param {string} $color - Text theme color.
 /// @param {string} $background-color - The background theme color.
 ///
-@mixin accolade($v-position: "top", $h-position: "right", $color: "color-zero", $background-color: "color-secondary") {
-  $accolade-width: 2.25rem;
-  $accolade-height: .9rem;
-
+@mixin accolade($v-position: "top", $h-position: "right", $width: 2.25rem, $height: .9rem, $color: "color-zero", $background-color: "color-secondary") {
   @include theme('color', $color, 'caption-color');
   @include theme('background-color', $background-color, 'caption-background-color');
   @include medium-text;
@@ -28,22 +27,22 @@
   z-index: 1;
 
   @if $v-position == bottom {
-    margin-bottom: $accolade-height;
+    margin-bottom: $height;
   }
 
   &::before {
     @include theme-content($background-color, 'caption-background-color') {
-      background: transparent svg-as-background('accolade', $theme-color, $accolade-width, $accolade-height);
+      background: transparent svg-as-background('accolade', $theme-color, $width, $height);
       background-repeat: no-repeat;
       background-position: right;
       background-size: 100%;
     }
 
     position: absolute;
-    #{$v-position}: -$accolade-height;
+    #{$v-position}: -$height;
     #{$h-position}: 0;
-    width: $accolade-width;
-    height: $accolade-height;
+    width: $width;
+    height: $height;
     content: '';
     @if $v-position == bottom {
       transform: rotate(180deg);
