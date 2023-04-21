@@ -68,6 +68,14 @@ The HTML markup has been simplified.
 </aside>
 ```
 
+### Footer organism
+* Titles become h4 except Gentinfo title stays h3.
+* `gentinfo-block` class gets 2nd class `dark-background`.
+* `icon-document` icon becomes `icon-subscribe`
+* Gentinfo ul element gets extra class `inline`.
+* Gentinfo ul links get new class `no-icon`.
+* Gentinfo button is secondary instead primary and gets extra class `icon-left`.
+
 
 
 ## [5.x and older]

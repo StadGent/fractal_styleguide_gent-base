@@ -20,7 +20,7 @@ body {
   // Since the `cs--` class is set on the body element, the styles should be applied directly to the element.
   @each $theme, $colors in $themes {
     &.cs--#{$theme} {
-      color: set-themified-property($colors, 'color-tertiary', 'default-text-color');
+      color: set-themified-property($colors, 'color-zero', 'default-text-color');
     }
   }
 

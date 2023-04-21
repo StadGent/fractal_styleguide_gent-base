@@ -10,4 +10,8 @@ h3,
     font-size: 1.5rem;
     line-height: 1.95rem;
   }
+
+  .dark-background & {
+    @include theme('color', 'color-none', 'heading-3-color-inverse');
+  }
 }

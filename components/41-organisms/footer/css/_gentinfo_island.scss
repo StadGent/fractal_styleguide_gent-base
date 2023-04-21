@@ -1,31 +1,28 @@
 .gentinfo-block {
-  @include theme('background-color', 'color-secondary', 'gentinfo-block-background');
-  display: flex;
+  @include accolade('bottom', 'left', 5rem, 1.8rem, 'color-none', 'color-primary');
+  @include theme('background-color', 'color-primary', 'gentinfo-block-background');
+
   position: relative;
-  flex-wrap: wrap;
-  margin-top: 3rem;
-  padding: 6rem 1.2rem 2.5rem;
+  margin-top: -20rem;
+  padding: 2.25rem;
   font-size: .8rem;
   line-height: 1.75;
-  text-align: center;
-  box-shadow: 0 8px 12px 0 rgba(0, 125, 179, .06);
 
   @include phablet {
-    flex-wrap: nowrap;
-    margin: 0;
-    padding: 2.5rem;
+    margin: -8.2rem 0 0;
+    padding: 1.5rem;
     text-align: left;
   }
 
-  &::before {
-    @include spot-image('gentinfo');
-    height: 10rem;
-    margin: -6rem auto 0;
+  @include tablet {
+    width: 100%;
+  }
 
-    @include phablet {
-      display: block;
-      align-self: center;
-      margin: 0 2.4rem 0 0;
+  &::before {
+    left: calc(50% - 2.5rem);
+
+    @include desktop {
+      left: 0;
     }
   }
 
@@ -33,22 +30,8 @@
     width: 100%;
     text-align: left;
 
-    @include phablet {
-      width: span(5 of 7);
-      max-width: 15rem;
-    }
-
-    h2,
-    p {
-      text-align: center;
-
-      @include phablet {
-        text-align: left;
-      }
-    }
-
-    h2 {
-      font-weight: 800;
+    h3 {
+      margin: 0 0 1rem;
     }
 
     ul {
@@ -56,27 +39,36 @@
       list-style: none;
 
       li {
+        width: 100%;
         margin-bottom: .5rem;
+
+        @include phablet {
+          width: auto;
+        }
       }
 
       a {
-        @include bold-text;
+        @include normal-text;
       }
+    }
+
+    .icon-clock {
+      position: relative;
+      top: .3rem;
+      margin: 0 .2rem 0 0;
+      font-size: 1.2rem;
     }
   }
 
   .gentinfo-chat-button {
-    position: absolute;
-    right: 1.2rem;
-    bottom: -1rem;
-    left: 1.2rem;
-    width: calc(100% - 2.2rem);
-    margin: auto;
+    @include semi-bold-text();
+    width: auto;
+    margin-top: 1rem;
 
-    @include phablet {
-      right: 1.5rem;
-      left: auto;
-      width: auto;
+    &::before {
+      position: relative;
+      top: .1rem;
+      font-size: 1.2rem;
     }
   }
 

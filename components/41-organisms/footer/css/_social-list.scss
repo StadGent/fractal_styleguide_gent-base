@@ -1,15 +1,15 @@
 .social-list {
-  $social-media-link-width: 1.6rem;
+  $social-media-link-width: 1.8rem;
 
   ul {
     display: flex;
     flex-wrap: wrap;
     width: calc(100% + 1rem);
-    margin: 0 -.5rem;
+    margin-left: -.25rem;
     list-style: none;
 
     li {
-      padding: .4rem;
+      padding: .25rem;
     }
 
     a {
@@ -19,14 +19,15 @@
       &[download]:not(.button),
       &[href^="http://"]:not(.button),
       &[href^="https://"]:not(.button) {
-        @include theme('background-color', 'color-secondary', 'social-media-icon-background');
+        @include theme('background-color', 'color-quaternary--lighten-2', 'button-secondary-background');
+        @include theme('color', 'color-zero', 'button-secondary-color');
 
         display: flex;
         align-items: center;
         justify-content: center;
         width: $social-media-link-width;
         height: $social-media-link-width;
-        border-radius: $social-media-link-width;
+        margin-right: 0;
         text-decoration: none;
 
         &::after {
