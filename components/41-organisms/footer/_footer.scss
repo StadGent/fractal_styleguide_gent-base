@@ -1,15 +1,15 @@
 .footer {
-  margin-top: 20rem;
-  margin-right: -$gutter-width;
-  margin-left: -$gutter-width;
-
-  @include mobile {
+  @include mobile() {
     margin-top: 11rem;
   }
 
-  @include desktop {
+  @include desktop() {
     margin-top: 14rem;
   }
+  
+  margin-top: 20rem;
+  margin-right: -$gutter-width;
+  margin-left: -$gutter-width;
 
   h4 {
     margin-top: 0;
