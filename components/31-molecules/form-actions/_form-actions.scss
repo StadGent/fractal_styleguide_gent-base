@@ -6,12 +6,16 @@
 
   > input,
   > button {
-    @include button-large;
+    @include button-medium;
   }
 
   > input,
   > button,
   > a[href] {
     margin: 0 .6rem .6rem;
+  }
+
+  > a[href] {
+    margin-left: 1.5rem;
   }
 }

@@ -10,4 +10,8 @@ h2,
     font-size: 2rem;
     line-height: 2.1rem;
   }
+
+  .dark-background & {
+    @include theme('color', 'color-none', 'heading-2-color-inverse');
+  }
 }

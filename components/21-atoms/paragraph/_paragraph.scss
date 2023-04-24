@@ -1,3 +1,9 @@
+p {
+  .dark-background & {
+    @include theme('color', 'color-none', 'default-text-color-inverse');
+  }
+}
+
 ///
 /// Helper class to align text right.
 ///
@@ -19,4 +25,3 @@
 .text-left {
   text-align: left;
 }
-

@@ -40,14 +40,6 @@ module.exports = {
       }
     },
     {
-      name: 'collection-title',
-      context: {
-        heading: 'h2',
-        heading_text: 'Collection title',
-        type: 'collection-title'
-      }
-    },
-    {
       name: 'Background Primary',
       handle: 'bg-primary',
       context: {

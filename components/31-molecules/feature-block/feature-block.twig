@@ -1,7 +1,11 @@
-<div class="feature-block {{ color }}">
+{% if heading_type is empty %}
+  {% set heading_type = 'h1' %}
+{% endif %}
+
+<div class="feature-block {{ modifier }}">
   {% if title %}
     {% include '@heading' with {
-      'type': 'h1',
+      'type': heading_type,
       'heading_text': title
     } %}
   {% endif %}

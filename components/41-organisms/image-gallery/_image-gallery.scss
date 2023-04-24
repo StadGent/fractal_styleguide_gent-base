@@ -140,18 +140,6 @@
 
   // Alternative styling
   &--secondary {
-    .show-more__content {
-      @include theme('color', 'color-primary', 'link-color');
-
-      display: inline-block;
-      margin-top: .3rem;
-      text-align: right;
-
-      .show-more__total {
-        display: none;
-      }
-    }
-
     // single image styling
     .image-gallery {
       text-align: left;
@@ -178,15 +166,6 @@
         width: 100%;
         margin: 1vw 0 $gutter-width;
       }
-
-      // show more content: base settings
-      .image-gallery__show-more {
-        padding-bottom: 2.3em;
-
-        &::before {
-          background-color: transparent;
-        }
-      }
     }
 
     // multiple image styling
@@ -208,7 +187,7 @@
         }
 
         &:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
-          display: block;
+          display: flex;
         }
 
         // only two images
@@ -251,33 +230,13 @@
         li:first-of-type:nth-last-of-type(-n+3) ~ .image-gallery__show-more {
           display: none;
         }
-
-        .image-gallery__show-more {
-          padding-bottom: calc(((100% / 2) - 2vw) / 1.6);
-
-          &::before {
-            @include theme('background-color', 'color-primary--darken-3', 'image-gallery-show-more-background-color');
-          }
-
-          .show-more__content {
-            @include theme('color', 'color-secondary', 'image-gallery-show-more-color');
-
-            display: flex;
-            margin-top: 0;
-            text-align: center;
-
-            .show-more__total {
-              display: inline-block;
-            }
-          }
-        }
       }
 
       @include tablet {
         // overrule image gallery
         li:first-of-type:nth-last-of-type(-n+5) ~ .image-gallery__show-more,
         li:first-of-type:nth-last-of-type(-n+6) ~ .image-gallery__show-more {
-          display: inline-block;
+          display: flex;
         }
 
         // hide 'show more' if there are no more than three images
@@ -309,7 +268,9 @@
           display: none;
         }
 
-        .image-gallery__show-more {
+        // subtract .33px to deal with incorrect IE rounding
+        li:first-of-type:nth-last-of-type(n + 4) ~ .image-gallery__show-more {
+          width: calc((100% / 3) - #{$gutter-width} - .33px);
           padding-bottom: calc(((100% / 3) - #{$gutter-width} - .33px) / 1.6);
         }
       }

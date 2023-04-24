@@ -11,7 +11,7 @@
         '<i class="icon-marker" aria-hidden="true"></i><strong>City hall — </strong>Botermarkt 1, 9000 Gent',
         '<i class="icon-normalphone" aria-hidden="true"></i><a href="tel:+3292101060">09 210 10 60</a>',
         '<i class="icon-envelope" aria-hidden="true"></i><a href="mailto:noreply@stad.gent">noreply@stad.gent</a>',
-        '<i class="icon-document" aria-hidden="true"></i><a href="#">Contactform Ghent mobility</a>'
+        '<i class="icon-subscribe" aria-hidden="true"></i><a href="#">Contactform Ghent mobility</a>'
       ]
     } %}
   </div>
@@ -53,11 +53,6 @@
       {# Newsletter #}
       {% if newsletter %}
         {% set content %}
-          {% include '@heading' with {
-          'type': 'h3',
-          'heading_text': 'Subscribe to the newsletter of'~ ' ' ~ theme
-          } %}
-
           {% include '@paragraph' with {
           'text': 'Receive the most important mobility news in your mailbox.'
           } %}
@@ -76,17 +71,18 @@
           } %}
         {% endset %}
 
-        {% include "@highlight" with {
+        {% include "@feature-block" with {
           content: content,
-          modifier: 'left',
-          classes: ['newsletter']
+          modifier: 'secondary newsletter',
+          title: 'Subscribe to the newsletter of'~ ' ' ~ theme,
+          heading_type: 'h3'
         } %}
 
       {% endif %}
       {% if social %}
         <div class="social">
           {% include '@heading' with {
-          'type': 'h3',
+          'type': 'h4',
           'heading_text': 'Follow this theme site on social media'
           } %}
           <div class="social-list">

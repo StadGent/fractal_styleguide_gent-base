@@ -197,6 +197,24 @@ ul {
       line-height: 1.1;
       text-decoration: none;
 
+      &.success {
+        @include theme('color', 'color-success', 'label-list-color-success');
+        @include theme('border-color', 'color-success', 'label-list-color-success');
+        @include theme('background-color', 'color-success-pastel--lighten-4', 'label-list-background-color-success');
+      }
+
+      &.warning {
+        @include theme('color', 'color-warning', 'label-list-color-warning');
+        @include theme('border-color', 'color-warning', 'label-list-color-warning');
+        @include theme('background-color', 'color-warning--lighten-5', 'label-list-background-color-warning');
+      }
+
+      &.error {
+        @include theme('color', 'color-error', 'label-list-color-error');
+        @include theme('border-color', 'color-error', 'label-list-color-error');
+        @include theme('background-color', 'color-error--lighten-5', 'label-list-background-color-error');
+      }
+
       &::before {
         margin-right: .3rem;
         font-size: 1rem;

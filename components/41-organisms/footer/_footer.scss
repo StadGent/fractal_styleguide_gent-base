@@ -1,7 +1,25 @@
 .footer {
-  margin-top: 4rem;
+  margin-top: 20rem;
   margin-right: -$gutter-width;
   margin-left: -$gutter-width;
+
+  @include mobile {
+    margin-top: 11rem;
+  }
+
+  @include desktop {
+    margin-top: 14rem;
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: .75rem;
+
+    @include phablet {
+      margin-top: inherit;
+      margin-bottom: .75rem;
+    }
+  }
 
   .content-container {
     display: flex;
@@ -17,14 +35,13 @@
   }
 
   .footer-top {
-    @include theme('background-color', 'color-primary--lighten-5', 'footer-background-color');
+    @include theme('background-color', 'color-quaternary--lighten-5', 'footer-background-color');
     margin-bottom: 1.2rem;
 
     .content-container {
-      padding-top: 2rem;
+      padding-top: 0;
 
       @include desktop {
-        padding-top: 4rem;
         padding-bottom: 4rem;
       }
     }
@@ -48,7 +65,7 @@
 
       @include desktop {
         width: span(3 of 12);
-        margin-top: 1.4rem;
+        margin-top: 2.9rem;
         margin-bottom: 0;
 
         &:nth-of-type(3) {
@@ -69,8 +86,7 @@
     }
 
     .social-list ul {
-      width: calc(100% + 1rem);
-      margin: 0 -.5rem;
+      margin: 0 -.25rem;
     }
 
   }
@@ -79,17 +95,11 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    justify-content: center;
-
-    @include desktop {
-      justify-content: flex-start;
-    }
 
     ul {
       margin: 0;
       font-size: .6rem;
       list-style: none;
-      text-align: center;
     }
 
     li {
@@ -119,7 +129,6 @@
     .footer--column {
       width: 100%;
       margin-bottom: 1.2rem;
-      text-align: center;
 
       @include desktop {
         order: 2;
@@ -137,8 +146,12 @@
   /// Links in the footer should never have icons.
   ///
   [class*="cs--"] & a {
-    &::after {
-      content: none;
+    &[href^="https://"]:not(.no-icon):not(.tag) {
+      margin-right: inherit;
+
+      &::after {
+        content: none;
+      }
     }
   }
 }

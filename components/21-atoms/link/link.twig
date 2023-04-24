@@ -1,26 +1,37 @@
-<a
-   {% if rel %}
-     rel="{{ rel }}"
-   {% endif %}
-   href='{{ link }}'
-   {% if modifier %}
-     class="{{ modifier }}"
-   {% endif %}
-   {% if aria_label %}
-       aria-label="{{ aria_label }}"
-   {% endif %}
-  {% if download %}
+{% set content %}
+  <a
+    {% if rel %}
+      rel="{{ rel }}"
+    {% endif %}
+    href='{{ link }}'
+    {% if modifier %}
+      class="{{ modifier }}"
+    {% endif %}
+    {% if aria_label %}
+      aria-label="{{ aria_label }}"
+    {% endif %}
+    {% if download %}
       download
-  {% endif %}
-  {% if title %}
-   title="{{ title }}"
-  {% endif %} >
-  {% spaceless %}
+    {% endif %}
+    {% if title %}
+      title="{{ title }}"
+    {% endif %} >
+    {% spaceless %}
       {{ text }}
-  {% endspaceless %}
-  {% if hidden_read_more %}
+    {% endspaceless %}
+    {% if hidden_read_more %}
       <span class="visually-hidden">
-          {{ hidden_read_more }}
+        {{ hidden_read_more }}
       </span>
-  {% endif %}
-</a>
+    {% endif %}
+  </a>
+{% endset %}
+{% if not add_dark_background %}
+  {{ content }}
+{% else %}
+  {% include '@feature-block' with {
+    'modifier': 'primary dark-background',
+    'title': title,
+    'content': content
+  } %}
+{% endif %}

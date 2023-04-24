@@ -40,11 +40,13 @@ dl.accordion {
     border-bottom: 2px solid;
 
     h3 {
-      margin: .75rem 0;
+      margin: 1rem 0;
     }
   }
 
   .accordion--button {
+    display: flex;
+    align-items: center;
     width: 100%;
     padding: 0;
     overflow: visible;
@@ -55,7 +57,8 @@ dl.accordion {
       position: relative;
       right: auto;
       left: 0;
-      min-width: 1.6rem;
+      min-width: 1.8rem;
+      min-height: 1.8rem;
       margin: 0 .75rem 0 0;
       padding: .13rem .25rem;
       transition: transform .2s ease-in-out;

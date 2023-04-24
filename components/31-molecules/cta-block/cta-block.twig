@@ -39,6 +39,12 @@
   {% set color = 'secondary' %}
 {% endif %}
 
+{% set background_class = '' %}
+
+{% if color == 'primary' %}
+  {% set background_class = 'dark-background' %}
+{% endif %}
+
 {% if layout is not defined %}
   {% set layout = 'image-none' %}
 {% endif %}
@@ -51,7 +57,7 @@
   {% endif %}
   <div class="cta-block__content">
     {% include '@feature-block' with {
-      'color': color,
+      'modifier': color ~ ' ' ~ background_class,
       'title': title,
       'content': content
     } %}

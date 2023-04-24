@@ -86,3 +86,18 @@
     {% endfor %}
   </ul>
 {% endif %}
+
+{% if type == 'label-list-colors' %}
+  {% set colors = [
+    '',
+    'success',
+    'warning',
+    'error'
+  ]
+  %}
+  <ul class="label-list {{ modifier }}">
+    {% for key, item in items %}
+      <li class="{{ colors[key] }}">{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}

@@ -1,16 +1,7 @@
 .theme-footer {
-  @include theme('background-color', 'color-primary--lighten-5', 'theme-footer-background-color');
-  @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
-
-  width: calc(100% + (2 * #{$gutter-width}));
   margin-right: -1rem;
   margin-left: -1rem;
   padding: 0;
-  border-bottom: 2px solid;
-
-  + .footer {
-    margin-top: 0;
-  }
 
   .contact,
   .newsletter,
@@ -35,11 +26,6 @@
     }
 
     img {
-      @include desktop-and-below {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
       width: auto;
       height: 8rem;
     }
@@ -62,6 +48,10 @@
       padding-right: 2rem;
     }
 
+    h3 {
+      margin-top: 0;
+    }
+
     .icon-list {
       margin: 0;
 
@@ -69,16 +59,10 @@
         margin-bottom: 0;
       }
 
-      @include desktop {
-        column-gap: gutter();
-        column-count: 2;
-      }
-    }
-
-    &:only-child .icon-list {
-      @include tablet {
-        column-gap: gutter();
-        column-count: 2;
+      li:not(:first-of-type) {
+        i {
+          @include theme('color', 'color-primary', 'link-color');
+        }
       }
     }
   }
@@ -86,31 +70,29 @@
   .social {
     @include tablet {
       flex-shrink: 0;
-      width: $bp-mobile;
-    }
+      width: 19.3rem;
 
-    @include tablet {
       &:only-child {
         width: auto;
-        text-align: center;
       }
     }
 
-    h3 {
+    h4 {
       max-width: 100%;
+      margin-top: 0;
+      margin-bottom: .5rem;
     }
 
     .social-list {
       ul {
         width: calc(100% + 1rem);
-        margin: 0 -.5rem;
 
         a {
           &,
           &[download]:not(.button),
           &[href^="http://"]:not(.button),
           &[href^="https://"]:not(.button) {
-            @include theme('background-color', 'color-secondary', 'theme-footer-social-media-icon-background');
+            @include theme('background-color', 'color-quaternary--lighten-2', 'button-secondary-background');
           }
         }
       }
@@ -119,57 +101,70 @@
 
   .newsletter {
     flex-grow: 1;
-    border-radius: 0;
+    max-width: 768px;
     font-size: .8rem;
 
     @include desktop {
       padding-right: 2rem;
     }
 
-    .highlight__inner {
-      padding: 9.4rem 0 0;
-      background-color: transparent;
-
-      &::before {
-        @include spot-image('letter-light', 8rem);
-        top: 1.4rem;
-      }
-
-      @include tablet {
-        min-height: 8rem;
-        padding-top: 0;
-        padding-left: 10rem;
-
-        &::before {
-          top: calc(50% - 4rem);
-          right: auto;
-          left: 0;
-        }
-      }
-    }
-
     .subscribe {
       // 5/12 of max content-container width
       max-width: calc(#{$bp-max-content} / 12 * 5);
     }
-  }
 
-  .logo + .newsletter {
-    .highlight__inner {
-      padding-top: 0;
+    a.standalone-link {
+      display: inline-block;
+      margin-top: .5rem;
+    }
 
-      &::before {
-        display: none;
+    &:not(:last-child) {
+      padding-bottom: 5.4rem;
+
+      @include desktop {
+        padding-right: 2rem;
+        padding-bottom: 2.4rem;
+      }
+    }
+
+    + .social {
+      @include theme('background-color', 'color-quaternary--lighten-2', 'button-secondary-background');
+
+      max-height: 11.5rem;
+      margin: -3rem 1rem 0;
+      padding: 1.5rem;
+
+      .social-list {
+        ul {
+          width: calc(100% + 1rem);
+          margin: 0 -.25rem;
+
+          a {
+            &,
+            &[download]:not(.button),
+            &[href^="http://"]:not(.button),
+            &[href^="https://"]:not(.button) {
+              @include theme('color', 'color-zero');
+              @include theme('background-color', 'color-none');
+            }
+          }
+        }
       }
 
       @include tablet {
-        padding-left: 0;
+        margin: -3rem auto 0;
+        padding: 3.3rem;
+      }
+
+      @include desktop {
+        margin: 3rem 0 0 -2rem;
+        padding: 3.3rem;
       }
     }
   }
 
   .content-container {
-    padding: 0 $gutter-width;
+    padding: 0 1rem;
 
     @media (min-width: $bp-max-content + 54px) {
       padding-right: 0;
@@ -177,33 +172,15 @@
     }
   }
 
-  .top {
-    @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
-    border-bottom: 2px solid;
-  }
-
   .top,
   .bottom {
     @include tablet {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
     }
 
     @include desktop {
       flex-wrap: nowrap;
-    }
-
-    .newsletter,
-    .contact {
-      &:not(:last-of-type) {
-        @include theme('border-color', 'color-primary--lighten-4', 'theme-footer-border-bottom-color');
-        border-bottom: 2px solid;
-
-        @include desktop {
-          border-bottom: 0;
-        }
-      }
     }
   }
 

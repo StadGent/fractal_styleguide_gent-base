@@ -18,7 +18,7 @@
 @mixin button-small {
   @include small-text;
 
-  min-height: 1.9rem;
+  min-height: 1.8rem;
   letter-spacing: .02em;
 }
 
@@ -48,7 +48,7 @@
 @mixin button-large {
   @include large-text;
 
-  min-height: 2.4rem;
+  min-height: 2.6rem;
   letter-spacing: .03em;
 }
 
@@ -155,10 +155,10 @@
 @mixin button-hover {
   transition: .3s;
   background-repeat: no-repeat;
-  background-size: 0;
+  background-size: 0 100%;
 
   &:hover {
-    background-size: 100%;
+    background-size: 100% 100%;
   }
 }
 
