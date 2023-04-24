@@ -7,10 +7,12 @@
   label {
     width: 100%;
     max-width: 100%;
+    color: color('gray');
   }
 
   input {
     margin-bottom: .5rem;
+    border: 0;
   }
 
   input[type="email"] {
@@ -19,6 +21,6 @@
   }
 
   input[type="submit"] {
-    @include button-large;
+    @include button-medium;
   }
 }

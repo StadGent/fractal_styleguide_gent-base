@@ -75,6 +75,11 @@ The HTML markup has been simplified.
 * Gentinfo ul element gets extra class `inline`.
 * Gentinfo ul links get new class `no-icon`.
 * Gentinfo button is secondary instead primary and gets extra class `icon-left`.
+* 
+### Theme footer organism
+* Social block has an H4 title instead of H3.
+* The newsletter block does not use highlight block anymore, instead it uses the
+  new feature-block markup.
 
 
 

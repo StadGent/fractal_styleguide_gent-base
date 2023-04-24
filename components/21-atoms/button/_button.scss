@@ -18,7 +18,7 @@
 @mixin button-small {
   @include small-text;
 
-  min-height: 1.9rem;
+  min-height: 1.8rem;
   letter-spacing: .02em;
 }
 
@@ -48,7 +48,7 @@
 @mixin button-large {
   @include large-text;
 
-  min-height: 2.4rem;
+  min-height: 2.6rem;
   letter-spacing: .03em;
 }
 

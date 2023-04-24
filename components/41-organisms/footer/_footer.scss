@@ -3,8 +3,12 @@
   margin-right: -$gutter-width;
   margin-left: -$gutter-width;
 
-  @include phablet {
-    margin-top: 10rem;
+  @include mobile {
+    margin-top: 11rem;
+  }
+
+  @include desktop {
+    margin-top: 14rem;
   }
 
   h4 {
@@ -144,7 +148,7 @@
   [class*="cs--"] & a {
     &[href^="https://"]:not(.no-icon):not(.tag) {
       margin-right: inherit;
-      
+
       &::after {
         content: none;
       }
