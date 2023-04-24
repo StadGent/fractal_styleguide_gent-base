@@ -10,13 +10,13 @@
   text-decoration: none;
 
   &.filter {
-    @include theme('background-color', 'color-tertiary--lighten-3', 'tag-filter-background-color');
+    @include theme('background-color', 'color-quaternary--lighten-2', 'tag-filter-background-color');
 
     padding-top: .4em;
     padding-bottom: .4em;
 
     &:hover button {
-      @include theme('background-color', 'color-primary--lighten-4', 'tag-close-button-background-hover');
+      @include theme('background-color', 'color-quaternary', 'tag-close-button-background-hover');
     }
 
     button {
