@@ -1,7 +1,7 @@
 <form class="form subscribe">
   {% include '@label' with {
-  "label": label,
-  "for": id,
+    "label": label,
+    "for": id,
   } %}
   {% include '@input' with {
     'id': id,
@@ -10,6 +10,7 @@
     'required': true
   } %}
   {% include '@input-submit' with {
-  'value': text,
+    'value': text,
+    'modifier': 'button-secondary'
   } %}
 </form>
