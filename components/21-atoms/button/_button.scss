@@ -50,6 +50,10 @@
 
   min-height: 2.6rem;
   letter-spacing: .03em;
+
+  &::before {
+    font-size: 1.4em;
+  }
 }
 
 
@@ -64,10 +68,14 @@
 @mixin button-extra-large {
   @include extra-large-text;
 
-  min-height: 3.6rem;
-  padding: 1.2em 3.6em;
+  min-height: 4rem;
+  padding: .6em 1.3em;
   letter-spacing: .03em;
   line-height: 1.7;
+
+  &::before {
+    font-size: 1.8em;
+  }
 }
 
 ///
@@ -106,7 +114,7 @@
   @include button-medium; // Default.
   @include bold-text;
 
-  padding: 0 2.6em;
+  padding: 0 1em;
   font-family: $default-font-family;
   text-align: center;
   cursor: pointer;
@@ -203,12 +211,7 @@
     margin-left: .5rem;
     // Fix for IE11 flex order property.
     float: right;
-    font-size: 1.8em;
-
-    // Font-size specificly for IE11.
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
-      font-size: 1.2rem;
-    }
+    font-size: 1.2em;
   }
 
   &::after {
