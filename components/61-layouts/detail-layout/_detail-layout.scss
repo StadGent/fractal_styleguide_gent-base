@@ -13,21 +13,69 @@
     }
   }
 
-  h1 {
-    width: 100%;
+  > .content-header-container {
+    margin-right: -1rem;
+    margin-left: -1rem;
 
-    + .tag {
-      display: inline-block;
-      width: auto;
-      margin-top: -.4rem;
-      margin-bottom: 2rem;
+    @include tablet {
+      width: calc(100% + 6.75rem * 2);
+      margin-left: -6.75rem;
+      padding-right: 6.75rem;
+      padding-left: 6.75rem;
+    }
+
+    & + .summary-box,
+    & + .table-of-contents,
+    & + p {
+      position: relative;
+      z-index: 1;
+    }
+
+    &.image {
+      & + .summary-box,
+      & + .table-of-contents {
+        margin: 1rem 0 2rem;
+
+        @include tablet {
+          margin: 8rem 0 2rem;
+        }
+
+        @include desktop {
+          max-width: calc($bp-max-content - 28.5rem - 3rem);
+          margin: -11.8rem 0 5rem;
+        }
+      }
+    }
+
+    &:not(.image) {
+      // @todo: + .teasers
+      & + .summary-box,
+      & + .table-of-contents,
+      & + .partner-block,
+      & + p {
+        @include set-layout('width-12');
+
+        margin-top: -6rem;
+      }
+
+      + .partner-block,
+      + p {
+        max-width: 100%;
+        padding: 1rem;
+        background-color: color('white');
+
+        @include tablet {
+          padding: 3rem;
+        }
+      }
     }
   }
 
-  > div,
+  > div:not(.content-header-container),
   > section,
   > aside,
-  > article {
+  > article,
+  > nav {
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
@@ -98,10 +146,6 @@
     width: auto;
     margin-top: -.4rem;
     margin-bottom: 2rem;
-  }
-
-  .summary-text {
-    @include bold-text;
   }
 
   .openinghours-widget[data-type="month"] {

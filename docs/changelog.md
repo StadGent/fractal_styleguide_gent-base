@@ -59,6 +59,11 @@ A class is added to the `<ul>` element to define 2 or 3 columns.
 ### Status messages molecule
 The icon classes have changed to the circle variants.
 
+### File upload molecule
+The file upload molecule (variation multiple) has the new class multiple added on the section. 
+`<section class="file-upload multiple">`.
+This change is needed to hide the 'No file chosen.' text on this variation.
+
 ### Summary box organism
 Not based on Highlight molecule anymore.
 The HTML markup has been simplified.
@@ -67,6 +72,19 @@ The HTML markup has been simplified.
   ...
 </aside>
 ```
+
+### Footer organism
+* Titles become h4 except Gentinfo title stays h3.
+* `gentinfo-block` class gets 2nd class `dark-background`.
+* `icon-document` icon becomes `icon-subscribe`
+* Gentinfo ul element gets extra class `inline`.
+* Gentinfo ul links get new class `no-icon`.
+* Gentinfo button is secondary instead primary and gets extra class `icon-left`.
+
+### Theme footer organism
+* Social block has an H4 title instead of H3.
+* The newsletter block does not use highlight block anymore, instead it uses the
+  new feature-block markup.
 
 
 
