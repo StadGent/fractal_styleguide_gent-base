@@ -44,7 +44,8 @@ blockquote {
   }
 
   footer {
-    @include accolade("top", "left");
+    @include accolade('top', 'left');
     @include large-text;
+    @include normal-text;
   }
 }

@@ -1,0 +1,51 @@
+{% if image %}
+{% set modifier = modifier ~ ' image' %}
+{% endif %}
+
+<div class="content-header-container {{ modifier }}">
+  <div class="left">
+    {% if speech_button %}
+      {% include '@text-to-speech-button' %}
+    {% endif %}
+
+    {% include '@heading' with {
+      'type': 'h1',
+      'heading_text': 'This is the title of the page'
+    } %}
+
+    {% if summary %}
+      <div class="summary-text">
+        {% include '@paragraph' with {
+          'text': summary_text
+        } %}
+      </div>
+    {% endif %}
+
+    {% if popular_topics %}
+      {% include '@heading' with {
+        'type': 'h4',
+        'heading_text': 'Most searched topics'
+      } %}
+      {% include '@tag-list' with {
+        tags: [
+          {text: 'It is', type: 'tag'},
+          {text: 'summer outside', type: 'tag'},
+          {text: 'and we all', type: 'tag'},
+          {text: 'enjoy', type: 'tag'},
+          {text: 'the sun', type: 'tag'}
+        ]
+      } %}
+    {% endif %}
+  </div>
+
+  {% if image %}
+    <div class="right">
+      {% include '@image' with {
+        'modifier': '',
+        'src': 'https://via.placeholder.com/570x570&text=1:1+(570x570)',
+        'alt_text': 'Header image',
+        'ratio': null
+      } %}
+    </div>
+  {% endif %}
+</div>

@@ -17,8 +17,6 @@
 @mixin accolade($v-position: "top", $h-position: "right", $width: 2.25rem, $height: .9rem, $color: "color-zero", $background-color: "color-secondary") {
   @include theme('color', $color, 'caption-color');
   @include theme('background-color', $background-color, 'caption-background-color');
-  @include medium-text;
-  @include normal-text;
 
   display: inline-block;
   position: relative;
