@@ -13,7 +13,6 @@ All notable changes to this style guide are documented here.
 `@include accolade;`
 
 Add an outside accolade to an element and add a color to it.
-For example the 
 
 ### Abstract shadow
 `@include abstract-shadow;`
