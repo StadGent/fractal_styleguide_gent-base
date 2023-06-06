@@ -14,7 +14,7 @@ module.exports = {
     icon_items: [
       '<i class="icon-home" aria-hidden="true"></i> item 1',
       '<i class="icon-home" aria-hidden="true"></i> item 2',
-      '<i class="icon-external-link" aria-hidden="true"></i> <a href="https://stad.gent">item 2 - external link</a>',
+      '<i class="icon-arrow-right-top" aria-hidden="true"></i> <a href="https://stad.gent">item 2 - external link</a>',
       '<i class="icon-arrow-right" aria-hidden="true"></i> <a href="#" class="standalone-link">item 3 - standalone link</a>',
       '<i class="icon-download" aria-hidden="true"></i> <a href="#" download>item 4 - download link</a>',
       '<i class="icon-phone" aria-hidden="true"></i> <a href="tel: +32 473 58 48 30">item 5 - tel link</a>',
@@ -83,7 +83,7 @@ module.exports = {
         icon_items: [
           '<i class="icon-home" aria-hidden="true"></i> item 1',
           '<i class="icon-home" aria-hidden="true"></i> item 2',
-          '<i class="icon-external-link" aria-hidden="true"></i> <a href="https://stad.gent">item 2 - external link</a>'
+          '<i class="icon-arrow-right-top" aria-hidden="true"></i> <a href="https://stad.gent">item 2 - external link</a>'
         ]
       }
     },

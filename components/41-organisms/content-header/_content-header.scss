@@ -1,0 +1,141 @@
+.content-header-container {
+  @include theme('background-color', 'color-primary', 'content-header-container-background-primary');
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 3.5rem 1rem 5rem;
+
+  &.image {
+    margin-bottom: calc(100vw - 5rem);
+
+    @include tablet {
+      flex-direction: row;
+      margin-bottom: 6rem;
+      padding: 3.5rem 1rem;
+    }
+
+    @include desktop {
+      margin-bottom: 9.8rem;
+    }
+  }
+
+  &.secondary {
+    @include theme('background-color', 'color-secondary', 'content-header-container-background-secondary');
+  }
+
+  &.accolade-title {
+    @include theme('background-color', 'color-tertiary--lighten-5', 'content-header-accolade-container-background');
+    padding-bottom: .1rem;
+
+    h1 {
+      @include accolade('bottom', 'left', 5rem, 1.75rem, 'color-none', 'color-primary');
+      @include theme('background-color', 'color-primary', 'content-header-accolade-text-background');
+
+      display: inline;
+      padding: 0 .75rem;
+      color: color('white');
+      line-height: 1.1;
+      box-decoration-break: clone;
+    }
+
+    &.image {
+      padding-bottom: 2rem;
+
+      @include tablet {
+        padding-bottom: .1rem;
+      }
+    }
+
+    .right {
+      // Correct the position because accolade styled titles have no bottom padding.
+      @include tablet {
+        height: calc(47vw - .5rem - 9.5rem);
+      }
+    }
+  }
+
+  .left {
+    flex-basis: auto;
+
+    @include tablet {
+      padding-right: 3rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    h4 {
+      margin: 3rem 0 1rem;
+    }
+
+    .summary-text {
+      margin: 1.5rem 0 0;
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .tag-list-wrapper {
+      margin: 1rem 0 3rem;
+
+      li,
+      a {
+        width: 100%;
+
+        @include phablet {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: auto;
+    align-self: flex-end;
+    width: 100%;
+    height: auto;
+
+    @include tablet {
+      flex: 0 0 calc(47vw - 4rem);
+      width: auto;
+      height: calc(47vw - 4rem - 9.5rem);
+      text-align: right;
+    }
+
+    figure {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      transform: translate(0, calc(100% - 3.5rem));
+
+      @include tablet {
+        position: static;
+        max-width: 31.5rem;
+        transform: none;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        padding-right: 2rem;
+
+
+        @include tablet {
+          padding: 0;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {
+      flex: 0 0 28.5rem;
+      height: calc(28.5rem - 9.5rem);
+    }
+  }
+}

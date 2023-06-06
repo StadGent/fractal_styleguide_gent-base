@@ -2,7 +2,11 @@
   @include theme('color', 'color-none', 'feature-block-primary-color');
   @include theme('background-color', 'color-primary', 'feature-block-primary-background-color');
 
-  padding: 3rem;
+  padding: 1.5rem;
+
+  @include tablet {
+    padding: 3rem;
+  }
 
   h1 {
     @include theme('color', 'color-none', 'feature-block-primary-color');

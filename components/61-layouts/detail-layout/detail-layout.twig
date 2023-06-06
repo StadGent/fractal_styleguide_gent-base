@@ -18,22 +18,37 @@
     "<a href='#'>Theme</a>",
     "<a href='#'>Subpage</a>",
     "<span>Page title</span>"
-  ],
-  "hero_image_src": "/styleguide/img/stock/hero_blaarmeersen.jpg" | path,
-  "hero_image_description": "Caption text comes here."
+  ]
 } %}
 
 <main class="info-page">
   <article class="detail-layout">
     {% block info_page_article_content %}
-      {% include '@heading' with {
-        'type': 'h1',
-        'heading_text': 'Info page title'
+      {% include '@content-header' with {
+        'modifier': 'primary dark-background',
+        'speech_button': true,
+        'summary': true,
+        'summary_text': 'Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit.',
+        'image': true
       } %}
 
-      {% include '@text-to-speech-button' %}
-
       {% include '@summary' %}
+
+      {% include '@table-of-contents' with {
+        'list': [
+          '<a href="#" class="active">Anchor link 1</a>',
+          '<a href="#">Anchor link 2</a>',
+          '<a href="#">Anchor link 3</a>',
+          '<a href="#">Anchor link 4</a>',
+          '<a href="#">Anchor link 5</a>',
+          '<a href="#">Anchor link 6</a>'
+        ],
+        'type': 'three-column'
+      } %}
+
+      {% include '@paragraph' with {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et facilisis augue. Donec mi mauris, pretium eu nunc at, maximus semper libero. Etiam rhoncus, ante eget pharetra consequat, purus libero varius quam, vel porttitor leo urna in odio. In id tellus ut ligula facilisis efficitur at vel urna. Vivamus iaculis felis non <strong>bold text</strong> tristique malesuada. Quisque venenatis, arcu sed luctus molestie, leo mauris commodo sem, eget <a href='https://stad.gent' alt='Stad Gent'>egestas orci</a> libero eu justo. Curabitur sollicitudin odio non vulputate tincidunt. Etiam vel dolor in massa dapibus bibendum sit amet vel ipsum. Donec sagittis, elit et hendrerit maximus, nulla tortor laoreet quam, id tincidunt massa neque a ex. Fusce suscipit, ipsum interdum elementum sodales, <a href='javascript:(void);' alt='Link'>tellus</a> sapien vehicula nisi, in condimentum neque nisl sit amet elit. Donec sed augue a elit sodales commodo pulvinar vitae nisl. Sed <a href='javascript:(void);' alt='File link' download>pharetra</a> ante non mollis consequat. Pellentesque a est neque. Nullam maximus ornare metus. Quisque porttitor turpis tristique faucibus efficitur."
+      } %}
 
       {% include '@paragraph' with {
       'text': 'Donec lacinia pellentesque eros id dignissim. Donec justo neque, consectetur ac rhoncus a, dictum non neque. Donec semper tempor nisl, eu blandit sapien consequat rhoncus. Nunc urna magna, consequat nec hendrerit a, blandit in arcu. Pellentesque tellus odio, volutpat a vehicula vitae, rhoncus quis arcu. Praesent ut sodales sem. Donec semper pharetra dui, ac ultrices nunc dignissim eget. Nunc hendrerit massa ligula, in condimentum enim mattis quis. Aenean ut felis turpis. Aliquam vitae cursus metus.',

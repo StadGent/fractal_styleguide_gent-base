@@ -12,10 +12,19 @@
   > input,
   > button,
   > a[href] {
-    margin: 0 .6rem .6rem;
+    margin: 0 .75rem .75rem;
   }
 
   > a[href] {
     margin-left: 1.5rem;
+  }
+
+  > a.back {
+    margin-left: 2.25rem;
+
+    &::after {
+      // Correct icon position.
+      top: 0;
+    }
   }
 }

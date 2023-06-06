@@ -107,11 +107,9 @@ ul {
 
     &.inline {
       li {
-        display: flex;
         align-items: center;
         margin-right: .7rem;
         margin-bottom: 0;
-        padding-left: 1.4rem;
 
         i {
           width: auto;
@@ -194,7 +192,7 @@ ul {
       padding: .5em .8em;
       border: 1px solid color('gray');
       font-size: .7rem;
-      line-height: 1.1;
+      line-height: .7;
       text-decoration: none;
 
       &.success {
