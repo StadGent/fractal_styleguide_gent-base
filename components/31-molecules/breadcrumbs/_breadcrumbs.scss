@@ -65,15 +65,17 @@
   .expandable {
     a {
       @include reset-link-background;
+      @include bold-text;
       @include theme('border-color', 'color-primary', 'breadcrumb-expandable-color');
 
+      top: -3px;
       padding: .2rem .3rem .4rem;
-      border: 1.5px solid;
+      border: 2px solid;
       line-height: .3rem;
 
       &:hover,
       &:focus {
-        @include theme('background-color', 'color-tertiary--lighten-5', 'breadcrumb-expandable-background-color-hover');
+        @include theme('background-color', 'color-primary--lighten-4', 'link-hover-background');
       }
     }
   }
