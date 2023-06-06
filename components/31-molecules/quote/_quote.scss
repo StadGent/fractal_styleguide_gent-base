@@ -37,6 +37,7 @@ blockquote {
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
+    line-height: 2.25rem;
 
     @include desktop {
       min-height: 7.8rem;
