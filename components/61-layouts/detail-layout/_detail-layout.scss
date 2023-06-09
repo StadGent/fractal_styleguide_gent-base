@@ -24,9 +24,17 @@
       padding-left: 6.75rem;
     }
 
+    &.accolade-title {
+      @include tablet {
+        // Set max width because the absolute title gets out of boundary.
+        .left {
+          max-width: calc(100% - (6.75rem * 2 + 1rem));
+        }
+      }
+    }
+
     & + .summary-box,
-    & + .table-of-contents,
-    & + p {
+    & + .table-of-contents {
       position: relative;
       z-index: 1;
     }
@@ -51,15 +59,13 @@
       // @todo: + .teasers
       & + .summary-box,
       & + .table-of-contents,
-      & + .partner-block,
-      & + p {
+      & + .partner-block {
         @include set-layout('width-12');
 
         margin-top: -6rem;
       }
 
-      + .partner-block,
-      + p {
+      + .partner-block {
         max-width: 100%;
         padding: 1rem;
         background-color: color('white');

@@ -24,9 +24,13 @@
 <main class="news-overview-page">
   <section class="overview-layout">
     {% block news_overview_content %}
-      {% include '@heading' with {
-        "type": "overview-title",
-        "heading_text": "News and events"
+      {% include '@content-header' with {
+        'modifier': 'primary dark-background',
+        'heading_text': 'News and events',
+        'speech_button': false,
+        'summary': false,
+        'summary_text': '',
+        'image': false
       } %}
 
       <h2 class="visually-hidden">Overview</h2>

@@ -1,5 +1,5 @@
 {% if type == "overview-title" %}
-  <{{ heading|default('h1') }} class="overview-title"><span class="overview-title-colon">{{ heading_text }}<span class="colon" aria-hidden="true"></span></span></{{ heading|default('h1') }}>
+  <{{ heading|default('h1') }} class="overview-title">{{ heading_text }}</{{ heading|default('h1') }}>
 {% elseif type == "bg-primary" %}
   <{{ heading_h1|default('h1') }} class="bg-primary"><span>{{ heading_text_h1 }}</span></{{ heading_h1|default('h1') }}>
   <{{ heading_h2|default('h2') }} class="bg-primary"><span>{{ heading_text_h2 }}</span></{{ heading_h2|default('h2') }}>
