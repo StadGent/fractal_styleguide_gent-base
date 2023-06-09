@@ -36,3 +36,10 @@ The content header is a combination of one or more of the following 4 components
 
 * This organism must be used as the first item within the content container.
 * Some succeeding elements are influenced by the content header and may partly overlap with the content header. E.g. the event summary box.
+* To influence the display behaviour of the header, the following header classes can be used:
+  * `primary`: Set the primary theme color as background.
+  * `dark-background`: Makes content light colored for dark backgrounds (use in combination with `primary`).
+  * `secondary`: Set the secondary theme color as background.
+  * `accolade-title`: Use the accolade layout.
+  * `breakout`: When the accolade title has to break out of the box (use in combination with `accolade-title` without any other header elements).
+  * `overlap`: Adjust the bottom padding to create space for overlapping elements.

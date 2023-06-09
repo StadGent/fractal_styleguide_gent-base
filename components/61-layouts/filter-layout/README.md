@@ -26,7 +26,7 @@ A filter layout conists of the following parts:
 * <a href="{{path './header'}}">Header</a> (required)
 * Left-side column with filters (required)
 * Main content column on the right (required) with:
-  * Page title (heading h1, with City of Ghent colon icon, required)
+  * Page title (heading h1, required)
   * <a href="{{path './readspeaker-button'}}">Text to speech button</a> (optional, only when the website has a text so speech ability)
   * Top filter page content (optional) with:
     * Introduction text for SEO reasons (optional, only shown on desktop and tablet resolutions).

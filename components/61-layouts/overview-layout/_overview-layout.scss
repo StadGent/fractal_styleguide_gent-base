@@ -18,6 +18,18 @@
   @extend %content-container;
   margin-bottom: 4rem;
 
+  > .content-header-container {
+    margin-right: -1rem;
+    margin-left: -1rem;
+
+    @include tablet {
+      width: calc(100% + 6.75rem * 2);
+      margin-left: -6.75rem;
+      padding-right: 6.75rem;
+      padding-left: 6.75rem;
+    }
+  }
+
   > .full-width,
   > .gentinfo {
     @include full-width;

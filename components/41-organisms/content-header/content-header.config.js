@@ -8,6 +8,7 @@ module.exports = {
   default: 'Title boxed',
   context: {
     modifier: 'primary dark-background',
+    heading_text: 'This is the title of the page',
     speech_button: true,
     summary: false,
     summary_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa.',
@@ -80,7 +81,8 @@ module.exports = {
     {
       name: 'Title boxed without metadata and accolade design without image',
       context: {
-        modifier: 'accolade-title',
+        modifier: 'accolade-title `breakout`',
+        speech_button: false,
         popular_topics: false,
         image: false
       }
