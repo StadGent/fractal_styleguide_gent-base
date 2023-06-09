@@ -7,19 +7,33 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 3rem;
-  padding: 3.5rem 1rem 5rem;
+  padding: 3rem 1rem;
+
+  h1 {
+    max-width: none;
+  }
 
   &.image {
     margin-bottom: calc(100vw - 5rem);
 
     @include tablet {
       flex-direction: row;
-      margin-bottom: 6rem;
-      padding: 3.5rem 1rem;
+      margin-bottom: 8rem;
+      padding: 4.5rem 1rem 5.25rem;
     }
 
     @include desktop {
       margin-bottom: 9.8rem;
+    }
+  }
+
+  &.overlap {
+    padding: 3rem 1rem 6rem;
+
+    @include tablet {
+      flex-direction: row;
+      margin-bottom: 8rem;
+      padding: 4.5rem 1rem 5.25rem;
     }
   }
 
@@ -29,7 +43,7 @@
 
   &.accolade-title {
     @include theme('background-color', 'color-tertiary--lighten-5', 'content-header-accolade-container-background');
-    padding-bottom: .1rem;
+    //padding-bottom: .1rem;
 
     h1 {
       @include accolade('bottom', 'left', 5rem, 1.75rem, 'color-none', 'color-primary');
@@ -42,24 +56,29 @@
       box-decoration-break: clone;
     }
 
-    &.image {
-      padding-bottom: 2rem;
+    &.breakout {
+      padding-bottom: 4.25rem;
 
-      @include tablet {
-        padding-bottom: .1rem;
+      .left {
+        position: absolute;
+        bottom: .1rem;
+      }
+
+      h1 {
+        bottom: 0;
       }
     }
+  }
 
-    .right {
-      // Correct the position because accolade styled titles have no bottom padding.
-      @include tablet {
-        height: calc(47vw - .5rem - 9.5rem);
-      }
+  &:not(.image) {
+    .left {
+      padding-right: 0;
     }
   }
 
   .left {
     flex-basis: auto;
+    max-width: $bp-max-content;
 
     @include tablet {
       padding-right: 3rem;
@@ -82,7 +101,7 @@
     }
 
     .tag-list-wrapper {
-      margin: 1rem 0 3rem;
+      margin: 1rem 0 0;
 
       li,
       a {
@@ -113,7 +132,7 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      transform: translate(0, calc(100% - 3.5rem));
+      transform: translate(0, calc(100% - 4.5rem));
 
       @include tablet {
         position: static;

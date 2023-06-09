@@ -19,7 +19,7 @@ Examples of overview pages of content:
 An overview layout conists of the following parts:
 
 * <a href="{{path './header'}}">Header</a> (required)
-* Page title (heading h1, with City of Ghent colon icon, required)
+* Page title (heading h1, required)
 * Overview page content before the collection of teasers (optional)
 * Collection of teasers (required)
 * <a href="{{path './pagination'}}">Pagination</a> of <a href="{{path './teaser'}}">teasers</a> (optional)
