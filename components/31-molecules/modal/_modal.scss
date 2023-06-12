@@ -77,7 +77,7 @@
     min-height: 100%;
     margin: 0 auto;
     z-index: z('modal', 'content');
-    filter: drop-shadow(0 2px 8px #{color('dark-gray', -4, true)});
+    filter: drop-shadow(0 2px 8px #{color('gray', -4, true)});
 
     @include tablet {
       right: 0;
@@ -120,7 +120,7 @@
     padding: 0 .4rem;
     border: 0;
     background: transparent;
-    color: color('dark-gray');
+    color: color('gray');
     font-size: .8rem;
     font-weight: 400;
     cursor: pointer;

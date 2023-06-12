@@ -19,7 +19,7 @@
   border-radius: .2rem;
 
   &.white {
-    background-color: color('dark-gray');
+    background-color: color('gray');
     color: color('white');
   }
 
@@ -149,7 +149,7 @@ h3.styleguide-title {
   }
 
   .cs--highlighted & {
-    border-bottom: 1px dotted color('dark-gray');
+    border-bottom: 1px dotted color('gray');
   }
 }
 

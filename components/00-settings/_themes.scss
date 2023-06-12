@@ -9,24 +9,29 @@
 $themes: (
   'blue': (
     // Required colors!
-    // Cyan pastel color equals color('cyan-hover--lighten-2').
     'color-zero': color('gray'),
     'color-none': color('white'),
     'color-primary': color('blue'),
     'color-secondary': color('yellow'),
+    'color-secondary-pastel': color('yellow-pastel'),
     'color-tertiary': color('cyan'),
+    'color-tertiary-pastel': color('cyan-pastel'),
+    'color-tertiary-light': color('cyan-light'),
     'color-quaternary': color('cyan-hover'),
     'color-info': color('cyan'),
+    'color-info-pastel': color('cyan-pastel'),
+    'color-info-light': color('cyan-light'),
     'color-success': color('green'),
     'color-success-pastel': color('green-pastel'),
+    'color-success-light': color('green-light'),
     'color-warning': color('orange'),
+    'color-warning-pastel': color('orange-pastel'),
+    'color-warning-light': color('orange-light'),
     'color-error': color('red'),
-    'color-box-shadow-secondary-dark': $box-shadow-secondary color('gray', -4), // @todo Remove shadow.
+    'color-error-pastel': color('red-pastel'),
+    'color-error-light': color('red-light'),
 
     'default-text-color': color('gray'),
-
-    'accolade-stroke-light': svg-as-background('accolade-stroke', color('cyan', -5), 1280, 21),
-    'accolade-stroke-dark': svg-as-background('accolade-stroke', color('cyan', 1), 1280, 21),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
@@ -34,7 +39,7 @@ $themes: (
 
     'link-color': color('blue'),
     'link-underline-color': color('blue'),
-    'link-hover-background': color('blue', -4),
+    'link-hover-background': color('blue-light'),
     'link-hover-color': color('blue'),
     'link-underlined-hover-color': color('blue'),
 
@@ -42,24 +47,18 @@ $themes: (
 
     'button-primary-background': color('gray'),
     'button-primary-color': color('white'),
-    'button-primary-hover-background': color('gray', -2),
+    'button-primary-hover-background': color('gray-medium'),
     'button-primary-hover-color': color('white'),
-    'button-primary-active-background': color('gray', -2),
+    'button-primary-active-background': color('gray-medium'),
     'button-primary-active-color': color('white'),
 
-    'button-secondary-background': color('cyan-hover', -2),
+    'button-secondary-background': color('cyan-pastel'),
     'button-secondary-color': color('gray'),
     'button-secondary-hover-background': color('cyan-hover'),
     'button-secondary-hover-color': color('gray'),
-    'button-secondary-active-background': color('cyan-hover', 1),
+    'button-secondary-active-background': color('cyan-hover'),
     'button-secondary-active-color': color('gray'),
 
-    'readspeaker-icon-color': color('white'),
-
-    'teaser-label-icon-color': color('cyan'),
-
-    'gentinfo-content-shadow': color('cyan', -6),
-
-    'tag-close-button-background-hover': color('cyan', -5),
+    'tag-close-button-background-hover': color('gray-light'),
   )
 ) !default;

@@ -35,10 +35,10 @@ $field-icon-padding: 2.5rem;
   &:disabled {
     padding-right: $field-icon-padding;
     border: 0;
-    background: color("dark-gray", -5) $field-icon-position;
+    background: color("gray", -5) $field-icon-position;
     background-image: svg-as-background(
       "lock-closed",
-      color("dark-gray", -2),
+      color("gray", -2),
       24,
       24
     );
