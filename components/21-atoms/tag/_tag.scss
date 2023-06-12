@@ -27,7 +27,7 @@
       transition: background-color .2s ease-in-out;
       border: 0;
       border-radius: 100%;
-      background: transparent svg-as-background('cross', color('dark-gray'), 16, 16);
+      background: transparent svg-as-background('cross', color('gray'), 16, 16);
       background-repeat: no-repeat;
       background-position: center;
       cursor: pointer;

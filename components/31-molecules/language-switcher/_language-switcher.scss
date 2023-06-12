@@ -15,8 +15,6 @@
   }
 
   .accordion--content {
-    @include theme('box-shadow', 'color-box-shadow-secondary-dark');
-
     position: absolute;
     top: 100%;
     right: 0;

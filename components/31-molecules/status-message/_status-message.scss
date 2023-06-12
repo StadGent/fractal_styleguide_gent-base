@@ -1,7 +1,7 @@
 %messages,
 .messages {
-  @include theme('background-color', 'color-info--lighten-5', 'status-messages-info-background');
-  @include theme('border-color', 'color-info');
+  @include theme('background-color', 'color-info-light', 'info-message-background');
+  @include theme('border-color', 'color-info', 'info-message-icon-color');
 
   $status-message-icon-size: 2.1rem;
 
@@ -17,7 +17,7 @@
   font-size: .9rem;
 
   i {
-    @include theme('color', 'color-info', 'status-messages-info-icon');
+    @include theme('color', 'color-info', 'info-message-icon-color');
 
     display: block;
     flex: 0 0 $status-message-icon-size;
@@ -44,41 +44,41 @@
   }
 
   &.messages--status {
-    @include theme('background-color', 'color-success--lighten-5', 'status-messages-success-background-color');
-    @include theme('border-color', 'color-success');
+    @include theme('background-color', 'color-success-light', 'success-message-background');
+    @include theme('border-color', 'color-success', 'success-message-icon-color');
 
     i {
-      @include theme('color', 'color-success', 'status-messages-success-icon');
+      @include theme('color', 'color-success', 'success-message-icon-color');
     }
 
     a {
-      @include link-background('color-zero', 'color-success--lighten-3');
+      @include link-background('color-zero', 'color-success-light--darken-1');
     }
   }
 
   &.messages--error {
-    @include theme('background-color', 'color-error--lighten-5', 'status-messages-error-background-color');
-    @include theme('border-color', 'color-error');
+    @include theme('background-color', 'color-error-light', 'error-message-background');
+    @include theme('border-color', 'color-error', 'error-message-icon-color');
 
     i {
-      @include theme('color', 'color-error', 'status-messages-error-icon');
+      @include theme('color', 'color-error', 'error-message-icon-color');
     }
 
     a {
-      @include link-background('color-zero', 'color-error--lighten-3');
+      @include link-background('color-zero', 'color-error-light--darken-1');
     }
   }
 
   &.messages--warning {
-    @include theme('background-color', 'color-warning--lighten-5', 'status-messages-warning-background-color');
-    @include theme('border-color', 'color-warning');
+    @include theme('background-color', 'color-warning-light', 'warning-message-background');
+    @include theme('border-color', 'color-warning', 'warning-message-icon-color');
 
     i {
-      @include theme('color', 'color-warning', 'status-messages-warning-icon');
+      @include theme('color', 'color-warning', 'warning-message-icon-color');
     }
 
     a {
-      @include link-background('color-zero', 'color-warning--lighten-3');
+      @include link-background('color-zero', 'color-warning-light--darken-1');
     }
   }
 
@@ -87,7 +87,7 @@
   }
 
   a {
-    @include link-background('color-zero', 'color-info--lighten-4');
+    @include link-background('color-zero', 'color-info-light--darken-1');
     @include theme('border-color', 'color-zero');
     @include theme('color', 'color-zero');
 

@@ -1,7 +1,7 @@
 .field-message {
-  @include theme('color', 'color-zero', 'field-messages-color');
-  @include theme('background-color', 'color-info--lighten-5', 'field-messages-info-background');
-  @include theme('border-color', 'color-info', 'field-messages-info-background');
+  @include theme('color', 'color-zero', 'message-text-color');
+  @include theme('background-color', 'color-info-light', 'info-message-background');
+  @include theme('border-color', 'color-info', 'info-message-icon-color');
 
   $field-message-icon-size: 1.5rem;
   $field-message-icon-margin: 1.5rem;
@@ -50,38 +50,38 @@
 
   a {
     @include theme('color', 'color-zero', 'field-messages-color');
-    @include link-background('color-zero', 'color-primary--lighten-4', 'field-messages-link-border-color', 'link-background-color');
+    @include link-background('color-zero', 'link-hover-background');
   }
 
   &.success {
     @include icon('checkmark-circle');
-    @include theme('background-color', 'color-success-pastel--lighten-4', 'field-description-background');
-    @include theme('border-color', 'color-success', 'field-description-background');
+    @include theme('background-color', 'color-success-light', 'success-message-background');
+    @include theme('border-color', 'color-success', 'success-message-icon-color');
 
     padding-left: 2.9rem;
 
     &::before {
-      @include theme('color', 'color-success', 'field-description-icon');
+      @include theme('color', 'color-success', 'success-message-icon-color');
     }
 
     a {
-      @include link-background('color-zero', 'color-success--lighten-4', 'field-messages-link-border-color', 'field-messages-success-background-color');
+      @include link-background('color-zero', 'color-success-light--darken-1', 'success-message-link-border-color', 'success-message-link-background');
     }
   }
 
   &.error {
     @include icon('cross-circle');
-    @include theme('background-color', 'color-error--lighten-5', 'field-description-background');
-    @include theme('border-color', 'color-error', 'field-description-background');
+    @include theme('background-color', 'color-error-light', 'error-message-background');
+    @include theme('border-color', 'color-error', 'error-message-icon-color');
 
     padding-left: 2.9rem;
 
     &::before {
-      @include theme('color', 'color-error', 'field-description-icon');
+      @include theme('color', 'color-error', 'error-message-icon-color');
     }
 
     a {
-      @include link-background('color-zero', 'color-error--lighten-4', 'field-messages-link-border-color', 'field-messages-error-background-color');
+      @include link-background('color-zero', 'color-error-light--darken-1', 'error-message-link-border-color', 'error-message-link-background');
     }
   }
 }
