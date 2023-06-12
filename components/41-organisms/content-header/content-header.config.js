@@ -81,7 +81,7 @@ module.exports = {
     {
       name: 'Title boxed without metadata and accolade design without image',
       context: {
-        modifier: 'accolade-title `breakout`',
+        modifier: 'accolade-title breakout',
         speech_button: false,
         popular_topics: false,
         image: false
