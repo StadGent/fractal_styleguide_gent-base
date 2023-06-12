@@ -15,12 +15,12 @@ input[type="password"] {
     &,
     &:focus {
       padding-right: $field-icon-padding;
-      background-image: svg-as-background('lock-closed', color('dark-gray'), 24, 24);
+      background-image: svg-as-background('lock-closed', color('gray'), 24, 24);
       background-repeat: no-repeat;
       background-position: right .75rem center;
 
       &:disabled {
-        background-image: svg-as-background('lock-closed', color('dark-gray', -2), 24, 24);
+        background-image: svg-as-background('lock-closed', color('gray', -2), 24, 24);
       }
     }
   }
@@ -36,7 +36,7 @@ input[type=date] {
     width: 1.2rem;
     height: 1.2rem;
     padding: .5rem;
-    background-image: svg-as-background('calendar', color('dark-gray'), 30, 30);
+    background-image: svg-as-background('calendar', color('gray'), 30, 30);
 
     &:hover {
       @include theme('background-color', 'button-secondary-hover-background');

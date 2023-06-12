@@ -9,17 +9,23 @@
   margin-bottom: 3rem;
   padding: 3rem 1rem;
 
+  @include tablet {
+    padding: 4.5rem 1rem;
+  }
+
   h1 {
     max-width: none;
   }
 
   &.image {
-    margin-bottom: calc(100vw - 5rem);
+    margin-bottom: calc(100vw - 6rem);
+    padding-bottom: 6rem;
 
     @include tablet {
       flex-direction: row;
       margin-bottom: 8rem;
-      padding: 4.5rem 1rem 5.25rem;
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
     }
 
     @include desktop {
@@ -28,12 +34,13 @@
   }
 
   &.overlap {
-    padding: 3rem 1rem 6rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
 
     @include tablet {
       flex-direction: row;
-      margin-bottom: 8rem;
-      padding: 4.5rem 1rem 5.25rem;
+      padding-top: 4.5rem;
+      padding-bottom: 5.25rem;
     }
   }
 
@@ -57,7 +64,11 @@
     }
 
     &.breakout {
-      padding-bottom: 4.25rem;
+      padding-bottom: 2.25rem;
+
+      @include tablet {
+        padding-bottom: 2.75rem;
+      }
 
       .left {
         position: absolute;
