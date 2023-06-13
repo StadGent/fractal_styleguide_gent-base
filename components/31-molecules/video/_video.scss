@@ -21,3 +21,14 @@
     float: right;
   }
 }
+
+.audio-description {
+  .standalone-link:not(.no-icon) {
+    &::after {
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
