@@ -220,8 +220,8 @@
 
   &:not(.icon-right) {
     &::after {
-      content: '';
       padding-right: .2rem;
+      content: '';
     }
   }
 }
