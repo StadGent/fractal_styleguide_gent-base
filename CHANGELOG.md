@@ -20,6 +20,11 @@ Add an outside accolade to an element and add a color to it.
 Add an underlying container of the same size under the chosen element.
 For example the highlight molecule.
 
+### Icon-right
+`@include button-icon-right;`
+
+Also added the `.icon-right` class for icons that are on the right-hand side.
+
 ## HTML markup changes
 
 ### Icon atom
@@ -33,14 +38,11 @@ view-grid, view-list, virus, whatsapp, wheelchair-no, work
 
 Some icons have been updated, using the same machine name.
 
-### Image gallery multiple organism
-```
-<span>Show all photos <i class="icon-arrow-right" aria-hidden="true"></i></span>
-```
-Becomes
-```
-<span>Show all photos <i class="icon-fullscreen-enter" aria-hidden="true"></i></span>
-```
+### Heading atoms
+**Heading 2:** now has the blue (color-primary) color
+
+### Modal molecule
+Default heading changed from H3 to ***H2***
 
 ### Highlight molecule
 No more spot images via classes. The icon can be changed in HTML markup via
@@ -72,6 +74,16 @@ The HTML markup has been simplified.
 </aside>
 ```
 
+### Image gallery multiple organism
+```
+<span>Show all photos <i class="icon-arrow-right" aria-hidden="true"></i></span>
+```
+Becomes
+```
+<span>Show all photos <i class="icon-fullscreen-enter" aria-hidden="true"></i></span>
+```
+
+
 ### Footer organism
 * Titles become h4 except Gentinfo title stays h3.
 * `gentinfo-block` class gets 2nd class `dark-background`.
@@ -84,8 +96,6 @@ The HTML markup has been simplified.
 * Social block has an H4 title instead of H3.
 * The newsletter block does not use highlight block anymore, instead it uses the
   new feature-block markup.
-
-
 
 ## [5.x and older]
 

@@ -44,7 +44,7 @@ To make a property themable use the mixin `theme()` in your component.
 The `$themes` map exists out of multiple keys that define the themes for the
 style guide. Based on these maps you have to require some basic colors such
 as `color-primary` and `color-secondary`. See the `$themes` map inside
-`_colors.scss` for more information.
+`_themes.scss` for more information.
 These form the basic of the theming system. Through a syntax convention you
 can theme the colors of your components:
 
