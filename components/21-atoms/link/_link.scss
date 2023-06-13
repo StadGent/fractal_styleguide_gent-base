@@ -87,6 +87,12 @@ a {
     &:hover {
       @include theme('color', 'color-primary--darken-2', 'link-hover-color');
     }
+
+    &::after {
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
   }
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back),
