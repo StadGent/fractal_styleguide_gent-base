@@ -1,6 +1,6 @@
 <nav class="pager" aria-labelledby="pagination_1-{{ total ~ active }}">
   <h2 id="pagination_1-{{ total ~ active }}" class="visually-hidden">Pagination</h2>
-  {% spaceless %}
+  {% apply spaceless %}
     <ul class="pager__items">
 
       {% if 1 != active %}
@@ -82,6 +82,6 @@
         </li>
       {% endif %}
     </ul>
-  {% endspaceless %}
+  {% endapply %}
 </nav>
 

@@ -1,6 +1,6 @@
 <nav class="form-steps{{ modifier ? ' ' ~ modifier }}" aria-labelledby="form-steps-{{ steps.length }}{{ active }}{{ modifier ? '-' ~ modifier }}">
   <h2 id="form-steps-{{ steps.length }}{{ active }}{{ modifier ? '-' ~ modifier }}" class="visually-hidden">Steps in this wizard</h2>
-  {% spaceless %}
+  {% apply spaceless %}
     <ol class="form-steps-list">
       {% for key, step in steps %}
         <li class="{% if key + 1 < active %}completed{% endif %}{% if key + 1 == active %}active{% endif %}">
@@ -12,5 +12,5 @@
         </li>
       {% endfor %}
     </ol>
-  {% endspaceless %}
+  {% endapply %}
 </nav>
