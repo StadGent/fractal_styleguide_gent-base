@@ -2,33 +2,32 @@
   <h2 class="visually-hidden">Timeline</h2>
   <dl class="timeline accordion">
     <div class="timeline-slot" role="listitem">
-      <dt>2018</dt>
+      <dt>
+        <h3 class="dt-title">2017</h3>
+      </dt>
+      <dd class="show-desktop-only">
+        <div class="timeline-slot-content timeline-slot-content__img accordion--content" id="timeline-slot-img--1">
+          {% include '@image' with {
+            "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          } %}
+        </div>
+      </dd>
       <dd>
         <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--1" class="accordion--button">Title</button></h3>
-          <span class="timeline-slot-date">27 august 2017</span>
-          {% include '@image-gallery--multiple' with {
-            "type": "secondary",
-            "items": [
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              }
-            ]
-          } %}
+          <h4 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--1" data-controls-img="timeline-slot-img--1" class="accordion--button">Title</button></h4>
+          <span class="timeline-slot-date">21 juli 2017</span>
         </div>
         <div class="timeline-slot-content accordion--content" id="timeline-slot-content--1">
+          <div class="content-image hidden-desktop">
+            {# This is the same image as above #}
+            {% include '@image' with {
+              "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+              "alt": "placeholder image alternative text",
+              "caption": "image caption"
+            } %}
+          </div>
           {% include '@paragraph' with {
             'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
           } %}
@@ -36,271 +35,167 @@
       </dd>
     </div>
     <div class="timeline-slot" role="listitem">
-      <dt>2017</dt>
+      <dt>
+        <h3 class="dt-title">A long long looooong time ago</h3>
+      </dt>
+      <dd class="show-desktop-only">
+        <div class="timeline-slot-content timeline-slot-content__img accordion--content show-desktop-only" id="timeline-slot-img--2">
+          {% include '@image' with {
+            "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          } %}
+        </div>
+      </dd>
       <dd>
         <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--2" class="accordion--button">Title</button></h3>
-          <span class="timeline-slot-date">27 august 2017</span>
-          {% include '@image-gallery--multiple' with {
-            "type": "secondary",
-            "items": [
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              }
-            ]
-          } %}
+          <h4 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--2" data-controls-img="timeline-slot-img--2" class="accordion--button">Title</button></h4>
+          <span class="timeline-slot-date">27 augustus 2019</span>
         </div>
         <div class="timeline-slot-content accordion--content" id="timeline-slot-content--2">
+          <div class="content-image hidden-desktop">
+            {# This is the same image as above #}
+            {% include '@image' with {
+              "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+              "alt": "placeholder image alternative text",
+              "caption": "image caption"
+            } %}
+          </div>
           {% include '@paragraph' with {
             'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
           } %}
         </div>
       </dd>
-      <dd>
-        <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title">Title</h3>
-          <span class="timeline-slot-date">7 november 2017</span>
-        </div>
-      </dd>
-      <dd>
-        <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title">Title</h3>
-          <span class="timeline-slot-date">7 november 2017</span>
-        </div>
-      </dd>
     </div>
     <div class="timeline-slot" role="listitem">
-      <dt>Once upon a time</dt>
+      <dt>
+        <h3 class="dt-title">2017</h3>
+      </dt>
+      <dd class="show-desktop-only">
+        <div class="timeline-slot-content timeline-slot-content__img accordion--content" id="timeline-slot-img--3">
+          {% include '@image' with {
+            "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
+          } %}
+        </div>
+      </dd>
       <dd>
         <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--3" class="accordion--button">Title</button></h3>
-          <span class="timeline-slot-date">27 august 2011</span>
-          {% include '@image-gallery--multiple' with {
-            "type": "secondary",
-            "items": [
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              }
-            ]
-          } %}
+          <h4 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--3" data-controls-img="timeline-slot-img--3" class="accordion--button">Title</button></h4>
+          <span class="timeline-slot-date">21 juli 2017</span>
         </div>
         <div class="timeline-slot-content accordion--content" id="timeline-slot-content--3">
+          <div class="content-image hidden-desktop">
+            {# This is the same image as above #}
+            {% include '@image' with {
+              "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+              "alt": "placeholder image alternative text",
+              "caption": "image caption"
+            } %}
+          </div>
           {% include '@paragraph' with {
-          'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+            'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
           } %}
         </div>
       </dd>
     </div>
     <div class="timeline-slot" role="listitem">
-      <dt>Sometime in 2016</dt>
-      <dd class="active">
-        <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content--4" class="accordion--button">Title</button></h3>
-          <span class="timeline-slot-date">Januari 2016</span>
-          {% include '@image-gallery--multiple' with {
-            "type": "secondary",
-            "items": [
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              }
-            ]
+      <dt>
+        <h3 class="dt-title">A long long looooong time ago</h3>
+      </dt>
+      <dd class="show-desktop-only">
+        <div class="timeline-slot-content timeline-slot-content__img accordion--content show-desktop-only" id="timeline-slot-img--4">
+          {% include '@image' with {
+            "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+            "alt": "placeholder image alternative text",
+            "caption": "image caption"
           } %}
+        </div>
+      </dd>
+      <dd>
+        <div class="timeline-slot-header">
+          <h4 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--4" data-controls-img="timeline-slot-img--4" class="accordion--button">Title</button></h4>
+          <span class="timeline-slot-date">27 augustus 2019</span>
         </div>
         <div class="timeline-slot-content accordion--content" id="timeline-slot-content--4">
+          <div class="content-image hidden-desktop">
+            {# This is the same image as above #}
+            {% include '@image' with {
+              "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+              "alt": "placeholder image alternative text",
+              "caption": "image caption"
+            } %}
+          </div>
           {% include '@paragraph' with {
             'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
           } %}
-          <div class="video-wrapper">
-            <div class="video-inner-wrapper">
-              {% include '@video' with {
-                'title': 'Promofilm stad Gent.',
-                'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
-                'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
-              } %}
-            </div>
-          </div>
         </div>
       </dd>
     </div>
     <div class="timeline-slot" role="listitem">
-      <dt>1,4 till 1,6 milion years ago</dt>
-      <dd>
-        <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content--5" class="accordion--button">Title</button></h3>
-          <span class="timeline-slot-date">On a thursday</span>
-          {% include '@image-gallery' with {
-            "type": "secondary",
+      <dt>
+        <h3 class="dt-title">2017</h3>
+      </dt>
+      <dd class="show-desktop-only">
+        <div class="timeline-slot-content timeline-slot-content__img accordion--content" id="timeline-slot-img--5">
+          {% include '@image' with {
             "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
             "alt": "placeholder image alternative text",
             "caption": "image caption"
           } %}
+        </div>
+      </dd>
+      <dd>
+        <div class="timeline-slot-header">
+          <h4 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--5" data-controls-img="timeline-slot-img--5" class="accordion--button">Title</button></h4>
+          <span class="timeline-slot-date">21 juli 2017</span>
         </div>
         <div class="timeline-slot-content accordion--content" id="timeline-slot-content--5">
-          <div class="video-wrapper">
-            <div class="video-inner-wrapper">
-              {% include '@video' with {
-                'title': 'Promofilm stad Gent.',
-                'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
-                'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
-              } %}
-            </div>
+          <div class="content-image hidden-desktop">
+            {# This is the same image as above #}
+            {% include '@image' with {
+              "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+              "alt": "placeholder image alternative text",
+              "caption": "image caption"
+            } %}
           </div>
-        </div>
-      </dd>
-      <dd>
-        <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content--6" class="accordion--button">Title</button></h3>
-          <span class="timeline-slot-date">On a thursday</span>
-          {% include '@image-gallery' with {
-            "type": "secondary",
-            "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-            "alt": "placeholder image alternative text",
-            "caption": "image caption"
-          } %}
-        </div>
-        <div class="timeline-slot-content accordion--content" id="timeline-slot-content--6">
-          <div class="video-wrapper">
-            <div class="video-inner-wrapper">
-              {% include '@video' with {
-                'title': 'Promofilm stad Gent.',
-                'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
-                'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
-              } %}
-            </div>
-          </div>
-        </div>
-      </dd>
-    </div>
-    <div class="timeline-slot" role="listitem">
-      <dt>Sometime in 2016</dt>
-      <dd class="active">
-        <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content--7" class="accordion--button">Title</button></h3>
-          <span class="timeline-slot-date">Januari 2016</span>
-          {% include '@image-gallery--multiple' with {
-            "type": "secondary",
-            "items": [
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              },
-              {
-                "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-                "alt": "placeholder image alternative text",
-                "caption": "image caption"
-              }
-            ]
-          } %}
-        </div>
-        <div class="timeline-slot-content accordion--content" id="timeline-slot-content--7">
           {% include '@paragraph' with {
             'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
           } %}
-          <div class="video-wrapper">
-            <div class="video-inner-wrapper">
-              {% include '@video' with {
-                'title': 'Promofilm stad Gent.',
-                'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
-                'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
-              } %}
-            </div>
-          </div>
         </div>
       </dd>
     </div>
     <div class="timeline-slot" role="listitem">
-      <dt>1,4 till 1,6 milion years ago</dt>
-      <dd>
-        <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content--8" class="accordion--button">Title</button></h3>
-          <span class="timeline-slot-date">On a thursday</span>
-          {% include '@image-gallery' with {
-            "type": "secondary",
+      <dt>
+        <h3 class="dt-title">A long long looooong time ago</h3>
+      </dt>
+      <dd class="show-desktop-only">
+        <div class="timeline-slot-content timeline-slot-content__img accordion--content show-desktop-only" id="timeline-slot-img--6">
+          {% include '@image' with {
             "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
             "alt": "placeholder image alternative text",
             "caption": "image caption"
           } %}
-        </div>
-        <div class="timeline-slot-content accordion--content" id="timeline-slot-content--8">
-          <div class="video-wrapper">
-            <div class="video-inner-wrapper">
-              {% include '@video' with {
-                'title': 'Promofilm stad Gent.',
-                'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
-                'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
-              } %}
-            </div>
-          </div>
         </div>
       </dd>
       <dd>
         <div class="timeline-slot-header">
-          <h3 class="timeline-slot-title"><button aria-expanded="true" aria-controls="timeline-slot-content--9" class="accordion--button">Title</button></h3>
-          <span class="timeline-slot-date">On a thursday</span>
-          {% include '@image-gallery' with {
-            "type": "secondary",
-            "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
-            "alt": "placeholder image alternative text",
-            "caption": "image caption"
-          } %}
+          <h4 class="timeline-slot-title"><button aria-expanded="false" aria-controls="timeline-slot-content--6" data-controls-img="timeline-slot-img--6" class="accordion--button">Title</button></h4>
+          <span class="timeline-slot-date">27 augustus 2019</span>
         </div>
-        <div class="timeline-slot-content accordion--content" id="timeline-slot-content--9">
-          <div class="video-wrapper">
-            <div class="video-inner-wrapper">
-              {% include '@video' with {
-                'title': 'Promofilm stad Gent.',
-                'src': 'https://www.youtube.com/embed/S0vLmTWUmok',
-                'audio_description_src': 'https://www.youtube.com/embed/S0vLmTWUmok'
-              } %}
-            </div>
+        <div class="timeline-slot-content accordion--content" id="timeline-slot-content--6">
+          <div class="content-image hidden-desktop">
+            {# This is the same image as above #}
+            {% include '@image' with {
+              "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+              "alt": "placeholder image alternative text",
+              "caption": "image caption"
+            } %}
           </div>
+          {% include '@paragraph' with {
+            'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+          } %}
         </div>
       </dd>
     </div>
