@@ -28,6 +28,35 @@
       padding-right: 6.75rem;
       padding-left: 6.75rem;
     }
+
+    &:not(.image) {
+      // @todo: + .teasers
+      & + .summary-box,
+      & + .table-of-contents,
+      & + .partner-block,
+      & + p {
+        @include set-layout('width-12');
+
+        position: relative;
+        margin-top: -7.5rem;
+        z-index: 1;
+
+        @include tablet {
+          margin-top: -6rem;
+        }
+      }
+
+      + .partner-block,
+      + p {
+        max-width: 100%;
+        padding: 1rem;
+        background-color: color('white');
+
+        @include tablet {
+          padding: 3rem;
+        }
+      }
+    }
   }
 
   > .full-width,
