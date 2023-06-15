@@ -1,18 +1,42 @@
 .summary-box {
-  @include theme('background-color', 'color-secondary--lighten-4', 'summary-box-background-color');
+  @include theme('background-color', 'color-secondary-light', 'summary-box-background-color');
   padding: 1.5rem;
 
   ul.icon-list {
+    @include medium-text;
     width: 100%;
     margin: 0 0 1rem;
 
+    @include tablet {
+      @include large-text;
+    }
+
+    i {
+      &::before {
+        position: relative;
+        top: 2px;
+      }
+    }
+
     time {
-      @include bold-text;
+      @include semi-bold-text;
       display: block;
+    }
+
+    li {
+      line-height: 1.6rem;
+
+      &:last-of-type {
+        @include semi-bold-text;
+      }
     }
   }
 
   .button {
     @include button-medium;
+
+    @include tablet {
+      @include button-large;
+    }
   }
 }
