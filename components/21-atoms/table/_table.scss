@@ -81,7 +81,7 @@ div.responsive-table {
     th,
     td {
       @include theme('color', 'color-zero', 'table-content-color');
-      padding: 1rem;
+      padding: .8rem;
       text-align: left;
     }
   }
