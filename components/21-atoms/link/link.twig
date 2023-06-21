@@ -16,9 +16,9 @@
     {% if title %}
       title="{{ title }}"
     {% endif %} >
-    {% spaceless %}
+    {% apply spaceless %}
       {{ text }}
-    {% endspaceless %}
+    {% endapply %}
     {% if hidden_read_more %}
       <span class="visually-hidden">
         {{ hidden_read_more }}

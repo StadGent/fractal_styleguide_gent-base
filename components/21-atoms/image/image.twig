@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
   <figure {% if modifier %} class="{{ modifier }}" {% endif %}>
     {% if ratio %}
       <div class="image-wrapper" data-ratio="{{ ratio }}">
@@ -25,4 +25,4 @@
     {% endif %}
 
   </figure>
-{% endspaceless %}
+{% endapply %}
