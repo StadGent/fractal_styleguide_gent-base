@@ -38,11 +38,9 @@ view-grid, view-list, virus, whatsapp, wheelchair-no, work
 
 Some icons have been updated, using the same machine name.
 
-### Heading atoms
-**Heading 2:** now has the blue (color-primary) color
-
 ### Modal molecule
-Default heading changed from H3 to ***H2***
+Default heading changed from H3 to ***H2*** and the close button now has the icon
+on the right by using the `icon-right`
 
 ### Highlight molecule
 No more spot images via classes. The icon can be changed in HTML markup via

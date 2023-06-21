@@ -116,9 +116,10 @@
   }
 
   &-header &-close {
+    @include theme('background-color', 'color-tertiary-pastel', 'button-secondary-background');
+
     padding: 0 .9375rem;
     border: 0;
-    background: color('cyan-pastel');
     color: color('gray');
     font-size: .8rem;
     font-weight: 600;
@@ -136,7 +137,7 @@
 
     &:hover,
     &:focus {
-      background-color: color('cyan-hover');
+      @include theme('background-color', 'color-quaternary', 'modal-close-hover-bg-color');
     }
 
     &.icon-right {
@@ -170,6 +171,7 @@
   ///
   &-actions {
     @include theme('border-color', 'color-primary--lighten-4', 'modal-action-border-bottom');
+    @include theme('background-color', 'color-none', 'modal-action-background-color');
 
     display: flex;
     flex-shrink: 0;
@@ -177,7 +179,6 @@
     width: 100%;
     padding: .8rem 1rem;
     border-top: 2px solid;
-    background-color: color('white');
     z-index: z('modal', 'actions');
 
     @include tablet {
@@ -201,7 +202,7 @@
     &,
     &:hover,
     &:focus {
-      background-color: color('cyan-light');
+      @include theme('background-color', 'color-info-light', 'modal-overlay-background-color');
     }
   }
 }
