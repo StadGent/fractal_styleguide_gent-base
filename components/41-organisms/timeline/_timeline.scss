@@ -1,10 +1,19 @@
 $timeline-border: .3rem;
 $timeline-m-left-padding: .75rem;
 $timeline-m-right-padding: 1.5rem;
-$timeline-dd-space-between-mobile: 4.25rem;
-$timeline-dd-space-between: 5.625rem;
+$timeline-dd-space-between-mobile: 3rem;
+$timeline-dd-space-between: 4.5rem;
 $timeline-dt-left-padding: 0rem; // sass-lint:disable-line zero-unit
 $timeline-dt-right-padding: 5.6rem;
+
+.timeline-wrapper {
+  max-width: 375px;
+
+  @include desktop {
+    max-width: 970px;
+    margin: 0 auto;
+  }
+}
 
 dl.timeline {
   width: 100%;
@@ -83,15 +92,19 @@ dl.timeline {
 
     &-content {
       &:not(.timeline-slot-content__img) {
-        padding-top: $gutter-width;
+        padding-top: calc($gutter-width/2);
       }
 
       .content-image {
-        padding-bottom: $gutter-width;
+        padding-bottom: calc($gutter-width/2);
 
         @include desktop {
           padding-bottom: 0;
         }
+      }
+
+      .gallery-link {
+        display: block;
       }
 
       *:last-of-type {

@@ -37,7 +37,7 @@ const babel = require('gulp-babel');
 const Color = require('color');
 const RecolorSvg = require('gulp-recolor-svg');
 const realFavicon = require('gulp-real-favicon');
-// require our configurated fractal module.
+// require our configured fractal module.
 const fractal = require('./fractal');
 
 const startup = async () => {
@@ -341,6 +341,8 @@ gulp.task('fractal:start', () => {
   server.on('error', err => logger.error(err.message));
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
+    console.log(`Local URL: ${server.url}`);
+    console.log(`Network URL: ${server.urls.sync.external}`);
   }).catch(() => logger.error('Fractal server failed to start'));
 });
 
