@@ -1,10 +1,13 @@
 .accordion {
   .accordion--button {
     @include extra-large-text;
+    @include semi-bold-text;
     @include icon(chevron-down);
+
     position: relative;
     padding-right: 1.6rem;
     color: inherit;
+    line-height: 1.3rem;
     text-align: left;
 
     &::before {
@@ -52,7 +55,7 @@ dl.accordion {
     overflow: visible;
 
     &::before {
-      @include theme('background-color', 'color-tertiary--lighten-3', 'accordion-logo-background-color');
+      @include theme('background-color', 'color-tertiary-pastel', 'button-secondary-background');
 
       position: relative;
       right: auto;

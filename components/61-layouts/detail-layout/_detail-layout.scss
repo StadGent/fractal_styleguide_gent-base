@@ -62,7 +62,11 @@
       & + .partner-block {
         @include set-layout('width-12');
 
-        margin-top: -6rem;
+        margin-top: -7.5rem;
+
+        @include tablet {
+          margin-top: -6rem;
+        }
       }
 
       + .partner-block {

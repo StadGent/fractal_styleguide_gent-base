@@ -2,11 +2,11 @@
   <div class="content-container">
     <h2 id="{{ id|default('system-breadcrumb--' ~ _self.name) }}" class="visually-hidden">{{ 'Breadcrumb' }}</h2>
     <ol class="no-style">
-      {% spaceless %}
+      {% apply spaceless %}
         {% for item in items %}
           <li>{{ item }}</li>
         {% endfor %}
-      {% endspaceless %}
+      {% endapply %}
     </ol>
   </div>
 </nav>
