@@ -1,7 +1,7 @@
 h1,
 .h1,
 %h1 {
-  @include theme('color', 'color-zero', 'heading-1-color');
+  @include theme('color', 'color-primary', 'heading-1-color');
   @include extra-bold-text();
 
   font-size: 2rem;
