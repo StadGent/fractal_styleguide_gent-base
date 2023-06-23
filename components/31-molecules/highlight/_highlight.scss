@@ -3,8 +3,8 @@
   z-index: 0;
 
   .highlight__inner {
-    @include theme('background-color', 'color-tertiary--lighten-5', 'highlight-background');
-    @include theme-content('color-tertiary--lighten-3', 'highlight-shadow-color') {
+    @include theme('background-color', 'color-tertiary-light', 'highlight-background');
+    @include theme-content('color-tertiary-pastel', 'highlight-shadow-color') {
       @include abstract-shadow('bottom', 'right', $theme-color, null, 9.5rem, 9.5rem);
 
       @include phablet {
