@@ -1,14 +1,12 @@
 <fieldset>
   <legend>Address details</legend>
-  {% include '@form-item' with {
-    "label": "Street",
-    "id": _self.name ~ "-street_id",
-    "input_component": "input",
-    "type": "text",
-    "name": _self.name ~ "-street_name",
-    "field_description": null
-  } %}
-  {% include '@form-row' with {first: {
+  {% include '@form-row' with { items: [{
+      label: 'Street',
+      id: _self.name ~ "-street_id",
+      input_component: 'input',
+      type: 'text',
+      name: _self.name ~ '-street_name'
+  }, {
     label: 'Number',
     id: 'number_id',
     input_component: 'input',
@@ -16,27 +14,26 @@
     name: 'number_name',
     modifier: 'error',
     field_message: 'Lorem ipsum dolor sit amet.'
-  }, second: {
+  }, {
     label: 'Mailbox',
     id: 'mailbox_id',
     input_component: 'input',
     type: 'text',
     name: 'mailbox_name',
     label_optional: 'Optional'
-  }} %}
-  {% include '@form-row' with {first: {
+  }, {
     label: 'Postal code',
     id: 'postal-code_id',
     input_component: 'input',
     type: 'text',
     name: 'postal-code_name'
-  }, second: {
+  }, {
     label: 'Municipality',
     id: 'municipality_id',
     input_component: 'input',
     type: 'text',
     name: 'municipality_name'
-  }} %}
+  }] } %}
   {% include '@select' with {
     id: 'select',
     label: 'Country',
