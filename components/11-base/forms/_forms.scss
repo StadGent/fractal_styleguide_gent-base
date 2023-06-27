@@ -172,12 +172,16 @@ $field-icon-padding: 2.5rem;
     left: 0;
     padding-left: 1.4rem;
     font-weight: normal;
-    line-height: 1rem;
+    line-height: 1.4rem;
     overflow: unset;
 
     &::before,
     &::after {
       position: absolute;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
       content: "";
     }
 
@@ -187,7 +191,6 @@ $field-icon-padding: 2.5rem;
       width: 1rem;
       height: 1rem;
       border: 2px solid;
-      content: "";
     }
 
     &::after {
