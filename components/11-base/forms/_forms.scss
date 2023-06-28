@@ -178,10 +178,7 @@ $field-icon-padding: 2.5rem;
     &::before,
     &::after {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      margin-top: auto;
-      margin-bottom: auto;
+      top: .15rem;
       content: "";
     }
 
