@@ -63,12 +63,6 @@ The file upload molecule (variation multiple) has the new class multiple added o
 `<section class="file-upload multiple">`.
 This change is needed to hide the 'No file chosen.' text on this variation.
 
-### Form-row molecule
-The form-row molecule is, instead of just two options, an array of `items`.
-
-### Form organism
-In fieldsets the form organism uses the form-row molecule (which functions as container) so that the labels are aligned correctly.
-
 ### Summary box organism
 Not based on Highlight molecule anymore.
 The HTML markup has been simplified.

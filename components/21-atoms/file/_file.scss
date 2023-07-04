@@ -78,14 +78,3 @@
     line-height: 1.2rem;
   }
 }
-
-//TODO: Set to .help-text instead of .form-description in Drupal Theme
-.webform_document_file {
-  .form-description {
-    @include theme('color', 'help-text-color', 'help-text-color');
-    display: block;
-    margin-top: .5rem;
-    font-size: .7rem;
-    line-height: 1.2rem;
-  }
-}
