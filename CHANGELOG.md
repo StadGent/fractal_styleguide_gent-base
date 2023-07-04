@@ -38,9 +38,6 @@ view-grid, view-list, virus, whatsapp, wheelchair-no, work
 
 Some icons have been updated, using the same machine name.
 
-### Heading atoms
-**Heading 2:** now has the blue (color-primary) color
-
 ### Accordion molecule
 This module is expanded with the option to add another container (for images, e.g. on Timeline) that is controlled with the `data-controls-img` attribute, linking it to the id of the img container.
 
