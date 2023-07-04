@@ -14,8 +14,10 @@
     z-index: 1;
 
     .cta-block__content {
-      @include theme-content('color-tertiary--lighten-3', 'cta-shadow-color') {
+      @include theme-content('color-info-pastel', 'cta-shadow-color') {
         @include abstract-shadow('bottom', 'left', $theme-color, null, 13rem, 13rem);
+
+        margin-left: 0; // Overwrite only the h-margin.
       }
     }
   }

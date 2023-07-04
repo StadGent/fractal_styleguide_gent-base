@@ -274,8 +274,12 @@ a {
   &[href^="http://"],
   &[href^="https://"] {
     &[href*="stad.gent"] {
-      &:not([download]):not(.standalone-link)::after {
-        content: none;
+      &:not([download]):not(.standalone-link) {
+        margin-right: 0;
+
+        &::after {
+          content: none;
+        }
       }
 
       ///
