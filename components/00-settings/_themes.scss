@@ -37,6 +37,7 @@ $themes: (
     // Exceptions to colors go here...
     // These should be as limited as possible though!
     'heading-inverse-primary-background-color': color('blue'),
+    'heading-2-color': color('blue'),
 
     'link-color': color('blue'),
     'link-underline-color': color('blue'),
@@ -61,5 +62,7 @@ $themes: (
     'button-secondary-active-color': color('gray'),
 
     'tag-close-button-background-hover': color('gray-light'),
+
+    'help-text-color': color('gray-medium'),
   )
 ) !default;

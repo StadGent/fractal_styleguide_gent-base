@@ -1,4 +1,5 @@
 <div class='form-row'>
-  {% include '@form-item' with first|merge({'stacked': true}) %}
-  {% include '@form-item' with second|merge({'stacked': true}) %}
+    {% for item in items %}
+        {% include '@form-item' with item|merge({'stacked': true}) %}
+    {% endfor %}
 </div>
