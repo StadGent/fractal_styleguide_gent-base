@@ -15,7 +15,6 @@ h5,
 %h5 {
   @include bold-text;
 
-  margin: 1.5rem 0;
   font-style: normal;
 
   button {
@@ -33,4 +32,28 @@ h5,
       font-size: inherit;
     }
   }
+}
+
+h1,
+.h1,
+%h1 {
+  margin: 0 0 1.5rem 0;
+}
+
+h2,
+.h2,
+%h2 {
+  margin: 0 0 1rem 0;
+}
+
+h3,
+.h3,
+%h3,
+h4,
+.h4,
+%h4,
+h5,
+.h5,
+%h5 {
+  margin: 0 0 .75rem 0;
 }
