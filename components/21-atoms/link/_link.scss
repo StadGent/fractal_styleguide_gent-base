@@ -273,42 +273,38 @@ a {
 %a-remove-indicator {
   &[href^="http://"],
   &[href^="https://"] {
-    &[href*="stad.gent"] {
-      &:not([download]):not(.standalone-link) {
-        margin-right: 0;
+    &:not([download]):not(.standalone-link) {
+      margin-right: 0;
 
-        &::after {
-          content: none;
-        }
+      &::after {
+        content: none;
       }
+    }
 
-      ///
-      /// Download links.
-      ///
-      &[download] {
-        @include icon(download, after);
-      }
+    ///
+    /// Download links.
+    ///
+    &[download] {
+      @include icon(download, after);
+    }
 
-      ///
-      /// Stand alone links.
-      ///
-      &.standalone-link:not(.no-icon) {
-        @extend %a-arrow-animation;
-        @include icon(arrow-right, after);
-      }
+    ///
+    /// Stand alone links.
+    ///
+    &.standalone-link:not(.no-icon) {
+      @extend %a-arrow-animation;
+      @include icon(arrow-right, after);
     }
   }
 
   &.button {
     &[href^="http://"]:not(.no-icon),
     &[href^="https://"]:not(.no-icon) {
-      &[href*="stad.gent"]:not(.no-icon) {
-        @extend %a-arrow-animation;
-        @include icon(arrow-right);
+      @extend %a-arrow-animation;
+      @include icon(arrow-right);
 
-        &::after {
-          content: none;
-        }
+      &::after {
+        content: none;
       }
     }
   }
