@@ -34,7 +34,11 @@ a {
     &[href^="http://"]:not(.no-icon),
     &[href^="https://"]:not(.no-icon) {
       @include button-icon;
-      @include icon(external-link);
+      @include icon(arrow-right-top);
+
+      &::after {
+        content: '';
+      }
     }
 
     &[href^="mailto:"]:not(.no-icon) {
@@ -131,8 +135,8 @@ a {
   ///
   /// External links get an indicator.
   ///
-  &[href^="http://"]:not(.no-icon):not(.tag),
-  &[href^="https://"]:not(.no-icon):not(.tag) {
+  &[href^="http://"]:not(.no-icon),
+  &[href^="https://"]:not(.no-icon) {
     @include icon(arrow-right-top, after);
     margin-right: 1.6rem;
     white-space: nowrap;
