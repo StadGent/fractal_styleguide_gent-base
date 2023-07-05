@@ -1,6 +1,5 @@
 {% block content %}
   <form action="#" method="#">
-
     {% include '@paragraph' with {
       'text': 'All fields are required, unless they are marked as optional.',
       'modifier': 'form-disclaimer'
@@ -33,71 +32,77 @@
 
     <fieldset>
       <legend>Contact details</legend>
-      {% include '@form-item' with {
-        "label": "Name",
-        "id": _self.name ~ "-name_id",
-        "input_component": "input",
-        "type": "text",
-        "name": _self.name ~ "-name_name",
-        "field_description": null
-      } %}
-      {% include '@form-item' with {
-        "label": "First name",
-        "input_component": "input",
-        "type": "text",
-        "id": _self.name ~ "-firstname_id",
-        "name": _self.name ~ "-firstname_name",
-        "field_description": null
-      } %}
-      {% include '@form-item' with {
-        "label": "E-mail address",
-        "for": "email_id",
-        "input_component": "input",
-        "type": "email",
-        "id": _self.name ~ "-email_id",
-        "name": _self.name ~ "-email_name",
-        "field_description": null
-      } %}
-      {% include '@form-item' with {
-        "label": "Phone number",
-        "for": "tel_id",
-        "input_component": "input",
-        "type": "tel",
-        "id": _self.name ~ "-tel_id",
-        "name": _self.name ~ "-tel_name",
-        "field_description": null
-      } %}
-      {% include '@form-item' with {
-        "label": "Select",
-        "for": "input_select",
-        "input_component": "input-select",
-        "type": "select",
-        "id": _self.name ~ "-input_select",
-        "name": _self.name ~ "-input_select",
-        "field_description": null,
-        "options": [
-          {
-            "label": "Option 1",
-            "name": _self.name ~ "-select",
-            "id": _self.name ~ "-select-option-1"
-          },
-          {
-            "label": "Option 2",
-            "name": _self.name ~ "-select",
-            "id": _self.name ~ "-select-option-2"
-          }
-        ]
-      } %}
-      {% include '@form-item' with {
-        "label": "Disabled",
-        "for": "input_disabled",
-        "input_component": "input",
-        "type": "text",
-        "id": _self.name ~ "-input_disabled",
-        "name": _self.name ~ "-input_disabled",
-        "field_description": null,
-        "disabled": true
-      } %}
+      {% include '@form-row' with { items: [
+        {
+          "label": "Name",
+          "id": _self.name ~ "-name_id",
+          "input_component": "input",
+          "type": "text",
+          "name": _self.name ~ "-name_name",
+          "field_description": null
+        }, {
+          "label": "First name",
+          "input_component": "input",
+          "type": "text",
+          "id": _self.name ~ "-firstname_id",
+          "name": _self.name ~ "-firstname_name",
+          "field_description": null
+        }, {
+          "label": "E-mail address",
+          "for": "email_id",
+          "input_component": "input",
+          "type": "email",
+          "id": _self.name ~ "-email_id",
+          "name": _self.name ~ "-email_name",
+          "field_description": null
+        }, {
+          "label": "Phone number",
+          "for": "tel_id",
+          "input_component": "input",
+          "type": "tel",
+          "id": _self.name ~ "-tel_id",
+          "name": _self.name ~ "-tel_name",
+          "field_description": null
+        }, {
+          "label": "Select",
+          "for": "input_select",
+          "input_component": "input-select",
+          "type": "select",
+          "id": _self.name ~ "-input_select",
+          "name": _self.name ~ "-input_select",
+          "field_description": null,
+          "options": [
+            {
+              "label": "Option 1",
+              "name": _self.name ~ "-select",
+              "id": _self.name ~ "-select-option-1"
+            },
+            {
+              "label": "Option 2",
+              "name": _self.name ~ "-select",
+              "id": _self.name ~ "-select-option-2"
+            }
+          ]
+        }, {
+          "label": "Disabled",
+          "for": "input_disabled",
+          "input_component": "input",
+          "type": "text",
+          "id": _self.name ~ "-input_disabled",
+          "name": _self.name ~ "-input_disabled",
+          "field_description": null,
+          "disabled": true
+        }, {
+          "label": "Disabled",
+          "for": "input_disabled",
+          "input_component": "input",
+          "type": "text",
+          "id": _self.name ~ "-input_disabled",
+          "name": _self.name ~ "-input_disabled",
+          "field_description": null,
+          "disabled": true
+        }
+      ]} %}
     </fieldset>
 
     {% include '@radios' with {
@@ -134,50 +139,50 @@
       <legend>Another fieldset</legend>
       <fieldset>
         <legend>Nested fieldset</legend>
-        {% include '@form-item' with {
-          "label": "Label textfield",
-          "for": "textfield_id--2",
-          "input_component": "input",
-          "type": "text",
-          "id": _self.name ~ "-textfield_id--2",
-          "name": _self.name ~ "-textfield_name--2",
-          "field_description": null
-        } %}
-        {% include '@form-item' with {
-          "label": "Label textfield",
-          "for": "textfield_id--3",
-          "input_component": "input",
-          "type": "text",
-          "id": _self.name ~ "-textfield_id--3",
-          "name": _self.name ~ "-textfield_name--3",
-          "field_description": null
-        } %}
+        {% include '@form-row' with { items: [
+          {
+            "label": "Label textfield",
+            "for": "textfield_id--2",
+            "input_component": "input",
+            "type": "text",
+            "id": _self.name ~ "-textfield_id--2",
+            "name": _self.name ~ "-textfield_name--2",
+            "field_description": null
+          }, {
+            "label": "Label textfield",
+            "for": "textfield_id--3",
+            "input_component": "input",
+            "type": "text",
+            "id": _self.name ~ "-textfield_id--3",
+            "name": _self.name ~ "-textfield_name--3",
+            "field_description": null
+          }] } %}
       </fieldset>
       <fieldset>
         <legend>And another one</legend>
-        {% include '@form-item' with {
-          "label": "Label textfield",
-          "for": "textfield_id",
-          "label_optional": "Optional",
-          "input_component": "input",
-          "type": "text",
-          "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
-          "field_error": "",
-          "description": "Description textfield.",
-          "id": _self.name ~ "-textfield_id",
-          "name": _self.name ~ "-textfield_name",
-          "modifier": "error",
-          "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam."
-        } %}
-        {% include '@form-item' with {
-          "label": "Label textfield",
-          "for": "textfield_id--1",
-          "input_component": "input",
-          "type": "text",
-          "id": _self.name ~ "-textfield_id--1",
-          "name": _self.name ~ "-textfield_name--1",
-          "field_description": null
-        } %}
+        {% include '@form-row' with { items: [
+          {
+            "label": "Label textfield",
+            "for": "textfield_id",
+            "label_optional": "Optional",
+            "input_component": "input",
+            "type": "text",
+            "field_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam. Nam pellentesque velit pharetra, accumsan ante at, gravida turpis. Cras venenatis velit ut ipsum molestie pretium.",
+            "field_error": "",
+            "description": "Description textfield.",
+            "id": _self.name ~ "-textfield_id",
+            "name": _self.name ~ "-textfield_name",
+            "modifier": "error",
+            "field_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, urna sit amet convallis rhoncus, felis ex pellentesque neque, nec ultrices dui enim ut diam."
+          }, {
+            "label": "Label textfield",
+            "for": "textfield_id--1",
+            "input_component": "input",
+            "type": "text",
+            "id": _self.name ~ "-textfield_id--1",
+            "name": _self.name ~ "-textfield_name--1",
+            "field_description": null
+          }] } %}
       </fieldset>
     </fieldset>
 
