@@ -2,13 +2,13 @@
 
 header.header {
   position: relative;
-  margin-bottom: .3rem;
-  padding: .3rem 0;
+  padding: 1rem 0;
 
   // first row
   > .content-container {
     display: flex;
     align-items: center;
+    padding-bottom: 1rem;
 
     @include tablet {
       flex-wrap: wrap;
@@ -142,21 +142,6 @@ header.header {
 
     margin: .8rem 0 .4rem;
     font-size: .9rem;
-  }
-
-  nav.breadcrumb {
-    margin-top: .4rem;
-  }
-
-  hr {
-    $span: percentage(math.div(2, 12));
-
-    position: relative;
-    max-width: $bp-max-content;
-    margin-top: .3rem;
-    margin-bottom: 2.3rem;
-    border: 0;
-    overflow: visible;
   }
 
   // Hero image, overlaps and hides breadcrumb accolade.
