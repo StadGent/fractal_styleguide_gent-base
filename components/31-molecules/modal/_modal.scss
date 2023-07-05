@@ -137,7 +137,7 @@
 
     &:hover,
     &:focus {
-      @include theme('background-color', 'color-quaternary', 'modal-close-hover-bg-color');
+      @include theme('background-color', 'color-quaternary', 'button-secondary-hover-background');
     }
 
     &.icon-right {
