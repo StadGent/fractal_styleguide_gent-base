@@ -149,6 +149,10 @@
     &.icon-left {
       @include button-icon-left;
     }
+
+    &.icon-right {
+      @include button-icon-right;
+    }
   }
 }
 
@@ -214,9 +218,11 @@
     font-size: 1.2em;
   }
 
-  &::after {
-    padding-right: .2rem;
-    content: '';
+  &:not(.icon-right) {
+    &::after {
+      padding-right: .2rem;
+      content: '';
+    }
   }
 }
 
@@ -231,6 +237,20 @@
     margin-left: 0;
     // Fix for IE11 flex order property.
     float: left;
+  }
+}
+
+///
+/// Define a button with an icon on the right side.
+///
+
+@mixin button-icon-right {
+  &::after {
+    order: unset;
+    margin-right: 0;
+    margin-left: .5rem;
+    // Fix for IE11 flex order property.
+    float: right;
   }
 }
 
