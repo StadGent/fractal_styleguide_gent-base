@@ -104,10 +104,15 @@
     }
 
     .summary-text {
-      margin: 1.5rem 0 0;
+      margin: 1.5rem 0 0; //TODO: remove top margin when Heading spacing is changed in Atom: Heiding
 
-      p:last-of-type {
-        margin-bottom: 0;
+      p {
+        font-size: 1.1rem;
+        line-height: 2rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
 
