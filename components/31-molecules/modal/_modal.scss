@@ -6,7 +6,7 @@
 
 .modal {
   @include tablet-and-below {
-    background-color: color('white');
+    @include theme('background-color', 'color-none', 'modal-background');
   }
 
   @include tablet {
@@ -92,7 +92,7 @@
     }
 
     > * {
-      background-color: color('white');
+      @include theme('background-color', 'color-none', 'modal-inner-background');
 
       &:first-of-type {
         border-top-left-radius: border-radius('radius-2');
@@ -117,10 +117,10 @@
 
   &-header &-close {
     @include theme('background-color', 'color-tertiary-pastel', 'button-secondary-background');
+    @include theme('color', 'color-zero', 'button-secondary-color');
 
     padding: 0 .9375rem;
     border: 0;
-    color: color('gray');
     font-size: .8rem;
     font-weight: 600;
     cursor: pointer;
