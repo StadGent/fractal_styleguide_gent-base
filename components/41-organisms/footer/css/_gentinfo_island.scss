@@ -3,14 +3,13 @@
   @include theme('background-color', 'color-primary', 'gentinfo-block-background');
 
   position: relative;
-  margin-top: -20rem;
-  padding: 2.25rem;
+  padding: 1.5rem;
   font-size: .8rem;
   line-height: 1.75;
 
-  @include phablet {
-    margin: -8.2rem 0 0;
-    padding: 1.5rem;
+  @include desktop {
+    margin: -8.4rem 0 0;
+    padding: 2.25rem;
     text-align: left;
   }
 

@@ -1,31 +1,19 @@
 .footer {
-  @include mobile() {
-    margin-top: 11rem;
-  }
+  margin: 3rem -1rem 0;
 
   @include desktop() {
     margin-top: 14rem;
   }
 
-  margin-top: 20rem;
-  margin-right: -$gutter-width;
-  margin-left: -$gutter-width;
-
   h4 {
     margin-top: 0;
     margin-bottom: .75rem;
-
-    @include phablet {
-      margin-top: inherit;
-      margin-bottom: .75rem;
-    }
   }
 
   .content-container {
     display: flex;
     flex-wrap: wrap;
     max-width: calc(#{$bp-max-content} + 54px);
-    padding: 0 $gutter-width;
 
     @media (min-width: $bp-max-content + 54px) {
       max-width: $bp-max-content;
@@ -35,31 +23,48 @@
   }
 
   .footer-top {
-    @include theme('background-color', 'color-quaternary--lighten-5', 'footer-background-color');
     margin-bottom: 1.2rem;
+    background-color: transparent;
+
+    @include desktop {
+      @include theme('background-color', 'color-tertiary-light', 'footer-background-color');
+    }
 
     .content-container {
       padding-top: 0;
 
       @include desktop {
-        padding-bottom: 4rem;
+        padding-bottom: 3.5rem;
       }
     }
 
     .footer--column {
+      @include theme('background-color', 'color-tertiary-light', 'footer-background-color');
       flex: 0 0 auto;
       width: span(12 of 12);
-      margin-bottom: 2.6rem;
+      padding: 1rem 1rem 3rem;
+
+      &:first-of-type {
+        padding-bottom: 1rem;
+        background-color: transparent;
+      }
+
+      &:nth-of-type(2) {
+        margin-top: -3.7rem;
+        padding-top: 4.5rem;
+        padding-bottom: 1rem;
+      }
 
       @include tablet {
-        width: span(6 of 12);
-
-        &:nth-of-type(2) {
-          margin-right: $gutter-width;
-        }
+        width: 50%;
+        margin-top: -3.7rem;
+        padding-top: 4.5rem;
 
         &:first-of-type {
           width: span(12 of 12);
+          margin-top: 0;
+          padding-top: 0;
+          background-color: transparent;
         }
       }
 
@@ -67,8 +72,11 @@
         width: span(3 of 12);
         margin-top: 2.9rem;
         margin-bottom: 0;
+        padding-bottom: 1rem;
 
+        &:nth-of-type(2),
         &:nth-of-type(3) {
+          margin-top: 0;
           margin-right: $gutter-width;
         }
 
@@ -77,6 +85,10 @@
           width: span(6 of 12);
           margin-top: 0;
         }
+      }
+
+      a {
+        @include medium-text;
       }
     }
 
@@ -88,17 +100,18 @@
     .social-list ul {
       margin: 0 -.25rem;
     }
-
   }
 
   .footer-bottom {
+    @include small-text;
+
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    padding: 0 1rem;
 
     ul {
       margin: 0;
-      font-size: .6rem;
       list-style: none;
     }
 
@@ -129,13 +142,16 @@
     .footer--column {
       width: 100%;
       margin-bottom: 1.2rem;
+      order: 2;
+
+      &.partnership {
+        order: 1;
+      }
 
       @include desktop {
-        order: 2;
         width: auto;
 
         &.partnership {
-          order: 1;
           margin-right: $gutter-width;
         }
       }
