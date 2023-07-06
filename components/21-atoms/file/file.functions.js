@@ -31,12 +31,12 @@
      */
     const updateFile = e => {
       if (!input.files.length) {
-        elem.dataset.file = options.emptyText || elem.dataset.emptyText || 'No file chosen.';
+        elem.dataset.file = options.emptyText || elem.dataset.emptyText || 'No file chosen';
         return;
       }
 
       if (input.files.length > 1) {
-        elem.dataset.file = options.multipleText || elem.dataset.multipleText || 'Multiple files.';
+        elem.dataset.file = options.multipleText || elem.dataset.multipleText || 'Multiple files';
         return;
       }
 

@@ -1,5 +1,5 @@
 .table-of-contents {
-  @include theme('background-color', 'color-tertiary--lighten-5', 'table-of-contents-background-color');
+  @include theme('background-color', 'color-tertiary-light', 'table-of-contents-background-color');
   @include medium-text;
   padding: 1.5rem;
 
