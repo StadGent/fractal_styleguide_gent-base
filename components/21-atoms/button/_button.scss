@@ -68,7 +68,7 @@
 @mixin button-extra-large {
   @include extra-large-text;
 
-  min-height: 4rem;
+  min-height: 4.1rem;
   padding: .6em 1.3em;
   letter-spacing: .03em;
   line-height: 1.7;
@@ -201,7 +201,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 .8em 0 1.2em;
-  line-height: 1.8em;
+  line-height: 1.4rem;
   text-align: left;
 
   // Padding fix specificly for IE11.
@@ -213,9 +213,8 @@
   &::before {
     order: 1;
     margin-left: .5rem;
-    // Fix for IE11 flex order property.
-    float: right;
-    font-size: 1.2em;
+    float: right; // Fix for IE11 flex order property.
+    line-height: 1.2rem;
   }
 
   &:not(.icon-right) {
