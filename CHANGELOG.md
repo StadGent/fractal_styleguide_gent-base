@@ -39,8 +39,7 @@ view-grid, view-list, virus, whatsapp, wheelchair-no, work
 Some icons have been updated, using the same machine name.
 
 ### Modal molecule
-Default heading changed from H3 to ***H2*** and the close button now has the icon
-on the right by using the `icon-right`
+Default heading changed from H3 to ***H2*** and the close button has the `.button-secondary` class
 
 ### Accordion molecule
 This module is expanded with the option to add another container (for images, e.g. on Timeline) that is controlled with the `data-controls-img` attribute, linking it to the id of the img container.

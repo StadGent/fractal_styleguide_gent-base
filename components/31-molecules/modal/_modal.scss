@@ -80,7 +80,7 @@
 
     @include tablet {
       right: 0;
-      width: $bp-max-content * .8;
+      width: 48.5rem;
       max-width: calc(100% - #{$gutter-width * 2});
       height: auto;
       min-height: 0;
@@ -115,54 +115,14 @@
     text-align: right;
   }
 
-  &-header &-close {
-    @include theme('background-color', 'color-tertiary-pastel', 'button-secondary-background');
-    @include theme('color', 'color-zero', 'button-secondary-color');
-
-    padding: 0 .9375rem;
-    border: 0;
-    font-size: .8rem;
-    font-weight: 600;
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      font-size: 1.2rem;
-    }
-
-    &::before {
-      order: 0;
-      margin: 0 .5rem 0 0;
-    }
-
-    &:hover,
-    &:focus {
-      @include theme('background-color', 'color-quaternary', 'button-secondary-hover-background');
-    }
-
-    &.icon-right {
-      &::before {
-        margin: 0;
-      }
-
-      &::after {
-        margin: 0 0 0 .5rem;
-      }
-    }
-  }
-
-  &-close {
-    cursor: pointer;
-  }
-
   ///
   /// Content
   ///
   &-content {
-    padding: 0 1rem .8rem;
+    padding: 0 $gutter-width .8rem;
 
     @include tablet {
-      padding: 0 $gutter-width .8rem;
+      padding: .8rem 3.5rem 3rem;
     }
   }
 
@@ -196,13 +156,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .7;
+    opacity: .9;
     z-index: z('modal', 'overlay');
 
     &,
     &:hover,
     &:focus {
-      @include theme('background-color', 'color-info-light', 'modal-overlay-background-color');
+      @include theme('background-color', 'color-tertiary-light', 'modal-overlay-background-color');
     }
   }
 }
