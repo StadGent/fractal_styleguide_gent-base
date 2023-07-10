@@ -127,7 +127,10 @@
         const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
         const accordionContentImage = elem.querySelector(`#${button.getAttribute('data-controls-img')}`);
         accordionContent.addEventListener('transitionend', options.transitionEnd);
-        accordionContentImage.addEventListener('transitionend', options.transitionEnd);
+
+        if (accordionContentImage) {
+          accordionContentImage.addEventListener('transitionend', options.transitionEnd);
+        }
 
         if (options.resizeEvent) {
           window.addEventListener('resize', onResize);
@@ -152,31 +155,40 @@
         return;
       }
 
+      console.log(accordionContent);
+
       if (button.getAttribute('aria-expanded') === 'true') {
         accordionContent.classList.add(options.accordionExpandedClass);
-        accordionContentImage.classList.add(options.accordionExpandedClass);
         accordionContent.setAttribute('aria-hidden', 'false');
-        accordionContentImage.setAttribute('aria-hidden', 'false');
         accordionContent.removeAttribute('hidden');
-        accordionContentImage.removeAttribute('hidden');
         expandedContent.push(accordionContent);
-        expandedContent.push(accordionContentImage);
         options.expand(button, accordionContent);
-        options.expand(button, accordionContentImage);
+        if (accordionContentImage) {
+          accordionContentImage.classList.add(options.accordionExpandedClass);
+          accordionContentImage.setAttribute('aria-hidden', 'false');
+          accordionContentImage.removeAttribute('hidden');
+          expandedContent.push(accordionContentImage);
+          options.expand(button, accordionContentImage);
+        }
       }
       else {
         accordionContent.classList.remove(options.accordionExpandedClass);
-        accordionContentImage.classList.remove(options.accordionExpandedClass);
         accordionContent.setAttribute('aria-hidden', 'true');
-        accordionContentImage.setAttribute('aria-hidden', 'true');
         if (isInitial) {
           accordionContent.setAttribute('hidden', 'hidden');
-          accordionContentImage.setAttribute('hidden', 'hidden');
         }
         expandedContent.filter(content => content !== accordionContent);
-        expandedContent.filter(content => content !== accordionContentImage);
         options.collapse(button, accordionContent);
-        options.collapse(button, accordionContentImage);
+
+        if (accordionContentImage) {
+          accordionContentImage.classList.remove(options.accordionExpandedClass);
+          accordionContentImage.setAttribute('aria-hidden', 'true');
+          if (isInitial) {
+            accordionContentImage.setAttribute('hidden', 'hidden');
+          }
+          expandedContent.filter(content => content !== accordionContentImage);
+          options.collapse(button, accordionContentImage);
+        }
       }
     };
 
@@ -202,16 +214,19 @@
           }
 
           accordionContent.classList.remove(options.accordionExpandedClass);
-          accordionContentImage.classList.remove(options.accordionExpandedClass);
           accordionContent.setAttribute('aria-hidden', 'true');
-          accordionContentImage.setAttribute('aria-hidden', 'true');
           accordionContent.setAttribute('hidden', 'hidden');
-          accordionContentImage.setAttribute('hidden', 'hidden');
           expandedContent.filter(content => content !== accordionContent);
-          expandedContent.filter(content => content !== accordionContentImage);
           options.collapse(button, accordionContent);
-          options.collapse(button, accordionContentImage);
           button.setAttribute('aria-expanded', 'false');
+
+          if (accordionContentImage) {
+            accordionContentImage.classList.remove(options.accordionExpandedClass);
+            accordionContentImage.setAttribute('aria-hidden', 'true');
+            accordionContentImage.setAttribute('hidden', 'hidden');
+            expandedContent.filter(content => content !== accordionContentImage);
+            options.collapse(button, accordionContentImage);
+          }
         }
       }
     };
