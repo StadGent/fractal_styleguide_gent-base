@@ -176,7 +176,6 @@ dl.timeline {
         position: relative;
         width: 100%;
         margin-left: 0;
-        padding-bottom: 2rem;
 
         // Fix to add whitespace to the video top and bottom areas.
         &::before,
@@ -190,13 +189,8 @@ dl.timeline {
           z-index: z('timeline', 'video', 'background');
         }
 
-        &::after {
-          @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
-        }
-
         .video {
           position: relative;
-          padding-top: 2rem;
           border: 0;
           z-index: z('timeline', 'video', 'player');
 
