@@ -225,7 +225,7 @@ dl.timeline {
 
         &:nth-child(even) {
           @include desktop {
-            padding: $timeline-dd-space-between calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding}) $timeline-dd-space-between calc(#{$gutter-width*.5});
+            padding: $timeline-dd-space-between 3.3rem $timeline-dd-space-between calc(#{$gutter-width*.5});
 
             &::after {
               display: none;
@@ -281,7 +281,7 @@ dl.timeline {
 
         &:nth-child(even) {
           @include desktop {
-            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between 3.3rem;
             grid-area: right;
           }
         }
