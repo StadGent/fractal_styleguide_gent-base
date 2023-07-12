@@ -155,8 +155,6 @@
         return;
       }
 
-      console.log(accordionContent);
-
       if (button.getAttribute('aria-expanded') === 'true') {
         accordionContent.classList.add(options.accordionExpandedClass);
         accordionContent.setAttribute('aria-hidden', 'false');
