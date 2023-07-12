@@ -25,7 +25,7 @@ $id: random(1000);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-style: normal;
-  font-size: 24px;  // fixed size for all icons
+  font-size: 24px;
   font-variant: normal;
   font-weight: normal;
   speak: none; // only necessary if not using the private unicode range (firstGlyph option)
