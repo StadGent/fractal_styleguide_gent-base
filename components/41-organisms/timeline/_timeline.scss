@@ -52,11 +52,12 @@ dl.timeline {
         font-size: inherit;
 
         @include desktop {
-          margin-left: -3rem;
+          margin-left: -2.75rem;
+          padding-left: 2.75rem;
 
           &::after {
             right: 100%;
-            width: 2.5rem;
+            width: 3rem;
             height: $timeline-border;
             background-color: color(cyan-pastel);
             content: '';
@@ -175,7 +176,6 @@ dl.timeline {
         position: relative;
         width: 100%;
         margin-left: 0;
-        padding-bottom: 2rem;
 
         // Fix to add whitespace to the video top and bottom areas.
         &::before,
@@ -189,13 +189,8 @@ dl.timeline {
           z-index: z('timeline', 'video', 'background');
         }
 
-        &::after {
-          @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
-        }
-
         .video {
           position: relative;
-          padding-top: 2rem;
           border: 0;
           z-index: z('timeline', 'video', 'player');
 
@@ -224,7 +219,7 @@ dl.timeline {
 
         &:nth-child(even) {
           @include desktop {
-            padding: $timeline-dd-space-between calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding}) $timeline-dd-space-between calc(#{$gutter-width*.5});
+            padding: $timeline-dd-space-between 3.3rem $timeline-dd-space-between calc(#{$gutter-width*.5});
 
             &::after {
               display: none;
@@ -244,8 +239,8 @@ dl.timeline {
         button {
           @include desktop {
             justify-content: flex-end;
-            margin: 0 0 0 3rem;
-            padding: 0 3rem 0 0;
+            margin: 0 0 0 2.75rem;
+            padding: 0 2.75rem 0 0;
 
             // +/- icon
             &::before {
@@ -280,7 +275,7 @@ dl.timeline {
 
         &:nth-child(even) {
           @include desktop {
-            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between 3.3rem;
             grid-area: right;
           }
         }

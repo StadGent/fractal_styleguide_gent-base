@@ -1,6 +1,5 @@
 .theme-footer {
-  margin-right: -1rem;
-  margin-left: -1rem;
+  margin: 6rem -1rem;
   padding: 0;
 
   .contact,
@@ -27,7 +26,7 @@
 
     img {
       width: auto;
-      height: 8rem;
+      height: 10rem;
     }
 
     + .newsletter,
@@ -42,6 +41,7 @@
   }
 
   .contact {
+    @include medium-text;
     margin-right: auto;
 
     @include desktop {
@@ -49,11 +49,16 @@
     }
 
     h3 {
-      margin-top: 0;
+      margin-bottom: 1.5rem;
     }
 
     .icon-list {
       margin: 0;
+
+      @include desktop {
+        column-gap: gutter();
+        column-count: 2;
+      }
 
       li:last-of-type {
         margin-bottom: 0;
@@ -63,6 +68,13 @@
         i {
           @include theme('color', 'color-primary', 'link-color');
         }
+      }
+    }
+
+    &:only-child .icon-list {
+      @include tablet {
+        column-gap: gutter();
+        column-count: 2;
       }
     }
   }
@@ -100,12 +112,13 @@
   }
 
   .newsletter {
+    @include medium-text;
     flex-grow: 1;
     max-width: 768px;
-    font-size: .8rem;
+    padding: 1.5rem;
 
     @include desktop {
-      padding-right: 2rem;
+      padding: 3rem 3.5rem;
     }
 
     .subscribe {
@@ -114,21 +127,20 @@
     }
 
     a.standalone-link {
-      display: inline-block;
-      margin-top: .5rem;
+      top: .5rem;
     }
 
     &:not(:last-child) {
       padding-bottom: 5.4rem;
 
       @include desktop {
-        padding-right: 2rem;
-        padding-bottom: 2.4rem;
+        padding-right: 6rem;
+        padding-bottom: 3rem;
       }
     }
 
     + .social {
-      @include theme('background-color', 'color-quaternary--lighten-2', 'button-secondary-background');
+      @include theme('background-color', 'color-tertiary-pastel', 'theme-footer-social-background');
 
       max-height: 11.5rem;
       margin: -3rem 1rem 0;
@@ -153,12 +165,11 @@
 
       @include tablet {
         margin: -3rem auto 0;
-        padding: 3.3rem;
+        padding: 3.35rem;
       }
 
       @include desktop {
-        margin: 3rem 0 0 -2rem;
-        padding: 3.3rem;
+        margin: 3rem 0 0 -3.5rem;
       }
     }
   }
@@ -181,6 +192,12 @@
 
     @include desktop {
       flex-wrap: nowrap;
+    }
+  }
+
+  .top {
+    & ~ .bottom {
+      margin-top: 3.6rem;
     }
   }
 

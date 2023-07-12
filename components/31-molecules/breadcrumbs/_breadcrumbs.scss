@@ -78,6 +78,11 @@
         @include theme('background-color', 'color-primary--lighten-4', 'link-hover-background');
       }
     }
+
+    &::after {
+      position: relative;
+      top: -2px;
+    }
   }
 
   &[aria-expanded="false"] {
