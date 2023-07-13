@@ -43,7 +43,7 @@ module.exports = {
       name: 'overview-title',
       context: {
         heading: 'h1',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading without background H1 desktop',
         type: 'overview-title'
       }
     },
@@ -51,7 +51,7 @@ module.exports = {
       name: 'heading-1-background-primary',
       context: {
         heading: 'h1',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading with background H1 desktop',
         type: 'bg-primary'
       }
     },
@@ -59,7 +59,7 @@ module.exports = {
       name: 'heading-2-background-primary',
       context: {
         heading: 'h2',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading with background H2 desktop',
         type: 'bg-primary'
       }
     },
@@ -67,7 +67,7 @@ module.exports = {
       name: 'heading-3-background-primary',
       context: {
         heading: 'h3',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading with background H3 desktop',
         type: 'bg-primary'
       }
     },
@@ -75,7 +75,7 @@ module.exports = {
       name: 'heading-4-background-primary',
       context: {
         heading: 'h4',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading with background H4 desktop',
         type: 'bg-primary'
       }
     },
@@ -83,7 +83,7 @@ module.exports = {
       name: 'heading-1-background-none',
       context: {
         heading: 'h1',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading with background H1 desktop',
         type: 'bg-none'
       }
     },
@@ -91,7 +91,7 @@ module.exports = {
       name: 'heading-2-background-none',
       context: {
         heading: 'h2',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading with background H2 desktop',
         type: 'bg-none'
       }
     },
@@ -99,7 +99,7 @@ module.exports = {
       name: 'heading-3-background-none',
       context: {
         heading: 'h3',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading with background H3 desktop',
         type: 'bg-none'
       }
     },
@@ -107,7 +107,7 @@ module.exports = {
       name: 'heading-4-background-none',
       context: {
         heading: 'h4',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading with background H4 desktop',
         type: 'bg-none'
       }
     }
