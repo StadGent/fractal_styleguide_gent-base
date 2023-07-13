@@ -3,33 +3,39 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  &[class^="bg-"] {
+    span {
+      padding: .1rem .5rem;
+      box-decoration-break: clone;
+    }
+  }
+
   &.bg-primary {
     span {
-      padding: 0 .5rem;
-      background-color: color('blue');
-      color: color('white');
+      @include theme('color', 'color-none', 'heading-with-bg-color');
+      @include theme('background-color', 'color-primary', 'heading-with-bg-background-color');
     }
   }
 
   &.bg-none {
     span {
-      padding: 0 .5rem;
-      background-color: color('white');
+      @include theme('background-color', 'color-none', 'heading-with-white-bg-background-color');
     }
   }
 }
 
-h1 {
-  &.bg-primary {
+h1,
+.h1 {
+  &[class^="bg-"] {
     span {
-      padding: 0 .75rem;
-    }
-  }
-
-  &.bg-none {
-    span {
-      padding: 0 .75rem;
+      padding: .125rem .75rem;
     }
   }
 }
