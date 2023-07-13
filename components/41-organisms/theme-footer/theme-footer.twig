@@ -1,7 +1,7 @@
 {% set blockContact %}
   <div class="contact">
     {% include '@heading' with {
-    'type': 'h3',
+    'heading': 'h3',
     'heading_text': 'Contact' ~ ' ' ~ theme
     } %}
 
@@ -82,7 +82,7 @@
       {% if social %}
         <div class="social">
           {% include '@heading' with {
-          'type': 'h4',
+          'heading': 'h4',
           'heading_text': 'Follow this theme site on social media'
           } %}
           <div class="social-list">
