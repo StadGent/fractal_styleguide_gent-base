@@ -1,15 +1,9 @@
 {% if type == "overview-title" %}
   <{{ heading|default('h1') }} class="overview-title">{{ heading_text }}</{{ heading|default('h1') }}>
 {% elseif type == "bg-primary" %}
-  <{{ heading_h1|default('h1') }} class="bg-primary"><span>{{ heading_text_h1 }}</span></{{ heading_h1|default('h1') }}>
-  <{{ heading_h2|default('h2') }} class="bg-primary"><span>{{ heading_text_h2 }}</span></{{ heading_h2|default('h2') }}>
-  <{{ heading_h3|default('h3') }} class="bg-primary"><span>{{ heading_text_h3 }}</span></{{ heading_h3|default('h3') }}>
-  <{{ heading_h4|default('h4') }} class="bg-primary"><span>{{ heading_text_h4 }}</span></{{ heading_h4|default('h4') }}>
+  <{{ heading|default('h1') }} class="bg-primary"><span>{{ heading_text }}</span></{{ heading|default('h1') }}>
 {% elseif type == "bg-none" %}
-  <{{ heading_h1|default('h1') }} class="bg-none"><span>{{ heading_text_h1 }}</span></{{ heading_h1|default('h1') }}>
-  <{{ heading_h2|default('h2') }} class="bg-none"><span>{{ heading_text_h2 }}</span></{{ heading_h2|default('h2') }}>
-  <{{ heading_h3|default('h3') }} class="bg-none"><span>{{ heading_text_h3 }}</span></{{ heading_h3|default('h3') }}>
-  <{{ heading_h4|default('h4') }} class="bg-none"><span>{{ heading_text_h4 }}</span></{{ heading_h4|default('h4') }}>
+  <{{ heading|default('h1') }} class="bg-none"><span>{{ heading_text }}</span></{{ heading|default('h1') }}>
 {% else %}
-  <{{ type }}>{{ heading_text }}</{{ type }}>
+  <{{ heading }}>{{ heading_text }}</{{ heading }}>
 {% endif %}
