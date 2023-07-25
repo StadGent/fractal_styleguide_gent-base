@@ -56,7 +56,8 @@
     }
   }
 
-  &.messages--error {
+  &.messages--error,
+  &.messages--crisis {
     @include theme('background-color', 'color-error-light', 'error-message-background');
     @include theme('border-color', 'color-error', 'error-message-icon-color');
 
