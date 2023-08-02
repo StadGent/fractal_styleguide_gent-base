@@ -31,13 +31,6 @@ module.exports = {
         icon: 'icon-checkmark-circle',
         modifier: 'messages--status'
       }
-    },
-    {
-      name: 'crisis',
-      context: {
-        icon: 'icon-exclamation-circle',
-        modifier: 'messages--crisis'
-      }
     }
   ]
 };
