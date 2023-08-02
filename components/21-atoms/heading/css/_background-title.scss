@@ -12,7 +12,7 @@ h6,
 .h6 {
   &[class^="bg-"] {
     span {
-      padding: .1rem .5rem;
+      padding: .125rem .5rem;
       box-decoration-break: clone;
     }
   }
@@ -26,6 +26,7 @@ h6,
 
   &.bg-none {
     span {
+      @include theme('color', 'color-zero', 'heading-with-white-bg-color');
       @include theme('background-color', 'color-none', 'heading-with-white-bg-background-color');
     }
   }
@@ -35,7 +36,7 @@ h1,
 .h1 {
   &[class^="bg-"] {
     span {
-      padding: .125rem .75rem;
+      padding: .15rem .75rem;
     }
   }
 }
