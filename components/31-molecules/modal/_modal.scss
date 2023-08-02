@@ -6,7 +6,7 @@
 
 .modal {
   @include tablet-and-below {
-    background-color: color('white');
+    @include theme('background-color', 'color-none', 'modal-background');
   }
 
   @include tablet {
@@ -77,11 +77,10 @@
     min-height: 100%;
     margin: 0 auto;
     z-index: z('modal', 'content');
-    filter: drop-shadow(0 2px 8px #{color('gray', -4, true)});
 
     @include tablet {
       right: 0;
-      width: $bp-max-content * .8;
+      width: 48.5rem;
       max-width: calc(100% - #{$gutter-width * 2});
       height: auto;
       min-height: 0;
@@ -93,7 +92,7 @@
     }
 
     > * {
-      background-color: color('white');
+      @include theme('background-color', 'color-none', 'modal-inner-background');
 
       &:first-of-type {
         border-top-left-radius: border-radius('radius-2');
@@ -116,39 +115,14 @@
     text-align: right;
   }
 
-  &-header &-close {
-    padding: 0 .4rem;
-    border: 0;
-    background: transparent;
-    color: color('gray');
-    font-size: .8rem;
-    font-weight: 400;
-    cursor: pointer;
-
-    &::before {
-      order: 0;
-      margin: 0 .5rem 0 0;
-      font-size: 1.4rem;
-    }
-
-    &:hover,
-    &:focus {
-      @include theme('background-color', 'color-primary--lighten-4', 'modal-close-hover-bg-color');
-    }
-  }
-
-  &-close {
-    cursor: pointer;
-  }
-
   ///
   /// Content
   ///
   &-content {
-    padding: 0 1rem .8rem;
+    padding: 0 $gutter-width .8rem;
 
     @include tablet {
-      padding: 0 $gutter-width .8rem;
+      padding: .8rem 3.5rem 3rem;
     }
   }
 
@@ -157,6 +131,7 @@
   ///
   &-actions {
     @include theme('border-color', 'color-primary--lighten-4', 'modal-action-border-bottom');
+    @include theme('background-color', 'color-none', 'modal-action-background-color');
 
     display: flex;
     flex-shrink: 0;
@@ -164,7 +139,6 @@
     width: 100%;
     padding: .8rem 1rem;
     border-top: 2px solid;
-    background-color: color('white');
     z-index: z('modal', 'actions');
 
     @include tablet {
@@ -182,13 +156,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .7;
+    opacity: .9;
     z-index: z('modal', 'overlay');
 
     &,
     &:hover,
     &:focus {
-      @include theme('background-color', 'color-primary--darken-3', 'modal-overlay-background-color');
+      @include theme('background-color', 'color-tertiary-light', 'modal-overlay-background-color');
     }
   }
 }

@@ -125,7 +125,12 @@
         button.addEventListener('keydown', keyDown);
 
         const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
+        const accordionContentImage = elem.querySelector(`#${button.getAttribute('data-controls-img')}`);
         accordionContent.addEventListener('transitionend', options.transitionEnd);
+
+        if (accordionContentImage) {
+          accordionContentImage.addEventListener('transitionend', options.transitionEnd);
+        }
 
         if (options.resizeEvent) {
           window.addEventListener('resize', onResize);
@@ -145,6 +150,7 @@
     const setVisibility = (button, isInitial) => {
 
       const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
+      const accordionContentImage = elem.querySelector(`#${button.getAttribute('data-controls-img')}`);
       if (!accordionContent) {
         return;
       }
@@ -155,6 +161,13 @@
         accordionContent.removeAttribute('hidden');
         expandedContent.push(accordionContent);
         options.expand(button, accordionContent);
+        if (accordionContentImage) {
+          accordionContentImage.classList.add(options.accordionExpandedClass);
+          accordionContentImage.setAttribute('aria-hidden', 'false');
+          accordionContentImage.removeAttribute('hidden');
+          expandedContent.push(accordionContentImage);
+          options.expand(button, accordionContentImage);
+        }
       }
       else {
         accordionContent.classList.remove(options.accordionExpandedClass);
@@ -164,6 +177,16 @@
         }
         expandedContent.filter(content => content !== accordionContent);
         options.collapse(button, accordionContent);
+
+        if (accordionContentImage) {
+          accordionContentImage.classList.remove(options.accordionExpandedClass);
+          accordionContentImage.setAttribute('aria-hidden', 'true');
+          if (isInitial) {
+            accordionContentImage.setAttribute('hidden', 'hidden');
+          }
+          expandedContent.filter(content => content !== accordionContentImage);
+          options.collapse(button, accordionContentImage);
+        }
       }
     };
 
@@ -183,6 +206,7 @@
           }
 
           const accordionContent = dropdowns[i].querySelector(`#${button.getAttribute('aria-controls')}`);
+          const accordionContentImage = dropdowns[i].querySelector(`#${button.getAttribute('data-controls-img')}`);
           if (!accordionContent) {
             return;
           }
@@ -193,6 +217,14 @@
           expandedContent.filter(content => content !== accordionContent);
           options.collapse(button, accordionContent);
           button.setAttribute('aria-expanded', 'false');
+
+          if (accordionContentImage) {
+            accordionContentImage.classList.remove(options.accordionExpandedClass);
+            accordionContentImage.setAttribute('aria-hidden', 'true');
+            accordionContentImage.setAttribute('hidden', 'hidden');
+            expandedContent.filter(content => content !== accordionContentImage);
+            options.collapse(button, accordionContentImage);
+          }
         }
       }
     };

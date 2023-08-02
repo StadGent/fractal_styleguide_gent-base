@@ -1,10 +1,19 @@
-$timeline-border: 3px;
-$timeline-dot-width: 16px;
-$timeline-m-left-padding: 1.5rem;
-$timeline-m-right-padding: 2.5rem;
-$timeline-dt-size: 11.5rem;
-$timeline-dt-left-padding: .5rem;
-$timeline-dt-right-padding: 5rem;
+$timeline-border: .3rem;
+$timeline-m-left-padding: .75rem;
+$timeline-m-right-padding: 1.5rem;
+$timeline-dd-space-between-mobile: 3rem;
+$timeline-dd-space-between: 4.5rem;
+$timeline-dt-left-padding: 0rem; // sass-lint:disable-line zero-unit
+$timeline-dt-right-padding: 5.6rem;
+
+.timeline-wrapper {
+  max-width: 375px;
+
+  @include desktop {
+    max-width: 970px;
+    margin: 0 auto;
+  }
+}
 
 dl.timeline {
   width: 100%;
@@ -13,129 +22,21 @@ dl.timeline {
   .timeline-slot {
     display: grid;
     position: relative;
-    grid-template-columns: [item-start] 1fr;
+    grid-template-areas:
+    "title"
+    "left";
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
 
     @include desktop {
-      grid-template-columns: span(2 of 12) [title-start] 16rem [item-start] 1fr span(1 of 12);
-    }
-
-    // Alternating timeline-slots get another background color.
-    &:nth-child(2n+1) {
-      @include theme('background-color', 'color-primary--lighten-5', 'timeline-slot-alternating-background');
-
-      // Fix for video on alternating timeline-slots.
-      > dd .video-wrapper::after {
-        @include theme('background-color', 'color-primary--lighten-5', 'timeline-slot-alternating-background');
-      }
-    }
-
-    // First timeline-slot specific styling.
-    &:first-of-type {
-
-      // First definition description inside the first timeline-slot.
-      > dd:first-of-type {
-        @include desktop {
-          padding-top: 2rem;
-        }
-
-        // Fix whitespace.
-        .timeline-slot-header {
-          margin-top: -.4rem;
-          padding-top: 0;
-        }
-      }
-
-      > dt:first-of-type {
-        padding-bottom: 1.2rem;
-
-        @include desktop {
-          margin-bottom: 0;
-          padding-top: 1.6rem;
-        }
-
-        &::before {
-          content: none;
-        }
-      }
-    }
-
-    // Last timeline-slot last definition description specific styling.
-    &:last-of-type {
-      > dd:last-of-type {
-        padding-bottom: 2rem;
-
-        // Horizontal timeline end.
-        &::before {
-          @include theme('border-color', 'color-primary', 'timeline-line-color');
-
-          position: absolute;
-          bottom: 2rem;
-          left: calc(#{$timeline-m-left-padding} - .5rem - 1px);
-          width: 1rem;
-          border-bottom: $timeline-border solid;
-          content: '';
-
-          @include desktop {
-            left: calc(#{$timeline-dt-left-padding} - .5rem - 1px);
-          }
-        }
-
-        &::after {
-          bottom: 2rem;
-        }
-      }
+      grid-template-areas:
+      "title title"
+      "left  right";
+      grid-template-columns: 1fr 1fr;
     }
 
     // Timeline-slot title styling.
     &-title {
-
-      &::before,
-      button::after {
-
-        @include theme('background-color', 'color-secondary', 'timeline-slot-indicator-background');
-        @include theme('border-color', 'color-primary', 'timeline-slot-indicator-border-color');
-
-        display: block;
-        position: absolute;
-        top: .2rem;
-        left: calc(-#{$timeline-m-right-padding} - #{$timeline-dot-width} / 2);
-        width: $timeline-dot-width;
-        height: $timeline-dot-width;
-        transition: background-color .2s ease-in-out;
-        border: $timeline-border solid;
-        border-radius: 100%;
-        content: '';
-        z-index: z('timeline', 'dots');
-
-        @include desktop {
-          left: calc(-#{$timeline-dt-right-padding} - #{$timeline-dot-width} / 2);
-        }
-      }
-
-      button {
-        width: 100%;
-        margin-left: -2em;
-        padding-left: 2em;
-        color: inherit;
-        font-size: inherit;
-
-        &::before {
-          position: absolute;
-          left: 0;
-          padding-left: .2em;
-          font-size: 1.2rem;
-          line-height: .9;
-        }
-
-        &::after {
-          left: calc(-#{$timeline-m-right-padding} - #{$timeline-dot-width} / 2 + 2em);
-
-          @include desktop {
-            left: calc(-#{$timeline-dt-right-padding} - #{$timeline-dot-width} / 2 + 2em);
-          }
-        }
-      }
-
       position: relative;
       width: 100%;
       margin: .2rem 0;
@@ -143,15 +44,41 @@ dl.timeline {
       background: transparent;
       line-height: 1.2;
 
-      button:hover::after,
-      button:focus::after {
-        @include theme('background-color', 'color-primary--lighten-2', 'timeline-slot-active-indicator-background');
-      }
+      button {
+        width: 100%;
+        margin-left: -2.25rem;
+        padding-left: 2.25rem;
+        color: inherit;
+        font-size: inherit;
 
-      button[aria-expanded=true]::after {
-        @include theme('background-color', 'color-primary', 'timeline-slot-active-indicator-background');
-      }
+        @include desktop {
+          margin-left: -2.75rem;
+          padding-left: 2.75rem;
 
+          &::after {
+            right: 100%;
+            width: 3rem;
+            height: $timeline-border;
+            background-color: color(cyan-pastel);
+            content: '';
+            z-index: -2;
+          }
+        }
+
+        &::before,
+        &::after {
+          position: absolute;
+        }
+
+        // +/- icon
+        &::before {
+          left: 0;
+          min-height: 0;
+          font-size: 1.2rem;
+          line-height: 30.8px;
+          z-index: -1;
+        }
+      }
     }
 
     &-date {
@@ -164,25 +91,25 @@ dl.timeline {
       width: 100%;
     }
 
-    &-header {
-      margin-bottom: $gutter-width;
-      padding-top: .5rem;
-
-      @include desktop {
-        padding-top: 2rem;
-      }
-    }
-
     &-content {
+      &:not(.timeline-slot-content__img) {
+        padding-top: calc($gutter-width/2);
+      }
+
+      .content-image {
+        padding-bottom: calc($gutter-width/2);
+
+        @include desktop {
+          padding-bottom: 0;
+        }
+      }
+
+      .gallery-link {
+        display: block;
+      }
+
       *:last-of-type {
         margin-bottom: 0;
-      }
-
-      &::after {
-        display: block;
-        position: relative;
-        height: 1.6rem;
-        content: '';
       }
     }
 
@@ -194,70 +121,54 @@ dl.timeline {
       left: 0;
       width: 100%;
       margin: 0;
-      padding: 1.5rem calc(#{$timeline-m-left-padding} - #{$timeline-dot-width} / 2) .5rem;
-      grid-column-start: item-start;
-      justify-self: end;
+      text-align: left;
+      grid-area: title;
 
       @include desktop {
-        width: $timeline-dt-size;
-        padding: 2rem 1.2rem 0 0;
-        text-align: right;
-        grid-column-start: title-start;
+        text-align: center;
       }
 
-      &::before {
-        @include theme('border-color', 'color-primary', 'timeline-line-color');
+      .dt-title {
+        @include theme('background-color', 'color-secondary', 'timeline-dt-bg-color');
 
-        position: absolute;
-        top: 0;
-        left: calc(#{$timeline-m-left-padding} - 2px);
-        height: 1rem;
-        border-left: $timeline-border solid;
-        content: '';
-        @include desktop {
-          display: none;
-        }
+        display: inline-block;
+        margin: 0;
+        padding: 2px 10px;
       }
     }
 
     > dd {
       @include theme('border-color', 'color-primary', 'timeline-line-color');
 
-      display: flex;
       position: relative;
-      flex-wrap: wrap;
       width: 100%;
       max-width: none;
       margin: 0;
-      padding: 0 calc(#{$gutter-width*.5}) 0 calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
-      grid-column-start: item-start;
-
-      .accordion--content {
-        margin-left: 0;
-      }
-
-      @include desktop {
-        margin: 0;
-        padding: 0 calc(#{$gutter-width*.5}) 0 calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
-      }
+      padding: $timeline-dd-space-between-mobile calc(#{$gutter-width*.5}) $timeline-dd-space-between-mobile calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
+      grid-area: left;
 
       &::after {
-        @include theme('border-color', 'color-primary', 'timeline-line-color');
+        @include theme('border-color', 'color-tertiary-pastel', 'timeline-line-color');
 
         position: absolute;
         top: 0;
         bottom: 0;
-        left: calc(#{$timeline-m-left-padding} - 2px);
+        left: $timeline-m-left-padding;
         border-left: $timeline-border solid;
         content: '';
+        z-index: -2;
 
         @include desktop {
-          left: calc(#{$timeline-dt-left-padding} - 2px);
+          left: calc(#{$timeline-dt-left-padding} - #{$timeline-border} / 2);
         }
       }
 
       &.active::before {
-        @include theme('background-color', 'color-primary', 'timeline-slot-active-indicator-background');
+        @include theme('background-color', 'color-tertiary-pastel', 'timeline-slot-active-indicator-background');
+      }
+
+      .accordion--content {
+        margin-left: 0;
       }
 
       // Video component styling inside a timeline-slot.
@@ -265,7 +176,6 @@ dl.timeline {
         position: relative;
         width: 100%;
         margin-left: 0;
-        padding-bottom: 2rem;
 
         // Fix to add whitespace to the video top and bottom areas.
         &::before,
@@ -279,13 +189,8 @@ dl.timeline {
           z-index: z('timeline', 'video', 'background');
         }
 
-        &::after {
-          @include theme('background-color', 'color-secondary', 'timeline-slot-default-background');
-        }
-
         .video {
           position: relative;
-          padding-top: 2rem;
           border: 0;
           z-index: z('timeline', 'video', 'player');
 
@@ -299,6 +204,114 @@ dl.timeline {
             }
           }
         }
+      }
+    }
+
+    // Alternating timeline-slots get alternating styling (left/right).
+    &:nth-child(odd) {
+      > dd {
+        &:nth-child(odd) {
+          @include desktop {
+            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+            grid-area: right;
+          }
+        }
+
+        &:nth-child(even) {
+          @include desktop {
+            padding: $timeline-dd-space-between 3.3rem $timeline-dd-space-between calc(#{$gutter-width*.5});
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      @include desktop {
+        text-align: right;
+      }
+
+      // Timeline-slot title styling.
+      .timeline-slot-title {
+        button {
+          @include desktop {
+            justify-content: flex-end;
+            margin: 0 0 0 2.75rem;
+            padding: 0 2.75rem 0 0;
+
+            // +/- icon
+            &::before {
+              right: 0;
+              left: auto;
+              margin: 0 0 0 .75rem;
+              padding-right: .2em;
+            }
+          }
+        }
+      }
+
+      > dd {
+        &:nth-child(odd) {
+          @include desktop {
+            padding: $timeline-dd-space-between calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding}) $timeline-dd-space-between calc(#{$gutter-width*.5});
+
+            .timeline-slot-title {
+              button {
+                &::after {
+                  right: auto;
+                  left: 100%;
+                }
+              }
+            }
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          @include desktop {
+            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between 3.3rem;
+            grid-area: right;
+          }
+        }
+      }
+    }
+
+    // First timeline-slot specific styling.
+    &:first-of-type {
+
+      // First definition description inside the first timeline-slot.
+      > dd:first-of-type {
+        // Fix whitespace.
+        .timeline-slot-header {
+          margin-top: -.4rem;
+          padding-top: 0;
+        }
+      }
+
+      > dt:first-of-type {
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    // Last timeline-slot last definition description specific styling.
+    &:last-of-type {
+      > dd {
+        &:nth-child(odd),
+        &:nth-child(even) {
+          padding-bottom: 0;
+        }
+      }
+
+      .timeline-slot-content {
+        padding-bottom: $gutter-width;
       }
     }
   }
