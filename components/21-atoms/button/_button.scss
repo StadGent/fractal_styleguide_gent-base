@@ -29,6 +29,8 @@
 ///
 @mixin button-medium {
   @include medium-text;
+
+  padding: 10px 15px;
 }
 
 ///
@@ -61,7 +63,7 @@
 @mixin button-extra-large {
   @include extra-large-text;
 
-  padding: 20px 30px;
+  padding: 10px 26px;
   line-height: 1.7;
 
   &::before {
