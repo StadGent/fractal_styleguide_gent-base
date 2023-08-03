@@ -65,6 +65,10 @@ The file upload molecule (variation multiple) has the new class multiple added o
 `<section class="file-upload multiple">`.
 This change is needed to hide the 'No file chosen.' text on this variation.
 
+### Partner block molecule
+* Not based on Highlight molecule anymore
+* Title is now an `h2` instead of an h3
+* `.single-partner` becomes `.partners` class because styling changes are determined based on wrapper class `.partner__single` or `.partner__multiple`
 
 ### Timeline organism
 **Date** is now an h3 and the **timeline-slot-title** is now an h4.
@@ -72,6 +76,7 @@ This change is needed to hide the 'No file chosen.' text on this variation.
 There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop.
 
 Both the image and the content go into separate `<dd>` containers and are alternated (left/right). Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
+
 
 ### Summary box organism
 Not based on Highlight molecule anymore.
