@@ -21,11 +21,6 @@ a {
     border-bottom: 0;
     background-image: inherit;
 
-    &::before,
-    &::after {
-      line-height: 1.4em;
-    }
-
     &:not([class*="icon"]) {
       @include button-icon;
       @include icon(arrow-right);
