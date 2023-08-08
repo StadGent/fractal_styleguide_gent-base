@@ -175,6 +175,7 @@ ul {
     }
   }
 
+  // @Todo: if not used anymore, replace by label atom in an inline list.
   &.label-list {
     display: flex;
     flex-wrap: wrap;

@@ -17,9 +17,6 @@
 ///
 @mixin button-small {
   @include small-text;
-
-  min-height: 1.8rem;
-  letter-spacing: .02em;
 }
 
 ///
@@ -33,8 +30,7 @@
 @mixin button-medium {
   @include medium-text;
 
-  min-height: 2.2rem;
-  letter-spacing: .025em;
+  padding: 10px 15px;
 }
 
 ///
@@ -48,11 +44,10 @@
 @mixin button-large {
   @include large-text;
 
-  min-height: 2.6rem;
-  letter-spacing: .03em;
+  padding: 10px 20px;
 
   &::before {
-    font-size: 1.4em;
+    font-size: .9rem;
   }
 }
 
@@ -68,13 +63,11 @@
 @mixin button-extra-large {
   @include extra-large-text;
 
-  min-height: 4rem;
-  padding: .6em 1.3em;
-  letter-spacing: .03em;
+  padding: 10px 26px;
   line-height: 1.7;
 
   &::before {
-    font-size: 1.8em;
+    font-size: 1.44rem;
   }
 }
 
@@ -114,7 +107,7 @@
   @include button-medium; // Default.
   @include bold-text;
 
-  padding: 0 1em;
+  padding: 10px;
   font-family: $default-font-family;
   text-align: center;
   cursor: pointer;
@@ -148,10 +141,6 @@
 
     &.icon-left {
       @include button-icon-left;
-    }
-
-    &.icon-right {
-      @include button-icon-right;
     }
   }
 }
@@ -200,8 +189,8 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  padding: 0 .8em 0 1.2em;
-  line-height: 1.8em;
+  padding: 6px 10px;
+  line-height: 1.4rem;
   text-align: left;
 
   // Padding fix specificly for IE11.
@@ -212,17 +201,9 @@
 
   &::before {
     order: 1;
-    margin-left: .5rem;
-    // Fix for IE11 flex order property.
-    float: right;
-    font-size: 1.2em;
-  }
-
-  &:not(.icon-right) {
-    &::after {
-      padding-right: .2rem;
-      content: '';
-    }
+    margin-left: 8px;
+    float: right; // Fix for IE11 flex order property.
+    line-height: 1.2rem;
   }
 }
 
@@ -233,27 +214,12 @@
 @mixin button-icon-left {
   &::before {
     order: unset;
-    margin-right: .5rem;
+    margin-right: 8px;
     margin-left: 0;
     // Fix for IE11 flex order property.
     float: left;
   }
 }
-
-///
-/// Define a button with an icon on the right side.
-///
-
-@mixin button-icon-right {
-  &::after {
-    order: unset;
-    margin-right: 0;
-    margin-left: .5rem;
-    // Fix for IE11 flex order property.
-    float: right;
-  }
-}
-
 
 .button,
 input[type="button"],

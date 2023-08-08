@@ -2,12 +2,8 @@
 
 ## UX & accessibility
 
-A label tells the user what the corresponding input field means.
+A label is used to label content with a corresponding icon. 
+For example a teaser.
 
 * Use short and descriptive labels so users can quickly scan your form.
-* Labels should be top aligned to their corresponding input fields.
-* All form elements must have a label.
-* Labels are visually and syntactically related to the form element.
-
-
-
+* A label always has an icon.

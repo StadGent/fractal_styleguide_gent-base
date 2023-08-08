@@ -6,7 +6,7 @@
   {% set describedBy = id ~ "-message" %}
 {% endif %}
 <div class="form-item {{ modifier ? ' ' ~ modifier : '' }}{{ stacked ? ' stacked' : '' }}">
-  {% include '@label' with {
+  {% include '@form-label' with {
     "label": label,
     "for": id,
     "label_optional": label_optional
