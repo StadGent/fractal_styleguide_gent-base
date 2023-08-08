@@ -9,7 +9,7 @@
     {% endif %}
 
     {% include '@heading' with {
-      'type': 'h1',
+      'heading': 'h1',
       'heading_text': heading_text
     } %}
 
@@ -23,7 +23,7 @@
 
     {% if popular_topics %}
       {% include '@heading' with {
-        'type': 'h4',
+        'heading': 'h4',
         'heading_text': 'Most searched topics'
       } %}
       {% include '@tag-list' with {

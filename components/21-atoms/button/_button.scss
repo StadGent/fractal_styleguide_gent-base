@@ -142,10 +142,6 @@
     &.icon-left {
       @include button-icon-left;
     }
-
-    &.icon-right {
-      @include button-icon-right;
-    }
   }
 }
 
@@ -224,21 +220,6 @@
     float: left;
   }
 }
-
-///
-/// Define a button with an icon on the right side.
-///
-
-@mixin button-icon-right {
-  &::after {
-    order: unset;
-    margin-right: 0;
-    margin-left: 8px;
-    // Fix for IE11 flex order property.
-    float: right;
-  }
-}
-
 
 .button,
 input[type="button"],

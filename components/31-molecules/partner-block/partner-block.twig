@@ -1,20 +1,21 @@
-{% set content %}
-  {% if title %}
-    {% include '@heading' with {
-      'type': 'h3',
-      'heading_text': title
-    } %}
-  {% endif %}
+<div class="partner-block {{ single_partner ? 'partner__single' : 'partner__multiple' }}">
+  <div class="intro">
+    {% if title %}
+      {% include '@heading' with {
+        'type': 'h2',
+        'heading_text': title
+      } %}
+    {% endif %}
 
-  {% if description %}
-    {% include '@paragraph' with {
-      'text': description
-    } %}
-  {% endif %}
-
+    {% if description %}
+      {% include '@paragraph' with {
+        'text': description
+      } %}
+    {% endif %}
+  </div>
 
   {% if single_partner %}
-    <div class="single-partner">
+    <div class="partners">
       <a href="#" title="Link to the OCMW Ghent website. ">
         {% include '@image' with {
           src: '/styleguide/img/stock/ocmw-logo.svg' | path,
@@ -40,9 +41,4 @@
       </ul>
     </div>
   {% endif %}
-{% endset %}
-
-{% include "@highlight--no-image" with {
-  content: content,
-  classes: ['partner-block']
-} %}
+</div>
