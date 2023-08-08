@@ -177,7 +177,7 @@ a {
   &::before {
     padding-right: .2rem;
     animation: arrow-reverse .5s 1;
-    animation-fill-mode: reverse;
+    animation-fill-mode: revert;
   }
 
   &:focus,
@@ -196,25 +196,25 @@ a {
 
   @keyframes arrow {
     0% {
-      padding-right: .2rem;
-      padding-left: 0;
+      padding-right: .4rem;
+      padding-left: .2rem;
     }
 
     100% {
-      padding-right: 0;
-      padding-left: .2rem;
+      padding-right: .2rem;
+      padding-left: .4rem;
     }
   }
 
   @keyframes arrow-reverse {
     0% {
-      padding-right: 0;
-      padding-left: .2rem;
+      padding-right: .2rem;
+      padding-left: .4rem;
     }
 
     100% {
-      padding-right: .2rem;
-      padding-left: 0;
+      padding-right: .4rem;
+      padding-left: .2rem;
     }
   }
 }
