@@ -9,21 +9,38 @@
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__second">
-      <h3>{{ title }}</h3>
+      {% if title_icon %}
+        <i class="icon-{{ title_icon }}" aria-hidden="true"></i>
+      {% endif %}
+
+      {% include '@heading' with {
+        'heading': 'h4',
+        'heading_text': title,
+        'type': 'bg-none'
+      } %}
+
+      {% if tagList and tags_position == 'bottom' %}
+        {% include '@tag-list' with {
+          tags: tagList,
+          link: null
+        } %}
+      {% endif %}
 
       {% if event_date or published_date %}
         {% if event_date %}
           {# Events can consist of two timestamps, so we wrap it in a span. #}
-          <div class="event">
+          <div class="date">
             <span>
-              <time datetime="{{ event_date.datetime_1 }}">{{ event_date.text_1  }}</time>
+              <time datetime="{{ event_date.datetime_1 }}">{{ event_date.text_1 }}</time>
               {% if event_date.datetime_2 and event_date.text_2 %}
-                &nbsp;<time datetime="{{ event_date.datetime_2 }}">{{ event_date.text_2  }}</time>
+                &nbsp;<time datetime="{{ event_date.datetime_2 }}">{{ event_date.text_2 }}</time>
               {% endif %}
             </span>
           </div>
         {% else %}
-          <time class="published" datetime="{{ teaser_datetime }}" pubdate="pubdate">{{ published_date }}</time>
+          <div class="date">
+            <time class="published" datetime="{{ teaser_datetime }}" pubdate="pubdate">{{ published_date }}</time>
+          </div>
         {% endif %}
       {% endif %}
 
@@ -33,26 +50,17 @@
         } %}
       {% endif %}
 
-      {% if telephone or teaser_email %}
+      {% if list %}
         <ul class="teaser-links">
-          {% if telephone %}
+          {% for list_item in list %}
             <li>
               {% include '@link' with {
-                'text': telephone,
-                'link': 'tel:'~telephone,
+                'text': list_item,
+                'link': '#',
                 'modifier': 'no-icon'
               } %}
             </li>
-          {% endif %}
-          {% if teaser_email %}
-            <li>
-              {% include '@link' with {
-                'text': teaser_email,
-                'link': 'mailto:'~teaser_email,
-                'modifier': 'no-icon'
-              } %}
-            </li>
-          {% endif %}
+          {% endfor %}
         </ul>
       {% endif %}
 
@@ -67,10 +75,17 @@
     </div>
     <div class="content__first">
       {% if label_text %}
-        <span class="teaser-label">
-          <i class="icon-calendar"></i>
-          <span>{{ label_text }}</span>
-        </span>
+        {% include '@label' with {
+          'label': label_text,
+          'icon': 'icon-tag'
+        } %}
+      {% endif %}
+
+      {% if tagList and tags_position == 'top' %}
+        {% include '@tag-list' with {
+          tags: tagList,
+          link: null
+        } %}
       {% endif %}
 
       {% if image_src or image_placeholders %}
@@ -80,18 +95,8 @@
             alt_text: image_alt_text,
             ratio: image_ratio
           } %}
-
-          <div class="accolade-inverse bottom-left"></div>
         </div>
       {% endif %}
-
-      {% if tagList %}
-        {% include '@tag-list' with {
-          tags: tagList,
-          link: null
-        } %}
-      {% endif %}
-
     </div>
   </article>
   <a href="{{ link }}" class="teaser-overlay-link" tabindex="-1" aria-hidden="true">{{ title }}</a>

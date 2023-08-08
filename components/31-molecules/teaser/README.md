@@ -16,8 +16,8 @@ A teaser can consist of the following parts:
 
 * Teaser image (optional)
 * Label with icon (optional, typically to indicate a special type or category of content in the collection, for instance, events in a news and events overview)
-* Tags (optional, one or more, typically to indicate content that is related to a certain subject)
 * Teaser title (required)
+* Tags (optional, one or more, typically to indicate content that is related to a certain subject)
 * Event date (optional, only for events)
 * Teaser summary text or content (optional)
 * List of secondary teaser links (optional)
