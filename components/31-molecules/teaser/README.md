@@ -27,6 +27,10 @@ The entire teaser block is clickable. When clicking the teaser block, the primar
 
 The secondary teaser links inside the teaser block are also clickable. When clicking a secondary teaser link, that links is followed. When not clicking on a secondary teaser link but anywhere else in the teaser block, the primary teaser link is followed.
 
+When using teasers without image, either set a body class `teaser--no-images` or add the `no-image` class to the teaser element.
+
+Within a teaser grid, always use the same teaser styles.
+
 ## Accessibility
 
 * Do not repeat links, links inside one molecule must have unique destinations.

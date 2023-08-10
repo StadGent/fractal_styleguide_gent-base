@@ -38,14 +38,16 @@ view-grid, view-list, virus, whatsapp, wheelchair-no, work
 
 Some icons have been updated, using the same machine name.
 
-### Heading atoms
-**Heading 2:** now has the blue (color-primary) color
+### Label icon
+This element is new. Existing labels such as on teasers can be replaced by this
+atom. See teaser markup changes.
+
+### Modal molecule
+Default heading changed from H3 to ***H2*** and the close button now has the icon
+on the right by using the `icon-right`
 
 ### Accordion molecule
 This module is expanded with the option to add another container (for images, e.g. on Timeline) that is controlled with the `data-controls-img` attribute, linking it to the id of the img container.
-
-### Modal molecule
-Default heading changed from H3 to ***H2***
 
 ### Highlight molecule
 No more spot images via classes. The icon can be changed in HTML markup via
@@ -68,6 +70,20 @@ The file upload molecule (variation multiple) has the new class multiple added o
 `<section class="file-upload multiple">`.
 This change is needed to hide the 'No file chosen.' text on this variation.
 
+### Partner block molecule
+* Not based on Highlight molecule anymore
+* Title is now an `h2` instead of an h3
+* `.single-partner` becomes `.partners` class because styling changes are determined based on wrapper class `.partner__single` or `.partner__multiple`
+
+### Teaser molecule
+There are multiple variations of teasers instead of just one. Pick the right
+variation for your use case.
+- Teasers without image now need the teaser class `no-image` for correct styling.
+- Teaser titles are now `h4`.
+- Event dates have the class `date` instead of `event`.
+- Labels follow the markup of the new atom "Label". See label atom changes.
+- Tags list moved to below the teaser title, except for the square variant.
+- Accolade markup should be deleted.
 
 ### Timeline organism
 **Date** is now an h3 and the **timeline-slot-title** is now an h4.
