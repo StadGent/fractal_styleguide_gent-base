@@ -80,8 +80,10 @@ There are multiple variations of teasers instead of just one. Pick the right
 variation for your use case.
 - Teasers without image now need the teaser class `no-image` for correct styling.
 - Teaser titles are now `h4`.
+- Event dates have the class `date` instead of `event`.
 - Labels follow the markup of the new atom "Label". See label atom changes.
 - Tags list moved to below the teaser title, except for the square variant.
+- Accolade markup should be deleted.
 
 ### Timeline organism
 **Date** is now an h3 and the **timeline-slot-title** is now an h4.

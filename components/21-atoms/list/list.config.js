@@ -61,13 +61,6 @@ module.exports = {
       }
     },
     {
-      name: 'List with small checkmarks',
-      handle: 'list-with-small-checkmarks',
-      context: {
-        type: 'checkmark-list-small'
-      }
-    },
-    {
       name: 'List with icons',
       handle: 'list-with-icons',
       context: {
