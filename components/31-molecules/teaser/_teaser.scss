@@ -20,7 +20,7 @@
     @include small-text();
     @include theme('color', 'color-zero', 'help-text-color');
     position: relative;
-    margin: 0 0 -10px;
+    margin: 10px 0;
     z-index: 3;
 
     &::before {
@@ -42,8 +42,12 @@
   }
 
   .teaser-links {
-    margin: 0 0 20px;
+    margin: 20px 0;
     list-style-type: none;
+
+    li {
+      @include medium-text();
+    }
 
     a {
       @include normal-text();
@@ -74,6 +78,7 @@
 
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     a {
       position: relative;
@@ -96,12 +101,16 @@
     .content__second {
       position: relative;
       order: 2;
+      height: 100%;
       padding: 0 20px 20px;
 
       > i {
         float: left;
-        font-size: 38px;
         line-height: 1;
+
+        &::before {
+          font-size: 38px;
+        }
 
         @include phablet {
           float: none;
@@ -119,17 +128,24 @@
       p {
         @include theme('color', 'default-text-color', 'help-text-color');
         margin: 20px 0;
+        line-height: 1.4rem;
       }
     }
   }
 
-  &.no-image {
+  &.no-image,
+  .teaser--no-images & {
     h4 {
       margin: 0;
     }
 
     .content__second {
       padding: 0;
+    }
+
+    // Make sure the image is hidden. But it's better not to load it.
+    .figure-wrapper {
+      display: none;
     }
   }
 
@@ -139,7 +155,8 @@
       padding: 0 20px 20px;
     }
 
-    &.no-image {
+    &.no-image,
+    .teaser--no-images & {
       h4 {
         margin: 0;
       }
@@ -160,6 +177,7 @@
       bottom: 0;
       order: 1;
       width: 100%;
+      height: auto;
       padding: 20px 50px 20px 20px;
 
       h4 {
@@ -174,6 +192,7 @@
         @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
         display: inline-block;
         height: 1.8rem;
+        margin: 0;
         padding: 0 10px;
         line-height: 1;
       }
@@ -182,7 +201,7 @@
         @include read-more-icon-link();
 
         position: absolute;
-        right: 30px;
+        right: 45px;
         bottom: 0;
       }
     }
@@ -232,7 +251,7 @@
         @include read-more-icon-link();
 
         position: absolute;
-        right: 15px;
+        right: 22px;
         bottom: 0;
       }
     }

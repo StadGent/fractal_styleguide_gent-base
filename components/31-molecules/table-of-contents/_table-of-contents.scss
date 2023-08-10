@@ -9,6 +9,8 @@
   }
 
   ul {
+    // Override general bigger list style.
+    @include medium-text();
     margin: 0;
     columns: 1;
 
@@ -26,5 +28,6 @@
   ul > li {
     display: block;
     width: 100%;
+    margin-bottom: 15px;
   }
 }
