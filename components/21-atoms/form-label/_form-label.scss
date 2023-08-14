@@ -1,0 +1,19 @@
+label {
+  @include theme('color', 'color-primary', 'label-color');
+  @include semi-bold-text;
+
+  .label-optional {
+    @include theme('color', 'color-zero', 'label-optional-color');
+    @include theme('background-color', 'color-secondary', 'label-optional-background');
+    @include normal-text;
+
+    padding: 0 .2rem;
+    float: right;
+    font-size: .6rem;
+  }
+
+  display: block;
+  margin: 0 0 .4rem;
+  font-size: .8rem;
+  line-height: 1.4rem;
+}
