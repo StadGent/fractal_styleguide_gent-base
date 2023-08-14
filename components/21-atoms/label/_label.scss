@@ -1,19 +1,39 @@
-label {
-  @include theme('color', 'color-primary', 'label-color');
-  @include semi-bold-text;
+.label {
+  @include theme('background-color', 'color-none', 'label-background-color');
+  @include small-text();
 
-  .label-optional {
-    @include theme('color', 'color-zero', 'label-optional-color');
-    @include theme('background-color', 'color-secondary', 'label-optional-background');
-    @include normal-text;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid color('gray');
+  text-decoration: none;
 
-    padding: 0 .2rem;
-    float: right;
-    font-size: .6rem;
+  &.success {
+    @include theme('color', 'color-success', 'label-color-success');
+    @include theme('border-color', 'color-success', 'label-color-success');
+    @include theme('background-color', 'color-success-light', 'label-background-color-success');
   }
 
-  display: block;
-  margin: 0 0 .4rem;
-  font-size: .8rem;
-  line-height: 1.4rem;
+  &.warning {
+    @include theme('color', 'color-warning', 'label-color-warning');
+    @include theme('border-color', 'color-warning', 'label-color-warning');
+    @include theme('background-color', 'color-warning-light', 'label-background-color-warning');
+  }
+
+  &.error {
+    @include theme('color', 'color-error', 'label-color-error');
+    @include theme('border-color', 'color-error', 'label-color-error');
+    @include theme('background-color', 'color-error-light', 'label-background-color-error');
+  }
+
+  i {
+    margin-right: 5px;
+    font-size: .8rem;
+
+    &::before {
+      font-size: .8rem;
+    }
+  }
 }

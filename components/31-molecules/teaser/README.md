@@ -16,8 +16,8 @@ A teaser can consist of the following parts:
 
 * Teaser image (optional)
 * Label with icon (optional, typically to indicate a special type or category of content in the collection, for instance, events in a news and events overview)
-* Tags (optional, one or more, typically to indicate content that is related to a certain subject)
 * Teaser title (required)
+* Tags (optional, one or more, typically to indicate content that is related to a certain subject)
 * Event date (optional, only for events)
 * Teaser summary text or content (optional)
 * List of secondary teaser links (optional)
@@ -26,6 +26,10 @@ A teaser can consist of the following parts:
 The entire teaser block is clickable. When clicking the teaser block, the primary teaser link is followed.
 
 The secondary teaser links inside the teaser block are also clickable. When clicking a secondary teaser link, that links is followed. When not clicking on a secondary teaser link but anywhere else in the teaser block, the primary teaser link is followed.
+
+When using teasers without image, either set a body class `teaser--no-images` or add the `no-image` class to the teaser element.
+
+Within a teaser grid, always use the same teaser styles.
 
 ## Accessibility
 

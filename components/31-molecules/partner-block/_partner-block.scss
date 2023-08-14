@@ -1,40 +1,73 @@
 .partner-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
 
-  .highlight__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem gutter();
+  @include desktop {
+    padding: 0 6.75rem;
+  }
 
-    @include tablet {
-      padding: 2rem 5.5rem;
+  &.partner__multiple {
+    @include desktop {
+      flex-direction: row;
+      justify-content: center;
     }
-  }
 
-  p {
-    text-align: center;
-  }
+    .intro {
+      @include theme('border-color', 'link-hover-background', 'partner-intro-border');
+      margin: 0 0 2.25rem;
+      padding: 0 0 2.25rem;
+      border-bottom-width: .1rem;
+      border-bottom-style: solid;
 
-  .partners ul.inline {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 2.2rem;
+      @include desktop {
+        min-width: 17.5rem;
+        margin: 0 3rem 0 0;
+        padding: 0 3rem 0 0;
+        border-bottom: 0;
+        border-right-width: .1rem;
+        border-right-style: solid;
+      }
 
-    li {
-      width: calc(50% - #{gutter()});
-      margin: 0 gutter()*.5 gutter();
-      text-align: center;
-
-      @include tablet {
-        width: calc(25% - #{gutter()});
+      p:last-child {
+        margin-bottom: 0;
       }
     }
   }
 
-  .single-partner {
-    width: 9rem;
-    max-width: 100%;
-    margin: 1.5rem 0 1.2rem;
+  &.partner__single {
+    text-align: center;
+
+    .intro {
+      p:last-child {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  ul {
+    align-items: center;
+    gap: 1.5rem 3rem; // sass-lint:disable-line no-misspelled-properties
+
+    li {
+      flex: 0 1 calc(100% / 3 - 3rem);
+      width: calc(100% /3);
+      margin: 0;
+
+      @include desktop {
+        flex: 0 1 calc(100% / 4 - 3rem);
+        min-width: 5rem;
+      }
+    }
+  }
+
+  figure {
+    min-width: 3.5rem;
+    max-width: 7.5rem;
+
+    @include desktop {
+      max-width: 10rem;
+    }
   }
 }
