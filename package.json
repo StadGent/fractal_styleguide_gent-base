@@ -53,6 +53,7 @@
     "allietabs": "^1.2.5",
     "baguettebox.js": "^1.11.1",
     "breakpoint-sass": "^3.0.0",
+    "caniuse-lite": "^1.0.30001520",
     "debug": "^4.3.4",
     "imagesloaded": "^5.0.0",
     "lodash": "^4.17.21",
