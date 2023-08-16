@@ -17,6 +17,8 @@
 ///
 @mixin button-small {
   @include small-text;
+
+  line-height: 1.75;
 }
 
 ///
@@ -31,6 +33,7 @@
   @include medium-text;
 
   padding: 10px 15px;
+  line-height: 1.75;
 }
 
 ///
@@ -45,9 +48,10 @@
   @include large-text;
 
   padding: 10px 20px;
+  line-height: 1.77;
 
   &::before {
-    font-size: .9rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -64,10 +68,10 @@
   @include extra-large-text;
 
   padding: 10px 26px;
-  line-height: 1.7;
+  line-height: 1.77;
 
   &::before {
-    font-size: 1.44rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -190,20 +194,17 @@
   align-items: center;
   justify-content: space-between;
   padding: 6px 10px;
-  line-height: 1.4rem;
   text-align: left;
 
   // Padding fix specificly for IE11.
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
     padding: .3em .8em 0 1.2em;
-    line-height: 1.6;
   }
 
   &::before {
     order: 1;
     margin-left: 8px;
     float: right; // Fix for IE11 flex order property.
-    line-height: 1.2rem;
   }
 }
 
