@@ -1,71 +1,113 @@
 'use strict';
 
 module.exports = {
+  collator: function (markup, item) {
+    if (item.handle.includes('-none')) {
+      return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: calc(100% - 1.2rem); background-color: #005ba9; padding: 1rem;">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+    }
+    else {
+      return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: calc(100% - 1.2rem);">${markup}</dd>\n<!-- End: @${item.handle} -->\n`;
+    }
+  },
   default: 'heading-1',
   variants: [
     {
       name: 'heading-1',
       context: {
         heading_text: 'Heading 1',
-        type: 'h1'
+        heading: 'h1'
       }
     },
     {
       name: 'heading-2',
       context: {
         heading_text: 'Heading 2',
-        type: 'h2'
+        heading: 'h2'
       }
     },
     {
       name: 'heading-3',
       context: {
         heading_text: 'Heading 3',
-        type: 'h3'
+        heading: 'h3'
       }
     },
     {
       name: 'heading-4',
       context: {
         heading_text: 'Heading 4',
-        type: 'h4'
+        heading: 'h4'
       }
     },
     {
       name: 'overview-title',
       context: {
         heading: 'h1',
-        heading_text: 'Overview title lorem ipsum dolor set lorem ipsum dolor set',
+        heading_text: 'Heading without background H1 desktop',
         type: 'overview-title'
       }
     },
     {
-      name: 'Background Primary',
-      handle: 'bg-primary',
+      name: 'heading-1-background-primary',
       context: {
-        heading_h1: 'h1',
-        heading_h2: 'h2',
-        heading_h3: 'h3',
-        heading_h4: 'h4',
-        heading_text_h1: 'Background Primary H1 title',
-        heading_text_h2: 'Background Primary H2 title',
-        heading_text_h3: 'Background Primary H3 title',
-        heading_text_h4: 'Background Primary H4 title',
+        heading: 'h1',
+        heading_text: 'Heading with background H1 desktop',
         type: 'bg-primary'
       }
     },
     {
-      name: 'Background none',
-      handle: 'bg-none',
+      name: 'heading-2-background-primary',
       context: {
-        heading_h1: 'h1',
-        heading_h2: 'h2',
-        heading_h3: 'h3',
-        heading_h4: 'h4',
-        heading_text_h1: 'Background None H1 title',
-        heading_text_h2: 'Background None H2 title',
-        heading_text_h3: 'Background None H3 title',
-        heading_text_h4: 'Background None H4 title',
+        heading: 'h2',
+        heading_text: 'Heading with background H2 desktop',
+        type: 'bg-primary'
+      }
+    },
+    {
+      name: 'heading-3-background-primary',
+      context: {
+        heading: 'h3',
+        heading_text: 'Heading with background H3 desktop',
+        type: 'bg-primary'
+      }
+    },
+    {
+      name: 'heading-4-background-primary',
+      context: {
+        heading: 'h4',
+        heading_text: 'Heading with background H4 desktop',
+        type: 'bg-primary'
+      }
+    },
+    {
+      name: 'heading-1-background-none',
+      context: {
+        heading: 'h1',
+        heading_text: 'Heading with background H1 desktop',
+        type: 'bg-none'
+      }
+    },
+    {
+      name: 'heading-2-background-none',
+      context: {
+        heading: 'h2',
+        heading_text: 'Heading with background H2 desktop',
+        type: 'bg-none'
+      }
+    },
+    {
+      name: 'heading-3-background-none',
+      context: {
+        heading: 'h3',
+        heading_text: 'Heading with background H3 desktop',
+        type: 'bg-none'
+      }
+    },
+    {
+      name: 'heading-4-background-none',
+      context: {
+        heading: 'h4',
+        heading_text: 'Heading with background H4 desktop',
         type: 'bg-none'
       }
     }

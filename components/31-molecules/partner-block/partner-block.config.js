@@ -2,8 +2,8 @@
 
 module.exports = {
   context: {
-    title: 'Partners',
-    description: 'Here comes information about the partners. The logos in this block are not predefined and can be changed per project.',
+    title: 'Partners title',
+    description: 'Here you may add information about the partners. The logos in this block are not predefined and can be changed per project.',
     items: [
       {
         link: '/styleguide/img/stock/partner1.svg',
@@ -46,9 +46,9 @@ module.exports = {
     {
       name: 'single-partner',
       context: {
-        title: '',
+        title: 'Partner title',
         single_partner: true,
-        description: 'Here comes information about the partners. The logos in this block are not predefined and can be changed per project.'
+        description: 'Here you may add information about the partners. The logos in this block are not predefined and can be changed per project.'
       }
     }
   ]

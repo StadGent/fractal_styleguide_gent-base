@@ -37,14 +37,13 @@
 
 a.tag {
   @include theme('color', 'color-zero', 'tag-color');
-  @include icon(arrow-right, after);
   @include normal-text();
 
   padding: .4em .8em;
   border: 0;
 
   &:not([class*=icon])::before {
-    margin-left: 0;
+    margin-left: 5px;
   }
 
   &:hover {

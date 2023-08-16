@@ -25,6 +25,7 @@ $id: random(1000);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-style: normal;
+  font-size: 1.2rem;
   font-variant: normal;
   font-weight: normal;
   speak: none; // only necessary if not using the private unicode range (firstGlyph option)

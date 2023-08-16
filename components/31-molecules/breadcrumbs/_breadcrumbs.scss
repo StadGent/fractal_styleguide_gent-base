@@ -64,24 +64,27 @@
 
   .expandable {
     a {
-      @include reset-link-background;
       @include bold-text;
-      @include theme('border-color', 'color-primary', 'breadcrumb-expandable-color');
 
-      top: -3px;
-      padding: .2rem .3rem .4rem;
-      border: 2px solid;
-      line-height: .3rem;
+      padding: 0 .35rem;
+      border-color: transparent;
+      outline: 2px solid currentColor;
+      line-height: .95rem;
 
       &:hover,
       &:focus {
         @include theme('background-color', 'color-primary--lighten-4', 'link-hover-background');
       }
+
+      &,
+      &:focus,
+      &:hover {
+        background-image: none;
+      }
     }
 
     &::after {
-      position: relative;
-      top: -2px;
+      line-height: inherit;
     }
   }
 

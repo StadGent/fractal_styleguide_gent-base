@@ -1,11 +1,20 @@
 ul,
 ol {
+  @include large-text();
   position: relative;
 
   li,
   li > a {
     font-family: $default-font-family;
-    line-height: 2.1;
+    line-height: 1.5;
+  }
+
+  li {
+    margin: 0 0 10px;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 
   &.links {
@@ -22,6 +31,7 @@ ol {
     li {
       width: auto;
       margin-right: $gutter-width;
+      margin-bottom: 0;
     }
   }
 
@@ -102,6 +112,8 @@ ul {
   }
 
   &.icon-list {
+    @include large-text();
+
     margin: 0 0 2rem;
     list-style-type: none;
 
@@ -175,6 +187,7 @@ ul {
     }
   }
 
+  // @Todo: if not used anymore, replace by label atom in an inline list.
   &.label-list {
     display: flex;
     flex-wrap: wrap;
