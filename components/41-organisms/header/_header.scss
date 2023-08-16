@@ -15,7 +15,7 @@ header.header {
     }
 
     > :not(:first-child),
-    > :not(.block-sg-menu-toggle){
+    > :not(.block-sg-menu-toggle) {
       margin-left: gutter();
     }
 
