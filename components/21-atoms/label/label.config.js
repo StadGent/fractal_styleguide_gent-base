@@ -1,10 +1,29 @@
 'use strict';
 
 module.exports = {
-  hidden: true,
   context: {
-    label: 'Label',
-    for: 'form-item',
-    label_optional: 'Optional'
-  }
+    label: 'Label name',
+    type: '',
+    icon: 'icon-tag'
+  },
+  variants: [
+    {
+      name: 'label success',
+      context: {
+        type: 'success'
+      }
+    },
+    {
+      name: 'label warning',
+      context: {
+        type: 'warning'
+      }
+    },
+    {
+      name: 'label error',
+      context: {
+        type: 'error'
+      }
+    }
+  ]
 };

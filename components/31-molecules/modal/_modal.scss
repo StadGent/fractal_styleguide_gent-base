@@ -48,7 +48,7 @@
     > .modal-inner {
       > .modal-content {
         flex-grow: 1;
-        margin-bottom: 3.8rem;
+        margin-bottom: 76px;
         z-index: z('modal', 'inner');
         overflow-y: auto;
       }
@@ -119,10 +119,10 @@
   /// Content
   ///
   &-content {
-    padding: 0 $gutter-width .8rem;
+    padding: 0 $gutter-width 16px;
 
     @include tablet {
-      padding: .8rem 3.5rem 3rem;
+      padding: 16px 70px 60px;
     }
   }
 
@@ -137,7 +137,7 @@
     flex-shrink: 0;
     align-items: center;
     width: 100%;
-    padding: .8rem 1rem;
+    padding: 16px 20px;
     border-top: 2px solid;
     z-index: z('modal', 'actions');
 
