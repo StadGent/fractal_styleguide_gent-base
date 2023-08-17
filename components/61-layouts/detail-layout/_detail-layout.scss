@@ -123,6 +123,12 @@
     }
   }
 
+  > .partner-block {
+    @include desktop {
+      @include set-layout();
+    }
+  }
+
   > .quote-wrapper {
     @include desktop {
       @include set-layout();
