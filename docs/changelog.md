@@ -43,8 +43,7 @@ This element is new. Existing labels such as on teasers can be replaced by this
 atom. See teaser markup changes.
 
 ### Modal molecule
-Default heading changed from H3 to ***H2*** and the close button now has the icon
-on the right by using the `icon-right`
+Default heading changed from H3 to ***H2*** and the close button has the `.button-secondary` class
 
 ### Accordion molecule
 This module is expanded with the option to add another container (for images, e.g. on Timeline) that is controlled with the `data-controls-img` attribute, linking it to the id of the img container.

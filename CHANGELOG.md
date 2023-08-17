@@ -43,8 +43,7 @@ This element is new. Existing labels such as on teasers can be replaced by this
 atom. See teaser markup changes.
 
 ### Modal molecule
-Default heading changed from H3 to ***H2*** and the close button now has the icon
-on the right by using the `icon-right`
+Default heading changed from H3 to ***H2*** and the close button has the `.button-secondary` class
 
 ### Accordion molecule
 This module is expanded with the option to add another container (for images, e.g. on Timeline) that is controlled with the `data-controls-img` attribute, linking it to the id of the img container.
@@ -91,6 +90,7 @@ variation for your use case.
 There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop.
 
 Both the image and the content go into separate `<dd>` containers and are alternated (left/right). Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
+
 
 ### Summary box organism
 Not based on Highlight molecule anymore.
