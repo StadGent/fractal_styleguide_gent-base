@@ -62,7 +62,7 @@ ol {
 
     li:not(:last-of-type)::after {
       display: inline;
-      padding: 0 .2rem 0 0;
+      padding: 0 4px 0 0;
       content: ',';
     }
 
@@ -73,11 +73,10 @@ ol {
 }
 
 ul {
-  margin-left: 1rem;
+  margin-left: 20px;
   list-style-type: square;
 
-  &.checkmark-list,
-  &.checkmark-list-small {
+  &.checkmark-list {
     @extend %list-no-style;
 
     margin-left: 0;
@@ -86,27 +85,15 @@ ul {
       @include icon('checkmark');
 
       position: relative;
-      padding-left: 1.6em;
+      padding-left: 32px;
 
       &::before {
         position: absolute;
         top: 0;
         left: 0;
-        margin-left: -.2em;
+        margin-left: -4px;
         font-size: 1.6rem;
-        line-height: 1.1;
-      }
-    }
-  }
-
-  &.checkmark-list-small {
-    li {
-      font-size: .8rem;
-      line-height: 2.4;
-
-      &::before {
-        font-size: 1.2rem;
-        line-height: 1.7;
+        line-height: 110%;
       }
     }
   }
@@ -114,26 +101,21 @@ ul {
   &.icon-list {
     @include large-text();
 
-    margin: 0 0 2rem;
+    margin: 0 0 40px;
     list-style-type: none;
 
     &.inline {
       li {
         align-items: center;
-        margin-right: .7rem;
+        margin-right: 13px;
         margin-bottom: 0;
-
-        i {
-          width: auto;
-          margin-right: .2rem;
-        }
       }
     }
 
     li {
       position: relative;
-      margin-bottom: .8rem;
-      padding-left: 1.6rem;
+      margin-bottom: 16px;
+      padding-left: 29px; // 24px icon size + 5px gutter.
       line-height: 1.5;
 
       &:last-child {
@@ -168,7 +150,6 @@ ul {
         position: absolute;
         top: 0;
         left: 0;
-        font-size: 1.5em;
         line-height: 1;
       }
     }
