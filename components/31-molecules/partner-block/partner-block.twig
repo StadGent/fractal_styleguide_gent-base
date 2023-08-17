@@ -1,21 +1,23 @@
 <div class="partner-block {{ single_partner ? 'partner__single' : 'partner__multiple' }}">
-  <div class="intro">
-    {% if title %}
-      {% include '@heading' with {
-        'heading': 'h2',
-        'heading_text': title
-      } %}
-    {% endif %}
+  <div class="partner-content intro">
+    <div class="intro__content">
+      {% if title %}
+        {% include '@heading' with {
+          'heading': 'h2',
+          'heading_text': title
+        } %}
+      {% endif %}
 
-    {% if description %}
-      {% include '@paragraph' with {
-        'text': description
-      } %}
-    {% endif %}
+      {% if description %}
+        {% include '@paragraph' with {
+          'text': description
+        } %}
+      {% endif %}
+    </div>
   </div>
 
-  {% if single_partner %}
-    <div class="partners">
+  <div class="partner-content partners">
+    {% if single_partner %}
       <a href="#" title="Link to the OCMW Ghent website. ">
         {% include '@image' with {
           src: '/styleguide/img/stock/ocmw-logo.svg' | path,
@@ -23,9 +25,7 @@
           ratio: null
         } %}
       </a>
-    </div>
-  {% else %}
-    <div class="partners">
+    {% else %}
       <ul class="inline">
         {% for item in items %}
           <li>
@@ -39,6 +39,6 @@
           </li>
         {% endfor %}
       </ul>
-    </div>
-  {% endif %}
+    {% endif %}
+  </div>
 </div>
