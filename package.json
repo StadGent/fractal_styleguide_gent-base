@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "6.0.0-alpha20",
+  "version": "6.0.0-alpha21",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -41,7 +41,9 @@
     "Jeroen Goossens",
     "Gert-Jan Meire",
     "Helena Standaert",
-    "Bart Delrue"
+    "Bart Delrue",
+    "Lennart Van Vaerenbergh",
+    "Sven Vandevenne"
   ],
   "license": "GPL-2.0",
   "optionalDependencies": {
