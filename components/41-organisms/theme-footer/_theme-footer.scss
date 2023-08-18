@@ -135,14 +135,8 @@
       max-width: calc(#{$bp-max-content} / 12 * 5);
     }
 
-    a.standalone-link {
-      display: inline-block;
-      margin-top: 10px;
-      line-height: 150%;
-
-      &::after {
-        top: 0;
-      }
+    .more-link {
+      margin-top: 20px;
     }
 
     &:not(:last-child) {
