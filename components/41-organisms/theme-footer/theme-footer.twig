@@ -64,11 +64,13 @@
           name: 'subscribe'
           } %}
 
-          {% include '@link' with {
-            'link': 'javascript:(void);',
-            'text': 'View the list and subscribe to one of our newsletters',
-            'modifier': 'standalone-link'
-          } %}
+          <div class="more-link">
+            {% include '@link' with {
+              'link': 'javascript:(void);',
+              'text': 'View the list and subscribe to one of our newsletters',
+              'modifier': 'standalone-link'
+            } %}
+          </div>
         {% endset %}
 
         {% include "@feature-block" with {

@@ -1,13 +1,13 @@
 .footer {
-  margin: 3rem -1rem 0;
+  margin: 60px -20px 0;
 
   @include desktop() {
-    margin-top: 14rem;
+    margin-top: 280px;
   }
 
   h4 {
     margin-top: 0;
-    margin-bottom: .75rem;
+    margin-bottom: 15px;
   }
 
   .content-container {
@@ -23,7 +23,7 @@
   }
 
   .footer-top {
-    margin-bottom: 1.2rem;
+    margin-bottom: 24px;
     background-color: transparent;
 
     @include desktop {
@@ -34,7 +34,7 @@
       padding-top: 0;
 
       @include desktop {
-        padding-bottom: 3.5rem;
+        padding-bottom: 70px;
       }
     }
 
@@ -42,24 +42,26 @@
       @include theme('background-color', 'color-tertiary-light', 'footer-background-color');
       flex: 0 0 auto;
       width: span(12 of 12);
-      padding: 1rem 1rem 3rem;
+      padding: 20px 20px 60px;
 
+      // Gentinfo column.
       &:first-of-type {
-        padding-bottom: 1rem;
+        padding-bottom: 20px;
         background-color: transparent;
       }
 
       &:nth-of-type(2) {
-        margin-top: -3.7rem;
-        padding-top: 4.5rem;
-        padding-bottom: 1rem;
+        margin-top: -74px;
+        padding-top: 90px;
+        padding-bottom: 20px;
       }
 
       @include tablet {
         width: 50%;
-        margin-top: -3.7rem;
-        padding-top: 4.5rem;
+        margin-top: -74px;
+        padding-top: 90px;
 
+        // Gentinfo column.
         &:first-of-type {
           width: span(12 of 12);
           margin-top: 0;
@@ -68,11 +70,18 @@
         }
       }
 
+      @include breakpoint(1223px) {
+        // Gentinfo column.
+        &:first-of-type {
+          padding-right: 20px;
+        }
+      }
+
       @include desktop {
         width: span(3 of 12);
-        margin-top: 2.9rem;
+        margin-top: 58px;
         margin-bottom: 0;
-        padding-bottom: 1rem;
+        padding-bottom: 20px;
 
         &:nth-of-type(2),
         &:nth-of-type(3) {
@@ -80,10 +89,19 @@
           margin-right: $gutter-width;
         }
 
+        // Gentinfo column.
         &:first-of-type {
           order: 1;
           width: span(6 of 12);
           margin-top: 0;
+        }
+      }
+
+      @include breakpoint(1224px) {
+        // Gentinfo column.
+        &:first-of-type {
+          padding-right: 0;
+          padding-left: 0;
         }
       }
 
@@ -98,7 +116,7 @@
     }
 
     .social-list ul {
-      margin: 0 -.25rem;
+      margin: 0 -5px;
     }
   }
 
@@ -108,19 +126,20 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    padding: 0 1rem;
+    padding: 0 20px;
 
     ul {
+      @include small-text();
       margin: 0;
       list-style: none;
     }
 
     li {
-      margin-bottom: .2rem;
+      margin-bottom: 4px;
 
       @include tablet {
         display: inline-block;
-        padding: 0 .4rem;
+        padding: 0 8px;
 
         &:first-of-type {
           padding-left: 0;
@@ -129,12 +148,12 @@
     }
 
     .partnership {
-      font-size: .7rem;
+      @include small-text();
+      line-height: 150%;
 
       i.icon-district09 {
-        margin-left: .5rem;
-        font-size: 1.3rem;
-        line-height: 1.6rem;
+        margin-left: 10px;
+        font-size: 1.4rem;
         vertical-align: middle;
       }
     }
