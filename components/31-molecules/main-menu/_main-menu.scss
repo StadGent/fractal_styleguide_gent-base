@@ -153,6 +153,8 @@ nav.menu {
     }
 
     .language-switcher {
+      display: block;
+
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -164,10 +166,6 @@ nav.menu {
           padding: .6rem;
         }
       }
-    }
-
-    .language-switcher {
-      display: block;
     }
 
     .menu-links,
