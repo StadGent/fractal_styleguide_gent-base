@@ -22,18 +22,27 @@ module.exports = {
     figure_logo_src_dark: '/styleguide/img/stock/district09-dark.svg',
     figure_logo_src_light: '/styleguide/img/stock/district09-light.svg',
     site_name: 'Stad Gent',
-    menu_items: []
+    menu_items: [],
+    is_frontpage: false
   },
   variants: [
     {
       name: 'default',
-      label: 'Default - without header image',
+      label: 'Default',
       context: {
         hero_image_src: null
       }
     },
     {
-      name: 'seperate_translation_unauth',
+      name: 'default_on_frontpage',
+      label: 'Default - on frontpage',
+      context: {
+        is_frontpage: true,
+        breadcrumbs_items: []
+      }
+    },
+    {
+      name: 'seperate_translation',
       label: 'Seperate multilingual site with synchronous translations',
       context: {
         subsite: true,
@@ -43,7 +52,7 @@ module.exports = {
       }
     },
     {
-      name: 'seperate_hmenu_translation_auth_search',
+      name: 'seperate_hmenu_translation_search',
       label: 'Seperate multilingual site with menu + synchronous translations + search',
       context: {
         subsite: true,
