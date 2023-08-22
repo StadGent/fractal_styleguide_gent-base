@@ -6,11 +6,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 3rem;
-  padding: 3rem 1rem;
+  margin-bottom: 60px;
+  padding: 60px 20px;
 
   @include tablet {
-    padding: 4.5rem 1rem;
+    padding: 90px 20px;
   }
 
   h1 {
@@ -18,29 +18,29 @@
   }
 
   &.image {
-    margin-bottom: calc(100vw - 6rem);
-    padding-bottom: 6rem;
+    margin-bottom: calc(100vw - 105px);
+    padding-bottom: 120px;
 
     @include tablet {
       flex-direction: row;
-      margin-bottom: 8rem;
-      padding-top: 4.5rem;
-      padding-bottom: 4.5rem;
+      margin-bottom: 80px;
+      padding-top: 90px;
+      padding-bottom: 90px;
     }
 
     @include desktop {
-      margin-bottom: 9.8rem;
+      margin-bottom: 196px;
     }
   }
 
   &.overlap {
-    padding-top: 3rem;
-    padding-bottom: 6rem;
+    padding-top: 60px;
+    padding-bottom: 120px;
 
     @include tablet {
       flex-direction: row;
-      padding-top: 4.5rem;
-      padding-bottom: 5.25rem;
+      padding-top: 90px;
+      padding-bottom: 105px;
     }
   }
 
@@ -53,21 +53,21 @@
     //padding-bottom: .1rem;
 
     h1 {
-      @include accolade('bottom', 'left', 5rem, 1.75rem, 'color-none', 'color-primary');
+      @include accolade('bottom', 'left', 100px, 35px, 'color-none', 'color-primary');
       @include theme('background-color', 'color-primary', 'content-header-accolade-text-background');
 
       display: inline;
-      padding: 0 .75rem;
+      padding: 0 15px;
       color: color('white');
       line-height: 1.1;
       box-decoration-break: clone;
     }
 
     &.breakout {
-      padding-bottom: 2.25rem;
+      padding-bottom: 45px;
 
       @include tablet {
-        padding-bottom: 2.75rem;
+        padding-bottom: 55px;
       }
 
       .left {
@@ -92,7 +92,7 @@
     max-width: $bp-max-content;
 
     @include tablet {
-      padding-right: 3rem;
+      padding-right: 60px;
     }
 
     h1 {
@@ -100,19 +100,28 @@
     }
 
     h4 {
-      margin: 3rem 0 1rem;
+      margin: 60px 0 20px;
     }
 
     .summary-text {
-      margin: 1.5rem 0 0;
+      margin: 30px 0 0;
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.81;
+      }
 
       p:last-of-type {
         margin-bottom: 0;
       }
     }
 
+    time + .summary-text {
+      margin: 10px 0 0;
+    }
+
     .tag-list-wrapper {
-      margin: 1rem 0 0;
+      margin: 20px 0 0;
 
       li,
       a {
@@ -132,9 +141,9 @@
     height: auto;
 
     @include tablet {
-      flex: 0 0 calc(47vw - 4rem);
+      flex: 0 0 calc(47vw - 80px);
       width: auto;
-      height: calc(47vw - 4rem - 9.5rem);
+      height: calc(47vw - 80px - 190px);
       text-align: right;
     }
 
@@ -143,29 +152,25 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      transform: translate(0, calc(100% - 4.5rem));
+      padding-right: 40px;
+      transform: translate(0, calc(100% - 90px));
 
       @include tablet {
         position: static;
         max-width: 31.5rem;
+        padding: 0;
         transform: none;
       }
 
       img {
         width: 100%;
         height: auto;
-        padding-right: 2rem;
-
-
-        @include tablet {
-          padding: 0;
-        }
       }
     }
 
     @media only screen and (min-width: 1400px) {
-      flex: 0 0 28.5rem;
-      height: calc(28.5rem - 9.5rem);
+      flex: 0 0 570px;
+      height: calc(570px - 190px);
     }
   }
 }

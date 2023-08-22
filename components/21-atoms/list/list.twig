@@ -38,14 +38,6 @@
   </ul>
 {% endif %}
 
-{% if type == 'checkmark-list-small' %}
-  <ul class="checkmark-list-small {{ modifier }}">
-      {% for item in items %}
-          <li>{{ item }}</li>
-      {% endfor %}
-  </ul>
-{% endif %}
-
 {% if type == 'icon-list' %}
   <ul class="icon-list {{ modifier }}">
       {% for item in icon_items %}

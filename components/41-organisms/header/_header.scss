@@ -3,7 +3,7 @@
 header.header {
   position: relative;
   margin-bottom: .3rem;
-  padding: .3rem 0;
+  padding: 20px 0;
 
   // first row
   > .content-container {
@@ -44,7 +44,6 @@ header.header {
 
       input[type=submit] {
         max-width: 0;
-        padding: 0;
         transition: opacity .2s ease-in-out, max-width .2s ease-in-out, padding .2s ease-in-out, background-size .3s;
         box-shadow: none;
         opacity: 0;
@@ -76,7 +75,8 @@ header.header {
 
           ~ input[type=submit] {
             max-width: 9999px;
-            padding: 0 1rem;
+            padding-right: 15px;
+            padding-left: 15px;
             opacity: 1;
           }
 

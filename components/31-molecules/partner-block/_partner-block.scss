@@ -11,10 +11,18 @@
   &.partner__multiple {
     @include desktop {
       flex-direction: row;
+      align-items: stretch;
       justify-content: center;
     }
 
+    .partner-content {
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+    }
+
     .intro {
+
       @include desktop {
         min-width: 17.5rem;
       }
