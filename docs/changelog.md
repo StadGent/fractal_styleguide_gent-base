@@ -85,13 +85,15 @@ variation for your use case.
 - Tags list moved to below the teaser title, except for the square variant.
 - Accolade markup should be deleted.
 
+### Header organism
+- The logo is bigger on the frontpage, based on a parent class `is-frontpage`.
+
 ### Timeline organism
 **Date** is now an h3 and the **timeline-slot-title** is now an h4.
 
 There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop.
 
 Both the image and the content go into separate `<dd>` containers and are alternated (left/right). Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
-
 
 ### Summary box organism
 Not based on Highlight molecule anymore.
