@@ -3,13 +3,13 @@
   @include theme('background-color', 'color-info-light', 'info-message-background');
   @include theme('border-color', 'color-info', 'info-message-icon-color');
 
-  $status-message-icon-size: 2.1rem;
+  $status-message-icon-size: 2rem;
 
   display: flex;
   position: relative;
   flex-direction: column;
-  max-width: 40rem;
-  margin-top: 1rem;
+  max-width: 970px;
+  margin-top: 20px;
   margin-right: 0;
   margin-bottom: 1rem;
   padding: 2rem;
@@ -24,9 +24,13 @@
     width: $status-message-icon-size;
     margin-right: 0;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: $status-message-icon-size;
     line-height: $status-message-icon-size;
     text-align: center;
+
+    &::before {
+      font-size: $status-message-icon-size;
+    }
 
     @include phablet {
       align-self: flex-start;
