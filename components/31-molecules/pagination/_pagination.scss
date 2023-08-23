@@ -27,56 +27,59 @@
       display: flex;
       flex: 0 0 auto;
       justify-content: center;
-      min-width: 1.6rem;
+      min-width: 32px;
       text-align: center;
 
-      a {
-        &:hover,
-        &:focus {
-          @include theme('color', 'color-tertiary', 'pagination-active-color');
-        }
+      &.spacing {
+        min-width: 20px;
+        padding: 6px;
+      }
+    }
+
+    a.standalone-link {
+      &:hover,
+      &:focus {
+        @include theme('color', 'color-zero', 'pagination-active-color');
       }
     }
 
     a,
     li.active {
-      @include reset-link-background;
+      @include theme('color', 'color-zero', 'default-text-color');
       @include bold-text;
 
-      padding-right: .4rem;
-      padding-left: .4rem;
-      font-size: .8rem;
-      line-height: 1.2;
+      margin-right: 14px;
+      margin-left: 14px;
+      padding-right: 6px;
+      padding-left: 6px;
+      border-bottom: 0;
+      background-image: linear-gradient(to bottom,
+        color('yellow') 0,
+        color('yellow') 100%);
+      font-size: .9rem;
+      line-height: 177.778%;
+      text-decoration: none;
 
-      @include phablet {
-        padding-right: 1rem;
-        padding-left: 1rem;
-        font-size: 1rem;
+      &:hover,
+      &:focus {
+        @include theme('color', 'color-zero', 'pagination-active-color');
       }
     }
 
-    li.spacing {
-      min-width: 1rem;
-      padding: .3rem;
-    }
-
     .active {
+      @include reset-link-background;
       @include theme('color', 'color-tertiary', 'pagination-active-color');
 
       position: relative;
-      padding-top: .3rem;
-      padding-bottom: .3rem;
+      margin-bottom: 10px;
 
       &::after {
         @include theme('background-color', 'color-primary', 'link-color');
 
         position: absolute;
-        right: 0;
         bottom: 0;
-        left: 0;
-        width: 1.2rem;
+        width: 100%;
         height: 2px;
-        margin: auto;
         content: '';
       }
     }
@@ -88,55 +91,24 @@
       @include tablet {
         display: flex;
       }
-
-      a {
-        display: inline-flex;
-        align-items: center;
-        margin-left: 0;
-        padding: 0 1rem;
-        font-size: .9rem;
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-          @include theme('color', 'color-tertiary', 'pagination-active-color');
-          background: transparent;
-        }
-      }
-    }
-
-    .next {
-      a {
-        @extend %a-arrow-animation;
-        @include icon(arrow-right, after);
-
-        padding-right: 0;
-
-        &::after {
-          margin-right: -.2rem;
-          padding-right: .2rem;
-        }
-      }
     }
 
     .previous {
       a {
-        @extend %a-arrow-animation--left;
-        @include icon(arrow-left, after);
+        margin-right: 0;
+      }
+    }
 
-        flex-direction: row-reverse;
-        padding-left: 0;
+    .next {
+      margin: 0 0 10px;
 
-        &::after {
-          margin-left: -.2rem;
-          padding-right: .2rem;
-          padding-left: .4rem;
-        }
+      a {
+        margin-left: 0;
       }
     }
   }
 
   .button {
-    margin: 1rem 0;
+    margin: 20px 0;
   }
 }
