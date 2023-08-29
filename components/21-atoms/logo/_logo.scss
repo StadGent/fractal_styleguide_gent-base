@@ -14,7 +14,7 @@ a.site-logo {
       width: 63.3px;
       height: 44px;
 
-      @include tablet {
+      @include desktop {
         width: 92px;
         height: 64px;
       }

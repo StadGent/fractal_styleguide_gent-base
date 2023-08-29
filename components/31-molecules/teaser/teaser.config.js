@@ -89,7 +89,8 @@ module.exports = {
         link_text: 'Read more',
         link: '#',
         list: null,
-        label_text: null,
+        label_text: 'Event',
+        tags: ['Optional tag'],
         tags_position: 'top',
         image_src: 'https://via.placeholder.com/570x570&text=1:1+(570x570)'
       }
