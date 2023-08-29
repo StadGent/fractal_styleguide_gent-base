@@ -83,6 +83,7 @@ variation for your use case.
 - Event dates have the class `date` instead of `event`.
 - Labels follow the markup of the new atom "Label". See label atom changes.
 - Tags list moved to below the teaser title, except for the square variant.
+- Tags and label in the square variant get a new parent div with class `tags-label-wrapper`.
 - Accolade markup should be deleted.
 
 ### Header organism

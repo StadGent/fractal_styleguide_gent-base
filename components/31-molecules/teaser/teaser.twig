@@ -74,19 +74,21 @@
       {% endif %}
     </div>
     <div class="content__first">
-      {% if label_text %}
-        {% include '@label' with {
-          'label': label_text,
-          'icon': 'icon-tag'
-        } %}
-      {% endif %}
+      <div class="tags-label-wrapper">
+        {% if label_text %}
+          {% include '@label' with {
+            'label': label_text,
+            'icon': 'icon-tag'
+          } %}
+        {% endif %}
 
-      {% if tagList and tags_position == 'top' %}
-        {% include '@tag-list' with {
-          tags: tagList,
-          link: null
-        } %}
-      {% endif %}
+        {% if tagList and tags_position == 'top' %}
+          {% include '@tag-list' with {
+            tags: tagList,
+            link: null
+          } %}
+        {% endif %}
+      </div>
 
       {% if image_src or image_placeholders %}
         <div class="figure-wrapper">
