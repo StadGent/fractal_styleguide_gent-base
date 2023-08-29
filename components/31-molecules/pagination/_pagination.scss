@@ -22,67 +22,59 @@
     }
 
     li {
-      @include theme('color', 'color-primary', 'link-color');
-
       display: flex;
       flex: 0 0 auto;
       justify-content: center;
       min-width: 32px;
+      padding-right: 7px;
+      padding-left: 7px;
       text-align: center;
+      line-height: 177.778%;
 
       &.spacing {
-        min-width: 20px;
-        padding: 6px;
+        padding: 0 10px 10px;
+        line-height: 1;
+      }
+
+      &.active {
+        @include theme('border-color', 'color-zero', 'pagination-active-color');
+        @include bold-text;
+
+        padding-right: 10px;
+        padding-left: 10px;
+        border: 2px solid;
       }
     }
 
-    a.standalone-link {
-      &:hover,
-      &:focus {
-        @include theme('color', 'color-zero', 'pagination-active-color');
-      }
-    }
-
-    a,
-    li.active {
+    a {
       @include theme('color', 'color-zero', 'default-text-color');
+      @include theme('border-color', 'color-none');
       @include bold-text;
 
-      margin-right: 14px;
-      margin-left: 14px;
-      padding-right: 6px;
-      padding-left: 6px;
-      border-bottom: 0;
+      display: block;
+      padding-right: 10px;
+      padding-left: 10px;
       background-image: linear-gradient(to bottom,
         color('yellow') 0,
         color('yellow') 100%);
       font-size: .9rem;
-      line-height: 177.778%;
+      line-height: inherit;
       text-decoration: none;
 
       &:hover,
       &:focus {
-        @include theme('color', 'color-zero', 'pagination-active-color');
+        border-bottom: 2px solid;
+      }
+
+      &.standalone-link {
+        &:hover,
+        &:focus {
+          @include theme('color', 'color-zero', 'pagination-active-color');
+          @include theme('border-color', 'color-none');
+        }
       }
     }
 
-    .active {
-      @include reset-link-background;
-      @include theme('color', 'color-tertiary', 'pagination-active-color');
-
-      position: relative;
-      margin-bottom: 10px;
-
-      &::after {
-        @include theme('background-color', 'color-primary', 'link-color');
-
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 2px;
-        content: '';
-      }
-    }
 
     .previous,
     .next {
@@ -90,6 +82,10 @@
 
       @include tablet {
         display: flex;
+      }
+
+      a {
+        padding-right: 0;
       }
     }
 
