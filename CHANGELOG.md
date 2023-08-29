@@ -83,7 +83,11 @@ variation for your use case.
 - Event dates have the class `date` instead of `event`.
 - Labels follow the markup of the new atom "Label". See label atom changes.
 - Tags list moved to below the teaser title, except for the square variant.
+- Tags and label in the square variant get a new parent div with class `tags-label-wrapper`.
 - Accolade markup should be deleted.
+
+### Header organism
+- The logo is bigger on the frontpage, based on a parent class `is-frontpage`.
 
 ### Timeline organism
 **Date** is now an h3 and the **timeline-slot-title** is now an h4.
@@ -91,7 +95,6 @@ variation for your use case.
 There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop.
 
 Both the image and the content go into separate `<dd>` containers and are alternated (left/right). Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
-
 
 ### Summary box organism
 Not based on Highlight molecule anymore.

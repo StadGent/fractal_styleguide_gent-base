@@ -1,5 +1,9 @@
 {% set hasMenu = menu or (search and auth and translate) %}
 
+{% if is_frontpage %}
+  <div class="is-frontpage">
+{% endif %}
+
 <header class="header{{ hasMenu ? ' header--menu' : '' }}">
   <div class="content-container">
     {% include '@logo' with {
@@ -47,7 +51,6 @@
         translate: Translate,
         id: _self.name ~ '-menu',
       } %}
-
     {% endif %}
   </div>
 
@@ -57,8 +60,14 @@
     </div>
   {% endif %}
 
-  {% include '@breadcrumbs' with {
-    items: breadcrumbs_items,
-    id: _self.name ~ '-header-crumbs'
-  } %}
+  {% if breadcrumbs_items %}
+    {% include '@breadcrumbs' with {
+      items: breadcrumbs_items,
+      id: _self.name ~ '-header-crumbs'
+    } %}
+  {% endif %}
 </header>
+
+{% if is_frontpage %}
+  </div>
+{% endif %}
