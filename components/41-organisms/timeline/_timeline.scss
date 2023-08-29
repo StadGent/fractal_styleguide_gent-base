@@ -1,10 +1,10 @@
-$timeline-border: .3rem;
-$timeline-m-left-padding: .75rem;
-$timeline-m-right-padding: 1.5rem;
-$timeline-dd-space-between-mobile: 3rem;
-$timeline-dd-space-between: 4.5rem;
-$timeline-dt-left-padding: 0rem; // sass-lint:disable-line zero-unit
-$timeline-dt-right-padding: 5.6rem;
+$timeline-border: 6px;
+$timeline-m-left-padding: 35px;
+$timeline-m-right-padding: 30px;
+$timeline-dd-space-between-mobile: 60px;
+$timeline-dd-space-between: 90px;
+$timeline-dt-left-padding: 0px; // sass-lint:disable-line zero-unit
+$timeline-dt-right-padding: 112px;
 
 .timeline-wrapper {
   max-width: 375px;
@@ -39,25 +39,25 @@ dl.timeline {
     &-title {
       position: relative;
       width: 100%;
-      margin: .2rem 0;
+      margin: 4px 0;
       border: 0;
       background: transparent;
       line-height: 1.2;
 
       button {
         width: 100%;
-        margin-left: -2.25rem;
-        padding-left: 2.25rem;
+        margin-left: -45px;
+        padding-left: 45px;
         color: inherit;
         font-size: inherit;
 
         @include desktop {
-          margin-left: -2.75rem;
-          padding-left: 2.75rem;
+          margin-left: -55px;
+          padding-left: 55px;
 
           &::after {
             right: 100%;
-            width: 3rem;
+            width: 60px;
             height: $timeline-border;
             background-color: color(cyan-pastel);
             content: '';
@@ -72,10 +72,13 @@ dl.timeline {
 
         // +/- icon
         &::before {
+          display: flex;
           left: 0;
-          min-height: 0;
+          align-items: center;
+          min-width: 36px;
+          min-height: 36px;
           font-size: 1.2rem;
-          line-height: 30.8px;
+          line-height: 1.54rem;
           z-index: -1;
         }
       }
@@ -195,12 +198,12 @@ dl.timeline {
           z-index: z('timeline', 'video', 'player');
 
           .audio-description {
-            min-height: 2rem;
-            padding-left: 3rem;
+            min-height: 40px;
+            padding-left: 60px;
 
             // Dots after a video intersection.
             &::after {
-              bottom: .2rem;
+              bottom: 4px;
             }
           }
         }
@@ -219,7 +222,7 @@ dl.timeline {
 
         &:nth-child(even) {
           @include desktop {
-            padding: $timeline-dd-space-between 3.3rem $timeline-dd-space-between calc(#{$gutter-width*.5});
+            padding: $timeline-dd-space-between 66px $timeline-dd-space-between calc(#{$gutter-width*.5});
 
             &::after {
               display: none;
@@ -239,15 +242,15 @@ dl.timeline {
         button {
           @include desktop {
             justify-content: flex-end;
-            margin: 0 0 0 2.75rem;
-            padding: 0 2.75rem 0 0;
+            margin: 0 0 0 55px;
+            padding: 0 55px 0 0;
 
             // +/- icon
             &::before {
               right: 0;
               left: auto;
-              margin: 0 0 0 .75rem;
-              padding-right: .2em;
+              margin: 0 0 0 15px;
+              padding-right: 4px;
             }
           }
         }
@@ -275,7 +278,7 @@ dl.timeline {
 
         &:nth-child(even) {
           @include desktop {
-            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between 3.3rem;
+            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between 66px;
             grid-area: right;
           }
         }
@@ -289,7 +292,7 @@ dl.timeline {
       > dd:first-of-type {
         // Fix whitespace.
         .timeline-slot-header {
-          margin-top: -.4rem;
+          margin-top: -8px;
           padding-top: 0;
         }
       }
