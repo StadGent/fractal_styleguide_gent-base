@@ -16,7 +16,9 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-small {
-  @include small-text;
+  @include medium-text();
+  padding: 4px 10px;
+  line-height: 175%;
 }
 
 ///
@@ -28,9 +30,8 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-medium {
-  @include medium-text;
-
-  padding: 10px 15px;
+  @include medium-text();
+  line-height: 175%;
 }
 
 ///
@@ -42,12 +43,12 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-large {
-  @include large-text;
-
+  @include large-text();
   padding: 10px 20px;
+  line-height: 177.778%;
 
   &::before {
-    font-size: .9rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -61,13 +62,13 @@
 /// @author Thomas De Vriese
 ///
 @mixin button-extra-large {
-  @include extra-large-text;
+  @include large-text();
 
-  padding: 10px 26px;
-  line-height: 1.7;
+  padding: 25px 26px;
+  line-height: 177.778%;
 
   &::before {
-    font-size: 1.44rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -107,7 +108,7 @@
   @include button-medium; // Default.
   @include bold-text;
 
-  padding: 10px;
+  padding: 8px 15px;
   font-family: $default-font-family;
   text-align: center;
   cursor: pointer;
@@ -189,21 +190,18 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 10px;
-  line-height: 1.4rem;
   text-align: left;
 
   // Padding fix specificly for IE11.
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
     padding: .3em .8em 0 1.2em;
-    line-height: 1.6;
   }
 
   &::before {
     order: 1;
     margin-left: 8px;
     float: right; // Fix for IE11 flex order property.
-    line-height: 1.2rem;
+    font-size: 1.2rem;
   }
 }
 

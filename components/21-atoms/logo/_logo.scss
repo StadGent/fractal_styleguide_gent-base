@@ -6,9 +6,19 @@ a.site-logo {
   font-size: 0;
 
   &::before {
-    @include spot-image('logo', 4rem);
-    min-width: 4rem;
-    height: 3rem;
+    @include spot-image('logo', 80px);
+    width: 63.3px;
+    height: 44px;
+
+    .is-frontpage & {
+      width: 63.3px;
+      height: 44px;
+
+      @include desktop {
+        width: 92px;
+        height: 64px;
+      }
+    }
   }
 
   &:hover,
@@ -23,7 +33,7 @@ a.site-logo {
 
     &::before {
       @include tablet {
-        margin-right: .7rem;
+        margin-right: 14px;
       }
     }
   }

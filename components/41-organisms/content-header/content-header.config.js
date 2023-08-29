@@ -13,7 +13,8 @@ module.exports = {
     summary: false,
     summary_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa.',
     popular_topics: false,
-    image: false
+    image: false,
+    date: false
   },
   variants: [
     {
@@ -28,8 +29,9 @@ module.exports = {
       context: {
         modifier: 'primary dark-background',
         summary: true,
-        summary_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa.',
-        image: true
+        summary_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere. Maecenas sit amet sapien aliquam, semper elit in, sodales massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit ipsum sed gravida posuere.',
+        image: true,
+        date: true
       }
     },
     {
