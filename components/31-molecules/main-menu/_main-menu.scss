@@ -79,7 +79,7 @@ nav.menu {
 
     .header {
       position: relative;
-      margin: .6rem $gutter-width 1.6rem;
+      margin: 12px $gutter-width 32px;
 
       &::before,
       &::after {
@@ -89,14 +89,14 @@ nav.menu {
         top: 100%;
         width: 100%;
         height: 1rem;
-        margin-top: .6rem;
+        margin-top: 12px;
         border-top: 2px solid;
         content: '';
       }
 
       &::before {
         left: -$gutter-width;
-        width: 3rem + $gutter-width;
+        width: 60px + $gutter-width;
         border-right: 2px solid;
         border-top-right-radius: border-radius('radius-4');
       }
@@ -104,7 +104,7 @@ nav.menu {
       &::after {
         right: -$gutter-width;
         // viewport - ::before + border-width + gutter-width
-        width: calc(100% - 3rem + 2px + #{$gutter-width});
+        width: calc(100% - 60px + 2px + #{$gutter-width});
         border-left: 2px solid;
         border-top-left-radius: border-radius('radius-4');
       }
@@ -112,7 +112,7 @@ nav.menu {
       button {
         position: absolute;
         right: 0;
-        margin-top: .25rem;
+        margin-top: 5px;
       }
     }
 
@@ -152,15 +152,9 @@ nav.menu {
       }
     }
 
-    .authentication  {
-      padding: 1.2rem 0;
-
-      .content {
-        padding: 0;
-      }
-    }
-
     .language-switcher {
+      display: block;
+
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -174,18 +168,12 @@ nav.menu {
       }
     }
 
-    .authentication,
-    .language-switcher {
-      display: block;
-    }
-
     .menu-links,
-    .authentication,
     .language-switcher {
       margin: 0 1.2rem;
 
       &:not(:last-child) {
-        @include theme('border-color', 'color-primary--lighten-4', 'mijn_gent-border-color');
+        @include theme('border-color', 'color-primary--lighten-4');
         border-bottom: 2px solid;
       }
     }

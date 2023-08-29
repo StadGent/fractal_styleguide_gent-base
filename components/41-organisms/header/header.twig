@@ -1,5 +1,9 @@
 {% set hasMenu = menu or (search and auth and translate) %}
 
+{% if is_frontpage %}
+  <div class="is-frontpage">
+{% endif %}
+
 <header class="header{{ hasMenu ? ' header--menu' : '' }}">
   <div class="content-container">
     {% include '@logo' with {
@@ -25,16 +29,6 @@
       } %}
     {% endif %}
 
-    {% if auth %}
-      {% include '@authentication' with {
-        id: _self.name ~ '-authentication',
-        items: mijn_gent_block_items,
-        auth: mijn_gent_block_auth,
-        image: mijn_gent_block_image,
-        accordion: true
-      } %}
-    {% endif %}
-
     {% if translate %}
       {% include '@language-switcher' with {
         accordion: true,
@@ -43,19 +37,6 @@
     {% endif %}
 
     {% if hasMenu %}
-
-      {% set Auth %}
-        {% if auth %}
-          {% include '@authentication' with {
-            id: _self.name ~ '-authentication-mobile',
-            items: mijn_gent_block_items,
-            auth: mijn_gent_block_auth,
-            image: mijn_gent_block_image,
-            accordion: false
-          } %}
-        {% endif %}
-      {% endset %}
-
       {% set Translate %}
         {% if translate %}
           {% include '@language-switcher' with {
@@ -67,11 +48,9 @@
 
       {% include '@main-menu' with {
         items: menu_items,
-        auth: Auth,
         translate: Translate,
         id: _self.name ~ '-menu',
       } %}
-
     {% endif %}
   </div>
 
@@ -81,42 +60,14 @@
     </div>
   {% endif %}
 
-  {% include '@breadcrumbs' with {
-    items: breadcrumbs_items,
-    id: _self.name ~ '-header-crumbs'
-  } %}
-
-  <hr/>
-  {% if hero_image_src %}
-    <figure class="hero{{ mobile_hero ? ' hero--mobile' : '' }}">
-      {% if theme %}
-        <div class="theme{{ theme_light ? ' theme--light' : '' }}">
-          <div class="theme-title">
-            {% include '@image' with {
-              'src': (theme_light ? figure_logo_src_dark : figure_logo_src_light) | path,
-              'alt_text': figure_logo_alt_text,
-              'modifier': null,
-              'ratio': null
-            } %}
-            {% if theme_title %}
-            {% include '@heading' with {
-              'heading': 'h1',
-              'heading_text': hero_title
-            } %}
-            {% endif %}
-          </div>
-        </div>
-      {% endif %}
-      {% include '@image' with {
-        'src': hero_image_src,
-        'alt_text': '',
-        'ratio': '4:1'
-      } %}
-      {% if hero_image_description %}
-        {% include '@figcaption' with {
-          'figcaption': hero_image_description
-        } %}
-      {% endif %}
-    </figure>
+  {% if breadcrumbs_items %}
+    {% include '@breadcrumbs' with {
+      items: breadcrumbs_items,
+      id: _self.name ~ '-header-crumbs'
+    } %}
   {% endif %}
 </header>
+
+{% if is_frontpage %}
+  </div>
+{% endif %}

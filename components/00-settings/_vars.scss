@@ -63,7 +63,6 @@ $border-radius: (
 $z-layers: (
   'default': 1,
   'skiplink': 5,
-  'mijn-gent': 6,
   'language-switcher': 6,
   'boxes': (
     'spotimage': 1
@@ -87,8 +86,8 @@ $z-layers: (
     'overlay': -1
   ),
   'teaser': (
-    'overlay-link': 1,
-    'content-link': 2,
+    'overlay-link': 3,
+    'content-link': 4,
     'label': 1
   ),
   'modal': (
@@ -199,7 +198,7 @@ $grid-columns: 12 !default;
 /// @access public
 /// @author Gert-Jan Meire
 ///
-$gutter-width: 1.5rem !default;
+$gutter-width: 30px !default;
 
 ///
 /// Defines the default paragraph bottom margin.

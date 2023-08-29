@@ -1,20 +1,25 @@
-{% set content %}
-  {% if title %}
-    {% include '@heading' with {
-      'heading': 'h3',
-      'heading_text': title
-    } %}
-  {% endif %}
+<div class="partner-block {{ single_partner ? 'partner__single' : 'partner__multiple' }}">
+  <div class="partner-content intro">
+      {% if title or description %}
+          <div class="intro__content">
+          {% if title %}
+            {% include '@heading' with {
+              'heading': 'h2',
+              'heading_text': title
+            } %}
+          {% endif %}
 
-  {% if description %}
-    {% include '@paragraph' with {
-      'text': description
-    } %}
-  {% endif %}
+          {% if description %}
+            {% include '@paragraph' with {
+              'text': description
+            } %}
+          {% endif %}
+          </div>
+      {% endif %}
+  </div>
 
-
-  {% if single_partner %}
-    <div class="single-partner">
+  <div class="partner-content partners">
+    {% if single_partner %}
       <a href="#" title="Link to the OCMW Ghent website. ">
         {% include '@image' with {
           src: '/styleguide/img/stock/ocmw-logo.svg' | path,
@@ -22,9 +27,7 @@
           ratio: null
         } %}
       </a>
-    </div>
-  {% else %}
-    <div class="partners">
+    {% else %}
       <ul class="inline">
         {% for item in items %}
           <li>
@@ -38,11 +41,6 @@
           </li>
         {% endfor %}
       </ul>
-    </div>
-  {% endif %}
-{% endset %}
-
-{% include "@highlight--no-image" with {
-  content: content,
-  classes: ['partner-block']
-} %}
+    {% endif %}
+  </div>
+</div>

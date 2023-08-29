@@ -38,6 +38,10 @@ view-grid, view-list, virus, whatsapp, wheelchair-no, work
 
 Some icons have been updated, using the same machine name.
 
+### Label icon
+This element is new. Existing labels such as on teasers can be replaced by this
+atom. See teaser markup changes.
+
 ### Modal molecule
 Default heading changed from H3 to ***H2*** and the close button has the `.button-secondary` class
 
@@ -65,6 +69,25 @@ The file upload molecule (variation multiple) has the new class multiple added o
 `<section class="file-upload multiple">`.
 This change is needed to hide the 'No file chosen.' text on this variation.
 
+### Partner block molecule
+* Not based on Highlight molecule anymore
+* Title is now an `h2` instead of an h3
+* `.single-partner` becomes `.partners` class because styling changes are determined based on wrapper class `.partner__single` or `.partner__multiple`
+* (Optional) intro block contains only the title and text: extra wrappers for `.intro` and `.intro-content`
+
+### Teaser molecule
+There are multiple variations of teasers instead of just one. Pick the right
+variation for your use case.
+- Teasers without image now need the teaser class `no-image` for correct styling.
+- Teaser titles are now `h4`.
+- Event dates have the class `date` instead of `event`.
+- Labels follow the markup of the new atom "Label". See label atom changes.
+- Tags list moved to below the teaser title, except for the square variant.
+- Tags and label in the square variant get a new parent div with class `tags-label-wrapper`.
+- Accolade markup should be deleted.
+
+### Header organism
+- The logo is bigger on the frontpage, based on a parent class `is-frontpage`.
 
 ### Timeline organism
 **Date** is now an h3 and the **timeline-slot-title** is now an h4.

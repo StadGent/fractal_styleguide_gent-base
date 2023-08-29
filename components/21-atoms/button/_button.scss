@@ -16,10 +16,9 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-small {
-  @include small-text;
-
-  min-height: 1.8rem;
-  letter-spacing: .02em;
+  @include medium-text();
+  padding: 4px 10px;
+  line-height: 175%;
 }
 
 ///
@@ -31,10 +30,8 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-medium {
-  @include medium-text;
-
-  min-height: 2.2rem;
-  letter-spacing: .025em;
+  @include medium-text();
+  line-height: 175%;
 }
 
 ///
@@ -46,13 +43,12 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-large {
-  @include large-text;
-
-  min-height: 2.6rem;
-  letter-spacing: .03em;
+  @include large-text();
+  padding: 10px 20px;
+  line-height: 177.778%;
 
   &::before {
-    font-size: 1.4em;
+    font-size: 1.5rem;
   }
 }
 
@@ -66,15 +62,13 @@
 /// @author Thomas De Vriese
 ///
 @mixin button-extra-large {
-  @include extra-large-text;
+  @include large-text();
 
-  min-height: 4rem;
-  padding: .6em 1.3em;
-  letter-spacing: .03em;
-  line-height: 1.7;
+  padding: 25px 26px;
+  line-height: 177.778%;
 
   &::before {
-    font-size: 1.8em;
+    font-size: 1.5rem;
   }
 }
 
@@ -114,7 +108,7 @@
   @include button-medium; // Default.
   @include bold-text;
 
-  padding: 0 1em;
+  padding: 8px 15px;
   font-family: $default-font-family;
   text-align: center;
   cursor: pointer;
@@ -196,27 +190,18 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  padding: 0 .8em 0 1.2em;
-  line-height: 1.8em;
   text-align: left;
 
   // Padding fix specificly for IE11.
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
     padding: .3em .8em 0 1.2em;
-    line-height: 1.6;
   }
 
   &::before {
     order: 1;
-    margin-left: .5rem;
-    // Fix for IE11 flex order property.
-    float: right;
-    font-size: 1.2em;
-  }
-
-  &::after {
-    padding-right: .2rem;
-    content: '';
+    margin-left: 8px;
+    float: right; // Fix for IE11 flex order property.
+    font-size: 1.2rem;
   }
 }
 
@@ -227,13 +212,12 @@
 @mixin button-icon-left {
   &::before {
     order: unset;
-    margin-right: .5rem;
+    margin-right: 8px;
     margin-left: 0;
     // Fix for IE11 flex order property.
     float: left;
   }
 }
-
 
 .button,
 input[type="button"],

@@ -1,7 +1,7 @@
 <section class="file-upload">
   {% for i in 1..2 %}
     <div class="form-item">
-      {% include '@label' with {
+      {% include '@form-label' with {
           "label": itemLabel|replace({'%s': i}),
           "for": id ~ '--' ~ _self.name ~ '--' ~ i,
         } %}

@@ -1,40 +1,96 @@
 .partner-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
 
-  .highlight__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem gutter();
+  @include desktop {
+    padding: 0 6.75rem;
+  }
 
-    @include tablet {
-      padding: 2rem 5.5rem;
+  &.partner__multiple {
+    @include desktop {
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
     }
-  }
 
-  p {
-    text-align: center;
-  }
+    .partner-content {
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+    }
 
-  .partners ul.inline {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 2.2rem;
+    .intro {
 
-    li {
-      width: calc(50% - #{gutter()});
-      margin: 0 gutter()*.5 gutter();
-      text-align: center;
+      @include desktop {
+        min-width: 17.5rem;
+      }
 
-      @include tablet {
-        width: calc(25% - #{gutter()});
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .partners {
+      @include theme('border-color', 'color-primary-light', 'partner-intro-border');
+
+      margin: 2.25rem 0 0 ;
+      padding: 2.25rem 0 0;
+      border-top-width: .1rem;
+      border-top-style: solid;
+
+      @include desktop {
+        margin: 0 0 0 3rem;
+        padding: 0 0 0 3rem;
+        border-top: 0;
+        border-left-width: .1rem;
+        border-left-style: solid;
       }
     }
   }
 
-  .single-partner {
-    width: 9rem;
-    max-width: 100%;
-    margin: 1.5rem 0 1.2rem;
+  &.partner__single {
+    text-align: center;
+
+    .intro {
+      p:last-child {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  ul {
+    align-items: center;
+    gap: 1.5rem 3rem; // sass-lint:disable-line no-misspelled-properties
+
+    li {
+      flex: 0 1 calc(100% / 3 - 3rem);
+      width: calc(100% /3);
+      margin: 0;
+
+      @include desktop {
+        flex: 0 1 calc(100% / 4 - 3rem);
+        min-width: 5rem;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    border: 0;
+  }
+
+  figure {
+    min-width: 3.5rem;
+    max-width: 7.5rem;
+
+    @include desktop {
+      max-width: 10rem;
+    }
   }
 }

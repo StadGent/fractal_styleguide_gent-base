@@ -21,20 +21,15 @@ a {
     border-bottom: 0;
     background-image: inherit;
 
-    &::before,
-    &::after {
-      line-height: 1.4em;
-    }
-
     &:not([class*="icon"]) {
       @include button-icon;
-      @include icon(arrow-right);
+      @include icon(arrow-right, 'after');
     }
 
     &[href^="http://"]:not(.no-icon),
     &[href^="https://"]:not(.no-icon) {
       @include button-icon;
-      @include icon(arrow-right-top);
+      @include icon(arrow-right-top, 'after');
 
       &::after {
         content: '';
@@ -43,17 +38,17 @@ a {
 
     &[href^="mailto:"]:not(.no-icon) {
       @include button-icon;
-      @include icon(envelope);
+      @include icon(envelope, 'after');
     }
 
     &[href^="tel:"]:not(.no-icon) {
       @include button-icon;
-      @include icon(phone);
+      @include icon(phone, 'after');
     }
 
     &[download]:not(.no-icon) {
       @include button-icon;
-      @include icon(download);
+      @include icon(download, 'after');
     }
 
     &.button-success {
@@ -62,6 +57,10 @@ a {
 
     &.button-alert {
       @extend %button-alert;
+    }
+
+    &::after {
+      margin-left: 8px;
     }
   }
 
@@ -76,8 +75,8 @@ a {
 
   &:not(.button):not(.tag)::after {
     position: absolute;
-    top: -.25rem;
-    padding-left: .2rem;
+    margin-top: 4px;
+    margin-left: 5px;
   }
 
   ///
@@ -91,6 +90,10 @@ a {
     &:hover {
       @include theme('color', 'color-primary--darken-2', 'link-hover-color');
     }
+
+    &::after {
+      margin-top: 2px;
+    }
   }
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back),
@@ -102,7 +105,6 @@ a {
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back) {
     @include icon(arrow-right, after);
     margin-right: 1.6rem;
-    white-space: nowrap;
   }
 
   ///
@@ -111,7 +113,6 @@ a {
   &[download]:not(.no-icon) {
     @include icon(download, after);
     margin-right: 1.6rem;
-    white-space: nowrap;
   }
 
   ///
@@ -120,7 +121,6 @@ a {
   &[href^="mailto:"]:not(.no-icon) {
     @include icon(envelope, after);
     margin-right: 1.6rem;
-    white-space: nowrap;
   }
 
   ///
@@ -129,17 +129,15 @@ a {
   &[href^="tel:"]:not(.no-icon) {
     @include icon(phone, after);
     margin-right: 1.6rem;
-    white-space: nowrap;
   }
 
   ///
   /// External links get an indicator.
   ///
-  &[href^="http://"]:not(.no-icon),
-  &[href^="https://"]:not(.no-icon) {
+  &[href^="http://"]:not(.no-icon):not(.tag),
+  &[href^="https://"]:not(.no-icon):not(.tag) {
     @include icon(arrow-right-top, after);
     margin-right: 1.6rem;
-    white-space: nowrap;
 
     &[download]:not(.button):not(.no-icon) {
       @include icon(download, after);
@@ -151,13 +149,12 @@ a {
     @include icon(arrow-left, after);
     margin-left: 1.6rem;
     padding-left: 0;
-    white-space: nowrap;
 
     &::after {
       position: absolute;
-      left: -2rem;
-      padding-right: .2rem;
-      padding-left: .4rem;
+      left: -40px;
+      padding-right: 4px;
+      padding-left: 8px;
     }
   }
 
@@ -180,9 +177,9 @@ a {
 %a-arrow-animation {
   &::after,
   &::before {
-    padding-right: .2rem;
+    padding-right: 4px;
     animation: arrow-reverse .5s 1;
-    animation-fill-mode: reverse;
+    animation-fill-mode: revert;
   }
 
   &:focus,
@@ -201,24 +198,24 @@ a {
 
   @keyframes arrow {
     0% {
-      padding-right: .2rem;
+      padding-right: 4px;
       padding-left: 0;
     }
 
     100% {
       padding-right: 0;
-      padding-left: .2rem;
+      padding-left: 4px;
     }
   }
 
   @keyframes arrow-reverse {
     0% {
       padding-right: 0;
-      padding-left: .2rem;
+      padding-left: 4px;
     }
 
     100% {
-      padding-right: .2rem;
+      padding-right: 4px;
       padding-left: 0;
     }
   }
@@ -247,25 +244,25 @@ a {
 
   @keyframes arrow-left {
     0% {
-      padding-right: .2rem;
-      padding-left: .4rem;
+      padding-right: 4px;
+      padding-left: 8px;
     }
 
     100% {
-      padding-right: .4rem;
-      padding-left: .2rem;
+      padding-right: 8px;
+      padding-left: 4px;
     }
   }
 
   @keyframes arrow-left-reverse {
     0% {
-      padding-right: .4rem;
-      padding-left: .2rem;
+      padding-right: 8px;
+      padding-left: 4px;
     }
 
     100% {
-      padding-right: .2rem;
-      padding-left: .4rem;
+      padding-right: 4px;
+      padding-left: 8px;
     }
   }
 

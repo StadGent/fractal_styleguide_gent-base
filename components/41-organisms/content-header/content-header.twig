@@ -13,6 +13,10 @@
       'heading_text': heading_text
     } %}
 
+    {% if date %}
+      {% include '@pubdate' %}
+    {% endif %}
+
     {% if summary %}
       <div class="summary-text">
         {% include '@paragraph' with {
@@ -44,6 +48,7 @@
         'modifier': '',
         'src': 'https://via.placeholder.com/570x570&text=1:1+(570x570)',
         'alt_text': 'Header image',
+        'caption': 'This is the image caption.',
         'ratio': null
       } %}
     </div>
