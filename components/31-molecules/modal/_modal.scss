@@ -119,7 +119,7 @@
   /// Content
   ///
   &-content {
-    padding: 0 $gutter-width 16px;
+    padding: 16px 20px;
 
     @include tablet {
       padding: 16px 70px 60px;
@@ -143,12 +143,13 @@
     flex-shrink: 0;
     align-items: center;
     width: 100%;
-    margin-top: -15px;
-    padding: 0 70px 60px;
+    padding: 30px 20px 60px;
     z-index: z('modal', 'actions');
 
     @include tablet {
       position: relative;
+      margin-top: -15px;
+      padding: 0 70px 60px;
     }
   }
 
