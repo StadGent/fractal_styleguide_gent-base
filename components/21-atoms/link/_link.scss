@@ -26,16 +26,6 @@ a {
       @include icon(arrow-right, 'after');
     }
 
-    &[href^="http://"]:not(.no-icon),
-    &[href^="https://"]:not(.no-icon) {
-      @include button-icon;
-      @include icon(arrow-right-top, 'after');
-
-      &::after {
-        content: '';
-      }
-    }
-
     &[href^="mailto:"]:not(.no-icon) {
       @include button-icon;
       @include icon(envelope, 'after');
@@ -61,6 +51,18 @@ a {
 
     &::after {
       margin-left: 8px;
+    }
+  }
+
+  &.button {
+    &[href^="http://"]:not(.no-icon),
+    &[href^="https://"]:not(.no-icon) {
+      @include button-icon;
+      @include icon(arrow-right-top, 'after');
+
+      &::after {
+        content: '';
+      }
     }
   }
 
