@@ -88,6 +88,11 @@
   > nav {
     margin-top: 60px;
     margin-bottom: 60px;
+
+    @include desktop {
+      margin-top: 120px;
+      margin-bottom: 120px;
+    }
   }
 
   > ul,
