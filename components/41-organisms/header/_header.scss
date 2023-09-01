@@ -12,8 +12,7 @@ header.header {
       flex-wrap: wrap;
     }
 
-    > :not(:first-child),
-    > :not(.block-sg-menu-toggle) {
+    > :not(:first-child) {
       margin-left: gutter();
     }
 
