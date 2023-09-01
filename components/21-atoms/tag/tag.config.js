@@ -7,6 +7,13 @@ module.exports = {
   },
   variants: [
     {
+      name: 'external-link-tag',
+      context: {
+        tag_text: 'External link',
+        type: 'external-tag'
+      }
+    },
+    {
       name: 'filter-tag',
       context: {
         tag_text: 'Inner city',

@@ -10,6 +10,7 @@
   padding: 60px 20px;
 
   @include tablet {
+    margin-bottom: 45px;
     padding: 90px 20px;
   }
 
@@ -29,7 +30,7 @@
     }
 
     @include desktop {
-      margin-bottom: 196px;
+      margin-bottom: 145px;
     }
   }
 
@@ -49,17 +50,16 @@
   }
 
   &.accolade-title {
-    @include theme('background-color', 'color-tertiary--lighten-5', 'content-header-accolade-container-background');
-    //padding-bottom: .1rem;
+    @include theme('background-color', 'color-tertiary-light', 'content-header-accolade-container-background');
 
     h1 {
-      @include accolade('bottom', 'left', 100px, 35px, 'color-none', 'color-primary');
+      @include accolade('bottom', 'left', 100px, 36px, 'color-none', 'color-primary');
       @include theme('background-color', 'color-primary', 'content-header-accolade-text-background');
 
       display: inline;
-      padding: 0 15px;
+      padding: 5px 15px;
       color: color('white');
-      line-height: 1.1;
+      line-height: 130%;
       box-decoration-break: clone;
     }
 

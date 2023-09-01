@@ -4,6 +4,12 @@
   </a>
 {% endif %}
 
+{% if type == 'external-tag' %}
+  <a href="https://external.link" class="tag {{ modifier }}">
+    {{ tag_text }}
+  </a>
+{% endif %}
+
 {% if type == 'filter-tag' %}
   <span class="tag filter {{ modifier }}">
     {{ tag_text }}
