@@ -3,18 +3,17 @@
   @include theme('background-color', 'color-info-light', 'info-message-background');
   @include theme('border-color', 'color-info', 'info-message-icon-color');
 
-  $field-message-icon-size: 1.5rem;
-  $field-message-icon-margin: 1.5rem;
+  $field-message-icon-size: 30px;
+  $field-message-icon-margin: 30px;
 
   display: inline-block;
   position: relative;
   align-items: center;
-  max-width: 40rem;
-  min-height: 2.5rem;
-  margin-top: .2rem;
-  padding: 1.7rem 1.2rem .7rem;
+  max-width: 800px;
+  min-height: 50px;
+  margin-top: 4px;
+  padding: 34px 24px 14px;
   border-bottom: 3px solid;
-  font-size: .7rem;
 
   :nth-last-child(2) {
     margin-bottom: 0;
@@ -23,8 +22,8 @@
   &::before {
     display: block;
     position: absolute;
-    top: 1.5rem;
-    left: .7rem;
+    top: 30px;
+    left: 14px;
     width: $field-message-icon-size;
     height: $field-message-icon-size;
     margin: auto $field-message-icon-margin auto auto;
@@ -33,18 +32,23 @@
     text-align: center;
   }
 
+  &,
+  & * {
+    font-size: .7rem;
+  }
+
   .accolade {
     top: 0;
     transform: rotate(180deg);
 
     &::before {
       left: -1px;
-      width: calc(100% - 1.5rem + 1px);
+      width: calc(100% - 30px + 1px);
     }
 
     &::after {
       right: -1px;
-      width: calc(1.5rem + 1px);
+      width: 31px;
     }
   }
 
@@ -58,7 +62,7 @@
     @include theme('background-color', 'color-success-light', 'success-message-background');
     @include theme('border-color', 'color-success', 'success-message-icon-color');
 
-    padding-left: 2.9rem;
+    padding-left: 58px;
 
     &::before {
       @include theme('color', 'color-success', 'success-message-icon-color');
@@ -74,7 +78,7 @@
     @include theme('background-color', 'color-error-light', 'error-message-background');
     @include theme('border-color', 'color-error', 'error-message-icon-color');
 
-    padding-left: 2.9rem;
+    padding-left: 58px;
 
     &::before {
       @include theme('color', 'color-error', 'error-message-icon-color');

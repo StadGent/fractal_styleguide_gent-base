@@ -38,6 +38,10 @@ view-grid, view-list, virus, whatsapp, wheelchair-no, work
 
 Some icons have been updated, using the same machine name.
 
+### Fieldset atom
+**Added legend-title class**
+The legend now has a `<span class="legend-title">` around the text
+
 ### Label icon
 This element is new. Existing labels such as on teasers can be replaced by this
 atom. See teaser markup changes.
