@@ -1,5 +1,6 @@
 %messages,
 .messages {
+  @include theme('color', 'color-zero', 'status-message-color');
   @include theme('background-color', 'color-info-light', 'info-message-background');
   @include theme('border-color', 'color-info', 'info-message-icon-color');
 
