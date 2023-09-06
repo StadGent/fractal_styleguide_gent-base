@@ -8,7 +8,7 @@
 
   h2,
   h3 {
-    theme('color', 'color-zero', 'newsletter-title-color');
+    @include theme('color', 'color-zero', 'newsletter-title-color');
 
     margin-bottom: 30px;
   }
