@@ -15,8 +15,8 @@
     margin-right: .4rem;
     margin-left: .4rem;
 
-    @include desktop() {
-      flex-basis: calc((21.3rem - 100%) * 999);
-    }
+    //@include desktop() {
+    //  flex-basis: calc((21.3rem - 100%) * 999);
+    //}
   }
 }
