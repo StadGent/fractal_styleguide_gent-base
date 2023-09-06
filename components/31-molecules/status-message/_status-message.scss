@@ -1,50 +1,25 @@
 %messages,
 .messages {
+  @include theme('color', 'color-zero', 'status-message-color');
   @include theme('background-color', 'color-info-light', 'info-message-background');
   @include theme('border-color', 'color-info', 'info-message-icon-color');
 
-  $status-message-icon-size: 2rem;
+  $status-message-icon-size: 40px;
 
-  display: flex;
+  //display: flex;
   position: relative;
   flex-direction: column;
   max-width: 970px;
   margin-top: 20px;
   margin-right: 0;
-  margin-bottom: 1rem;
-  padding: 2rem;
+  margin-bottom: 20px;
+  padding: 40px;
   border-bottom: 3px solid;
   font-size: .9rem;
 
-  i {
-    @include theme('color', 'color-info', 'info-message-icon-color');
-
-    display: block;
-    flex: 0 0 $status-message-icon-size;
-    width: $status-message-icon-size;
-    margin-right: 0;
-    margin-bottom: 1rem;
-    font-size: $status-message-icon-size;
-    line-height: $status-message-icon-size;
-    text-align: center;
-
-    &::before {
-      font-size: $status-message-icon-size;
-    }
-
-    @include phablet {
-      align-self: flex-start;
-    }
-  }
-
   @include phablet {
     flex-direction: row;
-    padding: 3rem;
-
-    i {
-      margin-right: 1.2rem;
-      margin-bottom: 0;
-    }
+    padding: 60px;
   }
 
   &.messages--status {
@@ -86,8 +61,41 @@
     }
   }
 
+  i,
   p {
-    margin: 0;
+    @include phablet {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  i {
+    @include theme('color', 'color-info', 'info-message-icon-color');
+
+    width: calc($status-message-icon-size + 20px);
+    margin-right: 0;
+    padding-bottom: 20px;
+    font-size: $status-message-icon-size;
+    line-height: $status-message-icon-size;
+    text-align: center;
+
+    &::before {
+      font-size: $status-message-icon-size;
+    }
+
+    @include phablet {
+      padding-right: 20px;
+    }
+  }
+
+  > p {
+    &:last-child {
+      margin: 0;
+    }
+
+    @include phablet {
+      width: calc(100% - ($status-message-icon-size + 25px));
+    }
   }
 
   a {

@@ -26,6 +26,9 @@ For example the highlight molecule.
 Also added the `.icon-right` class for icons that are on the right-hand side.
 
 ## HTML markup changes
+### Legends
+**Added legend-title class**
+The legend now has a `<span class="legend-title">` around the text/title/label
 
 ### Icon atom
 **Removed icons:** external-link, fancyback

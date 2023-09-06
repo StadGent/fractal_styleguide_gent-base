@@ -6,4 +6,8 @@ textarea {
   padding-top: .7rem;
   padding-bottom: .7rem;
   resize: none;
+
+  &::placeholder {
+    font-style: initial;
+  }
 }

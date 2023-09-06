@@ -30,8 +30,11 @@
       "field_description": null
     } %}
 
-    <fieldset>
-      <legend>Contact details</legend>
+    <fieldset class="webform-type-fieldset">
+      <legend>
+        <span class="legend-title">Contact details</span>
+        <span class="label-optional">(optioneel)</span>
+      </legend>
       {% include '@form-row' with { items: [
         {
           "label": "Name",
@@ -135,10 +138,14 @@
       id: _self.name
     } %}
 
-    <fieldset>
-      <legend>Another fieldset</legend>
+    <fieldset class="webform-type-fieldset">
+      <legend>
+        <span class="legend-title">Another fieldset</span>
+      </legend>
       <fieldset>
-        <legend>Nested fieldset</legend>
+        <legend>
+          <span class="legend-title">Nested fieldset</span>
+        </legend>
         {% include '@form-row' with { items: [
           {
             "label": "Label textfield",
@@ -158,8 +165,11 @@
             "field_description": null
           }] } %}
       </fieldset>
-      <fieldset>
-        <legend>And another one</legend>
+      <fieldset class="webform-type-fieldset">
+        <legend>
+          <span class="legend-title">And another one</span>
+          <span class="label-optional">(Optional)</span>
+        </legend>
         {% include '@form-row' with { items: [
           {
             "label": "Label textfield",
