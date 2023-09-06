@@ -1,44 +1,115 @@
 .fieldset-wrapper fieldset,
-fieldset  {
+fieldset {
   @include theme('border-color', 'color-primary', 'fieldset-border-color');
 
-  max-width: 41rem;
-  margin-bottom: 1.2rem;
-  padding: .8rem .8rem .4rem;
-  border: 2px solid;
-
-  @include tablet {
-    padding: .8rem 1.5rem .4rem;
-  }
+  max-width: 820px;
+  margin-bottom: 24px;
 
   .form-item {
-    margin-bottom: .8rem;
+    margin-bottom: 16px;
   }
 
-  legend {
-    @include semi-bold-text;
-    @include medium-text;
-    @include theme('color', 'color-none', 'fieldset-legend-color');
-    @include theme('background-color', 'color-primary', 'fieldset-legend-background-color');
+  &:not(.webform-type-fieldset) {
+    legend {
+      @include label;
 
-    margin-bottom: .2rem;
-    padding: .1rem .5rem;
-
-    + .field-message,
-    + .form-item > .field-message:first-child {
-      margin-top: -1rem;
-      margin-bottom: 1rem;
+      max-width: 410px;
     }
   }
 
-  fieldset {
-    @include theme('border-color', 'color-zero', 'inner-fieldset-border-color');
-    border: 1px dashed;
+  legend {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 4px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin: auto;
+      content: '';
+      z-index: 1;
+    }
+
+    .legend-title {
+      position: relative;
+      z-index: 2;
+    }
+
+    .label-optional {
+      @include optional-label();
+
+      position: relative;
+      z-index: 2;
+    }
+
+    + .field-message,
+    + .form-item > .field-message:first-child {
+      margin-top: -20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &.webform-type-fieldset {
+    padding: 16px 16px 8px;
+    border: 2px solid;
+
+    @include tablet {
+      padding: 20px 20px 12px;
+    }
 
     legend {
-      @include theme('color', 'color-zero', 'inner-fieldset-legend-color');
-      @include theme('background-color', 'color-none', 'inner-fieldset-legend-background-color');
-      padding: 0 .4rem;
+      max-width: none;
+
+      &::before {
+        @include theme('background-color', 'color-primary', 'fieldset-legend-background-color');
+
+        height: 2px;
+      }
+
+      .legend-title {
+        @include semi-bold-text;
+        @include medium-text;
+        @include theme('color', 'color-none', 'fieldset-legend-color');
+        @include theme('background-color', 'color-primary', 'fieldset-legend-background-color');
+
+        padding: 1px 10px;
+      }
+    }
+  }
+
+  &.webform-type-fieldset,
+  &:not(.webform-type-fieldset) {
+    fieldset {
+      @include theme('border-color', 'color-zero', 'inner-fieldset-border-color');
+
+      padding: 20px 20px 12px;
+      border: 1px dashed;
+
+      legend {
+        max-width: none;
+
+        &::before {
+          @include theme('background-color', 'color-none', 'inner-fieldset-legend-background-color');
+          @include theme('border-color', 'color-zero', 'inner-fieldset-border-color');
+
+          height: 1px;
+          border-bottom: 1px dashed;
+        }
+
+        .legend-title {
+          @include theme('color', 'color-zero', 'inner-fieldset-legend-color');
+          @include theme('background-color', 'color-none', 'inner-fieldset-legend-background-color');
+
+          padding: 1px 10px;
+        }
+      }
     }
   }
 }
