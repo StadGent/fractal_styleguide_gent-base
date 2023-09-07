@@ -26,6 +26,9 @@ For example the highlight molecule.
 Also added the `.icon-right` class for icons that are on the right-hand side.
 
 ## HTML markup changes
+### Legends
+**Added legend-title class**
+The legend now has a `<span class="legend-title">` around the text/title/label
 
 ### Icon atom
 **Removed icons:** external-link, fancyback
@@ -37,10 +40,6 @@ question, question-circle, refresh, settings, shopping, stop, tag, target,
 view-grid, view-list, virus, whatsapp, wheelchair-no, work
 
 Some icons have been updated, using the same machine name.
-
-### Fieldset atom
-**Added legend-title class**
-The legend now has a `<span class="legend-title">` around the text
 
 ### Label icon
 This element is new. Existing labels such as on teasers can be replaced by this
