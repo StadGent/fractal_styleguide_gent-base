@@ -211,10 +211,10 @@ $field-icon-padding: 2.5rem;
       }
 
       &::after {
-        top: 0;
-        left: -.1rem;
-        width: 1rem;
-        height: 1rem;
+        top: 3px;
+        left: -2px;
+        width: 20px;
+        height: 20px;
       }
     }
   }
@@ -237,10 +237,10 @@ $field-icon-padding: 2.5rem;
       }
 
       &::after {
-        top: .3rem;
-        left: .3rem;
-        width: .4rem;
-        height: .4rem;
+        top: 9px;
+        left: 6px;
+        width: 8px;
+        height: 8px;
         border-radius: border-radius("radius-4");
       }
     }
