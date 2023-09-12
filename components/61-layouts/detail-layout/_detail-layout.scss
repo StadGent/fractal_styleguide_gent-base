@@ -18,10 +18,10 @@
     margin-left: -20px;
 
     @include tablet {
-      width: calc(100% + 135px * 2);
-      margin-left: -135px;
-      padding-right: 135px;
-      padding-left: 135px;
+      width: calc(100% + 255px * 2);
+      margin-left: -255px;
+      padding-right: 255px;
+      padding-left: 255px;
     }
 
     &.accolade-title {
@@ -49,7 +49,7 @@
         }
 
         @include desktop {
-          max-width: calc($bp-max-content - 510px - 60px);
+          max-width: calc($bp-max-content - 580px - 60px);
           margin: -205px 0 100px;
         }
       }

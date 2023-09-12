@@ -42,6 +42,10 @@
       flex-direction: row;
       padding-top: 90px;
       padding-bottom: 105px;
+
+      &.image {
+        padding-bottom: 90px;
+      }
     }
   }
 

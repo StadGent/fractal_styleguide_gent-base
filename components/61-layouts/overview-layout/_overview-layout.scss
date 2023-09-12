@@ -59,6 +59,17 @@
     }
   }
 
+  > .cta-block {
+    @include desktop {
+      @include set-layout('width-11', 'offset-1');
+    }
+
+    &.image-left,
+    &.image-right {
+      @include set-layout('width-12');
+    }
+  }
+
   > .full-width,
   > .gentinfo {
     @include full-width;

@@ -61,11 +61,16 @@
     }
   }
 
-  i,
-  p {
+  > * {
     @include phablet {
       display: inline-block;
       vertical-align: top;
+    }
+
+    &:not(i) {
+      @include phablet {
+        width: calc(100% - ($status-message-icon-size + 25px));
+      }
     }
   }
 
@@ -91,10 +96,6 @@
   > p {
     &:last-child {
       margin: 0;
-    }
-
-    @include phablet {
-      width: calc(100% - ($status-message-icon-size + 25px));
     }
   }
 
