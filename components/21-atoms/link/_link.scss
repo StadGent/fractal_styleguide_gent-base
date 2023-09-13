@@ -54,9 +54,9 @@ a {
     }
   }
 
-  &.button {
-    &[href^="http://"]:not(.no-icon),
-    &[href^="https://"]:not(.no-icon) {
+  &.button:not(.no-icon):not([class^="icon-"]:not([download])) {
+    &[href^="http://"],
+    &[href^="https://"] {
       @include button-icon;
       @include icon(arrow-right-top, 'after');
 
