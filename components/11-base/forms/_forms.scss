@@ -6,8 +6,8 @@
 ///
 ////
 
-$field-icon-position: no-repeat right .75rem top .4rem;
-$field-icon-padding: 2.5rem;
+$field-icon-position: no-repeat right 15px top 8px;
+$field-icon-padding: 50px;
 
 ///
 /// The general field atom styling.
@@ -139,8 +139,8 @@ $field-icon-padding: 2.5rem;
 
   display: block;
   width: 100%;
-  height: 2.2rem;
-  padding: 0 .8rem;
+  height: 44px;
+  padding: 0 16px;
   border: 1px solid;
   font-family: $default-font-family;
   font-size: .8rem;
@@ -160,7 +160,7 @@ $field-icon-padding: 2.5rem;
 ///
 @mixin choices-field-base($type) {
   position: relative;
-  margin-bottom: .5rem;
+  margin-bottom: 10px;
 
   &:last-child {
     margin-bottom: 0;
@@ -170,23 +170,23 @@ $field-icon-padding: 2.5rem;
     position: absolute;
     top: 0;
     left: 0;
-    padding-left: 1.4rem;
+    padding-left: 28px;
     font-weight: normal;
-    line-height: 1.4rem;
+    line-height: 28px;
     overflow: unset;
 
     &::before,
     &::after {
       position: absolute;
-      top: .15rem;
+      top: 3px;
       content: "";
     }
 
     &::before {
       display: inline-block;
       left: 0;
-      width: 1rem;
-      height: 1rem;
+      width: 20px;
+      height: 20px;
       border: 2px solid;
     }
 
@@ -320,7 +320,7 @@ $field-icon-padding: 2.5rem;
           @include icon("checkmark-checkbox", "after");
 
           &::after {
-            padding-left: .05rem;
+            padding-left: 1px;
             font-size: 1.1rem;
             line-height: 1;
           }
@@ -387,6 +387,6 @@ $field-icon-padding: 2.5rem;
 .form-disclaimer {
   @include theme('color', 'color-tertiary--lighten-1', 'form-disclaimer-color');
 
-  margin: 1.2rem 0;
+  margin: 24px 0;
   font-size: .6rem;
 }
