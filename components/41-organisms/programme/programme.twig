@@ -1,16 +1,15 @@
 <div class="programme-wrapper">
-  <h2 class="visually-hidden">Programme</h2>
-  <div class="programme highlight highlight--top">
-    <dl class="highlight__inner">
+  <div class="programme">
+    <dl class="programme__inner">
 
       {% for slotKey, slot in slots %}
-        <div class="programme-slot">
-          <dt class="programme-slot-title">{{ slot.title }}</dt>
+        <div class="programme-slot clearfix">
+          <dt class="programme-slot-title"><h2>{{ slot.title }}</h2></dt>
           <dd>
             {% for itemKey, item in slot.items %}
               {% set key = slotKey ~ itemKey %}
               {% set modalContent %}
-              <h4>{{ slot.title }}</h4>
+              <h3>{{ slot.title }}</h3>
 
               {% if item.subtitle %}
                 <p>{{ item.subtitle }}</p>
@@ -56,7 +55,7 @@
 
                 <!-- Teaser -->
                 {% include '@teaser' with {
-                  modifier: 'teaser--inverted',
+                  modifier: 'teaser--background',
                   teaser_uid: 'uid_' ~ key,
                   paragraph_text: item.subtitle,
                   title: item.title,
