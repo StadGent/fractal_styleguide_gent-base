@@ -93,6 +93,8 @@ fieldset {
       border: 1px dashed;
 
       legend {
+        display: flex;
+        align-items: center;
         max-width: none;
 
         &::before {
