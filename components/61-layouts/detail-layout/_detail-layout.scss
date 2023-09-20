@@ -18,10 +18,10 @@
     margin-left: -20px;
 
     @include tablet {
-      width: calc(100% + 135px * 2);
-      margin-left: -135px;
-      padding-right: 135px;
-      padding-left: 135px;
+      width: calc(100% + 255px * 2);
+      margin-left: -255px;
+      padding-right: 255px;
+      padding-left: 255px;
     }
 
     &.accolade-title {
@@ -49,7 +49,7 @@
         }
 
         @include desktop {
-          max-width: calc($bp-max-content - 510px - 60px);
+          max-width: calc($bp-max-content - 580px - 60px);
           margin: -205px 0 100px;
         }
       }
@@ -191,19 +191,16 @@ aside.bottom {
   @extend %content-container;
 
   > * {
-    @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
-
-    padding-top: 60px;
-    border-top: 2px solid;
+    margin-top: 60px;
+    margin-bottom: 60px;
 
     @include tablet {
-      padding-top: 40px;
+      margin-bottom: 120px;
     }
 
     @include desktop {
       @include set-layout();
       width: 100%;
-      margin-bottom: 40px;
       margin-left: 0;
       padding-right: span(2 wide of 12);
       padding-left: span(2 wide of 12);
@@ -219,24 +216,6 @@ aside.bottom {
 aside.top {
   position: relative;
   margin: 100px auto 0;
-
-  > div:first-child {
-    &::before {
-      @include spot-image('lightbulb', $bulb-image-width);
-
-      display: block;
-      position: relative;
-      margin: (-$bulb-image-width) auto 20px;
-      z-index: z('default');
-
-      @include tablet {
-        position: absolute;
-        top: -($bulb-image-width*.5);
-        right: span(1 of 12);
-        margin: 0;
-      }
-    }
-  }
 }
 
 aside.bottom {

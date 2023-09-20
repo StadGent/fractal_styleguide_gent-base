@@ -106,7 +106,7 @@
 ///
 @mixin button {
   @include button-medium; // Default.
-  @include bold-text;
+  @include semi-bold-text;
 
   padding: 8px 15px;
   font-family: $default-font-family;

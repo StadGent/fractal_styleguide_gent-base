@@ -92,48 +92,27 @@ $field-icon-padding: 50px;
   }
 
   &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme(
-      "color",
-      "color-zero--lighten-2",
-      "fields-placeholder-color"
-    );
-    font-style: italic;
+    @include theme("color", "color-zero", "fields-placeholder-color");
     font-weight: normal;
   }
 
   &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme(
-      "color",
-      "color-zero--lighten-2",
-      "fields-placeholder-color"
-    );
-    font-style: italic;
+    @include theme("color", "color-zero", "fields-placeholder-color");
     font-weight: normal;
   }
 
   &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme(
-      "color",
-      "color-zero--lighten-2",
-      "fields-placeholder-color"
-    );
-    font-style: italic;
+    @include theme("color", "color-zero", "fields-placeholder-color");
     font-weight: normal;
   }
 
   &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
-    @include theme(
-      "color",
-      "color-zero--lighten-2",
-      "fields-placeholder-color"
-    );
-    font-style: italic;
+    @include theme("color", "color-zero", "fields-placeholder-color");
     font-weight: normal;
   }
 
   &::placeholder {
-    @include theme("color", "color-zero--lighten-2", "fields-placeholder-color");
-    font-style: italic;
+    @include theme("color", "color-zero", "fields-placeholder-color");
     font-weight: normal;
   }
 
