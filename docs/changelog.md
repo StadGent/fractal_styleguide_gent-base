@@ -99,6 +99,9 @@ There's an image (singular) that is loaded twice: once on the right side and sho
 
 Both the image and the content go into separate `<dd>` containers and are alternated (left/right). Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
 
+### Programme organism
+Titles have changed to h2 and h3 for slot title and teaser title
+
 ### Summary box organism
 Not based on Highlight molecule anymore.
 The HTML markup has been simplified.
