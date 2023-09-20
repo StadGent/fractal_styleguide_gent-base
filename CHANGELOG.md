@@ -88,6 +88,7 @@ variation for your use case.
 - Tags list moved to below the teaser title, except for the square variant.
 - Tags and label in the square variant get a new parent div with class `tags-label-wrapper`.
 - Accolade markup should be deleted.
+- Wide teaser has no changes except for heading change and accolade removal, see above. The image has a 1:1 ratio.
 
 ### Header organism
 - The logo is bigger on the frontpage, based on a parent class `is-frontpage`.
@@ -133,6 +134,7 @@ Becomes
 * Social block has an H4 title instead of H3.
 * The newsletter block does not use highlight block anymore, instead it uses the
   new feature-block markup.
+
 
 ## [5.x and older]
 
