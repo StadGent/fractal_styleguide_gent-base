@@ -131,14 +131,17 @@ module.exports = {
     },
     {
       name: 'teaser--wide',
-      image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-      image_alt_text: 'alt text',
-      type: 'teaser--wide',
-      paragraph_text: 'This is a wide teaser, usually used with the sidebar layout. It can contain multiple components and has an optional image.',
-      title: 'This is a wide teaser, usually used with the sidebar layout',
-      tags: ['Optional tag', 'More optional tags'],
-      address_location: 'Lakenhalle',
-      address: 'Botermarkt 18A, 9000 Gent'
+      context: {
+        image_ratio: '1:1',
+        image_src: 'https://via.placeholder.com/570x570&text=1:1+(570x570)',
+        image_alt_text: 'alt text',
+        type: 'teaser--wide',
+        paragraph_text: 'This is a wide teaser, usually used with the sidebar layout. It can contain multiple components and has an optional image.',
+        title: 'This is a wide teaser, usually used with the sidebar layout',
+        tags: ['Optional tag', 'More optional tags'],
+        address_location: 'Lakenhalle',
+        address: 'Botermarkt 18A, 9000 Gent'
+      }
     }
   ]
 };
