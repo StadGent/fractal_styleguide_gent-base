@@ -3,14 +3,14 @@
 
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 4rem;
+  margin: 70px auto 80px;
 
   .sidebar {
     width: 100%;
 
     @include desktop {
-      width: span(3 of 12);
-      padding-right: gutter();
+      width: span(4 of 12);
+      padding-right: gutter() * 2;
     }
 
     &.modal {
@@ -22,7 +22,7 @@
     width: 100%;
 
     @include desktop {
-      width: span(9 wide of 12);
+      width: span(8 wide of 12);
     }
   }
 }

@@ -59,6 +59,22 @@
 
     {% if image_src is defined %}
       <div class="content__first">
+        <div class="tags-label-wrapper">
+          {% if label_text %}
+            {% include '@label' with {
+              'label': label_text,
+              'icon': 'icon-tag'
+            } %}
+          {% endif %}
+
+          {% if tagList and tags_position == 'top' %}
+            {% include '@tag-list' with {
+              tags: tagList,
+              link: null
+            } %}
+          {% endif %}
+        </div>
+
         <div class="figure-wrapper">
           {% include '@image' with {
             src: image_src,

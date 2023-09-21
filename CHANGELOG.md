@@ -136,6 +136,9 @@ Becomes
   new feature-block markup.
 
 
+### Filter layout
+* "You have selected" and "Found results" is normal text instead of `h2`.
+
 ## [5.x and older]
 
 * See full changelog at

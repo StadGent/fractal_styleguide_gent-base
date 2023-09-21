@@ -340,7 +340,7 @@
       margin-bottom: gutter();
 
       @include phablet {
-        flex-basis: span(5 of 18);
+        flex-basis: span(6 of 18);
         margin-right: 10px;
         margin-bottom: 0;
       }
@@ -357,7 +357,7 @@
       }
 
       @include phablet {
-        flex-basis: span(13 of 18);
+        flex-basis: span(12 of 18);
       }
     }
   }
