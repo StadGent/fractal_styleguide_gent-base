@@ -129,7 +129,7 @@
   {% include "@modal" with {
     id: 'filter',
     title: 'Filter the results',
-    title_heading_level: 'h2',
+    title_heading_level: 'h3',
     classes: 'sidebar filter-section has-custom-binding modal--fixed-height',
     content: modalContent,
     actions: '<button type="submit" class="button button-primary filter__submit">Show result</button>',
@@ -143,9 +143,9 @@
       "heading_text": "Filtercomponent"
     } %}
 
-    <div class="bold show-desktop-only mb-20">
+    <div class="show-desktop-only">
       {% include '@paragraph' with {
-        text: 'This is an optional introductory text. If this text is present, it is never shown below desktop width!'
+        text: 'This is an optional introductory text. If this text is present, it is never shown below desktop fold!'
       } %}
       {% include '@paragraph' with {
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam dignissimos itaque. Ad autem consequuntur deleniti doloremque, impedit maxime praesentium provident quaerat reiciendis repudiandae vero?'
@@ -153,7 +153,7 @@
     </div>
 
     <div class="selected-filters">
-      <h2>You have selected:</h2>
+      <div class="filter-page-label">You have selected:</div>
       {% include '@tag-list' with {
         tags: [
           { text: 'Filter one', type: 'filter-tag' },
@@ -165,7 +165,7 @@
     </div>
 
     <div class="filter__result-count">
-      <h2>We have found 666 results</h2>
+      <div class="filter-page-label">We have found 673 results</div>
       <button type="button"
               class="button button-secondary icon-filter result__show-filters modal-trigger"
               aria-expanded="false"

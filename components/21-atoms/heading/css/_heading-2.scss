@@ -2,6 +2,7 @@ h2,
 .h2,
 %h2 {
   @include theme('color', 'color-primary', 'heading-2-color');
+  @include bold-text();
 
   font-size: 1.6rem;
   line-height: 2.1rem;

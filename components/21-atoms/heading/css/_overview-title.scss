@@ -5,27 +5,8 @@ h4,
 h5,
 h6 {
   &.overview-title {
-    @extend %h1;
-    display: flex;
+    @extend %h2;
     max-width: 100%;
-    margin-bottom: 2rem;
-
-    span {
-      position: relative;
-      max-width: 100%;
-      padding: inherit;
-      font-size: inherit;
-
-      span {
-        &::after {
-          margin-left: .5rem;
-          font-size: 3.5rem;
-          line-height: .5;
-          content: ':';
-          speak: none;
-          vertical-align: -11%;
-        }
-      }
-    }
+    margin-bottom: 14px;
   }
 }

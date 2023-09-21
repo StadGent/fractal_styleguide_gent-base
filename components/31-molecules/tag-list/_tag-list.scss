@@ -1,5 +1,7 @@
 .tag-list-wrapper {
   .tag-list {
+    @include small-text();
+
     display: flex;
     flex-wrap: wrap;
     margin: -.2rem;

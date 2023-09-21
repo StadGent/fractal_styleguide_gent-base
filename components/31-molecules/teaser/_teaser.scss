@@ -285,4 +285,80 @@
       @include theme('background-color', 'color-tertiary-light');
     }
   }
+
+  &.teaser--wide {
+    @include theme('border-color', 'color-primary', 'teaser-wide-border-color');
+
+    margin: 0 0 40px;
+    padding: 0 0 30px;
+    border-bottom: 1px solid color('blue');
+
+    h4 {
+      margin: 0 0 20px;
+    }
+
+    .tag-list-wrapper {
+      margin: 20px 0;
+    }
+
+    .icon-list,
+    .location,
+    .dash-separated-list {
+      @include small-text();
+      @include theme('color', 'help-text-color', 'teaser-location-color');
+
+      margin: 0 0 10px;
+    }
+
+    .location {
+      @include bold-text;
+
+      i {
+        margin-right: .3rem;
+        font-size: 1.5em;
+        vertical-align: middle;
+      }
+    }
+
+    .teaser-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      @include tablet {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .content__first,
+    .content__second {
+      flex-basis: 100%;
+    }
+
+    .content__first {
+      order: 1;
+      margin-bottom: gutter();
+
+      @include phablet {
+        flex-basis: span(6 of 18);
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+    }
+
+    .content__second {
+      order: 2;
+      padding-bottom: 0;
+
+      p {
+        @include medium-text();
+
+        margin-top: 10px;
+      }
+
+      @include phablet {
+        flex-basis: span(12 of 18);
+      }
+    }
+  }
 }
