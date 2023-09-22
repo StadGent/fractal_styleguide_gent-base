@@ -138,13 +138,11 @@ a {
   ///
   &[href^="http://"]:not(.no-icon):not(.tag),
   &[href^="https://"]:not(.no-icon):not(.tag) {
-    &:not([href*='stad.gent']) {
-      @include icon(arrow-right-top, after);
-      margin-right: 1.6rem;
+    @include icon(arrow-right-top, after);
+    margin-right: 1.6rem;
 
-      &[download]:not(.button):not(.no-icon) {
-        @include icon(download, after);
-      }
+    &[download]:not(.button):not(.no-icon) {
+      @include icon(download, after);
     }
   }
 
