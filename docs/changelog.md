@@ -3,6 +3,65 @@
 All notable changes to this style guide are documented here.
 
 
+## [5.1.6]
+
+### Update
+
+* STIJ-437: Update allieTabs to 1.2.6
+
+## [5.1.5]
+
+### Fix
+
+* Remove call to custom sass log function
+
+## [5.1.4]
+
+### Fix
+
+* Fix Gentinfo styling
+
+## [5.1.3]
+
+### Remove
+
+* Remove Gentinfo icon
+
+## [5.1.2]
+
+### Fix
+
+* Fix GitHub workflows
+
+## [5.1.1]
+
+### Fix
+
+* Fix GitHub workflows
+
+## [5.1.0]
+
+### Add
+
+* Add support for node 18
+
+## [5.0.29]
+
+### Update
+
+* Upgrade chromedriver to 109.0.0
+
+### Add
+
+* Add E-Mail Release Notification
+
+## [5.0.28]
+
+### Change
+
+* SGD8-2444: Update gentinfo logo
+
+
 ## [5.0.27]
 ### Fix
 
@@ -1204,6 +1263,27 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[5.1.6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.5...5.1.6
+[5.1.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.4...5.1.5
+[5.1.4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.3...5.1.4
+[5.1.3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.2...5.1.3
+[5.1.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.1...5.1.2
+[5.1.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.0...5.1.1
+[5.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.29...5.1.0
+[5.0.29]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.28...5.0.29
+[5.0.28]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.27...5.0.28
+[5.0.27]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.26...5.0.27
+[5.0.26]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.25...5.0.26
+[5.0.25]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.24...5.0.25
+[5.0.24]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.23...5.0.24
+[5.0.23]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.22...5.0.23
+[5.0.22]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.21...5.0.22
+[5.0.21]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.20...5.0.21
+[5.0.20]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.19...5.0.20
+[5.0.19]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.18...5.0.19
+[5.0.18]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.17...5.0.18
+[5.0.17]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.16...5.0.17
+[5.0.16]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.15...5.0.16
 [5.0.15]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.14...5.0.15
 [5.0.14]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.13...5.0.14
 [5.0.13]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.0.12...5.0.13
