@@ -8,6 +8,7 @@ All notable changes to this style guide are documented here.
 ### Update
 
 * STIJ-437: Update allieTabs to 1.2.6
+* Update ChromeDriver to v117
 
 ## [5.1.5]
 
