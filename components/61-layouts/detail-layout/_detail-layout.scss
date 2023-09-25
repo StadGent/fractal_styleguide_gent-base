@@ -114,10 +114,6 @@
     }
   }
 
-  > .highlight {
-    margin-bottom: 90px;
-  }
-
   > ul.accordion {
     @include desktop {
       @include set-layout('width-7', 'offset-2');
@@ -153,6 +149,15 @@
     &.image-right {
       @include set-layout('width-12');
     }
+  }
+
+  > div.responsive-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  > .contact-details {
+    @include set-layout();
   }
 
   .w12,
