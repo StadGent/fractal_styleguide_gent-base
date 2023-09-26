@@ -122,6 +122,17 @@ Becomes
 ```
 
 
+### Contact details organism
+Not based on Highlight molecule anymore.
+The HTML markup has been simplified.
+```
+<section class="contact-details">
+  ...
+</section>
+```
+The links get a `no-icon` class.
+
+
 ### Footer organism
 * Titles become h4 except Gentinfo title stays h3.
 * `gentinfo-block` class gets 2nd class `dark-background`.
