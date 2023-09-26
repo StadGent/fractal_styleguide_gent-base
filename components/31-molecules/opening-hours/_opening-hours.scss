@@ -233,3 +233,9 @@ $week-breakpoint: '(min-width: 750px)';
     }
   }
 }
+
+.tabs.opening-hours {
+  > [role='tabpanel'] {
+    padding: 0;
+  }
+}

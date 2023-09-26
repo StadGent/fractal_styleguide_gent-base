@@ -3,6 +3,8 @@
   [role='tabpanel'] {
     @include theme('background-color', 'color-secondary-pastel', 'tab-background-color');
 
+    padding: 20px 20px 10px;
+
     &:target {
       display: block;
     }
