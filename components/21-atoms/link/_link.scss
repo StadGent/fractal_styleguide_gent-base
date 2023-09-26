@@ -98,13 +98,13 @@ a {
     }
   }
 
-  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back),
+  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back):not(.refresh),
   &.button:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]) {
     @extend %a-arrow-animation;
   }
 
 
-  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back) {
+  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back):not(.refresh) {
     @include icon(arrow-right, after);
     margin-right: 1.6rem;
   }
@@ -146,9 +146,9 @@ a {
     }
   }
 
+  &.refresh:not(.no-icon),
   &.back:not(.no-icon) {
     @extend %a-arrow-animation--left;
-    @include icon(arrow-left, after);
     margin-left: 1.6rem;
     padding-left: 0;
 
@@ -158,6 +158,14 @@ a {
       padding-right: 4px;
       padding-left: 8px;
     }
+  }
+
+  &.back:not(.no-icon) {
+    @include icon('arrow-left', after);
+  }
+
+  &.refresh:not(.no-icon) {
+    @include icon('refresh', after);
   }
 
   .dark-background & {

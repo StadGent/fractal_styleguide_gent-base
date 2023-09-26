@@ -30,6 +30,9 @@ Also added the `.icon-right` class for icons that are on the right-hand side.
 **Added legend-title class**
 The legend now has a `<span class="legend-title">` around the text/title/label
 
+### Input submit
+Changed `<input>` to `<button>` 
+
 ### Icon atom
 **Removed icons:** external-link, fancyback
 
