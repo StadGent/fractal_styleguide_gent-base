@@ -1,21 +1,15 @@
 .tabs {
 
   [role='tabpanel'] {
-    @include theme('background-color', 'color-primary--lighten-5', 'tab-background-color');
+    @include theme('background-color', 'color-secondary-pastel', 'tab-background-color');
 
-    padding: 1rem;
-    border-radius: border-radius('radius-1');
-
-    &:first-of-type {
-      border-top-left-radius: 0;
-    }
+    padding: 20px 20px 10px;
 
     &:target {
       display: block;
     }
 
     &[aria-hidden] {
-
       &[aria-hidden='true'] {
         display: none;
       }
@@ -27,7 +21,6 @@
   }
 
   [role='tablist'] {
-
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -39,6 +32,7 @@
 
     > li[role='presentation'] {
       flex: 0 0 auto;
+      margin: 0;
 
       a,
       a[href^="mailto:"],
@@ -49,10 +43,9 @@
         @include theme('color', 'color-tertiary', 'default-text-color');
         display: inline-block;
         width: 100%;
-        padding: .3rem .8rem;
-        border-top-left-radius: border-radius('radius-1');
-        border-top-right-radius: border-radius('radius-1');
-        font-weight: 400;
+        padding: 20px;
+        line-height: 128%;
+        font-weight: 600;
         text-align: center;
         text-decoration: none;
 
@@ -60,15 +53,19 @@
         @include desktop {
           width: auto;
           text-align: left;
+          font-size: 1rem;
+          line-height: 130%;
         }
 
         &::after {
-          @include theme('color', 'color-primary', 'link-underlined-hover-color');
+          @include theme('color', 'color-zero');
           display: block;
+          bottom: 0;
+          left: 0;
           width: 0;
           margin: 0 auto;
           transition: width 100ms;
-          border-bottom: 2px solid;
+          border-bottom: 3px solid;
           content: '';
           overflow: visible;
         }
@@ -79,25 +76,13 @@
           background: transparent;
 
           &::after {
-            width: 1.5rem;
-
-            @include desktop {
-              width: 70%;
-            }
-          }
-        }
-
-        &[role='tab'][aria-selected='true']:focus::after {
-          width: 1.5rem;
-
-          @include desktop {
             width: 100%;
           }
         }
       }
 
       [role='tab'][aria-selected='true'] {
-        @include theme('background-color', 'color-primary--lighten-5', 'tab-background-color');
+        @include theme('background-color', 'color-secondary-pastel', 'tab-background-color');
 
         border-bottom: 0;
       }
@@ -110,8 +95,7 @@
     }
 
     [role='tablist'] {
-      @include theme('border-color', 'color-primary--lighten-5', 'tab-background-color');
-      border-bottom: 2px solid;
+      @include theme('border-color', 'color-secondary-pastel', 'tab-background-color');
     }
   }
 }
