@@ -41,20 +41,20 @@
       a[href^="https://"] {
         @include reset-link-background;
         @include theme('color', 'color-tertiary', 'default-text-color');
+
         display: inline-block;
         width: 100%;
         padding: 20px;
-        line-height: 128%;
         font-weight: 600;
+        line-height: 128%;
         text-align: center;
         text-decoration: none;
 
-
         @include desktop {
           width: auto;
-          text-align: left;
           font-size: 1rem;
           line-height: 130%;
+          text-align: left;
         }
 
         &::after {
