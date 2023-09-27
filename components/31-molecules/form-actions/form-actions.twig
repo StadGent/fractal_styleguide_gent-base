@@ -2,13 +2,15 @@
   {% if primary_button %}
     {% include '@input-submit' with {
       value: primary_button,
+      modifier: 'button button-primary icon-arrow-right'
     } %}
   {% endif %}
 
   {% if secondary_button %}
     {% include '@button' with {
       text: secondary_button,
-      type: 'secondary'
+      type: 'secondary',
+      modifier: 'icon-arrow-left icon-left'
     } %}
   {% endif %}
 
@@ -16,7 +18,7 @@
     {% include '@link' with {
       text: link,
       link: '#',
-      modifier: 'standalone-link back'
+      modifier: 'standalone-link refresh'
     } %}
   {% endif %}
 
