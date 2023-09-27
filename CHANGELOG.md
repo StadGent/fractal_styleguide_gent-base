@@ -31,7 +31,7 @@ Also added the `.icon-right` class for icons that are on the right-hand side.
 The legend now has a `<span class="legend-title">` around the text/title/label
 
 ### Input submit
-Changed `<input>` to `<button>` 
+Changed `<input>` to `<button>`. This is important to be able to use the hover effect in combination with an icon.
 
 ### Icon atom
 **Removed icons:** external-link, fancyback
