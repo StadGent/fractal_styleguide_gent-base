@@ -206,9 +206,13 @@ aside.bottom {
     @include desktop {
       @include set-layout();
       width: 100%;
-      margin-left: 0;
-      padding-right: span(2 wide of 12);
-      padding-left: span(2 wide of 12);
+
+      // Related teasers box should be wider.
+      &:not(.related-box-teasers) {
+        margin-left: 0;
+        padding-right: span(2 wide of 12);
+        padding-left: span(2 wide of 12);
+      }
     }
   }
 
