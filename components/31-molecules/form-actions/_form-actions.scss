@@ -19,12 +19,15 @@
     margin-left: 1.5rem;
   }
 
-  > a.back {
-    margin-left: 2.25rem;
+  > a {
+    &.refresh,
+    &.back {
+      margin-left: 45px;
 
-    &::after {
-      // Correct icon position.
-      top: 0;
+      &::after {
+        // Correct icon position.
+        top: 0;
+      }
     }
   }
 }

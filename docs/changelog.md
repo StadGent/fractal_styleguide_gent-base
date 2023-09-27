@@ -30,6 +30,9 @@ Also added the `.icon-right` class for icons that are on the right-hand side.
 **Added legend-title class**
 The legend now has a `<span class="legend-title">` around the text/title/label
 
+### Input submit
+Changed `<input>` to `<button>` 
+
 ### Icon atom
 **Removed icons:** external-link, fancyback
 
@@ -120,6 +123,17 @@ Becomes
 ```
 <span>Show all photos <i class="icon-fullscreen-enter" aria-hidden="true"></i></span>
 ```
+
+
+### Contact details organism
+Not based on Highlight molecule anymore.
+The HTML markup has been simplified.
+```
+<section class="contact-details">
+  ...
+</section>
+```
+The links get a `no-icon` class.
 
 
 ### Footer organism
