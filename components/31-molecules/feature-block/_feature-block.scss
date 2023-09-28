@@ -3,10 +3,10 @@
   @include theme('background-color', 'color-primary', 'feature-block-primary-background-color');
   @include large-text();
 
-  padding: 1.5rem;
+  padding: 30px;
 
   @include tablet {
-    padding: 3rem;
+    padding: 60px;
   }
 
   h1 {
