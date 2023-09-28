@@ -15,11 +15,6 @@ blockquote {
   padding-top: 3.5rem;
   font-size: 1.2rem;
 
-  @include desktop {
-    padding-top: 3.5rem;
-    font-size: 1.5rem;
-  }
-
   &::before {
     @include spot-image('quote', 2rem);
     position: absolute;
