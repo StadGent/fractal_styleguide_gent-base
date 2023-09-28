@@ -1,14 +1,20 @@
 .cta-block.spotlight {
   h1 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
   }
 
   .links {
-    margin-top: 1.5rem;
+    margin-top: 30px;
+  }
+
+  .cta-block__image {
+    img {
+      width: 100%;
+    }
   }
 
   &.image-left {
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
 
     .cta-block__image {
       margin-right: 0;
@@ -21,17 +27,17 @@
       @include phablet {
         top: auto;
         bottom: 0;
-        left: -4.5rem;
+        left: -60px;
 
         .feature-block {
-          width: calc(100% + 4.5rem);
+          width: calc(100% + 60px);
         }
       }
     }
   }
 
   &.image-right {
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
 
     @include phablet {
       flex-direction: row-reverse;
@@ -49,9 +55,13 @@
         top: auto;
         bottom: 0;
         margin-right: inherit;
+      }
 
-        .feature-block {
-          width: calc(100% + 4.5rem);
+      .feature-block {
+        margin: 0;
+
+        @include phablet {
+          width: calc(100% + 60px);
         }
       }
     }

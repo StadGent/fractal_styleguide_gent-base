@@ -3,7 +3,7 @@
   position: relative;
   flex-flow: column;
   max-width: $bp-max-content;
-  margin: 3rem 0;
+  margin: 60px 0;
 
   @include phablet {
     flex-flow: row;
@@ -15,7 +15,7 @@
 
     .cta-block__content {
       @include theme-content('color-info-pastel', 'cta-shadow-color') {
-        @include abstract-shadow('bottom', 'left', $theme-color, null, 13rem, 13rem);
+        @include abstract-shadow('bottom', 'left', $theme-color, null, 260px, 260px);
 
         margin-left: 0; // Overwrite only the h-margin.
       }
@@ -25,7 +25,7 @@
   &.image-left,
   &.image-right {
     @include phablet {
-      margin-bottom: 6.5rem;
+      margin-bottom: 130px;
     }
   }
 
@@ -35,8 +35,8 @@
     }
 
     @include desktop {
-      min-width: 570px;
-      min-height: 570px;
+      min-width: 470px;
+      min-height: 470px;
     }
   }
 
@@ -50,7 +50,7 @@
     }
 
     li {
-      margin-top: .8rem;
+      margin-top: 16px;
 
       &:first-of-type a {
         @extend %button-secondary;
@@ -62,7 +62,7 @@
 
   &.image-left {
     .cta-block__image {
-      margin-right: 1rem;
+      margin-right: 20px;
 
       @include phablet {
         margin-right: inherit;
@@ -70,16 +70,16 @@
     }
 
     .cta-block__content {
-      top: -1rem;
-      left: 1rem;
+      top: -20px;
+      left: 20px;
 
       @include phablet {
         top: auto;
-        bottom: -4.5rem;
-        left: -4.5rem;
+        bottom: -90px;
+        left: -60px;
 
         .feature-block {
-          width: calc(100% + 4.5rem);
+          width: calc(100% + 60px);
         }
       }
     }
@@ -91,7 +91,7 @@
     }
 
     .cta-block__image {
-      margin-left: 1rem;
+      margin-left: 20px;
 
       @include phablet {
         margin-left: inherit;
@@ -99,16 +99,20 @@
     }
 
     .cta-block__content {
-      top: -1rem;
-      margin-right: 1rem;
+      top: -20px;
+      margin-right: 20px;
 
       @include phablet {
         top: auto;
-        bottom: -4.5rem;
-        margin-right: inherit;
+        bottom: -90px;
+      }
 
-        .feature-block {
-          width: calc(100% + 4.5rem);
+      .feature-block {
+        margin-right: 20px;
+
+        @include phablet {
+          width: calc(100% + 60px);
+          margin-right: inherit;
         }
       }
     }
@@ -118,14 +122,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: -1rem;
-    margin-left: -1rem;
+    margin-right: -20px;
+    margin-left: -20px;
 
     > .cta-block {
-      flex: 1 0 20rem;
-      max-width: calc(100% - 2rem);
-      margin-right: 1rem;
-      margin-left: 1rem;
+      flex: 1 0 400px;
+      max-width: calc(100% - 40px);
+      margin-right: 20px;
+      margin-left: 20px;
     }
   }
 }
