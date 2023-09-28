@@ -25,8 +25,8 @@
     @include tablet {
       flex-direction: row;
       margin-bottom: 80px;
-      padding-top: 90px;
-      padding-bottom: 90px;
+      padding-top: 80px;
+      padding-bottom: 80px;
     }
 
     @include desktop {
@@ -40,7 +40,7 @@
 
     @include tablet {
       flex-direction: row;
-      padding-top: 90px;
+      padding-top: 80px;
       padding-bottom: 105px;
 
       &.image {
@@ -111,8 +111,8 @@
       margin: 30px 0 0;
 
       p {
-        font-size: 1.1rem;
-        line-height: 1.81;
+        @include large-text();
+        line-height: 177.778%;
       }
 
       p:last-of-type {
@@ -145,10 +145,15 @@
     height: auto;
 
     @include tablet {
-      flex: 0 0 calc(47vw - 80px);
+      flex: 0 0 calc(47vw - 180px);
       width: auto;
-      height: calc(47vw - 80px - 190px);
+      height: calc(47vw - 80px - 290px);
       text-align: right;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      flex: 0 0 470px;
+      height: calc(470px - 190px);
     }
 
     figure {
@@ -170,11 +175,6 @@
         width: 100%;
         height: auto;
       }
-    }
-
-    @media only screen and (min-width: 1400px) {
-      flex: 0 0 570px;
-      height: calc(570px - 190px);
     }
   }
 }
