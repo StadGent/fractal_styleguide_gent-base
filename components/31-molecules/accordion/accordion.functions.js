@@ -196,7 +196,7 @@
      * @param {Object} event  The js event.
      */
     window.onclick = function (event) {
-      if (!event.target.matches('.dropdown button')) {
+      if (!event.target.matches('.dropdown button, .opening-hours *')) {
         var dropdowns = document.getElementsByClassName('dropdown');
         for (var i = 0; i < dropdowns.length; i++) {
           var button = dropdowns[i].querySelector('button');

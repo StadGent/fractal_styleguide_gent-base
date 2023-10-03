@@ -302,8 +302,7 @@
     }
 
     .icon-list,
-    .location,
-    .dash-separated-list {
+    .location {
       @include small-text();
       @include theme('color', 'help-text-color', 'teaser-location-color');
 
@@ -339,25 +338,34 @@
       order: 1;
       margin-bottom: gutter();
 
-      @include phablet {
-        flex-basis: span(6 of 18);
-        margin-right: 10px;
+      @include tablet {
+        flex: 0 0 230px;
+        margin-right: 30px;
         margin-bottom: 0;
       }
     }
 
     .content__second {
       order: 2;
-      padding-bottom: 0;
+      padding: 0;
+
+      .dash-separated-list {
+        @include theme('color', 'default-text-color', 'help-text-color');
+        @include medium-text();
+        margin: 10px 0;
+
+        li {
+          margin-bottom: 0;
+        }
+      }
 
       p {
         @include medium-text();
-
         margin-top: 10px;
       }
 
-      @include phablet {
-        flex-basis: span(12 of 18);
+      .read-more {
+        margin-top: 20px;
       }
     }
   }

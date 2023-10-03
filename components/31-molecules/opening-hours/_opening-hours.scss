@@ -3,6 +3,8 @@ $month-day-size: 48px;
 $week-breakpoint: '(min-width: 750px)';
 
 .openinghours-widget {
+  @include theme('background-color', 'color-secondary-pastel');
+
   font-size: .8rem;
 
   @media (max-width: 360px) {

@@ -13,6 +13,7 @@ $avatar-width: 270px;
   ul {
     @include medium-text();
 
+    max-width: 630px;
     margin-bottom: 45px;
     columns: 1;
     column-gap: 40px;
