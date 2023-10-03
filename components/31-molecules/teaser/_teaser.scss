@@ -302,8 +302,7 @@
     }
 
     .icon-list,
-    .location,
-    .dash-separated-list {
+    .location {
       @include small-text();
       @include theme('color', 'help-text-color', 'teaser-location-color');
 
@@ -350,10 +349,23 @@
       order: 2;
       padding-bottom: 0;
 
+      .dash-separated-list {
+        @include theme('color', 'default-text-color', 'help-text-color');
+        @include medium-text();
+        margin: 10px 0;
+
+        li {
+          margin-bottom: 0;
+        }
+      }
+
       p {
         @include medium-text();
-
         margin-top: 10px;
+      }
+
+      .read-more {
+        margin-top: 20px;
       }
 
       @include phablet {
