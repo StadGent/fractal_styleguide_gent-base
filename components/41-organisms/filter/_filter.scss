@@ -4,13 +4,6 @@
       @include semi-bold-text();
     }
 
-    .selected-filters,
-    .filter__result-count {
-      h2 {
-        @include medium-text();
-      }
-    }
-
     .result__show-filters {
       @include desktop {
         display: none;
@@ -19,6 +12,18 @@
 
     .selected-filters {
       margin-bottom: 22px;
+
+      ul {
+        li:not(:last-child) {
+          a {
+            @include theme('color', 'color-zero');
+          }
+        }
+
+        li:last-child {
+          line-height: 2;
+        }
+      }
     }
 
     .filter__result-count {

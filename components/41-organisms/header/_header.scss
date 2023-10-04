@@ -49,7 +49,8 @@ header.header {
         margin-bottom: 0;
       }
 
-      input[type=submit] {
+      input[type=submit],
+      button[type=submit] {
         max-width: 0;
         padding-right: 0;
         padding-left: 0;
@@ -59,7 +60,8 @@ header.header {
 
         &:focus {
           max-width: 9999px;
-          padding: 0 1rem;
+          padding-left: 15px;
+          padding-right: 15px;
           opacity: 1;
         }
       }
@@ -80,9 +82,10 @@ header.header {
         &:focus,
         &:valid {
           max-width: 440px;
-          margin: 0 0 0 .4rem;
+          margin: 0 0 0 8px;
 
-          ~ input[type=submit] {
+          ~ input[type=submit],
+          ~ button[type=submit] {
             max-width: 9999px;
             padding-right: 15px;
             padding-left: 15px;
@@ -116,7 +119,7 @@ header.header {
 
     .authentication {
       align-items: center;
-      margin-left: .8rem;
+      margin-left: 16px;
 
       @include tablet {
         margin-left: gutter();
@@ -149,7 +152,7 @@ header.header {
       display: none;
     }
 
-    margin: .8rem 0 .4rem;
+    margin: 16px 0 8px;
     font-size: .9rem;
   }
 

@@ -230,16 +230,21 @@
     .content__second {
       @include theme('background-color', 'color-none');
       position: static;
-      padding: 20px 50px 20px 20px;
+      padding: 20px 60px 20px 20px;
 
       @include phablet {
-        padding: 30px 50px 30px 30px;
+        padding: 30px 60px 30px 30px;
       }
 
       h4 {
-        margin: 0 0 20px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: 0;
 
         @include phablet {
+          display: block;
+          height: auto;
           margin: 0 15px 20px 0;
         }
 
