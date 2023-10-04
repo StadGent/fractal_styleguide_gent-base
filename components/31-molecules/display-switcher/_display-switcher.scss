@@ -1,5 +1,7 @@
 .display-switcher {
-  margin-bottom: 1.6rem;
+  @include medium-text();
+  align-items: center;
+  margin-bottom: 60px;
 
   @include phablet {
     display: flex;
@@ -7,10 +9,18 @@
 
   ul {
     margin-bottom: 0;
+
+    li {
+      @include medium-text();
+
+      &.icon-list.inline {
+        margin-right: 20px;
+      }
+    }
   }
 
   > span {
     display: block;
-    margin-right: .6rem;
+    margin-right: 20px;
   }
 }
