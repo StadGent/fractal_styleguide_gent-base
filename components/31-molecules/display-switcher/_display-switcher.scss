@@ -10,10 +10,9 @@
   ul {
     margin-bottom: 0;
 
-    li {
-      @include medium-text();
-
-      &.icon-list.inline {
+    &.icon-list.inline {
+      li {
+        @include medium-text();
         margin-right: 20px;
       }
     }
