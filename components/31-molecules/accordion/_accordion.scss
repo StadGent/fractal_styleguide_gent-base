@@ -15,6 +15,7 @@
       right: 0;
       transition: transform .2s ease-in-out;
       font-size: 1.4rem;
+      line-height: 1.2;
     }
 
     &[aria-expanded=true] {
@@ -26,6 +27,7 @@
 
   .accordion--content {
     transition: max-height .5s ease-in-out;
+    overflow: hidden;
 
     p {
       line-height: 1.75;
@@ -65,7 +67,6 @@ dl.accordion {
       padding: .13rem .25rem;
       transition: transform .2s ease-in-out;
       font-size: 1.2rem;
-      line-height: 1.2;
       text-align: left;
     }
 
@@ -74,11 +75,16 @@ dl.accordion {
 
       &::before {
         transform: none;
+        line-height: 1.2;
       }
     }
 
     &[aria-expanded=false] {
       @include icon(plus);
+
+      &::before {
+        line-height: 1.2;
+      }
     }
   }
 }
