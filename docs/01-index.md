@@ -1,5 +1,16 @@
 # City of Ghent Style Guide
 
+---
+⚠️️ **NOTE VERSION 6**
+
+Version 6 is in a far progressed alpha stage. Keep in mind minor breaking changes can occur
+in future alpha updates.
+Check the Github page mentioned below for updates until the first stable version 6.
+
+A few style elements have not yet been adapted to the new v6 style.
+
+---
+
 ## Versioning and releases
 
 We plan biannual releases, please see our
@@ -19,9 +30,9 @@ SASS to style its components, so you will have to use that in your project.
 
 Example implementations in open source projects are:
 
-* **Drupal**: [drupal_theme_gent-base](https://github.com/StadGent/drupal_theme_gent-base)
-* **Vue**: [vue_site_lod-visualisation](https://github.com/StadGent/vue_site_lod-visualisation)
-* **Nuxt**: [nuxt_site_verwerkingsregister](https://github.com/StadGent/nuxt_site_verwerkingsregister)
+* **Drupal**: [drupal_theme_gent-base](https://github.com/StadGent/drupal_theme_gent-base) (v5/v6 compatible)
+* **Vue**: [vue_site_lod-visualisation](https://github.com/StadGent/vue_site_lod-visualisation) (v5 compatible)
+* **Nuxt**: [nuxt_site_verwerkingsregister](https://github.com/StadGent/nuxt_site_verwerkingsregister) (v5 compatible)
 
 Have a look at other projects using the City of Ghent Style Guide on [github](https://github.com/StadGent/fractal_styleguide_gent-base/network/dependents?package_id=UGFja2FnZS0xODQ5OTYzOQ%3D%3D).
 
@@ -57,13 +68,13 @@ You can find the SASS docs <a href="{{ path '/sassdocs/index.html' }}" target="_
 
 ```bash
 # Install dependencies
-yarn install
+npm install
 
 # Compile all components.
 # This might take a while.
-gulp compile
+npm run build
 
 # Start the fractal site at localhost:3000
 # and watch for changes.
-gulp
+npm run start
 ```

@@ -1,6 +1,6 @@
 input[type="submit"],
 button[type="submit"] {
-  :not(.button-secondary):not(.button-success):not(.button-alert) {
+  &:not(.button-secondary):not(.button-success):not(.button-alert) {
     @extend %button-primary;
   }
 }
