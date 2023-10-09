@@ -38,6 +38,8 @@ $week-breakpoint: '(min-width: 750px)';
     &--day {
       margin: 0;
       padding: 15px 20px;
+      font-size: .8rem;
+      line-height: 175%;
 
       &:nth-child(even) {
         @include theme('background', 'color-secondary-light', 'opening-hours-even-background');
@@ -52,8 +54,6 @@ $week-breakpoint: '(min-width: 750px)';
 
     &--date {
       min-width: $bp-mobile;
-      font-size: .8rem;
-      line-height: 175%;
     }
 
     &--times {
@@ -75,9 +75,13 @@ $week-breakpoint: '(min-width: 750px)';
       @include month-widget-desktop;
     }
 
-    > .openinghours {
-      @include theme('border-color', 'color-none', 'opening-hours-border');
-      display: inline-block;
+    font-size: .8rem;
+    line-height: 1.4rem;
+
+    & > .openinghours {
+      @include tablet {
+        display: inline-block;
+      }
     }
 
     .openinghours {
@@ -120,6 +124,8 @@ $week-breakpoint: '(min-width: 750px)';
           &.openinghours--prev,
           &.openinghours--next {
             &::before {
+              @include theme('color', 'color-zero', 'opening-hours-color');
+
               font-size: 1.2rem;
             }
           }
@@ -165,6 +171,8 @@ $week-breakpoint: '(min-width: 750px)';
           width: $month-day-size-mobile;
           height: $month-day-size-mobile;
           border-radius: 0;
+          font-size: .8rem;
+          line-height: 1.4rem;
 
           @include phablet {
             width: $month-day-size;
@@ -202,10 +210,6 @@ $week-breakpoint: '(min-width: 750px)';
         height: 4px;
         border-radius: 50%;
         content: "";
-      }
-
-      &--day-passed > span {
-        opacity: .5;
       }
 
       &--details {

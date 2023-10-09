@@ -13,10 +13,20 @@
   .accordion {
     &--content {
       margin-bottom: 1.2rem;
+      overflow: visible;
+
+      [role='tablist'] {
+        flex-direction: row;
+      }
     }
 
     &--button {
       font-size: .9rem;
+      line-height: 1.6rem;
+
+      &::before {
+        line-height: inherit;
+      }
     }
   }
 }
