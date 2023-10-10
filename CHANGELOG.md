@@ -5,7 +5,8 @@ All notable changes to this style guide are documented here.
 
 ## [6.x-dev unreleased]
 
-* New Stad Gent style.
+* New Stad Gent style. View all markup changes below. Always look up
+the mentioned elements in the styleguide to see the new HTML markup.
 
 ## New mixins
 
@@ -30,6 +31,9 @@ Also added the `.icon-right` class for icons that are on the right-hand side.
 **Added legend-title class**
 The legend now has a `<span class="legend-title">` around the text/title/label
 
+### Input submit
+Changed `<input>` to `<button>`. This is important to be able to use the hover effect in combination with an icon.
+
 ### Icon atom
 **Removed icons:** external-link, fancyback
 
@@ -46,7 +50,7 @@ This element is new. Existing labels such as on teasers can be replaced by this
 atom. See teaser markup changes.
 
 ### Modal molecule
-Default heading changed from H3 to ***H2*** and the close button has the `.button-secondary` class
+Default heading changed from `h3` to `h2` and the close button has the `.button-secondary` class
 
 ### Accordion molecule
 This module is expanded with the option to add another container (for images, e.g. on Timeline) that is controlled with the `data-controls-img` attribute, linking it to the id of the img container.
@@ -73,10 +77,10 @@ The file upload molecule (variation multiple) has the new class multiple added o
 This change is needed to hide the 'No file chosen.' text on this variation.
 
 ### Partner block molecule
-* Not based on Highlight molecule anymore
-* Title is now an `h2` instead of an h3
-* `.single-partner` becomes `.partners` class because styling changes are determined based on wrapper class `.partner__single` or `.partner__multiple`
-* (Optional) intro block contains only the title and text: extra wrappers for `.intro` and `.intro-content`
+* Not based on Highlight molecule anymore.
+* Title is now an `h2` instead of an `h3`.
+* `.single-partner` becomes `.partners` class because styling changes are determined based on wrapper class `.partner__single` or `.partner__multiple`.
+* (Optional) intro block contains only the title and text: extra wrappers for `.intro` and `.intro-content`.
 
 ### Teaser molecule
 There are multiple variations of teasers instead of just one. Pick the right
@@ -94,7 +98,7 @@ variation for your use case.
 - The logo is bigger on the frontpage, based on a parent class `is-frontpage`.
 
 ### Timeline organism
-**Date** is now an h3 and the **timeline-slot-title** is now an h4.
+**Date** is now an `h3` and the **timeline-slot-title** is now an `h4`.
 
 There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop.
 
@@ -122,8 +126,19 @@ Becomes
 ```
 
 
+### Contact details organism
+Not based on Highlight molecule anymore.
+The HTML markup has been simplified.
+```
+<section class="contact-details">
+  ...
+</section>
+```
+The links get a `no-icon` class.
+
+
 ### Footer organism
-* Titles become h4 except Gentinfo title stays h3.
+* Titles become `h4` except Gentinfo title stays `h3`.
 * `gentinfo-block` class gets 2nd class `dark-background`.
 * `icon-document` icon becomes `icon-subscribe`
 * Gentinfo ul element gets extra class `inline`.
@@ -131,13 +146,14 @@ Becomes
 * Gentinfo button is secondary instead primary and gets extra class `icon-left`.
 
 ### Theme footer organism
-* Social block has an H4 title instead of H3.
+* Social block has an `h4` title instead of `h3`.
 * The newsletter block does not use highlight block anymore, instead it uses the
   new feature-block markup.
 
 
 ### Filter layout
 * "You have selected" and "Found results" is normal text instead of `h2`.
+* The left sidebar title changed from `h2` to `h3`.
 
 ## [5.x and older]
 

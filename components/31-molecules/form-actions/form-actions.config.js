@@ -2,8 +2,8 @@
 
 module.exports = {
   context: {
-    primary_button: 'Submit',
-    link: 'Cancel'
+    primary_button: 'Next page',
+    link: 'Erase all'
   },
   variants: [
     {
@@ -15,14 +15,15 @@ module.exports = {
     {
       name: 'secondary-button',
       context: {
-        secondary_button: 'Save for later',
+        secondary_button: 'Previous page',
         link: null
       }
     },
     {
       name: 'full',
       context: {
-        secondary_button: 'Save for later'
+        secondary_button: 'Previous page',
+        link: null
       }
     }
   ]

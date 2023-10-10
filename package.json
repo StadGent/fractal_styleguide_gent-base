@@ -1,13 +1,13 @@
 {
   "name": "gent_styleguide",
-  "version": "6.0.0-alpha29",
+  "version": "6.0.0-alpha36",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@frctl/fractal": "^1.5.15",
     "@frctl/twig": "^1.2.13",
-    "chromedriver": "^109.0.0",
+    "chromedriver": "^117.0.0",
     "cssnano": "^5.1.14",
     "fs-extra": "^11.1.0",
     "gulp": "^4.0.2",
@@ -52,7 +52,7 @@
   "dependencies": {
     "@digipolis-gent/modal": "^1.0.4",
     "acorn": "^8.8.2",
-    "allietabs": "^1.2.5",
+    "allietabs": "^1.2.6",
     "baguettebox.js": "^1.11.1",
     "breakpoint-sass": "^3.0.0",
     "debug": "^4.3.4",
