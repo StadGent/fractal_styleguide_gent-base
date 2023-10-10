@@ -17,6 +17,10 @@ ol {
     }
   }
 
+  a {
+    @include normal-text;
+  }
+
   &.links {
     @extend %list-no-style;
   }
@@ -41,12 +45,8 @@ ol {
     list-style: none;
   }
 
-  a {
-    font-weight: normal;
-  }
-
   strong > a {
-    @include bold-text;
+    @include semi-bold-text;
   }
 
   &.comma-separated-list {
@@ -222,18 +222,18 @@ ol {
   li {
     position: relative;
     counter-increment: item;
-  }
 
-  li::before {
-    @include semi-bold-text;
-    display: inline-block;
-    width: 1.4rem;
-    height: 1.4rem;
-    margin-right: .5rem;
-    background-color: color('cyan', -3);
-    line-height: 1.5rem;
-    text-align: center;
-    content: counter(item);
+    &::before {
+      @include semi-bold-text;
+      display: inline-block;
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-right: .5rem;
+      background-color: color('cyan', -3);
+      line-height: 1.5rem;
+      text-align: center;
+      content: counter(item);
+    }
   }
 }
 
@@ -245,7 +245,7 @@ dl {
   }
 
   dt {
-    @include bold-text;
+    @include semi-bold-text;
   }
 
   dd {
@@ -268,6 +268,6 @@ dl {
   list-style: none;
 
   a {
-    @include bold-text;
+    @include semi-bold-text;
   }
 }
