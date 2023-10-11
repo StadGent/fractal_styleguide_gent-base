@@ -80,6 +80,7 @@ This change is needed to hide the 'No file chosen.' text on this variation.
 * Not based on Highlight molecule anymore.
 * Title is now an `h2` instead of an `h3`.
 * `.single-partner` becomes `.partners` class because styling changes are determined based on wrapper class `.partner__single` or `.partner__multiple`.
+* `<a>` tag has `.no-icon` class so that it does not get an external link icon in some cases
 * (Optional) intro block contains only the title and text: extra wrappers for `.intro` and `.intro-content`.
 
 ### Teaser molecule
