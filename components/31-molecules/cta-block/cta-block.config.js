@@ -92,8 +92,25 @@ module.exports = {
       context: {
         links: [
           {
-            text: 'A download link',
-            url: '#',
+            text: 'An external download link',
+            url: 'https://stad.gent/download',
+            document: 'document',
+            size: '102kb'
+          },
+          {
+            text: 'An internal link',
+            url: '#'
+          }
+        ]
+      }
+    },
+    {
+      name: 'download',
+      context: {
+        links: [
+          {
+            text: 'An internal download link',
+            url: '//download',
             document: 'document',
             size: '102kb'
           },

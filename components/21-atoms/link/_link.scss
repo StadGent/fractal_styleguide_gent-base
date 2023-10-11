@@ -36,9 +36,15 @@ a {
       @include icon(phone, 'after');
     }
 
-    &[download]:not(.no-icon) {
-      @include button-icon;
-      @include icon(download, 'after');
+    &[download] {
+      &:not(.no-icon):not(.tag),
+      &[href^="http://"],
+      &[href^="https://"] {
+        @include button-icon;
+        @include icon(download, 'after');
+
+        margin-right: 0;
+      }
     }
 
     &.button-success {
@@ -54,15 +60,11 @@ a {
     }
   }
 
-  &.button:not(.no-icon):not([class^="icon-"]:not([download])) {
+  &.button:not(.no-icon):not([class^="icon-"]):not([download]) {
     &[href^="http://"],
     &[href^="https://"] {
       @include button-icon;
       @include icon(arrow-right-top, 'after');
-
-      &::after {
-        content: '';
-      }
     }
   }
 
