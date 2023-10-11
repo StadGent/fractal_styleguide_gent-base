@@ -48,7 +48,6 @@
     > .modal-inner {
       > .modal-content {
         flex-grow: 1;
-        margin-bottom: 76px;
         z-index: z('modal', 'inner');
         overflow-y: auto;
       }
@@ -57,7 +56,8 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        margin-top: -3.8rem;
+        margin-top: -76px;
+        padding-top: 30px;
 
         @include tablet {
           position: static;
@@ -80,7 +80,7 @@
 
     @include tablet {
       right: 0;
-      width: 48.5rem;
+      width: 970px;
       max-width: calc(100% - #{$gutter-width * 2});
       height: auto;
       min-height: 0;
