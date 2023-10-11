@@ -4,7 +4,7 @@ $link-padding: .2em;
 a {
   @include theme('color', 'color-tertiary', 'link-color');
   @include link-background('color-primary', 'color-primary--lighten-4', 'link-underline-color', 'link-hover-background');
-  @include bold-text;
+  @include semi-bold-text;
 
   position: relative;
   text-decoration: none;
