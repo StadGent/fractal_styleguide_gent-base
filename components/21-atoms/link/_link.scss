@@ -89,9 +89,6 @@ a {
       @include theme('color', 'color-primary--darken-2', 'link-hover-color');
     }
 
-    //&::after {
-    //  margin-top: 2px;
-    //}
   }
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back):not(.refresh),
