@@ -10,6 +10,17 @@ a {
   text-decoration: none;
   word-wrap: break-word;
 
+  &::before,
+  &::after {
+    display: inline-block;
+    margin-left: 5px;
+    transition: margin .1s ease-in;
+    border: 0;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    vertical-align: -25%;
+  }
+
   // Different button link types. These are links styled as a button.
   &.button,
   &.tag {
@@ -68,21 +79,6 @@ a {
     }
   }
 
-  &::before,
-  &::after {
-    transition: margin .1s ease-in;
-    border: 0;
-    font-size: 1.3em;
-    line-height: 1.4em;
-    vertical-align: -25%;
-  }
-
-  &:not(.button):not(.tag)::after {
-    position: absolute;
-    margin-top: 4px;
-    margin-left: 5px;
-  }
-
   ///
   /// Stand alone links.
   ///
@@ -95,9 +91,6 @@ a {
       @include theme('color', 'color-primary--darken-2', 'link-hover-color');
     }
 
-    &::after {
-      margin-top: 2px;
-    }
   }
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back):not(.refresh),
@@ -108,7 +101,6 @@ a {
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back):not(.refresh) {
     @include icon(arrow-right, after);
-    margin-right: 1.6rem;
   }
 
   ///
@@ -116,7 +108,6 @@ a {
   ///
   &[download]:not(.no-icon) {
     @include icon(download, after);
-    margin-right: 1.6rem;
   }
 
   ///
@@ -124,7 +115,6 @@ a {
   ///
   &[href^="mailto:"]:not(.no-icon) {
     @include icon(envelope, after);
-    margin-right: 1.6rem;
   }
 
   ///
@@ -132,7 +122,6 @@ a {
   ///
   &[href^="tel:"]:not(.no-icon) {
     @include icon(phone, after);
-    margin-right: 1.6rem;
   }
 
   ///
@@ -141,7 +130,6 @@ a {
   &[href^="http://"]:not(.no-icon):not(.tag),
   &[href^="https://"]:not(.no-icon):not(.tag) {
     @include icon(arrow-right-top, after);
-    margin-right: 1.6rem;
 
     &[download]:not(.button):not(.no-icon) {
       @include icon(download, after);
@@ -151,12 +139,17 @@ a {
   &.refresh:not(.no-icon),
   &.back:not(.no-icon) {
     @extend %a-arrow-animation--left;
-    margin-left: 1.6rem;
+    margin-left: 32px;
     padding-left: 0;
 
     &::after {
       position: absolute;
-      left: -40px;
+      top: 0;
+      bottom: 0;
+      left: -44px;
+      height: 24px;
+      margin-top: auto;
+      margin-bottom: auto;
       padding-right: 4px;
       padding-left: 8px;
     }
@@ -178,10 +171,6 @@ a {
     &:hover,
     &:focus {
       @include theme('color', 'color-primary');
-
-      &::after {
-        @include theme('color', 'color-none');
-      }
     }
   }
 }
