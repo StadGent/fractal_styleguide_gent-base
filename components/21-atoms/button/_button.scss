@@ -229,5 +229,5 @@ input[type="button"] {
 
 input[type="submit"],
 button[type="submit"] {
-  @extend .button-secondary;
+  @extend %button-secondary;
 }
