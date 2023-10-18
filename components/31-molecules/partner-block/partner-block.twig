@@ -20,7 +20,7 @@
 
   <div class="partner-content partners">
     {% if single_partner %}
-      <a href="#" title="Link to the OCMW Ghent website. ">
+      <a class="no-icon" href="#" title="Link to the OCMW Ghent website. ">
         {% include '@image' with {
           src: '/styleguide/img/stock/ocmw-logo.svg' | path,
           alt_text: 'OCMW Gent',
@@ -31,7 +31,7 @@
       <ul class="inline">
         {% for item in items %}
           <li>
-            <a href="#" title="{{ link_text }}">
+            <a class="no-icon" href="#" title="{{ link_text }}">
               {% include '@image' with {
                 src: item.link| path,
                 alt_text: item.alt_text,

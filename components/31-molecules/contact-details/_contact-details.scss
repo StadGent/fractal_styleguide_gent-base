@@ -1,11 +1,7 @@
-$avatar-width: 270px;
+$avatar-width: 280px;
 
 .contact-details {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-
+  h2,
   h3 {
     margin-bottom: 30px;
   }
@@ -15,13 +11,17 @@ $avatar-width: 270px;
 
     max-width: 630px;
     margin-bottom: 45px;
-    columns: 1;
-    column-gap: 40px;
 
     @include desktop {
       margin-bottom: 0;
-      columns: 2;
     }
+  }
+
+  &-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   &-column {

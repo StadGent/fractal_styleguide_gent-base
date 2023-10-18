@@ -96,6 +96,15 @@
 
       a {
         padding-right: 0;
+
+        &::after {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          height: 24px;
+          margin-top: auto;
+          margin-bottom: auto;
+        }
       }
     }
 
@@ -110,6 +119,10 @@
 
       a {
         margin-left: 0;
+
+        &::after {
+          right: -36px;
+        }
       }
     }
   }

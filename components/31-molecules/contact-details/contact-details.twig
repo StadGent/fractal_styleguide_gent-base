@@ -1,33 +1,34 @@
 <section class="contact-details">
-  <div class="contact-details-column">
-    {% include '@heading' with {
-      'heading': 'h3',
-      'heading_text': 'Contact details'
-    } %}
-
-    {% include '@list' with {
-      'type': 'icon-list',
-      'icon_items': [
-        '<i class="icon-marker" aria-hidden="true"></i><strong>Stadhuis</strong> — Botermarkt 1, 9000 Gent',
-        '<i class="icon-normalphone" aria-hidden="true"></i><a class="no-icon" href="tel:+32 9 266 50 00" alt="Person tel">09 266 50 00</a>',
-        '<i class="icon-phone" aria-hidden="true"></i><a class="no-icon" href="tel:+32 476 23 42 98" alt="Person mobile phone">0476 23 42 98</a>',
-        '<i class="icon-fax" aria-hidden="true"></i><span><a class="no-icon" href="tel:+32 9 266 50 19" alt="Person fax number">09 266 50 19</a> (Fax)</span>',
-        '<i class="icon-envelope" aria-hidden="true"></i><a class="no-icon" href="mailto:jane.doe@stad.gent" alt="Person mail link">jane.doe@stad.gent</a>',
-        '<i class="icon-envelope" aria-hidden="true"></i><a class="no-icon" href="mailto:jane.doe@stad.gent" alt="Person mail link">jane.doe@stad.gent</a>',
-        '<i class="icon-url" aria-hidden="true"></i><a class="no-icon" href="http://stad.gent" alt="Website link">http://stad.gent</a>',
-        '<i class="icon-url" aria-hidden="true"></i><a class="no-icon" href="http://stad.gent" alt="Website link">http://stad.gent</a>'
-      ]
-    }
-    %}
-  </div>
-
-  <div class="contact-details-column">
-    <div class="image-wrapper" data-ratio="1:1">
-      {% include '@image' with {
-        'src': 'https://via.placeholder.com/400x400&text=1:1+(400x400)',
-        'alt_text': 'Person avatar',
-        'ratio': null
-      } %}
+  {% include '@heading' with {
+    'heading': 'h2',
+    'heading_class': 'h3',
+    'heading_text': 'Contact details'
+  } %}
+  <div class="contact-details-columns">
+    <div class="contact-details-column">
+      {% include '@list' with {
+        'type': 'icon-list',
+        'icon_items': [
+          '<i class="icon-marker" aria-hidden="true"></i><strong>Stadhuis</strong> — Botermarkt 1, 9000 Gent',
+          '<i class="icon-normalphone" aria-hidden="true"></i><a class="no-icon" href="tel:+32 9 266 50 00" alt="Person tel">09 266 50 00</a>',
+          '<i class="icon-phone" aria-hidden="true"></i><a class="no-icon" href="tel:+32 476 23 42 98" alt="Person mobile phone">0476 23 42 98</a>',
+          '<i class="icon-fax" aria-hidden="true"></i><span><a class="no-icon" href="tel:+32 9 266 50 19" alt="Person fax number">09 266 50 19</a> (Fax)</span>',
+          '<i class="icon-envelope" aria-hidden="true"></i><a class="no-icon" href="mailto:jane.doe@stad.gent" alt="Person mail link">jane.doe@stad.gent</a>',
+          '<i class="icon-envelope" aria-hidden="true"></i><a class="no-icon" href="mailto:jane.doe@stad.gent" alt="Person mail link">jane.doe@stad.gent</a>',
+          '<i class="icon-url" aria-hidden="true"></i><a class="no-icon" href="http://stad.gent" alt="Website link">http://stad.gent</a>',
+          '<i class="icon-url" aria-hidden="true"></i><a class="no-icon" href="http://stad.gent" alt="Website link">http://stad.gent</a>'
+        ]
+      }
+      %}
+    </div>
+    <div class="contact-details-column">
+      <div class="image-wrapper" data-ratio="1:1">
+        {% include '@image' with {
+          'src': 'https://via.placeholder.com/400x400&text=1:1+(400x400)',
+          'alt_text': 'Person avatar',
+          'ratio': null
+        } %}
+      </div>
     </div>
   </div>
 </section>
