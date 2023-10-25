@@ -206,10 +206,6 @@ aside.bottom {
 
     @include tablet {
       margin-bottom: 120px;
-
-      .node-type-product & {
-        margin-bottom: 0;
-      }
     }
 
     @include desktop {
