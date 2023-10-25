@@ -3,7 +3,7 @@
 }
 
 .quote {
-  margin: 2rem 0;
+  margin: 40px 0;
 }
 
 blockquote {
@@ -12,13 +12,7 @@ blockquote {
   display: flex;
   position: relative;
   flex-direction: column;
-  padding-top: 3.5rem;
-  font-size: 1.2rem;
-
-  @include desktop {
-    padding-top: 3.5rem;
-    font-size: 1.5rem;
-  }
+  padding-top: 50px;
 
   &::before {
     @include spot-image('quote', 2rem);
@@ -37,10 +31,19 @@ blockquote {
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
-    line-height: 2.25rem;
+    padding: 15px 0 30px;
+    line-height: 158.333%;
 
     @include desktop {
-      min-height: 7.8rem;
+      padding: 30px 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+
+      &:last-of-type {
+        margin: 0;
+      }
     }
   }
 
@@ -48,5 +51,7 @@ blockquote {
     @include accolade('top', 'left');
     @include large-text;
     @include normal-text;
+
+    line-height: 177.778%;
   }
 }

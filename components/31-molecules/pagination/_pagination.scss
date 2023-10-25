@@ -22,64 +22,69 @@
     }
 
     li {
-      @include theme('color', 'color-primary', 'link-color');
+      @include theme('border-color', 'color-none');
 
       display: flex;
       flex: 0 0 auto;
       justify-content: center;
-      min-width: 1.6rem;
+      min-width: 32px;
+      padding-right: 7px;
+      padding-left: 7px;
+      border: 2px solid;
+      font-size: .9rem;
+      line-height: 32px;
       text-align: center;
 
-      a {
-        &:hover,
-        &:focus {
-          @include theme('color', 'color-tertiary', 'pagination-active-color');
+      &.spacing {
+        padding: 0 10px 10px;
+        line-height: 1;
+      }
+
+      &.active {
+        @include theme('border-color', 'color-zero', 'pagination-active-color');
+        @include semi-bold-text;
+
+        padding-right: 10px;
+        padding-left: 10px;
+        border-bottom: 2px solid;
+      }
+    }
+
+    a {
+      @include theme('color', 'color-zero', 'default-text-color');
+      @include theme('border-color', 'color-none');
+      @include semi-bold-text;
+
+      display: block;
+      padding: 2px 10px 0;
+      border-bottom: 2px solid;
+      background-image: linear-gradient(to bottom,
+        color('yellow') 0,
+        color('yellow') 100%);
+      font-size: inherit;
+      line-height: inherit;
+      text-decoration: none;
+
+      &:hover {
+        @include theme('border-bottom-color', 'color-zero');
+      }
+
+      &:focus,
+      &:focus-visible {
+        height: 36px;
+        border-bottom: 0;
+        outline: 0;
+        box-shadow: inset 0 0 0 2px color('gray');
+      }
+
+      &.standalone-link {
+        &:hover {
+          @include theme('color', 'color-zero', 'pagination-active-color');
+          @include theme('border-bottom-color', 'color-zero');
         }
       }
     }
 
-    a,
-    li.active {
-      @include reset-link-background;
-      @include bold-text;
-
-      padding-right: .4rem;
-      padding-left: .4rem;
-      font-size: .8rem;
-      line-height: 1.2;
-
-      @include phablet {
-        padding-right: 1rem;
-        padding-left: 1rem;
-        font-size: 1rem;
-      }
-    }
-
-    li.spacing {
-      min-width: 1rem;
-      padding: .3rem;
-    }
-
-    .active {
-      @include theme('color', 'color-tertiary', 'pagination-active-color');
-
-      position: relative;
-      padding-top: .3rem;
-      padding-bottom: .3rem;
-
-      &::after {
-        @include theme('background-color', 'color-primary', 'link-color');
-
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 1.2rem;
-        height: 2px;
-        margin: auto;
-        content: '';
-      }
-    }
 
     .previous,
     .next {
@@ -90,53 +95,39 @@
       }
 
       a {
-        display: inline-flex;
-        align-items: center;
-        margin-left: 0;
-        padding: 0 1rem;
-        font-size: .9rem;
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-          @include theme('color', 'color-tertiary', 'pagination-active-color');
-          background: transparent;
-        }
-      }
-    }
-
-    .next {
-      a {
-        @extend %a-arrow-animation;
-        @include icon(arrow-right, after);
-
         padding-right: 0;
 
         &::after {
-          margin-right: -.2rem;
-          padding-right: .2rem;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          height: 24px;
+          margin-top: auto;
+          margin-bottom: auto;
         }
       }
     }
 
     .previous {
       a {
-        @extend %a-arrow-animation--left;
-        @include icon(arrow-left, after);
+        margin-right: 0;
+      }
+    }
 
-        flex-direction: row-reverse;
-        padding-left: 0;
+    .next {
+      margin: 0 0 10px;
+
+      a {
+        margin-left: 0;
 
         &::after {
-          margin-left: -.2rem;
-          padding-right: .2rem;
-          padding-left: .4rem;
+          right: -36px;
         }
       }
     }
   }
 
   .button {
-    margin: 1rem 0;
+    margin: 20px 0;
   }
 }

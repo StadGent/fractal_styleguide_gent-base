@@ -30,14 +30,6 @@ module.exports = {
         id: 'modal-actions',
         actions: '<button type="button" class="button button-primary modal-close" data-target="modal-actions">Understood!</button>'
       }
-    },
-    {
-      name: 'fixed-height',
-      context: {
-        id: 'modal-fixed',
-        modifier: 'fixed-height',
-        actions: '<button type="button" class="button button-primary modal-close" data-target="modal-fixed">Understood!</button>'
-      }
     }
   ]
 };

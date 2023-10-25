@@ -152,15 +152,9 @@ nav.menu {
       }
     }
 
-    .authentication  {
-      padding: 1.2rem 0;
-
-      .content {
-        padding: 0;
-      }
-    }
-
     .language-switcher {
+      display: block;
+
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -174,18 +168,12 @@ nav.menu {
       }
     }
 
-    .authentication,
-    .language-switcher {
-      display: block;
-    }
-
     .menu-links,
-    .authentication,
     .language-switcher {
       margin: 0 1.2rem;
 
       &:not(:last-child) {
-        @include theme('border-color', 'color-primary--lighten-4', 'mijn_gent-border-color');
+        @include theme('border-color', 'color-primary--lighten-4');
         border-bottom: 2px solid;
       }
     }

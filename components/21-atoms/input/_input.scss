@@ -8,6 +8,10 @@ input[type="tel"],
 input[type="email"],
 input[type="url"] {
   @include field-base;
+
+  &::placeholder {
+    font-style: initial;
+  }
 }
 
 input[type="password"] {

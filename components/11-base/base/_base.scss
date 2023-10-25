@@ -9,6 +9,7 @@
 }
 
 html {
+  height: 100%;
   background: color('white');
   font: $default-font-weight $default-font-size $default-font-family;
   line-height: $default-line-height;
@@ -25,6 +26,7 @@ body {
   }
 
   position: relative;
+  min-height: 100%;
 }
 
 ::selection {
@@ -64,7 +66,10 @@ pre {
 }
 
 p {
-  margin-bottom: 1em;
+  @include large-text();
+
+  margin-bottom: 20px;
+  line-height: 177.778%;
 }
 
 address {

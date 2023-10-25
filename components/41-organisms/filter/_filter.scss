@@ -1,11 +1,7 @@
 .filter {
   .result-section {
-
-    .selected-filters,
-    .filter__result-count {
-      h2 {
-        font-size: .8rem;
-      }
+    .filter-page-label {
+      @include semi-bold-text();
     }
 
     .result__show-filters {
@@ -15,14 +11,26 @@
     }
 
     .selected-filters {
-      margin-bottom: 1rem;
+      margin-bottom: 22px;
+
+      ul {
+        li:not(:last-child) {
+          a {
+            @include theme('color', 'color-zero');
+          }
+        }
+
+        li:last-child {
+          line-height: 2;
+        }
+      }
     }
 
     .filter__result-count {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.2rem;
+      margin-bottom: 14px;
 
       > * {
         margin: 0;
@@ -35,6 +43,8 @@
 
     ul.filter__results {
       @extend %list-no-style;
+
+      margin-top: 60px;
     }
 
     .pager {
@@ -58,7 +68,6 @@
 // On mobile the filter-section is moved to the body root because it is converted to a modal.
 // This means it's no longer a child of .filter.
 .sidebar.filter-section {
-  padding-top: .7rem;
   visibility: hidden;
 
   @include desktop {
@@ -79,6 +88,10 @@
         display: block;
       }
     }
+  }
+
+  h3 {
+    @include theme('color', 'color-primary', 'heading-2-color');
   }
 
   > .modal-inner {
@@ -102,6 +115,8 @@
     }
 
     > .modal-content {
+      margin-bottom: 30px;
+
       @include desktop {
         padding: 0;
         overflow: visible;
@@ -109,6 +124,8 @@
     }
 
     > .modal-actions {
+      margin-top: 10px;
+
       @include desktop {
         padding-right: 0;
         padding-left: 0;
@@ -126,7 +143,10 @@
     // style first level labels as headings
     .form-item > label,
     fieldset.form-item > legend {
-      @extend %h3;
+      @extend %h4;
+      @include theme('color', 'color-primary', 'heading-2-color');
+
+      margin-bottom: 16px;
     }
 
     fieldset {

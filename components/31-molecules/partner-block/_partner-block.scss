@@ -2,36 +2,49 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 20px;
 
   @include desktop {
-    padding: 0 6.75rem;
+    padding: 0 135px;
   }
 
   &.partner__multiple {
     @include desktop {
       flex-direction: row;
+      align-items: stretch;
       justify-content: center;
     }
 
-    .intro {
-      @include theme('border-color', 'link-hover-background', 'partner-intro-border');
-      margin: 0 0 2.25rem;
-      padding: 0 0 2.25rem;
-      border-bottom-width: .1rem;
-      border-bottom-style: solid;
+    .partner-content {
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+    }
 
+    .intro {
       @include desktop {
-        min-width: 17.5rem;
-        margin: 0 3rem 0 0;
-        padding: 0 3rem 0 0;
-        border-bottom: 0;
-        border-right-width: .1rem;
-        border-right-style: solid;
+        min-width: 350px;
       }
 
       p:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    .partners {
+      @include theme('border-color', 'color-primary-light', 'partner-intro-border');
+
+      margin: 45px 0 0 ;
+      padding: 45px 0 0;
+      border-top-width: 2px;
+      border-top-style: solid;
+
+      @include desktop {
+        margin: 0 0 0 60px;
+        padding: 0 0 0 60px;
+        border-top: 0;
+        border-left-width: 2px;
+        border-left-style: solid;
       }
     }
   }
@@ -41,33 +54,60 @@
 
     .intro {
       p:last-child {
-        margin-bottom: 1.5rem;
+        margin-bottom: 30px;
       }
     }
+  }
+
+  h2 {
+    margin-bottom: 30px;
   }
 
   ul {
     align-items: center;
-    gap: 1.5rem 3rem; // sass-lint:disable-line no-misspelled-properties
+    justify-content: space-between;
+    gap: 30px 60px; // sass-lint:disable-line no-misspelled-properties
+
+    @include tablet {
+      justify-content: flex-start;
+    }
 
     li {
-      flex: 0 1 calc(100% / 3 - 3rem);
-      width: calc(100% /3);
+      flex: 1 1 calc(100% / 2 - 60px);
+      width: calc(100% /2);
+      min-width: 70px;
+      max-width: 150px;
       margin: 0;
 
+      @include tablet {
+        flex-basis: calc(100% / 3 - 60px);
+        flex-grow: 0;
+        width: calc(100% / 3);
+      }
+
       @include desktop {
-        flex: 0 1 calc(100% / 4 - 3rem);
-        min-width: 5rem;
+        flex-basis: calc(100% / 4 - 60px);
+        width: calc(100% / 4);
+        min-width: 100px;
+        max-width: 200px;
       }
     }
   }
 
-  figure {
-    min-width: 3.5rem;
-    max-width: 7.5rem;
+  a {
+    display: block;
+    border: 0;
 
-    @include desktop {
-      max-width: 10rem;
+    &[href^="http://"],
+    &[href^="https://"] {
+      &:not(.no-icon):not(.tag) {
+        margin-right: 0;
+      }
     }
+  }
+
+  figure,
+  img {
+    max-width: 100%;
   }
 }

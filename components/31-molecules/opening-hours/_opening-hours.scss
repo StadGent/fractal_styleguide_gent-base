@@ -1,13 +1,15 @@
-$month-day-size-mobile: 2rem;
-$month-day-size: 2.4rem;
+$month-day-size-mobile: 40px;
+$month-day-size: 48px;
 $week-breakpoint: '(min-width: 750px)';
 
 .openinghours-widget {
+  @include theme('background-color', 'color-secondary-pastel');
+
   font-size: .8rem;
 
   @media (max-width: 360px) {
-    width: calc(100% + 2rem);
-    margin-left: -1rem;
+    width: calc(100% + 40px);
+    margin-left: -20px;
   }
 
   // ===
@@ -34,10 +36,13 @@ $week-breakpoint: '(min-width: 750px)';
     }
 
     &--day {
-      padding: .3rem .8rem;
+      margin: 0;
+      padding: 15px 20px;
+      font-size: .8rem;
+      line-height: 175%;
 
       &:nth-child(even) {
-        @include theme('background', 'color-primary--lighten-4', 'opening-hours-even-background');
+        @include theme('background', 'color-secondary-light', 'opening-hours-even-background');
       }
     }
 
@@ -66,18 +71,20 @@ $week-breakpoint: '(min-width: 750px)';
   &[data-type="month"] {
     @include month-widget-mobile;
 
-
     @include tablet {
       @include month-widget-desktop;
     }
 
-    > .openinghours {
-      @include theme('border-color', 'color-primary--lighten-3', 'opening-hours-border');
-      display: inline-block;
+    font-size: .8rem;
+    line-height: 1.4rem;
+
+    & > .openinghours {
+      @include tablet {
+        display: inline-block;
+      }
     }
 
     .openinghours {
-
       &--header,
       &--days {
         display: flex;
@@ -92,6 +99,8 @@ $week-breakpoint: '(min-width: 750px)';
       // ===
       &--header {
         justify-content: space-between;
+        width: 100%;
+        padding-bottom: 16px;
 
         button {
           @include theme('color', 'color-primary--darken-2', 'opening-hours-color');
@@ -115,6 +124,8 @@ $week-breakpoint: '(min-width: 750px)';
           &.openinghours--prev,
           &.openinghours--next {
             &::before {
+              @include theme('color', 'color-zero', 'opening-hours-color');
+
               font-size: 1.2rem;
             }
           }
@@ -138,7 +149,6 @@ $week-breakpoint: '(min-width: 750px)';
         }
       }
 
-
       &--day--day-of-week {
         @include bold-text;
         text-transform: uppercase;
@@ -160,7 +170,9 @@ $week-breakpoint: '(min-width: 750px)';
           justify-content: center;
           width: $month-day-size-mobile;
           height: $month-day-size-mobile;
-          border-radius: 50%;
+          border-radius: 0;
+          font-size: .8rem;
+          line-height: 1.4rem;
 
           @include phablet {
             width: $month-day-size;
@@ -175,7 +187,7 @@ $week-breakpoint: '(min-width: 750px)';
 
         &[tabindex='0'] > span,
         &:hover > span {
-          @include theme('border-color', 'color-primary--darken-2', 'opening-hours-color');
+          @include theme('border-color', 'color-zero', 'opening-hours-color');
           border: 2px solid;
         }
 
@@ -189,19 +201,15 @@ $week-breakpoint: '(min-width: 750px)';
       }
 
       &--day-open > span::after {
-        @include theme('background-color', 'color-primary--darken-2', 'opening-hours-color');
+        @include theme('background-color', 'color-zero', 'opening-hours-color');
         display: block;
         position: relative;
-        bottom: .2rem;
+        bottom: 4px;
         flex: 0 0 auto;
-        width: .2rem;
-        height: .2rem;
+        width: 4px;
+        height: 4px;
         border-radius: 50%;
         content: "";
-      }
-
-      &--day-passed > span {
-        opacity: .5;
       }
 
       &--details {
@@ -217,7 +225,7 @@ $week-breakpoint: '(min-width: 750px)';
 
       &--date {
         @include bold-text;
-        margin-bottom: .8rem;
+        margin-bottom: 16px;
       }
 
       &--status {
@@ -229,5 +237,11 @@ $week-breakpoint: '(min-width: 750px)';
         display: inline;
       }
     }
+  }
+}
+
+.tabs.opening-hours {
+  > [role='tabpanel'] {
+    padding: 0;
   }
 }

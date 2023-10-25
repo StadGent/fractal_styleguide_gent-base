@@ -323,3 +323,26 @@
     @include focus-bare;
   }
 }
+
+/// Label mixin for optional labels
+@mixin optional-label {
+  @include theme('color', 'color-zero', 'label-optional-color');
+  @include theme('background-color', 'color-secondary', 'label-optional-background');
+  @include normal-text;
+
+  padding: 2px 5px;
+  float: right;
+  font-size: .6rem;
+  line-height: 150%;
+}
+
+/// Label mixin for form labels
+@mixin label {
+  @include theme('color', 'color-primary', 'label-color');
+  @include semi-bold-text;
+
+  display: block;
+  margin: 0 0 8px;
+  font-size: .8rem;
+  line-height: 1.4rem;
+}

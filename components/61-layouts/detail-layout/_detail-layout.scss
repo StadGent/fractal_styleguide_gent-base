@@ -14,21 +14,21 @@
   }
 
   > .content-header-container {
-    margin-right: -1rem;
-    margin-left: -1rem;
+    margin-right: -20px;
+    margin-left: -20px;
 
     @include tablet {
-      width: calc(100% + 6.75rem * 2);
-      margin-left: -6.75rem;
-      padding-right: 6.75rem;
-      padding-left: 6.75rem;
+      width: calc(100% + 255px * 2);
+      margin-left: -255px;
+      padding-right: 255px;
+      padding-left: 255px;
     }
 
     &.accolade-title {
       @include tablet {
         // Set max width because the absolute title gets out of boundary.
         .left {
-          max-width: calc(100% - (6.75rem * 2 + 1rem));
+          max-width: calc(100% - (135px * 2 + 20px));
         }
       }
     }
@@ -42,15 +42,15 @@
     &.image {
       & + .summary-box,
       & + .table-of-contents {
-        margin: 1rem 0 2rem;
+        margin: 20px 0 40px;
 
         @include tablet {
-          margin: 8rem 0 2rem;
+          margin: 120px 0 40px;
         }
 
         @include desktop {
-          max-width: calc($bp-max-content - 28.5rem - 3rem);
-          margin: -12.8rem 0 5rem;
+          max-width: calc($bp-max-content - 480px - 60px);
+          margin: -205px 0 100px;
         }
       }
     }
@@ -62,20 +62,20 @@
       & + .partner-block {
         @include set-layout('width-12');
 
-        margin-top: -7.5rem;
+        margin-top: -150px;
 
         @include tablet {
-          margin-top: -6rem;
+          margin-top: -120px;
         }
       }
 
       + .partner-block {
         max-width: 100%;
-        padding: 1rem;
+        padding: 20px;
         background-color: color('white');
 
         @include tablet {
-          padding: 3rem;
+          padding: 60px;
         }
       }
     }
@@ -86,13 +86,18 @@
   > aside,
   > article,
   > nav {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    @include desktop {
+      margin-top: 120px;
+      margin-bottom: 120px;
+    }
   }
 
   > ul,
   > ol {
-    padding-left: 1rem;
+    padding-left: 20px;
   }
 
   .w9-o1 {
@@ -109,10 +114,6 @@
     }
   }
 
-  > .highlight {
-    margin-bottom: 4.5rem;
-  }
-
   > ul.accordion {
     @include desktop {
       @include set-layout('width-7', 'offset-2');
@@ -120,6 +121,12 @@
 
     .accordion--content p {
       line-height: 1.75;
+    }
+  }
+
+  > .partner-block {
+    @include desktop {
+      @include set-layout();
     }
   }
 
@@ -144,6 +151,20 @@
     }
   }
 
+  > div.responsive-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  > .table-of-contents {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  > .contact-details {
+    @include set-layout();
+  }
+
   .w12,
   > .timeline-wrapper,
   > .programme-wrapper {
@@ -154,8 +175,8 @@
   .readspeaker-button {
     display: block;
     width: auto;
-    margin-top: -.4rem;
-    margin-bottom: 2rem;
+    margin-top: -8px;
+    margin-bottom: 40px;
   }
 
   .openinghours-widget[data-type="month"] {
@@ -173,29 +194,30 @@
   }
 }
 
-$bulb-image-width: 6rem;
+$bulb-image-width: 120px;
 
 aside.top,
 aside.bottom {
   @extend %content-container;
 
   > * {
-    @include theme('border-color', 'color-primary--lighten-4', 'more-info-block-border-color');
-
-    padding-top: 3rem;
-    border-top: 2px solid;
+    margin-top: 60px;
+    margin-bottom: 60px;
 
     @include tablet {
-      padding-top: 2rem;
+      margin-bottom: 120px;
     }
 
     @include desktop {
       @include set-layout();
       width: 100%;
-      margin-bottom: 2rem;
-      margin-left: 0;
-      padding-right: span(2 wide of 12);
-      padding-left: span(2 wide of 12);
+
+      // Related teasers box should be wider.
+      &:not(.related-box-teasers) {
+        margin-left: 0;
+        padding-right: span(2 wide of 12);
+        padding-left: span(2 wide of 12);
+      }
     }
   }
 
@@ -207,25 +229,7 @@ aside.bottom {
 
 aside.top {
   position: relative;
-  margin: 5rem auto 0;
-
-  > div:first-child {
-    &::before {
-      @include spot-image('lightbulb', $bulb-image-width);
-
-      display: block;
-      position: relative;
-      margin: (-$bulb-image-width) auto 1rem;
-      z-index: z('default');
-
-      @include tablet {
-        position: absolute;
-        top: -($bulb-image-width*.5);
-        right: span(1 of 12);
-        margin: 0;
-      }
-    }
-  }
+  margin: 100px auto 0;
 }
 
 aside.bottom {

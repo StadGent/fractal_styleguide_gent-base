@@ -1,42 +1,27 @@
-$avatar-width: 14rem;
+$avatar-width: 280px;
 
 .contact-details {
-  &.highlight .highlight__inner {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  h2,
+  h3 {
+    margin-bottom: 30px;
+  }
 
-    > h2 {
-      width: 100%;
-    }
+  ul {
+    @include medium-text();
 
-    &::before {
-      @include spot-image('book-light', 7rem);
+    max-width: 630px;
+    margin-bottom: 45px;
+
+    @include desktop {
+      margin-bottom: 0;
     }
   }
 
-  &.contact-details-inverted {
-    > .highlight__inner {
-      @include theme('border-color', 'color-primary--lighten-4', 'contact-details-border-color');
-      border-width: 2px 0;
-      border-style: solid;
-
-      [class*="cs--"] & {
-        background-color: transparent;
-      }
-
-      &::before {
-        @include spot-image('book', 7rem);
-        box-shadow: none;
-      }
-    }
-
-    .accolade {
-      &::before,
-      &::after {
-        @include theme('background', 'color-secondary', 'contact-details-inverted-background-color');
-      }
-    }
+  &-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   &-column {

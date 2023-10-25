@@ -1,18 +1,28 @@
 .form-item {
-  margin-bottom: 1.2rem;
+  margin-bottom: 30px;
 
   > * {
-    max-width: 20.5rem;
+    max-width: 410px;
   }
 
   @include desktop {
     > * {
-      max-width: 41rem;
+      max-width: 820px;
     }
 
     > .field-message,
     > label {
-      max-width: 20.5rem;
+      max-width: 410px;
+    }
+  }
+
+  &.webform-document-file,
+  &.webform-image-file {
+    a,
+    .file-type {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: .7rem;
     }
   }
 
@@ -22,10 +32,17 @@
   }
 
   .field-message:not(.error):not(.success) {
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
   }
 
   &:not(.stacked) {
+    .form-label {
+      @include desktop {
+        width: 50%;
+        max-width: 410px;
+      }
+    }
+
     .form-columns {
       margin-bottom: 0;
 
@@ -40,40 +57,40 @@
             align-items: flex-start;
 
             .field-message {
-              margin: 0 0 gutter() * .5 .3rem;
-              padding: .7rem 1.2rem .7rem 3.9rem;
+              margin: 0 0 gutter() * .5 6px;
+              padding: 14px 24px 14px 78px;
 
               &::before {
-                top: .5rem;
-                left: 1.7rem;
+                top: 10px;
+                left: 34px;
               }
 
               .accolade {
                 right: auto;
                 bottom: 0;
                 left: 0;
-                width: 1rem;
+                width: 20px;
                 height: 100%;
                 transform: rotate(0deg);
 
                 &::before,
                 &::after {
-                  width: 1rem;
+                  width: 20px;
                   border: 0;
                 }
 
                 &::before {
                   top: 0;
-                  bottom: 1.2rem;
-                  height: 1.2rem;
+                  bottom: 24px;
+                  height: 24px;
                   border-radius: 0 0 border-radius("radius-4");
                 }
 
                 &::after {
-                  top: 1.2rem;
+                  top: 24px;
                   right: 0;
                   bottom: -1px;
-                  height: calc(100% - 1rem);
+                  height: calc(100% - 20px);
                   border-radius: 0 border-radius("radius-4") 0 0;
                 }
               }
@@ -96,12 +113,21 @@
 
     .form-columns .form-item-column {
       width: 100%;
-      max-width: 40rem;
+      max-width: 800px;
 
       .field-message {
-        margin-top: .2rem;
+        width: 100%;
+        margin-top: 4px;
         margin-left: 0;
       }
+    }
+  }
+}
+
+.form-item-column {
+  .form-item {
+    .form-label {
+      width: 100%;
     }
   }
 }

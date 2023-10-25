@@ -1,9 +1,9 @@
 {% if type == "overview-title" %}
-  <{{ heading|default('h1') }} class="overview-title">{{ heading_text }}</{{ heading|default('h1') }}>
+  <{{ heading|default('h1') }} class="overview-title {{ heading_class }}">{{ heading_text }}</{{ heading|default('h1') }}>
 {% elseif type == "bg-primary" %}
-  <{{ heading|default('h1') }} class="bg-primary"><span>{{ heading_text }}</span></{{ heading|default('h1') }}>
+  <{{ heading|default('h1') }} class="bg-primary {{ heading_class }}"><span>{{ heading_text }}</span></{{ heading|default('h1') }}>
 {% elseif type == "bg-none" %}
-  <{{ heading|default('h1') }} class="bg-none"><span>{{ heading_text }}</span></{{ heading|default('h1') }}>
+  <{{ heading|default('h1') }} class="bg-none {{ heading_class }}"><span>{{ heading_text }}</span></{{ heading|default('h1') }}>
 {% else %}
-  <{{ heading }}>{{ heading_text }}</{{ heading }}>
+  <{{ heading }}{% if heading_class %} class="{{ heading_class }}"{% endif %}>{{ heading_text }}</{{ heading }}>
 {% endif %}

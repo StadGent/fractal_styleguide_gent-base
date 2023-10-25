@@ -14,14 +14,14 @@
 /// @param {string} $color - Text theme color.
 /// @param {string} $background-color - The background theme color.
 ///
-@mixin accolade($v-position: "top", $h-position: "right", $width: 2.25rem, $height: .9rem, $color: "color-zero", $background-color: "color-secondary") {
+@mixin accolade($v-position: "top", $h-position: "right", $width: 50px, $height: 18px, $color: "color-zero", $background-color: "color-secondary") {
   @include theme('color', $color, 'caption-color');
   @include theme('background-color', $background-color, 'caption-background-color');
 
   display: inline-block;
   position: relative;
   width: fit-content;
-  padding: .1rem .5rem;
+  padding: 2px 10px;
   z-index: 1;
 
   @if $v-position == bottom {
@@ -42,7 +42,7 @@
     width: $width;
     height: $height;
     content: '';
-    @if $v-position == bottom {
+    @if $v-position == top {
       transform: rotate(180deg);
     }
   }
