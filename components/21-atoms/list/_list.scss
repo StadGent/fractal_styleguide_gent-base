@@ -40,7 +40,7 @@ ol {
   }
 
   &.no-style {
-    max-width: 41rem;
+    max-width: 820px;
     margin: 0;
     list-style: none;
   }
@@ -126,7 +126,7 @@ ul {
         margin: 0;
 
         li {
-          margin-bottom: .2rem;
+          margin-bottom: 4px;
         }
       }
 
@@ -172,7 +172,7 @@ ul {
   &.label-list {
     display: flex;
     flex-wrap: wrap;
-    margin: -.2rem;
+    margin: -4px;
     list-style: none;
 
     li {
@@ -182,8 +182,8 @@ ul {
       display: inline-flex;
       align-items: center;
       justify-content: space-between;
-      margin: .2rem;
-      padding: .5em .8em;
+      margin: 4px;
+      padding: 10px 16px;
       border: 1px solid color('gray');
       font-size: .7rem;
       line-height: .7;
@@ -208,7 +208,7 @@ ul {
       }
 
       &::before {
-        margin-right: .3rem;
+        margin-right: 6px;
         font-size: 1rem;
       }
     }
@@ -224,13 +224,14 @@ ol {
     counter-increment: item;
 
     &::before {
+      @include theme('background-color', 'color-tertiary-pastel');
       @include semi-bold-text;
       display: inline-block;
-      width: 1.4rem;
-      height: 1.4rem;
-      margin-right: .5rem;
-      background-color: color('cyan', -3);
-      line-height: 1.5rem;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      font-size: .9rem;
+      line-height: 177.778%;
       text-align: center;
       content: counter(item);
     }
@@ -249,8 +250,8 @@ dl {
   }
 
   dd {
-    margin-bottom: .4rem;
-    padding-left: 1.2rem;
+    margin-bottom: 8px;
+    padding-left: 24px;
   }
 }
 

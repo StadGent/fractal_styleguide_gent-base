@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  hidden: true,
+  hidden: false,
   context: {
     steps: [
       {text: 'first step', url: '#'},
