@@ -61,7 +61,7 @@ A wrapper was added to columns: `.contact-details-columns` and the `h3` is chang
 ### Highlight molecule
 No more spot images via classes. The icon can be changed in HTML markup via
 the proper icon name in the `<i>` element.
-An H3 title has been added.
+An H2 title has been added.
 
 ### Call to action molecule
 Not based on Highlight molecule anymore.
