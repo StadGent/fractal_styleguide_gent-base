@@ -3,5 +3,7 @@ label {
 
   .label-optional {
     @include optional-label();
+
+    margin: 0 0 3px 5px;
   }
 }
