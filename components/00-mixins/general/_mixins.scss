@@ -341,8 +341,10 @@
   @include theme('color', 'color-primary', 'label-color');
   @include semi-bold-text;
 
-  display: block;
-  margin: 0 0 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 0 5px;
   font-size: .8rem;
   line-height: 1.4rem;
 }
