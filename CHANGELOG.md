@@ -90,7 +90,7 @@ This change is needed to hide the 'No file chosen.' text on this variation.
 There are multiple variations of teasers instead of just one. Pick the right
 variation for your use case.
 - Teasers without image now need the teaser class `no-image` for correct styling.
-- Teaser titles are now `h3` with `.h4` class, except for `teaser--square--double`, which has a regular `h3` as a first teaser.
+- Teaser titles are now `h3` with `.h4` class, except for `teaser--square__double`, which has a regular `h3` as a first teaser.
 - Event dates have the class `date` instead of `event`.
 - Labels follow the markup of the new atom "Label". See label atom changes.
 - Tags list moved to below the teaser title, except for the square variant.
