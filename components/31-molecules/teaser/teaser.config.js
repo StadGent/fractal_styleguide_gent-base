@@ -3,13 +3,16 @@
 module.exports = {
   collator: function (markup, item) {
     if (item.handle === 'teaser--teaser--wide') {
-      return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: calc(100% - 1.2rem); padding: 0;"><ul style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
+      return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="padding: 0; max-width: 1170px;"><ul style="margin-bottom: 5rem; margin-left: 0;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
+    }
+    else if (item.handle === 'teaser--teaser--square--double') {
+      return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 1170px;"><ul class="grid-2-1" style="margin-bottom: 5rem;">${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
     }
     else if (item.handle.includes('simple') || item.handle.includes('background')) {
-      return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: calc(100% - 1.2rem); background-color: #F0F1F2; padding: 1.2rem;" class="container"><ul class="grid-3">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
+      return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="background-color: #F0F1F2; max-width: 1170px; padding: 1.2rem;"><ul class="grid-3">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
     }
     else {
-      return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: calc(100% - 1.2rem);"><ul class="grid-3" style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
+      return `<!-- Start: @${item.handle} -->\n<dt>${item.name}</dt><dd style="max-width: 1170px;"><ul class="grid-3" style="margin-bottom: 5rem;">${markup}${markup}${markup}</ul></dd>\n<!-- End: @${item.handle} -->\n`;
     }
   },
   context: {
@@ -93,6 +96,24 @@ module.exports = {
         tags: ['Optional tag'],
         tags_position: 'top',
         image_src: 'https://via.placeholder.com/570x570&text=1:1+(570x570)'
+      }
+    },
+    {
+      name: 'teaser--square--double',
+      context: {
+        image_ratio_mobile: '1:1',
+        image_src_mobile: 'https://via.placeholder.com/360x360&text=1:1+(360x360)',
+        image_ratio_desktop: '765:360',
+        image_src_desktop: 'https://via.placeholder.com/765x360&text=765:360+(765x360)',
+        link_text: 'Read more',
+        link: '#',
+        list: null,
+        label_text: 'Event',
+        modifier: 'teaser--square teaser--square__double',
+        paragraph_text: '',
+        tags: ['Optional tag'],
+        tags_position: 'top',
+        title: 'First teaser has a title that looks like this and spans over multiple lines'
       }
     },
     {

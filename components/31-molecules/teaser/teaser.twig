@@ -5,7 +5,7 @@
   {% endfor %}
 {% endif %}
 
-<li class="teaser {% if type %} {{ type }} {% endif %} {% if modifier %} {{ modifier }} {% endif %}">
+<li class="teaser{% if type %} {{ type }}{% endif %}{% if modifier %} {{ modifier }}{% endif %}">
   <article class="teaser-content">
     {# title must be the first element in markup #}
     <div class="content__second">
@@ -14,7 +14,8 @@
       {% endif %}
 
       {% include '@heading' with {
-        'heading': 'h4',
+        'heading': 'h3',
+        'heading_class': 'h4',
         'heading_text': title,
         'type': 'bg-none'
       } %}

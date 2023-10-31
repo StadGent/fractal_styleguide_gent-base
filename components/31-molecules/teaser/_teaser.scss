@@ -5,7 +5,7 @@
   position: relative;
   list-style: none;
 
-  h4 {
+  h3 {
     position: relative;
     margin: -13px 0 0;
     z-index: 3;
@@ -128,7 +128,7 @@
           float: none;
         }
 
-        + h4 {
+        + h3 {
           margin-left: 53px;
 
           @include phablet {
@@ -147,8 +147,13 @@
 
   &.no-image,
   .teaser--no-images & {
-    h4 {
+    h3 {
       margin: 0;
+
+      span {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
 
     .content__second {
@@ -169,7 +174,7 @@
 
     &.no-image,
     .teaser--no-images & {
-      h4 {
+      h3 {
         margin: 0;
       }
 
@@ -192,7 +197,7 @@
       height: auto;
       padding: 20px 100px 20px 20px;
 
-      h4 {
+      h3 {
         margin: 0;
 
         span {
@@ -226,6 +231,29 @@
     }
   }
 
+  &.teaser--square__double {
+    .figure-wrapper__mobile {
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .figure-wrapper__desktop {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
+
+    h3 {
+      @include desktop-and-below {
+        font-size: .9rem;
+        line-height: 1.15rem;
+      }
+    }
+  }
+
   &.teaser--simple {
     .content__second {
       @include theme('background-color', 'color-none');
@@ -236,7 +264,7 @@
         padding: 30px 60px 30px 30px;
       }
 
-      h4 {
+      h3 {
         display: flex;
         align-items: center;
         height: 100%;
@@ -298,7 +326,7 @@
     padding: 0 0 30px;
     border-bottom: 1px solid color('blue');
 
-    h4 {
+    h3 {
       margin: 0 0 20px;
     }
 
