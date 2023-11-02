@@ -5,13 +5,15 @@
   position: relative;
   list-style: none;
 
-  h3 {
+  h3.bg-none {
     position: relative;
     margin: -13px 0 0;
     z-index: 3;
 
     span {
       @include theme('background-color', 'color-secondary');
+
+      padding: 2.5px 10px;
     }
   }
 

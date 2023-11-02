@@ -11,15 +11,15 @@
     margin-bottom: $gutter-width;
 
     @include phablet {
-      width: span(6 of 12);
+      @include col(6);
     }
 
     @include tablet {
-      width: span(4 of 12);
+      @include col(4);
     }
 
     @include desktop {
-      width: span(3 of 12);
+      @include col(3);
     }
 
     &.hidden {

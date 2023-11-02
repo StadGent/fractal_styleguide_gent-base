@@ -35,7 +35,7 @@
       & + .table-of-contents,
       & + .partner-block,
       & + p {
-        @include set-layout('width-12');
+        @include col(12);
 
         position: relative;
         margin-top: -7.5rem;
@@ -61,12 +61,13 @@
 
   > .cta-block {
     @include desktop {
-      @include set-layout('width-11', 'offset-1');
+      @include col(11);
+      @include col-offset(1);
     }
 
     &.image-left,
     &.image-right {
-      @include set-layout('width-12');
+      @include col(12);
     }
   }
 

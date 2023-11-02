@@ -57,7 +57,7 @@
             align-items: flex-start;
 
             .field-message {
-              margin: 0 0 gutter() * .5 6px;
+              margin: 0 0 $gutter-width * .5 6px;
               padding: 14px 24px 14px 78px;
 
               &::before {

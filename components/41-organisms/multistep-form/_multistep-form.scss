@@ -1,14 +1,19 @@
+$grid-gutter-width: $gutter-width;
+
 .form--multistep {
+  display: flex;
+  flex-direction: column;
+  gap: $grid-gutter-width;
+
   @include desktop {
-    display: flex;
+    flex-direction: row;
 
     >.form-content {
-      @include set-layout('width-9');
+      @include col(9);
     }
 
     >.form-steps {
-      @include set-layout('width-3');
-      margin-right: gutter();
+      @include col(3);
     }
   }
 }
