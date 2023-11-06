@@ -97,6 +97,10 @@ variation for your use case.
 - Tags and label in the square variant get a new parent div with class `tags-label-wrapper`.
 - Accolade markup should be deleted.
 - Wide teaser has no changes except for heading change and accolade removal, see above. The image has a 1:1 ratio.
+- Square double teaser added.
+
+### Collection organism
+The grid system is updated (Susy is removed), an example is added to the readme. The old (legacy) grid classes still work for now.
 
 ### Header organism
 - The logo is bigger on the frontpage, based on a parent class `is-frontpage`.
