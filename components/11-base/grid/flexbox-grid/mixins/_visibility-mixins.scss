@@ -164,6 +164,6 @@
   }
 
   @else {
-    @warn "hide mixin arg must be one of the existing breakpoints or ranges (#{$breakpoint-all-prefixes})";
+    @warn "Hide mixin arg must be one of the existing breakpoints or ranges (#{$breakpoint-all-prefixes})";
   }
 }

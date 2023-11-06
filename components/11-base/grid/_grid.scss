@@ -1,10 +1,10 @@
-// Some imports
+// Importing grid mixins and variables.
 @import "flexbox-grid/variables/grid-variables";
 @import "flexbox-grid/mixins/visibility-mixins";
 @import "flexbox-grid/mixins/grid-mixins";
 
 
-// Grid classes
+// Grid classes.
 .row {
   @include row();
 }
@@ -57,7 +57,7 @@
   align-self: stretch;
 }
 
-// Mixin to run inside of for loop - creates col/breakpoint classes * Not for developer use *
+// Mixin to run inside of for loop - creates col/breakpoint classes * Not for developer use *.
 @mixin col-factory($this-prefix) {
   .col-#{$this-prefix} {
     flex-basis: 0;
@@ -67,9 +67,6 @@
 
   @for $i from 1 through $grid-columns {
     .col-#{$this-prefix}-#{$i} {
-      //flex-basis: calc(100% / $grid-columns * $i);
-      //max-width: calc(100% / $grid-columns * $i);
-
       flex-basis: calc((100% - ($grid-gutter-width * (($grid-columns / $i) - 1))) / ($grid-columns / $i));
       width: calc((100% - ($grid-gutter-width * (($grid-columns / $i) - 1))) / ($grid-columns / $i));
     }
@@ -118,7 +115,9 @@
   .last-#{$this-prefix} {
     order: 1;
   }
-} // Mixin to run inside of for loop - creates col/breakpoint classes
+}
+
+// Mixin to run inside of for loop - creates col/breakpoint classes.
 
 @for $i from 1 through length($breakpoint-up-prefixes) {
   $this-prefix: nth($breakpoint-up-prefixes, $i);

@@ -1,5 +1,5 @@
 // Dynamic system with different gutters and items spanning multiple columns.
-// Calculation at the bottom
+// Calculation at the bottom.
 
 ul[class^=grid-] {
   @include row();
@@ -11,7 +11,7 @@ ul[class^=grid-] {
   text-align: center;
 }
 
-// Grid-2-1 is an irregular grid with non-equal columns
+// Grid-2-1 is an irregular grid with non-equal columns.
 ul.grid-2-1 {
   > li {
     @include desktop {
@@ -27,7 +27,7 @@ ul.grid-2-1 {
   }
 }
 
-//// GENERIC CODE FOR COLUMN WIDTH CALCULATION ON PHABLET ////
+//// GENERIC CODE FOR COLUMN WIDTH CALCULATION ON PHABLET. ////
 @for $col from 1 through $grid-columns {
   ul.grid-#{$col} {
     > li {
@@ -38,7 +38,7 @@ ul.grid-2-1 {
   }
 }
 
-// Tablet version has a deviating nr of columns for grid 5 and 4
+// Tablet version has a deviating nr of columns for grid 5 and 4.
 ul.grid-5 {
   > li {
     @include tablet {
@@ -56,7 +56,7 @@ ul.grid-4 {
 }
 
 
-//// GENERIC CODE FOR COLUMN WIDTH CALCULATION ON DESKTOP ////
+//// GENERIC CODE FOR COLUMN WIDTH CALCULATION ON DESKTOP. ////
 @for $col from 1 through $grid-columns {
   ul.grid-#{$col} {
     > li {
