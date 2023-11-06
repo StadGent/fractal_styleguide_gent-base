@@ -151,11 +151,6 @@
   .teaser--no-images & {
     h3 {
       margin: 0;
-
-      span {
-        padding-right: 0;
-        padding-left: 0;
-      }
     }
 
     .content__second {
@@ -209,7 +204,7 @@
 
       .date {
         display: inline-block;
-        margin: -5px 0 0;
+        margin: -6px 0 0;
 
         span {
           @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
@@ -227,13 +222,13 @@
         @include read-more-icon-link();
 
         position: absolute;
-        right: 45px;
+        right: 0;
         bottom: 0;
       }
     }
   }
 
-  &.teaser--square__double {
+  &.teaser--square--double {
     .figure-wrapper__mobile {
       @include desktop {
         display: none;

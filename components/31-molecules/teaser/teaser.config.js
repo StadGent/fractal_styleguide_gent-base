@@ -109,7 +109,7 @@ module.exports = {
         link: '#',
         list: null,
         label_text: 'Event',
-        modifier: 'teaser--square teaser--square__double',
+        modifier: 'teaser--square teaser--square--double',
         paragraph_text: '',
         tags: ['Optional tag'],
         tags_position: 'top',
