@@ -9,7 +9,8 @@
   .w7-o2,
   > * {
     @include desktop {
-      @include set-layout('width-7', 'offset-2');
+      @include col(7);
+      @include col-offset(2);
     }
   }
 
@@ -60,7 +61,7 @@
       & + .summary-box,
       & + .table-of-contents,
       & + .partner-block {
-        @include set-layout('width-12');
+        @include col(12);
 
         margin-top: -150px;
 
@@ -102,7 +103,8 @@
 
   .w9-o1 {
     @include desktop {
-      @include set-layout('width-9', 'offset-1');
+      @include col(9);
+      @include col-offset(1);
     }
   }
 
@@ -110,13 +112,15 @@
   > .highlight,
   > .image-gallery--wrapper.multiple {
     @include desktop {
-      @include set-layout('width-10', 'offset-1');
+      @include col(10);
+      @include col-offset(1);
     }
   }
 
   > ul.accordion {
     @include desktop {
-      @include set-layout('width-7', 'offset-2');
+      @include col(7);
+      @include col-offset(2);
     }
 
     .accordion--content p {
@@ -126,28 +130,30 @@
 
   > .partner-block {
     @include desktop {
-      @include set-layout();
+      @include col(12);
     }
   }
 
   > .quote-wrapper {
     @include desktop {
-      @include set-layout();
+      @include col(12);
 
       > .quote {
-        @include set-layout('width-7', 'offset-4');
+        @include col(7);
+        @include col-offset(4);
       }
     }
   }
 
   > .cta-block {
     @include desktop {
-      @include set-layout('width-11', 'offset-1');
+      @include col(11);
+      @include col-offset(1);
     }
 
     &.image-left,
     &.image-right {
-      @include set-layout('width-12');
+      @include col(12);
     }
   }
 
@@ -162,13 +168,13 @@
   }
 
   > .contact-details {
-    @include set-layout();
+    @include col(12);
   }
 
   .w12,
   > .timeline-wrapper,
   > .programme-wrapper {
-    @include set-layout();
+    @include col(12);
     @include extra-wide;
   }
 
@@ -209,14 +215,14 @@ aside.bottom {
     }
 
     @include desktop {
-      @include set-layout();
+      @include col(12);
       width: 100%;
 
       // Related teasers box should be wider.
       &:not(.related-box-teasers) {
         margin-left: 0;
-        padding-right: span(2 wide of 12);
-        padding-left: span(2 wide of 12);
+        padding-right: calc(5px + (2 / 12 * 100%));
+        padding-left: calc(5px + (2 / 12 * 100%));
       }
     }
   }
@@ -235,7 +241,8 @@ aside.top {
 aside.bottom {
   .changed-date {
     @include desktop {
-      @include set-layout('width-9', 'offset-2');
+      @include col(9);
+      @include col-offset(2);
     }
 
     padding: 0;

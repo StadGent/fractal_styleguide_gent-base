@@ -41,12 +41,13 @@ figure {
     }
   }
 
-  &[data-ratio='1:1'] {
-    padding-bottom: 100%;
-  }
+  // Add ratio for images in this array
+  $ratios: (1: 1, 4: 1, 8: 5, 765: 360);
 
-  &[data-ratio='4:1'] {
-    padding-bottom: calc(100% / 4 * 1);
+  @each $ratio-width, $ratio-height in $ratios {
+    &[data-ratio='#{$ratio-width}:#{$ratio-height}'] {
+      padding-bottom: calc(100% / $ratio-width * $ratio-height);
+    }
   }
 
   img {

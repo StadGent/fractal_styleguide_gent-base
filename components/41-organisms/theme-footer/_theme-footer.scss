@@ -66,7 +66,7 @@
       margin: 0;
 
       @include desktop {
-        column-gap: gutter() * 2;
+        column-gap: $gutter-width * 2;
         column-count: 2;
       }
 

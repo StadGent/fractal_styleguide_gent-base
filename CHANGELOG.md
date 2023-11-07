@@ -90,13 +90,17 @@ This change is needed to hide the 'No file chosen.' text on this variation.
 There are multiple variations of teasers instead of just one. Pick the right
 variation for your use case.
 - Teasers without image now need the teaser class `no-image` for correct styling.
-- Teaser titles are now `h4`.
+- Teaser titles are now `h3` with `.h4` class, except for `teaser--square__double`, which has a regular `h3` as a first teaser.
 - Event dates have the class `date` instead of `event`.
 - Labels follow the markup of the new atom "Label". See label atom changes.
 - Tags list moved to below the teaser title, except for the square variant.
 - Tags and label in the square variant get a new parent div with class `tags-label-wrapper`.
 - Accolade markup should be deleted.
 - Wide teaser has no changes except for heading change and accolade removal, see above. The image has a 1:1 ratio.
+- Square double teaser added.
+
+### Collection organism
+The grid system is updated (Susy is removed), an example is added to the readme. The old (legacy) grid classes still work for now.
 
 ### Header organism
 - The logo is bigger on the frontpage, based on a parent class `is-frontpage`.
