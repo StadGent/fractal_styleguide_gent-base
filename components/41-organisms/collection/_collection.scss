@@ -56,7 +56,7 @@ ul.grid-4 {
 }
 
 
-//// GENERIC CODE FOR COLUMN WIDTH CALCULATION ON DESKTOP. ////
+// GENERIC CODE FOR COLUMN WIDTH CALCULATION ON DESKTOP. //
 @for $col from 1 through $grid-columns {
   ul.grid-#{$col} {
     > li {
