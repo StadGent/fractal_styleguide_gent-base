@@ -55,6 +55,7 @@
       &:first-of-type a {
         @extend %button-secondary;
         @include button;
+        @include button-large;
         @include button-icon;
       }
     }
