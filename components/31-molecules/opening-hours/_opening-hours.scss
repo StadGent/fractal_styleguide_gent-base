@@ -44,11 +44,16 @@ $week-breakpoint: '(min-width: 750px)';
       &:nth-child(even) {
         @include theme('background', 'color-secondary-light', 'opening-hours-even-background');
       }
+
+      &-active {
+        font-weight: 600;
+      }
     }
 
     &--details {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       justify-content: space-between;
     }
 
