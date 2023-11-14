@@ -29,7 +29,7 @@
   }
 
   .openinghours--details {
-    top: -$month-day-size *.5;
+    top: calc(($month-day-size * -.5) - 16px);
     left: calc(100% + #{$month-day-size});
     padding-top: 0;
   }

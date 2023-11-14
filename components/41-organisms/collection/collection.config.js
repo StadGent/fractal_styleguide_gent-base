@@ -35,6 +35,12 @@ module.exports = {
       }
     },
     {
+      name: 'grid-2-1',
+      context: {
+        grid: 'grid-2-1'
+      }
+    },
+    {
       name: 'with show more',
       context: {
         grid: 'grid-4'

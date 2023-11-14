@@ -4,12 +4,13 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 4rem;
+  gap: $grid-gutter-width; // sass-lint:disable-line no-misspelled-properties
 
   .sidebar {
     width: 100%;
 
     @include desktop {
-      width: span(4 of 12);
+      @include col(4);
     }
   }
 
@@ -17,8 +18,7 @@
     width: 100%;
 
     @include desktop {
-      width: span(8 wide of 12);
-      padding-right: gutter();
+      @include col(8);
     }
   }
 }

@@ -29,7 +29,7 @@ $avatar-width: 280px;
     width: 100%;
 
     @include tablet {
-      width: span(6 of 12);
+      @include col(6);
       margin-right: $gutter-width;
 
       &:last-of-type:not(:first-of-type) {

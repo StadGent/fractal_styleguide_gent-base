@@ -23,6 +23,19 @@ On detail pages, an optional "Show more" link can be included, as seen in the ex
 
 Pagination and the "Show more" link can never be used together. Either the teaser collection already shows all content there is and pagination is used to divide the content into multiple pages, or the teaser collection is used to show a selection of related content and a "Show more" link is used to link to all related content.
 
+### Legacy
+The old grid system (which still works) was based on the `.grid-*` class. The new grid (without Susy), works with row and col classes, like so:
+```
+<ul class="row">
+    <li class="col-sm-6 col-lg-4">
+        ...
+    </li>
+</ul>
+```
+This example replaces the grid-3 collection (not grid-4) since the old system counted the number of teasers instead of the number of columns they span. So `.col-lg-6` means that at the lg (desktop) breakpoint 2 teasers of each 6 columns wide (in a 12 column setup).
+
+Breakpoints can be found in `11-base/grid/flexbox-grid/variables/_grid-variables`.
+
 ## Accessibility
 
 - A collection of teasers forms a list (WCAG 1.3.1).

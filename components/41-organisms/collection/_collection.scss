@@ -1,29 +1,8 @@
-// Teaser gutter differs from gallery gutter, we need to set up decent grid
-// system with different gutters and items spanning multiple columns.
-// @todo Phase out Susy grid and replace variable below.
-$grid-gutter-width: $gutter-width * 1.5;
+// Dynamic system with different gutters and items spanning multiple columns.
+// Calculation at the bottom.
 
-ul.grid-2,
-ul.grid-3,
-ul.grid-4,
-ul.grid-5 {
-  @extend %list-no-style;
-
-  display: flex;
-  flex-wrap: wrap;
-  width: calc(100% + #{$grid-gutter-width});
-  margin: 0 -#{$grid-gutter-width * .5} -24px;
-
-  > li {
-    flex-basis: 100%;
-    flex-shrink: 1;
-    margin-bottom: $gutter-width;
-    padding: 0 $grid-gutter-width * .5;
-
-    @include phablet {
-      margin-bottom: $grid-gutter-width;
-    }
-  }
+ul[class^=grid-] {
+  @include row();
 }
 
 .grid__show-more {
@@ -32,63 +11,58 @@ ul.grid-5 {
   text-align: center;
 }
 
+// Grid-2-1 is an irregular grid with non-equal columns.
+ul.grid-2-1 {
+  > li {
+    @include desktop {
+      @include col(4);
+    }
+
+    &:first-child {
+      @include desktop {
+        flex-basis: calc(((100% - ($grid-gutter-width * 2)) / 3 * 2) + $grid-gutter-width);
+        width: calc(((100% - ($grid-gutter-width * 2)) / 3 * 2) + $grid-gutter-width);
+      }
+    }
+  }
+}
+
+//// GENERIC CODE FOR COLUMN WIDTH CALCULATION ON PHABLET. ////
+@for $col from 1 through $grid-columns {
+  ul.grid-#{$col} {
+    > li {
+      @include phablet {
+        @include col(6);
+      }
+    }
+  }
+}
+
+// Tablet version has a deviating nr of columns for grid 5 and 4.
 ul.grid-5 {
   > li {
-    @include phablet {
-      flex-basis: 50%;
-      max-width: 50%;
-    }
-
     @include tablet {
-      flex-basis: 25%;
-      max-width: 25%;
-    }
-
-    @include desktop {
-      flex-basis: 20%;
-      max-width: 20%;
+      @include col(3);
     }
   }
 }
 
 ul.grid-4 {
   > li {
-    @include phablet {
-      flex-basis: 50%;
-      max-width: 50%;
-    }
-
     @include tablet {
-      flex-basis: 33.3333%;
-      max-width: 33.3333%;
-    }
-
-    @include desktop {
-      flex-basis: 25%;
-      max-width: 25%;
+      @include col(4);
     }
   }
 }
 
-ul.grid-3 {
-  > li {
-    @include phablet {
-      flex-basis: 50%;
-      max-width: 50%;
-    }
 
-    @include desktop {
-      flex-basis: 33.3333%;
-      max-width: 33.3333%;
-    }
-  }
-}
-
-ul.grid-2 {
-  > li {
-    @include phablet {
-      flex-basis: 50%;
-      max-width: 50%;
+// GENERIC CODE FOR COLUMN WIDTH CALCULATION ON DESKTOP. //
+@for $col from 1 through $grid-columns {
+  ul.grid-#{$col} {
+    > li {
+      @include desktop {
+        @include col(calc($grid-columns/$col));
+      }
     }
   }
 }
