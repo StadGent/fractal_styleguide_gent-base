@@ -325,6 +325,11 @@
 
     h3 {
       margin: 0 0 20px;
+
+      &.bg-none span {
+        padding-right: 0;
+        padding-left: 0;
+      }
     }
 
     .tag-list-wrapper {
