@@ -8,14 +8,14 @@
 /// @author Sven Vandevenne
 ///
 
-@mixin row($full-width: "false") {
+@mixin row($full-width: "false", $gap: $grid-gutter-width) {
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
-  gap: $grid-gutter-width; // sass-lint:disable-line no-misspelled-properties
+  gap: $gap; // sass-lint:disable-line no-misspelled-properties
 
   @if type-of($content-well-max-width) == number and $content-well-max-width != 0 and $full-width == "false" {
     max-width: $content-well-max-width;
@@ -39,14 +39,14 @@
 }
 
 // Condition to run inside of the col mixin * not for developer use *
-@mixin col-condition($col-number) {
+@mixin col-condition($col-number, $gap: $grid-gutter-width) {
   @if type-of($col-number) == number {
     @if $col-number > $grid-columns or $col-number == 0 {
       @warn "Column number must be greater than 0 and less than or equal to total number of columns in the grid (#{$grid-columns})";
     }
     @else {
-      flex-basis: calc((100% - ($grid-gutter-width * (($grid-columns / $col-number) - 1))) / ($grid-columns / $col-number));
-      width: calc((100% - ($grid-gutter-width * (($grid-columns / $col-number) - 1))) / ($grid-columns / $col-number));
+      flex-basis: calc((100% - ($gap * (($grid-columns / $col-number) - 1))) / ($grid-columns / $col-number));
+      width: calc((100% - ($gap * (($grid-columns / $col-number) - 1))) / ($grid-columns / $col-number));
       margin-left: 0;
     }
     // If no col number is passed then arg is set to "auto" by default
