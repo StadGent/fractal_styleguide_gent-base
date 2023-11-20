@@ -1,0 +1,20 @@
+.banner-image {
+  .media {
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  figcaption {
+    display: none;
+    max-width: $bp-max-content;
+    padding: 1px 10px;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
