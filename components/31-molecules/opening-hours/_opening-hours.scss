@@ -188,6 +188,7 @@ $week-breakpoint: '(min-width: 750px)';
 
       &--day-open,
       &--day-closed {
+        outline-offset: 0;
         cursor: pointer;
 
         &[tabindex='0'] > span,
