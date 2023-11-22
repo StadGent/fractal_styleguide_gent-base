@@ -3,6 +3,10 @@
 
 ul[class^=grid-] {
   @include row();
+
+  li {
+    list-style: none;
+  }
 }
 
 .grid__show-more {
