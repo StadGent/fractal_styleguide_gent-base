@@ -4,15 +4,21 @@
 
     display: flex;
     flex-wrap: wrap;
-    margin: -.2rem;
+    margin: -4px;
     list-style: none;
 
-    li {
-      margin: .25rem;
+    li,
+    a,
+    span {
+      width: 100%;
+
+      @include phablet {
+        width: auto;
+      }
     }
 
-    a {
-      white-space: nowrap;
+    li {
+      margin: 5px;
     }
   }
 }
