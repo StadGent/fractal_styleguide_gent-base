@@ -18,12 +18,6 @@ ol {
     &:last-child {
       margin-right: 0;
     }
-
-    &,
-    & > a {
-      font-family: $default-font-family;
-      line-height: 1.5;
-    }
   }
 
   a {
