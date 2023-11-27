@@ -35,6 +35,8 @@
 
     h2,
     h3 {
+      @include theme('color', 'color-primary', 'heading-2-color');
+
       display: inline-block;
       vertical-align: top;
     }
