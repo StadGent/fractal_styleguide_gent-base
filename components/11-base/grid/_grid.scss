@@ -1,36 +1,164 @@
-///
-/// The container to put a grid in.
-///
-/// @since 3.0.0
-/// @group grid
-/// @access public
-/// @author Gert-Jan Meire
-///
-%container,
-.container {
-  @include clearfix();
-  @include breakpoint($bp-container) {
-    width: $bp-container;
+// Importing grid mixins and variables.
+@import "flexbox-grid/variables/grid-variables";
+@import "flexbox-grid/mixins/visibility-mixins";
+@import "flexbox-grid/mixins/grid-mixins";
+
+
+// Grid classes.
+.row {
+  @include row();
+}
+
+.row.reverse {
+  @include row-reverse();
+}
+
+.row.natural-height {
+  @include row-natural-height();
+}
+
+.row.flex-column {
+  @include row-flex-column();
+}
+
+.col {
+  @include col();
+}
+
+.col.reverse {
+  @include col-reverse();
+}
+
+.first {
+  order: -1;
+}
+
+.last {
+  order: 1;
+}
+
+.align-start {
+  align-self: flex-start;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.align-baseline {
+  align-self: baseline;
+}
+
+.align-stretch {
+  align-self: stretch;
+}
+
+// Mixin to run inside of for loop - creates col/breakpoint classes * Not for developer use *.
+@mixin col-factory($this-prefix) {
+  .col-#{$this-prefix} {
+    flex-basis: 0;
+    flex-grow: 1;
     max-width: 100%;
-    margin: 0 auto;
   }
 
-  padding: 0 1rem;
-  overflow: hidden;
+  @for $i from 1 through $grid-columns {
+    .col-#{$this-prefix}-#{$i} {
+      flex-basis: calc((100% - ($grid-gutter-width * (($grid-columns / $i) - 1))) / ($grid-columns / $i));
+      width: calc((100% - ($grid-gutter-width * (($grid-columns / $i) - 1))) / ($grid-columns / $i));
+    }
+
+    .col-#{$this-prefix}-offset-#{$i} {
+      margin-left: calc(100% / $grid-columns * $i);
+    }
+  }
+
+  .row.start-#{$this-prefix} {
+    justify-content: flex-start;
+  }
+
+  .row.center-#{$this-prefix} {
+    justify-content: center;
+  }
+
+  .row.end-#{$this-prefix} {
+    justify-content: flex-end;
+  }
+
+  .row.top-#{$this-prefix} {
+    align-items: flex-start;
+  }
+
+  .row.middle-#{$this-prefix} {
+    align-items: center;
+  }
+
+  .row.bottom-#{$this-prefix} {
+    align-items: flex-end;
+  }
+
+  .row.around-#{$this-prefix} {
+    justify-content: space-around;
+  }
+
+  .row.between-#{$this-prefix} {
+    justify-content: space-between;
+  }
+
+  .first-#{$this-prefix} {
+    order: -1;
+  }
+
+  .last-#{$this-prefix} {
+    order: 1;
+  }
 }
 
-///
-/// The inner container to put a grid in. This also provides the necessary
-/// padding for mobile display.
-///
-/// @since 3.0.0
-/// @group grid
-/// @access  public
-/// @author Gert-Jan Meire
-///
-%content-container,
-.content-container {
-  max-width: $bp-max-content;
-  margin: 0 auto;
+// Mixin to run inside of for loop - creates col/breakpoint classes.
+
+@for $i from 1 through length($breakpoint-up-prefixes) {
+  $this-prefix: nth($breakpoint-up-prefixes, $i);
+
+  @if $this-prefix == "xs" {
+    @include col-factory($this-prefix);
+  }
+
+  @else if $this-prefix == "sm" {
+    @media #{$breakpoint-sm-up} {
+      @include col-factory($this-prefix);
+    }
+  }
+
+  @else if $this-prefix == "md" {
+    @media #{$breakpoint-md-up} {
+      @include col-factory($this-prefix);
+    }
+  }
+
+  @else if $this-prefix == "lg" {
+    @media #{$breakpoint-lg-up} {
+      @include col-factory($this-prefix);
+    }
+  }
+
+  @else if $this-prefix == "xl" {
+    @media #{$breakpoint-xl-up} {
+      @include col-factory($this-prefix);
+    }
+  }
 }
 
+.col-gutter-lr {
+  padding: 0 $gutter-width;
+}
+
+.row-no-gutter {
+  gap: 0; // sass-lint:disable-line no-misspelled-properties
+}
+
+.col-no-gutter {
+  padding: 0;
+}

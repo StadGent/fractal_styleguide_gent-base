@@ -1,14 +1,25 @@
 .form-steps {
   ol.form-steps-list {
+    @include theme('background-color', 'color-tertiary-light');
+
     display: flex;
     flex-wrap: wrap;
     margin: 0;
+    padding: 20px 20px 5px;
     counter-reset: item;
     list-style-type: none;
 
+    @include desktop-and-below {
+      align-items: center;
+      padding: 20px;
+    }
+
     li {
       display: inline-block;
-      margin-bottom: .8rem;
+
+      @include desktop-and-below {
+        margin-bottom: 0;
+      }
 
       &:not(:first-child):not(:last-child):not(.active) {
         @include desktop-and-below {
@@ -42,7 +53,10 @@
 
       a {
         @include reset-link-background;
-        padding: 0;
+        @include theme('color', 'color-zero');
+
+        display: inline-block;
+        line-height: 175%;
         vertical-align: middle;
 
         &:hover,
@@ -50,39 +64,47 @@
           background-color: transparent;
 
           &::before {
-            @include theme('border-color', 'color-primary--darken-1', 'form-step--active-border-color');
+            @include theme('border-color', 'color-primary', 'form-step--active-border-color');
           }
         }
-
-        > span {
-          @include link-background('color-primary', null, 'link-underline-color');
-          padding: 0 0 .2rem;
-        }
-      }
-
-      a::before,
-      > span::before {
-        @include theme('border-color', 'color-primary--lighten-5', 'form-step--active-border-color');
-        @include theme('background-color', 'color-primary--lighten-5', 'form-step--active-border-color');
-        @include theme('color', 'color-tertiary', 'default-text-color');
-        @include bold-text;
-
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 2rem;
-        height: 2rem;
-        margin-right: .8rem;
-        transition: .2s ease-in-out;
-        border: 2px solid;
-        border-radius: 1rem;
-        font-size: .8rem;
-        content: counter(item);
-        counter-increment: item;
       }
 
       &.active {
         @include bold-text;
+
+        @include desktop-and-below {
+          margin-bottom: 0;
+        }
+
+        &::before,
+        &::after {
+          @include desktop-and-below {
+            @include theme('border-color', 'color-tertiary-pastel', 'form-step-hellip-background-color');
+            @include theme('background-color', 'color-tertiary-pastel', 'form-step-hellip-background-color');
+            @include theme('color', 'color-zero', 'form-step-hellip-color');
+
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            border: 2px solid;
+            border-radius: 20px;
+            line-height: 35px;
+            text-align: center;
+          }
+        }
+
+        &::before {
+          @include theme('color', 'color-none', 'form-step--active-color');
+          @include theme('border-color', 'color-primary', 'form-step--active-border-color');
+          @include theme('background-color', 'color-primary', 'form-step--active-background-color');
+        }
+
+        &::after {
+          @include desktop-and-below {
+            content: '\2026';
+          }
+        }
 
         > span::before {
           @include theme('border-color', 'color-primary--darken-1', 'form-step--active-border-color');
@@ -92,17 +114,13 @@
       }
 
       &.completed:not(.active) {
-        a,
-        > span {
-          @include icon(checkmark, before);
-        }
+        @include icon(checkmark, before);
 
-        a::before,
-        > span::before {
-          border-color: color('green', -3);
-          background-color: color('green', -3);
-          font-size: 1.5rem;
-          line-height: 1.25;
+        &::before {
+          @include theme('background-color', 'color-success-pastel');
+
+          display: inline-block;
+          line-height: 30px;
           vertical-align: middle;
         }
 
@@ -114,51 +132,26 @@
         }
       }
 
-      @include desktop-and-below {
-        &.active {
-          margin-bottom: 0;
-
-          ::before,
-          ::after {
-            margin-bottom: .8rem;
-          }
-
-          &::before,
-          &::after {
-            @include theme('border-color', 'color-primary--darken-2', 'form-step-hellip-background-color');
-            @include theme('background-color', 'color-primary--darken-2', 'form-step-hellip-background-color');
-            @include theme('color', 'color-secondary', 'form-step-hellip-color');
-
-            display: inline-block;
-            width: 2rem;
-            height: 2rem;
-            margin-right: .8rem;
-            margin-bottom: .8rem;
-            border: 2px solid;
-            border-radius: 1rem;
-            text-align: center;
-            content: '\2026';
-          }
-        }
-
-        &:first-child::before,
-        &:nth-child(2)::before,
-        &:nth-last-child(2)::after,
-        &:last-child::after {
+      &:first-child::before,
+      &:nth-child(2)::before,
+      &:nth-last-child(2)::after,
+      &:last-child::after {
+        @include desktop-and-below {
           content: none;
         }
       }
+
     }
   }
 
   &:not(.vertical) ol.form-steps-list {
     @include desktop {
       li:not(:last-child)::after {
-        @include theme('border-color', 'color-primary--lighten-3', 'form-step--active-border-color');
+        @include theme('border-color', 'color-tertiary-pastel', 'form-step--active-border-color');
 
         display: inline-block;
-        width: .8rem;
-        margin: 0 .6rem;
+        width: 15px;
+        margin: 0 15px;
         border-bottom: 2px solid;
         content: '';
         vertical-align: middle;
@@ -166,22 +159,25 @@
     }
   }
 
-  &.vertical ol.form-steps-list {
-    @include desktop {
-      flex-direction: column;
+  &.vertical {
+    ol.form-steps-list {
+      @include desktop {
+        flex-direction: column;
+        padding: 30px 30px 15px;
 
-      li {
-        margin-bottom: .6rem;
+        li {
+          margin-bottom: 15px;
 
-        &:not(:last-child)::after {
-          @include theme('border-color', 'color-primary--lighten-3', 'form-step--active-border-color');
+          &:not(:last-child)::after {
+            @include theme('border-color', 'color-tertiary-pastel', 'form-step--active-border-color');
 
-          display: block;
-          width: 1rem;
-          height: .8rem;
-          margin: .6rem 0 0;
-          border-right: 2px solid;
-          content: '';
+            display: block;
+            width: 15px;
+            height: 20px;
+            margin: 15px 0 0;
+            border-right: 2px solid;
+            content: '';
+          }
         }
       }
     }

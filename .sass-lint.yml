@@ -18,6 +18,7 @@ rules:
   mixins-before-declarations:
     - 2
     - exclude:
+      - desktop-and-below
       - desktop-xl
       - desktop
       - phablet

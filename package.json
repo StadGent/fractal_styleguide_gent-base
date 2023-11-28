@@ -1,13 +1,13 @@
 {
   "name": "gent_styleguide",
-  "version": "6.0.0-alpha33",
+  "version": "6.0.0-alpha40",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@frctl/fractal": "^1.5.15",
     "@frctl/twig": "^1.2.13",
-    "chromedriver": "^117.0.0",
+    "chromedriver": "^119.0.1",
     "cssnano": "^5.1.14",
     "fs-extra": "^11.1.0",
     "gulp": "^4.0.2",
@@ -63,7 +63,6 @@
     "sass": "^1.58.1",
     "selenium-webdriver": "4.8.0",
     "set-value": "^4.1.0",
-    "susy": "^3.0.8",
     "ttf2woff2": "^5.0.0"
   },
   "engines": {

@@ -52,9 +52,14 @@
     li {
       margin-top: 16px;
 
+      a {
+        font-size: .8rem;
+      }
+
       &:first-of-type a {
         @extend %button-secondary;
         @include button;
+        @include button-large;
         @include button-icon;
       }
     }

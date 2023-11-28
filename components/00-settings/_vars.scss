@@ -3,11 +3,9 @@
 /// This file defines all general style guide settings.
 ///
 /// @group settings
-/// @author Gert-Jan Meire
+/// @author Gert-Jan Meire & Sven Vandevenne
 ///
-////
-
-@import 'susy';
+///
 
 ///
 /// Defines the style guide directory. This is used for things such as
@@ -181,24 +179,36 @@ $bp-container: 1680px !default;
 $six-of-bp-container: 32rem !default;
 
 ///
-/// Defines the number of grid columns for a given grid container.
+/// Defines the grid system.
 ///
-/// @since 3.0.0
+/// @since 2.0.3
 /// @group settings
 /// @access public
-/// @author Gert-Jan Meire
+/// @author Sven Vandevenne
 ///
+@import '../11-base/grid/grid';
+
+///
+/// Defines the number of grid columns for a given grid container.
+///
+/// @since 2.0.3
+/// @group settings
+/// @access public
+/// @author Sven Vandevenne
+///
+
 $grid-columns: 12 !default;
 
 ///
 /// Defines the width of grid gutters.
 ///
-/// @since 3.0.0
+/// @since 2.0.3
 /// @group settings
 /// @access public
-/// @author Gert-Jan Meire
+/// @author Sven Vandevenne
 ///
 $gutter-width: 30px !default;
+$grid-gutter-width: $gutter-width * 1.5;
 
 ///
 /// Defines the default paragraph bottom margin.
@@ -254,18 +264,3 @@ $default-font-size: 20px !default; //px
 /// @author Gert-Jan Meire
 ///
 $default-line-height: 1.78 !default;
-
-///
-/// This map describes the susy grid system settings.
-///
-/// @since 3.0.0
-/// @group grid
-/// @access private
-/// @type map
-/// @author Gert-Jan Meire
-///
-$susy: (
-  'columns': susy-repeat(12),
-  'gutters': $gutter-width,
-  'spread': 'narrow',
-);

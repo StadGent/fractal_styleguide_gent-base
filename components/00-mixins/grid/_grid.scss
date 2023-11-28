@@ -15,29 +15,37 @@
 }
 
 ///
-/// Provide a helper mixin to easily position items on the grid..
+/// The container to put a grid in.
+///
+/// @since 3.0.0
+/// @group grid
+/// @access public
+/// @author Gert-Jan Meire
+///
+%container,
+.container {
+  @include clearfix;
+  @include breakpoint($bp-container) {
+    width: $bp-container;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+///
+/// The inner container to put a grid in. This also provides the necessary
+/// padding for mobile display.
 ///
 /// @since 3.0.0
 /// @group grid
 /// @access  public
 /// @author Gert-Jan Meire
 ///
-/// @param {string} $width
-///   The width in columns: e.g. 3 (... of 12).
-///
-/// @param {string} $offset
-///   The offset in columns: e.g. 3 (... of 12).
-///
-/// @param {string} $columns
-///   The amount of columns.
-///
-@mixin set-layout($width: 'width-12', $offset: 'offset-0', $columns: 'columns-12') {
-  width: span(number(nth(str-split($width, '-'), 2)) of number(nth(str-split($columns, '-'), 2)));
-
-  @if $offset != 'offset-0' {
-    margin-left: span(number(nth(str-split($offset, '-'), 2)) wide of number(nth(str-split($columns, '-'), 2)));
-  }
-  @else {
-    margin-left: 0;
-  }
+%content-container,
+.content-container {
+  max-width: $bp-max-content;
+  margin: 0 auto;
 }

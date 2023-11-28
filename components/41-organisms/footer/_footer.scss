@@ -19,11 +19,11 @@
       max-width: $bp-max-content;
       padding-right: 0;
       padding-left: 0;
+      gap: $grid-gutter-width; // sass-lint:disable-line no-misspelled-properties
     }
   }
 
   .footer-top {
-    margin-bottom: 24px;
     background-color: transparent;
 
     @include desktop {
@@ -40,8 +40,8 @@
 
     .footer--column {
       @include theme('background-color', 'color-tertiary-light', 'footer-background-color');
+      @include col(12);
       flex: 0 0 auto;
-      width: span(12 of 12);
       padding: 20px 20px 60px;
 
       // Gentinfo column.
@@ -63,7 +63,7 @@
 
         // Gentinfo column.
         &:first-of-type {
-          width: span(12 of 12);
+          @include col(12);
           margin-top: 0;
           padding-top: 0;
           background-color: transparent;
@@ -71,6 +71,9 @@
       }
 
       @include breakpoint(1223px) {
+        padding-right: 0;
+        padding-left: 0;
+
         // Gentinfo column.
         &:first-of-type {
           padding-right: 20px;
@@ -78,7 +81,7 @@
       }
 
       @include desktop {
-        width: span(3 of 12);
+        @include col(3);
         margin-top: 58px;
         margin-bottom: 0;
         padding-bottom: 20px;
@@ -86,13 +89,13 @@
         &:nth-of-type(2),
         &:nth-of-type(3) {
           margin-top: 0;
-          margin-right: $gutter-width;
         }
 
         // Gentinfo column.
         &:first-of-type {
+          @include col(6);
+
           order: 1;
-          width: span(6 of 12);
           margin-top: 0;
         }
       }
@@ -125,8 +128,12 @@
 
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    padding: 0 20px;
+    align-items: center;
+    padding: 20px 0;
+
+    &.content-container {
+      justify-content: space-between;
+    }
 
     ul {
       @include small-text();
@@ -161,7 +168,6 @@
     .footer--column {
       order: 2;
       width: 100%;
-      margin-bottom: 1.2rem;
 
       &.partnership {
         order: 1;
@@ -169,10 +175,6 @@
 
       @include desktop {
         width: auto;
-
-        &.partnership {
-          margin-right: $gutter-width;
-        }
       }
     }
   }

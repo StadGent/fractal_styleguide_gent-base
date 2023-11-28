@@ -104,7 +104,7 @@ For each invalid field in the form the following two pieces of information shoul
 1. That the field is invalid.
 2. What would make the field valid.
 
-#### Tips to write the tekst of the specific error message
+#### Tips to write the text of the specific error message
 
 * **Be clear.** Error message are a conversation, with people. Use simple language, not ambiguous. Give the reason why something has gone wrong, say what has happened and why.
 * **Be gentile and humble.** Don't blame the user. Remember that "the user is always right". Imagine a situation where you would talk to the user in person.

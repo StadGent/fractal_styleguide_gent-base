@@ -38,11 +38,15 @@
 
 ul.accordion,
 dl.accordion {
+  &:not(.timeline) {
+    li {
+      @include theme('border-color', 'color-primary--lighten-4', 'accordion-border-color');
+
+      border-bottom: 2px solid;
+    }
+  }
+
   li {
-    @include theme('border-color', 'color-primary--lighten-4', 'accordion-border-color');
-
-    border-bottom: 2px solid;
-
     h3 {
       margin: 1rem 0;
     }

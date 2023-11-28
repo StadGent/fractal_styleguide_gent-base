@@ -3,19 +3,19 @@
 @mixin month-widget-mobile {
   min-width: initial;
   padding-right: 0;
-  padding-bottom: 6rem;
+  padding-bottom: 120px;
 
   > .openinghours {
-    padding-right: 0;
-    padding-bottom: $month-day-size-mobile *.5;
-    border: 0;
+    @include theme('border-color', 'color-none', 'opening-hours-border');
+
+    padding: 20px 20px 30px;
+    border-bottom: 2px solid;
   }
 
   .openinghours--details {
-    top: calc(100% + #{$month-day-size-mobile *.5});
+    top: calc(100% + #{$month-day-size-mobile *.5 + 12px});
     left: $month-day-size-mobile *.25;
     padding-top: $month-day-size-mobile *.5;
-    border-top: 2px solid;
   }
 }
 
@@ -24,14 +24,13 @@
   padding-bottom: 0;
 
   > .openinghours {
-    padding: 20px 20px 30px;
     border-right: 2px solid;
+    border-bottom: 0;
   }
 
   .openinghours--details {
-    top: -$month-day-size *.5;
+    top: calc(($month-day-size * -.5) - 16px);
     left: calc(100% + #{$month-day-size});
     padding-top: 0;
-    border-top: 0;
   }
 }

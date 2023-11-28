@@ -9,6 +9,7 @@ a.site-logo {
     @include spot-image('logo', 80px);
     width: 63.3px;
     height: 44px;
+    margin-left: 0;
 
     .is-frontpage & {
       width: 63.3px;

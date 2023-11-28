@@ -5,13 +5,15 @@
   position: relative;
   list-style: none;
 
-  h4 {
+  h3.bg-none {
     position: relative;
     margin: -13px 0 0;
     z-index: 3;
 
     span {
       @include theme('background-color', 'color-secondary');
+
+      padding: 2.5px 10px;
     }
   }
 
@@ -128,7 +130,7 @@
           float: none;
         }
 
-        + h4 {
+        + h3 {
           margin-left: 53px;
 
           @include phablet {
@@ -147,7 +149,7 @@
 
   &.no-image,
   .teaser--no-images & {
-    h4 {
+    h3 {
       margin: 0;
     }
 
@@ -169,7 +171,7 @@
 
     &.no-image,
     .teaser--no-images & {
-      h4 {
+      h3 {
         margin: 0;
       }
 
@@ -192,7 +194,7 @@
       height: auto;
       padding: 20px 100px 20px 20px;
 
-      h4 {
+      h3 {
         margin: 0;
 
         span {
@@ -202,7 +204,7 @@
 
       .date {
         display: inline-block;
-        margin: -5px 0 0;
+        margin: -6px 0 0;
 
         span {
           @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
@@ -220,8 +222,31 @@
         @include read-more-icon-link();
 
         position: absolute;
-        right: 45px;
+        right: 0;
         bottom: 0;
+      }
+    }
+  }
+
+  &.teaser--square--double {
+    .figure-wrapper__mobile {
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .figure-wrapper__desktop {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
+
+    h3 {
+      @include desktop-and-below {
+        font-size: .9rem;
+        line-height: 1.15rem;
       }
     }
   }
@@ -236,7 +261,7 @@
         padding: 30px 60px 30px 30px;
       }
 
-      h4 {
+      h3 {
         display: flex;
         align-items: center;
         height: 100%;
@@ -244,8 +269,8 @@
 
         @include phablet {
           display: block;
-          margin: 0 15px 20px 0;
           height: auto;
+          margin: 0 15px 20px 0;
         }
 
         span {
@@ -298,8 +323,13 @@
     padding: 0 0 30px;
     border-bottom: 1px solid color('blue');
 
-    h4 {
+    h3 {
       margin: 0 0 20px;
+
+      &.bg-none span {
+        padding-right: 0;
+        padding-left: 0;
+      }
     }
 
     .tag-list-wrapper {
