@@ -15,6 +15,7 @@
       right: 0;
       transition: transform .2s ease-in-out;
       font-size: 1.4rem;
+      line-height: 1.2;
     }
 
     &[aria-expanded=true] {
@@ -38,7 +39,7 @@
 ul.accordion,
 dl.accordion {
   &:not(.timeline) {
-    li {
+    & > li {
       @include theme('border-color', 'color-primary--lighten-4', 'accordion-border-color');
 
       border-bottom: 2px solid;
