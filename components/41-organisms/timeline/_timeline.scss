@@ -73,7 +73,9 @@ dl.timeline {
     &-date {
       display: block;
       width: 100%;
+      margin: 0;
       padding-top: 5px;
+      font-weight: normal;
     }
 
     &-content,
@@ -312,6 +314,14 @@ dl.timeline {
     &:last-of-type {
       .item > dd {
         padding-bottom: 0;
+
+        &::after {
+          bottom: calc(100% - #{$timeline-dd-space-between-mobile + $gutter-width*.5});
+
+          @include desktop {
+            bottom: calc(100% - #{$timeline-dd-space-between + $gutter-width*.5});
+          }
+        }
       }
     }
   }

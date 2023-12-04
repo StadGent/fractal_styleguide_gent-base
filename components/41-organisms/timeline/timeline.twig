@@ -13,15 +13,15 @@
           <div class="timeline-slot-header">
             {# Timeline item title #}
             <h4 class="timeline-slot-title">
-              <button aria-expanded="false" aria-controls="timeline-slot-content--1"
+              <button aria-expanded="true" aria-controls="timeline-slot-content--1"
                       data-controls-img="timeline-slot-img--1" class="accordion--button">
                 Timeline item title
               </button>
             </h4>
             {# Timeline item subtitle #}
-            <span class="timeline-slot-date">Timeline item subtitle/date</span>
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
           </div>
-          <div class="timeline-slot-content accordion--content" id="timeline-slot-content--1" aria-hidden="true">
+          <div class="timeline-slot-content accordion--content accordion--expanded" id="timeline-slot-content--1" aria-hidden="false">
             <div class="content-image hidden-desktop">
               {# This is the same image as above #}
               {% include '@image-gallery--single' with {
@@ -67,14 +67,14 @@
         <dd class="item__content">
           <div class="timeline-slot-header">
             <h4 class="timeline-slot-title">
-              <button aria-expanded="false" aria-controls="timeline-slot-content--1b"
+              <button aria-expanded="true" aria-controls="timeline-slot-content--1b"
                       data-controls-img="timeline-slot-img--1b" class="accordion--button">
                 Timeline item title
               </button>
             </h4>
-            <span class="timeline-slot-date">Timeline item subtitle/date</span>
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
           </div>
-          <div class="timeline-slot-content accordion--content" id="timeline-slot-content--1b" aria-hidden="true">
+          <div class="timeline-slot-content accordion--content accordion--expanded" id="timeline-slot-content--1b" aria-hidden="false">
             <div class="content-image hidden-desktop">
               {# This is the same image as above #}
               {% include '@image-gallery--single' with {
@@ -100,7 +100,7 @@
         </dd>
         <dd class="item__image-desktop show-desktop-only">
           <div class="timeline-slot-content timeline-slot-content__img accordion--content" id="timeline-slot-img--1b"
-               aria-hidden="true">
+               aria-hidden="false">
             {% include '@image-gallery--single' with {
 
               "items": [
@@ -118,27 +118,22 @@
     {# Timeline paragraph END #}
 
     <div class="timeline-slot" role="listitem">
-      {# Timeline paragraph title #}
       <dt>
         <h3 class="dt-title">Paragraph title</h3>
       </dt>
-      {# Timeline item BEGIN #}
       <div class="item item--right">
         <dd class="item__content">
           <div class="timeline-slot-header">
-            {# Timeline item title #}
             <h4 class="timeline-slot-title">
               <button aria-expanded="false" aria-controls="timeline-slot-content--2"
                       data-controls-img="timeline-slot-img--2" class="accordion--button">
                 Timeline item title
               </button>
             </h4>
-            {# Timeline item subtitle #}
-            <span class="timeline-slot-date">Timeline item subtitle/date</span>
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
           </div>
           <div class="timeline-slot-content accordion--content" id="timeline-slot-content--2" aria-hidden="true">
             <div class="content-image hidden-desktop">
-              {# This is the same image as above #}
               {% include '@image-gallery--single' with {
 
                 "items": [
@@ -150,7 +145,6 @@
                 ]
               } %}
             </div>
-            {# Timeline item text #}
             {% include '@paragraph' with {
               'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
             } %}
@@ -177,7 +171,6 @@
           </div>
         </dd>
       </div>
-      {# Timeline item END #}
       <div class="item item--left">
         <dd class="item__content">
           <div class="timeline-slot-header">
@@ -187,11 +180,10 @@
                 Timeline item title
               </button>
             </h4>
-            <span class="timeline-slot-date">Timeline item subtitle/date</span>
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
           </div>
           <div class="timeline-slot-content accordion--content" id="timeline-slot-content--2b" aria-hidden="true">
             <div class="content-image hidden-desktop">
-              {# This is the same image as above #}
               {% include '@image-gallery--single' with {
 
                 "items": [
@@ -243,7 +235,7 @@
                 Timeline item title
               </button>
             </h4>
-            <span class="timeline-slot-date">Timeline item subtitle/date</span>
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
           </div>
           <div class="timeline-slot-content accordion--content" id="timeline-slot-content--3" aria-hidden="true">
             <div class="content-image hidden-desktop">
@@ -298,7 +290,7 @@
                 Timeline item title
               </button>
             </h4>
-            <span class="timeline-slot-date">Timeline item subtitle/date</span>
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
           </div>
           <div class="timeline-slot-content accordion--content" id="timeline-slot-content--4" aria-hidden="true">
             <div class="content-image hidden-desktop">
@@ -353,7 +345,7 @@
                 Timeline item title
               </button>
             </h4>
-            <span class="timeline-slot-date">Timeline item subtitle/date</span>
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
           </div>
           <div class="timeline-slot-content accordion--content" id="timeline-slot-content--5" aria-hidden="true">
             <div class="content-image hidden-desktop">
