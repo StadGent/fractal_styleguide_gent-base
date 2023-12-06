@@ -51,11 +51,10 @@
             <!-- /Modal -->
             <ul class="grid-3">
             {% for itemKey, item in slot.items %}
-              {% set key = slotKey ~ itemKey %}
-
+                {% set key = slotKey ~ itemKey %}
                 <!-- Teaser -->
                 {% include '@teaser' with {
-                  modifier: 'teaser--background',
+                  modifier: 'teaser teaser--background',
                   teaser_uid: 'uid_' ~ key,
                   paragraph_text: item.subtitle,
                   title: item.title,
@@ -69,8 +68,7 @@
                 } %}
                 <!-- /Teaser -->
             {% endfor %}
-
-          </ul>
+            </ul>
           </dd>
         </div>
       {% endfor %}
