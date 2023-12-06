@@ -5,6 +5,7 @@ ul[class^=grid-] {
   @include row();
 
   li {
+    width: 100%;
     list-style: none;
   }
 }
