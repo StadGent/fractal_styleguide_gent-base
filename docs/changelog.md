@@ -108,9 +108,9 @@ The grid system is updated (Susy is removed), an example is added to the readme.
 ### Timeline organism
 **Timeline paragraph title** is now an `h3`, the **Timeline item title** is now an `h4` and the **Timeline item subtitle** is now an `h5`.
 
-There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop.
+There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop. Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
 
-Both the image and the content go into separate `<dd>` containers and are alternated (left/right) based on the `.item--left/right` container class. Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
+The timeline slots can have a reverse order (by adding the `.timeline-slot-reverse` class) e.g. if the previous slot is odd, but also if the previous slot is even and also has the `.timeline-slot-reverse` class.
 
 ### Programme organism
 Titles have changed to h2 and h3 for slot title and teaser title
