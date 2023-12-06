@@ -20,29 +20,14 @@ dl.timeline {
   padding: 0;
 
   .timeline-slot {
-    display: grid;
-    position: relative;
-    grid-template-areas:
-    "title"
-    "left";
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
-
-    @include desktop {
-      grid-template-areas:
-      "title title"
-      "left  right";
-      grid-template-columns: 1fr 1fr;
-    }
-
     // Timeline-slot title styling.
     &-title {
       position: relative;
       width: 100%;
-      margin: 4px 0;
+      margin: 0;
       border: 0;
       background: transparent;
-      line-height: 1.2;
+      line-height: 36px;
 
       button {
         width: 100%;
@@ -50,6 +35,7 @@ dl.timeline {
         padding-left: 45px;
         color: inherit;
         font-size: inherit;
+        line-height: inherit;
 
         @include desktop {
           margin-left: -55px;
@@ -87,6 +73,9 @@ dl.timeline {
     &-date {
       display: block;
       width: 100%;
+      margin: 0;
+      padding-top: 5px;
+      font-weight: normal;
     }
 
     &-content,
@@ -95,6 +84,14 @@ dl.timeline {
     }
 
     &-content {
+
+      &__img {
+        &:focus,
+        &:focus-within {
+          overflow: unset; // The overflow is needed for the accordion animation only
+        }
+      }
+
       &:not(.timeline-slot-content__img) {
         padding-top: calc($gutter-width/2);
       }
@@ -111,21 +108,24 @@ dl.timeline {
         display: block;
       }
 
-      *:last-of-type {
+      ul,
+      ol {
+        margin-left: 0;
+        list-style-position: inside;
+      }
+
+      *:last-child {
         margin-bottom: 0;
       }
     }
 
     > dt {
-      @extend %h3;
-
       position: relative;
       top: 0;
       left: 0;
       width: 100%;
       margin: 0;
       text-align: left;
-      grid-area: title;
 
       @include desktop {
         text-align: center;
@@ -140,129 +140,151 @@ dl.timeline {
       }
     }
 
-    > dd {
-      @include theme('border-color', 'color-primary', 'timeline-line-color');
-
+    .item {
+      display: grid;
       position: relative;
-      width: 100%;
-      max-width: none;
-      margin: 0;
-      padding: $timeline-dd-space-between-mobile calc(#{$gutter-width*.5}) $timeline-dd-space-between-mobile calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
-      grid-area: left;
+      grid-template-areas:
+      "title"
+      "left";
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr;
 
-      &::after {
-        @include theme('border-color', 'color-tertiary-pastel', 'timeline-line-color');
-
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: $timeline-m-left-padding;
-        border-left: $timeline-border solid;
-        content: '';
-        z-index: -2;
-
-        @include desktop {
-          left: calc(#{$timeline-dt-left-padding} - #{$timeline-border} / 2);
-        }
+      @include desktop {
+        grid-template-areas:
+        "title title"
+        "left  right";
+        grid-template-columns: 1fr 1fr;
       }
 
-      &.active::before {
-        @include theme('background-color', 'color-tertiary-pastel', 'timeline-slot-active-indicator-background');
-      }
+      & > dd {
+        @include theme('border-color', 'color-primary', 'timeline-line-color');
 
-      .accordion--content {
-        margin-left: 0;
-      }
-
-      // Video component styling inside a timeline-slot.
-      .video-wrapper {
         position: relative;
         width: 100%;
-        margin-left: 0;
+        max-width: none;
+        margin: 0;
+        padding-right: calc(#{$gutter-width*.5});
+        padding-bottom: $timeline-dd-space-between-mobile;
+        padding-left: calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
+        grid-area: left;
 
-        // Fix to add whitespace to the video top and bottom areas.
-        &::before,
-        &::after {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          content: '';
-          z-index: z('timeline', 'video', 'background');
+        @include desktop {
+          padding-bottom: $timeline-dd-space-between;
         }
 
-        .video {
+        &::after {
+          @include theme('border-color', 'color-tertiary-pastel', 'timeline-line-color');
+
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: $timeline-m-left-padding;
+          border-left: $timeline-border solid;
+          content: '';
+          z-index: -2;
+
+          @include desktop {
+            left: calc(#{$timeline-dt-left-padding} - #{$timeline-border} / 2);
+          }
+        }
+
+        &.active::before {
+          @include theme('background-color', 'color-tertiary-pastel', 'timeline-slot-active-indicator-background');
+        }
+
+        .accordion--content {
+          margin-left: 0;
+        }
+
+        // Video component styling inside a timeline-slot.
+        .video-wrapper {
           position: relative;
-          border: 0;
-          z-index: z('timeline', 'video', 'player');
+          width: 100%;
+          margin-left: 0;
 
-          .audio-description {
-            min-height: 40px;
-            padding-left: 60px;
+          // Fix to add whitespace to the video top and bottom areas.
+          &::before,
+          &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            z-index: z('timeline', 'video', 'background');
+          }
 
-            // Dots after a video intersection.
-            &::after {
-              bottom: 4px;
+          .video {
+            position: relative;
+            border: 0;
+            z-index: z('timeline', 'video', 'player');
+
+            .audio-description {
+              min-height: 40px;
+              padding-left: 60px;
+
+              // Dots after a video intersection.
+              &::after {
+                bottom: 4px;
+              }
             }
           }
         }
       }
-    }
 
-    // Alternating timeline-slots get alternating styling (left/right).
-    &:nth-child(odd) {
-      > dd {
-        &:nth-child(odd) {
+      // Alternating timeline-slots get alternating styling (left/right).
+      &:nth-of-type(odd):not(.item--left),
+      &.item--right {
+        .item__image-desktop {
           @include desktop {
-            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
-            grid-area: right;
-          }
-        }
-
-        &:nth-child(even) {
-          @include desktop {
-            padding: $timeline-dd-space-between 66px $timeline-dd-space-between calc(#{$gutter-width*.5});
+            padding-right: 66px;
+            padding-left: calc(#{$gutter-width*.5});
 
             &::after {
               display: none;
             }
           }
         }
-      }
-    }
 
-    &:nth-child(even) {
-      @include desktop {
-        text-align: right;
-      }
-
-      // Timeline-slot title styling.
-      .timeline-slot-title {
-        button {
+        .item__content {
           @include desktop {
-            justify-content: flex-end;
-            margin: 0 0 0 55px;
-            padding: 0 55px 0 0;
-
-            // +/- icon
-            &::before {
-              right: 0;
-              left: auto;
-              margin: 0 0 0 15px;
-              padding-right: 4px;
-            }
+            padding-right: calc(#{$gutter-width*.5});
+            padding-left: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+            grid-area: right;
           }
         }
       }
 
-      > dd {
-        &:nth-child(odd) {
+      &:nth-of-type(even):not(.item--right),
+      &.item--left {
+        .item__image-desktop {
           @include desktop {
-            padding: $timeline-dd-space-between calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding}) $timeline-dd-space-between calc(#{$gutter-width*.5});
+            padding-right: calc(#{$gutter-width*.5});
+            padding-left: 66px;
+            grid-area: right;
+          }
+        }
+
+        .item__content {
+          @include desktop {
+            padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+            padding-left: calc(#{$gutter-width*.5});
+            text-align: right;
 
             .timeline-slot-title {
               button {
+                justify-content: flex-end;
+                margin: 0 0 0 55px;
+                padding: 0 55px 0 0;
+
+                // +/- icon
+                &::before {
+                  right: 0;
+                  left: auto;
+                  margin: 0 0 0 15px;
+                  padding-right: 4px;
+                }
+
                 &::after {
                   right: auto;
                   left: 100%;
@@ -275,46 +297,31 @@ dl.timeline {
             }
           }
         }
+      }
 
-        &:nth-child(even) {
+      &:first-of-type {
+        & > dd {
+          padding-top: $timeline-dd-space-between-mobile;
+
           @include desktop {
-            padding: $timeline-dd-space-between calc(#{$gutter-width*.5}) $timeline-dd-space-between 66px;
-            grid-area: right;
+            padding-top: $timeline-dd-space-between;
           }
         }
       }
     }
 
-    // First timeline-slot specific styling.
-    &:first-of-type {
-
-      // First definition description inside the first timeline-slot.
-      > dd:first-of-type {
-        // Fix whitespace.
-        .timeline-slot-header {
-          margin-top: -8px;
-          padding-top: 0;
-        }
-      }
-
-      > dt:first-of-type {
-        &::before {
-          content: none;
-        }
-      }
-    }
-
-    // Last timeline-slot last definition description specific styling.
+    // Last paragraph styling
     &:last-of-type {
-      > dd {
-        &:nth-child(odd),
-        &:nth-child(even) {
-          padding-bottom: 0;
-        }
-      }
+      .item > dd {
+        padding-bottom: 0;
 
-      .timeline-slot-content {
-        padding-bottom: $gutter-width;
+        &::after {
+          bottom: calc(100% - #{$timeline-dd-space-between-mobile + $gutter-width*.5});
+
+          @include desktop {
+            bottom: calc(100% - #{$timeline-dd-space-between + $gutter-width*.5});
+          }
+        }
       }
     }
   }

@@ -3,6 +3,13 @@
       {% for item in items %}
           <li>{{ item }}</li>
       {% endfor %}
+      <li> Nested List
+          <ul>
+              {% for item in items %}
+                  <li>{{ item }}</li>
+              {% endfor %}
+          </ul>
+      </li>
   </ol>
 {% endif %}
 
@@ -11,6 +18,13 @@
       {% for item in items %}
           <li>{{ item }}</li>
       {% endfor %}
+      <li> Nested List
+          <ol>
+              {% for item in items %}
+                  <li>{{ item }}</li>
+              {% endfor %}
+          </ol>
+      </li>
   </ul>
 {% endif %}
 

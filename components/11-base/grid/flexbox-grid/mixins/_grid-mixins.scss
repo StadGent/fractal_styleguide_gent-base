@@ -53,7 +53,6 @@
     // "auto" mode fills the horizontal space with evenly sized containers
   }
   @else if $col-number == "auto" {
-    flex-basis: 0;
     flex-grow: 1;
     width: 100%;
     margin-left: 0;
