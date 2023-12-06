@@ -52,25 +52,25 @@
             <ul class="grid-3">
             {% for itemKey, item in slot.items %}
               {% set key = slotKey ~ itemKey %}
-
-                <!-- Teaser -->
-                {% include '@teaser' with {
-                  modifier: 'teaser--background',
-                  teaser_uid: 'uid_' ~ key,
-                  paragraph_text: item.subtitle,
-                  title: item.title,
-                  link_text: 'More information',
-                  link: '#' ~ key,
-                  image_src: item.images|first.src,
-                  image_alt_text: item.images|first.alt,
-                  image_ratio: '8:5',
-                  image_placeholders: true,
-                  published_date: null
-                } %}
-                <!-- /Teaser -->
-            {% endfor %}
-
-          </ul>
+{#                <div class="col-xs-12 col-sm-6 col-md-4">#}
+                    <!-- Teaser -->
+                    {% include '@teaser' with {
+                      modifier: 'teaser teaser--background',
+                      teaser_uid: 'uid_' ~ key,
+                      paragraph_text: item.subtitle,
+                      title: item.title,
+                      link_text: 'More information',
+                      link: '#' ~ key,
+                      image_src: item.images|first.src,
+                      image_alt_text: item.images|first.alt,
+                      image_ratio: '8:5',
+                      image_placeholders: true,
+                      published_date: null
+                    } %}
+                    <!-- /Teaser -->
+{#                </div>#}
+                {% endfor %}
+            </ul>
           </dd>
         </div>
       {% endfor %}
