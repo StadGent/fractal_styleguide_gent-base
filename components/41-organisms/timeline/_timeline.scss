@@ -166,7 +166,6 @@ dl.timeline {
         padding-right: calc(#{$gutter-width*.5});
         padding-bottom: $timeline-dd-space-between-mobile;
         padding-left: calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
-        grid-area: left;
 
         @include desktop {
           padding-bottom: $timeline-dd-space-between;
@@ -232,79 +231,166 @@ dl.timeline {
         }
       }
 
-      // Alternating timeline-slots get alternating styling (left/right).
-      &:nth-of-type(odd):not(.item--left),
-      &.item--right {
-        .item__image-desktop {
-          @include desktop {
-            padding-right: 66px;
-            padding-left: calc(#{$gutter-width*.5});
-
-            &::after {
-              display: none;
-            }
-          }
-        }
-
-        .item__content {
-          @include desktop {
-            padding-right: calc(#{$gutter-width*.5});
-            padding-left: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
-            grid-area: right;
-          }
-        }
-      }
-
-      &:nth-of-type(even):not(.item--right),
-      &.item--left {
-        .item__image-desktop {
-          @include desktop {
-            padding-right: calc(#{$gutter-width*.5});
-            padding-left: 66px;
-            grid-area: right;
-          }
-        }
-
-        .item__content {
-          @include desktop {
-            padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
-            padding-left: calc(#{$gutter-width*.5});
-            text-align: right;
-
-            .timeline-slot-title {
-              button {
-                justify-content: flex-end;
-                margin: 0 0 0 55px;
-                padding: 0 55px 0 0;
-
-                // +/- icon
-                &::before {
-                  right: 0;
-                  left: auto;
-                  margin: 0 0 0 15px;
-                  padding-right: 4px;
-                }
-
-                &::after {
-                  right: auto;
-                  left: 100%;
-                }
-              }
-            }
-
-            &::after {
-              display: none;
-            }
-          }
-        }
-      }
-
       &:first-of-type {
         & > dd {
           padding-top: $timeline-dd-space-between-mobile;
 
           @include desktop {
             padding-top: $timeline-dd-space-between;
+          }
+        }
+      }
+    }
+
+    &:not(.timeline-slot-reverse) {
+      .item {
+
+
+        // Alternating timeline-slots get alternating styling (left/right).
+        &:nth-of-type(odd):not(.item--left),
+        &.item--right {
+          .item__image-desktop {
+            @include desktop {
+              padding-right: 66px;
+              padding-left: calc(#{$gutter-width*.5});
+              grid-area: left;
+
+              &::after {
+                display: none;
+              }
+            }
+          }
+
+          .item__content {
+            @include desktop {
+              padding-right: calc(#{$gutter-width*.5});
+              padding-left: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+              grid-area: right;
+            }
+          }
+        }
+
+        &:nth-of-type(even):not(.item--right),
+        &.item--left {
+          .item__image-desktop {
+            @include desktop {
+              padding-right: calc(#{$gutter-width*.5});
+              padding-left: 66px;
+              grid-area: right;
+            }
+          }
+
+          .item__content {
+            @include desktop {
+              padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+              padding-left: calc(#{$gutter-width*.5});
+              text-align: right;
+              grid-area: left;
+
+              .timeline-slot-title {
+                button {
+                  justify-content: flex-end;
+                  margin: 0 0 0 55px;
+                  padding: 0 55px 0 0;
+
+                  // +/- icon
+                  &::before {
+                    right: 0;
+                    left: auto;
+                    margin: 0 0 0 15px;
+                    padding-right: 4px;
+                  }
+
+                  &::after {
+                    right: auto;
+                    left: 100%;
+                  }
+                }
+              }
+
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.timeline-slot-reverse {
+      .item {
+        & > dd {
+          padding-right: calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
+          padding-left: calc(#{$gutter-width*.5});
+          grid-area: right;
+        }
+
+        // Alternating timeline-slots get alternating styling (left/right).
+        &:nth-of-type(even):not(.item--right),
+        &.item--left {
+          .item__image-desktop {
+            @include desktop {
+              padding-right: 66px;
+              padding-left: calc(#{$gutter-width*.5});
+              grid-area: left;
+
+              &::after {
+                display: none;
+              }
+            }
+          }
+
+          .item__content {
+            @include desktop {
+              padding-right: calc(#{$gutter-width*.5});
+              padding-left: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+              grid-area: right;
+            }
+          }
+        }
+
+        &:nth-of-type(odd):not(.item--left),
+        &.item--right {
+          .item__image-desktop {
+            @include desktop {
+              padding-right: calc(#{$gutter-width*.5});
+              padding-left: 66px;
+              grid-area: right;
+            }
+          }
+
+          .item__content {
+            @include desktop {
+              padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+              padding-left: calc(#{$gutter-width*.5});
+              text-align: right;
+              grid-area: left;
+
+              .timeline-slot-title {
+                button {
+                  justify-content: flex-end;
+                  margin: 0 0 0 55px;
+                  padding: 0 55px 0 0;
+
+                  // +/- icon
+                  &::before {
+                    right: 0;
+                    left: auto;
+                    margin: 0 0 0 15px;
+                    padding-right: 4px;
+                  }
+
+                  &::after {
+                    right: auto;
+                    left: 100%;
+                  }
+                }
+              }
+
+              &::after {
+                display: none;
+              }
+            }
           }
         }
       }

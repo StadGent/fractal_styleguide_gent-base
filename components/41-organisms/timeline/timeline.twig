@@ -8,7 +8,7 @@
         <h3 class="dt-title">Paragraph title</h3>
       </dt>
       {# Timeline item BEGIN #}
-      <div class="item item--right">
+      <div class="item">
         <dd class="item__content">
           <div class="timeline-slot-header">
             {# Timeline item title #}
@@ -63,7 +63,7 @@
         </dd>
       </div>
       {# Timeline item END #}
-      <div class="item item--left">
+      <div class="item">
         <dd class="item__content">
           <div class="timeline-slot-header">
             <h4 class="timeline-slot-title">
@@ -114,6 +114,60 @@
           </div>
         </dd>
       </div>
+      <div class="item">
+        <dd class="item__content">
+          <div class="timeline-slot-header">
+            {# Timeline item title #}
+            <h4 class="timeline-slot-title">
+              <button aria-expanded="true" aria-controls="timeline-slot-content--10"
+                      data-controls-img="timeline-slot-img--10" class="accordion--button">
+                Timeline item title
+              </button>
+            </h4>
+            {# Timeline item subtitle #}
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
+          </div>
+          <div class="timeline-slot-content accordion--content accordion--expanded" id="timeline-slot-content--10" aria-hidden="false">
+            <div class="content-image hidden-desktop">
+              {# This is the same image as above #}
+              {% include '@image-gallery--single' with {
+
+                "items": [
+                  {
+                    "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+                    "alt": "placeholder image alternative text",
+                    "caption": "image caption"
+                  }
+                ]
+              } %}
+            </div>
+            {# Timeline item text #}
+            {% include '@paragraph' with {
+              'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+            } %}
+            <ol>
+              <li>Candy lollipops</li>
+              <li>Sugar sweetness</li>
+              <li>Toffee sticks</li>
+            </ol>
+          </div>
+        </dd>
+        <dd class="item__image-desktop show-desktop-only">
+          <div class="timeline-slot-content timeline-slot-content__img accordion--content" id="timeline-slot-img--10"
+               aria-hidden="true">
+            {% include '@image-gallery--single' with {
+
+              "items": [
+                {
+                  "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+                  "alt": "placeholder image alternative text",
+                  "caption": "image caption"
+                }
+              ]
+            } %}
+          </div>
+        </dd>
+      </div>
     </div>
     {# Timeline paragraph END #}
 
@@ -121,7 +175,7 @@
       <dt>
         <h3 class="dt-title">Paragraph title</h3>
       </dt>
-      <div class="item item--right">
+      <div class="item">
         <dd class="item__content">
           <div class="timeline-slot-header">
             <h4 class="timeline-slot-title">
@@ -171,7 +225,7 @@
           </div>
         </dd>
       </div>
-      <div class="item item--left">
+      <div class="item">
         <dd class="item__content">
           <div class="timeline-slot-header">
             <h4 class="timeline-slot-title">
@@ -226,7 +280,7 @@
       <dt>
         <h3 class="dt-title">Paragraph title</h3>
       </dt>
-      <div class="item item--right">
+      <div class="item">
         <dd class="item__content">
           <div class="timeline-slot-header">
             <h4 class="timeline-slot-title">
@@ -277,11 +331,11 @@
         </dd>
       </div>
     </div>
-    <div class="timeline-slot" role="listitem">
+    <div class="timeline-slot timeline-slot-reverse" role="listitem">
       <dt>
         <h3 class="dt-title">Paragraph title</h3>
       </dt>
-      <div class="item item--left">
+      <div class="item">
         <dd class="item__content">
           <div class="timeline-slot-header">
             <h4 class="timeline-slot-title">
@@ -336,7 +390,7 @@
       <dt>
         <h3 class="dt-title">Paragraph title</h3>
       </dt>
-      <div class="item item--right">
+      <div class="item">
         <dd class="item__content">
           <div class="timeline-slot-header">
             <h4 class="timeline-slot-title">
