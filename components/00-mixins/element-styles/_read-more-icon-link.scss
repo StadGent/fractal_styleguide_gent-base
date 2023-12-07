@@ -13,11 +13,12 @@
   @include theme('color', 'color-zero', 'button-secondary-color');
   @include theme('background-color', 'color-tertiary', 'button-secondary-background');
 
-  display: block;
+  display: flex;
+  align-items: center;
   width: 2.2rem;
   height: 2.2rem;
   margin: 0;
-  text-align: left;
+  text-align: center;
   text-indent: -9999999px;
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back) {
@@ -31,7 +32,6 @@
   &::after {
     display: block;
     position: relative;
-    top: -1rem;
     left: .25rem;
     text-indent: 0;
   }
