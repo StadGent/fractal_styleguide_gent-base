@@ -244,8 +244,6 @@ dl.timeline {
 
     &:not(.timeline-slot-reverse) {
       .item {
-
-
         // Alternating timeline-slots get alternating styling (left/right).
         &:nth-of-type(odd):not(.item--left),
         &.item--right {
@@ -398,14 +396,24 @@ dl.timeline {
 
     // Last paragraph styling
     &:last-of-type {
-      .item > dd {
-        padding-bottom: 0;
+      .item:last-of-type {
+        & > dd {
+          padding-bottom: 0;
 
-        &::after {
-          bottom: calc(100% - #{$timeline-dd-space-between-mobile + $gutter-width*.5});
+          &::after {
+            bottom: calc(100% - $gutter-width*.5);
+          }
+        }
 
-          @include desktop {
-            bottom: calc(100% - #{$timeline-dd-space-between + $gutter-width*.5});
+        &:first-of-type {
+          & > dd {
+            &::after {
+              bottom: calc(100% - #{$timeline-dd-space-between-mobile + $gutter-width*.5});
+
+              @include desktop {
+                bottom: calc(100% - #{$timeline-dd-space-between + $gutter-width*.5});
+              }
+            }
           }
         }
       }
