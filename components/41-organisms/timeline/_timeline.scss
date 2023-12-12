@@ -6,6 +6,9 @@ $timeline-dd-space-between: 90px;
 $timeline-dt-left-padding: 0px; // sass-lint:disable-line zero-unit
 $timeline-dt-right-padding: 112px;
 
+$roadmap-img-mobile-size: 120px;
+$roadmap-img-desktop-size: 170px;
+
 .timeline-wrapper {
   max-width: 375px;
 
@@ -28,6 +31,7 @@ dl.timeline {
       border: 0;
       background: transparent;
       line-height: 36px;
+      z-index: 2;
 
       button {
         width: 100%;
@@ -47,7 +51,7 @@ dl.timeline {
             height: $timeline-border;
             background-color: color(cyan-pastel);
             content: '';
-            z-index: -2;
+            z-index: 0;
           }
         }
 
@@ -65,7 +69,7 @@ dl.timeline {
           min-height: 36px;
           font-size: 1.2rem;
           line-height: 1.54rem;
-          z-index: -1;
+          z-index: 1;
         }
       }
     }
@@ -180,7 +184,7 @@ dl.timeline {
           left: $timeline-m-left-padding;
           border-left: $timeline-border solid;
           content: '';
-          z-index: -2;
+          z-index: 0;
 
           @include desktop {
             left: calc(#{$timeline-dt-left-padding} - #{$timeline-border} / 2);
@@ -416,6 +420,137 @@ dl.timeline {
             }
           }
         }
+      }
+    }
+  }
+}
+
+.roadmap-wrapper {
+  @include desktop {
+    max-width: 1070px;
+    margin: 0 auto;
+  }
+}
+
+dl.roadmap {
+  counter-reset: item;
+
+  .timeline-slot {
+    position: relative;
+    padding-bottom: 50px;
+    padding-left: 60px;
+
+    @include desktop {
+      padding-top: 70px;
+      padding-left: calc($roadmap-img-desktop-size + 130px);
+    }
+
+    &::before {
+      @include theme('background-color', 'color-secondary', 'timeline-dt-bg-color');
+      @include bold-text;
+
+      position: absolute;
+      top: 30px;
+      left: 0;
+      padding: 9.5px 19px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      line-height: 130%;
+      content: counter(item);
+      z-index: 2;
+      counter-increment: item;
+
+      @include desktop {
+        top: 50px;
+        left: calc($roadmap-img-desktop-size + 30px);
+        padding: 15.5px 28px;
+        font-size: 1.5rem;
+      }
+    }
+
+    &::after {
+      @include theme('background-color', 'color-tertiary-pastel', 'timeline-line-color');
+
+      position: absolute;
+      top: 49px;
+      left: 22px;
+      width: 6px;
+      height: calc(100% - 49px);
+      content: '';
+      z-index: 1;
+
+      @include desktop {
+        top: 69px;
+        left: calc($roadmap-img-desktop-size + 62px);
+        height: calc(100% - 69px);
+      }
+    }
+
+    &:not(:first-of-type) {
+      &::after {
+        top: 0;
+        height: 100%;
+      }
+    }
+
+    &:last-of-type {
+      &::after {
+        height: 51px;
+      }
+    }
+  }
+
+  .item {
+    dd {
+      margin: 0;
+    }
+  }
+
+  .item__image {
+    display: block;
+    width: $roadmap-img-mobile-size;
+    height: $roadmap-img-mobile-size;
+    margin-bottom: 15px;
+
+    @include desktop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $roadmap-img-desktop-size;
+      height: $roadmap-img-desktop-size;
+    }
+  }
+
+  .content-btn {
+    padding-bottom: 30px;
+  }
+
+  p > .accordion--button {
+    @include remove-button;
+    @include theme('color', 'color-tertiary', 'link-color');
+    @include link-background('color-primary', 'color-primary', 'link-underline-color', 'link-hover-background');
+    @include semi-bold-text;
+
+    width: auto;
+    line-height: 120%;
+    vertical-align: middle;
+
+    &::before {
+      display: none;
+    }
+
+    i {
+      display: inline-block;
+      margin-left: 5px;
+      transform: rotate(0deg);
+      transform-origin: center center;
+      transition: .3s;
+      vertical-align: middle;
+    }
+
+    &[aria-expanded=true] {
+      i {
+        transform: rotate(180deg);
       }
     }
   }

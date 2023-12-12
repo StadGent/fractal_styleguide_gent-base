@@ -56,7 +56,7 @@
       return options;
     })();
 
-    const buttons = elem.querySelectorAll(options.buttonSelector);
+    const buttons = document.querySelectorAll(options.buttonSelector);
 
     /**
      * Toggle aria-expanded attributes and trigger visibility Change function.
@@ -124,8 +124,8 @@
         button.addEventListener('click', toggle);
         button.addEventListener('keydown', keyDown);
 
-        const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
-        const accordionContentImage = elem.querySelector(`#${button.getAttribute('data-controls-img')}`);
+        const accordionContent = document.querySelector(`#${button.getAttribute('aria-controls')}`);
+        const accordionContentImage = document.querySelector(`#${button.getAttribute('data-controls-img')}`);
         accordionContent.addEventListener('transitionend', options.transitionEnd);
 
         if (accordionContentImage) {
@@ -149,8 +149,8 @@
      */
     const setVisibility = (button, isInitial) => {
 
-      const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
-      const accordionContentImage = elem.querySelector(`#${button.getAttribute('data-controls-img')}`);
+      const accordionContent = document.querySelector(`#${button.getAttribute('aria-controls')}`);
+      const accordionContentImage = document.querySelector(`#${button.getAttribute('data-controls-img')}`);
       if (!accordionContent) {
         return;
       }
@@ -275,7 +275,7 @@
         return;
       }
       try {
-        const trigger = elem.querySelector(`[aria-controls=${hash}]`);
+        const trigger = document.querySelector(`[aria-controls=${hash}]`);
         if (trigger) {
           open(trigger);
           trigger.focus();

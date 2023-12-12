@@ -1,4 +1,7 @@
 .accordion {
+  position: relative;
+  z-index: 1;
+
   .accordion--button {
     @include extra-large-text;
     @include semi-bold-text;
@@ -34,6 +37,9 @@
     }
   }
 
+  .accordion {
+    z-index: 2;
+  }
 }
 
 ul.accordion,
