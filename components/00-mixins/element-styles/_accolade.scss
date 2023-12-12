@@ -37,7 +37,8 @@
     }
 
     position: absolute;
-    #{$v-position}: -$height;
+    // Correct position with 1 pixel to avoid white line in some browsers.
+    #{$v-position}: -$height + 1;
     #{$h-position}: 0;
     width: $width;
     height: $height;
