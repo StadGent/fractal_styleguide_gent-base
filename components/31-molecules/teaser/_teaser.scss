@@ -7,7 +7,7 @@
 
   h3.bg-none {
     position: relative;
-    margin: -13px 0 0;
+    margin: -13px 0 20px;
     z-index: 3;
 
     span {
@@ -371,7 +371,7 @@
 
     .content__first {
       order: 1;
-      margin-bottom: gutter();
+      margin-bottom: $gutter-width;
 
       @include tablet {
         flex: 0 0 230px;
@@ -397,10 +397,6 @@
       p {
         @include medium-text();
         margin-top: 10px;
-      }
-
-      .read-more {
-        margin-top: 20px;
       }
     }
   }
