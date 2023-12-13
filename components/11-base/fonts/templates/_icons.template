@@ -34,7 +34,6 @@ $id: random(1000);
   text-transform: none;
 }
 
-[class*='<%= cssClass%>-']:not(.icon-list, .icon-left),
 %<%= cssClass%> {
   @include <%= cssClass%>-styles;
 }
