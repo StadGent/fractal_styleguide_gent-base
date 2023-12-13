@@ -25,7 +25,6 @@
             <div class="content-image hidden-desktop">
               {# This is the same image as above #}
               {% include '@image-gallery--single' with {
-
                 "items": [
                   {
                     "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
@@ -426,6 +425,106 @@
         </dd>
         <dd class="item__image-desktop show-desktop-only">
           <div class="timeline-slot-content timeline-slot-content__img accordion--content" id="timeline-slot-img--5"
+               aria-hidden="true">
+            {% include '@image-gallery--single' with {
+
+              "items": [
+                {
+                  "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+                  "alt": "placeholder image alternative text",
+                  "caption": "image caption"
+                }
+              ]
+            } %}
+          </div>
+        </dd>
+      </div>
+      <div class="item">
+        <dd class="item__content">
+          <div class="timeline-slot-header">
+            <h4 class="timeline-slot-title">
+              <button aria-expanded="false" aria-controls="timeline-slot-content--7"
+                      data-controls-img="timeline-slot-img--7" class="accordion--button">
+                Timeline item title
+              </button>
+            </h4>
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
+          </div>
+          <div class="timeline-slot-content accordion--content" id="timeline-slot-content--7" aria-hidden="true">
+            <div class="content-image hidden-desktop">
+              {% include '@image-gallery--single' with {
+
+                "items": [
+                  {
+                    "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+                    "alt": "placeholder image alternative text",
+                    "caption": "image caption"
+                  }
+                ]
+              } %}
+            </div>
+            {% include '@paragraph' with {
+              'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+            } %}
+            <ul>
+              <li>Candy lollipops</li>
+              <li>Sugar sweetness</li>
+              <li>Toffee sticks</li>
+            </ul>
+          </div>
+        </dd>
+        <dd class="item__image-desktop show-desktop-only">
+          <div class="timeline-slot-content timeline-slot-content__img accordion--content" id="timeline-slot-img--7"
+               aria-hidden="true">
+            {% include '@image-gallery--single' with {
+
+              "items": [
+                {
+                  "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+                  "alt": "placeholder image alternative text",
+                  "caption": "image caption"
+                }
+              ]
+            } %}
+          </div>
+        </dd>
+      </div>
+      <div class="item">
+        <dd class="item__content">
+          <div class="timeline-slot-header">
+            <h4 class="timeline-slot-title">
+              <button aria-expanded="false" aria-controls="timeline-slot-content--8"
+                      data-controls-img="timeline-slot-img--8" class="accordion--button">
+                Timeline item title
+              </button>
+            </h4>
+            <h5 class="timeline-slot-date">Timeline item subtitle/date</h5>
+          </div>
+          <div class="timeline-slot-content accordion--content" id="timeline-slot-content--8" aria-hidden="true">
+            <div class="content-image hidden-desktop">
+              {% include '@image-gallery--single' with {
+
+                "items": [
+                  {
+                    "src": "https://via.placeholder.com/800x500&text=8:5+(800x500)",
+                    "alt": "placeholder image alternative text",
+                    "caption": "image caption"
+                  }
+                ]
+              } %}
+            </div>
+            {% include '@paragraph' with {
+              'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+            } %}
+            <ul>
+              <li>Candy lollipops</li>
+              <li>Sugar sweetness</li>
+              <li>Toffee sticks</li>
+            </ul>
+          </div>
+        </dd>
+        <dd class="item__image-desktop show-desktop-only">
+          <div class="timeline-slot-content timeline-slot-content__img accordion--content" id="timeline-slot-img--8"
                aria-hidden="true">
             {% include '@image-gallery--single' with {
 
