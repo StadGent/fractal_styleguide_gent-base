@@ -36,6 +36,13 @@ module.exports = {
       }
     },
     {
+      name: 'Nested lists',
+      handle: 'nested-list',
+      context: {
+        type: 'nested'
+      }
+    },
+    {
       name: 'Inline list',
       handle: 'inline-list',
       context: {
