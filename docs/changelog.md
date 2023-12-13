@@ -50,7 +50,7 @@ This element is new. Existing labels such as on teasers can be replaced by this
 atom. See teaser markup changes.
 
 ### Important note molecule
-This molecule is used to display a colored text with same color icon in front of it.
+This new molecule is used to display a colored text with same color icon in front of it. It is e.g. used in the Timeline Roadmap display.
 
 ### Modal molecule
 Default heading changed from `h3` to `h2` and the close button has the `.button-secondary` class
@@ -148,6 +148,8 @@ The HTML markup has been simplified.
 </section>
 ```
 The links get a `no-icon` class.
+
+Add the `.contact-details--with-image` class to the contact-details section if you want to remove the side margins and set it to full width.
 
 
 ### Footer organism
