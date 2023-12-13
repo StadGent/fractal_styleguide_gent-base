@@ -13,7 +13,7 @@ header.header {
     }
 
     > :not(:first-child) {
-      margin-left: gutter();
+      margin-left: $gutter-width;
     }
 
     .site-logo {
@@ -122,7 +122,7 @@ header.header {
       margin-left: 16px;
 
       @include tablet {
-        margin-left: gutter();
+        margin-left: $gutter-width;
       }
     }
 
