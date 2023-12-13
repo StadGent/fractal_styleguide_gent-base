@@ -144,6 +144,8 @@ The HTML markup has been simplified.
 ```
 The links get a `no-icon` class.
 
+Add the `.contact-details--with-image` class to the contact-details section if you want to remove the side margins and set it to full width.
+
 
 ### Footer organism
 * Titles become `h4` except Gentinfo title stays `h3`.
