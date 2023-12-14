@@ -95,13 +95,13 @@
         z-index: 3;
 
         .label ~ .tag-list-wrapper {
+          top: -4px;
           margin-left: 5px;
         }
 
         .tag-list-wrapper {
           display: inline-block;
           position: relative;
-          top: -4px;
           margin: 0;
         }
       }
