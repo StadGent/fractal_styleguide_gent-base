@@ -205,6 +205,7 @@
       .date {
         display: inline-block;
         margin: -6px 0 0;
+        z-index: 1;
 
         span {
           @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
