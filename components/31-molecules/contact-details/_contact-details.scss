@@ -1,6 +1,38 @@
 $avatar-width: 280px;
 
 .contact-details {
+  &--with-image {
+    .contact-details-columns {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .contact-details-column {
+      flex-grow: 1;
+      width: 100%;
+
+      @include tablet {
+        @include col(6);
+        margin-right: $gutter-width;
+
+        &:last-of-type:not(:first-of-type) {
+          max-width: $avatar-width;
+          margin-right: 0;
+        }
+      }
+
+      .image-wrapper {
+        img {
+          @include tablet {
+            max-width: $avatar-width;
+          }
+        }
+      }
+    }
+  }
+
   h2,
   h3 {
     margin-bottom: 30px;
@@ -14,36 +46,6 @@ $avatar-width: 280px;
 
     @include desktop {
       margin-bottom: 0;
-    }
-  }
-
-  &-columns {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-  &-column {
-    flex-grow: 1;
-    width: 100%;
-
-    @include tablet {
-      @include col(6);
-      margin-right: $gutter-width;
-
-      &:last-of-type:not(:first-of-type) {
-        max-width: $avatar-width;
-        margin-right: 0;
-      }
-    }
-
-    .image-wrapper {
-      img {
-        @include tablet {
-          max-width: $avatar-width;
-        }
-      }
     }
   }
 }

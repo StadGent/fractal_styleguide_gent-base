@@ -221,11 +221,11 @@ $week-breakpoint: '(min-width: 750px)';
       &--details {
         display: none;
         position: absolute;
-        width: calc(100% - #{$month-day-size-mobile *.5});
+        width: calc(100% - #{$month-day-size-mobile * .5});
         cursor: default;
 
         @include phablet {
-          width: calc(100% - #{$month-day-size *.5});
+          width: calc(100% - #{$month-day-size * 2});
         }
       }
 

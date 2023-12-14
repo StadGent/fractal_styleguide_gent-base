@@ -7,7 +7,7 @@
 
   h3.bg-none {
     position: relative;
-    margin: -13px 0 0;
+    margin: -13px 0 20px;
     z-index: 3;
 
     span {
@@ -37,6 +37,11 @@
 
   .tag-list-wrapper {
     margin: 15px 0 -5px;
+
+    // Override default tag behaviour that has 100% width on mobile.
+    li {
+      width: auto;
+    }
   }
 
   .teaser-links {
@@ -95,13 +100,13 @@
         z-index: 3;
 
         .label ~ .tag-list-wrapper {
+          top: -4px;
           margin-left: 5px;
         }
 
         .tag-list-wrapper {
           display: inline-block;
           position: relative;
-          top: -4px;
           margin: 0;
         }
       }
@@ -205,6 +210,7 @@
       .date {
         display: inline-block;
         margin: -6px 0 0;
+        z-index: 1;
 
         span {
           @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
@@ -371,7 +377,7 @@
 
     .content__first {
       order: 1;
-      margin-bottom: gutter();
+      margin-bottom: $gutter-width;
 
       @include tablet {
         flex: 0 0 230px;
@@ -397,10 +403,6 @@
       p {
         @include medium-text();
         margin-top: 10px;
-      }
-
-      .read-more {
-        margin-top: 20px;
       }
     }
   }

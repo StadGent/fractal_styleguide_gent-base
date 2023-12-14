@@ -49,6 +49,9 @@ Some icons have been updated, using the same machine name.
 This element is new. Existing labels such as on teasers can be replaced by this
 atom. See teaser markup changes.
 
+### Important note molecule
+This new molecule is used to display a colored text with same color icon in front of it. It is e.g. used in the Timeline Roadmap display.
+
 ### Modal molecule
 Default heading changed from `h3` to `h2` and the close button has the `.button-secondary` class
 
@@ -112,6 +115,8 @@ There's an image (singular) that is loaded twice: once on the right side and sho
 
 The timeline slots can have a reverse order (by adding the `.timeline-slot-reverse` class) e.g. if the previous slot is odd, but also if the previous slot is even and also has the `.timeline-slot-reverse` class.
 
+The new `timeline--roadmap` variant is used for displaying steps. It also includes an accordion with extra content options.
+
 ### Programme organism
 Titles have changed to h2 and h3 for slot title and teaser title
 
@@ -143,6 +148,8 @@ The HTML markup has been simplified.
 </section>
 ```
 The links get a `no-icon` class.
+
+Add the `.contact-details--with-image` class to the contact-details section if you want to remove the side margins and set it to full width.
 
 
 ### Footer organism

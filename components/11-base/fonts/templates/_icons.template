@@ -34,7 +34,6 @@ $id: random(1000);
   text-transform: none;
 }
 
-[class*='<%= cssClass%>-'],
 %<%= cssClass%> {
   @include <%= cssClass%>-styles;
 }

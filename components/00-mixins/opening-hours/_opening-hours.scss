@@ -3,7 +3,7 @@
 @mixin month-widget-mobile {
   min-width: initial;
   padding-right: 0;
-  padding-bottom: 120px;
+  padding-bottom: 140px;
 
   > .openinghours {
     @include theme('border-color', 'color-none', 'opening-hours-border');
