@@ -37,6 +37,11 @@
 
   .tag-list-wrapper {
     margin: 15px 0 -5px;
+
+    // Override default tag behaviour that has 100% width on mobile.
+    li {
+      width: auto;
+    }
   }
 
   .teaser-links {
