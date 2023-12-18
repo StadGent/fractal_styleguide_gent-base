@@ -41,19 +41,9 @@
                 text: 'CTA button'
               } %}
             </div>
-            <div class="content-more-info accordion dropdown">
-              <p>
-                <button aria-expanded="false" aria-controls="timeline-slot-content-overlap--1" class="accordion--button">
-                  More info
-                  {% include '@icon' with { "icon": "chevron-down" } %}
-                </button>
-              </p>
-              <div class="timeline-slot-content-overlap accordion--content accordion--expanded" id="timeline-slot-content-overlap--1" aria-hidden="false">
-                {% include '@accordion--multiple' with {
-                  items: faqs
-                } %}
-              </div>
-            </div>
+            {% include '@accordion--link' with {
+              buttonText: 'More info'
+            } %}
           </div>
         </dd>
       </div>
@@ -96,19 +86,9 @@
                 text: 'CTA button'
               } %}
             </div>
-            <div class="content-more-info accordion dropdown">
-              <p>
-                <button aria-expanded="false" aria-controls="timeline-slot-content-overlap--2" class="accordion--button">
-                  More info
-                  {% include '@icon' with { "icon": "chevron-down" } %}
-                </button>
-              </p>
-              <div class="timeline-slot-content-overlap accordion--content accordion--expanded" id="timeline-slot-content-overlap--2" aria-hidden="false">
-                {% include '@accordion--multiple' with {
-                  items: faqs
-                } %}
-              </div>
-            </div>
+            {% include '@accordion--link' with {
+              buttonText: 'More info'
+            } %}
           </div>
         </dd>
       </div>
@@ -150,19 +130,9 @@
                 text: 'CTA button'
               } %}
             </div>
-            <div class="content-more-info accordion dropdown">
-              <p>
-                <button aria-expanded="false" aria-controls="timeline-slot-content-overlap--3" class="accordion--button">
-                  More info
-                  {% include '@icon' with { "icon": "chevron-down" } %}
-                </button>
-              </p>
-              <div class="timeline-slot-content-overlap accordion--content accordion--expanded" id="timeline-slot-content-overlap--3" aria-hidden="false">
-                {% include '@accordion--multiple' with {
-                  items: faqs
-                } %}
-              </div>
-            </div>
+            {% include '@accordion--link' with {
+              buttonText: 'More info'
+            } %}
           </div>
         </dd>
       </div>
