@@ -58,6 +58,8 @@ Default heading changed from `h3` to `h2` and the close button has the `.button-
 ### Accordion molecule
 This module is expanded with the option to add another container (for images, e.g. on Timeline) that is controlled with the `data-controls-img` attribute, linking it to the id of the img container.
 
+Use the `.accordion--link` class for read-more type links with the correct button and content classes.
+
 ### Contact details molecule
 A wrapper was added to columns: `.contact-details-columns` and the `h3` is changed to an `h2` with class `.h3`, which is outside of those columns.
 
