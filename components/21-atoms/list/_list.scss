@@ -110,7 +110,7 @@ ul {
     &.inline {
       & > li {
         align-items: center;
-        margin-right: 13px;
+        margin-right: 15px;
         margin-bottom: 0;
       }
     }
@@ -118,7 +118,6 @@ ul {
     & > li {
       position: relative;
       margin-bottom: 16px;
-      padding-left: 29px; // 24px icon size + 5px gutter.
       line-height: 1.5;
 
       &:last-child {
@@ -149,10 +148,8 @@ ul {
       }
 
       i {
-        display: block;
-        position: absolute;
-        left: 0;
-        line-height: 1;
+        vertical-align: middle;
+        margin-right: 5px;
       }
     }
   }
