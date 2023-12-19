@@ -65,8 +65,11 @@
       line-height: inherit;
       text-decoration: none;
 
+      &:focus,
+      &:focus-within,
+      &:focus-visible,
       &:hover {
-        @include theme('border-bottom-color', 'color-zero');
+        @include theme('color', 'color-zero', 'default-text-color');
       }
 
       &:focus,
@@ -78,6 +81,9 @@
       }
 
       &.standalone-link {
+        &:focus,
+        &:focus-within,
+        &:focus-visible,
         &:hover {
           @include theme('color', 'color-zero', 'pagination-active-color');
           @include theme('border-bottom-color', 'color-zero');

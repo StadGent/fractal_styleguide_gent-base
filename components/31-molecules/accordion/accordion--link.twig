@@ -1,0 +1,11 @@
+<div class="accordion--link dropdown--link">
+    <button aria-controls="accordion--link--single--content" type="button" class="accordion--button accordion--link--button" aria-expanded="false" >
+        {{ buttonText }}
+        {% include '@icon' with { "icon": "chevron-down" } %}
+    </button>
+    <div id="accordion--link--single--content" class="accordion--link--content" aria-hidden="true" hidden="hidden">
+        {% include '@accordion--multiple' with {
+            items: faqs
+        } %}
+    </div>
+</div>
