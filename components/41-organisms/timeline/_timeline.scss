@@ -524,34 +524,4 @@ dl.roadmap {
   .content-btn {
     padding-bottom: 30px;
   }
-
-  p > .accordion--button {
-    @include remove-button;
-    @include theme('color', 'color-tertiary', 'link-color');
-    @include link-background('color-primary', 'color-primary', 'link-underline-color', 'link-hover-background');
-    @include semi-bold-text;
-
-    width: auto;
-    line-height: 120%;
-    vertical-align: middle;
-
-    &::before {
-      display: none;
-    }
-
-    i {
-      display: inline-block;
-      margin-left: 5px;
-      transform: rotate(0deg);
-      transform-origin: center center;
-      transition: .3s;
-      vertical-align: middle;
-    }
-
-    &[aria-expanded=true] {
-      i {
-        transform: rotate(180deg);
-      }
-    }
-  }
 }

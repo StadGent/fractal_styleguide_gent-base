@@ -32,6 +32,11 @@
     transition: max-height .5s ease-in-out;
     overflow: hidden;
 
+    &:focus,
+    &:focus-within {
+      overflow: unset; // The overflow is needed for the accordion animation only
+    }
+
     p {
       line-height: 1.75;
     }
@@ -110,5 +115,58 @@ ul.accordion {
 dl.accordion {
   dd {
     padding: 0;
+  }
+}
+
+.accordion--link {
+  position: relative;
+  z-index: 1;
+
+  .accordion--link--button {
+    @include remove-button;
+    @include theme('color', 'color-tertiary', 'link-color');
+    @include link-background('color-primary', 'color-primary', 'link-underline-color', 'link-hover-background');
+    @include semi-bold-text;
+
+    width: auto;
+    line-height: 120%;
+    vertical-align: middle;
+
+    &::before {
+      display: none;
+    }
+
+    i {
+      display: inline-block;
+      margin-left: 5px;
+      transform: rotate(0deg);
+      transform-origin: center center;
+      transition: .3s;
+      vertical-align: middle;
+    }
+
+    &[aria-expanded=true] {
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .accordion--link--content {
+    transition: max-height .5s ease-in-out;
+    overflow: hidden;
+
+    &:focus,
+    &:focus-within {
+      overflow: unset; // The overflow is needed for the accordion animation only
+    }
+
+    p {
+      line-height: 1.75;
+    }
+  }
+
+  .accordion {
+    z-index: 2;
   }
 }

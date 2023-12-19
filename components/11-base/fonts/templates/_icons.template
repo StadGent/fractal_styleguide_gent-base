@@ -28,10 +28,19 @@ $id: random(1000);
   font-size: 1.2rem;
   font-variant: normal;
   font-weight: normal;
-  line-height: 87.5%;
+  line-height: 1;
   speak: none; // only necessary if not using the private unicode range (firstGlyph option)
   text-decoration: none;
   text-transform: none;
+}
+
+[class^='<%= cssClass%>-']:not(<%= cssClass%>-list) {
+  display: inline-block;
+  line-height: 87.5%;
+
+  &::before {
+    display: block;
+  }
 }
 
 %<%= cssClass%> {
