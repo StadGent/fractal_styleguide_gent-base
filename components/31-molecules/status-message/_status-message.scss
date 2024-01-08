@@ -1,12 +1,12 @@
 %messages,
 .messages {
+  @include icon('info-circle', before);
   @include theme('color', 'color-zero', 'status-message-color');
   @include theme('background-color', 'color-info-light', 'info-message-background');
   @include theme('border-color', 'color-info', 'info-message-icon-color');
 
   $status-message-icon-size: 40px;
 
-  //display: flex;
   position: relative;
   flex-direction: column;
   max-width: 970px;
@@ -19,14 +19,34 @@
 
   @include phablet {
     flex-direction: row;
-    padding: 60px;
+    padding: 60px 60px 60px 125px;
   }
 
-  &.messages--status {
+  &::before {
+    @include theme('color', 'color-info', 'info-message-icon-color');
+
+    display: block;
+    width: calc($status-message-icon-size + 20px);
+    margin-right: 0;
+    padding-bottom: 20px;
+    font-size: $status-message-icon-size;
+    line-height: $status-message-icon-size;
+    text-align: left;
+
+    @include phablet {
+      position: absolute;
+      top: 60px;
+      left: 60px;
+      padding-right: 20px;
+    }
+  }
+
+  &--status {
+    @include icon('checkmark-circle', before);
     @include theme('background-color', 'color-success-light', 'success-message-background');
     @include theme('border-color', 'color-success', 'success-message-icon-color');
 
-    i {
+    &::before {
       @include theme('color', 'color-success', 'success-message-icon-color');
     }
 
@@ -35,11 +55,12 @@
     }
   }
 
-  &.messages--error {
+  &--error {
+    @include icon('cross-circle', before);
     @include theme('background-color', 'color-error-light', 'error-message-background');
     @include theme('border-color', 'color-error', 'error-message-icon-color');
 
-    i {
+    &::before {
       @include theme('color', 'color-error', 'error-message-icon-color');
     }
 
@@ -48,11 +69,12 @@
     }
   }
 
-  &.messages--warning {
+  &--warning {
+    @include icon('exclamation-circle', before);
     @include theme('background-color', 'color-warning-light', 'warning-message-background');
     @include theme('border-color', 'color-warning', 'warning-message-icon-color');
 
-    i {
+    &::before {
       @include theme('color', 'color-warning', 'warning-message-icon-color');
     }
 
@@ -62,34 +84,17 @@
   }
 
   > * {
-    @include phablet {
-      display: inline-block;
-      vertical-align: top;
+    &:not(a) {
+      @include phablet {
+        display: inline-block;
+        vertical-align: top;
+      }
     }
 
-    &:not(i) {
+    &:not(a, i) {
       @include phablet {
         width: calc(100% - ($status-message-icon-size + 25px));
       }
-    }
-  }
-
-  i {
-    @include theme('color', 'color-info', 'info-message-icon-color');
-
-    width: calc($status-message-icon-size + 20px);
-    margin-right: 0;
-    padding-bottom: 20px;
-    font-size: $status-message-icon-size;
-    line-height: $status-message-icon-size;
-    text-align: center;
-
-    &::before {
-      font-size: $status-message-icon-size;
-    }
-
-    @include phablet {
-      padding-right: 20px;
     }
   }
 

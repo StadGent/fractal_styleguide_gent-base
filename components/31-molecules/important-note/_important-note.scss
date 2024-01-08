@@ -1,5 +1,6 @@
 // Important note styling
 .important-note {
+  @include icon('exclamation-circle', before);
   @include theme('color', 'color-primary');
   @include semi-bold-text;
 
@@ -8,23 +9,28 @@
   font-size: .9rem;
   line-height: 177.778%;
 
-  i {
+  &::before {
     margin-right: 10px;
     color: inherit;
+    font-size: 1.6rem;
+  }
+}
 
-    &::before {
-      font-size: 1.6rem;
-    }
+.note {
+  &--timebound,
+  &--payment {
+    @include theme('color', 'color-warning');
   }
 
-  &.note {
-    &--timebound,
-    &--payment {
-      @include theme('color', 'color-warning');
-    }
+  &--timebound {
+    @include icon('clock', before);
+  }
 
-    &--unmissable {
-      @include theme('color', 'color-error');
-    }
+  &--payment {
+    @include icon('euro', before);
+  }
+
+  &--unmissable {
+    @include theme('color', 'color-error');
   }
 }

@@ -34,7 +34,7 @@ $id: random(1000);
   text-transform: none;
 }
 
-[class^='<%= cssClass%>-']:not(<%= cssClass%>-list) {
+[class^='<%= cssClass%>-']:not(.<%= cssClass%>-list) {
   display: inline-block;
   line-height: 87.5%;
 
