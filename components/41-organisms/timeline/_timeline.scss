@@ -502,7 +502,9 @@ dl.roadmap {
 
   .item {
     dd {
-      margin: 0;
+      @include desktop {
+        margin: 0;
+      }
     }
   }
 
