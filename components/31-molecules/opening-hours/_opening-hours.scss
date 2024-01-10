@@ -58,7 +58,7 @@ $week-breakpoint: '(min-width: 750px)';
     }
 
     &--date {
-      min-width: $bp-mobile;
+      min-width: calc($bp-mobile - 70px);
     }
 
     &--times {
