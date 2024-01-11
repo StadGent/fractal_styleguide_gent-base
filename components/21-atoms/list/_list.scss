@@ -22,6 +22,10 @@ ol {
 
   a {
     @include normal-text;
+
+    &.standalone-link {
+      @include semi-bold-text;
+    }
   }
 
   &.links {
