@@ -152,6 +152,10 @@
     }
   }
 
+  figcaption {
+    display: none;
+  }
+
   &.no-image,
   .teaser--no-images & {
     h3 {
