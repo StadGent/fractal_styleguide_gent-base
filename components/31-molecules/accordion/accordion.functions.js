@@ -170,7 +170,6 @@
         accordionContent.setAttribute('aria-hidden', 'false');
         accordionContent.removeAttribute('hidden');
         expandedContent.push(accordionContent);
-        options.expand(button, accordionContent);
         if (accordionContentImage) {
           accordionContentImage.classList.add(options.accordionExpandedClass);
           accordionContentImage.setAttribute('aria-hidden', 'false');
@@ -178,6 +177,7 @@
           expandedContent.push(accordionContentImage);
           options.expand(button, accordionContentImage);
         }
+        options.expand(button, accordionContent);
       }
       else {
         accordionContent.classList.remove(options.accordionExpandedClass);
@@ -185,9 +185,6 @@
         if (isInitial) {
           accordionContent.setAttribute('hidden', 'hidden');
         }
-        expandedContent.filter(content => content !== accordionContent);
-        options.collapse(button, accordionContent);
-
         if (accordionContentImage) {
           accordionContentImage.classList.remove(options.accordionExpandedClass);
           accordionContentImage.setAttribute('aria-hidden', 'true');
@@ -197,6 +194,8 @@
           expandedContent.filter(content => content !== accordionContentImage);
           options.collapse(button, accordionContentImage);
         }
+        expandedContent.filter(content => content !== accordionContent);
+        options.collapse(button, accordionContent);
       }
     };
 
