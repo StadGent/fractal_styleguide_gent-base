@@ -12,7 +12,7 @@ a {
 
   &::before,
   &::after {
-    display: inline-block;
+    display: inline;
     margin-left: 5px;
     transition: margin .1s ease-in;
     border: 0;
