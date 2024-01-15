@@ -147,6 +147,7 @@
       p {
         @include theme('color', 'default-text-color', 'help-text-color');
         margin: 20px 0;
+        font-size: .8rem;
         line-height: 1.4rem;
       }
     }
