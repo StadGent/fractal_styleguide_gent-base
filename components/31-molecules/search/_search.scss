@@ -33,7 +33,7 @@
   &,
   &:focus {
     @include theme-content('color-zero') {
-      background: svg-as-background('search', $theme-color, 32, 32) no-repeat left .4rem center;
+      background: svg-as-background('search', $theme-color, 32, 32) no-repeat left .4rem center color('white');
     };
   }
 }
