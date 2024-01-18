@@ -1,15 +1,8 @@
 <div class="banner-image">
-    {% if multiple %}
-        {% include '@image-gallery--multiple' with {
-            type: '',
-            items: images
-        } %}
-    {% else %}
     {% include '@image-gallery' with {
         type: '',
         src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         alt: images|first.alt,
         caption: images|first.caption
     } %}
-{% endif %}
 </div>
