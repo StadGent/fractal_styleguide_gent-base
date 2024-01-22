@@ -49,11 +49,16 @@ Some icons have been updated, using the same machine name.
 This element is new. Existing labels such as on teasers can be replaced by this
 atom. See teaser markup changes.
 
+### Important note molecule
+This new molecule is used to display a colored text with same color icon in front of it. It is e.g. used in the Timeline Roadmap display.
+
 ### Modal molecule
 Default heading changed from `h3` to `h2` and the close button has the `.button-secondary` class
 
 ### Accordion molecule
 This module is expanded with the option to add another container (for images, e.g. on Timeline) that is controlled with the `data-controls-img` attribute, linking it to the id of the img container.
+
+Use the `.accordion--link` class for read-more type links with the correct button and content classes.
 
 ### Contact details molecule
 A wrapper was added to columns: `.contact-details-columns` and the `h3` is changed to an `h2` with class `.h3`, which is outside of those columns.
@@ -106,11 +111,13 @@ The grid system is updated (Susy is removed), an example is added to the readme.
 - The logo is bigger on the frontpage, based on a parent class `is-frontpage`.
 
 ### Timeline organism
-**Date** is now an `h3` and the **timeline-slot-title** is now an `h4`.
+**Timeline paragraph title** is now an `h3`, the **Timeline item title** is now an `h4` and the **Timeline item subtitle** is now an `h5`.
 
-There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop.
+There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop. Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
 
-Both the image and the content go into separate `<dd>` containers and are alternated (left/right). Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
+The timeline slots can have a reverse order (by adding the `.timeline-slot-reverse` class) e.g. if the previous slot is odd, but also if the previous slot is even and also has the `.timeline-slot-reverse` class.
+
+The new `timeline--roadmap` variant is used for displaying steps. It also includes an accordion with extra content options.
 
 ### Programme organism
 Titles have changed to h2 and h3 for slot title and teaser title
@@ -143,6 +150,8 @@ The HTML markup has been simplified.
 </section>
 ```
 The links get a `no-icon` class.
+
+Add the `.contact-details--with-image` class to the contact-details section if you want to remove the side margins and set it to full width.
 
 
 ### Footer organism

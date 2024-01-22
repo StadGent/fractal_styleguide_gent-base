@@ -21,7 +21,7 @@
 ///   The exception value for the background color.
 ///   This is the exception optionally used in subthemes.
 ///
-@mixin link-background($underline, $hover: null, $underline-exception: null, $hover-exception: null) {
+@mixin link-background($underline: 'color-primary', $hover: null, $underline-exception: null, $hover-exception: null) {
   @include theme('border-color', $underline, $underline-exception);
   transition: background-image 1s, color 1s;
   border-bottom: 2px solid;
@@ -75,7 +75,7 @@
 ///   The 'active' state styling is applied to this selector.
 ///
 @mixin link-underlined($active-selector: '.active') {
-  @include theme('color', 'color-tertiary', 'default-text-color');
+  @include theme('color', 'color-primary', 'link-color');
   display: inline-block;
   font-weight: 400;
   text-decoration: none;

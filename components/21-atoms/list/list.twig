@@ -14,6 +14,21 @@
   </ul>
 {% endif %}
 
+{% if type == 'nested' %}
+    <ol class="{{ modifier }}">
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        <li> Nested List
+            <ul>
+                {% for item in items %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ol>
+{% endif %}
+
 {% if type == 'inline' %}
   <ul class="inline {{ modifier }}">
       {% for item in items %}

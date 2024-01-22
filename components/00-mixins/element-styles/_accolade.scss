@@ -9,8 +9,8 @@
 ///
 /// @param {string} $v-position - The vertical position of the accolade.
 /// @param {string} $h-position - The horizontal position of the accolade.
-/// @param {string} $width - The accolade width.
-/// @param {string} $height - The accolade height.
+/// @param {string} $width - The accolade width in pixels.
+/// @param {string} $height - The accolade height in pixels.
 /// @param {string} $color - Text theme color.
 /// @param {string} $background-color - The background theme color.
 ///
@@ -37,7 +37,8 @@
     }
 
     position: absolute;
-    #{$v-position}: -$height;
+    // Correct position with 1 pixel to avoid white line in some browsers.
+    #{$v-position}: -$height + 1px;
     #{$h-position}: 0;
     width: $width;
     height: $height;

@@ -1,0 +1,142 @@
+<div class="roadmap-wrapper">
+{# Timeline paragraph BEGIN #}
+  {# Timeline paragraph title #}
+  <h2 class="visually-hidden">Roadmap timeline title</h2>
+  <dl class="roadmap">
+    {# Timeline item BEGIN #}
+    <div class="timeline-slot" role="listitem">
+      <div class="item">
+        <dd class="item__image">
+          <div class="timeline-slot-content timeline-slot-content__img">
+            {# Timeline image field #}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 170 170">
+              <path fill="#005BA9" stroke="#005BA9" d="m135.796 135.775-1.84-11.995a1.864 1.864 0 0 0-3.685.565l1.558 10.154-77.48 11.889L36.824 32.179l47.986-7.363 4.243 27.652a1.863 1.863 0 0 0 2.125 1.56l27.653-4.243 3.65 23.79a1.863 1.863 0 1 0 3.685-.565l-3.934-25.633a1.841 1.841 0 0 0-.252-.687 1.834 1.834 0 0 0-.491-.534L87.475 21.192a1.88 1.88 0 0 0-1.388-.343l-51.67 7.929a1.863 1.863 0 0 0-1.56 2.125l18.09 117.892a1.863 1.863 0 0 0 2.125 1.56l81.165-12.455a1.86 1.86 0 0 0 1.559-2.125ZM88.894 26.855l26.765 19.644-23.205 3.56-3.56-23.204Z"/>
+              <path fill="#005BA9" stroke="#005BA9" d="M112.733 59.255a1.862 1.862 0 0 0-2.124-1.56l-58.795 9.023a1.863 1.863 0 1 0 .565 3.684l58.795-9.022a1.862 1.862 0 0 0 1.559-2.125ZM54.861 86.592l48.135-7.385a1.863 1.863 0 1 0-.565-3.684l-48.135 7.385a1.863 1.863 0 1 0 .565 3.684ZM57.347 102.791l39.027-5.989a1.863 1.863 0 1 0-.565-3.684l-39.027 5.989a1.863 1.863 0 1 0 .565 3.684ZM101.755 110.668a1.863 1.863 0 0 0-2.125-1.56l-40.363 6.194a1.863 1.863 0 1 0 .566 3.684l40.364-6.194a1.862 1.862 0 0 0 1.558-2.124ZM62.232 135.19l50.419-7.737a1.863 1.863 0 1 0-.566-3.684l-50.419 7.737a1.863 1.863 0 1 0 .566 3.684ZM124.322 72.85c-14.197 2.178-23.974 15.503-21.795 29.7 2.178 14.197 15.5 23.974 29.697 21.795 14.196-2.178 23.974-15.5 21.795-29.696-2.178-14.197-15.5-23.978-29.697-21.8Zm7.336 47.81c-12.164 1.866-23.581-6.513-25.447-18.677-1.867-12.167 6.512-23.584 18.676-25.45 12.164-1.867 23.581 6.512 25.448 18.68 1.866 12.164-6.513 23.58-18.677 25.447Z"/>
+              <path fill="#005BA9" stroke="#005BA9" d="m139.037 89.511-13.658 14.095-8.057-7.81a1.863 1.863 0 1 0-2.594 2.677l9.396 9.107a1.86 1.86 0 0 0 2.635-.041l14.955-15.434a1.863 1.863 0 1 0-2.677-2.594Z"/>
+            </svg>
+          </div>
+        </dd>
+        <dd class="item__content">
+          <div class="timeline-slot-header">
+            {# Timeline item title #}
+            <h3 class="timeline-slot-title">Timeline item title</h3>
+            {# Timeline item subtitle #}
+            <h4 class="timeline-slot-date">Timeline item subtitle</h4>
+          </div>
+          <div class="timeline-slot-content">
+            {# Timeline item text paragraph #}
+            <div class="content-text">
+              {% include '@important-note' with { type: 'important', note: 'Important info'} %}
+
+              {% include '@paragraph' with {
+                'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+              } %}
+
+              {% include '@important-note' with { type: 'important', note: 'Important info'} %}
+            </div>
+            <div class="content-btn">
+              {% include '@button' with {
+                type: 'primary',
+                modifier: 'icon-arrow-right',
+                text: 'CTA button'
+              } %}
+            </div>
+            {% include '@accordion--link' with {
+              buttonText: 'More info'
+            } %}
+          </div>
+        </dd>
+      </div>
+    </div>
+    {# Timeline item END #}
+    <div class="timeline-slot" role="listitem">
+      <div class="item">
+        <dd class="item__image">
+          <div class="timeline-slot-content timeline-slot-content__img">
+            {# Timeline image field #}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 170 170">
+              <path fill="#005BA9" stroke="#005BA9" d="m135.796 135.775-1.84-11.995a1.864 1.864 0 0 0-3.685.565l1.558 10.154-77.48 11.889L36.824 32.179l47.986-7.363 4.243 27.652a1.863 1.863 0 0 0 2.125 1.56l27.653-4.243 3.65 23.79a1.863 1.863 0 1 0 3.685-.565l-3.934-25.633a1.841 1.841 0 0 0-.252-.687 1.834 1.834 0 0 0-.491-.534L87.475 21.192a1.88 1.88 0 0 0-1.388-.343l-51.67 7.929a1.863 1.863 0 0 0-1.56 2.125l18.09 117.892a1.863 1.863 0 0 0 2.125 1.56l81.165-12.455a1.86 1.86 0 0 0 1.559-2.125ZM88.894 26.855l26.765 19.644-23.205 3.56-3.56-23.204Z"/>
+              <path fill="#005BA9" stroke="#005BA9" d="M112.733 59.255a1.862 1.862 0 0 0-2.124-1.56l-58.795 9.023a1.863 1.863 0 1 0 .565 3.684l58.795-9.022a1.862 1.862 0 0 0 1.559-2.125ZM54.861 86.592l48.135-7.385a1.863 1.863 0 1 0-.565-3.684l-48.135 7.385a1.863 1.863 0 1 0 .565 3.684ZM57.347 102.791l39.027-5.989a1.863 1.863 0 1 0-.565-3.684l-39.027 5.989a1.863 1.863 0 1 0 .565 3.684ZM101.755 110.668a1.863 1.863 0 0 0-2.125-1.56l-40.363 6.194a1.863 1.863 0 1 0 .566 3.684l40.364-6.194a1.862 1.862 0 0 0 1.558-2.124ZM62.232 135.19l50.419-7.737a1.863 1.863 0 1 0-.566-3.684l-50.419 7.737a1.863 1.863 0 1 0 .566 3.684ZM124.322 72.85c-14.197 2.178-23.974 15.503-21.795 29.7 2.178 14.197 15.5 23.974 29.697 21.795 14.196-2.178 23.974-15.5 21.795-29.696-2.178-14.197-15.5-23.978-29.697-21.8Zm7.336 47.81c-12.164 1.866-23.581-6.513-25.447-18.677-1.867-12.167 6.512-23.584 18.676-25.45 12.164-1.867 23.581 6.512 25.448 18.68 1.866 12.164-6.513 23.58-18.677 25.447Z"/>
+              <path fill="#005BA9" stroke="#005BA9" d="m139.037 89.511-13.658 14.095-8.057-7.81a1.863 1.863 0 1 0-2.594 2.677l9.396 9.107a1.86 1.86 0 0 0 2.635-.041l14.955-15.434a1.863 1.863 0 1 0-2.677-2.594Z"/>
+            </svg>
+          </div>
+        </dd>
+        <dd class="item__content">
+          <div class="timeline-slot-header">
+            {# Timeline item title #}
+            <h3 class="timeline-slot-title">Timeline item title</h3>
+            {# Timeline item subtitle #}
+            <h4 class="timeline-slot-date">Timeline item subtitle</h4>
+          </div>
+          <div class="timeline-slot-content">
+            {# Timeline item text paragraph #}
+            <div class="content-text">
+              {% include '@important-note' with { type: 'payment',  note: 'Payment info'} %}
+
+              {% include '@paragraph' with {
+                'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+              } %}
+
+              {% include '@important-note' with { type: 'payment',  note: 'Payment info'} %}
+            </div>
+            <div class="content-btn">
+              {% include '@button' with {
+                type: 'primary',
+                modifier: 'icon-arrow-right',
+                text: 'CTA button'
+              } %}
+            </div>
+            {% include '@accordion--link' with {
+              buttonText: 'More info'
+            } %}
+          </div>
+        </dd>
+      </div>
+    </div>
+    <div class="timeline-slot" role="listitem">
+      <div class="item">
+        <dd class="item__image">
+          <div class="timeline-slot-content timeline-slot-content__img">
+            {# Timeline image field #}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 170 170">
+              <path fill="#005BA9" stroke="#005BA9" d="m135.796 135.775-1.84-11.995a1.864 1.864 0 0 0-3.685.565l1.558 10.154-77.48 11.889L36.824 32.179l47.986-7.363 4.243 27.652a1.863 1.863 0 0 0 2.125 1.56l27.653-4.243 3.65 23.79a1.863 1.863 0 1 0 3.685-.565l-3.934-25.633a1.841 1.841 0 0 0-.252-.687 1.834 1.834 0 0 0-.491-.534L87.475 21.192a1.88 1.88 0 0 0-1.388-.343l-51.67 7.929a1.863 1.863 0 0 0-1.56 2.125l18.09 117.892a1.863 1.863 0 0 0 2.125 1.56l81.165-12.455a1.86 1.86 0 0 0 1.559-2.125ZM88.894 26.855l26.765 19.644-23.205 3.56-3.56-23.204Z"/>
+              <path fill="#005BA9" stroke="#005BA9" d="M112.733 59.255a1.862 1.862 0 0 0-2.124-1.56l-58.795 9.023a1.863 1.863 0 1 0 .565 3.684l58.795-9.022a1.862 1.862 0 0 0 1.559-2.125ZM54.861 86.592l48.135-7.385a1.863 1.863 0 1 0-.565-3.684l-48.135 7.385a1.863 1.863 0 1 0 .565 3.684ZM57.347 102.791l39.027-5.989a1.863 1.863 0 1 0-.565-3.684l-39.027 5.989a1.863 1.863 0 1 0 .565 3.684ZM101.755 110.668a1.863 1.863 0 0 0-2.125-1.56l-40.363 6.194a1.863 1.863 0 1 0 .566 3.684l40.364-6.194a1.862 1.862 0 0 0 1.558-2.124ZM62.232 135.19l50.419-7.737a1.863 1.863 0 1 0-.566-3.684l-50.419 7.737a1.863 1.863 0 1 0 .566 3.684ZM124.322 72.85c-14.197 2.178-23.974 15.503-21.795 29.7 2.178 14.197 15.5 23.974 29.697 21.795 14.196-2.178 23.974-15.5 21.795-29.696-2.178-14.197-15.5-23.978-29.697-21.8Zm7.336 47.81c-12.164 1.866-23.581-6.513-25.447-18.677-1.867-12.167 6.512-23.584 18.676-25.45 12.164-1.867 23.581 6.512 25.448 18.68 1.866 12.164-6.513 23.58-18.677 25.447Z"/>
+              <path fill="#005BA9" stroke="#005BA9" d="m139.037 89.511-13.658 14.095-8.057-7.81a1.863 1.863 0 1 0-2.594 2.677l9.396 9.107a1.86 1.86 0 0 0 2.635-.041l14.955-15.434a1.863 1.863 0 1 0-2.677-2.594Z"/>
+            </svg>
+          </div>
+        </dd>
+        <dd class="item__content">
+          <div class="timeline-slot-header">
+            {# Timeline item title #}
+            <h3 class="timeline-slot-title">Timeline item title</h3>
+            {# Timeline item subtitle #}
+            <h4 class="timeline-slot-date">Timeline item subtitle</h4>
+          </div>
+          <div class="timeline-slot-content">
+            {# Timeline item text paragraph #}
+            <div class="content-text">
+              {% include '@important-note' with { type: 'timebound',  note: 'Time-bound info'} %}
+
+              {% include '@paragraph' with {
+                'text': 'This is the base font. Cake caramels jelly-o lemon drops gummies. Apple pie carrot cake pie powder ice cream icing sweet roll. Caramels chocolate gummies cotton candy dessert apple pie pastry gingerbread. Jelly beans toffee macaroon sweet roll.'
+              } %}
+
+              {% include '@important-note' with { type: 'timebound',  note: 'Time-bound info'} %}
+            </div>
+            <div class="content-btn">
+              {% include '@button' with {
+                type: 'primary',
+                modifier: 'icon-arrow-right',
+                text: 'CTA button'
+              } %}
+            </div>
+            {% include '@accordion--link' with {
+              buttonText: 'More info'
+            } %}
+          </div>
+        </dd>
+      </div>
+    </div>
+  </dl>
+  {# Timeline paragraph END #}
+</div>

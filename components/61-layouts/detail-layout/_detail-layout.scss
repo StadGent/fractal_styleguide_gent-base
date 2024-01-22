@@ -167,7 +167,7 @@
     margin-bottom: 60px;
   }
 
-  > .contact-details {
+  > .contact-details--with-image {
     @include col(12);
   }
 
@@ -207,11 +207,11 @@ aside.bottom {
   @extend %content-container;
 
   > * {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
     @include tablet {
-      margin-bottom: 120px;
+      margin-bottom: 60px;
     }
 
     @include desktop {

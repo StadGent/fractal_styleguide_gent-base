@@ -58,7 +58,7 @@ $week-breakpoint: '(min-width: 750px)';
     }
 
     &--date {
-      min-width: $bp-mobile;
+      min-width: calc($bp-mobile - 70px);
     }
 
     &--times {
@@ -188,6 +188,7 @@ $week-breakpoint: '(min-width: 750px)';
 
       &--day-open,
       &--day-closed {
+        outline-offset: 0;
         cursor: pointer;
 
         &[tabindex='0'] > span,
@@ -220,11 +221,11 @@ $week-breakpoint: '(min-width: 750px)';
       &--details {
         display: none;
         position: absolute;
-        width: calc(100% - #{$month-day-size-mobile *.5});
+        width: calc(100% - #{$month-day-size-mobile * .5});
         cursor: default;
 
         @include phablet {
-          width: calc(100% - #{$month-day-size *.5});
+          width: calc(100% - #{$month-day-size * 2});
         }
       }
 

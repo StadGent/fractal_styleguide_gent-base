@@ -2,7 +2,11 @@
   .programme__inner {
     @include theme('background-color', 'color-tertiary-light');
 
-    padding: 120px 135px;
+    padding: 24px;
+
+    @include desktop {
+      padding: 120px 135px;
+    }
   }
 
   .read-more {
@@ -43,11 +47,6 @@
   /// Programme detail
   ///
   &-detail {
-    ul {
-      font-size: .8rem;
-      list-style: disc;
-    }
-
     .image-gallery--wrapper {
       margin: 1rem 0;
 

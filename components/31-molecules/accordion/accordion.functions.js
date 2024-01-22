@@ -44,8 +44,10 @@
         },
         init: true,
         buttonSelector: 'button.accordion--button',
+        linkSelector: 'button.accordion--link--button',
         accordionExpandedClass: 'accordion--expanded'
       };
+
       const keys = Object.keys(defaults);
       options = options || {};
 
@@ -56,7 +58,14 @@
       return options;
     })();
 
-    const buttons = elem.querySelectorAll(options.buttonSelector);
+    // Check if there's a More info link
+    let buttons;
+    if (elem.querySelectorAll(options.linkSelector).length === 0) {
+      buttons = elem.querySelectorAll(options.buttonSelector);
+    }
+    else {
+      buttons = elem.querySelectorAll(options.linkSelector);
+    }
 
     /**
      * Toggle aria-expanded attributes and trigger visibility Change function.
@@ -151,6 +160,7 @@
 
       const accordionContent = elem.querySelector(`#${button.getAttribute('aria-controls')}`);
       const accordionContentImage = elem.querySelector(`#${button.getAttribute('data-controls-img')}`);
+
       if (!accordionContent) {
         return;
       }
@@ -160,7 +170,6 @@
         accordionContent.setAttribute('aria-hidden', 'false');
         accordionContent.removeAttribute('hidden');
         expandedContent.push(accordionContent);
-        options.expand(button, accordionContent);
         if (accordionContentImage) {
           accordionContentImage.classList.add(options.accordionExpandedClass);
           accordionContentImage.setAttribute('aria-hidden', 'false');
@@ -168,6 +177,7 @@
           expandedContent.push(accordionContentImage);
           options.expand(button, accordionContentImage);
         }
+        options.expand(button, accordionContent);
       }
       else {
         accordionContent.classList.remove(options.accordionExpandedClass);
@@ -175,9 +185,6 @@
         if (isInitial) {
           accordionContent.setAttribute('hidden', 'hidden');
         }
-        expandedContent.filter(content => content !== accordionContent);
-        options.collapse(button, accordionContent);
-
         if (accordionContentImage) {
           accordionContentImage.classList.remove(options.accordionExpandedClass);
           accordionContentImage.setAttribute('aria-hidden', 'true');
@@ -187,6 +194,8 @@
           expandedContent.filter(content => content !== accordionContentImage);
           options.collapse(button, accordionContentImage);
         }
+        expandedContent.filter(content => content !== accordionContent);
+        options.collapse(button, accordionContent);
       }
     };
 
@@ -196,8 +205,9 @@
      * @param {Object} event  The js event.
      */
     window.onclick = function (event) {
-      if (!event.target.matches('.dropdown button, .opening-hours *')) {
-        var dropdowns = document.getElementsByClassName('dropdown');
+      if (!event.target.matches('.dropdown button, .opening-hours *, .dropdown--link button')) {
+        var dropdowns = elem.getElementsByClassName('dropdown');
+        /* eslint-disable */
         for (var i = 0; i < dropdowns.length; i++) {
           var button = dropdowns[i].querySelector('button');
 
@@ -226,6 +236,37 @@
             options.collapse(button, accordionContentImage);
           }
         }
+
+        var dropdownlinks = elem.getElementsByClassName('dropdown--link');
+        for (var i = 0; i < dropdownlinks.length; i++) {
+          var link = dropdowns[i].querySelector('button.accordion--link--button');
+
+          if (link.getAttribute('aria-expanded') === 'false') {
+            return;
+          }
+
+          const accordionContent = dropdowns[i].querySelector(`#${link.getAttribute('aria-controls')}`);
+          const accordionContentImage = dropdowns[i].querySelector(`#${link.getAttribute('data-controls-img')}`);
+          if (!accordionContent) {
+            return;
+          }
+
+          accordionContent.classList.remove(options.accordionExpandedClass);
+          accordionContent.setAttribute('aria-hidden', 'true');
+          accordionContent.setAttribute('hidden', 'hidden');
+          expandedContent.filter(content => content !== accordionContent);
+          options.collapse(link, accordionContent);
+          link.setAttribute('aria-expanded', 'false');
+
+          if (accordionContentImage) {
+            accordionContentImage.classList.remove(options.accordionExpandedClass);
+            accordionContentImage.setAttribute('aria-hidden', 'true');
+            accordionContentImage.setAttribute('hidden', 'hidden');
+            expandedContent.filter(content => content !== accordionContentImage);
+            options.collapse(link, accordionContentImage);
+          }
+        }
+        /* eslint-enable */
       }
     };
 

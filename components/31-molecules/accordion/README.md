@@ -24,6 +24,7 @@ Alternatives to using an accordion component:
 There are two types of accordions:
 * Single expandable item
 * Multiple expandable items
+* Expandable item with link
 
 Adding the class 'dropdown' will add the following behaviour: when you click on an element that isn't a dropdown, all dropdowns will be closed. This behaviour is used in the case of an application that doesn't refresh when clicking a button or link.
 
@@ -48,6 +49,12 @@ Accordions with multiple expandable items are displayed in a list of items with 
 By default, all the expandable items are collapsed. Multiple items can be expanded at the same time.
 
 The expandable items each have a label that tells what content is in the item. Do not start the label with a verb that describes the collapsing or expanding. This is not necessary because the item is already in an accordion. For example, if an item is about transportation by train, don't use a label "Show transportation by train" but use "Transportation by train" instead.
+
+### Expandable item with link
+
+Accordions that should be opened with a link, should have the `.accordion--link` class with buttons that have an `.accordion--link--button` class.
+
+Make sure the ID is unique and the same in the aria-controls of the button.
 
 ## Markup
 

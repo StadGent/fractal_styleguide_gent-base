@@ -3,13 +3,16 @@ ol {
   @include large-text();
   position: relative;
 
-  li,
-  li > a {
-    font-family: $default-font-family;
-    line-height: 1.5;
+  ul {
+    margin-left: 40px;
   }
 
-  li {
+  ul,
+  ol {
+    margin-top: 5px;
+  }
+
+  & > li {
     margin: 0 0 10px;
 
     &:last-child {
@@ -19,6 +22,10 @@ ol {
 
   a {
     @include normal-text;
+
+    &.standalone-link {
+      @include semi-bold-text;
+    }
   }
 
   &.links {
@@ -32,7 +39,7 @@ ol {
     flex-wrap: wrap;
     margin: 0;
 
-    li {
+    & > li {
       width: auto;
       margin-right: $gutter-width;
       margin-bottom: 0;
@@ -54,16 +61,16 @@ ol {
     margin: 0;
     padding: 0;
 
-    li {
+    & > li {
       display: inline-block;
       margin: 0;
       padding: 0;
-    }
 
-    li:not(:last-of-type)::after {
-      display: inline;
-      padding: 0 4px 0 0;
-      content: ',';
+      &:not(:last-of-type)::after {
+        display: inline;
+        padding: 0 4px 0 0;
+        content: ',';
+      }
     }
 
     div {
@@ -81,7 +88,7 @@ ul {
 
     margin-left: 0;
 
-    li {
+    & > li {
       @include icon('checkmark');
 
       position: relative;
@@ -105,14 +112,14 @@ ul {
     list-style-type: none;
 
     &.inline {
-      li {
+      & > li {
         align-items: center;
         margin-right: 13px;
         margin-bottom: 0;
       }
     }
 
-    li {
+    & > li {
       position: relative;
       margin-bottom: 16px;
       padding-left: 29px; // 24px icon size + 5px gutter.
@@ -125,7 +132,7 @@ ul {
       ul {
         margin: 0;
 
-        li {
+        & > li {
           margin-bottom: 4px;
         }
       }
@@ -148,7 +155,6 @@ ul {
       i {
         display: block;
         position: absolute;
-        top: 0;
         left: 0;
         line-height: 1;
       }
@@ -175,7 +181,7 @@ ul {
     margin: -4px;
     list-style: none;
 
-    li {
+    & > li {
       @include theme('background-color', 'color-none', 'tag-filter-background-color');
       @include icon('tag');
 
@@ -219,7 +225,7 @@ ol {
   list-style: none;
   counter-reset: item;
 
-  li {
+  & > li {
     position: relative;
     counter-increment: item;
 

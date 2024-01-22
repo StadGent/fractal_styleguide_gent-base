@@ -9,6 +9,7 @@
 }
 
 html {
+  display: grid;
   height: 100%;
   background: color('white');
   font: $default-font-weight $default-font-size $default-font-family;
@@ -76,11 +77,6 @@ address {
   font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
 p,
 span,
 input,
