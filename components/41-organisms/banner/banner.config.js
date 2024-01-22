@@ -1,10 +1,9 @@
 'use strict';
 
 module.exports = {
-  status: 'beta',
+  preview: '@preview-without-padding',
   context: {
-    multiple: false,
-    images: [
+    image: [
       {
         src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
         alt: 'placeholder image alternative text',

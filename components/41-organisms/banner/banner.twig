@@ -1,8 +1,9 @@
-<div class="banner-image">
-    {% include '@image-gallery' with {
-        type: '',
-        src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
-        alt: images|first.alt,
-        caption: images|first.caption
-    } %}
+<div class="banner-image-container full-width">
+    <div class="banner-image">
+        {% include '@image' with {
+            src: 'https://via.placeholder.com/1800x500&text=18:5+(1800x500)',
+            alt_text: image|first.alt,
+            caption: image|first.caption
+        } %}
+    </div>
 </div>

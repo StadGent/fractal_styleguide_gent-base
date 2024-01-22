@@ -359,3 +359,7 @@
   font: inherit;
   cursor: pointer;
 }
+
+.full-width {
+  @include full-width;
+}

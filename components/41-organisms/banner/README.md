@@ -2,7 +2,7 @@
 
 ## When to use this component
 
-Use the image component to present a full-width image banner on a page.
+Use the image component to present a full-width image banner on a page. The banner is a simple image shown in the aspect ratio of the image itself (so not 8:5 by default) with a max-width of the maximum grid container size, set in the `$bp-container` variable, or the viewport width (for smaller screens).
 
 ## How it works
 

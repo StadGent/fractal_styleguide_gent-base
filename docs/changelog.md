@@ -104,6 +104,9 @@ variation for your use case.
 - Wide teaser has no changes except for heading change and accolade removal, see above. The image has a 1:1 ratio.
 - Square double teaser added.
 
+### Banner organism
+A `banner-image-container full-width` wrapper is added. The image inside is not a gallery but a simple image shown without `data-ratio` attribute.
+
 ### Collection organism
 The grid system is updated (Susy is removed), an example is added to the readme. The old (legacy) grid classes still work for now.
 
