@@ -1,17 +1,24 @@
 .banner-image {
-  .media {
+  position: relative;
+  max-width: calc($bp-container + $container-padding*2);
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  text-align: center;
+
+  figure {
+    display: inline-block;
     position: relative;
+    max-width: 100%;
 
     img {
-      display: block;
-      width: 100%;
+      width: auto;
+      margin: 0 auto;
     }
   }
 
   figcaption {
     display: none;
-    max-width: $bp-max-content;
-    padding: 1px 10px;
+    max-width: $bp-container;
 
     @include tablet {
       display: block;
