@@ -13,9 +13,9 @@
   .content-container {
     display: flex;
     flex-wrap: wrap;
-    max-width: calc(#{$bp-max-content} + 54px);
+    max-width: calc(#{$bp-max-content} + 53px);
 
-    @media (min-width: $bp-max-content + 54px) {
+    @media (min-width: $bp-max-content + 53px) {
       max-width: $bp-max-content;
       padding-right: 0;
       padding-left: 0;
@@ -129,7 +129,11 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px;
+
+    @media (min-width: $bp-max-content + 53px) {
+      padding: 20px 0;
+    }
 
     &.content-container {
       justify-content: space-between;
