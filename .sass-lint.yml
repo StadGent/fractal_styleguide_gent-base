@@ -52,6 +52,7 @@ rules:
       - margin-top
       - margin-bottom
   no-empty-rulesets: 2
+
   no-extends: 0
   no-ids: 2
   no-important: 2
@@ -60,6 +61,8 @@ rules:
   no-misspelled-properties:
     - 2
     - extra-properties:
+      - 'gap'
+      - 'container-type'
       - '*font-family'
       - '*height'
       - 'interpolation-mode'
