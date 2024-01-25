@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
-  gap: $gap; // sass-lint:disable-line no-misspelled-properties
+  gap: $gap;
 
   @if type-of($content-well-max-width) == number and $content-well-max-width != 0 and $full-width == "false" {
     max-width: $content-well-max-width;
