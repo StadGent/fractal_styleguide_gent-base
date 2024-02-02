@@ -67,6 +67,11 @@
     > .checkbox.full-width,
     > .checkbox-filter__category {
       flex-basis: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     > [hidden] {

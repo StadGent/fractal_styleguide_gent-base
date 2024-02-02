@@ -2,7 +2,7 @@
   @include theme('background-color', 'color-tertiary-light', 'table-of-contents-background-color');
   @include medium-text;
   padding: 1.5rem;
-  container-type: inline-size;  // sass-lint:disable-line no-misspelled-properties
+  container-type: inline-size;
 
   h4 {
     margin-top: 0;

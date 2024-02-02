@@ -6,7 +6,7 @@ $grid-gutter-width: 65px;
   display: flex;
   flex-wrap: wrap;
   margin: 70px auto 80px;
-  gap: $grid-gutter-width; // sass-lint:disable-line no-misspelled-properties
+  gap: $grid-gutter-width;
 
   .sidebar {
     @include desktop {

@@ -3,7 +3,7 @@ $grid-gutter-width: $gutter-width;
 .form--multistep {
   display: flex;
   flex-direction: column;
-  gap: $grid-gutter-width; // sass-lint:disable-line no-misspelled-properties
+  gap: $grid-gutter-width;
 
   @include desktop {
     display: flex;
