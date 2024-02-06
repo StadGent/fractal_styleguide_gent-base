@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "6.0.0-beta1",
+  "version": "6.0.0-beta3",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@babel/core": "^7.20.12",

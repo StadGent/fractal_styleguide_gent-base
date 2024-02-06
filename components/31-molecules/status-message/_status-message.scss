@@ -13,7 +13,7 @@
   margin-top: 20px;
   margin-right: 0;
   margin-bottom: 20px;
-  padding: 40px;
+  padding: 100px 40px 40px;
   border-bottom: 3px solid;
   font-size: .9rem;
 
@@ -25,16 +25,16 @@
   &::before {
     @include theme('color', 'color-info', 'info-message-icon-color');
 
-    display: block;
+    position: absolute;
+    top: 40px;
+    left: 40px;
     width: calc($status-message-icon-size + 20px);
-    margin-right: 0;
     padding-bottom: 20px;
     font-size: $status-message-icon-size;
     line-height: $status-message-icon-size;
     text-align: left;
 
     @include phablet {
-      position: absolute;
       top: 60px;
       left: 60px;
       padding-right: 20px;
@@ -80,21 +80,6 @@
 
     a {
       @include link-background('color-zero', 'color-warning-light--darken-1');
-    }
-  }
-
-  > * {
-    &:not(a) {
-      @include phablet {
-        display: inline-block;
-        vertical-align: top;
-      }
-    }
-
-    &:not(a, i) {
-      @include phablet {
-        width: calc(100% - ($status-message-icon-size + 25px));
-      }
     }
   }
 

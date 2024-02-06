@@ -19,7 +19,7 @@
       max-width: $bp-max-content;
       padding-right: 0;
       padding-left: 0;
-      gap: $grid-gutter-width; // sass-lint:disable-line no-misspelled-properties
+      gap: $grid-gutter-width;
     }
   }
 
@@ -130,6 +130,7 @@
     flex-wrap: wrap;
     align-items: center;
     padding: 20px;
+    gap: 20px;
 
     @media (min-width: $bp-max-content + 53px) {
       padding: 20px 0;

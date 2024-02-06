@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 4rem;
-  gap: $grid-gutter-width; // sass-lint:disable-line no-misspelled-properties
+  gap: $grid-gutter-width;
 
   .sidebar {
     width: 100%;

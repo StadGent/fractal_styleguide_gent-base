@@ -191,18 +191,20 @@ $week-breakpoint: '(min-width: 750px)';
         outline-offset: 0;
         cursor: pointer;
 
-        &[tabindex='0'] > span,
-        &:hover > span {
-          @include theme('border-color', 'color-zero', 'opening-hours-color');
-          border: 2px solid;
-        }
+        &.openinghours--day-active {
+          > span {
+            @include bold-text;
+          }
 
-        &[tabindex='0'] > span {
-          @include bold-text;
-        }
+          & > span,
+          &:hover > span {
+            @include theme('border-color', 'color-zero', 'opening-hours-color');
+            border: 2px solid;
+          }
 
-        &[tabindex='0'] .openinghours--details {
-          display: block;
+          .openinghours--details {
+            display: block;
+          }
         }
       }
 
