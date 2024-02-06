@@ -11,21 +11,21 @@ h6,
 .h5,
 .h6 {
   &[class*="bg-"] {
-    span {
-      padding: .125rem .5rem;
+    > span {
+      padding: 2.5px 10px;
       box-decoration-break: clone;
     }
   }
 
   &.bg-primary {
-    span {
+    > span {
       @include theme('color', 'color-none', 'heading-with-bg-color');
       @include theme('background-color', 'color-primary', 'heading-with-bg-background-color');
     }
   }
 
   &.bg-none {
-    span {
+    > span {
       @include theme('color', 'color-zero', 'heading-with-white-bg-color');
       @include theme('background-color', 'color-none', 'heading-with-white-bg-background-color');
     }
@@ -35,8 +35,8 @@ h6,
 h1,
 .h1 {
   &[class^="bg-"] {
-    span {
-      padding: .15rem .75rem;
+    > span {
+      padding: 3px 15px;
     }
   }
 }

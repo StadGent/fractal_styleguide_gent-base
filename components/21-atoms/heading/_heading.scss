@@ -17,6 +17,10 @@ h5,
 
   font-style: normal;
 
+  &:not(:first-child) {
+    margin-top: 45px;
+  }
+
   button {
     display: flex;
     padding: 0;
@@ -37,23 +41,27 @@ h5,
 h1,
 .h1,
 %h1 {
-  margin: 0 0 30px;
+  margin-bottom: 50px;
 }
 
 h2,
 .h2,
 %h2 {
-  margin: 0 0 20px;
+  margin-bottom: 40px;
 }
 
 h3,
 .h3,
-%h3,
+%h3 {
+  margin-bottom: 35px;
+}
+
+
 h4,
 .h4,
 %h4,
 h5,
 .h5,
 %h5 {
-  margin: 0 0 15px;
+  margin-bottom: 25px;
 }

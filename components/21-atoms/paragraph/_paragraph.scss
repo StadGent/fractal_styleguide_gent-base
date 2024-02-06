@@ -1,4 +1,14 @@
 p {
+  @include large-text();
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 177.778%;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
   .dark-background & {
     @include theme('color', 'color-none', 'default-text-color-inverse');
   }

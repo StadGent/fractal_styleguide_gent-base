@@ -9,8 +9,11 @@
     padding: 60px;
   }
 
-  h1 {
+  h2,
+  h3 {
     @include theme('color', 'color-none', 'feature-block-primary-color');
+
+    margin-bottom: 20px;
   }
 
   > :first-child {
@@ -25,7 +28,6 @@
     @include theme('color', 'color-zero', 'feature-block-secondary-color');
     @include theme('background-color', 'color-secondary', 'feature-block-secondary-background-color');
 
-    h1,
     h2,
     h3 {
       @include theme('color', 'color-zero', 'feature-block-secondary-color');
