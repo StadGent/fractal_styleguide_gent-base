@@ -191,7 +191,7 @@ $week-breakpoint: '(min-width: 750px)';
         outline-offset: 0;
         cursor: pointer;
 
-        &.openinghours--day-active {
+        &[tabindex='0'] {
           > span {
             @include bold-text;
           }
