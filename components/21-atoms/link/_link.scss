@@ -9,6 +9,7 @@ a {
   position: relative;
   text-decoration: none;
   word-wrap: break-word;
+  word-break: break-all;
 
   &::before,
   &::after {
