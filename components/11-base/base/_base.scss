@@ -61,16 +61,9 @@ dl,
 table,
 address,
 pre {
-  margin-bottom: .5em;
+  margin-bottom: 10px;
   font-size: inherit;
   line-height: inherit;
-}
-
-p {
-  @include large-text();
-
-  margin-bottom: 20px;
-  line-height: 177.778%;
 }
 
 address {
