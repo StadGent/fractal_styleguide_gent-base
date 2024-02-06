@@ -16,17 +16,17 @@
 
 .overview-layout {
   @extend %content-container;
-  margin-bottom: 4rem;
+  margin-bottom: 80px;
 
   > .content-header-container {
-    margin-right: -1rem;
-    margin-left: -1rem;
+    margin-right: -20px;
+    margin-left: -20px;
 
     @include tablet {
-      width: calc(100% + 6.75rem * 2);
-      margin-left: -6.75rem;
-      padding-right: 6.75rem;
-      padding-left: 6.75rem;
+      width: calc(100% + 135px * 2);
+      margin-left: -135px;
+      padding-right: 135px;
+      padding-left: 135px;
     }
 
     &:not(.image) {
@@ -38,22 +38,22 @@
         @include col(12);
 
         position: relative;
-        margin-top: -7.5rem;
+        margin-top: -150px;
         z-index: 1;
 
         @include tablet {
-          margin-top: -6rem;
+          margin-top: -120px;
         }
       }
 
       + .partner-block,
       + p {
         max-width: 100%;
-        padding: 1rem;
+        padding: 20px;
         background-color: color('white');
 
         @include tablet {
-          padding: 3rem;
+          padding: 60px;
         }
       }
     }
