@@ -9,7 +9,7 @@ a {
   position: relative;
   text-decoration: none;
   word-wrap: break-word;
-  word-break: break-all;
+  word-break: break-word;
 
   &::before,
   &::after {
