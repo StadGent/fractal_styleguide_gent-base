@@ -60,9 +60,9 @@
       // @todo: + .teasers
       & + .summary-box,
       & + .table-of-contents,
-      & + .partner-block {
+      & + .partner-block,
+      & + p {
         @include col(12);
-
         margin-top: -150px;
 
         @include tablet {
@@ -70,11 +70,13 @@
         }
       }
 
-      + .partner-block
+      + .partner-block,
       + p {
+        position: relative;
         max-width: 100%;
         padding: 20px;
         background-color: color('white');
+        z-index: 1;
 
         @include tablet {
           padding: 60px;
