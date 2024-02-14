@@ -1,14 +1,13 @@
-.programme {
-  .programme__inner {
-    @include theme('background-color', 'color-tertiary-light');
+.programme-wrapper {
+  @include theme('background-color', 'color-tertiary-light');
+  padding: 24px;
 
-    padding: 24px;
-
-    @include desktop {
-      padding: 120px 135px;
-    }
+  @include desktop {
+    padding: 120px 135px;
   }
+}
 
+.programme {
   .read-more {
     font-size: .8rem;
     line-height: normal;
