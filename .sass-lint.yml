@@ -21,6 +21,7 @@ rules:
       - desktop-and-below
       - desktop-xl
       - desktop
+      - mobile
       - phablet
       - tablet
       - tablet-only
