@@ -6,7 +6,8 @@ h5,
 h6 {
   &.overview-title {
     @extend %h2;
+
     max-width: 100%;
-    margin-bottom: 45px;
+    margin-top: 0;
   }
 }
