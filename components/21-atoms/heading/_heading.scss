@@ -15,10 +15,11 @@ h5,
 %h5 {
   @include bold-text;
 
+  margin-top: 40px;
   font-style: normal;
 
-  &:not(:first-child) {
-    margin-top: 40px;
+  &:first-child {
+    margin-top: 0;
   }
 
   // If the heading is preceded by any empty first-child element, strip its top
