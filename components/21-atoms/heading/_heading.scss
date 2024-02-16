@@ -21,6 +21,12 @@ h5,
     margin-top: 40px;
   }
 
+  // If the heading is preceded by any empty first-child element, strip its top
+  // margin.
+  *:first-child:empty + & {
+    margin-top: 0;
+  }
+
   button {
     display: flex;
     padding: 0;
