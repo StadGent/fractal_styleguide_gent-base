@@ -188,6 +188,7 @@
   /// Links in the footer should never have icons.
   ///
   [class*="cs--"] & a {
+    &[href^="http://"]:not(.no-icon):not(.tag),
     &[href^="https://"]:not(.no-icon):not(.tag) {
       margin-right: inherit;
 
