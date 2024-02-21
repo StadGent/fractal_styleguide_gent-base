@@ -176,7 +176,8 @@
 
   .w12,
   > .timeline-wrapper,
-  > .programme-wrapper {
+  > .programme-wrapper,
+  > .roadmap-wrapper {
     @include col(12);
     @include extra-wide;
   }
