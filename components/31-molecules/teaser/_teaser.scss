@@ -152,15 +152,6 @@
           }
         }
       }
-
-      p,
-      ul:not(.tag-list),
-      ol {
-        @include theme('color', 'default-text-color', 'help-text-color');
-
-        font-size: .8rem;
-        line-height: 1.4rem;
-      }
     }
   }
 
