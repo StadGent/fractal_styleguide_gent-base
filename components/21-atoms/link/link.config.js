@@ -15,6 +15,12 @@ module.exports = {
       }
     },
     {
+      name: 'Link with gent.be',
+      context: {
+        link: 'https://uitingent.be'
+      }
+    },
+    {
       name: 'download-link',
       context: {
         link: '#',

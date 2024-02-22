@@ -37,8 +37,8 @@
       a,
       a[href^="mailto:"],
       a[download],
-      a[href^="http://"],
-      a[href^="https://"] {
+      a[href^="http://"]:not([href*="gent.be"]),
+      a[href^="https://"]:not([href*="gent.be"]) {
         @include reset-link-background;
         @include theme('color', 'color-tertiary', 'default-text-color');
 

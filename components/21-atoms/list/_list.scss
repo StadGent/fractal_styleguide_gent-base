@@ -144,8 +144,8 @@ ul {
         &[href^="mailto:"]:not(.button),
         &[href^="tel:"]:not(.button),
         &[download]:not(.button),
-        &[href^="http://"]:not(.button),
-        &[href^="https://"]:not(.button) {
+        &[href^="http://"]:not(.button):not([href*="gent.be"]),
+        &[href^="https://"]:not(.button):not([href*="gent.be"]) {
           &::after {
             display: none; // hide default link icons
           }

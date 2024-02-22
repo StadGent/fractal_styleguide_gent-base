@@ -98,8 +98,8 @@
     display: block;
     border: 0;
 
-    &[href^="http://"],
-    &[href^="https://"] {
+    &[href^="http://"]:not([href*="gent.be"]),
+    &[href^="https://"]:not([href*="gent.be"]) {
       &:not(.no-icon):not(.tag) {
         margin-right: 0;
       }
