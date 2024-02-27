@@ -17,8 +17,8 @@
 
       &,
       &[download]:not(.button),
-      &[href^="http://"]:not(.button),
-      &[href^="https://"]:not(.button) {
+      &[href^="http://"]:not(.button):not([href*="gent.be"]),
+      &[href^="https://"]:not(.button):not([href*="gent.be"]) {
         @include theme('background-color', 'color-quaternary--lighten-2', 'button-secondary-background');
         @include theme('color', 'color-zero', 'button-secondary-color');
 
