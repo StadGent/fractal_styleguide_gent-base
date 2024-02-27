@@ -42,8 +42,8 @@ nav.menu {
       a,
       a[href^="mailto:"],
       a[download],
-      a[href^="http://"],
-      a[href^="https://"] {
+      a[href^="http://"]:not([href*="gent.be"]),
+      a[href^="https://"]:not([href*="gent.be"]) {
         @include reset-link-background;
         @include link-underlined;
 

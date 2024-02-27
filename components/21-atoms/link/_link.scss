@@ -50,8 +50,8 @@ a {
 
     &[download] {
       &:not(.no-icon):not(.tag),
-      &[href^="http://"],
-      &[href^="https://"] {
+      &[href^="http://"]:not([href*="gent.be"]),
+      &[href^="https://"]:not([href*="gent.be"]) {
         @include button-icon;
         @include icon(download, 'after');
 
@@ -73,8 +73,8 @@ a {
   }
 
   &.button:not(.no-icon):not([class^="icon-"]):not([download]) {
-    &[href^="http://"],
-    &[href^="https://"] {
+    &[href^="http://"]:not([href*="gent.be"]),
+    &[href^="https://"]:not([href*="gent.be"]) {
       @include button-icon;
       @include icon(arrow-right-top, 'after');
     }
@@ -94,13 +94,16 @@ a {
 
   }
 
-  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back):not(.refresh),
-  &.button:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]) {
+  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([href*="gent.be"]):not(.back):not(.refresh),
+  &.button:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([class*="icon-"]),
+  &.standalone-link[href*="gent.be"],
+  &.button[href*="gent.be"] {
     @extend %a-arrow-animation;
   }
 
 
-  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back):not(.refresh) {
+  &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not([href*="gent.be"]):not(.back):not(.refresh),
+  &.standalone-link[href*="gent.be"] {
     @include icon(arrow-right, after);
   }
 
@@ -128,8 +131,8 @@ a {
   ///
   /// External links get an indicator.
   ///
-  &[href^="http://"]:not(.no-icon):not(.tag),
-  &[href^="https://"]:not(.no-icon):not(.tag) {
+  &[href^="http://"]:not(.no-icon):not(.tag):not([href*="gent.be"]),
+  &[href^="https://"]:not(.no-icon):not(.tag):not([href*="gent.be"]) {
     @include icon(arrow-right-top, after);
 
     &[download]:not(.button):not(.no-icon) {
@@ -274,8 +277,8 @@ a {
 /// External links other than group Ghent get an indicator.
 ///
 %a-remove-indicator {
-  &[href^="http://"],
-  &[href^="https://"] {
+  &[href^="http://"]:not([href*="gent.be"]),
+  &[href^="https://"]:not([href*="gent.be"]) {
     &:not([download]):not(.standalone-link) {
       margin-right: 0;
 
@@ -301,8 +304,8 @@ a {
   }
 
   &.button {
-    &[href^="http://"]:not(.no-icon),
-    &[href^="https://"]:not(.no-icon) {
+    &[href^="http://"]:not(.no-icon):not([href*="gent.be"]),
+    &[href^="https://"]:not(.no-icon):not([href*="gent.be"]) {
       @extend %a-arrow-animation;
       @include icon(arrow-right);
 
