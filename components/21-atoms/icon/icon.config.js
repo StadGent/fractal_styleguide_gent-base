@@ -102,6 +102,7 @@ const icons = [
   'subscribe',
   'tag',
   'target',
+  'tiktok',
   'trashcan',
   'twitter-outline',
   'twitter',
