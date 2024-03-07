@@ -227,6 +227,7 @@ ol {
 
   & > li {
     position: relative;
+    padding-left: 40px;
     counter-increment: item;
 
     &::before {
@@ -236,6 +237,7 @@ ol {
       width: 30px;
       height: 30px;
       margin-right: 10px;
+      margin-left: -40px;
       font-size: .9rem;
       line-height: 177.778%;
       text-align: center;
