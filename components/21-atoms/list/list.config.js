@@ -5,7 +5,8 @@ module.exports = {
   context: {
     items: [
       'item 1',
-      'item 2'
+      'item 2 with more words to display how a longer list item behaves',
+      'item 3'
     ],
     definitions: [
       'description 1',
