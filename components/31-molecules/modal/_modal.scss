@@ -125,6 +125,12 @@
       padding: 16px 70px 60px;
     }
 
+    figure {
+      img {
+        width: auto;
+      }
+    }
+
     p {
       &:last-child {
         margin-bottom: 0;
