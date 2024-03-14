@@ -3,13 +3,6 @@ img {
   height: auto;
 }
 
-figure {
-  img {
-    display: block;
-    width: 100%;
-  }
-}
-
 .image-wrapper {
   @include theme('background-color', 'color-tertiary--lighten-5', 'image-placeholder-background-color');
 
