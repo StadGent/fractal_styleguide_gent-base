@@ -53,15 +53,7 @@
       }
 
       > .modal-actions {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        margin-top: -76px;
         padding-top: 30px;
-
-        @include tablet {
-          position: static;
-        }
       }
     }
   }
@@ -149,13 +141,13 @@
     flex-shrink: 0;
     align-items: center;
     width: 100%;
-    padding: 30px 20px 60px;
+    padding: 30px 20px;
     z-index: z('modal', 'actions');
 
     @include tablet {
       position: relative;
       margin-top: -15px;
-      padding: 0 70px 60px;
+      padding: 0 70px 30px;
     }
   }
 

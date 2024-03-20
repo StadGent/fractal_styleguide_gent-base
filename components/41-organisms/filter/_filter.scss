@@ -115,18 +115,16 @@
     }
 
     > .modal-content {
-      margin-bottom: 30px;
-
       @include desktop {
+        margin-bottom: 30px;
         padding: 0;
         overflow: visible;
       }
     }
 
     > .modal-actions {
-      margin-top: 10px;
-
       @include desktop {
+        margin-top: 10px;
         padding-right: 0;
         padding-left: 0;
         border: 0;
