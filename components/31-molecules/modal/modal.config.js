@@ -25,10 +25,25 @@ module.exports = {
   },
   variants: [
     {
+      name: 'fixed-height',
+      context: {
+        id: 'modal-fixed-height',
+        modifier: 'fixed-height'
+      }
+    },
+    {
       name: 'with-actions',
       context: {
         id: 'modal-actions',
         actions: '<button type="button" class="button button-primary modal-close" data-target="modal-actions">Understood!</button>'
+      }
+    },
+    {
+      name: 'with-actions-and-fixed-height',
+      context: {
+        id: 'modal-actions-fixed-height',
+        actions: '<button type="button" class="button button-primary modal-close" data-target="modal-actions">Understood!</button>',
+        modifier: 'fixed-height'
       }
     }
   ]

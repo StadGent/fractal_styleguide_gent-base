@@ -41,7 +41,8 @@ Changed `<input>` to `<button>`. This is important to be able to use the hover e
 environment, fullscreen-enter, fullscreen-exit, ghent, health, info-circle,
 layers, link, living, map, mobility, next, pause, pinterest, play, previous,
 question, question-circle, refresh, settings, shopping, stop, tag, target,
-view-grid, view-list, virus, whatsapp, wheelchair-no, work
+view-grid, view-list, virus, whatsapp, wheelchair-no, work, uitpas, uit-met-vlieg,
+sign-language, spoken-language
 
 Some icons have been updated, using the same machine name.
 
