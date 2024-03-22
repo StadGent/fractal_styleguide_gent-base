@@ -14,8 +14,9 @@
 
       display: inline-flex;
       align-items: center;
-      margin-right: .4rem;
+      margin-right: 8px;
       margin-bottom: 0;
+      padding-left: 0;
 
       &::before {
         display: none;
@@ -24,7 +25,7 @@
       &::after {
         @include theme('color', 'color-primary', 'breadcrumb-arrows-color');
 
-        margin: 0 0 0 .4rem;
+        margin: 0 0 0 8px;
       }
 
       &:last-of-type {
@@ -70,10 +71,10 @@
     a {
       @include bold-text;
 
-      padding: 0 .35rem;
+      padding: 0 7px;
       border-color: transparent;
       outline: 2px solid currentColor;
-      line-height: .95rem;
+      line-height: 19px;
 
       &:hover,
       &:focus {
@@ -104,7 +105,7 @@
         align-items: center;
 
         li:not(.expandable) {
-          min-width: 3rem;
+          min-width: 60px;
 
           a,
           span {
