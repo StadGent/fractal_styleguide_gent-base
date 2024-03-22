@@ -102,15 +102,26 @@
       order: 1;
 
       .tags-label-wrapper {
+        display: flex;
         position: absolute;
         top: -15px;
         left: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
         margin: 0;
+        padding: 0 20px 0 0;
         z-index: 3;
 
-        .label ~ .tag-list-wrapper {
-          top: -4px;
-          margin-left: 5px;
+        .label {
+          margin: 0 10px 10px 0;
+        }
+
+        ul {
+          margin: 0;
+
+          > li {
+            margin: 0 10px 10px 0;
+          }
         }
 
         .tag-list-wrapper {
