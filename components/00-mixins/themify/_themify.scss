@@ -131,6 +131,50 @@
 }
 
 ///
+/// This mixin is similar to the theme-mixin, but uses the first element
+/// selector as a body class.
+///
+/// The themify theme() function creates style selectors like this:
+/// <code>
+///   .cs--blue .original-selector .child ... {}
+/// </code>
+/// Where cs--blue is the theme color and that class is added to the <body>
+/// element.
+///
+/// But sometimes the .original-selector is a body class which is not supported
+/// by the theme() function.
+//
+/// The theme-body() function adds the color class to the first element of the
+/// selector:
+///
+/// <code>
+///   .cs--blue.original-selector .child ... {}
+/// </code>
+///
+/// @see theme()
+/// @group colors
+/// @access public
+/// @author Peter Decuyper
+///
+/// @param {string} $property [null]
+///   The property to themify.
+///
+/// @param {string} $default [null]
+///   The default value for the themified property.
+///
+/// @param {string} $exception [null]
+///   The exception value for the themified property.
+///   This is the exception optionally used in subthemes.
+///
+@mixin theme-body($property: null, $default: null, $exception: null, $extra-values: null) {
+  @each $theme, $colors in $themes {
+    @at-root .cs--#{$theme}#{&} {
+      #{$property}: set-themified-property($colors, $default, $exception);
+    }
+  }
+}
+
+///
 /// This mixin is similar to the theme-mixin, but uses the @content directive
 /// to make it possible to pass in custom values for a property (as often seen
 /// in borders, shadows, ...)
