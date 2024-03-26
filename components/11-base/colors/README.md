@@ -64,3 +64,45 @@ Everything just before the double dashes gets used as the key value.
 It then checks the part after the double dashes `--` and strips out `lighten`
 or `darken` (everything before the dash `-`). Based on that result it applies
 the `color()` mixin with the correct parameters.
+
+The themify theme() function converts sass like this:
+
+```scss
+.parent {
+  .child {
+    theme('background-color', 'color-primary--lighten-4', 'field-background');
+  }
+}
+```
+
+gets transformed to css:
+
+```css
+.cs--blue .parent .child {
+    background-color: #00f;
+}
+```
+
+Where `.cs--blue` is the theme color class which is added to the `<body>`
+element.
+
+But sometimes the .parent selector is a body class which is not supported by the
+`theme()` function. 
+The `theme-body()` function adds the color class to the first element of the
+selector:
+
+```scss
+.parent {
+  .child {
+    theme-body('background-color', 'color-primary--lighten-4', 'field-background');
+  }
+}
+```
+
+gets transformed to css:
+
+```css
+.cs--blue.parent .child {
+    background-color: #00f;
+}
+```

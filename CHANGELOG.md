@@ -10,6 +10,23 @@ the mentioned elements in the styleguide to see the new HTML markup.
 
 ## New mixins
 
+### theme-body()
+
+The themify `theme()` function creates style selectors like this:
+```css
+.cs--blue .original-selector .child ... {}
+```
+
+Where cs--blue is the theme color and that class is added to the <body> element.
+
+But sometimes the `.original-selector` is a body class which is not supported by
+the `theme()` function.
+The `theme-body()` function adds the color class to the first element of the
+selector:
+```css
+.cs--blue.original-selector .child ... {}
+```
+
 ### Accolade element
 `@include accolade;`
 
