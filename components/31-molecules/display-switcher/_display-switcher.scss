@@ -18,6 +18,10 @@
     }
   }
 
+  i.icon-marker {
+    @include theme('color', 'color-primary', 'link-color');
+  }
+
   > span {
     display: block;
     margin-right: 20px;
