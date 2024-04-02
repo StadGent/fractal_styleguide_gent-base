@@ -44,15 +44,6 @@
     }
   }
 
-  ul,
-  ol {
-    @include medium-text();
-
-    a {
-      @include normal-text();
-    }
-  }
-
   ul {
     margin: 20px 0 20px 20px;
   }
