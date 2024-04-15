@@ -14,7 +14,7 @@ nav.menu {
 
     &::before {
       order: 0;
-      margin-right: .5rem;
+      margin-right: 10px;
       margin-left: 0;
     }
 
@@ -37,7 +37,7 @@ nav.menu {
 
     li {
       display: inline-block;
-      margin-right: 1rem;
+      margin-right: 20px;
 
       a,
       a[href^="mailto:"],
@@ -48,7 +48,7 @@ nav.menu {
         @include link-underlined;
 
         margin-bottom: 0;
-        padding: .5rem 0;
+        padding: 10px 0;
       }
 
       a.active {
@@ -67,8 +67,8 @@ nav.menu {
     .modal-header {
       position: absolute;
       right: 0;
-      margin-top: 1rem;
-      margin-right: .5rem;
+      margin-top: 20px;
+      margin-right: 10px;
       z-index: 7;
     }
   }
@@ -88,7 +88,7 @@ nav.menu {
         top: 100%;
         left: -30px;
         width: 100vw;
-        height: 1rem;
+        height: 20px;
         margin-top: 12px;
         border-top: 2px solid;
         content: '';
@@ -109,7 +109,7 @@ nav.menu {
         li {
           @include tablet {
             display: inline-block;
-            margin-right: 1rem;
+            margin-right: 20px;
           }
 
           @include theme('border-color', 'color-primary-light');
@@ -125,7 +125,7 @@ nav.menu {
             @include icon('chevron-right', 'after');
 
             display: block;
-            padding: .5rem 1rem;
+            padding: 10px 20px;
             line-height: 1.4rem;
 
             &:hover {
@@ -149,7 +149,7 @@ nav.menu {
 
     .language-switcher {
       display: block;
-      margin: 0 1.2rem;
+      margin: 0 24px;
 
       &:not(:last-child) {
         @include theme('border-color', 'color-primary--lighten-4');
@@ -161,10 +161,10 @@ nav.menu {
         flex-wrap: wrap;
         justify-content: center;
         margin: 0;
-        padding: .6rem 0;
+        padding: 12px 0;
 
         li {
-          padding: .6rem;
+          padding: 12px;
         }
       }
     }
