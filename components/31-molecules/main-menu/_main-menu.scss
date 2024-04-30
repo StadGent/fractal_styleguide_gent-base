@@ -14,7 +14,7 @@ nav.menu {
 
     &::before {
       order: 0;
-      margin-right: .5rem;
+      margin-right: 10px;
       margin-left: 0;
     }
 
@@ -37,7 +37,7 @@ nav.menu {
 
     li {
       display: inline-block;
-      margin-right: 1rem;
+      margin-right: 20px;
 
       a,
       a[href^="mailto:"],
@@ -48,7 +48,7 @@ nav.menu {
         @include link-underlined;
 
         margin-bottom: 0;
-        padding: .5rem 0;
+        padding: 10px 0;
       }
 
       a.active {
@@ -67,8 +67,8 @@ nav.menu {
     .modal-header {
       position: absolute;
       right: 0;
-      margin-top: 1rem;
-      margin-right: .5rem;
+      margin-top: 20px;
+      margin-right: 10px;
       z-index: 7;
     }
   }
@@ -79,34 +79,19 @@ nav.menu {
 
     .header {
       position: relative;
-      margin: 12px $gutter-width 32px;
+      margin: 12px $gutter-width;
 
-      &::before,
-      &::after {
+      &::before {
         @include theme('border-color', 'color-primary--lighten-4', 'header-border-bottom');
 
         position: absolute;
         top: 100%;
-        width: 100%;
-        height: 1rem;
+        left: -30px;
+        width: 100vw;
+        height: 20px;
         margin-top: 12px;
         border-top: 2px solid;
         content: '';
-      }
-
-      &::before {
-        left: -$gutter-width;
-        width: 60px + $gutter-width;
-        border-right: 2px solid;
-        border-top-right-radius: border-radius('radius-4');
-      }
-
-      &::after {
-        right: -$gutter-width;
-        // viewport - ::before + border-width + gutter-width
-        width: calc(100% - 60px + 2px + #{$gutter-width});
-        border-left: 2px solid;
-        border-top-left-radius: border-radius('radius-4');
       }
 
       button {
@@ -124,14 +109,12 @@ nav.menu {
         li {
           @include tablet {
             display: inline-block;
-            margin-right: 1rem;
+            margin-right: 20px;
           }
 
-          margin-bottom: .8rem;
-
-          &:first-child {
-            margin-top: .8rem;
-          }
+          @include theme('border-color', 'color-primary-light');
+          margin-bottom: 0;
+          border-bottom: 1px solid;
 
           a,
           a[href^="mailto:"],
@@ -139,10 +122,22 @@ nav.menu {
           a[href^="http://"],
           a[href^="https://"] {
             @include reset-link-background;
-            @include link-underlined;
+            @include icon('chevron-right', 'after');
 
-            padding: .5rem 0;
+            display: block;
+            padding: 10px 20px;
             line-height: 1.4rem;
+
+            &:hover {
+              @include theme('background-color', 'color-primary-light');
+            }
+
+            &::after {
+              position: absolute;
+              top: 50%;
+              right: 30px;
+              margin-top: -13px;
+            }
           }
 
           a.active {
@@ -154,27 +149,23 @@ nav.menu {
 
     .language-switcher {
       display: block;
+      margin: 0 24px;
+
+      &:not(:last-child) {
+        @include theme('border-color', 'color-primary--lighten-4');
+        border-bottom: 2px solid;
+      }
 
       ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin: 0;
-        padding: .6rem 0;
+        padding: 12px 0;
 
         li {
-          padding: .6rem;
+          padding: 12px;
         }
-      }
-    }
-
-    .menu-links,
-    .language-switcher {
-      margin: 0 1.2rem;
-
-      &:not(:last-child) {
-        @include theme('border-color', 'color-primary--lighten-4');
-        border-bottom: 2px solid;
       }
     }
   }
