@@ -106,6 +106,7 @@ const icons = [
   'subscribe',
   'tag',
   'target',
+  'threads',
   'tiktok',
   'trashcan',
   'twitter-outline',
