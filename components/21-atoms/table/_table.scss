@@ -5,7 +5,7 @@ div.table-list {
 
   .list-description,
   caption {
-    @include theme('color', 'color-zero--lighten-3', 'table-caption-color');
+    @include theme('color', 'help-text-color', 'table-caption-color');
 
     position: absolute;
     bottom: 0;
@@ -53,7 +53,7 @@ div.responsive-table {
     tr {
       &:nth-of-type(even) th:not([scope="col"]) th:not([scope="row"]),
       &:nth-of-type(even) td {
-        @include theme('background-color', 'color-secondary--lighten-4', 'table-row-color');
+        @include theme('background-color', 'color-secondary-light', 'table-row-color');
       }
 
       &:nth-of-type(n) {
@@ -74,7 +74,7 @@ div.responsive-table {
 
       &:nth-of-type(odd) th:not([scope="col"]),
       &:nth-of-type(odd) td {
-        @include theme('background-color', 'color-primary--lighten-5', 'table-row-color');
+        @include theme('background-color', 'color-secondary-light', 'table-row-color');
       }
     }
 
@@ -106,7 +106,7 @@ div.table-list {
       font-size: .9rem;
 
       &:nth-child(even) {
-        @include theme('background-color', 'color-secondary--lighten-5', 'table-list-row-color');
+        @include theme('background-color', 'color-secondary', 'table-list-row-color');
       }
     }
   }
