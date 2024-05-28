@@ -24,10 +24,10 @@
     options = (() => {
       const defaults = {
         expand: (button, content) => {
-          content.style.maxHeight = `${content.scrollHeight}px`;
+          // content.style.maxHeight = `${content.scrollHeight}px`;
         },
         collapse: (button, content) => {
-          content.style.maxHeight = 0;
+          // content.style.maxHeight = 0;
         },
         transitionEnd: (e) => {
           if (e.propertyName !== 'max-height') {

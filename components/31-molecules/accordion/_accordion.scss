@@ -16,7 +16,7 @@
     &::before {
       position: absolute;
       right: 0;
-      transition: transform .2s ease-in-out;
+      transition: transform .2s ease-out-in-out;
       font-size: 1.4rem;
       line-height: 1.2;
     }
@@ -29,8 +29,13 @@
   }
 
   .accordion--content {
-    transition: max-height .5s ease-in-out;
+    max-height: 0;
+    transition: max-height .75s ease-out;
     overflow: hidden;
+
+    &.accordion--expanded {
+      max-height: 9999px;
+    }
 
     &:focus,
     &:focus-within {
@@ -80,7 +85,7 @@ dl.accordion {
       min-height: 1.8rem;
       margin: 0 .75rem 0 0;
       padding: .13rem .25rem;
-      transition: transform .2s ease-in-out;
+      transition: transform .2s ease-out-in-out;
       font-size: 1.2rem;
       text-align: left;
     }
@@ -153,8 +158,13 @@ dl.accordion {
   }
 
   .accordion--link--content {
-    transition: max-height .5s ease-in-out;
+    max-height: 0;
+    transition: max-height .75s ease-out;
     overflow: hidden;
+
+    &.accordion--expanded {
+      max-height: 9999px;
+    }
 
     &:focus,
     &:focus-within {
