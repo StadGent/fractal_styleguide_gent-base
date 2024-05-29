@@ -322,9 +322,11 @@ dl.timeline {
     &.timeline-slot-reverse {
       .item {
         & > dd {
-          padding-right: calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
-          padding-left: calc(#{$gutter-width*.5});
-          grid-area: right;
+          @include desktop {
+            padding-right: calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
+            padding-left: calc(#{$gutter-width*.5});
+            grid-area: right;
+          }
         }
 
         // Alternating timeline-slots get alternating styling (left/right).
@@ -512,6 +514,7 @@ dl.roadmap {
     display: block;
     width: $roadmap-img-mobile-size;
     height: $roadmap-img-mobile-size;
+    margin-top: 0;
     margin-bottom: 15px;
 
     @include desktop {
@@ -520,6 +523,7 @@ dl.roadmap {
       left: 0;
       width: $roadmap-img-desktop-size;
       height: $roadmap-img-desktop-size;
+      margin-top: 20px;
     }
   }
 
