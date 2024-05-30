@@ -27,9 +27,14 @@
     span {
       @include icon('calendar');
 
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      line-height: 1;
+
       &::before {
         position: relative;
-        top: 6px;
+        margin-right: 5px;
         font-size: 1.2rem;
       }
     }
@@ -227,14 +232,12 @@
       }
 
       .date {
-        display: inline-block;
-        margin: -6px 0 0;
+        margin: 0;
         z-index: 1;
 
         span {
           @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
 
-          display: block;
           padding: 5px 10px;
           line-height: 1.2;
           box-decoration-break: clone;
