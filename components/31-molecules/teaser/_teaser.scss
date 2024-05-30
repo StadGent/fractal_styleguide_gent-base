@@ -206,8 +206,11 @@
     }
 
     .content__second {
+      display: flex;
       position: absolute;
       bottom: 0;
+      flex-direction: column;
+      align-items: flex-start;
       order: 1;
       width: 100%;
       height: auto;
@@ -218,6 +221,8 @@
 
         span {
           @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
+
+          display: block;
         }
       }
 
@@ -228,6 +233,8 @@
 
         span {
           @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
+
+          display: block;
           padding: 5px 10px;
           line-height: 1.2;
           box-decoration-break: clone;
