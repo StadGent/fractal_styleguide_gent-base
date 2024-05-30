@@ -226,8 +226,6 @@
 
         span {
           @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
-
-          display: block;
         }
       }
 
