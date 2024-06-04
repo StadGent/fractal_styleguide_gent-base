@@ -64,6 +64,9 @@
     "susy": "^3.0.8",
     "ttf2woff2": "^5.0.0"
   },
+  "overrides": {
+    "lodash.template": "^4.5.0"
+  },
   "engines": {
     "node": ">=10.14.2"
   },
