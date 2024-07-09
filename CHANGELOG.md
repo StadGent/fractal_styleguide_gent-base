@@ -1,7 +1,11 @@
 # Changelog
 
 All notable changes to this style guide are documented here.
+## [5.1.7]
 
+### Update
+* override npm packages for more recent versions
+* update npm packages
 
 ## [5.1.6]
 
@@ -234,7 +238,7 @@ All notable changes to this style guide are documented here.
 
 ### Fixed
 
-* Fix postinstall script, readd check on publicRootPath. 
+* Fix postinstall script, readd check on publicRootPath.
   Fix warnings in jenkins job after using 5.x in gent_base.
 
 ## [5.0.1]
@@ -267,10 +271,10 @@ All notable changes to this style guide are documented here.
 * STIJ-366: Removed table column min-width.
 * STIJ-375: Allow HTML in field-message without generating extra margin.
 * STIJ-384: Updated fieldset styling: padding and borders.
-* STIJ-384: Updated label 'optional' styling.   
+* STIJ-384: Updated label 'optional' styling.
   **Template updated: remove parentheses around 'optional'!**
-* STIJ-384: Updated wizard and multistep form button texts.  
-  
+* STIJ-384: Updated wizard and multistep form button texts.
+
 ### Fixed
 
 * STIJ-381: Enabled list style within the accordion component.
@@ -282,7 +286,7 @@ All notable changes to this style guide are documented here.
 
 ## [4.1.0]
 
-### Added 
+### Added
 
 * Added checklist spot icon.
 * Added GentInfo language variants.
@@ -295,19 +299,19 @@ All notable changes to this style guide are documented here.
 
 * Fixed spacing for inline icon list.
 
-## [4.0.2] 
+## [4.0.2]
 
 ### Updated
 
 * Updated the **beta** checkboxes dynamic component template and JS functions file.
 
-## [4.0.1] 
+## [4.0.1]
 
 ### Fixed
 
 * Updated modal-actions z-index.
 
-## [4.0.0] 
+## [4.0.0]
 
 ### Fixed
 
@@ -321,52 +325,52 @@ All notable changes to this style guide are documented here.
 * STIJ-364: Added field-message info variant.
 * STIJ-306: Added `.w7-o2`, `.w9-o1`, `.w10-o1` and `.w12` helper classes to give children of the detail-layout
   a column width and offset.
-* STIJ-353: **Beta** Added the `checkboxes dynamic` component,  
-  This component will replace the `checkboxes with filter` component.  
+* STIJ-353: **Beta** Added the `checkboxes dynamic` component,
+  This component will replace the `checkboxes with filter` component.
   If your project uses the checkboxes with filter component, please plan your transition to the new dynamic component.
-* STIJ-326: Added optional introductory text in the filter layout.  
+* STIJ-326: Added optional introductory text in the filter layout.
 
 ### Updated
 
 * STIJ-286: All ‘teaser‘ variants now use the ‘tag-list' component.
-* STIJ-286: **Breaking** ‘file upload - multiple‘ now uses the ‘tag-list‘ component.  
+* STIJ-286: **Breaking** ‘file upload - multiple‘ now uses the ‘tag-list‘ component.
   Support for the old template with selector `ul.inline` will drop in the next major release.
-* STIJ-286: **Breaking** the filter layout now uses ‘tag-list‘ to display the selected filters.  
+* STIJ-286: **Breaking** the filter layout now uses ‘tag-list‘ to display the selected filters.
   Update your templates accordingly, or the selected filters will lose their margins.
-* STIJ-358: **Breaking**  
-  The template, styling, heading levels and content of the footer component have been updated.  
+* STIJ-358: **Breaking**
+  The template, styling, heading levels and content of the footer component have been updated.
   Make sure to read the component documentation, it contains details about which parts are
-  optional or custom for each site.  
+  optional or custom for each site.
   Do not simply copy all hyperlinks! They are mostly for demo purposes only.
 
 ### Removed
 
-* The positioning of `.search-block` and `.contact-box` has been removed from the detail layout.  
-  These components don't exist within this styleguide.  
+* The positioning of `.search-block` and `.contact-box` has been removed from the detail layout.
+  These components don't exist within this styleguide.
   If your project does have these components: position them using classes `.w9-o1` and `.w10-o1` respectively.
 
-Following items had been marked as deprecated in the last major release.  
+Following items had been marked as deprecated in the last major release.
 They have now been removed.
 
 * ‘contact-block’ has been removed in favour of the generic ‘CTA-block’.
-  Your project should no longer use classes `.inner-box, .box-left, .box-top, .box-no-icon`.  
-  This includes it's usage in `_detail-layout.scss`.  
-* ‘help-block’ has been removed.  
+  Your project should no longer use classes `.inner-box, .box-left, .box-top, .box-no-icon`.
   This includes it's usage in `_detail-layout.scss`.
-* ‘extra-articles’ has been removed.  
-* `modal.functions.js` has been removed.  
-   Use modal/index.js from the vendor directory  
+* ‘help-block’ has been removed.
+  This includes it's usage in `_detail-layout.scss`.
+* ‘extra-articles’ has been removed.
+* `modal.functions.js` has been removed.
+   Use modal/index.js from the vendor directory
    or install**@digipolis-gent/modal** as dependency.
-* Dependency body-scroll-lock has been removed (it's usage has been moved to @digipolis-gent/modal). 
-* Class `.mijn-gent-block` has been removed in favour of `.authentication`.  
+* Dependency body-scroll-lock has been removed (it's usage has been moved to @digipolis-gent/modal).
+* Class `.mijn-gent-block` has been removed in favour of `.authentication`.
 * Classes `.subsite .subsite-title` have been removed from the **header hero**
-  in favour of `.theme` and `.theme-title`.  
+  in favour of `.theme` and `.theme-title`.
   The class `.subsite` still exists to display the site name in the header.
   (deprecated since 3.0.0-beta9)
-* Class `.wizard-steps` has been removed in favour of `.form-steps`.  
+* Class `.wizard-steps` has been removed in favour of `.form-steps`.
   (deprecated since 3.0.0-beta4)
 * Classes `.teaser-programme .teaser-topic .teaser-topic-links .teaser-contact-info .teaser-search
-  .teaser-search-wide .content__top .content__bottom .content__left .content__right` have been removed.  
+  .teaser-search-wide .content__top .content__bottom .content__left .content__right` have been removed.
   (deprecated since 3.0.0-beta1)
 
 ## [3.1.1]
@@ -387,9 +391,9 @@ They have now been removed.
 
 ### Updated
 
-* Updated themeable color variables.  
+* Updated themeable color variables.
   **This should not impact your applications
-  unless you decided to override the variables or used the `theme` mixin yourself.**  
+  unless you decided to override the variables or used the `theme` mixin yourself.**
   For a detailed overview of all affected components,
   check out the git compare for this release and look for the `theme`mixin.
 * Updated the header search background and border colors.
@@ -398,10 +402,10 @@ They have now been removed.
 ### Fixed
 
 * Fixed background accolade in contact-details context.
-* Fixed teaser hidden read more text order.  
-  'Read more' links should be **followed** by a hidden text, not preceded.  
-  This was incorrect in our templates.  
-  Please check your projects to see if you had copied this error.  
+* Fixed teaser hidden read more text order.
+  'Read more' links should be **followed** by a hidden text, not preceded.
+  This was incorrect in our templates.
+  Please check your projects to see if you had copied this error.
   The correct template is:
   ```html
      <a href="#" class="read-more standalone-link">
@@ -409,17 +413,17 @@ They have now been removed.
        <span class="visually-hidden">about _usually the title of the teaser_</span>
      </a>
   ```
-* Fixed filter layout template.  
-  The form actions ('show result') were outside of the filter form tag.  
-  **This template fix will not break the styling of the previous template,  
-  but it is advisable to check your projects.**  
-  The form tag should be placed on the .modal-inner element if used as a filter form. 
+* Fixed filter layout template.
+  The form actions ('show result') were outside of the filter form tag.
+  **This template fix will not break the styling of the previous template,
+  but it is advisable to check your projects.**
+  The form tag should be placed on the .modal-inner element if used as a filter form.
   ```html
      <form class="modal-inner" action="">
        <div class="modal-header"></div>
        <div class="modal-content"></div>
        <div class="modal-actions"></div>
-     </form>  
+     </form>
   ```
 
 ## [3.0.2]
@@ -457,11 +461,11 @@ They have now been removed.
 ### Updated
 
 * **Deprecated:** 'mijn-gent-block' has been renamed to the more generic 'authentication'
-  in order to match the documentation.  
+  in order to match the documentation.
   The '.mijn-gent-block' class is still functional but marked as deprecated.
   Please use '.authentication' from now on.
 * **Breaking** 'CTA-block' now uses the generic highlight component.
-  The old template and classes will be removed in the next major version.  
+  The old template and classes will be removed in the next major version.
   Make sure your templates use `.highlight` and `.highlight__inner`.
 * Radios and checkboxes template has been updated to fix the bottom margin.
   Add a **form-item** wrapper around the form-columns, just like for any other form field.
@@ -473,7 +477,7 @@ They have now been removed.
   * 'Week Month Widget' to 'Opening Hours'
   * 'Readspeaker Button' to 'Text To Speech Button'
   * 'Summary Box' to 'Summary'
-  
+
   **SCSS classes remain unchanged!**
 
 * Updated fieldset styling and form-item margins.
