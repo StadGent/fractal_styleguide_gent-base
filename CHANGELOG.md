@@ -1268,6 +1268,7 @@ IMPORTANT: Updating this style guide through composer is DEPRECATED! The next
   * Changed styling for the Form Steps molecule.
   * Added themify for the Form Steps molecule.
 
+[5.1.7]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.6...5.1.7
 [5.1.6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.5...5.1.6
 [5.1.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.4...5.1.5
 [5.1.4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.3...5.1.4
