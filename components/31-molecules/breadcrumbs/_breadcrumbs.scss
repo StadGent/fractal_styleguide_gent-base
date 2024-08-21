@@ -52,7 +52,7 @@
         &[href^="https://"] {
           &:not(.no-icon):not(.tag) {
             &::after {
-              content: '';
+              display: none;
             }
           }
         }
