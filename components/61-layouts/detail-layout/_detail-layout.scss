@@ -153,8 +153,10 @@
 
   > .quote-wrapper {
     > .quote {
-      @include col(7);
-      @include col-offset(4);
+      @include tablet {
+        @include col(7);
+        @include col-offset(4);
+      }
     }
   }
 
