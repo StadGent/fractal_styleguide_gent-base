@@ -3,12 +3,14 @@
 /// _icons_template.template instead to apply changes.
 ///
 /// @group tools
-/// @author Gert-Jan Meire
+/// @author Gert-Jan Meire / Sven Vandevenne
 ///
 ////
 
 $id: random(1000);
 
+
+// Icon fonts for default buttons
 @font-face {
   font-family: "<%= fontName %>";
   src: url('#{$styleguide-dir}/fonts/<%= fontName %>.eot?v=#{$id}');
@@ -76,7 +78,7 @@ $id: random(1000);
 /// @since 3.0.0
 /// @group tools
 /// @access public
-/// @author Gert-Jan Meire
+/// @author Gert-Jan Meire/Sven Vandevenne
 /// @require icon-char
 ///
 /// @param {string} $filename
@@ -99,7 +101,26 @@ $id: random(1000);
   }
 }
 
-<% _.each(glyphs, function(glyph) { %>.<%= cssClass%>-<%= glyph.fileName %> {
-  @include <%= cssClass%>(<%= glyph.fileName %>);
+/* For input buttons with an icon */
+<% _.each(glyphs, function(glyph) { %>
+.icon-<%= glyph.fileName %> {
+  @include icon(<%= glyph.fileName %>);
+}
+
+input.icon-<%= glyph.fileName %> {
+  background-image: url("#{$styleguide-dir}/img/iconfont/<%= glyph.fileName %>.svg");
+
+  &.button-primary,
+  &.button-alert {
+    background-image: url("#{$styleguide-dir}/img/svg-white/<%= glyph.fileName %>.svg");
+  }
+
+  &.button-secondary-alert {
+    background-image: url("#{$styleguide-dir}/img/svg-red/<%= glyph.fileName %>.svg");
+  }
+
+  &.button-success {
+    background-image: url("#{$styleguide-dir}/img/svg-green/<%= glyph.fileName %>.svg");
+  }
 }
 <% }); %>

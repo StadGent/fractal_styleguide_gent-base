@@ -112,6 +112,11 @@
   font-family: $default-font-family;
   text-align: center;
   cursor: pointer;
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+
+  &:not(.button-secondary):not(.button-alert):not(.button-success):not(.button-secondary-alert) {
+    @extend %button-primary;
+  }
 
   &:disabled {
     @include button-disabled;
@@ -186,10 +191,6 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-icon {
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
   text-align: left;
 
   // Padding fix specificly for IE11.
@@ -219,15 +220,109 @@
   }
 }
 
-.button,
-input[type="button"] {
+button,
+.button:not(input) {
   @include button;
   @include button-hover;
-
-  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
 }
 
-input[type="submit"],
-button[type="submit"] {
-  @extend %button-secondary;
+%input-button,
+input[type="button"] {
+  @include button;
+
+  transition: .3s;
+
+  &::before {
+    display: none;
+  }
+
+  &[class*=icon-] {
+    background-repeat: no-repeat;
+    background-position: center right 15px;
+    background-size: auto 24px;
+
+    &.button-small {
+      background-size: auto 19px;
+    }
+
+    &.button-large {
+      background-size: auto 26px;
+    }
+
+    &.button-extra-large {
+      background-size: auto 28px;
+    }
+
+    &:not(.icon-left) {
+      padding-right: 47px;
+
+      &.button-small {
+        padding-right: 42px;
+      }
+
+      &.button-large {
+        padding-right: 52px;
+      }
+
+      &.button-extra-large {
+        padding-right: 57px;
+      }
+
+      &:not([value]) {
+        padding-right: 29px;
+        background-position: center center;
+        line-height: 28px;
+        text-indent: -999999px;
+
+        &.button-small {
+          padding-right: 26px;
+        }
+
+        &.button-large {
+          padding-right: 28px;
+          line-height: 25px;
+        }
+
+        &.button-extra-large {
+          padding-right: 33px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+
+  &.icon-left {
+    padding-left: 47px;
+    background-position: center left 15px;
+
+    &.button-small {
+      padding-left: 42px;
+    }
+
+    &.button-large {
+      padding-left: 52px;
+    }
+
+    &.button-extra-large {
+      padding-left: 57px;
+    }
+
+    &:not([value]) {
+      padding-left: 29px;
+      background-position: center center;
+      text-indent: -999999px;
+
+      &.button-small {
+        padding-left: 26px;
+      }
+
+      &.button-large {
+        padding-left: 28px;
+      }
+
+      &.button-extra-large {
+        padding-left: 33px;
+      }
+    }
+  }
 }

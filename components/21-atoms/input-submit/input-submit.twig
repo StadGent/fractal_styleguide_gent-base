@@ -1,6 +1,6 @@
 <button
         type="submit"
-        class="button {{ 'button-' ~ type }} {% if modifier %}{{ modifier }}{% endif %}"
+        class="button{% if type %} {{ 'button-' ~ type }}{% endif %}{% if modifier %} {{ modifier }}{% endif %}"
 >
-    {{ value }}
+    {{ text }}
 </button>

@@ -1,6 +1,6 @@
 <button
   type="button"
-  class="button {{ 'button-' ~ type }} {{ modifier }} {% if icon %}button-icon{% endif %}"
+  class="button{% if type %} {{ 'button-' ~ type }}{% endif %}{% if modifier %} {{ modifier }}{% endif %}{% if icon %} button-icon{% endif %}"
   {% if disabled %}
     disabled
   {% endif %}

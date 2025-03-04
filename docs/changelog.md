@@ -2,6 +2,13 @@
 
 All notable changes to this style guide are documented here.
 
+## [6.0.4] - Unreleased
+
+### Fixed
+- STIJ-444: 
+  - Fixed button styling with fallback for input elements (with icons)
+  - Added extra icons from styleguide
+
 ## [6.0.3]
 
 ### Fixed

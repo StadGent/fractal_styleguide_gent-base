@@ -9,17 +9,22 @@
 %button-alert,
 .button-alert {
   @include button-icon;
-  @include theme-content('color-tertiary', 'button-secondary-hover-background') {
-    background-image: linear-gradient(0, color('red', 2), color('red', 2));
-  };
+  @include theme('color', 'color-none');
+  @include theme('background-color', 'color-error');
+
+  &:not(input) {
+    @include theme-content('color-tertiary', 'button-secondary-hover-background') {
+      background-image: linear-gradient(0, color('red', 2), color('red', 2));
+    };
+  }
+
+  &:is(input) {
+    &:hover {
+      background-color: color('red', 2); //This is not an official Stad Gent color
+    }
+  }
 
   border: 0;
-  background-color: color('red', 1);
-  color: color('white');
-
-  &:not([class*="icon-"]) {
-    @include icon(lightning);
-  }
 
   &.button-block {
     @include button-icon;

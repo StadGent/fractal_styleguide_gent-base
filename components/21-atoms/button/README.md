@@ -12,13 +12,15 @@ Do not use a button to trigger navigation. In this case, use a <a href="{{path '
 
 ### Styling
 
-There are four types of styling for buttons:
+To style a button, add the `.button` class to a `<button>` element, and one of the following classes for specific styling.
 
-1. Primary button styling, for the primary and most common actions
-2. Secondary button styling, for less common actions
-3. Alert button styling, for actions that need attention and that might be destructive and result in loss of data
-4. Secondary alert buton styling, for actions that need attention and that might be destructive and result in loss of data
-5. Success button styling, for actions where you want to highlight success
+There are five types of styling for buttons:
+
+1. **Primary** button styling, for the primary and most common actions: `.button-primary`
+2. **Secondary** button styling, for less common actions: `.button-secondary`
+3. **Alert** button styling, for actions that need attention and that might be destructive and result in loss of data: `.button-alert`
+4. **Secondary alert** button styling, for actions that need attention and that might be destructive and result in loss of data: `.button-secondary-alert`
+5. **Success** button styling, for actions where you want to highlight success: `.button-success`
 
 ### Size
 
@@ -29,6 +31,10 @@ By default, the width of a button is automatically resized depending on the leng
 ### Icons
 
 Buttons can have an <a href="{{path './icon'}}">icon</a>, aligned at the right-hand side or at the left-hand side. The icon can help the user identify a certain action. However, the icon should not be *needed* to understand the action. In all cases, the label of the button itself should be clear by itself and should represent the corresponding action.
+
+### HTML
+- Buttons are ideally `<button>` elements with a class for their styling (see above)
+- In the case of an `<input>` element, there are fallbacks for the `button` and `submit` type but with limited background-animation
 
 ## Web accessibility
 

@@ -8,10 +8,20 @@
 .button-primary {
   @include theme('background-color', 'button-primary-background', 'button-primary-background');
   @include theme('color', 'color-secondary', 'button-primary-color');
-  @include theme-content('color-zero', 'button-primary-hover-background') {
-    background-image: linear-gradient(0, $theme-color, $theme-color);
-  };
+
   border: 0;
+
+  &:not(input) {
+    @include theme-content('color-zero', 'button-primary-hover-background') {
+      background-image: linear-gradient(0, $theme-color, $theme-color);
+    };
+  }
+
+  &:is(input) {
+    &:hover {
+      @include theme('background-color', 'button-primary-hover-background');
+    }
+  }
 
   &:focus {
     @include theme('background-color', 'color-primary--darken-1', 'button-primary-hover-background');

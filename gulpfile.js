@@ -37,6 +37,9 @@ const babel = require('gulp-babel');
 const Color = require('color');
 const RecolorSvg = require('gulp-recolor-svg');
 const realFavicon = require('gulp-real-favicon');
+const cheerio = require('gulp-cheerio');
+const path = require('path');
+
 // require our configured fractal module.
 const fractal = require('./fractal');
 
@@ -172,6 +175,45 @@ gulp.task('styles:inject', (done) => {
       .pipe(inject(injectLayoutsFiles, injectOptions))
       .pipe(gulp.dest('build/styleguide/sass/')),
   )(done);
+});
+
+/**
+ * Create svg icons with a white color as fallback for input[type=button].
+ */
+gulp.task("icons:colors", () => {
+  const argv = yargs.argv; // Use the existing yargs instance
+
+  const outputDirs = {
+    white: "./public/styleguide/img/svg-white",
+    red: "./public/styleguide/img/svg-red",
+    green: "./public/styleguide/img/svg-green"
+  };
+
+  // Ensure output directories exist
+  Object.values(outputDirs).forEach(dir => {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+  });
+
+  return gulp.src("./public/styleguide/img/iconfont/*.svg")
+      .pipe(cheerio({
+        run: function ($, file) {
+          Object.entries(outputDirs).forEach(([colorName, dir]) => {
+            const color = colorName === "red" ? "#d30c2e" : colorName === "green" ? "#2c8726" : "#ffffff";
+
+            $("path").attr("fill", color);
+
+            const outputPath = path.join(dir, path.basename(file.path));
+            fs.writeFileSync(outputPath, $.html()); // Save the modified SVG
+
+            if (argv.verbose) {
+              console.log(`✅ ${colorName.toUpperCase()}: ${outputPath}`);
+            }
+          });
+        },
+        parserOptions: { xmlMode: true }
+      }));
 });
 
 /**
@@ -663,6 +705,7 @@ gulp.task('compile', gulp.series(
     'sassdoc',
     'changelog'
   ),
+  'icons:colors',
   'fractal:build',
   gulp.parallel(
     'styles:build',

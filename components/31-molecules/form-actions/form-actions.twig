@@ -1,8 +1,9 @@
 <div class="form-actions">
   {% if primary_button %}
     {% include '@input-submit' with {
-      value: primary_button,
-      modifier: 'button button-primary icon-arrow-right'
+      text: primary_button,
+      type: 'primary',
+      modifier: 'icon-arrow-right'
     } %}
   {% endif %}
 
