@@ -11,7 +11,7 @@ const createItems = (amount) => {
 
   for (let i = amount; i--;) {
     array.push({
-      src: 'https://via.placeholder.com/' + getRandomInt(600, 800) + 'x' + getRandomInt(600, 800),
+      src: 'https://placehold.co/' + getRandomInt(600, 800) + 'x' + getRandomInt(600, 800),
       alt: 'placeholder image alternative text',
       caption: 'image caption'
     });

@@ -7,7 +7,7 @@
     "@babel/preset-env": "^7.20.2",
     "@frctl/fractal": "^1.5.15",
     "@frctl/twig": "^1.2.13",
-    "chromedriver": "^119.0.1",
+    "chromedriver": "^134.0.5",
     "cssnano": "^5.1.14",
     "fs-extra": "^11.1.0",
     "gulp": "^4.0.2",
@@ -62,7 +62,7 @@
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
     "sass": "^1.58.1",
-    "selenium-webdriver": "4.8.0",
+    "selenium-webdriver": "4.24.1",
     "set-value": "^4.1.0",
     "ttf2woff2": "^5.0.0"
   },
@@ -70,10 +70,10 @@
     "node": ">=10.14.2"
   },
   "scripts": {
-    "test": "gulp validate && gulp axe",
     "postinstall": "node ./scripts/postinstall.js",
     "start": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "test": "gulp validate && gulp axe:input && gulp axe:layout && gulp axe:components"
   },
   "files": [
     "scripts/postinstall.js",

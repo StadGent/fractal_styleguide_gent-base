@@ -22,7 +22,7 @@ module.exports = {
     published_date: '13/07/2023',
     link_text: 'Read more',
     link: '#',
-    image_src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+    image_src: 'https://placehold.co/800x500?text=8:5+(800x500)',
     image_alt_text: 'alt text',
     tags: ['Optional tag', 'Optional tag 2'],
     tags_position: 'bottom',
@@ -95,16 +95,16 @@ module.exports = {
         label_text: 'Event',
         tags: ['Optional tag'],
         tags_position: 'top',
-        image_src: 'https://via.placeholder.com/570x570&text=1:1+(570x570)'
+        image_src: 'https://placehold.co/570x570?text=1:1+(570x570)'
       }
     },
     {
       name: 'teaser--square--double',
       context: {
         image_ratio_mobile: '1:1',
-        image_src_mobile: 'https://via.placeholder.com/360x360&text=1:1+(360x360)',
+        image_src_mobile: 'https://placehold.co/360x360?text=1:1+(360x360)',
         image_ratio_desktop: '765:360',
-        image_src_desktop: 'https://via.placeholder.com/765x360&text=765:360+(765x360)',
+        image_src_desktop: 'https://placehold.co/765x360?text=765:360+(765x360)',
         link_text: 'Read more',
         link: '#',
         list: null,
@@ -154,7 +154,7 @@ module.exports = {
       name: 'teaser--wide',
       context: {
         image_ratio: '1:1',
-        image_src: 'https://via.placeholder.com/570x570&text=1:1+(570x570)',
+        image_src: 'https://placehold.co/570x570?text=1:1+(570x570)',
         image_alt_text: 'alt text',
         type: 'teaser--wide',
         paragraph_text: 'This is a wide teaser, usually used with the sidebar layout. It can contain multiple components and has an optional image.',

@@ -4,12 +4,12 @@
       <h3>
         <button class="accordion--button"
                 aria-expanded="false"
-                aria-controls="accordion--multiple--content--{{ loop.index }}">
+                aria-controls="accordion--multiple--content--{{ item.loopNumber }}">
           {{ item.buttonText }}
         </button>
       </h3>
       <div class="accordion--content"
-           id="accordion--multiple--content--{{ loop.index }}">
+           id="accordion--multiple--content--{{ item.loopNumber }}">
         {{ item.content }}
       </div>
     </li>

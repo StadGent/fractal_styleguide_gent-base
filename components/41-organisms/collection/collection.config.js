@@ -3,7 +3,7 @@
 module.exports = {
   default: 'grid-4',
   context: {
-    image_src: 'https://via.placeholder.com/528x330&text=16:10+(528x330)',
+    image_src: 'https://placehold.co/528x330?text=16:10+(528x330)',
     image_alt_text: 'alt text',
     paragraph_text: 'Teaser text, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.',
     title: 'Title text ',

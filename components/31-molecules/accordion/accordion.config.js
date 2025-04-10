@@ -20,6 +20,7 @@ module.exports = {
       context: {
         items: [
           {
+            loopNumber: 1,
             buttonText: 'First item',
             content: '<p>Multiple item accordions are contained in a list element.</p>' +
             '<p>They are indicated with a \'plus\' or \'minus\' icon</p>' +
@@ -31,6 +32,7 @@ module.exports = {
             'temporibus voluptatem!</p>'
           },
           {
+            loopNumber: 2,
             buttonText: 'Second item',
             content: '<p>Single item accordions are indicated by a chevron.</p>' +
             '<p>Below is some nonsens text.</p>' +
@@ -39,6 +41,7 @@ module.exports = {
             'temporibus voluptatem!</p>'
           },
           {
+            loopNumber: 3,
             buttonText: 'Third item',
             content: '<p>Single item accordions are indicated by a chevron.</p>' +
             '<p>Below is some nonsens text.</p>' +
@@ -47,6 +50,7 @@ module.exports = {
             'temporibus voluptatem!</p>'
           },
           {
+            loopNumber: 4,
             buttonText: 'Fourth item',
             content: '<p>Single item accordions are indicated by a chevron.</p>' +
             '<p>Below is some nonsens text.</p>' +
@@ -63,22 +67,27 @@ module.exports = {
         buttonText: 'More info',
         faqs: [
           {
+            loopNumber: 5,
             buttonText: 'Croissant ice cream candy chocolate bar',
             content: '<p>Sweet roll jelly-o lemon drops pudding bear claw. Powder cotton candy toffee chupa chups topping. Jelly cupcake cotton candy brownie dessert. Caramels cheesecake bonbon dragée chocolate cake. Cupcake brownie halvah halvah tiramisu tootsie roll cake jelly beans dragée. Lollipop marzipan apple pie bonbon soufflé cookie. Sesame snaps chocolate cheesecake muffin macaroon. Sweet roll cheesecake bonbon shortbread biscuit carrot cake. Sweet sesame snaps jelly croissant icing bonbon. Bear claw brownie wafer muffin lemon drops chupa chups dragée icing. Dragée lollipop jelly-o gingerbread cake. Pudding liquorice chocolate cupcake ice cream lollipop biscuit gingerbread.</p>'
           },
           {
+            loopNumber: 6,
             buttonText: 'Croissant ice cream candy chocolate bar',
             content: '<p>Sweet roll jelly-o lemon drops pudding bear claw. Powder cotton candy toffee chupa chups topping. Jelly cupcake cotton candy brownie dessert. Caramels cheesecake bonbon dragée chocolate cake. Cupcake brownie halvah halvah tiramisu tootsie roll cake jelly beans dragée. Lollipop marzipan apple pie bonbon soufflé cookie. Sesame snaps chocolate cheesecake muffin macaroon. Sweet roll cheesecake bonbon shortbread biscuit carrot cake. Sweet sesame snaps jelly croissant icing bonbon. Bear claw brownie wafer muffin lemon drops chupa chups dragée icing. Dragée lollipop jelly-o gingerbread cake. Pudding liquorice chocolate cupcake ice cream lollipop biscuit gingerbread.</p>'
           },
           {
+            loopNumber: 7,
             buttonText: 'Croissant ice cream candy chocolate bar',
             content: '<p>Sweet roll jelly-o lemon drops pudding bear claw. Powder cotton candy toffee chupa chups topping. Jelly cupcake cotton candy brownie dessert. Caramels cheesecake bonbon dragée chocolate cake. Cupcake brownie halvah halvah tiramisu tootsie roll cake jelly beans dragée. Lollipop marzipan apple pie bonbon soufflé cookie. Sesame snaps chocolate cheesecake muffin macaroon. Sweet roll cheesecake bonbon shortbread biscuit carrot cake. Sweet sesame snaps jelly croissant icing bonbon. Bear claw brownie wafer muffin lemon drops chupa chups dragée icing. Dragée lollipop jelly-o gingerbread cake. Pudding liquorice chocolate cupcake ice cream lollipop biscuit gingerbread.</p>'
           },
           {
+            loopNumber: 8,
             buttonText: 'Croissant ice cream candy chocolate bar',
             content: '<p>Sweet roll jelly-o lemon drops pudding bear claw. Powder cotton candy toffee chupa chups topping. Jelly cupcake cotton candy brownie dessert. Caramels cheesecake bonbon dragée chocolate cake. Cupcake brownie halvah halvah tiramisu tootsie roll cake jelly beans dragée. Lollipop marzipan apple pie bonbon soufflé cookie. Sesame snaps chocolate cheesecake muffin macaroon. Sweet roll cheesecake bonbon shortbread biscuit carrot cake. Sweet sesame snaps jelly croissant icing bonbon. Bear claw brownie wafer muffin lemon drops chupa chups dragée icing. Dragée lollipop jelly-o gingerbread cake. Pudding liquorice chocolate cupcake ice cream lollipop biscuit gingerbread.</p>'
           },
           {
+            loopNumber: 9,
             buttonText: 'Croissant ice cream candy chocolate bar',
             content: '<p>Sweet roll jelly-o lemon drops pudding bear claw. Powder cotton candy toffee chupa chups topping. Jelly cupcake cotton candy brownie dessert. Caramels cheesecake bonbon dragée chocolate cake. Cupcake brownie halvah halvah tiramisu tootsie roll cake jelly beans dragée. Lollipop marzipan apple pie bonbon soufflé cookie. Sesame snaps chocolate cheesecake muffin macaroon. Sweet roll cheesecake bonbon shortbread biscuit carrot cake. Sweet sesame snaps jelly croissant icing bonbon. Bear claw brownie wafer muffin lemon drops chupa chups dragée icing. Dragée lollipop jelly-o gingerbread cake. Pudding liquorice chocolate cupcake ice cream lollipop biscuit gingerbread.</p>'
           }

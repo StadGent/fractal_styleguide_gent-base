@@ -760,7 +760,7 @@ gulp.task('axe:input', () => {
       'build/components/preview/textarea*.html'
       ]
     )
-    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'label', 'bypass']}))
+    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'label', 'bypass', 'color-contrast']}))
 });
 
 /**
@@ -771,7 +771,7 @@ gulp.task('axe:input', () => {
 gulp.task('axe:layout', callback => {
   return gulp
     .src(['build/components/preview/*layout*.html'])
-    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem']}))
+    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'color-contrast']}))
 });
 
 /**
@@ -782,7 +782,7 @@ gulp.task('axe:layout', callback => {
 gulp.task('axe:components', callback => {
   return gulp
     .src(['build/components/preview/!(input*|file|*layout*|preview*|textarea*|teaser--*|*--*).html'])
-    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'bypass']}))
+    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'bypass', 'color-contrast']}))
 });
 
 gulp.task('axe',

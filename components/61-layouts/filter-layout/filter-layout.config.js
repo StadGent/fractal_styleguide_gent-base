@@ -22,7 +22,7 @@ const generateTeasers = (uid) => {
     result.push({
       teaser_uid: `search_teaser_${i}`,
       image_ratio: '1:1',
-      image_src: 'https://via.placeholder.com/570x570&text=8:5+(570x570)',
+      image_src: 'https://placehold.co/570x570?text=8:5+(570x570)',
       image_alt_text: 'alt text',
       type: 'teaser--wide',
       paragraph_text:

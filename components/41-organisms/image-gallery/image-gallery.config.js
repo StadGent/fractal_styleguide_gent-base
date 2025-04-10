@@ -3,7 +3,7 @@
 const imageList = [];
 for (let i = 6; i--;) {
   imageList.push({
-    src: 'https://via.placeholder.com/800x500&text=8:5+(800x500)',
+    src: 'https://placehold.co/800x500?text=8:5+(800x500)',
     alt: 'placeholder image alternative text',
     caption: 'image caption'
   });

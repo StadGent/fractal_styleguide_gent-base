@@ -1,6 +1,6 @@
-<nav class="table-of-contents" aria-labelledby="table-of-contents-header">
+<nav class="table-of-contents" aria-labelledby="table-of-contents-header-{{ type }}">
   <div class="content-container">
-    <h4 id="table-of-contents-header">On this page</h4>
+    <h4 id="table-of-contents-header-{{ type }}">On this page</h4>
     {% include '@list' with {
       'type': 'links',
       'items': list,
