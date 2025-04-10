@@ -10,7 +10,7 @@
 $id: random(1000);
 
 
-// Icon fonts for default buttons
+// Icon fonts for default buttons.
 @font-face {
   font-family: "<%= fontName %>";
   src: url('#{$styleguide-dir}/fonts/<%= fontName %>.eot?v=#{$id}');
@@ -31,7 +31,7 @@ $id: random(1000);
   font-variant: normal;
   font-weight: normal;
   line-height: 1;
-  speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  speak: none; // Only necessary if not using the private unicode range (firstGlyph option).
   text-decoration: none;
   text-transform: none;
 }
@@ -101,7 +101,7 @@ $id: random(1000);
   }
 }
 
-/* For input buttons with an icon */
+// For input buttons with an icon.
 <% _.each(glyphs, function(glyph) { %>
 .icon-<%= glyph.fileName %> {
   @include icon(<%= glyph.fileName %>);
