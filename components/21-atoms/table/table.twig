@@ -1,4 +1,4 @@
-{# Table (desktop) #}
+{# Table (desktop). #}
 <div class="responsive-table">
   <div class="table-wrapper">
     <table>
@@ -20,33 +20,57 @@
   </div>
 </div>
 
-{# List (mobile) #}
-<div aria-labelledby="{{ _self.name }}-list-description" class="table-list">
-  <ul>
-    {% for row in table.rows|slice(table.columnHeaders ? 1 : 0) %}
-    <li {{ row.attributes }}>
+{# Fixed column with swiper (mobile). #}
+<div class="table-swiper-wrapper">
+    <div class="table-swiper">
+        <div class="table-swiper__fixed-column">
+            <dl>
+                {% if table.columns[0].header is defined and table.columns[0].header.text is not empty %}
+                    <dt class="column-header">{{ table.columns[0].header.text }}</dt>
+                {% endif %}
 
-      {# Row title #}
-      {% if table.rowHeaders %}
-        {% set rowHeader = row.cells|first %}
-        <h3>{{ rowHeader.text }}</h3>
-      {% endif %}
+                {% for cell in table.columns[0].cells %}
+                    {% set rowIndex = loop.index0 %}
+                    {% if cell.header %}
+                        <dt {{ cell.attributes }} class="cell-row" data-row-index="{{ rowIndex }}">{{ cell.text }}</dt>
+                    {% else %}
+                        <dd {{ cell.attributes }} class="cell-row{% if rowIndex is odd %} row-even{% endif %}" data-row-index="{{ rowIndex }}">{{ cell.text }}</dd>
+                    {% endif %}
+                {% endfor %}
+            </dl>
+        </div>
 
-      {# Cells #}
-      <dl>
-        {% for cell in row.cells|slice(table.rowHeaders ? 1 : 0) %}
-          {% if table.columnHeaders %}
-            {% set headingIndex = loop.index - (table.rowHeaders ? 0 : 1) %}
-            <dt>{{ table.rows|first.cells[headingIndex].text }}</dt>
-          {% endif %}
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for column in table.columns|slice(1) %}
+                    <div class="swiper-slide">
+                        <dl>
+                            {% if column.header %}
+                                <dt class="column-header">{{ column.header.text }}</dt>
+                            {% endif %}
+                            {% for cell in column.cells %}
+                                {% set rowIndex = loop.index0 %}
+                                <dd
+                                        {{ cell.attributes }}
+                                        class="cell-row{% if rowIndex is odd %} row-even{% endif %}"
+                                        data-row-index="{{ rowIndex }}"
+                                >
+                                    {{ cell.text }}
+                                </dd>
+                            {% endfor %}
+                        </dl>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
 
-          <dd {{ cell.attributes }}>{{ cell.text }}</dd>
-        {% endfor %}
-      </dl>
-    </li>
-    {% endfor %}
-  </ul>
-  <div class="list-description" id="{{ _self.name }}-list-description">
-    {{ caption }}
-  </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev custom-prev">
+            <i class="icon icon-arrow-left"></i>
+        </div>
+        <div class="swiper-button-next custom-next">
+            <i class="icon icon-arrow-right"></i>
+        </div>
+    </div>
+    <div class="caption">{{ caption }}</div>
 </div>

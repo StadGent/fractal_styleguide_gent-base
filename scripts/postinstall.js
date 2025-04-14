@@ -21,6 +21,11 @@ fs.copySync(
   {recursive: true}
 );
 fs.copySync(
+  `${nodeModulesRootPath}/swiper`,
+  `${publicRootPath}/styleguide/vendor/swiper`,
+  {recursive: true}
+);
+fs.copySync(
   `${nodeModulesRootPath}/masonry-layout`,
   `${publicRootPath}/styleguide/vendor/masonry-layout`,
   {recursive: true}

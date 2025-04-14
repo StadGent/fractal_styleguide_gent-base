@@ -64,6 +64,7 @@
     "sass": "^1.58.1",
     "selenium-webdriver": "4.24.1",
     "set-value": "^4.1.0",
+    "swiper": "^11.2.6",
     "ttf2woff2": "^5.0.0"
   },
   "engines": {

@@ -12,6 +12,9 @@ All notable changes to this style guide are documented here.
 ### Added
 - SDG8-2888: Added styling for titles inside list-items
 
+### Changed
+- SGD8-2287: Changed tables' mobile theming to use swiper for 2nd column and onwards (`<table>` markup changes because of this).
+
 ## [6.0.3]
 
 ### Fixed

@@ -4,23 +4,23 @@ const coloredCells = [
   {
     row: 2,
     col: 2,
-    className: 'success'
+    className: 'cell-row success'
   },
   {
     row: 6,
     col: 4,
-    className: 'warning'
+    className: 'cell-row warning'
   },
   {
     row: 4,
     col: 5,
-    className: 'error'
+    className: 'cell-row error'
   }
 ];
 
 const coloredRows = [{
   row: 9,
-  className: 'success'
+  className: 'cell-row success'
 }];
 
 /**
@@ -65,6 +65,7 @@ const getColorClass = (row, col) => {
 const generateTable = (columnHeaders, rowHeaders, rows = 10, cols = 6) => {
   let table = {
     rows: [],
+    columns: [],
     columnHeaders,
     rowHeaders
   };
@@ -100,6 +101,20 @@ const generateTable = (columnHeaders, rowHeaders, rows = 10, cols = 6) => {
     }
 
     table.rows.push(tr);
+  }
+
+  // Building columns.
+  for (let col = 0; col < cols; col++) {
+    let column = {
+      header: columnHeaders ? table.rows[0].cells[col] : null,
+      cells: []
+    };
+
+    for (let row = columnHeaders ? 1 : 0; row < rows; row++) {
+      column.cells.push(table.rows[row].cells[col]);
+    }
+
+    table.columns.push(column);
   }
 
   return table;

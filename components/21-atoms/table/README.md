@@ -33,4 +33,4 @@ The table styling features alternating row colors.
 
 On desktop resolutions, when it is desired, individual rows, columns or even individual cells can be highlighted by overriding the background color. The colors that can be used are `success`, `warning` and `error`. To override the background color with one of these colors, apply the desired CSS class to a row or cell.
 
-On tablets in portrait mode and mobile resolutions, the table component is rendered as an HTML description list. Highlighting cannot be used here.
+On tablets in portrait mode and mobile resolutions, the table component is rendered as a swiper, with arrows to swipe through the different columns. Highlighting cannot be used here. The first column is always fixed, the rest of the "slides" swipe under the first column.

@@ -1,35 +1,28 @@
 div.responsive-table,
-div.table-list {
+div.table-swiper-wrapper {
   position: relative;
   padding-bottom: 1.4rem;
 
-  .list-description,
-  caption {
+  caption,
+  .caption {
     @include theme('color', 'help-text-color', 'table-caption-color');
-
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: .4rem 0;
-    font-size: .6rem;
-    text-align: right;
+    @include small-text();
   }
 }
 
 div.responsive-table {
   @include focus-style;
 
+  display: none;
+
   @include tablet {
     display: block;
     max-width: 100%;
   }
 
-  display: none;
-
   .table-wrapper {
     overflow-x: auto;
   }
-
 
   table {
     border-bottom: 1px solid color('gray', -5);
@@ -81,64 +74,170 @@ div.responsive-table {
     th,
     td {
       @include theme('color', 'color-zero', 'table-content-color');
-      padding: .8rem;
+      padding: 20px;
       text-align: left;
+    }
+
+    caption {
+      margin-top: 10px;
+      text-align: right;
     }
   }
 }
 
-div.table-list {
+// Swiper styling for mobile.
+
+$fixed-col-width: 130px;
+$pag-nav-wrapper-size: 50px;
+
+div.table-swiper-wrapper {
+  display: block;
+  width: 100%;
+
   @include tablet {
     display: none;
   }
 
-  display: block;
+  .table-swiper__fixed-column,
+  .swiper {
+    padding-bottom: $pag-nav-wrapper-size;
 
-  &.js-hidden {
-    display: none;
-  }
+    &::before,
+    &::after {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background-color: color('gray-light');
+      content: "";
+    }
 
-  ul {
-    @extend %list-no-style;
+    &::before {
+      top: 0;
+    }
 
-    li {
-      padding: .6rem .3rem;
-      font-size: .9rem;
-
-      &:nth-child(even) {
-        @include theme('background-color', 'color-secondary', 'table-list-row-color');
-      }
+    &::after {
+      bottom: $pag-nav-wrapper-size;
     }
   }
 
-  dl {
+  .table-swiper {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
-    > dt {
-      @include phablet {
-        flex: 0 30%;
+    dl,
+    dt,
+    dd {
+      margin: 0;
+    }
+
+    dt,
+    dd {
+      display: block;
+      padding: 20px;
+    }
+
+    .swiper {
+      width: calc(100vw - #{$fixed-col-width});
+      margin-left: 0;
+      padding-left: 0;
+      overflow: hidden;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      width: 100%;
+      gap: 0;
+      box-sizing: border-box;
+    }
+
+    .swiper-slide {
+      width: auto;
+      margin-right: -1px;
+    }
+
+    .swiper-pagination {
+      top: calc(100% - $pag-nav-wrapper-size + 8px);
+    }
+
+    .swiper-pagination-bullet-active,
+    .swiper-button-next,
+    .swiper-button-prev {
+      @include theme('color', 'color-primary');
+    }
+
+    .swiper-pagination-bullet {
+      @include theme('background-color', 'bullet-inactive-color');
+
+      width: 10px;
+      height: 10px;
+      margin: 0 7.5px;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      @include theme('background-color', 'color-primary');
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: calc(100% - $pag-nav-wrapper-size);
+      height: $pag-nav-wrapper-size;
+      margin-top: 0;
+
+      &::after {
+        display: none;
       }
 
-      flex: 0 50%;
-      line-height: 2.1;
-
-      + dd {
-        flex: 0 50%;
-
-        @include phablet {
-          flex: 0 70%;
+      .icon {
+        &::before {
+          font-size: 1.6rem;
+          line-height: $pag-nav-wrapper-size;
         }
       }
     }
+  }
 
-    > dd {
-      flex: 0 100%;
-      margin: 0;
-      padding: 0;
-      font-size: .8rem;
-      line-height: 2.4;
+  .table-swiper__fixed-column {
+    position: sticky;
+    left: 0;
+    flex-shrink: 0;
+    width: $fixed-col-width;
+    z-index: 2;
+    pointer-events: none;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: $pag-nav-wrapper-size;
+      left: 100%;
+      width: 25px;
+      height: auto;
+      background: linear-gradient(90deg, rgba(2, 0, 36, .25) 0%, rgba(0, 0, 0, 0) 100%);
+      content: "";
+      z-index: 4;
+    }
+  }
+
+  dt {
+    @include theme('background-color', 'color-secondary', 'table-header-color');
+    @include theme('border-color', 'color-secondary', 'table-header-color');
+    @include semi-bold-text();
+  }
+
+  dd {
+    @include theme('background-color', 'color-none', 'table-row-color');
+    @include theme('border-color', 'color-none', 'table-row-color');
+
+    &.row-even {
+      @include theme('background-color', 'color-secondary-light', 'table-row-color');
+      @include theme('border-color', 'color-secondary-light', 'table-row-color');
+    }
+
+    &:nth-of-type(n) {
+      @include table-backgrounds();
     }
   }
 }
