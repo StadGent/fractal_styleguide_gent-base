@@ -1,5 +1,9 @@
 {% if type == 'ordered' %}
   <ol class="{{ modifier }}">
+      <li>
+          <h3>Test H3 title inside ordered list</h3>
+          <p>Paragraph underneath</p>
+      </li>
       {% for item in items %}
           <li>{{ item }}</li>
       {% endfor %}
@@ -8,6 +12,10 @@
 
 {% if type == 'unordered' %}
   <ul class="{{ modifier }}">
+      <li>
+          <h2>Test H2 title inside unordered list</h2>
+          <p>Paragraph underneath</p>
+      </li>
       {% for item in items %}
           <li>{{ item }}</li>
       {% endfor %}
@@ -21,6 +29,10 @@
         {% endfor %}
         <li> Nested List
             <ul>
+                <li>
+                    <h4>Test H4 title inside nested list</h4>
+                    <p>Paragraph underneath</p>
+                </li>
                 {% for item in items %}
                     <li>{{ item }}</li>
                 {% endfor %}

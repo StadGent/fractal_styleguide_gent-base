@@ -9,6 +9,9 @@ All notable changes to this style guide are documented here.
   - Fixed button styling with fallback for input elements (with icons)
   - Added extra icons from styleguide
 
+### Added
+- SDG8-2888: Added styling for titles inside list-items
+
 ## [6.0.3]
 
 ### Fixed
