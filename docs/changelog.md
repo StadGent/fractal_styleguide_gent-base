@@ -15,6 +15,9 @@ All notable changes to this style guide are documented here.
 ### Changed
 - SGD8-2287: Changed tables' mobile theming to use swiper for 2nd column and onwards (`<table>` markup changes because of this).
 
+### Removed
+- SGD8-2602: Removed unnecessary font extensions (eot, ttf, woff and svg).
+
 ## [6.0.3]
 
 ### Fixed
