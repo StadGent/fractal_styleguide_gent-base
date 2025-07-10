@@ -80,7 +80,7 @@
   }
 
   // Initialise each Swiper separately.
-  window.addEventListener('load', () => {
+  function initializeSwiper() {
     document.querySelectorAll('.table-swiper-wrapper .swiper').forEach(function (swiperElement) {
       const swiperWrapper = swiperElement.closest('.table-swiper-wrapper');
       const paginationEl = swiperWrapper.querySelector('.swiper-pagination');
@@ -114,9 +114,11 @@
         observeParents: true,
       });
     });
-  });
+  }
+
 
   // Extra fallback for page load and window resize.
+  window.addEventListener('load', initializeSwiper);
   window.addEventListener('load', equalizeTableSwiperHeights);
   window.addEventListener('resize', equalizeTableSwiperHeights);
 })();
