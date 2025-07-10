@@ -19,11 +19,6 @@ div.responsive-table {
   @include tablet {
     display: block;
     max-width: 100%;
-    overflow: hidden;
-  }
-
-  .table-wrapper {
-    overflow-x: auto;
   }
 
   table {

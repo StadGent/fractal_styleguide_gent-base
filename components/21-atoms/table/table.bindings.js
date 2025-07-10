@@ -80,35 +80,39 @@
   }
 
   // Initialise each Swiper separately.
-  document.querySelectorAll('.table-swiper-wrapper .swiper').forEach(function (swiperElement) {
-    const swiperWrapper = swiperElement.closest('.table-swiper-wrapper');
-    const paginationEl = swiperWrapper.querySelector('.swiper-pagination');
-    const nextEl = swiperWrapper.querySelector('.swiper-button-next');
-    const prevEl = swiperWrapper.querySelector('.swiper-button-prev');
-    const slideCount = swiperElement.querySelectorAll('.swiper-slide').length;
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.table-swiper-wrapper .swiper').forEach(function (swiperElement) {
+      const swiperWrapper = swiperElement.closest('.table-swiper-wrapper');
+      const paginationEl = swiperWrapper.querySelector('.swiper-pagination');
+      const nextEl = swiperWrapper.querySelector('.swiper-button-next');
+      const prevEl = swiperWrapper.querySelector('.swiper-button-prev');
+      const slideCount = swiperElement.querySelectorAll('.swiper-slide').length;
 
-    new Swiper(swiperElement, { // eslint-disable-line no-undef
-      slidesPerView: 'auto',
-      spaceBetween: 0,
-      loop: slideCount > 1,
-      pagination: {
-        el: paginationEl,
-        type: 'bullets',
-        clickable: true
-      },
-      navigation: {
-        nextEl: nextEl,
-        prevEl: prevEl
-      },
-      on: {
-        init: function () {
-          equalizeTableSwiperHeights();
-          setTimeout(() => this.update(), 100);
+      new Swiper(swiperElement, { // eslint-disable-line no-undef
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        loop: slideCount > 1,
+        pagination: {
+          el: paginationEl,
+          type: 'bullets',
+          clickable: true
         },
-        resize: function () {
-          equalizeTableSwiperHeights();
-        }
-      }
+        navigation: {
+          nextEl: nextEl,
+          prevEl: prevEl
+        },
+        on: {
+          init: function () {
+            equalizeTableSwiperHeights();
+            setTimeout(() => this.update(), 100);
+          },
+          resize: function () {
+            equalizeTableSwiperHeights();
+          }
+        },
+        observer: true,
+        observeParents: true,
+      });
     });
   });
 
