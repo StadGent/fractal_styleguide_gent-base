@@ -111,7 +111,7 @@
           }
         },
         observer: true,
-        observeParents: true,
+        observeParents: true
       });
     });
   }
