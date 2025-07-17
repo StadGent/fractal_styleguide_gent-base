@@ -10,6 +10,9 @@ All notable changes to this style guide are documented here.
 ### Changed
 - SGD8-3000: Changed border for responsive table to slides instead of whole table.
 
+### Removed
+- SGD8-2802: Removed accolade for full image figcaptions.
+
 ## [6.0.13]
 
 ### Fixed
