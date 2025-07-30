@@ -10,6 +10,9 @@ All notable changes to this style guide are documented here.
 ### Changed
 - SGD8-3000: Changed border for responsive table to slides instead of whole table.
 
+### Removed
+- SGD8-2802: Removed accolade for full image figcaptions.
+
 ### Fixed
 - SGD8-2915: Fixed the spacing for CTA blocks with img on the right side & mobile spacing.
 - SGD8-3009: Fixed initial page zooming when swiper is present.

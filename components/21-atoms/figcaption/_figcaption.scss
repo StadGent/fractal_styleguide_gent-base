@@ -6,4 +6,10 @@ figcaption {
   margin: -16px 20px 0;
   float: right;
   line-height: 175%;
+
+  .full-image & {
+    &::before {
+      display: none;
+    }
+  }
 }
