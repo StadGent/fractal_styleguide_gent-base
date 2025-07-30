@@ -17,6 +17,13 @@
     }
   }
 
+  p,
+  ul,
+  ol {
+    hyphens: auto;
+    hyphenate-limit-chars: 10 3 4;
+  }
+
   .date {
     @include small-text();
     @include theme('color', 'color-zero', 'help-text-color');

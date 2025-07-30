@@ -106,3 +106,7 @@ iframe,
 *[contenteditable] {
   @include focus-style;
 }
+
+table {
+  hyphens: auto;
+}

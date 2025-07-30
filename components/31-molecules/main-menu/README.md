@@ -17,7 +17,7 @@ When a menu menu is used, the main menu should be included:
 
 Do not use the main menu component on:
 
-1. Websites that only have 1 main section. In this case, a main menu is not unnecessary and should not be used.
+1. Websites that only have 1 main section. In this case, a main menu is unnecessary and should not be used.
 2. Websites that have a lot of main sections and where the number of sections cannot be reduced even with an optimized information architecture. In this case a main menu is not the best choice. For this kind of websites, it's better to rely on overview pages.
 
 ## How it works

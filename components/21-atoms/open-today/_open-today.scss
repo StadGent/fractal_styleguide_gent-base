@@ -6,9 +6,12 @@ $breakpoint-openinghours: '(min-width: 750px)';
 .openinghours-widget {
   &[data-type="day"] {
     display: block;
-    margin-bottom: 20px;
     border-radius: border-radius('radius-1');
     overflow: hidden;
+
+    &:has(> *) {
+      margin-bottom: 20px;
+    }
 
     > * {
       line-height: 1.4rem;

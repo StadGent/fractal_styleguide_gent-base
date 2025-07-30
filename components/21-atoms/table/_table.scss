@@ -2,6 +2,7 @@ div.responsive-table,
 div.table-swiper-wrapper {
   position: relative;
   padding-bottom: 1.4rem;
+  hyphens: auto;
 
   caption,
   .caption {
@@ -18,10 +19,6 @@ div.responsive-table {
   @include tablet {
     display: block;
     max-width: 100%;
-  }
-
-  .table-wrapper {
-    overflow-x: auto;
   }
 
   table {
@@ -99,7 +96,7 @@ div.table-swiper-wrapper {
   }
 
   .table-swiper__fixed-column,
-  .swiper {
+  .swiper-slide {
     padding-bottom: $pag-nav-wrapper-size;
 
     &::before,
@@ -136,11 +133,13 @@ div.table-swiper-wrapper {
     dt,
     dd {
       display: block;
+      width: 100%;
       padding: 20px;
     }
 
     .swiper {
-      width: calc(100vw - #{$fixed-col-width});
+      width: calc(100vw - #{$fixed-col-width} - 40px);
+      margin-right: 0;
       margin-left: 0;
       padding-left: 0;
       overflow: hidden;
@@ -149,12 +148,15 @@ div.table-swiper-wrapper {
     .swiper-wrapper {
       display: flex;
       width: 100%;
+      margin: 0;
+      padding: 0;
       gap: 0;
       box-sizing: border-box;
     }
 
     .swiper-slide {
       width: auto;
+      max-width: 190px;  // = 360px - 2 x 20px - 130px (for fixed column).
       margin-right: -1px;
     }
 
@@ -228,13 +230,6 @@ div.table-swiper-wrapper {
   }
 
   dd {
-    @include theme('background-color', 'color-none', 'table-row-color');
-    @include theme('border-color', 'color-none', 'table-row-color');
-
-    &.row-even {
-      @include theme('background-color', 'color-secondary-light', 'table-row-color');
-      @include theme('border-color', 'color-secondary-light', 'table-row-color');
-    }
 
     &:nth-of-type(n) {
       @include table-backgrounds();

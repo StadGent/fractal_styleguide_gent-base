@@ -2,15 +2,84 @@
 
 All notable changes to this style guide are documented here.
 
-## [6.0.4] - Unreleased
-
-### Fixed
-- STIJ-444: 
-  - Fixed button styling with fallback for input elements (with icons)
-  - Added extra icons from styleguide
+## [6.0.14]
 
 ### Added
-- SDG8-2888: Added styling for titles inside list-items
+- HEAT-6831451: Added icons for parking, car-charger and arrows-left-right.
+
+### Changed
+- SGD8-3000: Changed border for responsive table to slides instead of whole table.
+
+### Removed
+- SGD8-2802: Removed accolade for full image figcaptions.
+
+### Fixed
+- SGD8-2915: Fixed the spacing for CTA blocks with img on the right side & mobile spacing.
+- SGD8-3009: Fixed initial page zooming when swiper is present.
+- STIJ-444: Fixed button styling with fallback for input elements (with icons) + Added extra icons from styleguide.
+
+## [6.0.13]
+
+### Fixed
+- SGD8-3000: Fixed table equal heights.  
+
+## [6.0.12]
+
+### Fixed
+- SGD8-2287: Fixed table max-width on mobile.
+
+### Changed
+- SGD8-2965: Changed overlap spacing for content headers with img overlap.
+
+### Removed
+- SGD8-2982: Removed new fonts styling and reverted to old styling with eot and old font files.
+
+## [6.0.11]
+
+### Added
+- SGD8-2982: Added WOFF font files for fallback on servers without font/woff2 MIME-type.
+
+## [6.0.10]
+
+### Added
+- SGD8-2982: Added version parameter to font url for anti-caching purposes.
+
+## [6.0.9]
+
+### Fixed
+- SGD8-2982: Fixed faulty copying of font files with gulp task.
+
+## [6.0.8]
+
+### Added
+- SGD8-2986: Add CSS hyphenation to teasers.
+
+### Fixed
+- SGD8-2581: Fixed empty opening hours widgets' margin.
+
+## [6.0.7]
+
+### Fixed
+- SGD8-2982: Fixed corrupted font files.
+
+## [6.0.6]
+
+### Fixed
+- SGD8-2982: Fixed broken WOFF2 font files in base fonts.
+
+## [6.0.5]
+
+### Removed
+- SGD8-2602: Removed unnecessary font extensions.
+
+### Fixed
+- SGD8-2287: Fixed table styling with Swiper to load library.
+- Broken build script.
+
+## [6.0.4]
+
+### Added
+- SDG8-2888: Added styling for titles inside list-items.
 
 ### Changed
 - SGD8-2287: Changed tables' mobile theming to use swiper for 2nd column and onwards (`<table>` markup changes because of this).
@@ -46,9 +115,9 @@ All notable changes to this style guide are documented here.
 **New Stad Gent style. View all markup changes below. Always look up
 the mentioned elements in the styleguide to see the new HTML markup.**
 
-## Added
+### Added
 
-### theme-body() (mixin)
+#### theme-body() (mixin)
 
 The themify `theme()` function creates style selectors like this:
 ```css
@@ -65,33 +134,33 @@ selector:
 .cs--blue.original-selector .child ... {}
 ```
 
-### Accolade element (mixin)
+#### Accolade element (mixin)
 `@include accolade;`
 
 Add an outside accolade to an element and add a color to it.
 
-### Abstract shadow (mixin)
+#### Abstract shadow (mixin)
 `@include abstract-shadow;`
 
 Add an underlying container of the same size under the chosen element.
 For example the highlight molecule.
 
-### Icon-right (mixin)
+#### Icon-right (mixin)
 `@include button-icon-right;`
 
 Also added the `.icon-right` class for icons that are on the right-hand side.
 
-## Changed (HTML markup)
+### Changed (HTML markup)
 **Follow these markup changes in your project to have CSS applied flawlessly.**
 
-### Legends
+#### Legends
 **Added legend-title class**
 The legend now has a `<span class="legend-title">` around the text/title/label
 
-### Input submit
+#### Input submit
 Changed `<input>` to `<button>`. This is important to be able to use the hover effect in combination with an icon.
 
-### Icon atom
+#### Icon atom
 **Removed icons:** external-link, fancyback
 
 **Added icons:** basket, civil-affairs, contact, cross-circle, culture,
@@ -103,53 +172,53 @@ uit-met-vlieg, view-grid, view-list, virus, whatsapp, wheelchair-no, work.
 
 Some icons have been updated, using the same machine name.
 
-### Label icon
+#### Label icon
 This element is new. Existing labels such as on teasers can be replaced by this
 atom. See teaser markup changes.
 
-### Important note molecule
+#### Important note molecule
 This new molecule is used to display a colored text with same color icon in front of it. It is e.g. used in the Timeline Roadmap display.
 
-### Modal molecule
+#### Modal molecule
 Default heading changed from `h3` to `h2` and the close button has the `.button-secondary` class
 
-### Accordion molecule
+#### Accordion molecule
 This module is expanded with the option to add another container (for images, e.g. on Timeline) that is controlled with the `data-controls-img` attribute, linking it to the id of the img container.
 
 Use the `.accordion--link` class for read-more type links with the correct button and content classes.
 
-### Contact details molecule
+#### Contact details molecule
 A wrapper was added to columns: `.contact-details-columns` and the `h3` is changed to an `h2` with class `.h3`, which is outside of those columns.
 
-### Highlight molecule
+#### Highlight molecule
 No more spot images via classes. The icon can be changed in HTML markup via
 the proper icon name in the `<i>` element.
 An H2 title has been added.
 
-### Call to action molecule
+#### Call to action molecule
 Not based on Highlight molecule anymore.
 Instead, there is new markup, including the option for an image (1:1).
 
-### Table of contents molecule
+#### Table of contents molecule
 The H2 heading changed to H4 and is visible. The heading text changed as well.
 A class is added to the `<ul>` element to define 2 or 3 columns.
 
-### Status messages molecule
+#### Status messages molecule
 The icon classes have changed to the circle variants.
 
-### File upload molecule
+#### File upload molecule
 The file upload molecule (variation multiple) has the new class multiple added on the section. 
 `<section class="file-upload multiple">`.
 This change is needed to hide the 'No file chosen.' text on this variation.
 
-### Partner block molecule
+#### Partner block molecule
 * Not based on Highlight molecule anymore.
 * Title is now an `h2` instead of an `h3`.
 * `.single-partner` becomes `.partners` class because styling changes are determined based on wrapper class `.partner__single` or `.partner__multiple`.
 * `<a>` tag has `.no-icon` class so that it does not get an external link icon in some cases
 * (Optional) intro block contains only the title and text: extra wrappers for `.intro` and `.intro-content`.
 
-### Teaser molecule
+#### Teaser molecule
 There are multiple variations of teasers instead of just one. Pick the right
 variation for your use case.
 - Teasers without image now need the teaser class `no-image` for correct styling.
@@ -162,16 +231,16 @@ variation for your use case.
 - Wide teaser has no changes except for heading change and accolade removal, see above. The image has a 1:1 ratio.
 - Square double teaser added.
 
-### Banner organism
+#### Banner organism
 A `banner-image-container full-width` wrapper is added. The image inside is not a gallery but a simple image shown without `data-ratio` attribute.
 
-### Collection organism
+#### Collection organism
 The grid system is updated (Susy is removed), an example is added to the readme. The old (legacy) grid classes still work for now.
 
-### Header organism
+#### Header organism
 - The logo is bigger on the frontpage, based on a parent class `is-frontpage`.
 
-### Timeline organism
+#### Timeline organism
 **Timeline paragraph title** is now an `h3`, the **Timeline item title** is now an `h4` and the **Timeline item subtitle** is now an `h5`.
 
 There's an image (singular) that is loaded twice: once on the right side and shown on mobile and once on the left side and shown on desktop. Make sure the `data-controls-img` attribute of the title is the same as the image container for desktops' id.
@@ -180,10 +249,10 @@ The timeline slots can have a reverse order (by adding the `.timeline-slot-rever
 
 The new `timeline--roadmap` variant is used for displaying steps. It also includes an accordion with extra content options.
 
-### Programme organism
+#### Programme organism
 Titles have changed to h2 and h3 for slot title and teaser title
 
-### Summary box organism
+#### Summary box organism
 Not based on Highlight molecule anymore.
 The HTML markup has been simplified.
 ```
@@ -192,7 +261,7 @@ The HTML markup has been simplified.
 </aside>
 ```
 
-### Image gallery multiple organism
+#### Image gallery multiple organism
 ```
 <span>Show all photos <i class="icon-arrow-right" aria-hidden="true"></i></span>
 ```
@@ -201,7 +270,7 @@ Becomes
 <span>Show all photos <i class="icon-fullscreen-enter" aria-hidden="true"></i></span>
 ```
 
-### Contact details organism
+#### Contact details organism
 Not based on Highlight molecule anymore.
 The HTML markup has been simplified.
 ```
@@ -213,7 +282,7 @@ The links get a `no-icon` class.
 
 Add the `.contact-details--with-image` class to the contact-details section if you want to remove the side margins and set it to full width.
 
-### Footer organism
+#### Footer organism
 * Titles become `h4` except Gentinfo title stays `h3`.
 * `gentinfo-block` class gets 2nd class `dark-background`.
 * `icon-document` icon becomes `icon-subscribe`
@@ -221,12 +290,12 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 * Gentinfo ul links get new class `no-icon`.
 * Gentinfo button is secondary instead primary and gets extra class `icon-left`.
 
-### Theme footer organism
+#### Theme footer organism
 * Social block has an `h4` title instead of `h3`.
 * The newsletter block does not use highlight block anymore, instead it uses the
   new feature-block markup.
 
-### Filter layout
+#### Filter layout
 * "You have selected" and "Found results" is normal text instead of `h2`.
 * The left sidebar title changed from `h2` to `h3`.
 
@@ -238,6 +307,16 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
+[6.0.14]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.13...6.0.14
+[6.0.13]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.12...6.0.13
+[6.0.12]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.11...6.0.12
+[6.0.11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.10...6.0.11
+[6.0.10]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.9...6.0.10
+[6.0.9]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.8...6.0.9
+[6.0.8]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.7...6.0.8
+[6.0.7]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.6...6.0.7
+[6.0.6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.5...6.0.6
+[6.0.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.4...6.0.5
 [6.0.4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.3...6.0.4
 [6.0.3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.2...6.0.3
 [6.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.1...6.0.2

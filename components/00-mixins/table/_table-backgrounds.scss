@@ -12,21 +12,28 @@
 
 @mixin table-backgrounds($child-selector: null) {
   &.success #{$child-selector} {
-    @include theme-content('color-success--lighten-4', 'table-success-background') {
+    @include theme-content('color-success-light', 'table-success-background') {
       border-color: $theme-color;
       background-color: $theme-color;
     };
   }
 
   &.warning #{$child-selector} {
-    @include theme-content('color-warning--lighten-4', 'table-warning-background') {
+    @include theme-content('color-warning-light', 'table-warning-background') {
       border-color: $theme-color;
       background-color: $theme-color;
     };
   }
 
   &.error #{$child-selector} {
-    @include theme-content('color-error--lighten-4', 'table-error-background') {
+    @include theme-content('color-error-light', 'table-error-background') {
+      border-color: $theme-color;
+      background-color: $theme-color;
+    };
+  }
+
+  &.row-even #{$child-selector} {
+    @include theme-content('color-secondary-light', 'table-row-color') {
       border-color: $theme-color;
       background-color: $theme-color;
     };
