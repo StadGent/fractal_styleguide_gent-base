@@ -10,6 +10,9 @@ All notable changes to this style guide are documented here.
 ### Changed
 - SGD8-3000: Changed border for responsive table to slides instead of whole table.
 
+### Fixed
+- SGD8-3009: Fixed initial page zooming when swiper is present.
+
 ## [6.0.13]
 
 ### Fixed
