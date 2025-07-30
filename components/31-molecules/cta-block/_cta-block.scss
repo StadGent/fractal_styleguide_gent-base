@@ -9,6 +9,52 @@
     flex-flow: row;
   }
 
+  .cta-block__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include desktop {
+      min-width: 470px;
+      min-height: 470px;
+    }
+
+    figcaption {
+      margin-bottom: 40px;
+
+      @include phablet {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .cta-block__content {
+    position: relative;
+    top: -20px;
+    width: 100%;
+    z-index: 1;
+
+    @include phablet {
+      top: 20px;
+      margin-top: auto;
+    }
+
+    li {
+      margin-top: 16px;
+
+      a {
+        font-size: .8rem;
+      }
+
+      &:first-of-type a {
+        @extend %button-secondary;
+        @include button;
+        @include button-large;
+        @include button-icon;
+      }
+    }
+  }
+
   &.image-none {
     max-width: 48.5rem;
     z-index: 1;
@@ -29,72 +75,37 @@
     }
   }
 
-  .cta-block__image {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    @include phablet {
-      flex-shrink: .4;
-    }
-
-    @include desktop {
-      min-width: 470px;
-      min-height: 470px;
-    }
-  }
-
-  .cta-block__content {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-
-    @include phablet {
-      margin-top: auto;
-    }
-
-    li {
-      margin-top: 16px;
-
-      a {
-        font-size: .8rem;
-      }
-
-      &:first-of-type a {
-        @extend %button-secondary;
-        @include button;
-        @include button-large;
-        @include button-icon;
-      }
-    }
-  }
-
   &.image-left {
     .cta-block__image {
-      margin-right: 20px;
+      margin-right: 0;
+      padding-right: 20px;
 
       @include phablet {
-        margin-right: inherit;
+        padding-right: 0;
       }
     }
 
     figcaption {
-      margin-right: 80px; // Overlap + 20px
+      @include phablet {
+        margin-right: 80px;
+      }
     }
 
     .cta-block__content {
-      top: -20px;
-      left: 20px;
+      padding-left: 20px;
 
       @include phablet {
         top: auto;
         bottom: -90px;
         left: -60px;
+        padding-left: 0;
+      }
+    }
 
-        .feature-block {
-          width: calc(100% + 60px);
-          margin-right: 20px;
-        }
+    .feature-block {
+      @include phablet {
+        width: calc(100% + 60px);
+        margin-right: 20px;
       }
     }
   }
@@ -105,33 +116,34 @@
     }
 
     .cta-block__image {
-      margin-left: 20px;
+      margin-left: 0;
+      padding-left: 20px;
 
       @include phablet {
-        margin-left: inherit;
+        padding-left: 0;
       }
     }
 
     figcaption {
-      margin-left: 80px; // Overlap + 20px
+      @include phablet {
+        margin-left: 80px; // Overlap + 20px
+      }
     }
 
     .cta-block__content {
-      top: -20px;
-      margin-right: 20px;
+      padding-right: 20px;
 
       @include phablet {
-        top: auto;
         bottom: -90px;
+        left: -60px;
+        padding-right: 0;
       }
+    }
 
-      .feature-block {
-        margin-right: 20px;
-
-        @include phablet {
-          width: calc(100% + 60px);
-          margin-right: inherit;
-        }
+    .feature-block {
+      @include phablet {
+        width: calc(100% + 60px);
+        margin-left: 60px;
       }
     }
   }
