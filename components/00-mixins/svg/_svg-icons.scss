@@ -119,11 +119,11 @@
   }
 
   @if $icon == 'accolade' {
-    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 36 19"><path fill="#{$fill-color}" fill-rule="evenodd" d="M50.0702 0C31.2247 0 26.7846 7.44663 25.2657 18H24.8745C23.3559 7.44663 18.9157 0 0.0701904 0H25.0701H50.0702Z"/> </svg>';
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 51 18"><path fill="#{$fill-color}" fill-rule="evenodd" d="M50.07 0c-18.85 0-23.29 7.45-24.8 18h-.39C23.36 7.45 18.92 0 .07 0h50Z"/> </svg>';
   }
 
   @if $icon == 'accolade-inverse' {
-    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 40 18"><path fill="#{$fill-color}" fill-rule="nonzero" d="M20 0c-.219 5.005-1.73 8.973-5.115 12.536C11.505 16.093 6.797 18 2.023 18H0V0h20zm0 0h20v18h-2.023c-4.774 0-9.482-1.907-12.862-5.464C21.73 8.973 20.219 5.005 20 0z"/></svg>';
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 40 18"><path fill="#{$fill-color}" fill-rule="nonzero" d="M.07 18c18.85 0 23.29-7.45 24.8-18h.39c1.52 10.55 5.96 18 24.8 18h-50Z"/></svg>';
   }
 
   @if $icon == 'accolade-stroke' {

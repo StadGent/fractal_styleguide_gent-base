@@ -2,6 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
+## [6.0.16] Unreleased
+
+### Updated
+- SGD8-2552: Updated accolade to new design.
+
 ## [6.0.15]
 
 ### Removed
