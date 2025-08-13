@@ -6,6 +6,7 @@ All notable changes to this style guide are documented here.
 
 ### Fixed
 - STIJ-446: Fix Sass deprecations.
+- STIJ-446: Fix gc machine description issues in fractal build.
 
 ## [6.0.16]
 

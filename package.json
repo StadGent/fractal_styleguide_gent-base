@@ -32,6 +32,8 @@
     "gulp-uglify": "^3.0.2",
     "husky": "^8.0.3",
     "imagemin-pngquant": "^9.0.2",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.1.0",
     "npm-cli-login": "^1.0.0",
     "sassdoc": "^2.7.4",
     "stream-combiner2": "^1.1.1",

@@ -1,6 +1,7 @@
 @use "sass:color" as sc;
 @use "sass:map";
 @use "sass:meta";
+
 ////
 ///
 /// This file defines all color settings, mixins and functions necessary
@@ -130,6 +131,14 @@ $tints: (
     @return map.get($colors, $base-color);
   }
 };
+
+/// Returns a palette color by token name.
+/// @deprecated Use `coloring()` instead to avoid conflicts with `sass:color`.
+/// @param {String} $name - Token name (e.g. 'primary', 'danger').
+/// @return {Color}
+@function color($name) {
+  @return coloring($name);
+}
 
 ///
 /// A function to adjust the opacity of a base color.
