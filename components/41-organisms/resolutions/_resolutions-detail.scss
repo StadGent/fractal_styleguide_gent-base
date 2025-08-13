@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+
 // sass-lint:disable placeholder-in-extend
 .resolutions-detail {
   display: grid;
@@ -89,17 +93,21 @@
     }
 
     &--true {
-      @extend .icon-checkmark-circle;
+      @include icon(checkmark-circle);
 
-      background-color: color('green', -4);
-      color: color('green', +2);
+      & {
+        background-color: coloring('green', -4);
+        color: coloring('green', +2);
+      }
     }
 
     &--false {
-      @extend .icon-cross;
+      @include icon(cross);
 
-      background-color: color('red', -4);
-      color: color('red', +2);
+      & {
+        background-color: coloring('red', -4);
+        color: coloring('red', +2);
+      }
     }
   }
 }

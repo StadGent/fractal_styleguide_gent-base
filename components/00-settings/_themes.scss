@@ -1,3 +1,5 @@
+@use "colors";
+
 ///
 /// Themify settings. This determines the colors for all main and sub themes.
 ///
@@ -9,65 +11,65 @@
 $themes: (
   'blue': (
     // Required colors!
-    'color-zero': color('gray'),
-    'color-none': color('white'),
-    'color-primary': color('blue'),
-    'color-primary-light': color('blue-light'),
-    'color-secondary': color('yellow'),
-    'color-secondary-pastel': color('yellow-pastel'),
-    'color-secondary-light': color('yellow-light'),
-    'color-tertiary': color('cyan'),
-    'color-tertiary-pastel': color('cyan-pastel'),
-    'color-tertiary-light': color('cyan-light'),
-    'color-quaternary': color('cyan-hover'),
-    'color-info': color('cyan'),
-    'color-info-pastel': color('cyan-pastel'),
-    'color-info-light': color('cyan-light'),
-    'color-success': color('green'),
-    'color-success-pastel': color('green-pastel'),
-    'color-success-light': color('green-light'),
-    'color-warning': color('orange'),
-    'color-warning-pastel': color('orange-pastel'),
-    'color-warning-light': color('orange-light'),
-    'color-error': color('red'),
-    'color-error-pastel': color('red-pastel'),
-    'color-error-light': color('red-light'),
+    'color-zero': colors.coloring('gray'),
+    'color-none': colors.coloring('white'),
+    'color-primary': colors.coloring('blue'),
+    'color-primary-light': colors.coloring('blue-light'),
+    'color-secondary': colors.coloring('yellow'),
+    'color-secondary-pastel': colors.coloring('yellow-pastel'),
+    'color-secondary-light': colors.coloring('yellow-light'),
+    'color-tertiary': colors.coloring('cyan'),
+    'color-tertiary-pastel': colors.coloring('cyan-pastel'),
+    'color-tertiary-light': colors.coloring('cyan-light'),
+    'color-quaternary': colors.coloring('cyan-hover'),
+    'color-info': colors.coloring('cyan'),
+    'color-info-pastel': colors.coloring('cyan-pastel'),
+    'color-info-light': colors.coloring('cyan-light'),
+    'color-success': colors.coloring('green'),
+    'color-success-pastel': colors.coloring('green-pastel'),
+    'color-success-light': colors.coloring('green-light'),
+    'color-warning': colors.coloring('orange'),
+    'color-warning-pastel': colors.coloring('orange-pastel'),
+    'color-warning-light': colors.coloring('orange-light'),
+    'color-error': colors.coloring('red'),
+    'color-error-pastel': colors.coloring('red-pastel'),
+    'color-error-light': colors.coloring('red-light'),
 
-    'default-text-color': color('gray'),
+    'default-text-color': colors.coloring('gray'),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
-    'heading-inverse-primary-background-color': color('blue'),
-    'heading-2-color': color('blue'),
+    'heading-inverse-primary-background-color': colors.coloring('blue'),
+    'heading-2-color': colors.coloring('blue'),
 
-    'link-color': color('blue'),
-    'link-underline-color': color('blue'),
-    'link-hover-background': color('blue-light'),
-    'link-hover-color': color('blue'),
-    'link-underlined-hover-color': color('blue'),
+    'link-color': colors.coloring('blue'),
+    'link-underline-color': colors.coloring('blue'),
+    'link-hover-background': colors.coloring('blue-light'),
+    'link-hover-color': colors.coloring('blue'),
+    'link-underlined-hover-color': colors.coloring('blue'),
 
-    'focus-outline': color('gray'),
+    'focus-outline': colors.coloring('gray'),
 
-    'modal-overlay-background-color': color('cyan-light'),
+    'modal-overlay-background-color': colors.coloring('cyan-light'),
 
-    'button-primary-background': color('gray'),
-    'button-primary-color': color('white'),
-    'button-primary-hover-background': color('gray-medium'),
-    'button-primary-hover-color': color('white'),
-    'button-primary-active-background': color('gray-medium'),
-    'button-primary-active-color': color('white'),
+    'button-primary-background': colors.coloring('gray'),
+    'button-primary-color': colors.coloring('white'),
+    'button-primary-hover-background': colors.coloring('gray-medium'),
+    'button-primary-hover-color': colors.coloring('white'),
+    'button-primary-active-background': colors.coloring('gray-medium'),
+    'button-primary-active-color': colors.coloring('white'),
 
-    'button-secondary-background': color('cyan-pastel'),
-    'button-secondary-color': color('gray'),
-    'button-secondary-hover-background': color('cyan-hover'),
-    'button-secondary-hover-color': color('gray'),
-    'button-secondary-active-background': color('cyan-hover'),
-    'button-secondary-active-color': color('gray'),
+    'button-secondary-background': colors.coloring('cyan-pastel'),
+    'button-secondary-color': colors.coloring('gray'),
+    'button-secondary-hover-background': colors.coloring('cyan-hover'),
+    'button-secondary-hover-color': colors.coloring('gray'),
+    'button-secondary-active-background': colors.coloring('cyan-hover'),
+    'button-secondary-active-color': colors.coloring('gray'),
 
-    'tag-close-button-background-hover': color('gray-light'),
+    'tag-close-button-background-hover': colors.coloring('gray-light'),
 
-    'help-text-color': color('gray-medium'),
+    'help-text-color': colors.coloring('gray-medium'),
 
-    'bullet-inactive-color': color('gray-light'),
+    'bullet-inactive-color': colors.coloring('gray-light'),
   )
 ) !default;

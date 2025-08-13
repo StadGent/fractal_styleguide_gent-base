@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 div.responsive-table,
 div.table-swiper-wrapper {
   position: relative;
@@ -22,7 +25,7 @@ div.responsive-table {
   }
 
   table {
-    border-bottom: 1px solid color('gray', -5);
+    border-bottom: 1px solid coloring('gray', -5);
     border-collapse: collapse;
     caption-side: bottom;
 
@@ -105,7 +108,7 @@ div.table-swiper-wrapper {
       right: 0;
       left: 0;
       height: 1px;
-      background-color: color('gray-light');
+      background-color: coloring('gray-light');
       content: "";
     }
 

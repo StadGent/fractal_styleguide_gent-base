@@ -1,3 +1,6 @@
+@use "sass:color" as sc;
+@use "sass:map";
+@use "sass:meta";
 ////
 ///
 /// This file defines all color settings, mixins and functions necessary
@@ -79,7 +82,7 @@ $tints: (
 ///   The color to mix with.
 ///
 @function rgba-to-rgb($base-color, $background: #fff) {
-  @return mix(rgb(red($base-color), green($base-color), blue($base-color)), $background, alpha($base-color) * 100%);
+  @return sc.mix(rgb(sc.channel($base-color, "red"), sc.channel($base-color, "green"), sc.channel($base-color, "blue")), $background, sc.channel($base-color, "alpha") * 100%);
 };
 
 ///
@@ -102,9 +105,9 @@ $tints: (
 /// @param {map} colors$ [$colors]
 ///   The colors array to use to calculate the correct color tint.
 ///
-@function color($base-color, $tint: 0, $transparent: false, $colors: $colors) {
-  @if not map-has-key($colors, $base-color) {
-    @warn "`#{inspect($base-color)}` doesn't seem to be a valid base color.";
+@function coloring($base-color, $tint: 0, $transparent: false, $colors: $colors) {
+  @if not map.has-key($colors, $base-color) {
+    @warn "`#{meta.inspect($base-color)}` doesn't seem to be a valid base color.";
   }
 
   $color: null;
@@ -124,7 +127,7 @@ $tints: (
     }
   }
   @if $tint == 0 {
-    @return map-get($colors, $base-color);
+    @return map.get($colors, $base-color);
   }
 };
 
@@ -147,11 +150,11 @@ $tints: (
 ///   The colors array to use to calculate the correct color tint.
 ///
 @function tint($base-color, $tint, $colors: $colors) {
-  @if not map-has-key($tints, $tint) {
-    @warn "`#{inspect($tint)}` doesn't seem to be a valid tint value.";
+  @if not map.has-key($tints, $tint) {
+    @warn "`#{meta.inspect($tint)}` doesn't seem to be a valid tint value.";
   }
 
-  @return rgba(map-get($colors, $base-color), map-get($tints, $tint));
+  @return rgba(map.get($colors, $base-color), map.get($tints, $tint));
 };
 
 ///
@@ -175,9 +178,9 @@ $tints: (
 @function shade($base-color, $tint, $colors: $colors) {
   $color-black: #000;
 
-  @if not map-has-key($tints, $tint) {
-    @warn "`#{inspect($tint)}` doesn't seem to be a valid tint value.";
+  @if not map.has-key($tints, $tint) {
+    @warn "`#{meta.inspect($tint)}` doesn't seem to be a valid tint value.";
   }
 
-  @return mix($color-black, map-get($colors, $base-color), map-get($tints, $tint));
+  @return sc.mix($color-black, map.get($colors, $base-color), map.get($tints, $tint));
 };

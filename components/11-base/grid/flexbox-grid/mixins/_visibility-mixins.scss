@@ -1,3 +1,5 @@
+@use "../variables/grid-variables";
+
 @mixin show($breakpoint, $row) {
   @if $breakpoint == "xs" {
     @if $row == "true" or $row == "row" {

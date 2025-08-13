@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/forms/forms' as *;
+
 input[type="text"],
 input[type="number"],
 input[type="password"],
@@ -22,12 +26,12 @@ input[type="password"] {
     &,
     &:focus {
       padding-right: $field-icon-padding;
-      background-image: svg-as-background('lock-closed', color('gray'), 24, 24);
+      background-image: svg-as-background('lock-closed', coloring('gray'), 24, 24);
       background-repeat: no-repeat;
       background-position: right .75rem center;
 
       &:disabled {
-        background-image: svg-as-background('lock-closed', color('gray', -2), 24, 24);
+        background-image: svg-as-background('lock-closed', coloring('gray', -2), 24, 24);
       }
     }
   }
@@ -43,7 +47,7 @@ input[type=date] {
     width: 1.2rem;
     height: 1.2rem;
     padding: .5rem;
-    background-image: svg-as-background('calendar', color('gray'), 30, 30);
+    background-image: svg-as-background('calendar', coloring('gray'), 30, 30);
 
     &:hover {
       @include theme('background-color', 'button-secondary-hover-background');

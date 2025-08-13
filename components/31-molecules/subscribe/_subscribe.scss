@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../21-atoms/button/button-styling' as *;
+
 .subscribe {
   @include medium-text();
 
@@ -26,7 +30,7 @@
   label {
     width: 100%;
     max-width: 100%;
-    color: color('gray');
+    color: coloring('gray');
   }
 
   input {

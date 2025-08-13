@@ -1,3 +1,8 @@
+@use 'detail-layout/detail-layout';
+@use 'filter-layout/filter-layout';
+@use 'overview-layout/overview-layout';
+@use 'sidebar-right-layout/sidebar-right-layout';
+
 .sidebar-layout,
 .detail-layout,
 .overview-layout {

@@ -1,3 +1,10 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/grid/flexbox-grid/mixins/grid-mixins' as *;
+
+@use 'css/gentinfo_island';
+@use 'css/social-list';
+
 .footer {
   margin: 60px -20px 0;
 
@@ -41,8 +48,11 @@
     .footer--column {
       @include theme('background-color', 'color-tertiary-light', 'footer-background-color');
       @include col(12);
-      flex: 0 0 auto;
-      padding: 20px 20px 60px;
+
+      & {
+        flex: 0 0 auto;
+        padding: 20px 20px 60px;
+      }
 
       // Gentinfo column.
       &:first-of-type {
@@ -64,9 +74,12 @@
         // Gentinfo column.
         &:first-of-type {
           @include col(12);
-          margin-top: 0;
-          padding-top: 0;
-          background-color: transparent;
+
+          & {
+            margin-top: 0;
+            padding-top: 0;
+            background-color: transparent;
+          }
         }
       }
 
@@ -82,9 +95,12 @@
 
       @include desktop {
         @include col(3);
-        margin-top: 58px;
-        margin-bottom: 0;
-        padding-bottom: 20px;
+
+        & {
+          margin-top: 58px;
+          margin-bottom: 0;
+          padding-bottom: 20px;
+        }
 
         &:nth-of-type(2),
         &:nth-of-type(3) {
@@ -95,8 +111,10 @@
         &:first-of-type {
           @include col(6);
 
-          order: 1;
-          margin-top: 0;
+          & {
+            order: 1;
+            margin-top: 0;
+          }
         }
       }
 

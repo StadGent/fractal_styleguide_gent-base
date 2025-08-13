@@ -1,15 +1,24 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+@use '../button/button-styling' as *;
+@use '../button/css/button-success';
+@use '../button/css/button-alert';
+
 $link-padding: .2em;
 
 %a,
 a {
+  @include semi-bold-text;
   @include theme('color', 'color-tertiary', 'link-color');
   @include link-background('color-primary', 'color-primary--lighten-4', 'link-underline-color', 'link-hover-background');
-  @include semi-bold-text;
 
-  position: relative;
-  text-decoration: none;
-  word-wrap: break-word;
-  word-break: break-word;
+  & {
+    position: relative;
+    text-decoration: none;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
 
   &::before,
   &::after {

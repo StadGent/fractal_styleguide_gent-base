@@ -2,6 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
+## [6.0.17] Unreleased
+
+### Fixed
+- STIJ-446: Fix Sass deprecations.
+
 ## [6.0.16]
 
 ### Updated

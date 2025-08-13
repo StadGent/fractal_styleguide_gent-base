@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../21-atoms/heading/heading' as *;
+
 .documents,
 .document-box { // Deprecated
   li {

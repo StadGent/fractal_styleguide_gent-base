@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 // Needed for smooths scrolling on iphone / ipad inside modals.
 // Placing it on .modal is not sufficient for safari.
 * {
@@ -13,16 +16,18 @@
     animation: fade .2s ease-in-out;
   }
 
-  display: flex;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-height: 100vh;
-  visibility: hidden;
-  z-index: z('modal', 'base');
-  overflow-y: auto;
+  & {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 100vh;
+    visibility: hidden;
+    z-index: z('modal', 'base');
+    overflow-y: auto;
+  }
 
   // states
   &.visible {
@@ -137,12 +142,14 @@
     @include theme('border-color', 'color-primary--lighten-4', 'modal-action-border-bottom');
     @include theme('background-color', 'color-none', 'modal-action-background-color');
 
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    width: 100%;
-    padding: 30px 20px;
-    z-index: z('modal', 'actions');
+    & {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      width: 100%;
+      padding: 30px 20px;
+      z-index: z('modal', 'actions');
+    }
 
     @include tablet {
       position: relative;

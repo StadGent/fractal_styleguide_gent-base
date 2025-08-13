@@ -1,3 +1,6 @@
+@use 'map-deep-get' as *;
+@use '../../00-settings/settings' as *;
+
 ///
 /// Returns the z-index value for a certain layer.
 /// The z-layers map is defined in _vars.scss.

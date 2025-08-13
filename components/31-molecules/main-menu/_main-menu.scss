@@ -1,12 +1,21 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+@use '../../21-atoms/button/button-styling' as *;
+@use '../../21-atoms/list/list' as *;
+
 nav.menu {
   margin: 0;
 
   button {
     @include button-icon;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    font-size: .8rem;
+
+    & {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-size: .8rem;
+    }
 
     @include tablet {
       display: none;
@@ -33,7 +42,9 @@ nav.menu {
       display: none;
     }
 
-    margin: 0;
+    & {
+      margin: 0;
+    }
 
     li {
       display: inline-block;
@@ -47,8 +58,10 @@ nav.menu {
         @include reset-link-background;
         @include link-underlined;
 
-        margin-bottom: 0;
-        padding: 10px 0;
+        & {
+          margin-bottom: 0;
+          padding: 10px 0;
+        }
       }
 
       a.active {
@@ -84,14 +97,16 @@ nav.menu {
       &::before {
         @include theme('border-color', 'color-primary--lighten-4', 'header-border-bottom');
 
-        position: absolute;
-        top: 100%;
-        left: -30px;
-        width: 100vw;
-        height: 20px;
-        margin-top: 12px;
-        border-top: 2px solid;
-        content: '';
+        & {
+          position: absolute;
+          top: 100%;
+          left: -30px;
+          width: 100vw;
+          height: 20px;
+          margin-top: 12px;
+          border-top: 2px solid;
+          content: '';
+        }
       }
 
       button {
@@ -104,7 +119,10 @@ nav.menu {
     .menu-links {
       ul {
         @extend %list-no-style;
-        margin: 0;
+
+        & {
+          margin: 0;
+        }
 
         li {
           @include tablet {
@@ -113,8 +131,11 @@ nav.menu {
           }
 
           @include theme('border-color', 'color-primary-light');
-          margin-bottom: 0;
-          border-bottom: 1px solid;
+
+          & {
+            margin-bottom: 0;
+            border-bottom: 1px solid;
+          }
 
           a,
           a[href^="mailto:"],
@@ -124,9 +145,11 @@ nav.menu {
             @include reset-link-background;
             @include icon('chevron-right', 'after');
 
-            display: block;
-            padding: 10px 20px;
-            line-height: 1.4rem;
+            & {
+              display: block;
+              padding: 10px 20px;
+              line-height: 1.4rem;
+            }
 
             &:hover {
               @include theme('background-color', 'color-primary-light');
@@ -153,7 +176,10 @@ nav.menu {
 
       &:not(:last-child) {
         @include theme('border-color', 'color-primary--lighten-4');
-        border-bottom: 2px solid;
+
+        & {
+          border-bottom: 2px solid;
+        }
       }
 
       ul {

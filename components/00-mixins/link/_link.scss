@@ -1,3 +1,6 @@
+@use '../../00-settings/vars' as *;
+@use '../../00-mixins/themify/themify' as *;
+
 ///
 ///  Applies a hover animation using the background.
 ///  Typically applied to elements containing text.
@@ -23,10 +26,13 @@
 ///
 @mixin link-background($underline: 'color-primary', $hover: null, $underline-exception: null, $hover-exception: null) {
   @include theme('border-color', $underline, $underline-exception);
-  transition: background-image 1s, color 1s;
-  border-bottom: 2px solid;
-  background-repeat: repeat-y;
-  background-position: 0 100%;
+
+  & {
+    transition: background-image 1s, color 1s;
+    border-bottom: 2px solid;
+    background-repeat: repeat-y;
+    background-position: 0 100%;
+  }
 
   @if $hover {
     @include theme-content($hover, $hover-exception) {
@@ -34,8 +40,11 @@
         $theme-color 0,
         $theme-color 100%);
     }
-    transition: background-size .2s, color .2s;
-    background-size: 0 100%;
+
+    & {
+      transition: background-size .2s, color .2s;
+      background-size: 0 100%;
+    }
 
     &:hover,
     &:focus {
@@ -76,20 +85,26 @@
 ///
 @mixin link-underlined($active-selector: '.active') {
   @include theme('color', 'color-primary', 'link-color');
-  display: inline-block;
-  font-weight: 400;
-  text-decoration: none;
+
+  & {
+    display: inline-block;
+    font-weight: 400;
+    text-decoration: none;
+  }
 
   &::after {
     @include theme('color', 'color-primary', 'link-underlined-hover-color');
-    display: block;
-    position: static;
-    width: 0;
-    margin: 0 auto;
-    transition: width 100ms;
-    border-bottom: 2px solid;
-    content: '';
-    overflow: visible;
+
+    & {
+      display: block;
+      position: static;
+      width: 0;
+      margin: 0 auto;
+      transition: width 100ms;
+      border-bottom: 2px solid;
+      content: '';
+      overflow: visible;
+    }
   }
 
   &#{$active-selector},

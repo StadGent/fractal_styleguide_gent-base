@@ -1,5 +1,10 @@
+@use '../../21-atoms/button/css/button-primary';
+@use '../../21-atoms/button/css/button-secondary';
+
 input[type="submit"],
 button[type="submit"] {
+  @extend %button-secondary;
+
   &:not(.button-secondary):not(.button-success):not(.button-alert) {
     @extend %button-primary;
   }

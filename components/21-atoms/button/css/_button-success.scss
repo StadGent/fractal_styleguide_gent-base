@@ -1,3 +1,7 @@
+@use '../button-styling' as *;
+@use '../../../00-mixins/mixins' as *;
+@use '../../../11-base/base' as *;
+
 ///
 /// Success button type.
 ///
@@ -9,23 +13,25 @@
 %button-success,
 .button-success {
   @include theme-content('color-tertiary', 'button-secondary-hover-background') {
-    background-image: linear-gradient(0, color('green', -5), color('green', -5));
+    background-image: linear-gradient(0, coloring('green', -5), coloring('green', -5));
   };
 
-  border: 2px solid color('green');
-  background-color: color('white');
-  color: color('green', 2);
+  & {
+    border: 2px solid coloring('green');
+    background-color: coloring('white');
+    color: coloring('green', 2);
+  }
 
   &:hover {
-    border-color: color('green');
-    color: color('green', 2);
+    border-color: coloring('green');
+    color: coloring('green', 2);
   }
 
   &:active,
   &:focus {
-    border-color: color('green');
-    background-color: color('green', -4);
+    border-color: coloring('green');
+    background-color: coloring('green', -4);
     background-image: none;
-    color: color('green', 2);
+    color: coloring('green', 2);
   }
 }

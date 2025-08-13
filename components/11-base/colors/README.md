@@ -18,7 +18,7 @@ defined in the `_colors.scss` partial.
 
 ```scss
 .my-selector {
-  color: color('cyan', 1);
+  color: coloring('cyan', 1);
 }
 ```
 
@@ -27,7 +27,7 @@ cyan and makes it 1 tint darker.
 
 ```scss
 .my-selector {
-  color: color('red', -31);
+  color: coloring('red', -31);
 }
 ```
 
@@ -63,7 +63,7 @@ Everything just before the double dashes gets used as the key value.
 
 It then checks the part after the double dashes `--` and strips out `lighten`
 or `darken` (everything before the dash `-`). Based on that result it applies
-the `color()` mixin with the correct parameters.
+the `coloring()` mixin with the correct parameters.
 
 The themify theme() function converts sass like this:
 

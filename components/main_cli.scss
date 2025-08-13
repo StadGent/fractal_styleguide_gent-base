@@ -1,7 +1,23 @@
-@import "settings";
-@import "mixins";
-@import "base";
-@import "atoms";
-@import "molecules";
-@import "organisms";
-@import "layouts";
+// General settings and mixins.
+
+@use '00-settings/settings'   as settings;
+@use '00-mixins/mixins'       as mixins;
+
+// Base styling.
+@use '11-base/base'           as base;
+
+// Atoms.
+
+@use '21-atoms/atoms'         as atoms;
+
+// Molecules.
+
+@use '31-molecules/molecules' as molecules;
+
+// Organisms.
+
+@use '41-organisms/organisms' as organisms;
+
+// Layouts.
+
+@use '61-layouts/layouts'     as layouts;

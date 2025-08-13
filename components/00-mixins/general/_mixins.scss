@@ -1,3 +1,11 @@
+@use '../themify/themify' as *;
+@use '../../00-settings/settings' as *;
+
+@use "sass:list";
+@use "sass:map";
+@use "sass:meta";
+@use "sass:string";
+
 ////
 /// Globally defined general purpose mixins.
 /// These mixins can be used by multiple components.
@@ -17,10 +25,9 @@
 /// @param {string} $search - The haystack
 /// @param {string} $replace [''] - The separator
 @function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-  @return if($index,
-    str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace),
-    $string);
+  $index: string.index($string, $search);
+
+  @return if($index, string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace), $string);
 }
 
 ///  Helper function to get a border radius.
@@ -32,7 +39,7 @@
 /// @param {string} $name - The name of the requested border radius.
 /// @param {map} $border-radius [$border-radius] - The map with border radiuses defined in it.
 @function border-radius($name, $border-radius: $border-radius) {
-  @return map-get($border-radius, $name);
+  @return map.get($border-radius, $name);
 }
 
 ///
@@ -78,7 +85,9 @@
 /// @param {string} $property - The property to be styled.
 ///
 @mixin element-states($state, $state-hover, $property: "color") {
-  #{$property}: $state;
+  & {
+    #{$property}: $state;
+  }
 
   &:active,
   &:visited {
@@ -119,28 +128,31 @@
 @function str-split($string, $separator: '--') {
   // empty array/list
   $split-arr: ();
+
   // first index of separator in string
-  $index: str-index($string, $separator);
+  $index: string.index($string, $separator);
+
   // loop through string
   @while $index != null {
     // get the substring from the first character to the separator
-    $item: str-slice($string, 1, $index - 1);
+    $item: string.slice($string, 1, $index - 1);
+
     // push item to array
-    $split-arr: append($split-arr, $item);
+    $split-arr: list.append($split-arr, $item);
 
     @if ($separator == '--') {
       // remove item and separator from string
-      $string: str-slice($string, $index + 2);
+      $string: string.slice($string, $index + 2);
     }
     @else {
       // remove item and separator from string
-      $string: str-slice($string, $index + 1);
+      $string: string.slice($string, $index + 1);
     }
     // find new index of separator
-    $index: str-index($string, $separator);
+    $index: string.index($string, $separator);
   }
   // add the remaining string to list (the last item)
-  $split-arr: append($split-arr, $string);
+  $split-arr: list.append($split-arr, $string);
 
   @return $split-arr;
 }
@@ -156,33 +168,34 @@
 /// @param {string} $value - The string to turn into a number.
 ///
 @function number($value) {
-  @if type-of($value) == 'number' {
+  @if meta.type-of($value) == 'number' {
     @return $value;
-  } @else if type-of($value) != 'string' {
+  }
+  @else if meta.type-of($value) != 'string' {
     @warn 'Value for `to-number` should be a number or a string.';
   }
 
   $result: 0;
   $digits: 0;
-  $minus: str-slice($value, 1, 1) == '-';
+  $minus: string.slice($value, 1, 1) == '-';
   $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
 
-  @for $i from if($minus, 2, 1) through str-length($value) {
-    $character: str-slice($value, $i, $i);
+  @for $i from if($minus, 2, 1) through string.length($value) {
+    $character: string.slice($value, $i, $i);
 
-    @if not (index(map-keys($numbers), $character) or $character == '.') {
-      @return to-length(if($minus, -$result, $result), str-slice($value, $i));
+    @if not (list.index(map.keys($numbers), $character) or $character == '.') {
+      @return to-length(if($minus, -$result, $result), string.slice($value, $i));
     }
 
     @if $character == '.' {
       $digits: 1;
     }
     @else if $digits == 0 {
-      $result: $result * 10 + map-get($numbers, $character);
+      $result: $result * 10 + map.get($numbers, $character);
     }
     @else {
       $digits: $digits * 10;
-      $result: $result + math.div(map-get($numbers, $character), $digits);
+      $result: $result + math.div(map.get($numbers, $character), $digits);
     }
   }
 
@@ -315,8 +328,10 @@
 @mixin focus-bare {
   @include theme('outline-color', 'color-primary', 'focus-outline');
 
-  outline: 2px solid;
-  outline-offset: 2px;
+  & {
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
 }
 
 @mixin focus-style {
@@ -327,27 +342,31 @@
 
 /// Label mixin for optional labels
 @mixin optional-label {
+  @include normal-text;
   @include theme('color', 'color-zero', 'label-optional-color');
   @include theme('background-color', 'color-secondary', 'label-optional-background');
-  @include normal-text;
 
-  padding: 2px 5px;
-  float: right;
-  font-size: .6rem;
-  line-height: 150%;
+  & {
+    padding: 2px 5px;
+    float: right;
+    font-size: .6rem;
+    line-height: 150%;
+  }
 }
 
 /// Label mixin for form labels
 @mixin label {
-  @include theme('color', 'color-primary', 'label-color');
   @include semi-bold-text;
+  @include theme('color', 'color-primary', 'label-color');
 
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin: 0 0 5px;
-  font-size: .8rem;
-  line-height: 1.4rem;
+  & {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 0 5px;
+    font-size: .8rem;
+    line-height: 1.4rem;
+  }
 }
 
 // Remove button styling

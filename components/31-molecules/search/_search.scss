@@ -1,3 +1,8 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../21-atoms/button/button-styling' as *;
+@use '../../21-atoms/heading/heading' as *;
+
 .search {
   display: flex;
   position: relative;
@@ -33,7 +38,7 @@
   &,
   &:focus {
     @include theme-content('color-zero') {
-      background: svg-as-background('search', $theme-color, 32, 32) no-repeat left .4rem center color('white');
+      background: svg-as-background('search', $theme-color, 32, 32) no-repeat left .4rem center coloring('white');
     };
   }
 }

@@ -1,3 +1,7 @@
+@use '../../00-settings/vars' as *;
+@use '../general/mixins' as *;
+@use '../breakpoints/breakpoints' as *;
+
 ///
 /// Helper mixin to break out of the grid structure in targeted places.
 ///

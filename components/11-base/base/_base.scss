@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 ////
 /// Default markup for the most common HTML elements, based on the settings file.
 ////
@@ -10,9 +13,10 @@
 
 :root,
 html {
+  @include theme('background', 'color-none');
+
   display: grid;
   height: 100%;
-  background: color('white');
   font: $default-font-weight $default-font-size $default-font-family;
   line-height: $default-line-height;
   box-sizing: border-box;
@@ -44,7 +48,7 @@ th > * {
 hr {
   margin: 0 auto 1.4rem;
   clear: both;
-  border: solid color('gray-light');
+  border: solid coloring('gray-light');
   border-width: 1px 0 0;
 }
 

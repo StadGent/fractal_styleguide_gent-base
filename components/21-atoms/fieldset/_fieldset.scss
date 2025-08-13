@@ -1,9 +1,14 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 .fieldset-wrapper fieldset,
 fieldset {
   @include theme('border-color', 'color-primary', 'fieldset-border-color');
 
-  max-width: 820px;
-  margin-bottom: 24px;
+  & {
+    max-width: 820px;
+    margin-bottom: 24px;
+  }
 
   .form-item {
     margin-bottom: 16px;
@@ -37,8 +42,10 @@ fieldset {
     .label-optional {
       @include optional-label();
 
-      position: relative;
-      z-index: 2;
+      & {
+        position: relative;
+        z-index: 2;
+      }
     }
 
     + .field-message,
@@ -61,16 +68,20 @@ fieldset {
       &::before {
         @include theme('background-color', 'color-zero', 'fieldset-legend-background-color');
 
-        height: 2px;
+        & {
+          height: 2px;
+        }
       }
 
       .legend-title {
-        @include semi-bold-text;
-        @include medium-text;
         @include theme('color', 'color-none', 'fieldset-legend-color');
         @include theme('background-color', 'color-primary', 'fieldset-legend-background-color');
 
-        padding: 1px 10px;
+        & {
+          @include semi-bold-text;
+          @include medium-text;
+          padding: 1px 10px;
+        }
       }
     }
   }
@@ -80,8 +91,10 @@ fieldset {
     fieldset:not(.webform-type-radios):not(.webform-type-checkboxes):not(.webform-type-webform-radios-other):not(.webform-type-webform-checkboxes-other) {
       @include theme('border-color', 'color-zero', 'inner-fieldset-border-color');
 
-      padding: 20px 20px 12px;
-      border: 1px dashed;
+      & {
+        padding: 20px 20px 12px;
+        border: 1px dashed;
+      }
 
       legend {
         display: flex;
@@ -92,15 +105,19 @@ fieldset {
           @include theme('background-color', 'color-none', 'inner-fieldset-legend-background-color');
           @include theme('border-color', 'color-zero', 'inner-fieldset-border-color');
 
-          height: 1px;
-          border-bottom: 1px dashed;
+          & {
+            height: 1px;
+            border-bottom: 1px dashed;
+          }
         }
 
         .legend-title {
           @include theme('color', 'color-zero', 'inner-fieldset-legend-color');
           @include theme('background-color', 'color-none', 'inner-fieldset-legend-background-color');
 
-          padding: 1px 10px;
+          & {
+            padding: 1px 10px;
+          }
         }
       }
     }
@@ -113,7 +130,9 @@ fieldset {
     legend {
       @include label;
 
-      max-width: 410px;
+      & {
+        max-width: 410px;
+      }
 
       &::before {
         display: none;
@@ -123,7 +142,9 @@ fieldset {
         @include theme('background-color', 'color-none');
         @include theme('color', 'color-primary');
 
-        padding-left: 0;
+        & {
+          padding-left: 0;
+        }
       }
     }
   }

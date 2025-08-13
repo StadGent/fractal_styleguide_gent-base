@@ -1,3 +1,7 @@
+@use "sass:string";
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 ////
 /// This file defines helper classes.
 ////
@@ -46,7 +50,7 @@
 $directions: top, right, bottom, left;
 @for $i from 0 through 40 {
   @each $d in $directions {
-    $ds: str-slice($d, 0, 1); // Get first letter of direction
+    $ds: string.slice($d, 0, 1); // Get first letter of direction
 
     .m#{$ds}-#{$i} {
       margin-#{$d}: $i * .1rem;

@@ -1,3 +1,6 @@
+@use '../link/link' as *;
+@use '../themify/themify' as *;
+@use '../general/mixins' as *;
 
 ///
 /// Convert a link to a square read more button, given it has an "after" icon.
@@ -8,18 +11,20 @@
 /// @author Lennart Van Vaerenbergh
 ///
 @mixin read-more-icon-link() {
-  @include reset-link-background;
   @include large-text();
+  @include reset-link-background;
   @include theme('color', 'color-zero', 'button-secondary-color');
   @include theme('background-color', 'color-tertiary', 'button-secondary-background');
 
-  display: flex;
-  align-items: center;
-  width: 2.2rem;
-  height: 2.2rem;
-  margin: 0;
-  text-align: center;
-  text-indent: -9999999px;
+  & {
+    display: flex;
+    align-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0;
+    text-align: center;
+    text-indent: -9999999px;
+  }
 
   &.standalone-link:not([href^="mailto:"]):not([href^="tel:"]):not([download]):not([href^="http://"]):not([href^="https://"]):not(.back) {
     margin: 0;

@@ -1,6 +1,12 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 .programme-wrapper {
   @include theme('background-color', 'color-tertiary-light');
-  padding: 24px;
+
+  & {
+    padding: 24px;
+  }
 
   @include desktop {
     padding: 120px 135px;

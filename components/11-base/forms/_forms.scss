@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+
 ////
 /// This file defines general form input fields styling.
 ///
@@ -35,10 +39,10 @@ $field-icon-padding: 50px;
   &:disabled {
     padding-right: $field-icon-padding;
     border: 0;
-    background: color("gray", -5) $field-icon-position;
+    background: coloring("gray", -5) $field-icon-position;
     background-image: svg-as-background(
       "lock-closed",
-      color("gray", -2),
+      coloring("gray", -2),
       24,
       24
     );
@@ -47,21 +51,21 @@ $field-icon-padding: 50px;
 
   &.success {
     padding-right: $field-icon-padding;
-    border: 1px solid color("green");
-    background: color("green-pastel", -4) $field-icon-position;
+    border: 1px solid coloring("green");
+    background: coloring("green-pastel", -4) $field-icon-position;
     background-image: svg-as-background(
       "checkmark-circle",
-      color("green"),
+      coloring("green"),
       26,
       26
     );
 
     &:focus {
-      border-color: color("green");
-      background: color("green-pastel", -4) $field-icon-position;
+      border-color: coloring("green");
+      background: coloring("green-pastel", -4) $field-icon-position;
       background-image: svg-as-background(
         "checkmark-circle",
-        color("green"),
+        coloring("green"),
         26,
         26
       );
@@ -70,21 +74,21 @@ $field-icon-padding: 50px;
 
   &.error {
     padding-right: $field-icon-padding;
-    border: 1px solid color("red");
-    background: color("red", -6) $field-icon-position;
+    border: 1px solid coloring("red");
+    background: coloring("red", -6) $field-icon-position;
     background-image: svg-as-background(
       "exclamation-circle",
-      color("red"),
+      coloring("red"),
       26,
       26
     );
 
     &:focus {
-      border-color: color("red");
-      background: color("red", -6) $field-icon-position;
+      border-color: coloring("red");
+      background: coloring("red", -6) $field-icon-position;
       background-image: svg-as-background(
         "exclamation-circle",
-        color("red"),
+        coloring("red"),
         26,
         26
       );
@@ -250,11 +254,11 @@ $field-icon-padding: 50px;
     //
     [class*="cs--"] & {
       &.success + label::before {
-        border-color: color("green");
+        border-color: coloring("green");
       }
 
       &.error + label::before {
-        border-color: color("red");
+        border-color: coloring("red");
       }
     }
 
@@ -263,23 +267,23 @@ $field-icon-padding: 50px;
     //
     &:disabled {
       + label {
-        color: color('gray', -3);
+        color: coloring('gray', -3);
         font-weight: normal !important; // sass-lint:disable-line no-important
         cursor: not-allowed;
 
         &::before {
-          border-color: color(
+          border-color: coloring(
             "gray",
             -5
           ) !important; // sass-lint:disable-line no-important
-          background: color(
+          background: coloring(
             "gray",
             -5
           ) !important; // sass-lint:disable-line no-important
         }
 
         &::after {
-          color: color(
+          color: coloring(
             "gray",
             -2
           ) !important; // sass-lint:disable-line no-important
@@ -351,7 +355,7 @@ $field-icon-padding: 50px;
         &:disabled {
           + label {
             &::after {
-              background-color: color(
+              background-color: coloring(
                 "gray",
                 -2
               ) !important; // sass-lint:disable-line no-important

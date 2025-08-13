@@ -1,10 +1,23 @@
-@import '00-settings/reset';
-@import '00-settings/vars';
-@import '00-mixins/**/*';
-@import '00-settings/colors';
-@import '00-settings/themes';
-@import '11-base/**/*';
-@import '21-atoms/**/*';
-@import '31-molecules/**/*';
-@import '41-organisms/**/*';
-@import '61-layouts/**/*';
+// General settings and mixins.
+
+@use '00-settings/settings'   as settings;
+@use '00-mixins/mixins'       as mixins;
+
+// Base styling.
+@use '11-base/base'           as base;
+
+// Atoms.
+
+@use '21-atoms/atoms'         as atoms;
+
+// Molecules.
+
+@use '31-molecules/molecules' as molecules;
+
+// Organisms.
+
+@use '41-organisms/organisms' as organisms;
+
+// Layouts.
+
+@use '61-layouts/layouts'     as layouts;

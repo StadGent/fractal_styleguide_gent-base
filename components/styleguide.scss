@@ -1,7 +1,5 @@
-@import '00-settings/vars';
-@import '00-mixins/**/*';
-@import '00-settings/colors';
-@import '00-settings/themes';
+@use '00-settings/settings' as *;
+@use '00-mixins/mixins' as *;
 
 //
 //
@@ -19,8 +17,8 @@
   border-radius: .2rem;
 
   &.white {
-    background-color: color('gray');
-    color: color('white');
+    background-color: coloring('gray');
+    color: coloring('white');
   }
 
   p {
@@ -67,7 +65,7 @@
 @each $color-key, $color in $colors {
   @each $tint-key, $tint in $tints {
     .color-swatch-#{$color-key}-#{$tint-key} {
-      background-color: color($color-key, $tint-key);
+      background-color: coloring($color-key, $tint-key);
     }
   }
 }
@@ -145,11 +143,11 @@ h3.styleguide-title {
   .cs--wrapper &,
   .cs--inverse &,
   .cs--accent & {
-    border-bottom: 1px dotted color('white');
+    border-bottom: 1px dotted coloring('white');
   }
 
   .cs--highlighted & {
-    border-bottom: 1px dotted color('gray');
+    border-bottom: 1px dotted coloring('gray');
   }
 }
 

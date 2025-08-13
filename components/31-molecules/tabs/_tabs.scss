@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 .tabs {
 
   [role='tabpanel'] {
@@ -42,13 +45,15 @@
         @include reset-link-background;
         @include theme('color', 'color-tertiary', 'default-text-color');
 
-        display: inline-block;
-        width: 100%;
-        padding: 20px;
-        font-weight: 600;
-        line-height: 128%;
-        text-align: center;
-        text-decoration: none;
+        & {
+          display: inline-block;
+          width: 100%;
+          padding: 20px;
+          font-weight: 600;
+          line-height: 128%;
+          text-align: center;
+          text-decoration: none;
+        }
 
         @include desktop {
           width: auto;
@@ -59,15 +64,18 @@
 
         &::after {
           @include theme('color', 'color-zero');
-          display: block;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          margin: 0 auto;
-          transition: width 100ms;
-          border-bottom: 3px solid;
-          content: '';
-          overflow: visible;
+
+          & {
+            display: block;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            margin: 0 auto;
+            transition: width 100ms;
+            border-bottom: 3px solid;
+            content: '';
+            overflow: visible;
+          }
         }
 
         &[role='tab'][aria-selected='true'],
@@ -84,7 +92,9 @@
       [role='tab'][aria-selected='true'] {
         @include theme('background-color', 'color-secondary-pastel', 'tab-background-color');
 
-        border-bottom: 0;
+        & {
+          border-bottom: 0;
+        }
       }
     }
   }

@@ -1,3 +1,5 @@
+@use '../../00-settings/settings' as *;
+
 ///
 /// Theme mixin to generate all themes spot images.
 /// This generates the necessary theme CSS for all defined themes based on the

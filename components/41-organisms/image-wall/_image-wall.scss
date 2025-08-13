@@ -1,4 +1,10 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/grid/flexbox-grid/mixins/grid-mixins' as *;
+
 .image-wall {
+  width: 100%;
+
   @include phablet {
     display: flex;
     flex: 1 1 100%;
@@ -26,6 +32,4 @@
       margin: 0;
     }
   }
-
-  width: 100%;
 }

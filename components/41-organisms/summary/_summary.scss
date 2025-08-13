@@ -1,6 +1,13 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../21-atoms/button/button-styling' as *;
+
 .summary-box {
   @include theme('background-color', 'color-secondary-light', 'summary-box-background-color');
-  padding: 1.5rem;
+
+  & {
+    padding: 1.5rem;
+  }
 
   ul.icon-list {
     @include medium-text;

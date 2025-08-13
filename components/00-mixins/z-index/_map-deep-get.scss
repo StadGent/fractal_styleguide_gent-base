@@ -1,3 +1,4 @@
+@use "sass:map";
 ///
 /// Deep get function to get a value from nested sass maps.
 ///
@@ -14,11 +15,11 @@
 ///
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
-    @if not map-has-key($map, $key) {
+    @if not map.has-key($map, $key) {
       @warn "Key `#{$key}` in not found in map. Property omitted.";
     }
 
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
 
   @return $map;

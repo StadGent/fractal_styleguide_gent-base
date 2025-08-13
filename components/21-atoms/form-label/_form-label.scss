@@ -1,9 +1,14 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 label {
   @include label();
 
   .label-optional {
     @include optional-label();
 
-    margin: 0 0 3px 5px;
+    & {
+      margin: 0 0 3px 5px;
+    }
   }
 }

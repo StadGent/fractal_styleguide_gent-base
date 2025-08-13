@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+
 //
 // Basic teaser theming.
 //
@@ -13,7 +17,9 @@
     span {
       @include theme('background-color', 'color-secondary');
 
-      padding: 2.5px 10px;
+      & {
+        padding: 2.5px 10px;
+      }
     }
   }
 
@@ -27,17 +33,22 @@
   .date {
     @include small-text();
     @include theme('color', 'color-zero', 'help-text-color');
-    position: relative;
-    margin: 10px 0;
-    z-index: 3;
+
+    & {
+      position: relative;
+      margin: 10px 0;
+      z-index: 3;
+    }
 
     span {
       @include icon('calendar');
 
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      line-height: 1;
+      & {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        line-height: 1;
+      }
 
       &::before {
         position: relative;
@@ -77,15 +88,17 @@
     @include reset-link-background;
     @include element-states(transparent, transparent, background-color);
 
-    position: absolute;
-    top: -20px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-indent: 200%;
-    white-space: nowrap;
-    overflow: hidden;
-    z-index: z('teaser', 'overlay-link');
+    & {
+      position: absolute;
+      top: -20px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      z-index: z('teaser', 'overlay-link');
+    }
   }
 
   .teaser-content {
@@ -193,7 +206,10 @@
   &.teaser--background {
     .content__second {
       @include theme('background-color', 'color-none');
-      padding: 0 20px 20px;
+
+      & {
+        padding: 0 20px 20px;
+      }
     }
 
     &.no-image,
@@ -243,9 +259,11 @@
         span {
           @include theme('background-color', 'color-none', 'heading-with-light-bg-background-color');
 
-          padding: 5px 10px;
-          line-height: 1.2;
-          box-decoration-break: clone;
+          & {
+            padding: 5px 10px;
+            line-height: 1.2;
+            box-decoration-break: clone;
+          }
         }
 
         &::before {
@@ -256,9 +274,11 @@
       .read-more {
         @include read-more-icon-link();
 
-        position: absolute;
-        right: 0;
-        bottom: 0;
+        & {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
       }
     }
   }
@@ -289,8 +309,11 @@
   &.teaser--simple {
     .content__second {
       @include theme('background-color', 'color-none');
-      position: static;
-      padding: 20px 60px 20px 20px;
+
+      & {
+        position: static;
+        padding: 20px 60px 20px 20px;
+      }
 
       @include phablet {
         padding: 30px 60px 30px 30px;
@@ -334,9 +357,11 @@
       .read-more {
         @include read-more-icon-link();
 
-        position: absolute;
-        right: 0;
-        bottom: 0;
+        & {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
       }
     }
 
@@ -354,9 +379,11 @@
   &.teaser--wide {
     @include theme('border-color', 'color-primary', 'teaser-wide-border-color');
 
-    margin: 0 0 40px;
-    padding: 0 0 30px;
-    border-bottom: 1px solid color('blue');
+    & {
+      margin: 0 0 40px;
+      padding: 0 0 30px;
+      border-bottom: 1px solid coloring('blue');
+    }
 
     h3 {
       margin: 0 0 20px;
@@ -376,7 +403,9 @@
       @include small-text();
       @include theme('color', 'help-text-color', 'teaser-location-color');
 
-      margin: 0 0 10px;
+      & {
+        margin: 0 0 10px;
+      }
     }
 
     .location {
@@ -420,9 +449,12 @@
       padding: 0;
 
       .dash-separated-list {
-        @include theme('color', 'default-text-color', 'help-text-color');
         @include medium-text();
-        margin: 10px 0;
+        @include theme('color', 'default-text-color', 'help-text-color');
+
+        & {
+          margin: 10px 0;
+        }
 
         li {
           margin-bottom: 0;
