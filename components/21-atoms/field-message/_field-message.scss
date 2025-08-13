@@ -51,6 +51,27 @@
       right: -1px;
       width: 31px;
     }
+
+    .feature-block.secondary & {
+      &::before,
+      &::after {
+        @include theme('background-color', 'color-secondary', 'feature-block-secondary-background-color');
+      }
+    }
+
+    .feature-block & {
+      &::before,
+      &::after {
+        @include theme('background-color', 'color-primary', 'feature-block-primary-background-color');
+      }
+    }
+
+    .highlight__inner & {
+      &::before,
+      &::after {
+        @include theme('background-color', 'color-tertiary-light', 'highlight-background');
+      }
+    }
   }
 
   a {
