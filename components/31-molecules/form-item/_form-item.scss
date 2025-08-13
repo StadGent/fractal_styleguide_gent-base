@@ -37,7 +37,8 @@
   }
 
   &:not(.stacked) {
-    .form-label {
+    .form-label,
+    legend {
       @include desktop {
         width: 50%;
         max-width: 410px;
