@@ -44,14 +44,20 @@ input[type=date] {
 
   &::-webkit-calendar-picker-indicator { // sass-lint:disable-line no-vendor-prefixes
     @include theme('background-color', 'button-secondary-background');
-    width: 1.2rem;
-    height: 1.2rem;
-    padding: .5rem;
-    background-image: svg-as-background('calendar', coloring('gray'), 30, 30);
+
+    & {
+      width: 1.2rem;
+      height: 1.2rem;
+      padding: .5rem;
+      background-image: svg-as-background('calendar', coloring('gray'), 30, 30);
+    }
 
     &:hover {
       @include theme('background-color', 'button-secondary-hover-background');
-      cursor: pointer;
+
+      & {
+        cursor: pointer;
+      }
     }
   }
 
@@ -67,13 +73,13 @@ input[type=date] {
   &:hover {
     // Unchecked and hovered.
     label::before {
-      @include theme('background-color', 'color-zero--lighten-5', 'radio-background-color-hover');
-      @include theme('border-color', 'color-zero--lighten-2', 'radio-border-color-hover');
+      @include theme('background-color', 'color-zero-ultralight', 'radio-background-color-hover');
+      @include theme('border-color', 'color-zero', 'radio-border-color-hover');
     }
 
     // Checked and hovered.
     input[type="radio"]:checked + label::before {
-      @include theme('background-color', 'color-zero--lighten-5', 'radio-background-color-hover-and-checked');
+      @include theme('background-color', 'color-zero-ultralight', 'radio-background-color-hover-and-checked');
       @include theme('border-color', 'color-primary', 'radio-border-color-hover-and-checked');
       @include theme('color', 'color-primary', 'radio-color-hover-and-checked');
     }
@@ -91,12 +97,12 @@ input[type=date] {
   &:hover {
     // Unchecked and hovered.
     label::before {
-      @include theme('background-color', 'color-zero--lighten-5', 'checkbox-background-color-hover');
+      @include theme('background-color', 'color-zero-ultralight', 'checkbox-background-color-hover');
     }
 
     // Checked and hovered.
     input[type="checkbox"]:checked + label::before {
-      @include theme('background-color', 'color-zero--lighten-5', 'checkbox-background-color-hover-and-checked');
+      @include theme('background-color', 'color-zero-ultralight', 'checkbox-background-color-hover-and-checked');
       @include theme('border-color', 'color-primary', 'checkbox-border-color-hover-and-checked');
       @include theme('color', 'color-zero', 'checkbox-color-hover-and-checked');
     }

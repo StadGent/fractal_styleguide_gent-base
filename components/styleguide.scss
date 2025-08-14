@@ -71,7 +71,7 @@
 }
 
 .styleguide-table-of-contents {
-  @include theme('background-color', 'color-primary--lighten-5', 'styleguide-table-of-contents-background');
+  @include theme('background-color', 'color-primary-light', 'styleguide-table-of-contents-background');
 
   margin-bottom: 4rem;
   padding: 2rem;
@@ -97,15 +97,15 @@ h5.styleguide-title {
 }
 
 h2.styleguide-title {
-  @include theme('color', 'color-primary--darken-1', 'styleguide-h2-color');
-  @include theme('border-color', 'color-primary--lighten-2', 'styleguide-h2-border-bottom');
+  @include theme('color', 'color-primary', 'styleguide-h2-color');
+  @include theme('border-color', 'color-primary-light', 'styleguide-h2-border-bottom');
 
   border-bottom: 1px solid;
 }
 
 h3.styleguide-title {
-  @include theme('color', 'color-primary--darken-3', 'styleguide-h3-color');
-  @include theme('border-color', 'color-primary--lighten-1', 'styleguide-h3-border-bottom');
+  @include theme('color', 'color-primary', 'styleguide-h3-color');
+  @include theme('border-color', 'color-primary-light', 'styleguide-h3-border-bottom');
 
   border-bottom: 1px dotted;
 }

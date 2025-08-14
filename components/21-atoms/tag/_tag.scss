@@ -42,15 +42,18 @@ a.tag {
   @include theme('color', 'color-zero', 'tag-color');
   @include normal-text();
 
-  padding: 8px 15px;
-  border: 0;
+  & {
+    padding: 8px 15px;
+    transition: background-color .2s ease-in-out;
+    border: 0;
+  }
 
   &:not([class*=icon])::before {
     margin-left: 5px;
   }
 
   &:hover {
-    @include theme('background-color', 'color-secondary--lighten-1', 'tag-hover-background');
+    @include theme('background-color', 'color-secondary-pastel', 'tag-hover-background');
   }
 
   &::after {

@@ -1,5 +1,6 @@
 @use '../button-styling' as *;
 @use '../../../00-mixins/mixins' as *;
+@use '../../../00-settings/colors' as *;
 @use '../../../11-base/base' as *;
 
 ///
@@ -13,7 +14,8 @@
 %button-success,
 .button-success {
   @include theme-content('color-tertiary', 'button-secondary-hover-background') {
-    background-image: linear-gradient(0, coloring('green', -5), coloring('green', -5));
+    $theme-color: coloring('green', -5);
+    background-image: linear-gradient(0, $theme-color, $theme-color);
   };
 
   & {

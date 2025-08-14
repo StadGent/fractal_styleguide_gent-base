@@ -5,7 +5,7 @@
 @use 'sass:string';
 @use 'sass:list';
 
-$theme-color: null;
+$theme-color: null !default;
 
 /// Returns the resolved color from the `$colors` map using the `$default` key.
 /// The `$exception` parameter is deprecated and ignored.
@@ -14,20 +14,26 @@ $theme-color: null;
 /// @param {string} $default - Utility string like 'color-primary'.
 /// @param {string} $exception - Deprecated fallback (ignored).
 /// @return {color} - The resolved color.
-@function set-themified-property($colors, $default, $exception) {
-  @if map.has-key($colors, $default) {
+@function set-themified-property($colors, $default, $exception: null) {
+  @if $exception != null and map.has-key($colors, $exception) {
+    @return map.get($colors, $exception);
+  }
+
+  @if $default != null and map.has-key($colors, $default) {
     @return map.get($colors, $default);
   }
 
-  // Extract base color from utility string by splitting on "--"
-  $color-variant: string.split($default, '--');
-  $base-color: list.nth($color-variant, 1);
-
-  @if map.has-key($colors, $base-color) {
-    @return map.get($colors, $base-color);
+  @if $default != null {
+    $parts: string.split($default, '--');
+    @if list.length($parts) > 1 {
+      $base: list.nth($parts, 1);
+      @if map.has-key($colors, $base) {
+        @return map.get($colors, $base);
+      }
+    }
   }
 
-  @error "Unknown color `#{$default}`. Please check _colors.scss.";
+  @error "Unknown theme color: default=`#{$default}`, exception=`#{$exception}`. Check your _themes.scss/_colors.scss.";
 }
 
 /// Mixin to apply a themed CSS property inside a `.cs--<theme>` context.

@@ -41,7 +41,7 @@
     @include medium-text;
     @include semi-bold-text;
     @include theme('color', 'color-zero', 'image-gallery-show-more-color');
-    @include theme('background-color', 'color-tertiary--lighten-3', 'image-gallery-show-more-background-color');
+    @include theme('background-color', 'color-tertiary-pastel', 'image-gallery-show-more-background-color');
 
     & {
       position: absolute;

@@ -5,7 +5,7 @@
 $gentinfo-icon-size: 8rem;
 
 .gentinfo {
-  @include theme('background-color', 'color-primary--lighten-5', 'gentinfo-background');
+  @include theme('background-color', 'color-info-light', 'gentinfo-background');
   margin: 3rem 0;
   padding: 2rem 1rem;
 

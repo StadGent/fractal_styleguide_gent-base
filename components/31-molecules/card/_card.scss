@@ -13,7 +13,7 @@
   }
 
   .actions {
-    @include theme('border-color', 'color-primary--lighten-4', 'modal-action-border-bottom');
+    @include theme('border-color', 'color-primary-light', 'modal-action-border-bottom');
     border-top: 2px solid;
   }
 }

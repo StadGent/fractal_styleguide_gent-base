@@ -132,12 +132,16 @@ $tints: (
   }
 };
 
-/// Returns a palette color by token name.
+/// Backwards-compat alias for `coloring()`.
 /// @deprecated Use `coloring()` instead to avoid conflicts with `sass:color`.
-/// @param {String} $name - Token name (e.g. 'primary', 'danger').
+/// Mirrors the `coloring()` signature so existing calls keep working.
+/// @param {String} $name    Base color key (e.g. 'red', 'gray').
+/// @param {Number} $tint    Optional tint key from $tints (e.g. 2, -1). Default 0.
+/// @param {Boolean} $transparent  If true, returns RGBA when tinted.
+/// @param {Map} $colorsMap  Colors map to resolve from (defaults to $colors).
 /// @return {Color}
-@function color($name) {
-  @return coloring($name);
+@function color($name, $tint: 0, $transparent: false, $colors-map: $colors) {
+  @return coloring($name, $tint, $transparent, $colors-map);
 }
 
 ///

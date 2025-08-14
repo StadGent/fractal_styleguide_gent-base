@@ -95,7 +95,7 @@ nav.menu {
       margin: 12px $gutter-width;
 
       &::before {
-        @include theme('border-color', 'color-primary--lighten-4', 'header-border-bottom');
+        @include theme('border-color', 'color-primary-light', 'header-border-bottom');
 
         & {
           position: absolute;

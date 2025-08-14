@@ -1,4 +1,5 @@
 @use '../button-styling' as *;
+@use '../../../00-settings/colors' as *;
 @use '../../../00-mixins/mixins' as *;
 @use '../../../11-base/fonts/icons' as *;
 
@@ -14,7 +15,8 @@
 .button-alert {
   @include button-icon;
   @include theme-content('color-tertiary', 'button-secondary-hover-background') {
-    background-image: linear-gradient(0, coloring('red', 2), coloring('red', 2));
+    $theme-color: coloring('red', 2);
+    background-image: linear-gradient(0, $theme-color, $theme-color);
   };
 
   & {
