@@ -14,7 +14,7 @@
 /// @param {string} $color - Text theme color.
 /// @param {string} $background-color - The background theme color.
 ///
-@mixin accolade($v-position: "top", $h-position: "right", $width: 51px, $height: 18px, $color: "color-zero", $background-color: "color-secondary") {
+@mixin accolade($v-position: "top", $h-position: "right", $width: 51px, $height: 19px, $color: "color-zero", $background-color: "color-secondary") {
   @include theme('color', $color, 'caption-color');
   @include theme('background-color', $background-color, 'caption-background-color');
 
