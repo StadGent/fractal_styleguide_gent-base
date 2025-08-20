@@ -5,7 +5,10 @@ All notable changes to this style guide are documented here.
 ## [6.0.17] Unreleased
 
 ### Updated
-- SGD8-2552: Updated accolade with 1px extra. 
+- SGD8-2552: Updated accolade with 1px extra.
+
+### Removed
+- SGD8-2802: Removed margin from figcaption on full img.
 
 ## [6.0.16]
 
