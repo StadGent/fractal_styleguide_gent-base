@@ -73,6 +73,14 @@
     @include phablet {
       margin-bottom: 130px;
     }
+
+    .cta-block__content {
+      @include phablet {
+        top: auto;
+        bottom: -90px;
+        left: -60px;
+      }
+    }
   }
 
   &.image-left {
@@ -95,9 +103,6 @@
       padding-left: 20px;
 
       @include phablet {
-        top: auto;
-        bottom: -90px;
-        left: -60px;
         padding-left: 0;
       }
     }
@@ -134,8 +139,6 @@
       padding-right: 20px;
 
       @include phablet {
-        bottom: -90px;
-        left: -60px;
         padding-right: 0;
       }
     }
