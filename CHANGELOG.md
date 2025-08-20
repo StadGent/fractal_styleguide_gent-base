@@ -2,9 +2,10 @@
 
 All notable changes to this style guide are documented here.
 
-## [6.0.17] Unreleased
+## [6.0.17]
 
 ### Updated
+- KAG-489: Fix background accolade.
 - SGD8-2552: Updated accolade with 1px extra.
 
 ### Removed
@@ -14,6 +15,7 @@ All notable changes to this style guide are documented here.
 
 ### Removed
 - SGD8-2985: Removed opening-hours field in teaser mobile.
+
 
 ### Updated
 - SGD8-2552: Updated accolade to new design.

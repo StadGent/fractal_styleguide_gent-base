@@ -2,10 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
-## [6.0.17] Unreleased
+## [6.0.17]
 
 ### Updated
 - SGD8-2552: Updated accolade with 1px extra.
+- KAG-489: Fix background accolade.
 
 ### Removed
 - SGD8-2802: Removed margin from figcaption on full img.
