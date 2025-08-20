@@ -6,6 +6,7 @@ All notable changes to this style guide are documented here.
 
 ### Removed
 - SGD8-2985: Removed opening-hours field in teaser mobile.
+- SGD8-2802: Removed margin from figcaption on full img.
 
 ### Updated
 - SGD8-2552: Updated accolade to new design.
