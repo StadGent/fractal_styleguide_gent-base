@@ -2,13 +2,26 @@
 
 All notable changes to this style guide are documented here.
 
-## [6.0.17] Unreleased
+## [7.0.0] Unreleased
 
 ### Fixed
 - STIJ-446: Fix Sass deprecations.
 - STIJ-446: Fix gc machine description issues in fractal build.
 
+## [6.0.17]
+
+### Updated
+- KAG-489: Fix background accolade.
+- SGD8-2552: Updated accolade with 1px extra.
+
+### Removed
+- SGD8-2802: Removed margin from figcaption on full img.
+
 ## [6.0.16]
+
+### Removed
+- SGD8-2985: Removed opening-hours field in teaser mobile.
+
 
 ### Updated
 - SGD8-2552: Updated accolade to new design.
@@ -322,7 +335,11 @@ Add the `.contact-details--with-image` class to the contact-details section if y
   https://github.com/StadGent/fractal_styleguide_gent-base/blob/5.x/CHANGELOG.md
 
 
+[6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.x...7.x-dev
+[7.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.17...7.0.0
+
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
+[6.0.17]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.16...6.0.17
 [6.0.16]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.15...6.0.16
 [6.0.15]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.14...6.0.15
 [6.0.14]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.13...6.0.14

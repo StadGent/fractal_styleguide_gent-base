@@ -11,6 +11,8 @@ figcaption {
   line-height: 175%;
 
   .full-image & {
+    margin: 0;
+
     &::before {
       display: none;
     }

@@ -337,7 +337,8 @@
         }
       }
 
-      p {
+      p,
+      .opening-hours-accordion {
         display: none;
 
         @include tablet {
