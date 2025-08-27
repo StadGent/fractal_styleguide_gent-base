@@ -1,3 +1,6 @@
+@use '../../../00-settings/settings' as *;
+@use '../../../00-mixins/mixins' as *;
+
 .social-list {
   $social-media-link-width: 1.8rem;
 
@@ -22,13 +25,15 @@
         @include theme('background-color', 'color-quaternary--lighten-2', 'button-secondary-background');
         @include theme('color', 'color-zero', 'button-secondary-color');
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: $social-media-link-width;
-        height: $social-media-link-width;
-        margin-right: 0;
-        text-decoration: none;
+        & {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: $social-media-link-width;
+          height: $social-media-link-width;
+          margin-right: 0;
+          text-decoration: none;
+        }
 
         &::after {
           display: none;

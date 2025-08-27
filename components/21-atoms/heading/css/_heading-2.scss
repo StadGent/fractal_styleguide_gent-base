@@ -1,11 +1,16 @@
+@use '../../../00-settings/settings' as *;
+@use '../../../00-mixins/mixins' as *;
+
 h2,
 .h2,
 %h2 {
-  @include theme('color', 'color-primary', 'heading-2-color');
   @include bold-text();
+  @include theme('color', 'color-primary', 'heading-2-color');
 
-  font-size: 1.6rem;
-  line-height: 2.1rem;
+  & {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
 
   @include tablet {
     font-size: 1.9rem;

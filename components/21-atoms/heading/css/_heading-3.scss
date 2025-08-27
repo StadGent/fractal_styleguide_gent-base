@@ -1,10 +1,15 @@
+@use '../../../00-settings/settings' as *;
+@use '../../../00-mixins/mixins' as *;
+
 h3,
 .h3,
 %h3 {
   @include theme('color', 'color-zero', 'heading-3-color');
 
-  font-size: 1.2rem;
-  line-height: 1.55rem;
+  & {
+    font-size: 1.2rem;
+    line-height: 1.55rem;
+  }
 
   @include tablet {
     font-size: 1.5rem;

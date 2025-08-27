@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+
 .field-message {
   @include theme('color', 'color-zero', 'message-text-color');
   @include theme('background-color', 'color-info-light', 'info-message-background');
@@ -84,7 +88,9 @@
     @include theme('background-color', 'color-success-light', 'success-message-background');
     @include theme('border-color', 'color-success', 'success-message-icon-color');
 
-    padding-left: 58px;
+    & {
+      padding-left: 58px;
+    }
 
     &::before {
       @include theme('color', 'color-success', 'success-message-icon-color');
@@ -100,7 +106,9 @@
     @include theme('background-color', 'color-error-light', 'error-message-background');
     @include theme('border-color', 'color-error', 'error-message-icon-color');
 
-    padding-left: 58px;
+    & {
+      padding-left: 58px;
+    }
 
     &::before {
       @include theme('color', 'color-error', 'error-message-icon-color');

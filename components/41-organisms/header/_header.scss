@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/base' as *;
+
 @use "sass:math";
 
 header.header {
@@ -108,7 +112,7 @@ header.header {
       max-width: calc(16px + 32px);
       height: 44px;
       border-bottom: 0;
-      background: svg-as-background('search', color('white'), 24, 24) no-repeat left 10px center;
+      background: svg-as-background('search', coloring('white'), 24, 24) no-repeat left 10px center;
       text-indent: -9999px;
       overflow: hidden;
 
@@ -140,7 +144,9 @@ header.header {
         margin-left: 0;
       }
 
-      line-height: 1;
+      & {
+        line-height: 1;
+      }
     }
   }
 
@@ -152,8 +158,10 @@ header.header {
       display: none;
     }
 
-    margin: 16px 0 8px;
-    font-size: .9rem;
+    & {
+      margin: 16px 0 8px;
+      font-size: .9rem;
+    }
   }
 
   &--menu > .content-container {

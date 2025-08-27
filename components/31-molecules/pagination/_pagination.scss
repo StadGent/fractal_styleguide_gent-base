@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 .pager {
   display: flex;
   flex-wrap: wrap;
@@ -59,8 +62,8 @@
       padding: 2px 10px 0;
       border-bottom: 2px solid;
       background-image: linear-gradient(to bottom,
-        color('yellow') 0,
-        color('yellow') 100%);
+        coloring('yellow') 0,
+        coloring('yellow') 100%);
       font-size: inherit;
       line-height: inherit;
       text-decoration: none;
@@ -77,7 +80,7 @@
         height: 36px;
         border-bottom: 0;
         outline: 0;
-        box-shadow: inset 0 0 0 2px color('gray');
+        box-shadow: inset 0 0 0 2px coloring('gray');
       }
 
       &.standalone-link {

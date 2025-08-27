@@ -1,7 +1,5 @@
-@import '00-settings/vars';
-@import '00-mixins/**/*';
-@import '00-settings/colors';
-@import '00-settings/themes';
+@use '00-settings/settings' as *;
+@use '00-mixins/mixins' as *;
 
 //
 //
@@ -19,8 +17,8 @@
   border-radius: .2rem;
 
   &.white {
-    background-color: color('gray');
-    color: color('white');
+    background-color: coloring('gray');
+    color: coloring('white');
   }
 
   p {
@@ -67,13 +65,13 @@
 @each $color-key, $color in $colors {
   @each $tint-key, $tint in $tints {
     .color-swatch-#{$color-key}-#{$tint-key} {
-      background-color: color($color-key, $tint-key);
+      background-color: coloring($color-key, $tint-key);
     }
   }
 }
 
 .styleguide-table-of-contents {
-  @include theme('background-color', 'color-primary--lighten-5', 'styleguide-table-of-contents-background');
+  @include theme('background-color', 'color-primary-light', 'styleguide-table-of-contents-background');
 
   margin-bottom: 4rem;
   padding: 2rem;
@@ -99,15 +97,15 @@ h5.styleguide-title {
 }
 
 h2.styleguide-title {
-  @include theme('color', 'color-primary--darken-1', 'styleguide-h2-color');
-  @include theme('border-color', 'color-primary--lighten-2', 'styleguide-h2-border-bottom');
+  @include theme('color', 'color-primary', 'styleguide-h2-color');
+  @include theme('border-color', 'color-primary-light', 'styleguide-h2-border-bottom');
 
   border-bottom: 1px solid;
 }
 
 h3.styleguide-title {
-  @include theme('color', 'color-primary--darken-3', 'styleguide-h3-color');
-  @include theme('border-color', 'color-primary--lighten-1', 'styleguide-h3-border-bottom');
+  @include theme('color', 'color-primary', 'styleguide-h3-color');
+  @include theme('border-color', 'color-primary-light', 'styleguide-h3-border-bottom');
 
   border-bottom: 1px dotted;
 }
@@ -145,11 +143,11 @@ h3.styleguide-title {
   .cs--wrapper &,
   .cs--inverse &,
   .cs--accent & {
-    border-bottom: 1px dotted color('white');
+    border-bottom: 1px dotted coloring('white');
   }
 
   .cs--highlighted & {
-    border-bottom: 1px dotted color('gray');
+    border-bottom: 1px dotted coloring('gray');
   }
 }
 

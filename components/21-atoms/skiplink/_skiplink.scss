@@ -1,15 +1,21 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 a.skiplink {
   @include reset-link-background;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  padding: .5rem 2rem;
-  background-color: color('white');
-  z-index: z('skiplink');
+
+  & {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    padding: .5rem 2rem;
+    background-color: coloring('white');
+    z-index: z('skiplink');
+  }
 
   &:focus {
     top: 0;
     bottom: auto;
-    background-color: color('white');
+    background-color: coloring('white');
   }
 }

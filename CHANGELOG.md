@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [7.0.0] Unreleased
+
+### Fixed
+- STIJ-446: Fix Sass deprecations.
+- STIJ-446: Fix gc machine description issues in fractal build.
+
 ## [6.0.17]
 
 ### Updated
@@ -328,6 +334,9 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 * See full changelog at
   https://github.com/StadGent/fractal_styleguide_gent-base/blob/5.x/CHANGELOG.md
 
+
+[6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.x...7.x-dev
+[7.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.17...7.0.0
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
 [6.0.17]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.16...6.0.17

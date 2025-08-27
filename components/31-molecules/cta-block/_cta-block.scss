@@ -1,3 +1,8 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../21-atoms/button/button-styling' as *;
+@use '../../21-atoms/button/css/button-secondary';
+
 .cta-block {
   display: flex;
   position: relative;
@@ -63,7 +68,9 @@
       @include theme-content('color-info-pastel', 'cta-shadow-color') {
         @include abstract-shadow('bottom', 'left', $theme-color, null, 260px, 260px);
 
-        margin-left: 0; // Overwrite only the h-margin.
+        & {
+          margin-left: 0; // Overwrite only the h-margin.
+        }
       }
     }
   }
@@ -103,6 +110,9 @@
       padding-left: 20px;
 
       @include phablet {
+        top: auto;
+        bottom: -90px;
+        left: -60px;
         padding-left: 0;
       }
     }

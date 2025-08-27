@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 $timeline-border: 6px;
 $timeline-m-left-padding: 35px;
 $timeline-m-right-padding: 30px;
@@ -49,7 +52,7 @@ dl.timeline {
             right: 100%;
             width: 60px;
             height: $timeline-border;
-            background-color: color(cyan-pastel);
+            background-color: coloring(cyan-pastel);
             content: '';
             z-index: 0;
           }

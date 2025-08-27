@@ -1,11 +1,16 @@
+@use '../../../00-settings/settings' as *;
+@use '../../../00-mixins/mixins' as *;
+
 .gentinfo-block {
   @include accolade('bottom', 'left', 100px, 36px, 'color-none', 'color-primary');
   @include theme('background-color', 'color-primary', 'gentinfo-block-background');
 
-  position: relative;
-  padding: 1.5rem;
-  font-size: .8rem;
-  line-height: 1.75;
+  & {
+    position: relative;
+    padding: 1.5rem;
+    font-size: .8rem;
+    line-height: 1.75;
+  }
 
   @include desktop {
     margin: -8.4rem 0 0;

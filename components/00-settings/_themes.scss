@@ -1,7 +1,9 @@
+@use 'colors' as *;
+
 ///
 /// Themify settings. This determines the colors for all main and sub themes.
 ///
-/// @since 3.0.0
+/// @since 3.0.0`
 /// @group themes
 /// @access public
 /// @type map
@@ -9,65 +11,67 @@
 $themes: (
   'blue': (
     // Required colors!
-    'color-zero': color('gray'),
-    'color-none': color('white'),
-    'color-primary': color('blue'),
-    'color-primary-light': color('blue-light'),
-    'color-secondary': color('yellow'),
-    'color-secondary-pastel': color('yellow-pastel'),
-    'color-secondary-light': color('yellow-light'),
-    'color-tertiary': color('cyan'),
-    'color-tertiary-pastel': color('cyan-pastel'),
-    'color-tertiary-light': color('cyan-light'),
-    'color-quaternary': color('cyan-hover'),
-    'color-info': color('cyan'),
-    'color-info-pastel': color('cyan-pastel'),
-    'color-info-light': color('cyan-light'),
-    'color-success': color('green'),
-    'color-success-pastel': color('green-pastel'),
-    'color-success-light': color('green-light'),
-    'color-warning': color('orange'),
-    'color-warning-pastel': color('orange-pastel'),
-    'color-warning-light': color('orange-light'),
-    'color-error': color('red'),
-    'color-error-pastel': color('red-pastel'),
-    'color-error-light': color('red-light'),
+    'color-zero': coloring('gray'),
+    'color-zero-light': coloring('gray-light'),
+    'color-zero-ultralight': coloring('gray-ultra-light'),
+    'color-none': coloring('white'),
+    'color-primary': coloring('blue'),
+    'color-primary-light': coloring('blue-light'),
+    'color-secondary': coloring('yellow'),
+    'color-secondary-pastel': coloring('yellow-pastel'),
+    'color-secondary-light': coloring('yellow-light'),
+    'color-tertiary': coloring('cyan'),
+    'color-tertiary-pastel': coloring('cyan-pastel'),
+    'color-tertiary-light': coloring('cyan-light'),
+    'color-quaternary': coloring('cyan-hover'),
+    'color-info': coloring('cyan'),
+    'color-info-pastel': coloring('cyan-pastel'),
+    'color-info-light': coloring('cyan-light'),
+    'color-success': coloring('green'),
+    'color-success-pastel': coloring('green-pastel'),
+    'color-success-light': coloring('green-light'),
+    'color-warning': coloring('orange'),
+    'color-warning-pastel': coloring('orange-pastel'),
+    'color-warning-light': coloring('orange-light'),
+    'color-error': coloring('red'),
+    'color-error-pastel': coloring('red-pastel'),
+    'color-error-light': coloring('red-light'),
 
-    'default-text-color': color('gray'),
+    'default-text-color': coloring('gray'),
 
     // Exceptions to colors go here...
     // These should be as limited as possible though!
-    'heading-inverse-primary-background-color': color('blue'),
-    'heading-2-color': color('blue'),
+    'heading-inverse-primary-background-color': coloring('blue'),
+    'heading-2-color': coloring('blue'),
 
-    'link-color': color('blue'),
-    'link-underline-color': color('blue'),
-    'link-hover-background': color('blue-light'),
-    'link-hover-color': color('blue'),
-    'link-underlined-hover-color': color('blue'),
+    'link-color': coloring('blue'),
+    'link-underline-color': coloring('blue'),
+    'link-hover-background': coloring('blue-light'),
+    'link-hover-color': coloring('blue'),
+    'link-underlined-hover-color': coloring('blue'),
 
-    'focus-outline': color('gray'),
+    'focus-outline': coloring('gray'),
 
-    'modal-overlay-background-color': color('cyan-light'),
+    'modal-overlay-background-color': coloring('cyan-light'),
 
-    'button-primary-background': color('gray'),
-    'button-primary-color': color('white'),
-    'button-primary-hover-background': color('gray-medium'),
-    'button-primary-hover-color': color('white'),
-    'button-primary-active-background': color('gray-medium'),
-    'button-primary-active-color': color('white'),
+    'button-primary-background': coloring('gray'),
+    'button-primary-color': coloring('white'),
+    'button-primary-hover-background': coloring('gray-medium'),
+    'button-primary-hover-color': coloring('white'),
+    'button-primary-active-background': coloring('gray-medium'),
+    'button-primary-active-color': coloring('white'),
 
-    'button-secondary-background': color('cyan-pastel'),
-    'button-secondary-color': color('gray'),
-    'button-secondary-hover-background': color('cyan-hover'),
-    'button-secondary-hover-color': color('gray'),
-    'button-secondary-active-background': color('cyan-hover'),
-    'button-secondary-active-color': color('gray'),
+    'button-secondary-background': coloring('cyan-pastel'),
+    'button-secondary-color': coloring('gray'),
+    'button-secondary-hover-background': coloring('cyan-hover'),
+    'button-secondary-hover-color': coloring('gray'),
+    'button-secondary-active-background': coloring('cyan-hover'),
+    'button-secondary-active-color': coloring('gray'),
 
-    'tag-close-button-background-hover': color('gray-light'),
+    'tag-close-button-background-hover': coloring('gray-light'),
 
-    'help-text-color': color('gray-medium'),
+    'help-text-color': coloring('gray-medium'),
 
-    'bullet-inactive-color': color('gray-light'),
+    'bullet-inactive-color': coloring('gray-light'),
   )
 ) !default;

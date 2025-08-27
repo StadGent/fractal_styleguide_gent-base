@@ -40,13 +40,12 @@ Have a look at other projects using the City of Ghent Style Guide on [github](ht
   ]
   ```
 
-Now you can import the `main.scss` or `main_cli.scss` file,
+Now you can import the `main.scss` file,
 set the `$styleguide-dir` variable and run your own gulp
 command to compile the SASS into a working CSS file.
 
 ```scss
 $styleguide-dir: '../../../node_modules/gent_styleguide/build/styleguide' !default;
-@import "sass/main_cli";
 ```
 
 ## SASS documentation (for contributors)

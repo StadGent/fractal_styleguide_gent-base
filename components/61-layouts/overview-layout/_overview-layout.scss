@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/grid/flexbox-grid/mixins/grid-mixins' as *;
+
 .overview-page {
   position: relative;
 
@@ -50,7 +54,7 @@
       + p {
         max-width: 100%;
         padding: 20px;
-        background-color: color('white');
+        background-color: coloring('white');
 
         @include tablet {
           padding: 60px;

@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 // sass-lint:disable no-important
 ul.image-wall,
 ul.image-gallery {
@@ -9,11 +12,14 @@ ul.image-gallery {
 
   a.gallery-link {
     @include reset-link-background;
-    display: block;
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    text-decoration: none;
+
+    & {
+      display: block;
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+      text-decoration: none;
+    }
 
     &::after {
       content: none !important;

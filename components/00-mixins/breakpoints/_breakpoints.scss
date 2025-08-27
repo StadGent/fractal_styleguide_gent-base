@@ -1,12 +1,29 @@
+@use 'sass:list';
+@use '../../00-settings/vars' as *;
+
 ////
 ///
 /// This file defines breakpoint related mixins / functions.
 ///
 /// @group breakpoints
-/// @author Gert-Jan Meire
+/// @author Sven Vandevenne
 ///
-////
-@import "breakpoint";
+
+@mixin breakpoint($args...) {
+  @if list.length($args) == 1 {
+    @media screen and (min-width: list.nth($args, 1)) {
+      @content;
+    }
+  }
+  @else if list.length($args) == 2 and list.nth($args, 1) == max-width {
+    @media screen and (max-width: list.nth($args, 2)) {
+      @content;
+    }
+  }
+  @else {
+    @error 'Invalid arguments for mixin breakpoints: use e.g. (768px) or (max-width 1024px)';
+  }
+}
 
 ///
 /// Mobile breakpoint (see $bp-mobile defined in _vars.scss).

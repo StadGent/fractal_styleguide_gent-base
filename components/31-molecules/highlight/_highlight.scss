@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 .highlight {
   position: relative;
   z-index: 0;
@@ -12,7 +15,9 @@
       }
     }
 
-    padding: 30px;
+    & {
+      padding: 30px;
+    }
 
     @include tablet {
       padding: 60px;
@@ -21,10 +26,12 @@
     & > i {
       @include theme('color', 'color-tertiary', 'highlight-icon-color');
 
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      vertical-align: top;
+      & {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: top;
+      }
 
       &::before {
         display: block;

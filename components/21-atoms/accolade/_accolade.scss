@@ -1,8 +1,11 @@
 @use "sass:math";
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
 
-$span: percentage(math.div(6, 12));
-$span-end: percentage(math.div(3, 12));
+$span: math.percentage(math.div(6, 12));
+$span-end: math.percentage(math.div(3, 12));
 
+%accolade,
 .accolade {
   position: absolute;
   right: 0;
@@ -16,6 +19,8 @@ $span-end: percentage(math.div(3, 12));
 
   &::before,
   &::after {
+    @include theme('background', 'color-none');
+
     position: absolute;
     top: 0;
     width: 100%;
@@ -23,7 +28,6 @@ $span-end: percentage(math.div(3, 12));
     margin-top: 0;
     border-top: 2px solid;
     border-color: transparent;
-    background: color('white');
     content: '';
   }
 
@@ -100,7 +104,7 @@ $span-end: percentage(math.div(3, 12));
       margin-top: 0;
       border-left: 2px solid;
       border-color: transparent;
-      background: color('white');
+      background: coloring('white');
       content: '';
     }
 
@@ -156,7 +160,7 @@ $span-end: percentage(math.div(3, 12));
 }
 
 
-$span-inverse: percentage(math.div(2, 12));
+$span-inverse: math.percentage(math.div(2, 12));
 $accolade-width: 2rem;
 $accolade-height: 1rem;
 
@@ -164,7 +168,7 @@ $accolade-height: 1rem;
   position: absolute;
   width: $accolade-width;
   height: $accolade-height;
-  background: transparent svg-as-background('accolade', color('white'), $accolade-width, $accolade-height);
+  background: transparent svg-as-background('accolade', coloring('white'), $accolade-width, $accolade-height);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;

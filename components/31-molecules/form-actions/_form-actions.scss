@@ -1,3 +1,5 @@
+@use '../../21-atoms/button/button-styling' as *;
+
 .form-actions {
   display: flex;
   flex-direction: column;

@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+
 .breadcrumb {
   margin: 0 0 20px;
   clear: both;
@@ -84,7 +88,7 @@
 
       &:hover,
       &:focus {
-        @include theme('background-color', 'color-primary--lighten-4', 'link-hover-background');
+        @include theme('background-color', 'color-primary-light', 'link-hover-background');
       }
 
       &,

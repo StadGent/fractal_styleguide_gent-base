@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+
 %messages,
 .messages {
   @include icon('info-circle', before);
@@ -79,7 +83,7 @@
     }
 
     a {
-      @include link-background('color-zero', 'color-warning-light--darken-1');
+      @include link-background('color-zero', 'color-warning-pastel');
     }
   }
 
@@ -90,7 +94,7 @@
   }
 
   a {
-    @include link-background('color-zero', 'color-info-light--darken-1');
+    @include link-background('color-zero', 'color-info-pastel');
     @include theme('border-color', 'color-zero');
     @include theme('color', 'color-zero');
 

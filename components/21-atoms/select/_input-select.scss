@@ -1,6 +1,10 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/forms/forms' as *;
+
 select {
   @include field-base;
-  $svg-shevron-down: svg-icon('shevron-down', color('gray'), 24, 24);
+  $svg-shevron-down: svg-icon('shevron-down', coloring('gray'), 24, 24);
 
   @each $theme, $colors in $themes {
     // Apply the default section as default color scheme if there is no section
@@ -25,7 +29,7 @@ select {
       &:disabled {
         background-image: svg-as-background(
           "lock-closed",
-          color("gray-medium"),
+          coloring("gray-medium"),
           20,
           20
         );

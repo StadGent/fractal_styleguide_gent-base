@@ -1,8 +1,10 @@
 // Importing grid mixins and variables.
-@import "flexbox-grid/variables/grid-variables";
-@import "flexbox-grid/mixins/visibility-mixins";
-@import "flexbox-grid/mixins/grid-mixins";
-
+@use "sass:list";
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use "flexbox-grid/variables/grid-variables" as *;
+@use "flexbox-grid/mixins/visibility-mixins" as *;
+@use "flexbox-grid/mixins/grid-mixins" as *;
 
 // Grid classes.
 .row {
@@ -119,8 +121,8 @@
 
 // Mixin to run inside of for loop - creates col/breakpoint classes.
 
-@for $i from 1 through length($breakpoint-up-prefixes) {
-  $this-prefix: nth($breakpoint-up-prefixes, $i);
+@for $i from 1 through list.length($breakpoint-up-prefixes) {
+  $this-prefix: list.nth($breakpoint-up-prefixes, $i);
 
   @if $this-prefix == "xs" {
     @include col-factory($this-prefix);

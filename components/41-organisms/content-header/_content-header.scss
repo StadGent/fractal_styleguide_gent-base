@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 .content-header-container {
   @include theme('background-color', 'color-primary', 'content-header-container-background-primary');
 
@@ -73,7 +76,7 @@
 
       display: inline;
       padding: 5px 15px;
-      color: color('white');
+      color: coloring('white');
       line-height: 130%;
       box-decoration-break: clone;
     }

@@ -1,3 +1,7 @@
+@use "sass:string";
+@use '../../00-settings/settings' as *;
+@use "../general/mixins";
+
 ////
 /// This file defines SVG related functions and mixins.
 ///
@@ -19,8 +23,8 @@
   //
   //  Add missing namespace
   //
-  @if not str-index($svg, xmlns) {
-    $svg: str-replace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+  @if not string.index($svg, xmlns) {
+    $svg: mixins.str-replace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
   }
   //
   //  Chunk up string in order to avoid
@@ -29,20 +33,20 @@
   $encoded: '';
   $slice: 2000;
   $index: 0;
-  $loops: ceil(math.div(str-length($svg), $slice));
+  $loops: math.ceil(math.div(string.length($svg), $slice));
   @for $i from 1 through $loops {
-    $chunk: str-slice($svg, $index, $index + $slice - 1);
+    $chunk: string.slice($svg, $index, $index + $slice - 1);
     //
     //   Encode
     //
-    $chunk: str-replace($chunk, '"', '\'');
-    $chunk: str-replace($chunk, '%', '%25');
-    $chunk: str-replace($chunk, '&', '%26');
-    $chunk: str-replace($chunk, '#', '%23');
-    $chunk: str-replace($chunk, '{', '%7B');
-    $chunk: str-replace($chunk, '}', '%7D');
-    $chunk: str-replace($chunk, '<', '%3C');
-    $chunk: str-replace($chunk, '>', '%3E');
+    $chunk: mixins.str-replace($chunk, '"', '\'');
+    $chunk: mixins.str-replace($chunk, '%', '%25');
+    $chunk: mixins.str-replace($chunk, '&', '%26');
+    $chunk: mixins.str-replace($chunk, '#', '%23');
+    $chunk: mixins.str-replace($chunk, '{', '%7B');
+    $chunk: mixins.str-replace($chunk, '}', '%7D');
+    $chunk: mixins.str-replace($chunk, '<', '%3C');
+    $chunk: mixins.str-replace($chunk, '>', '%3E');
 
     //
     //    The maybe list

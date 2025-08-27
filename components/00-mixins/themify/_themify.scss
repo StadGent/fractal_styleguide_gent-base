@@ -1,171 +1,61 @@
-////
-///
-/// This file defines all themify related functions and mixins.
-///
-/// @group colors
-/// @author Gert-Jan Meire
-///
-////
+@use '../../00-settings/colors' as *;
+@use '../../00-settings/themes' as *;
 
+@use 'sass:map';
+@use 'sass:string';
+@use 'sass:list';
+
+$theme-color: null !default;
+
+/// Returns the resolved color from the `$colors` map using the `$default` key.
+/// The `$exception` parameter is deprecated and ignored.
 ///
-/// Do check if the default value exists in map colors.
-///
-///   We check if the given $exception exists in the theme map.
-///   If it does we return the color applied there.
-///   If it does NOT we split the $default string based on two dasshes --
-///   We then get the color palette value based on that key from the $themes map.
-///   and we apply the correct tint through the color() mixin.
-///
-/// @since 3.0.0
-/// @group colors
-/// @access private
-/// @author Gert-Jan Meire
-/// @require $colors
-/// @require str-split
-/// @require color
-/// @require number
-///
-/// @param {map} $colors
-///   The map of colors to check.
-///
-/// @param {string} $default
-///   The default value for the themified property.
-///
-/// @param {string} $exception
-///   The exception value for the themified property.
-///   This is the exception optionally used in subthemes.
-///
-@function set-themified-property($colors, $default, $exception) {
-  @if map-has-key($colors, $exception) {
-    @return map-get($colors, $exception);
+/// @param {map} $colors - Theme color map.
+/// @param {string} $default - Utility string like 'color-primary'.
+/// @param {string} $exception - Deprecated fallback (ignored).
+/// @return {color} - The resolved color.
+@function set-themified-property($colors, $default, $exception: null) {
+  @if $exception != null and map.has-key($colors, $exception) {
+    @return map.get($colors, $exception);
   }
 
-  // Split the string based on two dashes --
-  $color-variant: str-split($default);
+  @if $default != null and map.has-key($colors, $default) {
+    @return map.get($colors, $default);
+  }
 
-  // Get the length of the color variant list.
-  $length: length($color-variant);
-
-  // Make sure the list exists of 2 parts.
-  @if $length > 1 {
-    // If a tint has been specified we should apply the correct effect.
-    @if nth($color-variant, 2) != '' {
-      // Get the tint variant list containing the tint type
-      // and the tint strength.
-      $tint-variant: str-split(nth($color-variant, 2), '-');
-
-      // Check if the tint variant is a valid list.
-      @if length($tint-variant) > 1 {
-        // Get the base-color from the color variant list.
-        $base-color: nth($color-variant, 1);
-
-        // Transparent is default false.
-        $transparent: false;
-        @if length($color-variant) > 2 and nth($color-variant, 3) == 'transparent' {
-          $transparent: true;
-        }
-
-        // If it's a light variant.
-        @if nth($tint-variant, 1) == 'lighten' {
-          // Get the negative tint strength.
-          $tint: number(-#{nth($tint-variant, 2)});
-
-          @return color($base-color, $tint, $transparent, $colors);
-        }
-
-        // If it's a dark variant.
-        @if nth($tint-variant, 1) == 'darken' {
-          // Get the positive tint strength.
-          $tint: number(nth($tint-variant, 2));
-
-          @if $transparent {
-            @warn "Darker colors can not be transparent!";
-          }
-
-          @return color($base-color, $tint, false, $colors);
-        }
+  @if $default != null {
+    $parts: string.split($default, '--');
+    @if list.length($parts) > 1 {
+      $base: list.nth($parts, 1);
+      @if map.has-key($colors, $base) {
+        @return map.get($colors, $base);
       }
     }
   }
-  @else {
-    // Check if the first item of the variant is not empty.
-    @if nth($color-variant, 1) != '' {
-      // Set the $base-color.
-      $base-color: nth($color-variant, 1);
 
-      @return color($base-color, 0, false, $colors);
-    }
-  }
-
-  @return '';
+  @error "Unknown theme color: default=`#{$default}`, exception=`#{$exception}`. Check your _themes.scss/_colors.scss.";
 }
 
+/// Mixin to apply a themed CSS property inside a `.cs--<theme>` context.
 ///
-/// Theme mixin to generate all themes for components.
-/// This generates the necessary theme CSS for all defined themes based on the
-/// $themes map defined in _colors.scss
-///
-/// @since 3.0.0
-/// @group colors
-/// @access public
-/// @author Gert-Jan Meire
-///
-/// @param {string} $property [null]
-///   The property to themify.
-///
-/// @param {string} $default [null]
-///   The default value for the themified property.
-///
-/// @param {string} $exception [null]
-///   The exception value for the themified property.
-///   This is the exception optionally used in subthemes.
-///
+/// @param {string} $property - CSS property name.
+/// @param {string} $default - Utility string like 'color-primary'.
+/// @param {string} $exception - Deprecated fallback (ignored).
 @mixin theme($property: null, $default: null, $exception: null, $extra-values: null) {
   @each $theme, $colors in $themes {
-    // Apply the default section as default color scheme if there is no section
-    // defined in the DOM.
     .cs--#{$theme} & {
       #{$property}: set-themified-property($colors, $default, $exception);
     }
   }
 }
 
+/// Same as `theme()` mixin, but applies the `.cs--<theme>` class to the root element of the selector.
 ///
-/// This mixin is similar to the theme-mixin, but uses the first element
-/// selector as a body class.
+/// Use when the base selector is on the root element (e.g. `<body>`).
 ///
-/// The themify theme() function creates style selectors like this:
-/// <code>
-///   .cs--blue .original-selector .child ... {}
-/// </code>
-/// Where cs--blue is the theme color and that class is added to the <body>
-/// element.
-///
-/// But sometimes the .original-selector is a body class which is not supported
-/// by the theme() function.
-//
-/// The theme-body() function adds the color class to the first element of the
-/// selector:
-///
-/// <code>
-///   .cs--blue.original-selector .child ... {}
-/// </code>
-///
-/// @see theme()
-/// @group colors
-/// @access public
-/// @author Peter Decuyper
-///
-/// @param {string} $property [null]
-///   The property to themify.
-///
-/// @param {string} $default [null]
-///   The default value for the themified property.
-///
-/// @param {string} $exception [null]
-///   The exception value for the themified property.
-///   This is the exception optionally used in subthemes.
-///
+/// @param {string} $property - CSS property name.
+/// @param {string} $default - Utility string like 'color-primary'.
+/// @param {string} $exception - Deprecated fallback (ignored).
 @mixin theme-body($property: null, $default: null, $exception: null, $extra-values: null) {
   @each $theme, $colors in $themes {
     @at-root .cs--#{$theme}#{&} {
@@ -174,38 +64,15 @@
   }
 }
 
+/// Mixin that exposes `$theme-color` inside the `@content` block for custom styling.
+/// Useful for things like borders or shadows where the value is not a simple property.
 ///
-/// This mixin is similar to the theme-mixin, but uses the @content directive
-/// to make it possible to pass in custom values for a property (as often seen
-/// in borders, shadows, ...)
-///
-/// Inside the content block when including this mixin, you'll have the
-/// $theme-color variable available to reference.
-///
-/// @since 3.0.0-beta5
-/// @group colors
-/// @access public
-/// @author Helena Standaert
-/// @content
-///
-/// @param {string} $default [null]
-///   The default value for the themified property.
-///
-/// @param {string} $exception [null]
-///   The exception value for the themified property.
-///   This is the exception optionally used in subthemes.
-///
-/// @example
-///   @include theme-content('color-primary', 'link-shadow') {
-///     text-shadow: 1px 1px 2px $theme-color;
-///   }
-///
+/// @param {string} $default - Utility string like 'color-primary'.
+/// @param {string} $exception - Deprecated fallback (ignored).
 @mixin theme-content($default: null, $exception: null) {
   @each $theme, $colors in $themes {
     $theme-color: set-themified-property($colors, $default, $exception) !global;
 
-    // Apply the default section as default color scheme if there is no section
-    // defined in the DOM.
     .cs--#{$theme} & {
       @content;
     }

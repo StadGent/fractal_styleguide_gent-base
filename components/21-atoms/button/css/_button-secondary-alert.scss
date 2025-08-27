@@ -1,3 +1,7 @@
+@use '../button-styling' as *;
+@use '../../../00-settings/colors' as *;
+@use '../../../00-mixins/mixins' as *;
+
 ///
 /// Alert button type.
 ///
@@ -10,12 +14,15 @@
 .button-secondary-alert {
   @include button-icon;
   @include theme-content('color-tertiary', 'button-secondary-hover-background') {
-    background-image: linear-gradient(0, color('red', -5), color('red', -5));
+    $theme-color: coloring('red', -5);
+    background-image: linear-gradient(0, $theme-color, $theme-color);
   };
 
-  border: 2px solid color('red', -2);
-  background-color: color('white');
-  color: color('red', 1);
+  & {
+    border: 2px solid coloring('red', -2);
+    background-color: coloring('white');
+    color: coloring('red', 1);
+  }
 
   &.button-block {
     @include button-icon;
@@ -23,14 +30,14 @@
 
   &:hover,
   &:focus {
-    border-color: color('red', -1);
-    color: color('red', 2);
+    border-color: coloring('red', -1);
+    color: coloring('red', 2);
   }
 
   &:active {
-    border-color: color('red', -1);
-    background-color: color('red', -4);
+    border-color: coloring('red', -1);
+    background-color: coloring('red', -4);
     background-image: none;
-    color: color('red', 3);
+    color: coloring('red', 3);
   }
 }

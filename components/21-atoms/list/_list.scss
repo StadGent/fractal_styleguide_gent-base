@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+
 ul,
 ol {
   @include large-text();
@@ -203,7 +207,7 @@ ul {
       justify-content: space-between;
       margin: 4px;
       padding: 10px 16px;
-      border: 1px solid color('gray');
+      border: 1px solid coloring('gray');
       font-size: .7rem;
       line-height: .7;
       list-style: none;
@@ -212,19 +216,19 @@ ul {
       &.success {
         @include theme('color', 'color-success', 'label-list-color-success');
         @include theme('border-color', 'color-success', 'label-list-color-success');
-        @include theme('background-color', 'color-success-pastel--lighten-4', 'label-list-background-color-success');
+        @include theme('background-color', 'color-success-light', 'label-list-background-color-success');
       }
 
       &.warning {
         @include theme('color', 'color-warning', 'label-list-color-warning');
         @include theme('border-color', 'color-warning', 'label-list-color-warning');
-        @include theme('background-color', 'color-warning--lighten-5', 'label-list-background-color-warning');
+        @include theme('background-color', 'color-warning-light', 'label-list-background-color-warning');
       }
 
       &.error {
         @include theme('color', 'color-error', 'label-list-color-error');
         @include theme('border-color', 'color-error', 'label-list-color-error');
-        @include theme('background-color', 'color-error--lighten-5', 'label-list-background-color-error');
+        @include theme('background-color', 'color-error-light', 'label-list-background-color-error');
       }
 
       &::before {

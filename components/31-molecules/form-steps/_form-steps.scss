@@ -1,3 +1,7 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+
 .form-steps {
   ol.form-steps-list {
     display: flex;
@@ -57,9 +61,11 @@
         @include reset-link-background;
         @include theme('color', 'color-zero');
 
-        display: inline-block;
-        line-height: 175%;
-        vertical-align: middle;
+        & {
+          display: inline-block;
+          line-height: 175%;
+          vertical-align: middle;
+        }
 
         &:hover,
         &:focus {
@@ -84,13 +90,15 @@
             @include theme('background-color', 'color-tertiary-light');
             @include theme('color', 'color-zero');
 
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            line-height: 30px;
-            text-align: center;
-            vertical-align: middle;
+            & {
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              margin-right: 10px;
+              line-height: 30px;
+              text-align: center;
+              vertical-align: middle;
+            }
           }
         }
 
@@ -109,7 +117,9 @@
         > span::before {
           @include theme('border-color', 'color-primary--darken-1', 'form-step--active-border-color');
 
-          background-color: transparent;
+          & {
+            background-color: transparent;
+          }
         }
       }
 
@@ -119,15 +129,17 @@
         &::before {
           @include theme('background-color', 'color-success-pastel');
 
-          display: inline-block;
-          line-height: 30px;
-          vertical-align: middle;
+          & {
+            display: inline-block;
+            line-height: 30px;
+            vertical-align: middle;
+          }
         }
 
         a:hover,
         a:focus {
           &::before {
-            border-color: color('green', 1);
+            border-color: coloring('green', 1);
           }
         }
       }
@@ -146,12 +158,14 @@
       li:not(:last-child)::after {
         @include theme('border-color', 'color-tertiary-pastel', 'form-step--active-border-color');
 
-        display: inline-block;
-        width: 15px;
-        margin: 0 15px;
-        border-bottom: 2px solid;
-        content: '';
-        vertical-align: middle;
+        & {
+          display: inline-block;
+          width: 15px;
+          margin: 0 15px;
+          border-bottom: 2px solid;
+          content: '';
+          vertical-align: middle;
+        }
       }
     }
   }
@@ -168,12 +182,14 @@
           &:not(:last-child)::after {
             @include theme('border-color', 'color-tertiary-pastel', 'form-step--active-border-color');
 
-            display: block;
-            width: 15px;
-            height: 20px;
-            margin: 15px 0 0;
-            border-right: 2px solid;
-            content: '';
+            & {
+              display: block;
+              width: 15px;
+              height: 20px;
+              margin: 15px 0 0;
+              border-right: 2px solid;
+              content: '';
+            }
           }
         }
       }

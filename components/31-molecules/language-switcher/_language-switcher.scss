@@ -1,3 +1,6 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
 .language-switcher {
   display: flex;
   position: relative;
@@ -21,7 +24,7 @@
     margin-top: .5rem;
     transition: max-height .3s ease-in-out;
     border-radius: border-radius('radius-1');
-    background: color('white');
+    background: coloring('white');
     z-index: z('language-switcher');
   }
 

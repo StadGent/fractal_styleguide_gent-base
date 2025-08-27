@@ -1,3 +1,6 @@
+@use '../button-styling' as *;
+@use '../../../00-mixins/mixins' as *;
+
 ///
 /// Primary button type.
 ///
@@ -6,20 +9,23 @@
 ///
 %button-primary,
 .button-primary {
-  @include theme('background-color', 'button-primary-background', 'button-primary-background');
-  @include theme('color', 'color-secondary', 'button-primary-color');
-  @include theme-content('color-zero', 'button-primary-hover-background') {
+  @include theme('background-color', 'button-primary-background');
+  @include theme('color', 'button-primary-color');
+  @include theme-content('button-primary-background', 'button-primary-hover-background') {
     background-image: linear-gradient(0, $theme-color, $theme-color);
   };
-  border: 0;
+
+  & {
+    border: 0;
+  }
 
   &:focus {
-    @include theme('background-color', 'color-primary--darken-1', 'button-primary-hover-background');
-    @include theme('color', 'color-secondary', 'button-primary-hover-color');
+    @include theme('background-color', 'button-primary-hover-background');
+    @include theme('color', 'button-primary-hover-color');
   }
 
   &:active {
-    @include theme('background-color', 'color-primary--darken-3', 'button-primary-active-background');
-    @include theme('color', 'color-secondary', 'button-primary-active-color');
+    @include theme('background-color', 'button-primary-active-background');
+    @include theme('color', 'button-primary-active-color');
   }
 }

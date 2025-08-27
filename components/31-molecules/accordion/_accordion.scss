@@ -1,22 +1,28 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+@use '../../11-base/fonts/icons' as *;
+
 .accordion {
   position: relative;
   z-index: 1;
 
   .accordion--button {
-    @include extra-large-text;
     @include semi-bold-text;
+    @include extra-large-text;
     @include icon(chevron-down);
 
-    position: relative;
-    padding-right: 32px;
-    color: inherit;
-    line-height: 26px;
-    text-align: left;
+    & {
+      position: relative;
+      padding-right: 32px;
+      color: inherit;
+      line-height: 26px;
+      text-align: left;
+    }
 
     &::before {
       position: absolute;
       right: 0;
-      transition: transform .2s ease-out-in-out;
+      transition: transform .2s ease-in-out;
       font-size: 1.4rem;
       line-height: 1.2;
     }
@@ -56,9 +62,11 @@ ul.accordion,
 dl.accordion {
   &:not(.timeline) {
     & > li {
-      @include theme('border-color', 'color-primary--lighten-4', 'accordion-border-color');
+      @include theme('border-color', 'color-primary-light', 'accordion-border-color');
 
-      border-bottom: 2px solid;
+      & {
+        border-bottom: 2px solid;
+      }
     }
   }
 
@@ -84,16 +92,18 @@ dl.accordion {
     &::before {
       @include theme('background-color', 'color-tertiary-pastel', 'button-secondary-background');
 
-      position: relative;
-      right: auto;
-      left: 0;
-      min-width: 36px;
-      min-height: 36px;
-      margin: 0 15px 0 0;
-      padding: 2.5px 5px;
-      transition: transform .2s ease-out-in-out;
-      font-size: 1.2rem;
-      text-align: left;
+      & {
+        position: relative;
+        right: auto;
+        left: 0;
+        min-width: 36px;
+        min-height: 36px;
+        margin: 0 15px 0 0;
+        padding: 2.5px 5px;
+        transition: transform .2s ease-out-in-out;
+        font-size: 1.2rem;
+        text-align: left;
+      }
     }
 
     &[aria-expanded=true] {
@@ -134,15 +144,17 @@ dl.accordion {
   z-index: 1;
 
   .accordion--link--button {
+    @include semi-bold-text;
     @include remove-button;
     @include theme('color', 'color-tertiary', 'link-color');
     @include link-background('color-primary', 'color-primary', 'link-underline-color', 'link-hover-background');
-    @include semi-bold-text;
 
-    width: auto;
-    margin-bottom: 20px;
-    line-height: 120%;
-    vertical-align: middle;
+    & {
+      width: auto;
+      margin-bottom: 20px;
+      line-height: 120%;
+      vertical-align: middle;
+    }
 
     &::before {
       display: none;

@@ -1,3 +1,5 @@
+@use "sass:string";
+
 ////
 ///
 /// This file defines all general style guide settings.
@@ -28,7 +30,7 @@ $styleguide-dir: '../styleguide' !default;
 /// @type map
 /// @author Gert-Jan Meire
 ///
-$uuid: unique-id();
+$uuid: string.unique-id();
 
 ///
 /// Defines the border radius values components can use.
@@ -178,16 +180,6 @@ $bp-container: 1680px !default;
 /// @author Bart Delrue
 ///
 $six-of-bp-container: 32rem !default;
-
-///
-/// Defines the grid system.
-///
-/// @since 2.0.3
-/// @group settings
-/// @access public
-/// @author Sven Vandevenne
-///
-@import '../11-base/grid/grid';
 
 ///
 /// Defines the number of grid columns for a given grid container.
