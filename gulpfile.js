@@ -63,7 +63,7 @@ let build = false;
  * Get the sassFiles.
  */
 const _sassFiles = () => {
-  return gulp.src(['components/**/*.s+(a|c)ss', '!components/main_cli.scss'])
+  return gulp.src(['components/**/*.s+(a|c)ss'])
     .pipe(sassGlob());
 };
 
@@ -130,7 +130,7 @@ const _spotimagesMap = () => {
 };
 
 /**
- * Inject SASS partial paths as imports in main_cli.scss.
+ * Inject SASS partial paths as imports.
  */
 gulp.task('styles:inject', (done) => {
   const injectSettingsFiles = gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
