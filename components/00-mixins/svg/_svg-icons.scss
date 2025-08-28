@@ -119,11 +119,11 @@
   }
 
   @if $icon == 'accolade' {
-    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 51 19"><path fill="#{$fill-color}" d="M51 1C31.8 1 27.28 8.45 25.73 19h-.4C23.79 8.45 19.27 1 .07 1V0H51v1Z"/></svg>';
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 51 18"><path fill="#{$fill-color}" fill-rule="evenodd" d="M50.07 0c-18.85 0-23.29 7.45-24.8 18h-.39C23.36 7.45 18.92 0 .07 0h50Z"/> </svg>';
   }
 
   @if $icon == 'accolade-inverse' {
-    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 51 19"><path fill="#{$fill-color}" fill-rule="nonzero" d="M.07 18c18.85 0 23.29-7.45 24.8-18h.39c1.52 10.55 5.96 18 24.8 18h-50Z"/></svg>';
+    @return '<svg xmlns="http://www.w3.org/2000/svg" width="#{$width}" height="#{$height}" viewBox="0 0 40 18"><path fill="#{$fill-color}" fill-rule="nonzero" d="M.07 18c18.85 0 23.29-7.45 24.8-18h.39c1.52 10.55 5.96 18 24.8 18h-50Z"/></svg>';
   }
 
   @if $icon == 'accolade-stroke' {
