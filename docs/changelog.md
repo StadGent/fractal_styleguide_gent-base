@@ -2,11 +2,16 @@
 
 All notable changes to this style guide are documented here.
 
+## [6.0.18]
+
+### Fixed
+- SDG8-2552: Fixed revert for accolade 1px shift issue.
+
 ## [6.0.17]
 
 ### Updated
-- SGD8-2552: Updated accolade with 1px extra.
 - KAG-489: Fix background accolade.
+- SGD8-2552: Updated accolade with 1px extra.
 
 ### Removed
 - SGD8-2802: Removed margin from figcaption on full img.
@@ -329,6 +334,7 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
+[6.0.18]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.17...6.0.18
 [6.0.17]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.16...6.0.17
 [6.0.16]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.15...6.0.16
 [6.0.15]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.14...6.0.15
