@@ -50,7 +50,11 @@ const startup = async () => {
 // optional dependency
 let axeCli;
 try {
-  axeCli = require('gulp-axe-cli');
+  if (process.env.CHROME_BIN) {
+    axeCli = require('gulp-axe-cli');
+  } else {
+    console.warn('Skipping axe tasks: CHROME_BIN not set');
+  }
 } catch (e) {
   if (e.code !== 'MODULE_NOT_FOUND') {
     throw e;
@@ -720,6 +724,9 @@ gulp.task('build', gulp.series((callback) => {
  *   - wcag2aa
  */
 gulp.task('axe:input', () => {
+  if (!axeCli) {
+    return Promise.resolve();
+  }
   return gulp
     .src([
       'build/components/preview/input*.html',
@@ -735,6 +742,9 @@ gulp.task('axe:input', () => {
  *   - wcag2aa
  */
 gulp.task('axe:layout', callback => {
+  if (!axeCli) {
+    return Promise.resolve();
+  }
   return gulp
     .src(['build/components/preview/*layout*.html'])
     .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'color-contrast']}))
@@ -746,6 +756,9 @@ gulp.task('axe:layout', callback => {
  *   - wcag2aa
  */
 gulp.task('axe:components', callback => {
+  if (!axeCli) {
+    return Promise.resolve();
+  }
   return gulp
     .src(['build/components/preview/!(input*|file|*layout*|preview*|textarea*|teaser--*|*--*).html'])
     .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'bypass', 'color-contrast']}))
