@@ -17,7 +17,7 @@
 
   &:focus,
   &:hover {
-    @include theme('background-color', 'color-primary--lighten-5', 'button-primary-hover-background');
+    @include theme('background-color', 'color-primary-light', 'button-primary-hover-background');
   }
 
   i {

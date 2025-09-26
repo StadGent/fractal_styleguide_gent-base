@@ -175,7 +175,7 @@ nav.menu {
       margin: 0 24px;
 
       &:not(:last-child) {
-        @include theme('border-color', 'color-primary--lighten-4');
+        @include theme('border-color', 'color-primary-light');
 
         & {
           border-bottom: 2px solid;
