@@ -2,8 +2,44 @@
 
 All notable changes to this style guide are documented here.
 
-## [7.0.0] Unreleased
+## [7.0.1]
 
+### Updated
+
+- Update changelog instructions.
+
+### Fixed
+
+- STIJ-446: Fix minor Sass validation errors.
+- STIJ-446: Clean up outdated --darken and --lighten colors.
+
+## [7.0.0]
+
+This major update contains no style changes. Instead, the Sass structure
+has been updated to match the latest standards.
+
+### Changed
+
+- STIJ-446: Fix Sass deprecations. This affects api changes:
+  - The function color() has changed to coloring().
+  - Styleguide now uses the Sass `@forward` and `@use` method to include SASS
+    resources in one another. `@import` is not used anymore. Every SASS file
+    in your own project should now `@use` any resource needed from
+    gent_styleguide, such as variables and mixins.
+  - The order of `@include` changes: all `@include` without mixin, only CSS
+    need to be at the top, followed by `@include` with mixins.
+  - Sass now provides functions that can be used where needed like so:
+    ```
+    @use "sass:list";
+    @use "sass:map";
+    @use "sass:meta";
+    @use "sass:string";
+    @use "sass:color";
+
+    p {
+      color: color.mix(..., ...);
+    }
+    ```
 ### Fixed
 - STIJ-446: Fix Sass deprecations.
 - STIJ-446: Fix gc machine description issues in fractal build.
@@ -21,7 +57,6 @@ All notable changes to this style guide are documented here.
 
 ### Removed
 - SGD8-2985: Removed opening-hours field in teaser mobile.
-
 
 ### Updated
 - SGD8-2552: Updated accolade to new design.
@@ -335,7 +370,8 @@ Add the `.contact-details--with-image` class to the contact-details section if y
   https://github.com/StadGent/fractal_styleguide_gent-base/blob/5.x/CHANGELOG.md
 
 
-[6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.x...7.x-dev
+[7.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.x...7.x-dev
+[7.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.0.0...7.0.1
 [7.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.17...7.0.0
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev

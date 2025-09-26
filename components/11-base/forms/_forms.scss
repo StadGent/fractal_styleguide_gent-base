@@ -368,7 +368,7 @@ $field-icon-padding: 50px;
 }
 
 .form-disclaimer {
-  @include theme('color', 'color-tertiary--lighten-1', 'form-disclaimer-color');
+  @include theme('color', 'color-tertiary', 'form-disclaimer-color');
 
   .highlight__inner &,
   .feature-block &,
