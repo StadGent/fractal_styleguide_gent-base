@@ -5,6 +5,7 @@
 @use "sass:map";
 @use "sass:meta";
 @use "sass:string";
+@use "sass:math";
 
 ////
 /// Globally defined general purpose mixins.
@@ -13,7 +14,6 @@
 /// @group tools
 /// @author Gert-Jan Meire
 ////
-@use "sass:math";
 
 ///  Helper function to replace characters in a string.
 /// @since 3.0.0

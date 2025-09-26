@@ -49,7 +49,7 @@ These form the basic of the theming system. Through a syntax convention you
 can theme the colors of your components:
 
 ```scss
-  @include theme('background', 'color-primary--lighten-4', 'field-background');
+  @include theme('background', 'color-primary-light', 'field-background');
 ```
 
 gets transformed by the system to:
@@ -70,7 +70,7 @@ The themify theme() function converts sass like this:
 ```scss
 .parent {
   .child {
-    theme('background-color', 'color-primary--lighten-4', 'field-background');
+    theme('background-color', 'color-primary-light', 'field-background');
   }
 }
 ```
@@ -94,7 +94,7 @@ selector:
 ```scss
 .parent {
   .child {
-    theme-body('background-color', 'color-primary--lighten-4', 'field-background');
+    theme-body('background-color', 'color-primary-light', 'field-background');
   }
 }
 ```

@@ -139,7 +139,7 @@
   /// Actions
   ///
   &-actions {
-    @include theme('border-color', 'color-primary--lighten-4', 'modal-action-border-bottom');
+    @include theme('border-color', 'color-primary-light', 'modal-action-border-bottom');
     @include theme('background-color', 'color-none', 'modal-action-background-color');
 
     & {

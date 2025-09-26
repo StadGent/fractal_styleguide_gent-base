@@ -11,7 +11,7 @@ $link-padding: .2em;
 a {
   @include semi-bold-text;
   @include theme('color', 'color-tertiary', 'link-color');
-  @include link-background('color-primary', 'color-primary--lighten-4', 'link-underline-color', 'link-hover-background');
+  @include link-background('color-primary', 'color-primary-light', 'link-underline-color', 'link-hover-background');
 
   & {
     position: relative;
@@ -34,13 +34,16 @@ a {
   // Different button link types. These are links styled as a button.
   &.button,
   &.tag {
-    @include button;
     @include button-icon;
-    // Overrule flex for IE
-    align-items: flex-start;
-    padding-top: .6em;
-    border-bottom: 0;
-    background-image: inherit;
+    @include button;
+
+    & {
+      // Overrule flex for IE
+      align-items: flex-start;
+      padding-top: .6em;
+      border-bottom: 0;
+      background-image: inherit;
+    }
 
     &:not([class*="icon"]) {
       @include button-icon;
@@ -98,7 +101,7 @@ a {
 
     &:focus,
     &:hover {
-      @include theme('color', 'color-primary--darken-2', 'link-hover-color');
+      @include theme('color', 'color-primary', 'link-hover-color');
     }
 
   }
