@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [7.0.2 Unreleased]
+
+### Fixed
+
+- SGD8-3049: Fix font-weight of headings.
+
 ## [7.0.1]
 
 ### Updated
