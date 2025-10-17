@@ -73,15 +73,20 @@
 // On mobile the filter-section is moved to the body root because it is converted to a modal.
 // This means it's no longer a child of .filter.
 .sidebar.filter-section {
-  visibility: hidden;
-
   @include desktop {
     position: static;
     height: auto;
     box-shadow: none;
     overflow: visible;
-    visibility: visible;
     z-index: auto;
+  }
+
+  main & {
+    visibility: hidden;
+
+    @include desktop {
+      visibility: visible;
+    }
   }
 
   &.visible {
