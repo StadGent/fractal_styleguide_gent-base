@@ -2,11 +2,13 @@
 
 All notable changes to this style guide are documented here.
 
-## [7.0.2 Unreleased]
+## [7.0.2]
 
 ### Fixed
 
 - SGD8-3049: Fix font-weight of headings.
+- SGD8-3049: Fix overview page title styling.
+- SGD8-3049: Fix headings width and color.
 
 ## [7.0.1]
 
@@ -377,6 +379,7 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [7.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.x...7.x-dev
+[7.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.0.1...7.0.2
 [7.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.0.0...7.0.1
 [7.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.17...7.0.0
 
