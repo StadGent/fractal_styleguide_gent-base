@@ -2,7 +2,13 @@
 
 All notable changes to this style guide are documented here.
 
-## [7.0.2 Unreleased]
+## [7.0.3 Unreleased]
+
+### Fixed
+
+- SGD8-3049: Fix headings scss to include all styling via _heading.scss
+
+## [7.0.2]
 
 ### Fixed
 
