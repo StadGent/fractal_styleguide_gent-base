@@ -1,4 +1,9 @@
+// Use this file to @use it in other files, not the heading-styling file.
+
+// General heading styling.
 @use 'heading-styling';
+
+// Override heading overrides.
 @use 'css/background-title';
 @use 'css/heading-1';
 @use 'css/heading-2';
