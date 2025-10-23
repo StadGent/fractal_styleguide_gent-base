@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use "sass:meta";
 @use '../../00-settings/vars' as *;
 
 ////
@@ -6,22 +7,99 @@
 /// This file defines breakpoint related mixins / functions.
 ///
 /// @group breakpoints
-/// @author Sven Vandevenne
+/// @author Lennart Van Vaerenbergh
 ///
 
+/// Parse a single condition list like (min-width 768px) or (max-width 767px).
+/// Returns a map (op: min-width|max-width, val: <length>) or null.
+@function _bp-parse-cond($item) {
+  @if meta.type-of($item) == 'list' and list.length($item) == 2 {
+    $op: list.nth($item, 1);
+    $val: list.nth($item, 2);
+
+    @if $op == min-width {
+      @return ($val, null);
+    }
+    @else if $op == max-width {
+      @return (null, $val);
+    }
+  }
+
+  // Fallback ensures callers always receive a 2-item list.
+  @return (null, null);
+}
+
+/// Flexible breakpoint mixin.
+/// Supports:
+/// - @include breakpoint(768px) → min-width.
+/// - @include breakpoint(max-width 767px) or wrapped as ((max-width 767px)).
+/// - @include breakpoint((min-width 480px) (max-width 767px)) → range.
+/// Always end comment lines with a full stop.
 @mixin breakpoint($args...) {
-  @if list.length($args) == 1 {
-    @media screen and (min-width: list.nth($args, 1)) {
+  $argc: list.length($args);
+  $min: null;
+  $max: null;
+
+  // Case A: @include breakpoint(768px).
+  @if $argc == 1 and meta.type-of(list.nth($args, 1)) != 'list' {
+    $min: list.nth($args, 1);
+
+    // Case B: One list argument: either a single condition or a range of two conditions.
+  }
+  @else if $argc == 1 and meta.type-of(list.nth($args, 1)) == 'list' {
+    $a: list.nth($args, 1);
+
+    // Single condition like (max-width 767px).
+    $single-minmax: _bp-parse-cond($a);
+    @if list.nth($single-minmax, 1) != null or list.nth($single-minmax, 2) != null {
+      $min: list.nth($single-minmax, 1);
+      $max: list.nth($single-minmax, 2);
+
+    }
+    @else if list.length($a) == 2 {
+      // Range like ((min-width 480px) (max-width 767px)).
+      $c1: _bp-parse-cond(list.nth($a, 1));
+      $c2: _bp-parse-cond(list.nth($a, 2));
+      $min: if(list.nth($c1, 1) != null, list.nth($c1, 1), list.nth($c2, 1));
+      $max: if(list.nth($c1, 2) != null, list.nth($c1, 2), list.nth($c2, 2));
+
+      @if ($min == null and $max == null) or (meta.type-of($min) == 'string' and meta.type-of($max) == 'string') {
+        @error 'Invalid range for mixin breakpoint. Use ((min-width 480px) (max-width 1024px)).';
+      }
+
+    }
+    @else {
+      @error 'Invalid arguments for mixin breakpoint. Use (768px), (max-width 1024px), or ((min-width 480px) (max-width 1024px)).';
+    }
+
+    // Case C: Two positional args like: @include breakpoint(max-width 767px).
+  }
+  @else if $argc == 2 and list.nth($args, 1) == max-width {
+    $max: list.nth($args, 2);
+
+  }
+  @else {
+    @error 'Invalid arguments for mixin breakpoint. Use (768px), (max-width 1024px), or ((min-width 480px) (max-width 1024px)).';
+  }
+
+  // Emit exactly one @media block based on what we parsed.
+  @if $min != null and $max != null {
+    @media screen and (min-width: $min) and (max-width: $max) {
       @content;
     }
   }
-  @else if list.length($args) == 2 and list.nth($args, 1) == max-width {
-    @media screen and (max-width: list.nth($args, 2)) {
+  @else if $min != null {
+    @media screen and (min-width: $min) {
+      @content;
+    }
+  }
+  @else if $max != null {
+    @media screen and (max-width: $max) {
       @content;
     }
   }
   @else {
-    @error 'Invalid arguments for mixin breakpoints: use e.g. (768px) or (max-width 1024px)';
+    @error 'No valid breakpoint could be determined. Check your arguments.';
   }
 }
 

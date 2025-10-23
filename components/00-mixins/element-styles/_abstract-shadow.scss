@@ -36,12 +36,12 @@
     margin-#{$v-position}: $offset;
   }
   @else {
-    margin-#{$h-position}: 1rem;
-    margin-#{$v-position}: 1rem;
+    margin-#{$h-position}: 20px;
+    margin-#{$v-position}: 20px;
 
     @include tablet {
-      margin-#{$h-position}: 1.5rem;
-      margin-#{$v-position}: 1.5rem;
+      margin-#{$h-position}: 30px;
+      margin-#{$v-position}: 30px;
     }
   }
 
@@ -51,12 +51,12 @@
       #{$h-position}: -$offset;
     }
     @else {
-      #{$v-position}: -1rem;
-      #{$h-position}: -1rem;
+      #{$v-position}: -20px;
+      #{$h-position}: -20px;
 
       @include tablet {
-        #{$v-position}: -1.5rem;
-        #{$h-position}: -1.5rem;
+        #{$v-position}: -30px;
+        #{$h-position}: -30px;
       }
     }
 
