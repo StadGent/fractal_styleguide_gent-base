@@ -55,7 +55,7 @@
     }
 
     a {
-      @include link-background('color-zero', 'color-success-light--darken-1');
+      @include link-background('color-zero', 'color-success-light');
     }
   }
 
@@ -69,7 +69,7 @@
     }
 
     a {
-      @include link-background('color-zero', 'color-error-light--darken-1');
+      @include link-background('color-zero', 'color-error-light');
     }
   }
 
