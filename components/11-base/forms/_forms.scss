@@ -25,7 +25,7 @@ $field-icon-padding: 50px;
 /// @require svg-url
 ///
 @mixin field-base {
-  @include theme("border-color", "color-zero--lighten-2", "fields-border-color");
+  @include theme("border-color", "color-zero-medium", "fields-border-color");
   @include theme("background", "color-none", "fields-background");
   @include theme("color", "color-zero", "fields-color");
 
@@ -39,7 +39,7 @@ $field-icon-padding: 50px;
   &:disabled {
     padding-right: $field-icon-padding;
     border: 0;
-    background: coloring("gray", -5) $field-icon-position;
+    background: coloring("gray-light") $field-icon-position;
     background-image: svg-as-background(
       "lock-closed",
       coloring("gray", -2),
@@ -52,7 +52,7 @@ $field-icon-padding: 50px;
   &.success {
     padding-right: $field-icon-padding;
     border: 1px solid coloring("green");
-    background: coloring("green-pastel", -4) $field-icon-position;
+    background: coloring("green-light") $field-icon-position;
     background-image: svg-as-background(
       "checkmark-circle",
       coloring("green"),
@@ -62,7 +62,7 @@ $field-icon-padding: 50px;
 
     &:focus {
       border-color: coloring("green");
-      background: coloring("green-pastel", -4) $field-icon-position;
+      background: coloring("green-light") $field-icon-position;
       background-image: svg-as-background(
         "checkmark-circle",
         coloring("green"),
@@ -75,7 +75,7 @@ $field-icon-padding: 50px;
   &.error {
     padding-right: $field-icon-padding;
     border: 1px solid coloring("red");
-    background: coloring("red", -6) $field-icon-position;
+    background: coloring("red-light") $field-icon-position;
     background-image: svg-as-background(
       "exclamation-circle",
       coloring("red"),
@@ -85,7 +85,7 @@ $field-icon-padding: 50px;
 
     &:focus {
       border-color: coloring("red");
-      background: coloring("red", -6) $field-icon-position;
+      background: coloring("red-light") $field-icon-position;
       background-image: svg-as-background(
         "exclamation-circle",
         coloring("red"),
@@ -188,7 +188,7 @@ $field-icon-padding: 50px;
         );
         @include theme(
           "border-color",
-          "color-zero--lighten-2",
+          "color-zero-medium",
           "checkbox-border-color"
         );
       }
@@ -212,7 +212,7 @@ $field-icon-padding: 50px;
         );
         @include theme(
           "border-color",
-          "color-zero--lighten-2",
+          "color-zero-medium",
           "radio-border-color"
         );
 
