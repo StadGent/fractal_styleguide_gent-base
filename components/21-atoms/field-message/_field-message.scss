@@ -97,7 +97,7 @@
     }
 
     a {
-      @include link-background('color-zero', 'color-success-light--darken-1', 'success-message-link-border-color', 'success-message-link-background');
+      @include link-background('color-zero', 'color-success-light', 'success-message-link-border-color', 'success-message-link-background');
     }
   }
 
@@ -115,7 +115,7 @@
     }
 
     a {
-      @include link-background('color-zero', 'color-error-light--darken-1', 'error-message-link-border-color', 'error-message-link-background');
+      @include link-background('color-zero', 'color-error-light', 'error-message-link-border-color', 'error-message-link-background');
     }
   }
 }

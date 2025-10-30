@@ -19,7 +19,7 @@
   };
 
   & {
-    border: 2px solid coloring('red', -2);
+    border: 2px solid coloring('red');
     background-color: coloring('white');
     color: coloring('red', 1);
   }
