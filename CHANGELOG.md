@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [7.0.5] Unreleased
+
+### Fixed
+
+- SGD8-3055: Fix link display in partner block description.
+
 ## [7.0.4]
 
 ### Added
