@@ -83,7 +83,7 @@
     }
   }
 
-  a {
+  .partners a {
     display: block;
     width: auto;
     height: 100%;
@@ -94,6 +94,10 @@
       &:not(.no-icon):not(.tag) {
         margin-right: 0;
       }
+    }
+
+    &:hover {
+      background: none;
     }
   }
 
