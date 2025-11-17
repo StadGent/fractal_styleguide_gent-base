@@ -3,7 +3,7 @@
 module.exports = {
   context: {
     title: 'Partners title',
-    description: 'Here you may add information about the partners. The logos in this block are not predefined and can be changed per project.',
+    description: 'Here you may add information about the partners. The <a href="#">logos</a> in this block are not predefined and can be changed per project.',
     items: [
       {
         link: '/styleguide/img/stock/partner1.svg',
