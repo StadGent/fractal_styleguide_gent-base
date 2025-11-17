@@ -7,7 +7,7 @@
     "@babel/preset-env": "^7.20.2",
     "@frctl/fractal": "^1.5.15",
     "@frctl/twig": "^1.2.13",
-    "chromedriver": "^140.0.0",
+    "chromedriver": "^142.0.0",
     "cssnano": "^5.1.14",
     "fs-extra": "^11.1.0",
     "gulp": "^4.0.2",
@@ -93,8 +93,8 @@
     "url": "https://github.com/StadGent/fractal_styleguide_gent-base.git"
   },
   "overrides": {
-    "chromedriver": "^140.0.0",
-    "axe-cli": { "chromedriver": "^140.0.0" },
-    "gulp-axe-cli": { "chromedriver": "^140.0.0" }
+    "chromedriver": "^142.0.0",
+    "axe-cli": { "chromedriver": "^142.0.0" },
+    "gulp-axe-cli": { "chromedriver": "^142.0.0" }
   }
 }

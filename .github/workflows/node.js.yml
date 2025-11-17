@@ -5,25 +5,33 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ 5.*, 6.* ]
+    branches: [ 5.*, 6.*, 7.* ]
   pull_request:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [20.x]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      # Install Chrome AND a matching ChromeDriver, placed on PATH.
+      - name: Install Chrome + ChromeDriver (matching)
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 'stable' # Or pin e.g. '142' for reproducibility.
+          install-chromedriver: true
+
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
