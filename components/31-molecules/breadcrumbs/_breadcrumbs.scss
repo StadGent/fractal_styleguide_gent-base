@@ -18,6 +18,7 @@
 
       display: inline-flex;
       align-items: center;
+      height: 38px;
       margin-right: 8px;
       margin-bottom: 0;
       padding-left: 0;
@@ -99,7 +100,7 @@
     }
 
     &::after {
-      line-height: inherit;
+      line-height: 1.6rem;
     }
   }
 
