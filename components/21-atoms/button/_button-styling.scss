@@ -86,22 +86,20 @@
 /// @require color
 ///
 @mixin button-disabled {
-  [class*='cs--'] & {
+  @include theme('color', 'color-zero');
+  @include theme('background-color', 'color-zero');
+
+  & {
+    border: 0;
+    background-image: none;
+  }
+
+  &:hover {
     @include theme('color', 'color-zero');
     @include theme('background-color', 'color-zero');
 
     & {
-      border: 0;
-      background-image: none;
-    }
-
-    &:hover {
-      @include theme('color', 'color-zero');
-      @include theme('background-color', 'color-zero');
-
-      & {
-        cursor: not-allowed;
-      }
+      cursor: not-allowed;
     }
   }
 }
