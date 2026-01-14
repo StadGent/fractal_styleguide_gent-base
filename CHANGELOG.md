@@ -2,7 +2,7 @@
 
 All notable changes to this style guide are documented here.
 
-## [7.0.7]
+## [7.1.0]
 
 ### Added
 
