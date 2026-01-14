@@ -74,5 +74,70 @@ $themes: (
     'help-text-color': coloring('gray-medium'),
 
     'bullet-inactive-color': coloring('gray-light'),
+  ),
+  'green': (
+    'color-zero': coloring('gray'),
+    'color-zero-medium': coloring('gray-medium'),
+    'color-zero-light': coloring('gray-light'),
+    'color-zero-ultralight': coloring('gray-ultra-light'),
+    'color-none': coloring('white'),
+    'color-primary': coloring('green-forest'),
+    'color-primary-light': coloring('green-forest-light'),
+    'color-secondary': coloring('yellow'),
+    'color-secondary-pastel': coloring('yellow-pastel'),
+    'color-secondary-light': coloring('yellow-light'),
+    'color-tertiary': coloring('green-forest'),
+    'color-tertiary-pastel': coloring('green-pastel'),
+    'color-tertiary-light': coloring('green-light'),
+    'color-quaternary': coloring('green-light'),
+    'color-info': coloring('green-forest'),
+    'color-info-pastel': coloring('green-pastel'),
+    'color-info-light': coloring('green-light'),
+    'color-success': coloring('green'),
+    'color-success-pastel': coloring('green-pastel'),
+    'color-success-light': coloring('green-light'),
+    'color-warning': coloring('orange'),
+    'color-warning-pastel': coloring('orange-pastel'),
+    'color-warning-light': coloring('orange-light'),
+    'color-error': coloring('red'),
+    'color-error-pastel': coloring('red-pastel'),
+    'color-error-light': coloring('red-light'),
+
+    'default-text-color': coloring('gray'),
+
+    // Exceptions to colors go here...
+    // These should be as limited as possible though!
+    'heading-inverse-primary-background-color': coloring('green-forest'),
+    'heading-2-color': coloring('green-forest'),
+
+    'link-color': coloring('green-forest'),
+    'link-underline-color': coloring('green-forest'),
+    'link-hover-background': coloring('green-forest-light'),
+    'link-hover-color': coloring('green-forest'),
+    'link-underlined-hover-color': coloring('green-forest'),
+
+    'focus-outline': coloring('gray'),
+
+    'modal-overlay-background-color': coloring('green-forest-light'),
+
+    'button-primary-background': coloring('gray'),
+    'button-primary-color': coloring('white'),
+    'button-primary-hover-background': coloring('gray-medium'),
+    'button-primary-hover-color': coloring('white'),
+    'button-primary-active-background': coloring('gray-medium'),
+    'button-primary-active-color': coloring('white'),
+
+    'button-secondary-background': coloring('green-pastel'),
+    'button-secondary-color': coloring('gray'),
+    'button-secondary-hover-background': coloring('green-light'),
+    'button-secondary-hover-color': coloring('gray'),
+    'button-secondary-active-background': coloring('green-hover'),
+    'button-secondary-active-color': coloring('gray'),
+
+    'tag-close-button-background-hover': coloring('gray-light'),
+
+    'help-text-color': coloring('gray-medium'),
+
+    'bullet-inactive-color': coloring('gray-light'),
   )
 ) !default;
