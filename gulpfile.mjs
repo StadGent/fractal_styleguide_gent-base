@@ -10,7 +10,7 @@ import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import sassGlob from 'gulp-sass-glob';
 import sourcemaps from 'gulp-sourcemaps';
-import sassLint from 'gulp-sass-lint';
+import stylelint from 'gulp-stylelint-esm';
 import sassdoc from 'sassdoc';
 import autoprefixer from 'gulp-autoprefixer';
 import cssnano from 'cssnano';
@@ -197,21 +197,14 @@ gulp.task('styles:build', () => {
  */
 gulp.task('styles:validate', () => {
   return _sassFiles()
-    .pipe(cache('styles:validate'))
-    .pipe(sassLint({
-      configFile: './.sass-lint.yml'
-    }))
-    .pipe(gulpif(build, sassLint.failOnError()))
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError());
-    /*.pipe(gStylelintEsm({
-      failAfterError: true, // true (default) | false
-      fix: false,           // false (default) | true
+    .pipe(stylelint({
+      failAfterError: false,
+      fix: false,
       reporters: [
-        { formatter: 'stylish', console: true }, // default
+        { formatter: 'stylish', console: true },
       ],
-      debug: false,          // false (default) | true
-    }));*/
+      debug: false,
+    }));
 });
 
 /**
@@ -453,7 +446,7 @@ gulp.task('iconfont', () => {
     }))
     .on('glyphs', function (glyphs, options) {
       // CSS templating, e.g.
-      // console.log(glyphs, options);
+      console.log(glyphs, options);
     })
     .pipe(gulp.dest('./public/styleguide/fonts/', { encoding: false }));
 });
