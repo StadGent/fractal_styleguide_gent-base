@@ -1,14 +1,27 @@
 'use strict';
 
-const fractal = require('@frctl/fractal').create();
-const path = require('path');
-const packageInfo = require('./package.json');
-const mandelbrot = require('@frctl/mandelbrot');
+import fractalSource from '@frctl/fractal';
+import path from 'path';
+import mandelbrot from '@frctl/mandelbrot';
+import twigAdapter from '@frctl/twig';
+import { readFile } from 'fs/promises';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const packageInfo = JSON.parse(
+  await readFile(
+    new URL('./package.json', import.meta.url)
+  )
+);
+
+const fractal = fractalSource.create();
 
 /**
  * Require additional fractal modules
  */
-const twigAdapter = require('@frctl/twig');
 
 /*
 * Give your project a title.
@@ -90,4 +103,4 @@ ghentTheme.addLoadPath(__dirname + '/fractal/theme-overrides');
 
 fractal.web.theme(ghentTheme);
 
-module.exports = fractal;
+export default fractal;

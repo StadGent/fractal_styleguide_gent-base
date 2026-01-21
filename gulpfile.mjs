@@ -2,60 +2,45 @@
 'use strict';
 
 /**
- * Node core modules.
- */
-const fs = require('fs');
-
-/**
  * NPM based modules
  */
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const sassGlob = require('gulp-sass-glob');
-const sourcemaps = require('gulp-sourcemaps');
-const sassLint = require('gulp-sass-lint');
-const sassdoc = require('sassdoc');
-const autoprefixer = require('gulp-autoprefixer');
-const cssnano = require('cssnano');
-const postcss = require('gulp-postcss');
-const rename = require('gulp-rename');
-const eslint = require('gulp-eslint');
-let /** @type {import("gulp-imagemin")} */ imagemin;
-const pngquant = require('imagemin-pngquant');
-const uglify = require('gulp-uglify');
-const npmLogin = require('npm-cli-login');
-const spawn = require('child_process').spawn;
-const bump = require('gulp-bump');
-const inject = require('gulp-inject');
-const yargs = require('yargs');
-const combiner = require('stream-combiner2');
-const cache = require('gulp-cached');
-const iconfont = require('gulp-iconfont');
-const iconfontCss = require('gulp-iconfont-css');
-const gulpif = require('gulp-if');
-const babel = require('gulp-babel');
-const Color = require('color');
-const RecolorSvg = require('gulp-recolor-svg');
-const realFavicon = require('gulp-real-favicon');
-// require our configured fractal module.
-const fractal = require('./fractal');
+import fs from 'fs';
+import gulp from 'gulp';
+import * as dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import sassGlob from 'gulp-sass-glob';
+import sourcemaps from 'gulp-sourcemaps';
+import sassLint from 'gulp-sass-lint';
+import sassdoc from 'sassdoc';
+import autoprefixer from 'gulp-autoprefixer';
+import cssnano from 'cssnano';
+import postcss from 'gulp-postcss';
+import rename from 'gulp-rename';
+import eslint from 'gulp-eslint';
+import imagemin from 'gulp-imagemin';
+import pngquant from 'imagemin-pngquant';
+import uglify from 'gulp-uglify';
+import npmLogin from 'npm-cli-login';
+import childProcess from 'child_process';
+import bump from 'gulp-bump';
+import inject from 'gulp-inject';
+import yargs from 'yargs';
+import combiner from 'stream-combiner2';
+import cache from 'gulp-cached';
+import iconfont from 'gulp-iconfont';
+import iconfontCss from 'gulp-iconfont-css';
+import gulpif from 'gulp-if';
+import babel from 'gulp-babel';
+import Color from 'color';
+import RecolorSvg from 'gulp-recolor-svg';
+import realFavicon from 'gulp-real-favicon';
+import axeCli from 'gulp-axe-cli';
 
-const startup = async () => {
-  // @ts-ignore
-  imagemin = (await import("gulp-imagemin")).default;
-  // @ts-ignore
-};
+import fractal from './fractal.mjs';
+import colors from './components/11-base/colors/colors.config.js';
 
-
-// optional dependency
-let axeCli;
-try {
-  axeCli = require('gulp-axe-cli');
-} catch (e) {
-  if (e.code !== 'MODULE_NOT_FOUND') {
-    throw e;
-  }
-}
+// We want dartSass.
+const sass = gulpSass(dartSass);
 
 let build = false;
 
@@ -91,7 +76,6 @@ const _sassCompile = () => {
  * Get color map.
  */
 const _getColors = () => {
-  const colors = require('./components/11-base/colors/colors.config.js');
   if (!colors) {
     return [];
   }
@@ -220,6 +204,14 @@ gulp.task('styles:validate', () => {
     .pipe(gulpif(build, sassLint.failOnError()))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
+    /*.pipe(gStylelintEsm({
+      failAfterError: true, // true (default) | false
+      fix: false,           // false (default) | true
+      reporters: [
+        { formatter: 'stylish', console: true }, // default
+      ],
+      debug: false,          // false (default) | true
+    }));*/
 });
 
 /**
@@ -311,8 +303,6 @@ gulp.task('js:watch', () => {
  * Minify images.
  */
 gulp.task('images:minify', async () => {
-    await startup();
-
     return gulp.src([
     'components/**/*.png',
     'components/**/*.jpg',
@@ -399,7 +389,7 @@ gulp.task('publish:npm', (callback) => {
     .argv;
 
   npmLogin(argv.username, argv.password, argv.email);
-  var cmd = spawn('npm', ['publish'], {stdio: 'inherit'});
+  var cmd = childProcess.spawn('npm', ['publish'], {stdio: 'inherit'});
   cmd.on('close', function (code) {
     console.log('Published successful (code ' + code + ')');
     callback(code);
@@ -439,7 +429,8 @@ gulp.task('bump', () => {
  *  gulp iconfont
  */
 gulp.task('iconfont', () => {
-  const version = require('./package.json').version.split('.')[0];
+  const pkg = JSON.parse(fs.readFileSync('./package.json'));
+  const version = pkg.version.split('.')[0];
   const fontName = `gent-icons-v${version}`;
   const runTimestamp = Math.round(Date.now() / 1000);
 
@@ -464,7 +455,7 @@ gulp.task('iconfont', () => {
       // CSS templating, e.g.
       // console.log(glyphs, options);
     })
-    .pipe(gulp.dest('./public/styleguide/fonts/'));
+    .pipe(gulp.dest('./public/styleguide/fonts/', { encoding: false }));
 });
 
 /**
