@@ -6,18 +6,42 @@ This repository contains an style guide based on the Fractal build tool. You can
 
 ## Installation
 
-Run `yarn install`.
+Install the dependencies:
 
-## Development
+```shell
+npm install
+```
 
-Run `gulp` or `gulp watch` and go to [localhost:3000](http://localhost:3000).
+Compile all components, this might take a while:
 
-## Publishing (Digipolis only)
+```shell
+npm run build
+```
+
+Start the fractal site at localhost:3000 and watch for changes:
+
+```shell
+npm run start
+```
+
+Open the browser and go to [localhost:3000](http://localhost:3000).
+
+## Build static version of the styleguide
+
+Run the installation and build script, the static version will be available in
+the `./build` directory:
+
+```shell
+npm install && npm run build
+```
+
+## Publish NPM package
+
+District09 only:
 
 ```bash
 gulp publish --username=*** --password=*** --email=***
 ```
 
-This command is used to publish an extract of the style guide to
-the NPM registry.
-It is then supposed to be used inside a Drupal 8 theme.
+This command is used to publish an extract of the style guide to the NPM 
+registry. It is then supposed to be used inside a Drupal 8+ theme.
