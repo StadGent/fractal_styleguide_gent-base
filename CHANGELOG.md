@@ -4,6 +4,10 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
+### Added
+
+- STIJ-453: Add green color theme to the theme selector.
+
 ### Changed
 
 - STIJ-453: Change from sass-lint to stylelint.
