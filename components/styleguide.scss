@@ -37,13 +37,12 @@
     height: 6rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    overflow: hidden;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 50%;
-    overflow: hidden;
   }
 
   .color-variants {
-
     > div {
       display: flex;
       flex: auto;
@@ -116,8 +115,8 @@ h3.styleguide-title {
 .preview-container {
   min-height: 100vh;
   padding: 4% 0;
-  background-color: #fff;
   overflow: hidden;
+  background-color: #fff;
 
   .gallery {
     max-width: 388px;

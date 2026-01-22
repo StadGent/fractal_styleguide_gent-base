@@ -19,9 +19,9 @@ $week-breakpoint: '(min-width: 750px)';
   }
 
   .openinghours--details {
-    top: calc(100% + #{$month-day-size-mobile *.5 + 12px});
-    left: $month-day-size-mobile *.25;
-    padding-top: $month-day-size-mobile *.5;
+    top: calc(100% + #{$month-day-size-mobile * .5 + 12px});
+    left: $month-day-size-mobile * .25;
+    padding-top: $month-day-size-mobile * .5;
   }
 }
 

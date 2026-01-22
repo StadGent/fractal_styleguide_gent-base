@@ -2,9 +2,12 @@
 @use '../../00-mixins/mixins' as *;
 @use '../../11-base/fonts/icons' as *;
 
+/* stylelint-disable no-descending-specificity */
+
 ul,
 ol {
-  @include large-text();
+  @include large-text;
+
   position: relative;
 
   ul {
@@ -66,6 +69,7 @@ ol {
 
   &.comma-separated-list {
     @extend %list-no-style;
+
     margin: 0;
     padding: 0;
 
@@ -75,9 +79,9 @@ ol {
       padding: 0;
 
       &:not(:last-of-type)::after {
+        content: ',';
         display: inline;
         padding: 0 4px 0 0;
-        content: ',';
       }
     }
 
@@ -122,7 +126,7 @@ ul {
   }
 
   &.icon-list {
-    @include large-text();
+    @include large-text;
 
     margin: 0 0 40px;
     list-style-type: none;
@@ -180,14 +184,15 @@ ul {
 
   &.dash-separated-list {
     @extend %list-no-style;
+
     display: flex;
     flex-wrap: wrap;
     margin: 0;
 
     > li:not(:last-of-type)::after {
+      content: "\2014";
       display: inline-block;
       padding: 0 .2em;
-      content: "\2014";
     }
   }
 
@@ -253,6 +258,7 @@ ol {
       @include theme('background-color', 'color-tertiary-pastel');
       @include semi-bold-text;
 
+      content: counter(item);
       display: inline-block;
       position: absolute;
       top: 2px;
@@ -263,7 +269,6 @@ ol {
       font-size: .9rem;
       line-height: 177.778%;
       text-align: center;
-      content: counter(item);
     }
 
     & > h1,

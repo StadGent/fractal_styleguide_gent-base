@@ -2,13 +2,11 @@
 @use '../../00-mixins/mixins' as *;
 
 label {
-  @include label();
+  @include label;
 
   .label-optional {
-    @include optional-label();
+    @include optional-label;
 
-    & {
-      margin: 0 0 3px 5px;
-    }
+    margin: 0 0 3px 5px;
   }
 }

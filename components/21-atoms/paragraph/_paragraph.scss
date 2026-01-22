@@ -2,7 +2,7 @@
 @use '../../00-mixins/mixins' as *;
 
 p {
-  @include large-text();
+  @include large-text;
 
   margin-top: 20px;
   margin-bottom: 20px;

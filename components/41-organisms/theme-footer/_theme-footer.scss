@@ -2,6 +2,7 @@
 @use '../../00-mixins/mixins' as *;
 @use '../../21-atoms/link/link' as *;
 
+/* stylelint-disable no-descending-specificity */
 .theme-footer {
   margin: 6rem -1rem;
   padding: 0;
@@ -52,7 +53,8 @@
   }
 
   .contact {
-    @include medium-text();
+    @include medium-text;
+
     margin-right: auto;
 
     @include desktop {
@@ -64,7 +66,8 @@
     }
 
     .icon-list {
-      @include medium-text();
+      @include medium-text;
+
       margin: 0;
 
       @include desktop {
@@ -133,6 +136,7 @@
 
   .newsletter {
     @include medium-text;
+
     flex-grow: 1;
     padding: 30px;
 

@@ -4,7 +4,7 @@
 h2,
 .h2,
 %h2 {
-  @include bold-text();
+  @include bold-text;
   @include theme('color', 'color-primary', 'heading-2-color');
 
   & {

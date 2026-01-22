@@ -27,7 +27,11 @@
 @function str-replace($string, $search, $replace: '') {
   $index: string.index($string, $search);
 
-  @return if($index, string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace), $string);
+  @if ($index) {
+    @return string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
+  }
+
+  @return $string;
 }
 
 ///  Helper function to get a border radius.
@@ -63,8 +67,8 @@
 @mixin clearfix() {
   &::before,
   &::after {
-    display: table; // 2
     content: ' '; // 1
+    display: table; // 2
   }
 
   &::after {
@@ -110,7 +114,7 @@
 ///
 @mixin no-link-style() {
   a {
-    text-decoration: none !important; // sass-lint:disable-line no-important
+    text-decoration: none !important; // stylelint-disable-line declaration-no-important
   }
 }
 
@@ -180,11 +184,19 @@
   $minus: string.slice($value, 1, 1) == '-';
   $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
 
-  @for $i from if($minus, 2, 1) through string.length($value) {
+  $start: 1;
+  @if ($minus) {
+    $start: 2;
+  }
+  @for $i from $start through string.length($value) {
     $character: string.slice($value, $i, $i);
 
     @if not (list.index(map.keys($numbers), $character) or $character == '.') {
-      @return to-length(if($minus, -$result, $result), string.slice($value, $i));
+      $length: $result;
+      @if ($minus) {
+        $length: -$length;
+      }
+      @return to-length($length, string.slice($value, $i));
     }
 
     @if $character == '.' {
@@ -199,7 +211,11 @@
     }
   }
 
-  @return if($minus, -$result, $result);
+  @if ($minus) {
+    @return -$result;
+  }
+
+  @return $result;
 }
 
 ///

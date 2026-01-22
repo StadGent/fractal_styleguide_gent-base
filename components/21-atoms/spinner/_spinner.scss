@@ -9,10 +9,10 @@
   div {
     @include spot-image('spinner', 3rem);
 
-    text-indent: 200%;
-    white-space: nowrap;
     overflow: hidden;
     animation: spin 2s cubic-bezier(.75, .25, .25, .75) infinite;
+    text-indent: 200%;
+    white-space: nowrap;
   }
 }
 

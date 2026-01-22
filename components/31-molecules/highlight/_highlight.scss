@@ -15,9 +15,7 @@
       }
     }
 
-    & {
-      padding: 30px;
-    }
+    padding: 30px;
 
     @include tablet {
       padding: 60px;
@@ -26,12 +24,10 @@
     & > i {
       @include theme('color', 'color-tertiary', 'highlight-icon-color');
 
-      & {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        vertical-align: top;
-      }
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      vertical-align: top;
 
       &::before {
         display: block;

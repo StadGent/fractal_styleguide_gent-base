@@ -4,6 +4,7 @@
 .table-of-contents {
   @include theme('background-color', 'color-tertiary-light', 'table-of-contents-background-color');
   @include medium-text;
+
   padding: 1.5rem;
   container-type: inline-size;
 
@@ -14,7 +15,8 @@
 
   ul {
     // Override general bigger list style.
-    @include medium-text();
+    @include medium-text;
+
     margin: 0;
     columns: 1;
     column-gap: 45px;

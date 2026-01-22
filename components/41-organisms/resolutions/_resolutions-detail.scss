@@ -2,35 +2,34 @@
 @use '../../00-mixins/mixins' as *;
 @use '../../11-base/fonts/icons' as *;
 
-// sass-lint:disable placeholder-in-extend
 .resolutions-detail {
   display: grid;
   position: relative;
+  grid-auto-rows: auto;
+  grid-column-gap: 1rem;
+  grid-template-columns: 1fr;
   margin: 0 0 .8rem;
   padding: .8rem 1rem;
   border-radius: .375rem;
   background-color: #fff;
   line-height: 1.75;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-  grid-column-gap: 1rem;
 
   @include tablet {
     grid-template-columns: 1fr minmax(auto, 6rem);
   }
 
   &__title {
+    grid-row: 1;
     margin-bottom: .2rem;
     font-size: .9rem;
-    grid-row: 1;
   }
 
   &__link {
     border: 0;
 
     &::before {
-      position: absolute;
       content: '';
+      position: absolute;
       z-index: 1;
       inset: 0;
     }
@@ -57,12 +56,12 @@
       margin-inline-end: .7em;
 
       &::after {
+        content: "";
         position: absolute;
         top: .2rem;
         right: -.5em;
         bottom: .2rem;
-        border-right: thin solid currentColor;
-        content: "";
+        border-right: thin solid currentcolor;
       }
     }
   }
@@ -79,11 +78,10 @@
     justify-self: start;
 
     @include tablet {
-      align-self: start;
-      margin: 0;
-      justify-self: end;
-      grid-row: 1;
       grid-column: 2 / -1;
+      grid-row: 1;
+      place-self: start end;
+      margin: 0;
     }
 
     &::before {
@@ -95,19 +93,15 @@
     &--true {
       @include icon(checkmark-circle);
 
-      & {
-        background-color: coloring('green', -4);
-        color: coloring('green', +2);
-      }
+      background-color: coloring('green', -4);
+      color: coloring('green', +2);
     }
 
     &--false {
       @include icon(cross);
 
-      & {
-        background-color: coloring('red', -4);
-        color: coloring('red', +2);
-      }
+      background-color: coloring('red', -4);
+      color: coloring('red', +2);
     }
   }
 }

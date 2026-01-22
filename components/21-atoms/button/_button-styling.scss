@@ -20,7 +20,8 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-small {
-  @include medium-text();
+  @include medium-text;
+
   padding: 4px 10px;
   line-height: 175%;
 }
@@ -34,7 +35,8 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-medium {
-  @include medium-text();
+  @include medium-text;
+
   line-height: 175%;
 }
 
@@ -47,7 +49,8 @@
 /// @author Gert-Jan Meire
 ///
 @mixin button-large {
-  @include large-text();
+  @include large-text;
+
   padding: 10px 20px;
   line-height: 177.778%;
 
@@ -66,7 +69,7 @@
 /// @author Thomas De Vriese
 ///
 @mixin button-extra-large {
-  @include large-text();
+  @include large-text;
 
   padding: 25px 26px;
   line-height: 177.778%;
@@ -86,8 +89,8 @@
 /// @require color
 ///
 @mixin button-disabled {
-  @include theme('color', 'color-zero');
-  @include theme('background-color', 'color-zero');
+  // @include theme('color', 'color-zero');
+  // @include theme('background-color', 'color-zero');
 
   & {
     border: 0;
@@ -98,9 +101,7 @@
     @include theme('color', 'color-zero');
     @include theme('background-color', 'color-zero');
 
-    & {
-      cursor: not-allowed;
-    }
+    cursor: not-allowed;
   }
 }
 
@@ -227,5 +228,5 @@ input[type="button"] {
   @include button;
   @include button-hover;
 
-  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 }

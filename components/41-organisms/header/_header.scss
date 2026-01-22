@@ -53,14 +53,14 @@ header.header {
         margin-bottom: 0;
       }
 
-      input[type=submit],
-      button[type=submit] {
+      input[type="submit"],
+      button[type="submit"] {
         max-width: 0;
         padding-right: 0;
         padding-left: 0;
         transition: opacity .2s ease-in-out, max-width .2s ease-in-out, padding .2s ease-in-out, background-size .3s;
-        box-shadow: none;
         opacity: 0;
+        box-shadow: none;
 
         &:focus {
           max-width: 9999px;
@@ -70,8 +70,8 @@ header.header {
         }
       }
 
-      input[type=search],
-      input[type=text] {
+      input[type="search"],
+      input[type="text"] {
         flex: 0 1 auto;
         width: 100%;
         min-width: 0;
@@ -88,8 +88,8 @@ header.header {
           max-width: 440px;
           margin: 0 0 0 8px;
 
-          ~ input[type=submit],
-          ~ button[type=submit] {
+          ~ input[type="submit"],
+          ~ button[type="submit"] {
             max-width: 9999px;
             padding-right: 15px;
             padding-left: 15px;
@@ -111,10 +111,10 @@ header.header {
       min-width: 44px;
       max-width: calc(16px + 32px);
       height: 44px;
+      overflow: hidden;
       border-bottom: 0;
       background: svg-as-background('search', coloring('white'), 24, 24) no-repeat left 10px center;
       text-indent: -9999px;
-      overflow: hidden;
 
       @include tablet {
         display: none;
@@ -144,9 +144,7 @@ header.header {
         margin-left: 0;
       }
 
-      & {
-        line-height: 1;
-      }
+      line-height: 1;
     }
   }
 
@@ -158,10 +156,8 @@ header.header {
       display: none;
     }
 
-    & {
-      margin: 16px 0 8px;
-      font-size: .9rem;
-    }
+    margin: 16px 0 8px;
+    font-size: .9rem;
   }
 
   &--menu > .content-container {

@@ -23,9 +23,9 @@
 
   display: inline-block;
   position: relative;
+  z-index: 1;
   width: fit-content;
   padding: 2px 10px;
-  z-index: 1;
 
   @if $v-position == bottom {
     margin-bottom: $height;
@@ -39,13 +39,13 @@
       background-size: 100%;
     }
 
+    content: '';
     position: absolute;
     // Correct position with 1 pixel to avoid white line in some browsers.
     #{$v-position}: -$height + 1px;
     #{$h-position}: 0;
     width: $width;
     height: $height;
-    content: '';
     @if $v-position == top {
       transform: rotate(180deg);
     }
