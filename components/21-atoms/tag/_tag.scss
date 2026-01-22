@@ -3,7 +3,7 @@
 
 .tag {
   @include theme('background-color', 'color-secondary', 'tag-background-color');
-  @include medium-text();
+  @include medium-text;
 
   display: inline-flex;
   align-items: center;
@@ -40,13 +40,13 @@
 
 a.tag {
   @include theme('color', 'color-zero', 'tag-color');
-  @include normal-text();
+  @include normal-text;
 
   padding: 8px 15px;
   transition: background-color .2s ease-in-out;
   border: 0;
 
-  &:not([class*=icon])::before {
+  &:not([class*="icon"])::before {
     margin-left: 5px;
   }
 
@@ -60,7 +60,7 @@ a.tag {
 }
 
 span.tag {
-  @include small-text();
+  @include small-text;
 
   height: 30px;
   padding-right: 10px;

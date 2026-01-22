@@ -1,12 +1,14 @@
 @use '../../00-settings/settings' as *;
 @use '../../00-mixins/mixins' as *;
 
+/* stylelint-disable no-descending-specificity, max-nesting-depth */
+
 $timeline-border: 6px;
 $timeline-m-left-padding: 35px;
 $timeline-m-right-padding: 30px;
 $timeline-dd-space-between-mobile: 60px;
 $timeline-dd-space-between: 90px;
-$timeline-dt-left-padding: 0px; // sass-lint:disable-line zero-unit
+$timeline-dt-left-padding: 0px;
 $timeline-dt-right-padding: 112px;
 
 $roadmap-img-mobile-size: 120px;
@@ -29,12 +31,12 @@ dl.timeline {
     // Timeline-slot title styling.
     &-title {
       position: relative;
+      z-index: 2;
       width: 100%;
       margin: 0;
       border: 0;
       background: transparent;
       line-height: 36px;
-      z-index: 2;
 
       button {
         width: 100%;
@@ -49,12 +51,12 @@ dl.timeline {
           padding-left: 55px;
 
           &::after {
+            content: '';
+            z-index: 0;
             right: 100%;
             width: 60px;
             height: $timeline-border;
             background-color: coloring(cyan-pastel);
-            content: '';
-            z-index: 0;
           }
         }
 
@@ -66,13 +68,13 @@ dl.timeline {
         // +/- icon
         &::before {
           display: flex;
+          z-index: 1;
           left: 0;
           align-items: center;
           min-width: 36px;
           min-height: 36px;
           font-size: 1.2rem;
           line-height: 1.54rem;
-          z-index: 1;
         }
       }
     }
@@ -91,7 +93,6 @@ dl.timeline {
     }
 
     &-content {
-
       &__img {
         &:focus,
         &:focus-within {
@@ -100,11 +101,11 @@ dl.timeline {
       }
 
       &:not(.timeline-slot-content__img) {
-        padding-top: calc($gutter-width/2);
+        padding-top: calc($gutter-width / 2);
       }
 
       .content-image {
-        padding-bottom: calc($gutter-width/2);
+        padding-bottom: calc($gutter-width / 2);
 
         @include desktop {
           padding-bottom: 0;
@@ -150,11 +151,8 @@ dl.timeline {
     .item {
       display: grid;
       position: relative;
-      grid-template-areas:
-      "title"
-      "left";
-      grid-template-rows: auto auto;
-      grid-template-columns: 1fr;
+      grid-template:
+      "title" auto "left" auto / 1fr;
 
       @include desktop {
         grid-template-areas:
@@ -170,7 +168,7 @@ dl.timeline {
         width: 100%;
         max-width: none;
         margin: 0;
-        padding-right: calc(#{$gutter-width*.5});
+        padding-right: calc(#{$gutter-width * .5});
         padding-bottom: $timeline-dd-space-between-mobile;
         padding-left: calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
 
@@ -181,13 +179,13 @@ dl.timeline {
         &::after {
           @include theme('border-color', 'color-tertiary-pastel', 'timeline-line-color');
 
+          content: '';
           position: absolute;
+          z-index: 0;
           top: 0;
           bottom: 0;
           left: $timeline-m-left-padding;
           border-left: $timeline-border solid;
-          content: '';
-          z-index: 0;
 
           @include desktop {
             left: calc(#{$timeline-dt-left-padding} - #{$timeline-border} / 2);
@@ -211,19 +209,19 @@ dl.timeline {
           // Fix to add whitespace to the video top and bottom areas.
           &::before,
           &::after {
+            content: '';
             position: absolute;
+            z-index: z('timeline', 'video', 'background');
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            content: '';
-            z-index: z('timeline', 'video', 'background');
           }
 
           .video {
             position: relative;
-            border: 0;
             z-index: z('timeline', 'video', 'player');
+            border: 0;
 
             .audio-description {
               min-height: 40px;
@@ -256,9 +254,9 @@ dl.timeline {
         &.item--right {
           .item__image-desktop {
             @include desktop {
-              padding-right: 66px;
-              padding-left: calc(#{$gutter-width*.5});
               grid-area: left;
+              padding-right: 66px;
+              padding-left: calc(#{$gutter-width * .5});
 
               &::after {
                 display: none;
@@ -268,9 +266,9 @@ dl.timeline {
 
           .item__content {
             @include desktop {
-              padding-right: calc(#{$gutter-width*.5});
-              padding-left: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
               grid-area: right;
+              padding-right: calc(#{$gutter-width * .5});
+              padding-left: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
             }
           }
         }
@@ -279,23 +277,23 @@ dl.timeline {
         &.item--left {
           .item__image-desktop {
             @include desktop {
-              padding-right: calc(#{$gutter-width*.5});
-              padding-left: 66px;
               grid-area: right;
+              padding-right: calc(#{$gutter-width * .5});
+              padding-left: 66px;
             }
           }
 
           .item__content {
             @include desktop {
-              padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
-              padding-left: calc(#{$gutter-width*.5});
               grid-area: left;
+              padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+              padding-left: calc(#{$gutter-width * .5});
 
               .timeline-slot-title {
                 &::after {
                   @include desktop {
                     right: unset;
-                    left: calc(100% + $timeline-dt-right-padding - $timeline-border/2);
+                    left: calc(100% + $timeline-dt-right-padding - $timeline-border / 2);
                   }
                 }
 
@@ -337,9 +335,9 @@ dl.timeline {
       .item {
         & > dd {
           @include desktop {
-            padding-right: calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
-            padding-left: calc(#{$gutter-width*.5});
             grid-area: right;
+            padding-right: calc(#{$timeline-m-left-padding} + #{$timeline-m-right-padding});
+            padding-left: calc(#{$gutter-width * .5});
           }
         }
 
@@ -348,9 +346,9 @@ dl.timeline {
         &.item--left {
           .item__image-desktop {
             @include desktop {
-              padding-right: 66px;
-              padding-left: calc(#{$gutter-width*.5});
               grid-area: left;
+              padding-right: 66px;
+              padding-left: calc(#{$gutter-width * .5});
 
               &::after {
                 display: none;
@@ -360,9 +358,9 @@ dl.timeline {
 
           .item__content {
             @include desktop {
-              padding-right: calc(#{$gutter-width*.5});
-              padding-left: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
               grid-area: right;
+              padding-right: calc(#{$gutter-width * .5});
+              padding-left: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
             }
           }
         }
@@ -371,17 +369,17 @@ dl.timeline {
         &.item--right {
           .item__image-desktop {
             @include desktop {
-              padding-right: calc(#{$gutter-width*.5});
-              padding-left: 66px;
               grid-area: right;
+              padding-right: calc(#{$gutter-width * .5});
+              padding-left: 66px;
             }
           }
 
           .item__content {
             @include desktop {
-              padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
-              padding-left: calc(#{$gutter-width*.5});
               grid-area: left;
+              padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
+              padding-left: calc(#{$gutter-width * .5});
 
               .timeline-slot-title {
                 button {
@@ -425,23 +423,23 @@ dl.timeline {
           padding-bottom: 0;
 
           &::after {
-            bottom: calc(100% - $gutter-width*.5);
+            bottom: calc(100% - $gutter-width * .5);
           }
 
           .timeline-slot-title {
             &::after {
               @include theme('border-color', 'color-tertiary-pastel', 'timeline-line-color');
 
+              content: '';
               position: absolute;
+              z-index: 0;
               top: 0;
               right: calc(100% + 24px);
               bottom: 50%;
               border-left: $timeline-border solid;
-              content: '';
-              z-index: 0;
 
               @include desktop {
-                right: calc(100% + $timeline-dt-right-padding - $timeline-border/2);
+                right: calc(100% + $timeline-dt-right-padding - $timeline-border / 2);
               }
             }
           }
@@ -450,10 +448,10 @@ dl.timeline {
         &:first-of-type {
           & > dd {
             &::after {
-              bottom: calc(100% - #{$timeline-dd-space-between-mobile + $gutter-width*.5});
+              bottom: calc(100% - #{$timeline-dd-space-between-mobile + $gutter-width * .5});
 
               @include desktop {
-                bottom: calc(100% - #{$timeline-dd-space-between + $gutter-width*.5});
+                bottom: calc(100% - #{$timeline-dd-space-between + $gutter-width * .5});
               }
             }
           }
@@ -493,8 +491,10 @@ dl.roadmap {
       @include theme('background-color', 'color-secondary', 'timeline-dt-bg-color');
       @include bold-text;
 
+      content: counter(item);
       display: flex;
       position: absolute;
+      z-index: 2;
       top: 30px;
       left: 0;
       align-items: center;
@@ -504,10 +504,8 @@ dl.roadmap {
       border-radius: 50%;
       font-size: 1.2rem;
       line-height: 130%;
-      content: counter(item);
-      z-index: 2;
-      aspect-ratio: 1 / 1;
       counter-increment: item;
+      aspect-ratio: 1 / 1;
 
       @include desktop {
         top: 50px;
@@ -521,13 +519,13 @@ dl.roadmap {
     &::after {
       @include theme('background-color', 'color-tertiary-pastel', 'timeline-line-color');
 
+      content: '';
       position: absolute;
+      z-index: 1;
       top: 49px;
       left: 22px;
       width: 6px;
       height: calc(100% - 49px);
-      content: '';
-      z-index: 1;
 
       @include desktop {
         top: 69px;

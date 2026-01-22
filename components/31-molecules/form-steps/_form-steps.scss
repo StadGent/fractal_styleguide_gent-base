@@ -2,14 +2,16 @@
 @use '../../00-mixins/mixins' as *;
 @use '../../11-base/fonts/icons' as *;
 
+/* stylelint-disable no-descending-specificity, max-nesting-depth */
+
 .form-steps {
   ol.form-steps-list {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     padding: 20px 20px 5px;
-    counter-reset: item;
     list-style-type: none;
+    counter-reset: item;
 
     @include desktop-and-below {
       align-items: center;
@@ -27,19 +29,19 @@
         margin-bottom: 0;
       }
 
-      &:not(:first-child):not(:last-child):not(.active):not(.active + li) {
+      &:not(:first-child, :last-child, .active, .active + li) {
         @include desktop-and-below {
+          // also hide from screenreaders
+          visibility: hidden;
           // clip
           position: absolute;
           width: 1px;
           height: 1px;
           margin: -1px;
           padding: 0;
-          border: 0;
           overflow: hidden;
-          // also hide from screenreaders
-          visibility: hidden;
           clip: rect(0 0 0 0);
+          border: 0;
         }
       }
 
@@ -51,9 +53,9 @@
           height: 1px;
           margin: -1px;
           padding: 0;
-          border: 0;
           overflow: hidden;
           clip: rect(0 0 0 0);
+          border: 0;
         }
       }
 
@@ -61,11 +63,9 @@
         @include reset-link-background;
         @include theme('color', 'color-zero');
 
-        & {
-          display: inline-block;
-          line-height: 175%;
-          vertical-align: middle;
-        }
+        display: inline-block;
+        line-height: 175%;
+        vertical-align: middle;
 
         &:hover,
         &:focus {
@@ -108,7 +108,7 @@
           @include theme('background-color', 'color-primary', 'form-step--active-background-color');
         }
 
-        & + li:not(:nth-last-child(2)):not(:last-child)::after {
+        & + li:not(:nth-last-child(2), :last-child)::after {
           @include desktop-and-below {
             content: '\2026';
           }
@@ -117,9 +117,7 @@
         > span::before {
           @include theme('border-color', 'color-primary', 'form-step--active-border-color');
 
-          & {
-            background-color: transparent;
-          }
+          background-color: transparent;
         }
       }
 
@@ -129,11 +127,9 @@
         &::before {
           @include theme('background-color', 'color-success-pastel');
 
-          & {
-            display: inline-block;
-            line-height: 30px;
-            vertical-align: middle;
-          }
+          display: inline-block;
+          line-height: 30px;
+          vertical-align: middle;
         }
 
         a:hover,
@@ -158,14 +154,12 @@
       li:not(:last-child)::after {
         @include theme('border-color', 'color-tertiary-pastel', 'form-step--active-border-color');
 
-        & {
-          display: inline-block;
-          width: 15px;
-          margin: 0 15px;
-          border-bottom: 2px solid;
-          content: '';
-          vertical-align: middle;
-        }
+        content: '';
+        display: inline-block;
+        width: 15px;
+        margin: 0 15px;
+        border-bottom: 2px solid;
+        vertical-align: middle;
       }
     }
   }
@@ -182,14 +176,12 @@
           &:not(:last-child)::after {
             @include theme('border-color', 'color-tertiary-pastel', 'form-step--active-border-color');
 
-            & {
-              display: block;
-              width: 15px;
-              height: 20px;
-              margin: 15px 0 0;
-              border-right: 2px solid;
-              content: '';
-            }
+            content: '';
+            display: block;
+            width: 15px;
+            height: 20px;
+            margin: 15px 0 0;
+            border-right: 2px solid;
           }
         }
       }

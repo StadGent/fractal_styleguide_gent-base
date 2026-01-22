@@ -3,10 +3,11 @@
 @use '../../21-atoms/heading/heading' as *;
 @use '../../21-atoms/list/list' as *;
 
+/* stylelint-disable no-descending-specificity */
 .filter {
   .result-section {
     .filter-page-label {
-      @include semi-bold-text();
+      @include semi-bold-text;
     }
 
     .result__show-filters {
@@ -75,10 +76,10 @@
 .sidebar.filter-section {
   @include desktop {
     position: static;
-    height: auto;
-    box-shadow: none;
-    overflow: visible;
     z-index: auto;
+    height: auto;
+    overflow: visible;
+    box-shadow: none;
   }
 
   main & {
@@ -91,8 +92,8 @@
 
   &.visible {
     @include breakpoint(max-width $bp-desktop) {
-      padding: 0;
       visibility: visible;
+      padding: 0;
 
       > .modal-inner > .modal-header {
         display: block;
@@ -113,10 +114,10 @@
 
     @include desktop {
       position: relative;
+      z-index: auto;
       top: 0;
       left: 0;
       transform: none;
-      z-index: auto;
       filter: none;
     }
 
@@ -154,9 +155,7 @@
       @extend %h4;
       @include theme('color', 'color-primary', 'heading-2-color');
 
-      & {
-        margin-bottom: 16px;
-      }
+      margin-bottom: 16px;
     }
 
     fieldset {

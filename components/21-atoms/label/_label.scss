@@ -3,7 +3,7 @@
 
 .label {
   @include theme('background-color', 'color-none', 'label-background-color');
-  @include small-text();
+  @include small-text;
 
   display: inline-flex;
   align-items: center;

@@ -5,12 +5,11 @@
 .summary-box {
   @include theme('background-color', 'color-secondary-light', 'summary-box-background-color');
 
-  & {
-    padding: 1.5rem;
-  }
+  padding: 1.5rem;
 
   ul.icon-list {
     @include medium-text;
+
     width: 100%;
     margin: 0 0 1rem;
 
@@ -27,6 +26,7 @@
 
     time {
       @include semi-bold-text;
+
       display: block;
     }
 

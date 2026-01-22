@@ -4,14 +4,12 @@
 a.skiplink {
   @include reset-link-background;
 
-  & {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    padding: .5rem 2rem;
-    background-color: coloring('white');
-    z-index: z('skiplink');
-  }
+  position: absolute;
+  z-index: z('skiplink');
+  bottom: 100%;
+  left: 0;
+  padding: .5rem 2rem;
+  background-color: coloring('white');
 
   &:focus {
     top: 0;

@@ -16,8 +16,8 @@ input[type="url"] {
   &::placeholder {
     @include theme('color', 'help-text-color');
 
-    font-style: initial;
     opacity: .5;
+    font-style: initial;
   }
 }
 
@@ -37,33 +37,29 @@ input[type="password"] {
   }
 }
 
-input[type=date] {
+input[type="date"] {
   padding-right: 0;
   // Fixes vertical alignment on mobile safari.
   line-height: 2.4rem;
 
-  &::-webkit-calendar-picker-indicator { // sass-lint:disable-line no-vendor-prefixes
+  &::-webkit-calendar-picker-indicator { // stylelint-disable-line selector-no-vendor-prefix
     @include theme('background-color', 'button-secondary-background');
 
-    & {
-      width: 1.2rem;
-      height: 1.2rem;
-      padding: .5rem;
-      background-image: svg-as-background('calendar', coloring('gray'), 30, 30);
-    }
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: .5rem;
+    background-image: svg-as-background('calendar', coloring('gray'), 30, 30);
 
     &:hover {
       @include theme('background-color', 'button-secondary-hover-background');
 
-      & {
-        cursor: pointer;
-      }
+      cursor: pointer;
     }
   }
 
-  &::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
+  &::-webkit-inner-spin-button { // stylelint-disable-line selector-no-vendor-prefix
     margin-left: .5rem;
-    -webkit-appearance: none;  // sass-lint:disable-line no-vendor-prefixes
+    -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   }
 }
 

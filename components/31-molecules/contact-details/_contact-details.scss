@@ -8,8 +8,7 @@ $avatar-width: 280px;
   &--with-image {
     .contact-details-columns {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       justify-content: flex-start;
     }
 
@@ -19,6 +18,7 @@ $avatar-width: 280px;
 
       @include tablet {
         @include col(6);
+
         margin-right: $gutter-width;
 
         &:last-of-type:not(:first-of-type) {
@@ -43,7 +43,7 @@ $avatar-width: 280px;
   }
 
   ul {
-    @include medium-text();
+    @include medium-text;
 
     max-width: 630px;
     margin-bottom: 45px;

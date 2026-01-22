@@ -2,8 +2,7 @@
 
 .form-actions {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   align-items: flex-start;
   margin: 0 -.6rem;
 

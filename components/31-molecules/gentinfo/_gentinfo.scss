@@ -6,6 +6,7 @@ $gentinfo-icon-size: 8rem;
 
 .gentinfo {
   @include theme('background-color', 'color-info-light', 'gentinfo-background');
+
   margin: 3rem 0;
   padding: 2rem 1rem;
 
@@ -20,6 +21,7 @@ $gentinfo-icon-size: 8rem;
 
     &::before {
       @include spot-image('gentinfo', $gentinfo-icon-size);
+
       margin: 0 auto 1.5rem;
     }
 

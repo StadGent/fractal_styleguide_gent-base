@@ -19,13 +19,13 @@
 
   .accordion--content {
     position: absolute;
+    z-index: z('language-switcher');
     top: 100%;
     right: 0;
     margin-top: .5rem;
     transition: max-height .3s ease-in-out;
     border-radius: border-radius('radius-1');
     background: coloring('white');
-    z-index: z('language-switcher');
   }
 
   .content {

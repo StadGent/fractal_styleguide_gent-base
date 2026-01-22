@@ -1,10 +1,12 @@
 @use '../../00-settings/settings' as *;
 @use '../../00-mixins/mixins' as *;
 
+/* stylelint-disable no-descending-specificity */
+
 // Needed for smooths scrolling on iphone / ipad inside modals.
 // Placing it on .modal is not sufficient for safari.
 * {
-  -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
+  -webkit-overflow-scrolling: touch; // stylelint-disable-line  property-no-vendor-prefix
 }
 
 .modal {
@@ -16,18 +18,13 @@
     animation: fade .2s ease-in-out;
   }
 
-  & {
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    max-height: 100vh;
-    visibility: hidden;
-    z-index: z('modal', 'base');
-    overflow-y: auto;
-  }
+  display: flex;
+  visibility: hidden;
+  position: fixed;
+  z-index: z('modal', 'base');
+  inset: 0;
+  max-height: 100vh;
+  overflow-y: auto;
 
   // states
   &.visible {
@@ -45,15 +42,15 @@
     &.visible > .modal-inner {
       max-height: 80vh;
 
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // sass-lint:disable-line no-vendor-prefixes
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // stylelint-disable-line  property-no-vendor-prefix
         height: 80vh; // IE fix
       }
     }
 
     > .modal-inner {
       > .modal-content {
-        flex-grow: 1;
         z-index: z('modal', 'inner');
+        flex-grow: 1;
         overflow-y: auto;
       }
 
@@ -67,13 +64,13 @@
   &.visible .modal-inner {
     display: flex;
     position: absolute;
+    z-index: z('modal', 'content');
     top: 0;
     left: 0;
     flex-direction: column;
     width: 100%;
     min-height: 100%;
     margin: 0 auto;
-    z-index: z('modal', 'content');
 
     @include tablet {
       right: 0;
@@ -83,9 +80,9 @@
       min-height: 0;
       margin: 10vh auto 0;
       padding-bottom: $gutter-width;
-      opacity: 0;
       animation: fade .2s ease-in-out forwards;
       animation-delay: .1s;
+      opacity: 0;
     }
 
     > * {
@@ -97,8 +94,8 @@
       }
 
       &:last-of-type {
-        border-bottom-left-radius: border-radius('radius-2');
         border-bottom-right-radius: border-radius('radius-2');
+        border-bottom-left-radius: border-radius('radius-2');
       }
     }
   }
@@ -142,14 +139,12 @@
     @include theme('border-color', 'color-primary-light', 'modal-action-border-bottom');
     @include theme('background-color', 'color-none', 'modal-action-background-color');
 
-    & {
-      display: flex;
-      flex-shrink: 0;
-      align-items: center;
-      width: 100%;
-      padding: 30px 20px;
-      z-index: z('modal', 'actions');
-    }
+    display: flex;
+    z-index: z('modal', 'actions');
+    flex-shrink: 0;
+    align-items: center;
+    width: 100%;
+    padding: 30px 20px;
 
     @include tablet {
       position: relative;
@@ -164,12 +159,12 @@
   .modal-overlay {
     display: none;
     position: fixed;
+    z-index: z('modal', 'overlay');
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: .9;
-    z-index: z('modal', 'overlay');
 
     &,
     &:hover,

@@ -4,9 +4,9 @@
 .card {
   margin: 1.2rem 0;
   border-radius: border-radius('radius-1');
+  box-shadow: 0 .1rem .6rem 0 rgba(35, 51, 58, .25);
   // override li line-height
   line-height: 1.75;
-  box-shadow: 0 .1rem .6rem 0 rgba(35, 51, 58, .25);
 
   > * {
     padding: 1rem;
@@ -14,6 +14,7 @@
 
   .actions {
     @include theme('border-color', 'color-primary-light', 'modal-action-border-bottom');
+
     border-top: 2px solid;
   }
 }

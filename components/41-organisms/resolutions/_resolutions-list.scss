@@ -2,10 +2,9 @@
 @use '../../00-mixins/mixins' as *;
 @use '../../21-atoms/list/list' as *;
 
-// sass-lint:disable no-important
 .resolutions-list {
   .highlight__inner {
-    padding-right: 2rem !important;
+    padding-right: 2rem !important; // stylelint-disable-line declaration-no-important
   }
 
   h2 {

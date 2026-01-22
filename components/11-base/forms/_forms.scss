@@ -2,6 +2,8 @@
 @use '../../00-mixins/mixins' as *;
 @use '../../11-base/fonts/icons' as *;
 
+/* stylelint-disable no-descending-specificity */
+
 ////
 /// This file defines general form input fields styling.
 ///
@@ -95,28 +97,33 @@ $field-icon-padding: 50px;
     }
   }
 
-  &::-webkit-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+  &::-webkit-input-placeholder { // stylelint-disable-line selector-no-vendor-prefix
     @include theme("color", "color-zero", "fields-placeholder-color");
+
     font-weight: normal;
   }
 
-  &:-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+  &:-moz-placeholder { // stylelint-disable-line selector-no-vendor-prefix
     @include theme("color", "color-zero", "fields-placeholder-color");
+
     font-weight: normal;
   }
 
-  &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+  &::-moz-placeholder { // stylelint-disable-line selector-no-vendor-prefix
     @include theme("color", "color-zero", "fields-placeholder-color");
+
     font-weight: normal;
   }
 
-  &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+  &:-ms-input-placeholder { // stylelint-disable-line selector-no-vendor-prefix
     @include theme("color", "color-zero", "fields-placeholder-color");
+
     font-weight: normal;
   }
 
   &::placeholder {
     @include theme("color", "color-zero", "fields-placeholder-color");
+
     font-weight: normal;
   }
 
@@ -154,15 +161,15 @@ $field-icon-padding: 50px;
     top: 0;
     left: 0;
     padding-left: 28px;
+    overflow: unset;
     font-weight: normal;
     line-height: 28px;
-    overflow: unset;
 
     &::before,
     &::after {
+      content: "";
       position: absolute;
       top: 3px;
-      content: "";
     }
 
     &::before {
@@ -268,25 +275,26 @@ $field-icon-padding: 50px;
     &:disabled {
       + label {
         color: coloring('gray', -3);
-        font-weight: normal !important; // sass-lint:disable-line no-important
+        font-weight: normal !important; // stylelint-disable-line declaration-no-important
         cursor: not-allowed;
 
         &::before {
           border-color: coloring(
             "gray",
             -5
-          ) !important; // sass-lint:disable-line no-important
+          ) !important; // stylelint-disable-line declaration-no-important
+
           background: coloring(
             "gray",
             -5
-          ) !important; // sass-lint:disable-line no-important
+          ) !important; // stylelint-disable-line declaration-no-important
         }
 
         &::after {
           color: coloring(
             "gray",
             -2
-          ) !important; // sass-lint:disable-line no-important
+          ) !important; // stylelint-disable-line declaration-no-important
 
         }
       }
@@ -303,6 +311,8 @@ $field-icon-padding: 50px;
           @include icon("checkmark-checkbox", "after");
 
           &::after {
+            @include theme("color", "color-primary", "checkbox-checkmark-color");
+
             padding-left: 1px;
             font-size: 1.1rem;
             line-height: 1;
@@ -320,10 +330,6 @@ $field-icon-padding: 50px;
             "color-primary",
             "checkbox-border-color-checked"
           );
-        }
-
-        + label::after {
-          @include theme("color", "color-primary", "checkbox-checkmark-color");
         }
       }
     }
@@ -349,6 +355,7 @@ $field-icon-padding: 50px;
 
         + label::after {
           @include theme("background-color", "color-primary", "radio-checkmark-color");
+
           content: "";
         }
 
@@ -358,7 +365,7 @@ $field-icon-padding: 50px;
               background-color: coloring(
                 "gray",
                 -2
-              ) !important; // sass-lint:disable-line no-important
+              ) !important; // stylelint-disable-line declaration-no-important
             }
           }
         }

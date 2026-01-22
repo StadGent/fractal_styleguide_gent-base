@@ -27,7 +27,9 @@ module.exports = {
       'orange-light': '#fff2e5',
       'green': '#2c8726',
       'green-pastel': '#8ee088',
-      'green-light': '#e1fde1'
+      'green-light': '#e1fde1',
+      'green-forest': '#246420',
+      'green-forest-light': '#b5e6b2'
     }
   }
 };

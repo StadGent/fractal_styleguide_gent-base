@@ -3,7 +3,6 @@
 @use '../../11-base/fonts/icons' as *;
 
 .checkbox-filter-dynamic {
-
   .modal-preview,
   .accordion-preview,
   .checkbox-accordion {
@@ -17,17 +16,16 @@
       // Adjust for checkbox focus outline.
       margin: -4px -4px 0;
       padding: 4px 4px 0;
-
-      transition: max-height .5s ease-in-out;
       overflow: hidden;
+      transition: max-height .5s ease-in-out;
     }
 
     .accordion--button {
-      &[aria-expanded=false] {
+      &[aria-expanded="false"] {
         @include icon(chevron-down);
       }
 
-      &[aria-expanded=true] {
+      &[aria-expanded="true"] {
         @include icon(chevron-up);
       }
     }

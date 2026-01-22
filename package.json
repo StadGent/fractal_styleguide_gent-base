@@ -8,36 +8,42 @@
     "@frctl/fractal": "^1.5.15",
     "@frctl/twig": "^1.2.13",
     "chromedriver": "^142.0.0",
-    "cssnano": "^5.1.14",
+    "cssnano": "^7.1.2",
     "fs-extra": "^11.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^10.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-bump": "^3.2.0",
     "gulp-cached": "^1.1.1",
     "gulp-eslint": "^6.0.0",
     "gulp-iconfont": "^11.0.1",
     "gulp-iconfont-css": "^3.0.0",
-    "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^8.0.0",
+    "gulp-imagemin": "^9.2.0",
     "gulp-inject": "^5.0.5",
-    "gulp-postcss": "^9.0.1",
+    "gulp-postcss": "^10.0.0",
     "gulp-real-favicon": "^0.3.2",
     "gulp-recolor-svg": "^1.0.3",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^6.0.1",
     "gulp-sass-glob": "^1.1.0",
-    "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-stylelint-esm": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "husky": "^8.0.3",
-    "imagemin-pngquant": "^9.0.2",
+    "husky": "^9.1.7",
+    "imagemin-pngquant": "^10.0.0",
     "js-yaml": "^4.1.0",
     "markdown-it": "^14.1.0",
     "npm-cli-login": "^1.0.0",
     "sassdoc": "^2.7.4",
     "stream-combiner2": "^1.1.1",
-    "yargs": "^17.6.2"
+    "stylelint": "^16.26.1",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.14.0",
+    "swiper": "^12.0.3",
+    "ttf2woff2": "^8.0.0",
+    "yargs": "^18.0.0"
   },
   "authors": [
     "Jeroen Goossens",
@@ -62,16 +68,17 @@
     "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
-    "selenium-webdriver": "4.24.1",
-    "set-value": "^4.1.0",
-    "swiper": "^11.2.6",
-    "ttf2woff2": "^5.0.0"
+    "selenium-webdriver": "^4.40.0",
+    "set-value": "^4.1.0"
   },
   "engines": {
     "node": ">=10.14.2"
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
+    "lint:css": "stylelint \"components/**/*.scss\"",
+    "lint:css:fix": "stylelint \"components/**/*.scss\" --fix",
+    "lint:css:watch": "chokidar \"components/**/*.scss\" -c \"npm run lint:css\"",
     "start": "gulp watch",
     "build": "gulp build",
     "test": "gulp validate && gulp axe:input && gulp axe:layout && gulp axe:components"
@@ -94,7 +101,11 @@
   },
   "overrides": {
     "chromedriver": "^142.0.0",
-    "axe-cli": { "chromedriver": "^142.0.0" },
-    "gulp-axe-cli": { "chromedriver": "^142.0.0" }
+    "axe-cli": {
+      "chromedriver": "^142.0.0"
+    },
+    "gulp-axe-cli": {
+      "chromedriver": "^142.0.0"
+    }
   }
 }

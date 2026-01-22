@@ -1,6 +1,8 @@
 @use '../../../00-settings/settings' as *;
 @use '../../../00-mixins/mixins' as *;
 
+/* stylelint-disable no-descending-specificity */
+
 h1,
 h2,
 h3,

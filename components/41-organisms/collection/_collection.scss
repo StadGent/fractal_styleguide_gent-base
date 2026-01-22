@@ -5,8 +5,8 @@
 // Dynamic system with different gutters and items spanning multiple columns.
 // Calculation at the bottom.
 
-ul[class^=grid-] {
-  @include row();
+ul[class^="grid-"] {
+  @include row;
 
   > li {
     width: 100%;
@@ -76,7 +76,7 @@ ul.grid-4 {
   ul.grid-#{$col} {
     > li {
       @include desktop {
-        @include col(calc($grid-columns/$col));
+        @include col(calc($grid-columns / $col));
       }
     }
   }

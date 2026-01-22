@@ -2,6 +2,8 @@
 @use '../../00-mixins/mixins' as *;
 @use '../../11-base/grid/flexbox-grid/mixins/grid-mixins' as *;
 
+/* stylelint-disable no-descending-specificity */
+
 .detail-layout {
   @extend %content-container;
 
@@ -67,6 +69,7 @@
       & + .partner-block,
       & + p {
         @include col(12);
+
         margin-top: -150px;
 
         @include tablet {
@@ -77,10 +80,10 @@
       + .partner-block,
       + p {
         position: relative;
+        z-index: 1;
         max-width: 100%;
         padding: 20px;
         background-color: coloring('white');
-        z-index: 1;
 
         @include tablet {
           padding: 60px;
@@ -233,6 +236,7 @@ aside.bottom {
 
     @include desktop {
       @include col(12);
+
       width: 100%;
 
       // Related teasers box should be wider.
@@ -262,8 +266,6 @@ aside.bottom {
       @include col-offset(2);
     }
 
-    & {
-      padding: 0;
-    }
+    padding: 0;
   }
 }

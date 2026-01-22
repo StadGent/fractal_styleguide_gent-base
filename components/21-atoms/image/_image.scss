@@ -25,17 +25,14 @@ figure {
       @include theme('color', 'color-primary', 'image-spot-shadow');
       $image-icon-svg: svg-icon('image', coloring('cyan'), 70, 70);
 
+      content: "";
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset: 0;
       max-width: 3rem;
       max-height: 3rem;
       margin: auto;
       background-image: svg-url($image-icon-svg);
       background-size: contain;
-      content: "";
 
       @include tablet {
         max-width: 5rem;
@@ -61,16 +58,17 @@ figure {
     &::before {
       @include theme('background-color', 'color-zero-light', 'broken-image-background-color');
 
+      content: "";
       display: block;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      content: "";
     }
 
     &::after {
+      content: "Image could not be loaded:\A" attr(alt);
       display: flex;
       position: absolute;
       top: 50%;
@@ -86,7 +84,6 @@ figure {
       line-height: 1rem;
       text-align: center;
       white-space: pre;
-      content: "Image could not be loaded:\A" attr(alt);
     }
 
     html[lang="nl"] &::after {

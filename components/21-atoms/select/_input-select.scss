@@ -22,6 +22,7 @@ select {
 
       &:hover {
         $button-hover-color: set-themified-property($colors, 'color-tertiary', 'button-secondary-hover-background');
+
         background-image: svg-url($svg-shevron-down), svg-as-background("square", $button-hover-color, 44, 44);
         cursor: pointer;
       }
@@ -37,12 +38,13 @@ select {
     }
   }
 
-  &::-ms-expand { // sass-lint:disable-line no-vendor-prefixes
+  &::-ms-expand { // stylelint-disable-line selector-no-vendor-prefix
     display: none;
   }
 
-  &::-ms-value { // sass-lint:disable-line no-vendor-prefixes
+  &::-ms-value { // stylelint-disable-line selector-no-vendor-prefix
     @include theme('color', 'color-tertiary', 'default-text-color');
+
     background: none; // remove blue background on ie10/ie11 when selected
   }
 }

@@ -35,9 +35,9 @@
 
   .cta-block__content {
     position: relative;
+    z-index: 1;
     top: -20px;
     width: 100%;
-    z-index: 1;
 
     @include phablet {
       top: 20px;
@@ -61,8 +61,8 @@
   }
 
   &.image-none {
-    max-width: 48.5rem;
     z-index: 1;
+    max-width: 48.5rem;
 
     .cta-block__content {
       @include theme-content('color-info-pastel', 'cta-shadow-color') {

@@ -5,10 +5,11 @@
 @use 'css/gentinfo_island';
 @use 'css/social-list';
 
+/* stylelint-disable no-descending-specificity */
 .footer {
   margin: 60px -20px 0;
 
-  @include desktop() {
+  @include desktop {
     margin-top: 280px;
   }
 
@@ -49,10 +50,8 @@
       @include theme('background-color', 'color-tertiary-light', 'footer-background-color');
       @include col(12);
 
-      & {
-        flex: 0 0 auto;
-        padding: 20px 20px 60px;
-      }
+      flex: 0 0 auto;
+      padding: 20px 20px 60px;
 
       // Gentinfo column.
       &:first-of-type {
@@ -75,11 +74,9 @@
         &:first-of-type {
           @include col(12);
 
-          & {
-            margin-top: 0;
-            padding-top: 0;
-            background-color: transparent;
-          }
+          margin-top: 0;
+          padding-top: 0;
+          background-color: transparent;
         }
       }
 
@@ -111,10 +108,8 @@
         &:first-of-type {
           @include col(6);
 
-          & {
-            order: 1;
-            margin-top: 0;
-          }
+          order: 1;
+          margin-top: 0;
         }
       }
 
@@ -159,7 +154,8 @@
     }
 
     ul {
-      @include small-text();
+      @include small-text;
+
       margin: 0;
       list-style: none;
     }
@@ -178,7 +174,8 @@
     }
 
     .partnership {
-      @include small-text();
+      @include small-text;
+
       line-height: 150%;
 
       i.icon-district09 {

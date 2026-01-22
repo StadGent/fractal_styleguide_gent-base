@@ -14,13 +14,14 @@ $span-end: math.percentage(math.div(3, 12));
   max-width: $bp-max-content;
   height: 1rem;
   margin: 0;
-  border: 0;
   overflow: visible;
+  border: 0;
 
   &::before,
   &::after {
     @include theme('background', 'color-none');
 
+    content: '';
     position: absolute;
     top: 0;
     width: 100%;
@@ -28,7 +29,6 @@ $span-end: math.percentage(math.div(3, 12));
     margin-top: 0;
     border-top: 2px solid;
     border-color: transparent;
-    content: '';
   }
 
   &::before {
@@ -97,6 +97,7 @@ $span-end: math.percentage(math.div(3, 12));
 
     &::before,
     &::after {
+      content: '';
       position: absolute;
       top: 0;
       width: 1rem;
@@ -105,7 +106,6 @@ $span-end: math.percentage(math.div(3, 12));
       border-left: 2px solid;
       border-color: transparent;
       background: coloring('white');
-      content: '';
     }
 
     &::before {
@@ -165,6 +165,7 @@ $accolade-width: 2rem;
 $accolade-height: 1rem;
 
 .accolade-inverse {
+  content: '';
   position: absolute;
   width: $accolade-width;
   height: $accolade-height;
@@ -172,7 +173,6 @@ $accolade-height: 1rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  content: '';
 
   &.bottom-left,
   &.bottom-center,
@@ -207,14 +207,14 @@ $accolade-height: 1rem;
   &.left-top,
   &.left-center,
   &.left-bottom {
-    left: -($accolade-height*.5);
+    left: -($accolade-height * .5);
     transform: rotate(90deg);
   }
 
   &.right-top,
   &.right-center,
   &.right-bottom {
-    right: -($accolade-height*.5);
+    right: -($accolade-height * .5);
     transform: rotate(-90deg);
   }
 

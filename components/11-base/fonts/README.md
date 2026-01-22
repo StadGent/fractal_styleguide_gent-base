@@ -24,8 +24,8 @@ In the `_icons.scss` SASS partial you can find all the generated icon font SCSS
 code you need to use an icon in your twig / html templates or in SASS by using
 the `icon` mixin provided.
 
-### Example of using the `icon` mixin to add an icon before an element
+### Example of using the `icon` mixin to add an icon after an element
 
 ```scss
-  @include icon('uEA01-arrow-down', 'after');
+  @include icon('arrow-down', 'after');
 ```

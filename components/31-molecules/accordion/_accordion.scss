@@ -2,6 +2,8 @@
 @use '../../00-mixins/mixins' as *;
 @use '../../11-base/fonts/icons' as *;
 
+/* stylelint-disable no-descending-specificity */
+
 .accordion {
   position: relative;
   z-index: 1;
@@ -11,13 +13,11 @@
     @include extra-large-text;
     @include icon(chevron-down);
 
-    & {
-      position: relative;
-      padding-right: 32px;
-      color: inherit;
-      line-height: 26px;
-      text-align: left;
-    }
+    position: relative;
+    padding-right: 32px;
+    color: inherit;
+    line-height: 26px;
+    text-align: left;
 
     &::before {
       position: absolute;
@@ -27,7 +27,7 @@
       line-height: 1.2;
     }
 
-    &[aria-expanded=true] {
+    &[aria-expanded="true"] {
       &::before {
         transform: scaleY(-1);
       }
@@ -36,8 +36,8 @@
 
   .accordion--content {
     max-height: 0;
-    transition: max-height .75s ease-out;
     overflow: hidden;
+    transition: max-height .75s ease-out;
 
     &.accordion--expanded {
       max-height: 9999px;
@@ -64,9 +64,7 @@ dl.accordion {
     & > li {
       @include theme('border-color', 'color-primary-light', 'accordion-border-color');
 
-      & {
-        border-bottom: 2px solid;
-      }
+      border-bottom: 2px solid;
     }
   }
 
@@ -92,21 +90,19 @@ dl.accordion {
     &::before {
       @include theme('background-color', 'color-tertiary-pastel', 'button-secondary-background');
 
-      & {
-        position: relative;
-        right: auto;
-        left: 0;
-        min-width: 36px;
-        min-height: 36px;
-        margin: 0 15px 0 0;
-        padding: 2.5px 5px;
-        transition: transform .2s ease-out-in-out;
-        font-size: 1.2rem;
-        text-align: left;
-      }
+      position: relative;
+      right: auto;
+      left: 0;
+      min-width: 36px;
+      min-height: 36px;
+      margin: 0 15px 0 0;
+      padding: 2.5px 5px;
+      transition: transform .2s ease-out-in-out;
+      font-size: 1.2rem;
+      text-align: left;
     }
 
-    &[aria-expanded=true] {
+    &[aria-expanded="true"] {
       @include icon(minus);
 
       &::before {
@@ -115,7 +111,7 @@ dl.accordion {
       }
     }
 
-    &[aria-expanded=false] {
+    &[aria-expanded="false"] {
       @include icon(plus);
 
       &::before {
@@ -149,12 +145,10 @@ dl.accordion {
     @include theme('color', 'color-tertiary', 'link-color');
     @include link-background('color-primary', 'color-primary', 'link-underline-color', 'link-hover-background');
 
-    & {
-      width: auto;
-      margin-bottom: 20px;
-      line-height: 120%;
-      vertical-align: middle;
-    }
+    width: auto;
+    margin-bottom: 20px;
+    line-height: 120%;
+    vertical-align: middle;
 
     &::before {
       display: none;
@@ -169,7 +163,7 @@ dl.accordion {
       vertical-align: middle;
     }
 
-    &[aria-expanded=true] {
+    &[aria-expanded="true"] {
       i {
         transform: rotate(180deg);
       }
@@ -178,8 +172,8 @@ dl.accordion {
 
   .accordion--link--content {
     max-height: 0;
-    transition: max-height .75s ease-out;
     overflow: hidden;
+    transition: max-height .75s ease-out;
 
     &.accordion--expanded {
       max-height: 9999px;

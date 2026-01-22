@@ -8,27 +8,27 @@
 
 // Grid classes.
 .row {
-  @include row();
+  @include row;
 }
 
 .row.reverse {
-  @include row-reverse();
+  @include row-reverse;
 }
 
 .row.natural-height {
-  @include row-natural-height();
+  @include row-natural-height;
 }
 
 .row.flex-column {
-  @include row-flex-column();
+  @include row-flex-column;
 }
 
 .col {
-  @include col();
+  @include col;
 }
 
 .col.reverse {
-  @include col-reverse();
+  @include col-reverse;
 }
 
 .first {
@@ -126,27 +126,19 @@
 
   @if $this-prefix == "xs" {
     @include col-factory($this-prefix);
-  }
-
-  @else if $this-prefix == "sm" {
+  } @else if $this-prefix == "sm" {
     @media #{$breakpoint-sm-up} {
       @include col-factory($this-prefix);
     }
-  }
-
-  @else if $this-prefix == "md" {
+  } @else if $this-prefix == "md" {
     @media #{$breakpoint-md-up} {
       @include col-factory($this-prefix);
     }
-  }
-
-  @else if $this-prefix == "lg" {
+  } @else if $this-prefix == "lg" {
     @media #{$breakpoint-lg-up} {
       @include col-factory($this-prefix);
     }
-  }
-
-  @else if $this-prefix == "xl" {
+  } @else if $this-prefix == "xl" {
     @media #{$breakpoint-xl-up} {
       @include col-factory($this-prefix);
     }

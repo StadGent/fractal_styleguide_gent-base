@@ -7,6 +7,8 @@
 
 $link-padding: .2em;
 
+/* stylelint-disable scss/percent-placeholder-pattern */
+
 %a,
 a {
   @include semi-bold-text;
@@ -84,7 +86,7 @@ a {
     }
   }
 
-  &.button:not(.no-icon):not([class^="icon-"]):not([download]) {
+  &.button:not(.no-icon, [class^="icon-"], [download]) {
     &[href^="http://"]:not([href*="gent.be"]),
     &[href^="https://"]:not([href*="gent.be"]) {
       @include button-icon;
@@ -147,7 +149,7 @@ a {
   &[href^="https://"]:not(.no-icon):not(.tag):not([href*="gent.be"]) {
     @include icon(arrow-right-top, after);
 
-    &[download]:not(.button):not(.no-icon) {
+    &[download]:not(.button, .no-icon) {
       @include icon(download, after);
     }
   }
@@ -155,6 +157,7 @@ a {
   &.refresh:not(.no-icon),
   &.back:not(.no-icon) {
     @extend %a-arrow-animation--left;
+
     margin-left: 32px;
     padding-left: 0;
 
@@ -207,7 +210,7 @@ a {
       animation-fill-mode: forwards;
 
       // Animation causes pointer flickering in IE.
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // stylelint-disable-line property-no-vendor-prefix
         animation: none;
       }
     }
@@ -253,7 +256,7 @@ a {
       animation-fill-mode: forwards;
 
       // Animation causes pointer flickering in IE.
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // stylelint-disable-line property-no-vendor-prefix
         animation: none;
       }
     }
@@ -291,7 +294,7 @@ a {
 %a-remove-indicator {
   &[href^="http://"]:not([href*="gent.be"]),
   &[href^="https://"]:not([href*="gent.be"]) {
-    &:not([download]):not(.standalone-link) {
+    &:not([download], .standalone-link) {
       margin-right: 0;
 
       &::after {
