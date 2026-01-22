@@ -68,7 +68,7 @@
     "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
-    "selenium-webdriver": "4.24.1",
+    "selenium-webdriver": "^4.40.0",
     "set-value": "^4.1.0"
   },
   "engines": {

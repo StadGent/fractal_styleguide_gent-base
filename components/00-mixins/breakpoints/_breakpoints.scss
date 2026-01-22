@@ -60,8 +60,14 @@
       // Range like ((min-width 480px) (max-width 767px)).
       $c1: _bp-parse-cond(list.nth($a, 1));
       $c2: _bp-parse-cond(list.nth($a, 2));
-      $min: if(list.nth($c1, 1) != null, list.nth($c1, 1), list.nth($c2, 1));
-      $max: if(list.nth($c1, 2) != null, list.nth($c1, 2), list.nth($c2, 2));
+      $min: list.nth($c2, 1);
+      @if list.nth($c1, 1) != null {
+         $min: list.nth($c1, 1);
+      }
+      $max: list.nth($c2, 2);
+      @if list.nth($c1, 2) != null {
+        $max: list.nth($c1, 2);
+      }
 
       @if ($min == null and $max == null) or (meta.type-of($min) == 'string' and meta.type-of($max) == 'string') {
         @error 'Invalid range for mixin breakpoint. Use ((min-width 480px) (max-width 1024px)).';
