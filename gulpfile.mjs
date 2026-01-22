@@ -29,7 +29,6 @@ import combiner from 'stream-combiner2';
 import cache from 'gulp-cached';
 import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
-import gulpif from 'gulp-if';
 import babel from 'gulp-babel';
 import Color from 'color';
 import RecolorSvg from 'gulp-recolor-svg';
