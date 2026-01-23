@@ -2,7 +2,7 @@
 
 All notable changes to this style guide are documented here.
 
-## [Unreleased]
+## [7.2.0]
 
 ### Added
 
@@ -434,6 +434,7 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [7.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.x...7.x-dev
+[7.2.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.1.0...7.2.0
 [7.1.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.0.6...7.1.0
 [7.0.6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.0.5...7.0.6
 [7.0.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/7.0.4...7.0.5

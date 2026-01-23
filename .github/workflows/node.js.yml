@@ -27,11 +27,12 @@ jobs:
 
       # Install Chrome AND a matching ChromeDriver, placed on PATH.
       - name: Install Chrome + ChromeDriver (matching)
-        uses: browser-actions/setup-chrome@v1
+        uses: browser-actions/setup-chrome@v2
         with:
-          chrome-version: 'stable' # Or pin e.g. '142' for reproducibility.
+          chrome-version: 144
           install-chromedriver: true
 
+      - run: chrome --version
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
