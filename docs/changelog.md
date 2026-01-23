@@ -2,6 +2,13 @@
 
 All notable changes to this style guide are documented here.
 
+## [7.2.1]
+
+### Fixed
+
+- STIJ-453: Fix failing tests due to outdated chrome(driver) version.
+- STIJ-453: Fix outdated node version in the npm-publish action.
+
 ## [7.2.0]
 
 ### Added

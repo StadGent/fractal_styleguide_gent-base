@@ -41,7 +41,6 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-order": "^6.0.4",
     "stylelint-scss": "^6.14.0",
-    "swiper": "^12.0.3",
     "ttf2woff2": "^8.0.0",
     "yargs": "^18.0.0"
   },
@@ -69,7 +68,8 @@
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
     "selenium-webdriver": "^4.40.0",
-    "set-value": "^4.1.0"
+    "set-value": "^4.1.0",
+    "swiper": "^12.0.3"
   },
   "engines": {
     "node": ">=10.14.2"
