@@ -29,7 +29,7 @@ jobs:
       - name: Install Chrome + ChromeDriver (matching)
         uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: 'stable' # Or pin e.g. '142' for reproducibility.
+          chrome-version: 142
           install-chromedriver: true
 
       - run: npm ci
