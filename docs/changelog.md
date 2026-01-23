@@ -2,6 +2,26 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Added
+
+- STIJ-453: Add green color theme to the theme selector.
+
+### Changed
+
+- STIJ-453: Change from sass-lint to stylelint.
+
+### Fixed
+
+- STIJ-453: Fix SCSS issues detected with stylelint. 
+
+### Updated
+
+- STIJ-453: Update gulp from 4 to 5.
+- STIJ-453: Update gulpfile.js to .mjs (module style).
+- STIJ-453: Update fractal.js to .mjs (module style).
+
 ## [7.1.0]
 
 ### Added

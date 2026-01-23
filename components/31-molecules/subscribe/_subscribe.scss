@@ -3,7 +3,7 @@
 @use '../../21-atoms/button/button-styling' as *;
 
 .subscribe {
-  @include medium-text();
+  @include medium-text;
 
   display: flex;
   position: relative;
@@ -19,7 +19,7 @@
 
   ul {
     li {
-      @include medium-text();
+      @include medium-text;
     }
   }
 

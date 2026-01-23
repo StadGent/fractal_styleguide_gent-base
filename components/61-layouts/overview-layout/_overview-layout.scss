@@ -9,7 +9,7 @@
   header.header nav.breadcrumb .content-container {
     &::after,
     &::before {
-      width: calc(50% + #{$gutter-width} +  1px);
+      width: calc(50% + #{$gutter-width} + 1px);
 
       @include desktop {
         width: calc(50% + 1px);
@@ -20,6 +20,7 @@
 
 .overview-layout {
   @extend %content-container;
+
   margin-bottom: 80px;
 
   > .content-header-container {
@@ -42,8 +43,8 @@
         @include col(12);
 
         position: relative;
-        margin-top: -150px;
         z-index: 1;
+        margin-top: -150px;
 
         @include tablet {
           margin-top: -120px;

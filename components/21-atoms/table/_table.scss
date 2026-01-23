@@ -1,6 +1,8 @@
 @use '../../00-settings/settings' as *;
 @use '../../00-mixins/mixins' as *;
 
+/* stylelint-disable no-descending-specificity */
+
 div.responsive-table,
 div.table-swiper-wrapper {
   position: relative;
@@ -10,7 +12,7 @@ div.table-swiper-wrapper {
   caption,
   .caption {
     @include theme('color', 'help-text-color', 'table-caption-color');
-    @include small-text();
+    @include small-text;
   }
 }
 
@@ -25,9 +27,9 @@ div.responsive-table {
   }
 
   table {
-    border-bottom: 1px solid coloring('gray', -5);
-    border-collapse: collapse;
     caption-side: bottom;
+    border-collapse: collapse;
+    border-bottom: 1px solid coloring('gray', -5);
 
     th {
       @include semi-bold-text;
@@ -74,6 +76,7 @@ div.responsive-table {
     th,
     td {
       @include theme('color', 'color-zero', 'table-content-color');
+
       padding: 20px;
       text-align: left;
     }
@@ -104,12 +107,12 @@ div.table-swiper-wrapper {
 
     &::before,
     &::after {
+      content: "";
       position: absolute;
       right: 0;
       left: 0;
       height: 1px;
       background-color: coloring('gray-light');
-      content: "";
     }
 
     &::before {
@@ -150,11 +153,11 @@ div.table-swiper-wrapper {
 
     .swiper-wrapper {
       display: flex;
+      box-sizing: border-box;
       width: 100%;
       margin: 0;
       padding: 0;
       gap: 0;
-      box-sizing: border-box;
     }
 
     .swiper-slide {
@@ -207,35 +210,34 @@ div.table-swiper-wrapper {
 
   .table-swiper__fixed-column {
     position: sticky;
+    z-index: 2;
     left: 0;
     flex-shrink: 0;
     width: $fixed-col-width;
-    z-index: 2;
     pointer-events: none;
 
     &::after {
+      content: "";
       position: absolute;
+      z-index: 4;
       top: 0;
       bottom: $pag-nav-wrapper-size;
       left: 100%;
       width: 25px;
       height: auto;
       background: linear-gradient(90deg, rgba(2, 0, 36, .25) 0%, rgba(0, 0, 0, 0) 100%);
-      content: "";
-      z-index: 4;
     }
   }
 
   dt {
     @include theme('background-color', 'color-secondary', 'table-header-color');
     @include theme('border-color', 'color-secondary', 'table-header-color');
-    @include semi-bold-text();
+    @include semi-bold-text;
   }
 
   dd {
-
     &:nth-of-type(n) {
-      @include table-backgrounds();
+      @include table-backgrounds;
     }
   }
 }

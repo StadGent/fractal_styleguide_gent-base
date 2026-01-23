@@ -13,7 +13,7 @@
   @include theme('background-color', 'button-secondary-background');
   @include theme('color', 'button-secondary-color');
   @include theme-content('button-secondary-background', 'button-secondary-hover-background') {
-    background-image: linear-gradient(0, $theme-color, $theme-color);
+    background-image: linear-gradient(0deg, $theme-color, $theme-color);
   };
 
   & {

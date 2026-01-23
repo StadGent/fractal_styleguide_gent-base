@@ -2,7 +2,8 @@
 @use '../../00-mixins/mixins' as *;
 
 .display-switcher {
-  @include medium-text();
+  @include medium-text;
+
   align-items: center;
   margin-bottom: 60px;
 
@@ -15,7 +16,8 @@
 
     &.icon-list.inline {
       li {
-        @include medium-text();
+        @include medium-text;
+
         margin-right: 20px;
 
         &:not(.active) {

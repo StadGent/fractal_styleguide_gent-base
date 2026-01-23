@@ -4,7 +4,7 @@
 .feature-block {
   @include theme('color', 'color-none', 'feature-block-primary-color');
   @include theme('background-color', 'color-primary', 'feature-block-primary-background-color');
-  @include large-text();
+  @include large-text;
 
   padding: 30px;
 

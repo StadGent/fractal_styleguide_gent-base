@@ -95,16 +95,14 @@
   &::after {
     @include theme('color', 'color-primary', 'link-underlined-hover-color');
 
-    & {
-      display: block;
-      position: static;
-      width: 0;
-      margin: 0 auto;
-      transition: width 100ms;
-      border-bottom: 2px solid;
-      content: '';
-      overflow: visible;
-    }
+    content: '';
+    display: block;
+    position: static;
+    width: 0;
+    margin: 0 auto;
+    overflow: visible;
+    transition: width 100ms;
+    border-bottom: 2px solid;
   }
 
   &#{$active-selector},

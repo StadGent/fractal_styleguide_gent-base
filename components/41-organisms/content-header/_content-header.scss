@@ -1,6 +1,7 @@
 @use '../../00-settings/settings' as *;
 @use '../../00-mixins/mixins' as *;
 
+/* stylelint-disable no-descending-specificity */
 .content-header-container {
   @include theme('background-color', 'color-primary', 'content-header-container-background-primary');
 
@@ -125,7 +126,8 @@
       margin: 30px 0 0;
 
       p {
-        @include large-text();
+        @include large-text;
+
         line-height: 177.778%;
       }
 
@@ -165,7 +167,7 @@
       text-align: right;
     }
 
-    @media only screen and (min-width: 1400px) {
+    @media only screen and (width >= 1400px) {
       flex: 0 0 470px;
       height: calc(470px - 190px);
     }

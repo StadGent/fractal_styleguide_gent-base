@@ -16,22 +16,22 @@
     @include button-small;
     @include button-hover;
 
+    content: attr(data-text);
     max-width: 100%;
     margin: 0 .75rem 0 0;
     padding: .4rem .75rem;
-    content: attr(data-text);
   }
 
   &::after {
     @include theme('color', 'default-text-color', 'no-file-selected-text-color');
 
+    content: attr(data-file);
     max-width: 100%;
     margin: .5rem .5rem 0;
+    overflow: hidden;
     font-size: .7rem;
     font-style: italic;
     text-overflow: ellipsis;
-    content: attr(data-file);
-    overflow: hidden;
 
     @include phablet {
       margin: 0;
@@ -44,9 +44,9 @@
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
     line-height: 1.4rem;
     cursor: pointer;
-    opacity: 0;
 
     &:disabled {
       pointer-events: none;
@@ -60,12 +60,14 @@
     &:focus + .file__button,
     &:focus-within + .file__button {
       @include theme('color', 'color-quaternary', 'button-secondary-hover-color');
+
       background-size: 100% 100%;
     }
 
     &:active + .file__button {
       @include theme('background-color', 'color-tertiary-pastel', 'button-secondary-active-background');
       @include theme('color', 'color-primary', 'button-secondary-active-color');
+
       background-image: none;
       box-shadow: none;
     }
@@ -77,6 +79,7 @@
 
   +.help-text {
     @include theme('color', 'help-text-color', 'help-text-color');
+
     display: block;
     margin-top: .5rem;
     font-size: .7rem;

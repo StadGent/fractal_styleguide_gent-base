@@ -39,6 +39,7 @@ const icons = [
   'download',
   'education',
   'euro',
+  'euro-filled',
   'envelope',
   'environment',
   'exclamation',

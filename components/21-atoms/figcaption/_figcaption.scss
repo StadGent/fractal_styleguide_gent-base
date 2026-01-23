@@ -2,7 +2,7 @@
 @use '../../00-mixins/mixins' as *;
 
 figcaption {
-  @include accolade();
+  @include accolade;
   @include medium-text;
   @include normal-text;
 

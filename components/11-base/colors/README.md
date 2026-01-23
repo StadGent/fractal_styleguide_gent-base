@@ -27,7 +27,7 @@ cyan and makes it 1 tint darker.
 
 ```scss
 .my-selector {
-  color: coloring('red', -31);
+  color: coloring('red', -3);
 }
 ```
 

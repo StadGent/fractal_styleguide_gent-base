@@ -5,20 +5,16 @@ a.site-logo {
   @include reset-link-background;
   @include theme('color', 'color-tertiary', 'default-text-color');
 
-  & {
-    display: inline-flex;
-    align-items: center;
-    font-size: 0;
-  }
+  display: inline-flex;
+  align-items: center;
+  font-size: 0;
 
   &::before {
     @include spot-image('logo', 80px);
 
-    & {
-      width: 63.3px;
-      height: 44px;
-      margin-left: 0;
-    }
+    width: 63.3px;
+    height: 44px;
+    margin-left: 0;
 
     .is-frontpage & {
       width: 63.3px;

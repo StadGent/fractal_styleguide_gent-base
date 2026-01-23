@@ -4,9 +4,7 @@
 .programme-wrapper {
   @include theme('background-color', 'color-tertiary-light');
 
-  & {
-    padding: 24px;
-  }
+  padding: 24px;
 
   @include desktop {
     padding: 120px 135px;

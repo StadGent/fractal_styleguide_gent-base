@@ -19,6 +19,7 @@ blockquote {
 
   &::before {
     @include spot-image('quote', 2rem);
+
     position: absolute;
     top: 0;
     left: 0;

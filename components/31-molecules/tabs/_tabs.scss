@@ -2,7 +2,6 @@
 @use '../../00-mixins/mixins' as *;
 
 .tabs {
-
   [role='tabpanel'] {
     @include theme('background-color', 'color-secondary-pastel', 'tab-background-color');
 
@@ -66,15 +65,15 @@
           @include theme('color', 'color-zero');
 
           & {
+            content: '';
             display: block;
             bottom: 0;
             left: 0;
             width: 0;
             margin: 0 auto;
+            overflow: visible;
             transition: width 100ms;
             border-bottom: 3px solid;
-            content: '';
-            overflow: visible;
           }
         }
 
@@ -92,9 +91,7 @@
       [role='tab'][aria-selected='true'] {
         @include theme('background-color', 'color-secondary-pastel', 'tab-background-color');
 
-        & {
-          border-bottom: 0;
-        }
+        border-bottom: 0;
       }
     }
   }

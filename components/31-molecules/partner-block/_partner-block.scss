@@ -91,7 +91,7 @@
 
     &[href^="http://"]:not([href*="gent.be"]),
     &[href^="https://"]:not([href*="gent.be"]) {
-      &:not(.no-icon):not(.tag) {
+      &:not(.no-icon, .tag) {
         margin-right: 0;
       }
     }

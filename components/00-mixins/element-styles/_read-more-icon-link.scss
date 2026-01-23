@@ -11,7 +11,7 @@
 /// @author Lennart Van Vaerenbergh
 ///
 @mixin read-more-icon-link() {
-  @include large-text();
+  @include large-text;
   @include reset-link-background;
   @include theme('color', 'color-zero', 'button-secondary-color');
   @include theme('background-color', 'color-tertiary', 'button-secondary-background');

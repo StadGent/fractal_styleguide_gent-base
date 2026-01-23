@@ -2,6 +2,7 @@
 @use '../../00-mixins/mixins' as *;
 @use '../../11-base/fonts/icons' as *;
 
+/* stylelint-disable max-nesting-depth */
 .breadcrumb {
   margin: 0 0 20px;
   clear: both;
@@ -37,8 +38,8 @@
         margin-right: 0;
 
         &::after {
-          display: none;
           content: '';
+          display: none;
         }
       }
 
@@ -55,7 +56,7 @@
         &,
         &[href^="http://"],
         &[href^="https://"] {
-          &:not(.no-icon):not(.tag) {
+          &:not(.no-icon, .tag) {
             &::after {
               display: none;
             }
@@ -84,7 +85,7 @@
 
       padding: 0 7px;
       border-color: transparent;
-      outline: 2px solid currentColor;
+      outline: 2px solid currentcolor;
       line-height: 19px;
 
       &:hover,
@@ -107,7 +108,7 @@
   &[aria-expanded="false"] {
     ul,
     ol {
-      li:not(.expandable):not(:nth-last-child(-n+3)):not(:nth-child(-n+2)) {
+      li:not(.expandable, :nth-last-child(-n+3), :nth-child(-n+2)) {
         display: none;
       }
 
@@ -120,13 +121,13 @@
 
           a,
           span {
+            overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            overflow: hidden;
           }
         }
 
-        li:not(.expandable):not(:nth-last-child(-n+3)) {
+        li:not(.expandable, :nth-last-child(-n+3)) {
           display: none;
         }
       }

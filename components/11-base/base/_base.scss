@@ -16,14 +16,14 @@ html {
   @include theme('background', 'color-none');
 
   display: grid;
+  box-sizing: border-box;
   height: 100%;
   font: $default-font-weight $default-font-size $default-font-family;
   line-height: $default-line-height;
-  box-sizing: border-box;
 }
 
 body {
-  @include large-text();
+  @include large-text;
 
   position: relative;
   min-height: 100%;
@@ -92,7 +92,7 @@ strong {
   @include bold-text;
 }
 
-input[type=button],
+input[type="button"],
 button {
   font: $default-font-weight $default-font-size $default-font-family;
 }
