@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Fixed
+
+- SGD8-3093: Fix teaser date styling on multiple lines.
+
 ## [7.2.2]
 
 ### Fixed
