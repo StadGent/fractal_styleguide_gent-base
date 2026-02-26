@@ -41,15 +41,26 @@
     span {
       @include icon('calendar');
 
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      line-height: 1;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      column-gap: 5px;
+      line-height: 1.2;
 
       &::before {
         position: relative;
-        margin-right: 5px;
+        margin-right: 0;
         font-size: 1.2rem;
+        line-height: 1;
+      }
+
+      time {
+        grid-column: 2;
+        min-width: 0;
+      }
+
+      time:first-of-type {
+        padding-top: calc((24px - (1em * 1.2)) / 2);
       }
     }
   }
