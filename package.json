@@ -16,7 +16,7 @@
     "gulp-bump": "^3.2.0",
     "gulp-cached": "^1.1.1",
     "gulp-eslint": "^6.0.0",
-    "gulp-iconfont": "^11.0.1",
+    "gulp-iconfont": "^12.0.0",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-imagemin": "^9.2.0",
     "gulp-inject": "^5.0.5",
