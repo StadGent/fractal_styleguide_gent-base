@@ -2,6 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Updated 
+- SGD8-3068: Update vesta contact teaser.
+
 ## [7.2.3]
 
 ### Fixed
