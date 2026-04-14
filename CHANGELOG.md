@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+## Fixed 
+
+- SGD8-2885: Fix partner block li height.
+
 ## [7.2.3]
 
 ### Fixed
