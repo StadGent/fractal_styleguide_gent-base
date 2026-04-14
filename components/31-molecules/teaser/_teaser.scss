@@ -362,6 +362,57 @@
     }
   }
 
+  &.teaser--with--address{
+    .content__second {
+      @include theme('background-color', 'color-none');
+
+      position: static;
+      padding: 20px 60px 20px 20px;
+
+      @include phablet {
+        padding: 30px 60px 30px 30px;
+      }
+
+      h3 {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        @include phablet {
+          display: block;
+          height: auto;
+          margin: 0 15px 20px 0;
+        }
+
+        span {
+          padding: 0;
+          background-color: transparent;
+        }
+      }
+
+      p,
+      .opening-hours-accordion {
+        display: block;
+      }
+
+      .teaser-links {
+        display: block;
+      }
+
+      .read-more {
+        @include read-more-icon-link;
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    a.teaser-overlay-link {
+      top: 0;
+    }
+  }
+
   &.teaser--inverted {
     .content__second {
       @include theme('background-color', 'color-tertiary-light');

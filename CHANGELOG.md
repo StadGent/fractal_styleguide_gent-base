@@ -4,9 +4,14 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
+### Updated
+
+- SGD8-3068: Update vesta contact teaser.
+
 ## Fixed 
 
 - SGD8-2885: Fix partner block li height.
+
 
 ## [7.2.3]
 

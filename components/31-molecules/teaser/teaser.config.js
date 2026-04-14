@@ -128,6 +128,17 @@ module.exports = {
       }
     },
     {
+      name: 'teaser--with--address',
+      context: {
+        modifier: 'teaser--with--address',
+        event_date: null,
+        label_text: null,
+        tags: null,
+        published_date: null,
+        title_icon: 'civil-affairs'
+      }
+    },
+    {
       name: 'teaser--simple--no-image',
       context: {
         modifier: 'teaser--simple',
