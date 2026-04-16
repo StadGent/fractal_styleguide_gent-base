@@ -28,12 +28,12 @@ import yargs from 'yargs';
 import combiner from 'stream-combiner2';
 import cache from 'gulp-cached';
 import iconfont from 'gulp-iconfont';
-import iconfontCss from 'gulp-iconfont-css';
 import babel from 'gulp-babel';
 import Color from 'color';
 import RecolorSvg from 'gulp-recolor-svg';
 import realFavicon from 'gulp-real-favicon';
 import axeCli from 'gulp-axe-cli';
+import consolidate from 'consolidate';
 
 import fractal from './fractal.mjs';
 import colors from './components/11-base/colors/colors.config.js';
@@ -426,30 +426,29 @@ gulp.task('iconfont', () => {
   const fontName = `gent-icons-v${version}`;
   const runTimestamp = Math.round(Date.now() / 1000);
 
-  return gulp.src(['./public/styleguide/img/iconfont/*.svg'])
-    .pipe(iconfontCss({
-      fontName: fontName,
-      path: './components/11-base/fonts/templates/_icons.template',
-      targetPath: '../../../components/11-base/fonts/_icons.scss',
-      fontPath: '../styleguide/fonts/'
-    }))
-    .pipe(iconfont({
-      fontName: fontName, // required
-      prependUnicode: true, // recommended option
-      normalize: true,
-      fontHeight: 1001,
-      formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'], // default, 'woff2' and
-      // 'svg' are available
-      timestamp: runTimestamp // recommended to get consistent builds when
-      // watching files
-    }))
+  return iconfont('./public/styleguide/img/iconfont/*.svg', {
+    fontName: fontName,
+    prependUnicode: false,
+    normalize: true,
+    fontHeight: 1001,
+    formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'],
+    timestamp: runTimestamp
+  })
     .on('glyphs', function (glyphs, options) {
-      // CSS templating, e.g.
-      // console.log(glyphs, options);
+      consolidate.lodash('./components/11-base/fonts/templates/_icons.template', {
+        glyphs: glyphs.map(glyph => ({
+          fileName: glyph.name,
+          codePoint: glyph.unicode[0].codePointAt(0).toString(16).toUpperCase()
+        })),
+        fontName: fontName,
+        fontPath: '../fonts/',
+        cssClass: 'icon'
+      }).then(function (css) {
+        fs.writeFileSync('./components/11-base/fonts/_icons.scss', css);
+      });
     })
-    .pipe(gulp.dest('./public/styleguide/fonts/', { encoding: false }));
+    .pipe(gulp.dest('./public/styleguide/fonts/', {encoding: false}));
 });
-
 /**
  * Copy fonts to build folder without transforming them.
  */

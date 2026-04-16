@@ -1,8 +1,9 @@
 {
   "name": "gent_styleguide",
-  "version": "7.2.3",
+  "version": "7.2.4",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
+    "consolidate": "^1.0.4",
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@frctl/fractal": "^1.5.15",
@@ -16,8 +17,7 @@
     "gulp-bump": "^3.2.0",
     "gulp-cached": "^1.1.1",
     "gulp-eslint": "^6.0.0",
-    "gulp-iconfont": "^11.0.1",
-    "gulp-iconfont-css": "^3.0.0",
+    "gulp-iconfont": "^12.0.0",
     "gulp-imagemin": "^9.2.0",
     "gulp-inject": "^5.0.5",
     "gulp-postcss": "^10.0.0",
@@ -57,6 +57,7 @@
     "gulp-axe-cli": "^1.0.1"
   },
   "dependencies": {
+    "@ladjs/consolidate": "^1.0.4",
     "@digipolis-gent/modal": "^1.0.4",
     "acorn": "^8.8.2",
     "allietabs": "^1.2.6",
