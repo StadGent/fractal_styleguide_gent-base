@@ -13,6 +13,7 @@
       <button id="version-toggle" aria-controls="version-list" aria-expanded="false">Version - {{ frctl.get('project.version') }}</button>
       <div id="version-list" aria-hidden="true">
         <ul>
+          <li><a href="/v7">Version - 7.x</a></li>
           <li><a href="/v6">Version - 6.x</a></li>
           <li><a href="/v5">Version - 5.x</a></li>
           <li><a href="/v4">Version - 4.x</a></li>
