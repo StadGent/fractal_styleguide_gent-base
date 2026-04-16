@@ -11,6 +11,7 @@ All notable changes to this style guide are documented here.
 ### Fixed
 
 - SGD8-2885: Fix partner block li height.
+- Iconfont: Update how gulp build svg icons.
 
 ## [7.2.3]
 
