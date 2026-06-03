@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "7.2.4",
+  "version": "7.2.5",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "consolidate": "^1.0.4",
@@ -68,9 +68,12 @@
     "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "masonry-layout": "^4.2.2",
-    "selenium-webdriver": "^4.40.0",
+    "selenium-webdriver": "^4.44.0",
     "set-value": "^4.1.0",
     "swiper": "^12.0.3"
+  },
+  "overrides": {
+    "tmp": "^0.2.6"
   },
   "engines": {
     "node": ">=10.14.2"
