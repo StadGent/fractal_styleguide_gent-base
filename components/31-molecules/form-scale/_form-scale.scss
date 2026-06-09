@@ -1,0 +1,115 @@
+@use '../../00-settings/settings' as *;
+@use '../../00-mixins/mixins' as *;
+
+.webform-scale--wrapper {
+  .scale-nav {
+    display: none;
+  }
+
+  .webform-scale {
+    .webform-scale-options {
+      display: flex;
+      padding: 10px 0;
+
+      .webform-scale-option {
+        padding: 0 5px;
+      }
+    }
+  }
+
+  .webform-scale-option label::before,
+  .webform-scale-option label::after {
+    display: none;
+  }
+
+  .webform-scale-option .radio {
+    display: flex;
+    justify-content: center;
+  }
+
+  .webform-scale-option input[type='radio'] + label {
+    @include theme('color', 'color-zero');
+    @include theme('border-color', 'color-zero-light');
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding-left: 0;
+    transition: background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+    border: 2px solid;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .webform-scale-option input[type='radio']:checked + label {
+    @include theme('color', 'color-none');
+    @include theme('border-color', 'color-primary');
+    @include theme('background', 'color-primary');
+  }
+
+  .webform-scale-option input[type='radio']:focus-visible + label {
+    @include theme('outline-color', 'color-primary');
+
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
+
+  .webform-scale-option input[type='radio']:hover + label {
+    @include theme('border-color', 'color-primary');
+  }
+
+  @include tablet-and-below {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .js-webform-webform-scale {
+        position: relative;
+
+        .webform-scale {
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+
+          .webform-scale-text {
+            margin: 4px -30px;
+          }
+
+          .webform-scale-options {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            scroll-behavior: smooth;
+
+            .webform-scale-option {
+              flex: 0 0 calc((100% - 10px) / 4);
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      .scale-nav {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        button {
+          padding: 10px;
+          border: none;
+          background: transparent;
+          font-size: 20px;
+          line-height: 1;
+          cursor: pointer;
+        }
+      }
+  }
+}

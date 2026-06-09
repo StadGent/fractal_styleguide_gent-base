@@ -2,6 +2,12 @@
 
 All notable changes to this style guide are documented here.
 
+## [unreleased]
+
+### Updated 
+
+- SGD8-2750: Update theme for form scale element.
+
 ## [7.2.4]
 
 ### Updated

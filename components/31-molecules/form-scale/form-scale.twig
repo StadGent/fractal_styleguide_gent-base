@@ -1,0 +1,67 @@
+<fieldset class="form-item {{ modifier }} webform-scale--wrapper">
+
+  <legend>
+    <span class="legend-title">{{ label }}</span>
+    {% if label_optional %}
+      <span class="label-optional">({{ label_optional }})</span>
+    {% endif %}
+  </legend>
+
+  <div class="form-item">
+
+    {% if field_description %}
+      {% include '@field-message' with {
+        "field_message": field_description,
+        "id": id ~ '-description',
+        "modifier": null
+      } %}
+    {% endif %}
+
+    <div class="form-columns">
+      <div class="form-item-column">
+
+        <div class="scale-nav">
+          <button type="button" class="scale-prev">←</button>
+          <button type="button" class="scale-next">→</button>
+        </div>
+
+        <div class="webform-scale webform-scale-1-to-10">
+          <div class="webform-scale-options">
+          {% for option in options %}
+            <div class="webform-scale-option">
+
+              {% include '@input' with {
+                "id": "input-" ~ id ~ "-" ~ option.id,
+                "type": "radio",
+                "name": option.name,
+                "label": option.label,
+                "modifier": modifier,
+                "attributes": option.attributes
+              } %}
+
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-item-column">
+        {% if modifier == 'error' %}
+          {% include '@field-message' with {
+            "id": id ~ '-validation',
+            "modifier": "error"
+          } %}
+        {% endif %}
+
+        {% if modifier == 'success' %}
+          {% include '@field-message' with {
+            "id": id ~ '-validation',
+            "modifier": "success"
+          } %}
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+</fieldset>
