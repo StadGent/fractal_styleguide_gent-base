@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "7.2.5",
+  "version": "7.2.6",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "consolidate": "^1.0.4",
