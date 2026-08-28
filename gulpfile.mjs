@@ -453,7 +453,7 @@ gulp.task('iconfont', () => {
  * Copy fonts to build folder without transforming them.
  */
 gulp.task('fonts', () => {
-  return gulp.src('./public/styleguide/googlefonts/**/*')
+  return gulp.src('./public/styleguide/googlefonts/**/*', {encoding: false})
       .pipe(gulp.dest('./build/styleguide/googlefonts/'));
 });
 
