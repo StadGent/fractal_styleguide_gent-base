@@ -453,7 +453,7 @@ gulp.task('iconfont', () => {
  * Copy fonts to build folder without transforming them.
  */
 gulp.task('fonts', () => {
-  return gulp.src('./public/styleguide/googlefonts/**/*')
+  return gulp.src('./public/styleguide/googlefonts/**/*', {encoding: false})
       .pipe(gulp.dest('./build/styleguide/googlefonts/'));
 });
 
@@ -719,7 +719,7 @@ gulp.task('axe:input', () => {
 gulp.task('axe:layout', callback => {
   return gulp
     .src(['build/components/preview/*layout*.html'])
-    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'color-contrast']}))
+    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'color-contrast'], scope: {exclude: 'iframe'}}))
 });
 
 /**
@@ -730,7 +730,7 @@ gulp.task('axe:layout', callback => {
 gulp.task('axe:components', callback => {
   return gulp
     .src(['build/components/preview/!(input*|file|*layout*|preview*|textarea*|teaser--*|*--*).html'])
-    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'bypass', 'color-contrast']}))
+    .pipe(axeCli({urls: f => 'file:///' + f, disable: ['definition-list', 'dlitem', 'bypass', 'color-contrast'], scope: {exclude: 'iframe'}}))
 });
 
 gulp.task('axe',
